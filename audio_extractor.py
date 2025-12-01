@@ -10,18 +10,22 @@ import re
 from pathlib import Path
 import subprocess
 
+# Garante que o ffmpeg do Homebrew seja usado primeiro (macOS)
+if sys.platform == 'darwin' and os.path.exists('/opt/homebrew/bin'):
+    os.environ['PATH'] = '/opt/homebrew/bin:' + os.environ.get('PATH', '')
+
 # Verifica e instala dependências
 def install_dependencies():
     """Instala as dependências necessárias"""
     dependencies = ['yt-dlp', 'ffmpeg-python']
-    
+
     for dep in dependencies:
         try:
             __import__(dep.replace('-', '_'))
         except ImportError:
             print(f"📦 Instalando {dep}...")
             subprocess.check_call([sys.executable, "-m", "pip", "install", dep])
-    
+
     # Verifica ffmpeg
     try:
         subprocess.run(['ffmpeg', '-version'], capture_output=True, check=True)

@@ -2,6 +2,8 @@
 
 Scripts Python para baixar vídeos do Instagram de forma simples e eficiente.
 
+> **Open Source Project** sponsored by [AeonBridge Co.](https://aeonbridge.co)
+
 ## 🚀 Instalação
 
 ### 1. Instalar Python
@@ -127,7 +129,9 @@ Este script é fornecido apenas para fins educacionais. Por favor:
 
 ## 📄 Licença
 
-Este projeto é de código aberto e está disponível para uso educacional.
+Este projeto é licenciado sob a [MIT License](LICENSE) - a licença open source mais permissiva, permitindo uso comercial, modificação, distribuição e uso privado sem restrições.
+
+Copyright (c) 2024 AeonBridge Co.
 
 ## 🆘 Suporte
 
