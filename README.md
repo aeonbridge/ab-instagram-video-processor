@@ -1,6 +1,6 @@
-# Instagram Video Downloader 📹
+# Video Downloader 📹
 
-Scripts Python para baixar vídeos do Instagram de forma simples e eficiente.
+Scripts Python para baixar vídeos do Instagram, YouTube e outras plataformas de forma simples e eficiente.
 
 > **Open Source Project** sponsored by [AeonBridge Co.](https://aeonbridge.co)
 
@@ -17,14 +17,31 @@ python --version
 #### Opção A: Instalação automática
 Os scripts instalam automaticamente o `yt-dlp` quando executados pela primeira vez.
 
-#### Opção B: Instalação manual
+#### Opção B: Usando pip
 ```bash
+# Dependências básicas (download e extração de áudio)
 pip install -r requirements.txt
+
+# Com suporte a transcrição de áudio (Whisper)
+pip install -r requirements.txt openai-whisper torch
 ```
 
-ou simplesmente:
+#### Opção C: Usando uv (recomendado - mais rápido)
 ```bash
-pip install yt-dlp
+# Instalar uv (se ainda não tiver)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Dependências básicas
+uv pip install -r requirements.txt
+
+# Ou usando pyproject.toml
+uv sync
+
+# Com suporte a transcrição
+uv sync --extra transcription
+
+# Todas as dependências
+uv sync --extra all
 ```
 
 ## 📖 Como Usar
@@ -60,11 +77,21 @@ python instagram_quick_download.py
 python instagram_quick_download.py https://www.instagram.com/p/DRfm-7diW8-/
 ```
 
-## 📝 Exemplos de URLs Suportadas
+## 📝 Plataformas e URLs Suportadas
 
+### Instagram
 - Posts: `https://www.instagram.com/p/XXXXX/`
 - Reels: `https://www.instagram.com/reel/XXXXX/`
 - IGTV: `https://www.instagram.com/tv/XXXXX/`
+
+### YouTube
+- Vídeos: `https://www.youtube.com/watch?v=XXXXX`
+- Shorts: `https://www.youtube.com/shorts/XXXXX`
+- Playlists: `https://www.youtube.com/playlist?list=XXXXX`
+
+### Outras Plataformas
+O projeto utiliza `yt-dlp`, que suporta [1000+ sites](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md), incluindo:
+- TikTok, Twitter/X, Facebook, Vimeo, Twitch, Reddit, e muitos outros
 
 ## 📂 Estrutura de Arquivos
 
@@ -107,6 +134,39 @@ Execute:
 pip install --upgrade yt-dlp
 ```
 
+### Erro: "Unknown encoder 'libmp3lame'" (macOS)
+Este erro ocorre quando o ffmpeg foi compilado sem suporte a MP3.
+
+**Solução:** Reinstale o ffmpeg via Homebrew:
+```bash
+brew uninstall ffmpeg
+brew install ffmpeg
+```
+
+Se você tiver múltiplas versões do ffmpeg instaladas, adicione ao seu `~/.zshrc`:
+```bash
+export PATH="/opt/homebrew/bin:$PATH"
+```
+
+### Erro: "ffmpeg error (see stderr output for detail)"
+Possíveis causas:
+1. **Codec não suportado** - Reinstale o ffmpeg: `brew install ffmpeg`
+2. **Versão antiga do ffmpeg** - Atualize: `brew upgrade ffmpeg`
+3. **Múltiplas instalações do ffmpeg** - Verifique qual está sendo usada: `which ffmpeg`
+
+### Erro: "ffmpeg não está instalado"
+Instale o ffmpeg:
+```bash
+# macOS
+brew install ffmpeg
+
+# Linux (Ubuntu/Debian)
+sudo apt-get install ffmpeg
+
+# Linux (Fedora)
+sudo dnf install ffmpeg
+```
+
 ## 🔒 Limitações
 
 - **Posts Privados**: Não é possível baixar posts de contas privadas sem autenticação
@@ -124,7 +184,7 @@ pip install --upgrade yt-dlp
 Este script é fornecido apenas para fins educacionais. Por favor:
 - ✅ Respeite os direitos autorais
 - ✅ Baixe apenas conteúdo que você tem permissão para baixar
-- ✅ Use de acordo com os Termos de Serviço do Instagram
+- ✅ Use de acordo com os Termos de Serviço das plataformas
 - ❌ Não use para distribuição não autorizada de conteúdo
 
 ## 📄 Licença
@@ -142,4 +202,4 @@ Se encontrar problemas:
 
 ---
 
-**Nota**: O Instagram pode alterar sua estrutura a qualquer momento, o que pode afetar o funcionamento destes scripts. Mantenha o yt-dlp atualizado para melhores resultados.
+**Nota**: As plataformas podem alterar sua estrutura a qualquer momento, o que pode afetar o funcionamento destes scripts. Mantenha o yt-dlp atualizado para melhores resultados.
