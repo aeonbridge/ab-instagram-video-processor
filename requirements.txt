@@ -1,0 +1,10 @@
+# Instagram Video Downloader - Dependencies
+# Install: pip install -r requirements.txt
+
+# Core dependencies
+yt-dlp>=2024.1.0
+ffmpeg-python>=0.2.0
+
+# Audio transcription (optional - for transcribe_audio.py)
+openai-whisper>=20231117
+torch>=2.0.0
