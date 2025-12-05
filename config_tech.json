@@ -1,0 +1,38 @@
+{
+  "topic": "tech",
+  "language": "pt",
+  "region": "BR",
+  "youtube_queries": [
+    "lançamento tecnologia",
+    "review gadget",
+    "inteligência artificial",
+    "tech conference",
+    "startup brasileira",
+    "programação",
+    "desenvolvimento software"
+  ],
+  "twitter_queries": [
+    "tech",
+    "technology",
+    "startup",
+    "IA",
+    "artificial intelligence",
+    "developers",
+    "programming"
+  ],
+  "google_queries": [
+    "lançamento tecnologia 2024",
+    "conferência tech Brasil",
+    "evento startup",
+    "nova tecnologia",
+    "inteligência artificial Brasil"
+  ],
+  "youtube_max_results": 50,
+  "youtube_days_ago": 7,
+  "twitter_max_results": 100,
+  "google_max_results": 10,
+  "google_days_ago": 7,
+  "output_dir": "trend_data/tech",
+  "enabled_sources": ["youtube", "twitter", "google"],
+  "description": "Monitoramento de tendências em tecnologia: lançamentos, startups, IA, eventos e conferências"
+}

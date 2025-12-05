@@ -1,8 +1,17 @@
+.env
+credentials*
 # Downloaded and converted media files
 audio_downloads/
 downloads/
 transcriptions/
 batch_audio/
+
+# YouTube search results
+youtube_*_results.txt
+youtube_*_dataset.csv
+
+# Trend monitoring data
+trend_data/
 
 # Python
 __pycache__/

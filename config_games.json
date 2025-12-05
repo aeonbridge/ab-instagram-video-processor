@@ -1,0 +1,41 @@
+{
+  "topic": "games",
+  "language": "pt",
+  "region": "BR",
+  "youtube_queries": [
+    "lançamento jogos 2024",
+    "gameplay novo jogo",
+    "game review",
+    "esports campeonato",
+    "game conference",
+    "streamer brasileiro",
+    "torneio esports",
+    "game awards"
+  ],
+  "twitter_queries": [
+    "games",
+    "esports",
+    "gaming",
+    "streamer",
+    "game release",
+    "novo jogo",
+    "campeonato esports",
+    "twitch"
+  ],
+  "google_queries": [
+    "lançamento jogos 2024",
+    "conferência games",
+    "evento esports Brasil",
+    "novo jogo anunciado",
+    "game awards",
+    "torneio esports"
+  ],
+  "youtube_max_results": 50,
+  "youtube_days_ago": 7,
+  "twitter_max_results": 100,
+  "google_max_results": 10,
+  "google_days_ago": 7,
+  "output_dir": "trend_data/games",
+  "enabled_sources": ["youtube", "twitter", "google"],
+  "description": "Monitoramento de tendências no universo dos games: lançamentos, streamers, esports, eventos e conferências"
+}

@@ -1,8 +1,16 @@
-# Video Downloader 📹
+# AB Video Processor 📹
 
-Scripts Python para baixar vídeos do Instagram, YouTube e outras plataformas de forma simples e eficiente.
+Suite completa de ferramentas Python para processamento de vídeos e áudio: download, extração, transcrição, busca e monitoramento de tendências.
 
 > **Open Source Project** sponsored by [AeonBridge Co.](https://aeonbridge.co)
+
+## Ferramentas Disponíveis
+
+- **Download de Vídeos** - Instagram, YouTube e 1000+ plataformas
+- **Extração de Áudio** - Conversão para MP3, M4A, WAV, FLAC, OGG
+- **Transcrição de Áudio** - Transcrição automática com OpenAI Whisper
+- **Busca no YouTube** - Busca avançada com filtros e exportação para CSV
+- **Monitoramento de Tendências** - Agente agnóstico para múltiplas plataformas (YouTube, Twitter/X, Google Search)
 
 ## 🚀 Instalação
 
@@ -46,9 +54,9 @@ uv sync --extra all
 
 ## 📖 Como Usar
 
-### Script Completo (`instagram_video_downloader.py`)
+### 1. Download de Vídeos
 
-Este script oferece mais opções e feedback detalhado:
+#### Script Completo (`instagram_video_downloader.py`)
 
 ```bash
 # Uso interativo
@@ -59,23 +67,120 @@ python instagram_video_downloader.py https://www.instagram.com/p/DRfm-7diW8-/
 ```
 
 **Recursos:**
-- ✅ Interface interativa amigável
-- 📊 Mostra progresso do download
-- 📁 Permite escolher diretório de saída
-- 🔍 Exibe informações do vídeo antes de baixar
-- ⚡ Tratamento de erros detalhado
+- Interface interativa amigável
+- Progresso do download em tempo real
+- Escolha de diretório de saída
+- Informações detalhadas do vídeo
 
-### Script Rápido (`instagram_quick_download.py`)
-
-Para downloads rápidos sem muitas opções:
+#### Script Rápido (`instagram_quick_download.py`)
 
 ```bash
-# Uso interativo
-python instagram_quick_download.py
-
-# Ou passar a URL diretamente
 python instagram_quick_download.py https://www.instagram.com/p/DRfm-7diW8-/
 ```
+
+### 2. Extração de Áudio
+
+#### Extrator Completo (`audio_extractor.py`)
+
+```bash
+# De uma URL
+python audio_extractor.py https://www.youtube.com/watch?v=VIDEO_ID
+
+# De um arquivo local
+python audio_extractor.py video.mp4
+```
+
+**Formatos suportados:** MP3, M4A, WAV, FLAC, OGG
+
+#### Extrator Rápido (`quick_audio_extract.py`)
+
+```bash
+# Extração rápida para MP3
+python quick_audio_extract.py video.mp4
+
+# Com formato específico
+python quick_audio_extract.py video.mp4 wav
+```
+
+#### Extração em Lote (`batch_audio_extract.py`)
+
+```bash
+# Processa múltiplos vídeos em paralelo
+python batch_audio_extract.py
+```
+
+### 3. Transcrição de Áudio
+
+```bash
+# Transcrição automática
+python transcribe_audio.py audio.mp3
+
+# Com modelo específico
+python transcribe_audio.py audio.mp3 medium
+
+# Com idioma específico
+python transcribe_audio.py audio.mp3 medium pt
+```
+
+**Modelos disponíveis:** tiny, base, small, medium, large
+
+**Saída:** Arquivo Markdown em `transcriptions/`
+
+### 4. Busca no YouTube
+
+```bash
+# Configurar chave da API no .env
+cp .env.example .env
+# Edite .env e adicione YOUTUBE_API_KEY
+
+# Executar busca
+python youtube_video_search.py
+```
+
+**Resultados:**
+- `youtube_jogos_dataset.csv` - Dataset completo (60+ campos)
+- `youtube_jogos_results.txt` - Resumo legível
+
+### 5. Monitoramento de Tendências
+
+#### Configuração
+
+```bash
+# Adicionar chaves de API no .env
+YOUTUBE_API_KEY=sua_chave
+TWITTER_BEARER_TOKEN=seu_token
+GOOGLE_API_KEY=sua_chave
+GOOGLE_SEARCH_ENGINE_ID=seu_id
+```
+
+#### Execução Única
+
+```bash
+# Monitorar games
+python trend_monitor_agent.py --config config_games.json
+
+# Monitorar tech
+python trend_monitor_agent.py --config config_tech.json
+
+# Tópico customizado
+python trend_monitor_agent.py --topic "inteligência artificial"
+```
+
+#### Monitoramento Contínuo
+
+```bash
+# Executar a cada 6 horas
+python trend_monitor_scheduler.py --config config_games.json --interval 6
+```
+
+**Fontes de dados:**
+- YouTube (vídeos, canais, estatísticas)
+- Twitter/X (tweets, engajamento, perfis)
+- Google Search (notícias, artigos, eventos)
+
+**Saída:** CSV unificado em `trend_data/` com schema padronizado
+
+Ver [README_TREND_MONITOR.md](README_TREND_MONITOR.md) para documentação completa.
 
 ## 📝 Plataformas e URLs Suportadas
 
@@ -97,25 +202,75 @@ O projeto utiliza `yt-dlp`, que suporta [1000+ sites](https://github.com/yt-dlp/
 
 ```
 .
-├── instagram_video_downloader.py  # Script principal completo
-├── instagram_quick_download.py    # Script simplificado
+├── instagram_video_downloader.py  # Download completo de vídeos
+├── instagram_quick_download.py    # Download rápido
+├── audio_extractor.py             # Extração de áudio completa
+├── quick_audio_extract.py         # Extração rápida
+├── batch_audio_extract.py         # Extração em lote
+├── transcribe_audio.py            # Transcrição com Whisper
+├── youtube_video_search.py        # Busca avançada no YouTube
+├── trend_monitor_agent.py         # Agente de monitoramento
+├── trend_monitor_scheduler.py     # Agendador de monitoramento
+├── config_games.json              # Configuração para games
+├── config_tech.json               # Configuração para tech
 ├── requirements.txt               # Dependências
+├── .env.example                   # Template de configuração
 ├── README.md                      # Este arquivo
-└── downloads/                     # Pasta onde os vídeos são salvos (criada automaticamente)
+├── README_TREND_MONITOR.md        # Documentação do agente
+├── downloads/                     # Vídeos baixados
+├── audio_downloads/               # Áudios extraídos
+├── transcriptions/                # Transcrições
+└── trend_data/                    # Datasets de tendências
 ```
 
-## ⚙️ Configurações Avançadas
+## ⚙️ Configurações e APIs
 
-### Mudar o Diretório de Download
+### Chaves de API Necessárias
 
-No script completo, você pode especificar onde salvar:
+Para usar todas as funcionalidades, configure o arquivo `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Adicione suas chaves:
+
+```env
+# YouTube Data API v3 (busca e monitoramento)
+YOUTUBE_API_KEY=sua_chave_aqui
+
+# Twitter API v2 (monitoramento de tendências)
+TWITTER_BEARER_TOKEN=seu_bearer_token
+
+# Google Custom Search API (busca de notícias)
+GOOGLE_API_KEY=sua_chave_google
+GOOGLE_SEARCH_ENGINE_ID=seu_search_engine_id
+```
+
+**Como obter:**
+- **YouTube API:** [Google Cloud Console](https://console.developers.google.com/) → Ativar YouTube Data API v3
+- **Twitter API:** [Twitter Developer Portal](https://developer.twitter.com/en/portal/dashboard) → Criar App → Gerar Bearer Token
+- **Google Search API:** [Google Cloud Console](https://console.developers.google.com/) → Custom Search API + [Custom Search Engine](https://programmablesearchengine.google.com/)
+
+### Configurações Customizadas
+
+#### Diretórios de Saída
+
 ```python
+# Download de vídeos
 download_instagram_video(url, output_dir="meus_videos")
+
+# Extração de áudio
+extract_audio(video, output_dir="meus_audios")
 ```
 
-### Formato de Saída
+#### Formatos de Áudio
 
-Por padrão, o script baixa no melhor formato disponível (geralmente MP4).
+Suportados: MP3, M4A, WAV, FLAC, OGG
+
+#### Monitoramento de Tendências
+
+Crie arquivos JSON personalizados baseados em `config_games.json` ou `config_tech.json` para qualquer tópico.
 
 ## 🔧 Solução de Problemas
 
@@ -167,17 +322,46 @@ sudo apt-get install ffmpeg
 sudo dnf install ffmpeg
 ```
 
+## 📊 Casos de Uso
+
+### Análise de Mercado
+- Monitorar lançamentos de produtos
+- Acompanhar concorrentes
+- Identificar tendências emergentes
+
+### Pesquisa de Conteúdo
+- Coletar dados de vídeos para análise
+- Extrair áudio para processamento
+- Transcrever conteúdo automaticamente
+
+### Social Media Intelligence
+- Monitorar menções de marca
+- Analisar engajamento de conteúdo
+- Identificar influenciadores
+
+### Gaming & Esports
+- Acompanhar lançamentos de jogos
+- Monitorar streamers e torneios
+- Analisar tendências do setor
+
 ## 🔒 Limitações
 
-- **Posts Privados**: Não é possível baixar posts de contas privadas sem autenticação
-- **Stories**: Stories não são suportados por questões de privacidade
-- **Lives**: Transmissões ao vivo não podem ser baixadas enquanto estão acontecendo
+### Downloads
+- **Posts Privados**: Requer autenticação
+- **Stories**: Não suportado por privacidade
+- **Lives**: Não podem ser baixadas durante transmissão
+
+### APIs (Quotas Gratuitas)
+- **YouTube:** 10.000 unidades/dia
+- **Twitter Essential:** 500.000 tweets/mês
+- **Google Search:** 100 consultas/dia
 
 ## 📋 Requisitos do Sistema
 
 - Python 3.7 ou superior
+- ffmpeg (para extração de áudio)
 - Conexão com a internet
-- Espaço em disco suficiente para os vídeos
+- Espaço em disco adequado
 
 ## 🤝 Uso Responsável
 
@@ -193,13 +377,39 @@ Este projeto é licenciado sob a [MIT License](LICENSE) - a licença open source
 
 Copyright (c) 2024 AeonBridge Co.
 
+## 📚 Documentação Adicional
+
+- [README_TREND_MONITOR.md](README_TREND_MONITOR.md) - Documentação completa do Agente de Monitoramento
+- [CLAUDE.md](CLAUDE.md) - Guia de referência para desenvolvimento
+
 ## 🆘 Suporte
 
 Se encontrar problemas:
-1. Verifique se tem a versão mais recente do yt-dlp: `pip install --upgrade yt-dlp`
-2. Tente o script simplificado primeiro
-3. Verifique se a URL está acessível no navegador
+1. Verifique se tem a versão mais recente: `pip install --upgrade yt-dlp`
+2. Consulte as instruções de solução de problemas acima
+3. Verifique se as chaves de API estão configuradas corretamente no `.env`
+4. Para o agente de monitoramento, veja [README_TREND_MONITOR.md](README_TREND_MONITOR.md)
+
+## 🚀 Roadmap
+
+### Próximas Funcionalidades
+- [ ] Suporte para Reddit API
+- [ ] Suporte para TikTok API
+- [ ] Análise de sentimentos em comentários
+- [ ] Dashboard web para visualização
+- [ ] Detecção automática de trending topics
+- [ ] Alertas em tempo real
+- [ ] Exportação para bancos de dados
+- [ ] API REST para integração
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Sinta-se livre para:
+- Reportar bugs
+- Sugerir novas funcionalidades
+- Enviar pull requests
+- Melhorar a documentação
 
 ---
 
-**Nota**: As plataformas podem alterar sua estrutura a qualquer momento, o que pode afetar o funcionamento destes scripts. Mantenha o yt-dlp atualizado para melhores resultados.
+**Nota**: As plataformas podem alterar sua estrutura a qualquer momento. Mantenha as dependências atualizadas para melhores resultados.

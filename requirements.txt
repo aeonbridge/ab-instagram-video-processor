@@ -8,3 +8,12 @@ ffmpeg-python>=0.2.0
 # Audio transcription (optional - for transcribe_audio.py)
 openai-whisper>=20231117
 torch>=2.0.0
+
+# YouTube video search (optional - for youtube_video_search.py)
+google-api-python-client>=2.0.0
+isodate>=0.6.0
+python-dotenv>=1.0.0
+
+# Trend monitoring agent (optional - for trend_monitor_agent.py)
+requests>=2.31.0
+schedule>=1.2.0
