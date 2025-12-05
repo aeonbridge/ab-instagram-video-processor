@@ -39,6 +39,12 @@ class Config:
         # Aspect ratio (original, 9:16, 16:9, 1:1, 4:5)
         self.aspect_ratio = os.getenv('ASPECT_RATIO', 'original')
 
+        # Transcription settings
+        self.transcriptions_path = Path(os.getenv('TRANSCRIPTIONS_PATH', 'transcriptions/'))
+        self.whisper_model = os.getenv('WHISPER_MODEL', 'base')
+        self.transcription_language = os.getenv('TRANSCRIPTION_LANGUAGE', '')  # Empty for auto-detection
+        self.include_timestamps = self._str_to_bool(os.getenv('INCLUDE_TIMESTAMPS', 'true'))
+
         # Processing settings
         self.max_concurrent_clips = int(os.getenv('MAX_CONCURRENT_CLIPS', '4'))
         self.enable_parallel_processing = self._str_to_bool(
@@ -70,6 +76,7 @@ class Config:
         """Create necessary directories if they don't exist"""
         self.downloads_path.mkdir(parents=True, exist_ok=True)
         self.stored_processed_videos.mkdir(parents=True, exist_ok=True)
+        self.transcriptions_path.mkdir(parents=True, exist_ok=True)
         if self.temp_path:
             self.temp_path.mkdir(parents=True, exist_ok=True)
         if self.log_file:

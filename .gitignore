@@ -1,5 +1,6 @@
 .env
 credentials*
+*.mp4
 # Downloaded and converted media files
 audio_downloads/
 downloads/
