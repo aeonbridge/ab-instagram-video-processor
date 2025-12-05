@@ -1,0 +1,20 @@
+{
+  "video_id": "RusBe_8arLQ",
+  "video_url": "https://www.youtube.com/watch?v=RusBe_8arLQ",
+  "moments": [
+    {
+      "start_time": 15.06,
+      "end_time": 25.06,
+      "duration": 10.0,
+      "score": 0.952,
+      "timestamp": "0:15"
+    },
+    {
+      "start_time": 75.3,
+      "end_time": 85.3,
+      "duration": 10.0,
+      "score": 1.374,
+      "timestamp": "1:15"
+    }
+  ]
+}
