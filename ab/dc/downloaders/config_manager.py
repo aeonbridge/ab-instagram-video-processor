@@ -36,6 +36,9 @@ class Config:
         self.ffmpeg_preset = os.getenv('FFMPEG_PRESET', 'medium')
         self.include_audio = self._str_to_bool(os.getenv('INCLUDE_AUDIO', 'true'))
 
+        # Aspect ratio (original, 9:16, 16:9, 1:1, 4:5)
+        self.aspect_ratio = os.getenv('ASPECT_RATIO', 'original')
+
         # Processing settings
         self.max_concurrent_clips = int(os.getenv('MAX_CONCURRENT_CLIPS', '4'))
         self.enable_parallel_processing = self._str_to_bool(
@@ -109,7 +112,8 @@ class Config:
             'audio_codec': self.audio_codec,
             'crf': self.crf_quality,
             'preset': self.ffmpeg_preset,
-            'include_audio': self.include_audio
+            'include_audio': self.include_audio,
+            'aspect_ratio': self.aspect_ratio
         }
 
     def __repr__(self) -> str:

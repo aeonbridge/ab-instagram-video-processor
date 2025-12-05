@@ -210,6 +210,11 @@ Examples:
         type=int,
         help='Maximum concurrent workers for parallel processing'
     )
+    parser.add_argument(
+        '--aspect-ratio',
+        choices=['original', '9:16', '16:9', '1:1', '4:5'],
+        help='Output aspect ratio (original=keep source, 9:16=vertical/Reels, 16:9=horizontal, 1:1=square, 4:5=portrait)'
+    )
 
     # Force options
     parser.add_argument(
@@ -247,6 +252,8 @@ Examples:
             ffmpeg_options['crf'] = args.crf
         if args.preset:
             ffmpeg_options['preset'] = args.preset
+        if args.aspect_ratio:
+            ffmpeg_options['aspect_ratio'] = args.aspect_ratio
 
         if ffmpeg_options:
             kwargs.update(ffmpeg_options)
@@ -257,13 +264,41 @@ Examples:
         # Load from file
         print(f"Loading moments from: {args.input}", file=sys.stderr)
         moments_data = load_moments_from_file(args.input)
-        result = process_video_moments(moments_data)
+
+        # Build FFmpeg options
+        ffmpeg_options = {}
+        if args.codec:
+            ffmpeg_options['video_codec'] = args.codec
+        if args.audio_codec:
+            ffmpeg_options['audio_codec'] = args.audio_codec
+        if args.crf:
+            ffmpeg_options['crf'] = args.crf
+        if args.preset:
+            ffmpeg_options['preset'] = args.preset
+        if args.aspect_ratio:
+            ffmpeg_options['aspect_ratio'] = args.aspect_ratio
+
+        result = process_video_moments(moments_data, **ffmpeg_options)
 
     elif not sys.stdin.isatty():
         # Load from stdin (pipe)
         print(f"Reading moments from stdin...", file=sys.stderr)
         moments_data = load_moments_from_stdin()
-        result = process_video_moments(moments_data)
+
+        # Build FFmpeg options
+        ffmpeg_options = {}
+        if args.codec:
+            ffmpeg_options['video_codec'] = args.codec
+        if args.audio_codec:
+            ffmpeg_options['audio_codec'] = args.audio_codec
+        if args.crf:
+            ffmpeg_options['crf'] = args.crf
+        if args.preset:
+            ffmpeg_options['preset'] = args.preset
+        if args.aspect_ratio:
+            ffmpeg_options['aspect_ratio'] = args.aspect_ratio
+
+        result = process_video_moments(moments_data, **ffmpeg_options)
 
     else:
         parser.print_help()

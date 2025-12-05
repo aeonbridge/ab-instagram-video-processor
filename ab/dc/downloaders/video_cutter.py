@@ -17,6 +17,62 @@ class CuttingError(Exception):
     pass
 
 
+def _get_aspect_ratio_filter(aspect_ratio: str) -> Optional[str]:
+    """
+    Get FFmpeg filter for aspect ratio conversion
+
+    Args:
+        aspect_ratio: Target aspect ratio (original, 9:16, 16:9, 1:1, 4:5)
+
+    Returns:
+        FFmpeg video filter string or None for original
+
+    Supported ratios:
+        - original: No conversion, keep source aspect ratio
+        - 9:16: Vertical (Instagram Reels, TikTok, YouTube Shorts) 1080x1920
+        - 16:9: Horizontal (YouTube, standard widescreen) 1920x1080
+        - 1:1: Square (Instagram feed) 1080x1080
+        - 4:5: Portrait (Instagram portrait) 1080x1350
+    """
+    if aspect_ratio == 'original':
+        return None
+
+    # Map aspect ratios to dimensions and filter logic
+    aspect_configs = {
+        '9:16': {
+            'width': 1080,
+            'height': 1920,
+            'crop': 'crop=ih*9/16:ih'  # Crop to 9:16, center horizontally
+        },
+        '16:9': {
+            'width': 1920,
+            'height': 1080,
+            'crop': 'crop=iw:iw*9/16'  # Crop to 16:9, center vertically
+        },
+        '1:1': {
+            'width': 1080,
+            'height': 1080,
+            'crop': 'crop=min(iw\\,ih):min(iw\\,ih)'  # Crop to square, centered
+        },
+        '4:5': {
+            'width': 1080,
+            'height': 1350,
+            'crop': 'crop=ih*4/5:ih'  # Crop to 4:5, center horizontally
+        }
+    }
+
+    if aspect_ratio not in aspect_configs:
+        logger.warning(f"Unknown aspect ratio '{aspect_ratio}', using original")
+        return None
+
+    config = aspect_configs[aspect_ratio]
+
+    # Build filter: crop first, then scale to target dimensions
+    vf = f"{config['crop']},scale={config['width']}:{config['height']}"
+
+    return vf
+
+
 def cut_video_segment(
     input_path: Path,
     output_path: Path,
@@ -27,6 +83,7 @@ def cut_video_segment(
     crf: int = 23,
     preset: str = 'medium',
     include_audio: bool = True,
+    aspect_ratio: str = 'original',
     ffmpeg_path: str = 'ffmpeg',
     timeout: int = 120
 ) -> bool:
@@ -66,18 +123,31 @@ def cut_video_segment(
 
     duration = end_time - start_time
 
+    # Check if aspect ratio conversion is needed
+    needs_conversion = aspect_ratio != 'original'
+
     # Build FFmpeg command based on codec settings
-    if video_codec == 'copy' and audio_codec == 'copy':
-        # Fast stream copy (no re-encoding)
+    if video_codec == 'copy' and audio_codec == 'copy' and not needs_conversion:
+        # Fast stream copy (no re-encoding, no conversion)
         command = _build_stream_copy_command(
             ffmpeg_path, input_path, output_path, start_time, duration
         )
     else:
-        # Re-encode with specified codecs
+        # Re-encode with specified codecs (or if aspect ratio conversion needed)
+        if video_codec == 'copy' and needs_conversion:
+            # Force re-encoding for aspect ratio conversion
+            logger.info(f"Forcing re-encoding for aspect ratio conversion: {aspect_ratio}")
+            # Try hardware encoder first (macOS VideoToolbox), fallback to libx264
+            import platform
+            if platform.system() == 'Darwin':
+                video_codec = 'h264_videotoolbox'  # macOS hardware encoder
+            else:
+                video_codec = 'libx264'  # Software encoder
+
         command = _build_encode_command(
             ffmpeg_path, input_path, output_path,
             start_time, end_time, duration,
-            video_codec, audio_codec, crf, preset, include_audio
+            video_codec, audio_codec, crf, preset, include_audio, aspect_ratio
         )
 
     logger.debug(f"FFmpeg command: {' '.join(command)}")
@@ -160,7 +230,8 @@ def _build_encode_command(
     audio_codec: str,
     crf: int,
     preset: str,
-    include_audio: bool
+    include_audio: bool,
+    aspect_ratio: str = 'original'
 ) -> List[str]:
     """
     Build FFmpeg command for re-encoding with specified codecs
@@ -177,6 +248,7 @@ def _build_encode_command(
         crf: Quality setting
         preset: Encoding preset
         include_audio: Whether to include audio
+        aspect_ratio: Target aspect ratio (original, 9:16, 16:9, 1:1, 4:5)
 
     Returns:
         FFmpeg command as list of strings
@@ -201,6 +273,12 @@ def _build_encode_command(
         # Add preset only for codecs that support it
         if video_codec in ['libx264', 'libx265']:
             command.extend(['-preset', preset])  # Encoding speed
+
+    # Add aspect ratio filter if needed
+    aspect_filter = _get_aspect_ratio_filter(aspect_ratio)
+    if aspect_filter:
+        command.extend(['-vf', aspect_filter])
+        logger.info(f"Applying aspect ratio filter: {aspect_ratio} -> {aspect_filter}")
 
     # Audio codec settings
     if include_audio:
@@ -365,8 +443,9 @@ def _process_single_clip(
     end_time = moment['end_time']
     duration = moment['duration']
     score = moment.get('score', 0)
+    aspect_ratio = ffmpeg_options.get('aspect_ratio', 'original')
 
-    clip_path = get_clip_path(video_id, clip_id, duration, output_dir, score)
+    clip_path = get_clip_path(video_id, clip_id, duration, output_dir, score, aspect_ratio)
 
     try:
         # Cut the clip

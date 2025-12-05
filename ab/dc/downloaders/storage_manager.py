@@ -83,7 +83,8 @@ def get_clip_path(
     clip_number: int,
     duration: float,
     base_path: Path,
-    score: float = 0.0
+    score: float = 0.0,
+    aspect_ratio: str = 'original'
 ) -> Path:
     """
     Generate file path for a clip
@@ -94,12 +95,13 @@ def get_clip_path(
         duration: Clip duration in seconds
         base_path: Base path for processed videos
         score: Engagement score for the clip (optional)
+        aspect_ratio: Aspect ratio of the clip (optional)
 
     Returns:
         Full path to clip file
 
-    Format: {video_id}/{video_id}_{clip_number:04d}_{duration}s_score_{score}.mp4
-    Example: RusBe_8arLQ/RusBe_8arLQ_0000_30s_score_095.mp4
+    Format: {video_id}/{video_id}_{clip_number:04d}_{duration}s_score_{score}_{ratio}.mp4
+    Example: RusBe_8arLQ/RusBe_8arLQ_0000_30s_score_095_9x16.mp4
     """
     video_id = sanitize_video_id(video_id)
     video_dir = base_path / video_id
@@ -114,7 +116,13 @@ def get_clip_path(
     score_int = int(score * 100)
     score_str = f"score_{score_int:03d}"
 
-    filename = f"{video_id}_{clip_number:04d}_{duration_str}_{score_str}.mp4"
+    # Format aspect ratio (9:16 -> 9x16, original -> original)
+    if aspect_ratio == 'original':
+        ratio_str = 'original'
+    else:
+        ratio_str = aspect_ratio.replace(':', 'x')
+
+    filename = f"{video_id}_{clip_number:04d}_{duration_str}_{score_str}_{ratio_str}.mp4"
     return video_dir / filename
 
 
