@@ -29,7 +29,8 @@ class Config:
         self.download_timeout = int(os.getenv('DOWNLOAD_TIMEOUT', '600'))
 
         # FFmpeg settings
-        self.ffmpeg_path = os.getenv('FFMPEG_PATH', 'ffmpeg')
+        self.ffmpeg_path = os.getenv('FFMPEG_PATH', ''
+                                                    '')
         self.video_codec = os.getenv('VIDEO_CODEC', 'libx264')
         self.audio_codec = os.getenv('AUDIO_CODEC', 'aac')
         self.crf_quality = int(os.getenv('CRF_QUALITY', '23'))
@@ -50,7 +51,7 @@ class Config:
         self.enable_parallel_processing = self._str_to_bool(
             os.getenv('ENABLE_PARALLEL_PROCESSING', 'true')
         )
-        self.clip_timeout = int(os.getenv('CLIP_TIMEOUT', '120'))
+        self.clip_timeout = int(os.getenv('CLIP_TIMEOUT', '600'))
 
         # Limits
         self.max_video_duration = int(os.getenv('MAX_VIDEO_DURATION', '7200'))
@@ -83,20 +84,25 @@ class Config:
             log_dir = Path(self.log_file).parent
             log_dir.mkdir(parents=True, exist_ok=True)
 
-    def validate(self) -> tuple[bool, Optional[str]]:
+    def validate(self, skip_ffmpeg: bool = False, skip_ytdlp: bool = False) -> tuple[bool, Optional[str]]:
         """
         Validate configuration
+
+        Args:
+            skip_ffmpeg: Skip FFmpeg validation (useful for subtitle-only operations)
+            skip_ytdlp: Skip yt-dlp validation (useful for local file operations)
 
         Returns:
             Tuple of (is_valid, error_message)
         """
-        # Check FFmpeg availability
         import shutil
-        if not shutil.which(self.ffmpeg_path):
-            return False, f"FFmpeg not found at: {self.ffmpeg_path}"
 
-        # Check yt-dlp availability
-        if not shutil.which('yt-dlp'):
+        # Check FFmpeg availability (unless skipped)
+        if not skip_ffmpeg and not shutil.which(self.ffmpeg_path):
+            return False, f"FFmpeg not found at: {self.ffmpeg_path}. Install with: brew install ffmpeg (macOS) or apt-get install ffmpeg (Ubuntu)"
+
+        # Check yt-dlp availability (unless skipped)
+        if not skip_ytdlp and not shutil.which('yt-dlp'):
             return False, "yt-dlp not found. Install with: pip install yt-dlp"
 
         # Validate numeric ranges
@@ -138,9 +144,13 @@ class Config:
 _config: Optional[Config] = None
 
 
-def load_config() -> Config:
+def load_config(skip_ffmpeg: bool = False, skip_ytdlp: bool = False) -> Config:
     """
     Load or return cached configuration
+
+    Args:
+        skip_ffmpeg: Skip FFmpeg validation (useful for subtitle-only operations)
+        skip_ytdlp: Skip yt-dlp validation (useful for local file operations)
 
     Returns:
         Config object with all settings
@@ -148,7 +158,7 @@ def load_config() -> Config:
     global _config
     if _config is None:
         _config = Config()
-        is_valid, error = _config.validate()
+        is_valid, error = _config.validate(skip_ffmpeg=skip_ffmpeg, skip_ytdlp=skip_ytdlp)
         if not is_valid:
             raise ValueError(f"Invalid configuration: {error}")
     return _config

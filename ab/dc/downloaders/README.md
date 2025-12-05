@@ -27,6 +27,9 @@ print(f"Created {result['clips_created']} clips in {result['processing_time_seco
 - ✅ Comprehensive error handling
 - ✅ Progress tracking and logging
 - ✅ Configurable quality and codecs
+- ✅ Subtitle download service (YouTube subtitles)
+- ✅ Subtitle clipper service (generate subtitles for each clip)
+- ✅ Video transcription with OpenAI Whisper
 
 ## File Structure
 
@@ -35,11 +38,21 @@ ab/dc/downloaders/
 ├── README.md                          # This file
 ├── ARCHITECTURE.md                    # Architecture diagrams and flow
 ├── video_clipper_service.md          # Detailed implementation plan
-├── video_clipper_service.py          # Main orchestrator (to implement)
-├── video_downloader.py                # Download logic (to implement)
-├── video_cutter.py                    # FFmpeg cutting (to implement)
-├── storage_manager.py                 # File management (to implement)
-└── cli_clipper.py                     # CLI tool (to implement)
+├── video_clipper_service.py          # Main orchestrator
+├── video_downloader.py                # Download logic
+├── video_cutter.py                    # FFmpeg cutting
+├── video_transcriber.py               # Whisper transcription
+├── subtitle_downloader.py             # Subtitle download service
+├── subtitle_clipper_service.py        # Subtitle clipper for moments
+├── storage_manager.py                 # File management
+├── config_manager.py                  # Configuration management
+├── cli_clipper.py                     # CLI tool for clipping
+├── cli_transcriber.py                 # CLI tool for transcription
+├── cli_subtitle.py                    # CLI tool for subtitles
+├── cli_subtitle_clipper.py            # CLI tool for subtitle clipping
+├── SUBTITLE_SERVICE.md                # Subtitle service documentation
+├── SUBTITLE_CLIPPER_SERVICE.md        # Subtitle clipper documentation
+└── TRANSCRIPTION_SERVICE.md           # Transcription service documentation
 ```
 
 ## Configuration
@@ -163,15 +176,25 @@ async def create_clips(url: str):
 
 ## Dependencies
 
-```bash
-# Python packages
-pip install yt-dlp ffmpeg-python python-dotenv pydantic tqdm
+### Quick Install
 
-# System requirements
-# FFmpeg with libx264 and aac support
-brew install ffmpeg  # macOS
-apt-get install ffmpeg  # Ubuntu/Debian
+**For subtitle services only:**
+```bash
+pip install yt-dlp
 ```
+
+**For all services (video + subtitles + transcription):**
+```bash
+# System dependencies
+brew install ffmpeg  # macOS
+# or
+sudo apt-get install ffmpeg  # Ubuntu/Debian
+
+# Python packages
+pip install yt-dlp ffmpeg-python python-dotenv openai-whisper torch
+```
+
+**See INSTALLATION.md for complete installation guide and troubleshooting.**
 
 ## Implementation Status
 
@@ -234,10 +257,70 @@ The service handles common errors gracefully:
 - File system safety (pathlib, disk space checks)
 - Process isolation (subprocess with timeouts)
 
+## Additional Services
+
+### Subtitle Download Service
+
+Download subtitles from YouTube videos in various languages:
+
+```bash
+# List available subtitles
+python cli_subtitle.py list "VIDEO_ID"
+
+# Download English subtitle
+python cli_subtitle.py download "VIDEO_ID" -l en
+
+# Download all available subtitles
+python cli_subtitle.py download "VIDEO_ID" --all
+
+# Download with markdown export
+python cli_subtitle.py download "VIDEO_ID" -l en --export-markdown
+```
+
+See **SUBTITLE_SERVICE.md** for complete documentation.
+
+### Subtitle Clipper Service
+
+Generate subtitle files for each video clip based on popular moments:
+
+```bash
+# Extract moments and generate subtitles
+python cli_subtitle_clipper.py --video-id "VIDEO_ID" -l en -l pt
+
+# From moments JSON file
+python cli_subtitle_clipper.py --input moments.json -l en
+
+# With aspect ratio for clip naming
+python cli_subtitle_clipper.py --video-id "VIDEO_ID" -l en --aspect-ratio 9:16
+```
+
+See **SUBTITLE_CLIPPER_SERVICE.md** for complete documentation.
+
+### Video Transcription Service
+
+Transcribe videos using OpenAI Whisper:
+
+```bash
+# Transcribe video
+python cli_transcriber.py transcribe video.mp4
+
+# Transcribe with specific model
+python cli_transcriber.py transcribe video.mp4 --model medium --language pt
+
+# Download and transcribe from YouTube
+python cli_transcriber.py from-url "VIDEO_ID" --model base
+```
+
+See **TRANSCRIPTION_SERVICE.md** for complete documentation.
+
 ## Documentation
 
+- **INSTALLATION.md**: Complete installation guide and troubleshooting
 - **ARCHITECTURE.md**: System architecture, data flow, component interaction
 - **video_clipper_service.md**: Detailed implementation plan, specifications
+- **SUBTITLE_SERVICE.md**: Subtitle download service documentation
+- **SUBTITLE_CLIPPER_SERVICE.md**: Subtitle clipper service documentation
+- **TRANSCRIPTION_SERVICE.md**: Video transcription service documentation
 - **README.md**: This file (quick start and overview)
 
 ## Support
