@@ -7,9 +7,24 @@ import os
 import json
 import logging
 import subprocess
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from datetime import datetime
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    # Try to load .env from project root
+    env_path = Path(__file__).parent.parent.parent / '.env'
+    if env_path.exists():
+        load_dotenv(env_path)
+    # Also try loading from publisher directory
+    publisher_env = Path(__file__).parent / '.env'
+    if publisher_env.exists():
+        load_dotenv(publisher_env)
+except ImportError:
+    pass  # python-dotenv not installed, will rely on system env vars
 
 try:
     from .youtube_publisher import YouTubePublisher
@@ -611,7 +626,7 @@ def main():
     # Create publisher
     publisher = AutoPublisher(
         platform='youtube',
-        dry_run=True  # Set to False for actual publishing
+        dry_run=False  # Set to False for actual publishing
     )
 
     # Find publishable videos

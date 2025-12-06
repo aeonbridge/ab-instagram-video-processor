@@ -7,11 +7,12 @@ import subprocess
 import json
 import re
 from typing import List, Dict, Optional
+from datetime import datetime, timezone
 
 
 def extract_video_id(url_or_id: str) -> Optional[str]:
     """Extract YouTube video ID from URL or return the ID if already provided.
-
+re
     Args:
         url_or_id: YouTube URL or video ID
 
@@ -40,6 +41,58 @@ def extract_video_id(url_or_id: str) -> Optional[str]:
             return match.group(1)
 
     return None
+
+
+def get_video_metadata(video_id: str) -> Dict:
+    """Extract video metadata using yt-dlp
+
+    Args:
+        video_id: YouTube video ID
+
+    Returns:
+        Dictionary with video metadata including title, description, tags, duration, etc.
+    """
+    cmd = [
+        'yt-dlp',
+        '--dump-json',
+        '--no-download',
+        f'https://www.youtube.com/watch?v={video_id}'
+    ]
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
+    data = json.loads(result.stdout)
+
+    # Parse upload date (format: YYYYMMDD)
+    upload_date_str = data.get('upload_date', '')
+    upload_date = None
+    if upload_date_str:
+        try:
+            upload_date = datetime.strptime(upload_date_str, '%Y%m%d').replace(tzinfo=timezone.utc)
+        except ValueError:
+            pass
+
+    # Calculate video age in days
+    video_age_days = None
+    analysis_date = datetime.now(timezone.utc)
+    if upload_date:
+        video_age_days = (analysis_date - upload_date).days
+
+    return {
+        'title': data.get('title', ''),
+        'description': data.get('description', ''),
+        'tags': data.get('tags', []),
+        'duration': data.get('duration', 0),
+        'view_count': data.get('view_count', 0),
+        'like_count': data.get('like_count', 0),
+        'comment_count': data.get('comment_count', 0),
+        'upload_date': upload_date.isoformat() if upload_date else None,
+        'video_age_days': video_age_days,
+        'analysis_date': analysis_date.isoformat(),
+        'channel': data.get('channel', ''),
+        'channel_id': data.get('channel_id', ''),
+        'channel_url': data.get('channel_url', ''),
+        'thumbnail': data.get('thumbnail', ''),
+        'webpage_url': data.get('webpage_url', '')
+    }
 
 
 def get_heatmap(video_id: str) -> List[Dict]:
@@ -246,8 +299,8 @@ def extract_moments(heatmap_data, max_duration=40, min_duration=10):
 
 def get_popular_moments(
     url_or_video_id: str,
-    max_duration: int = 40,
-    min_duration: int = 10,
+    max_duration: int = 120,
+    min_duration: int = 30,
     threshold: float = 0.45
 ) -> Dict:
     """
@@ -368,6 +421,168 @@ def get_popular_moments(
         }
 
 
+def get_moments_with_metadata(
+    url_or_video_id: str,
+    max_duration: int = 120,
+    min_duration: int = 30,
+    threshold: float = 0.45
+) -> Dict:
+    """
+    Extract popular moments WITH full video metadata.
+    This is an enhanced version of get_popular_moments that includes complete video information.
+
+    Args:
+        url_or_video_id: YouTube URL or video ID
+        max_duration: Maximum moment duration in seconds (default 120)
+        min_duration: Minimum moment duration in seconds (default 30)
+        threshold: Minimum relative value for peak detection (default 0.45)
+
+    Returns:
+        Dictionary with structure:
+        {
+            "success": bool,
+            "video_id": str,
+            "video_url": str,
+            "video_info": {
+                "title": str,
+                "description": str,
+                "tags": [str],
+                "duration": int,  # total video duration in seconds
+                "view_count": int,
+                "like_count": int,
+                "comment_count": int,
+                "upload_date": str,  # ISO format
+                "video_age_days": int,  # age in days at analysis time
+                "analysis_date": str,  # ISO format
+                "channel": str,
+                "channel_id": str,
+                "channel_url": str,
+                "thumbnail": str,
+                "webpage_url": str
+            },
+            "moments": [
+                {
+                    "start_time": float,
+                    "end_time": float,
+                    "duration": float,
+                    "score": float,
+                    "timestamp": str  # formatted as MM:SS or HH:MM:SS
+                }
+            ],
+            "total_moments": int,
+            "error": str (only if success=False)
+        }
+
+    Example:
+        >>> result = get_moments_with_metadata('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+        >>> print(f"Video: {result['video_info']['title']}")
+        >>> print(f"Likes: {result['video_info']['like_count']:,}")
+        >>> print(f"Found {result['total_moments']} popular moments")
+    """
+    try:
+        # Extract video ID from URL if needed
+        video_id = extract_video_id(url_or_video_id)
+        if not video_id:
+            return {
+                "success": False,
+                "error": "Invalid YouTube URL or video ID",
+                "video_id": None,
+                "video_url": None,
+                "video_info": {},
+                "moments": [],
+                "total_moments": 0
+            }
+
+        # Construct video URL
+        video_url = f"https://www.youtube.com/watch?v={video_id}"
+
+        # Get video metadata
+        try:
+            video_metadata = get_video_metadata(video_id)
+        except Exception as e:
+            return {
+                "success": False,
+                "error": f"Failed to fetch video metadata: {str(e)}",
+                "video_id": video_id,
+                "video_url": video_url,
+                "video_info": {},
+                "moments": [],
+                "total_moments": 0
+            }
+
+        # Get heatmap data
+        heatmap = get_heatmap(video_id)
+        if not heatmap:
+            return {
+                "success": False,
+                "error": "No heatmap data available. Video may need 50,000+ views.",
+                "video_id": video_id,
+                "video_url": video_url,
+                "video_info": video_metadata,
+                "moments": [],
+                "total_moments": 0
+            }
+
+        # Extract moments
+        moments = extract_moments(heatmap, max_duration, min_duration)
+
+        # Format moments for API response
+        formatted_moments = []
+        for moment in moments:
+            duration = moment['end'] - moment['start']
+            formatted_moments.append({
+                "start_time": round(moment['start'], 2),
+                "end_time": round(moment['end'], 2),
+                "duration": round(duration, 2),
+                "score": round(moment['peak'], 3),
+                "timestamp": _format_timestamp(moment['start'])
+            })
+
+        return {
+            "success": True,
+            "video_id": video_id,
+            "video_url": video_url,
+            "video_info": video_metadata,
+            "moments": formatted_moments,
+            "total_moments": len(formatted_moments),
+            "error": None
+        }
+
+    except subprocess.CalledProcessError as e:
+        video_id_local = video_id if 'video_id' in locals() else None
+        return {
+            "success": False,
+            "error": f"Failed to fetch video data: {str(e)}",
+            "video_id": video_id_local,
+            "video_url": f"https://www.youtube.com/watch?v={video_id_local}" if video_id_local else None,
+            "video_info": {},
+            "moments": [],
+            "total_moments": 0
+        }
+    except json.JSONDecodeError as e:
+        video_id_local = video_id if 'video_id' in locals() else None
+        return {
+            "success": False,
+            "error": f"Failed to parse data: {str(e)}",
+            "video_id": video_id_local,
+            "video_url": f"https://www.youtube.com/watch?v={video_id_local}" if video_id_local else None,
+            "video_info": {},
+            "moments": [],
+            "total_moments": 0
+        }
+    except Exception as e:
+        video_id_local = video_id if 'video_id' in locals() else None
+        return {
+            "success": False,
+            "error": f"Unexpected error: {str(e)}",
+            "video_id": video_id_local,
+            "video_url": f"https://www.youtube.com/watch?v={video_id_local}" if video_id_local else None,
+            "video_info": {},
+            "moments": [],
+            "total_moments": 0
+        }
+
+
 def _format_timestamp(seconds: float) -> str:
     """Format seconds into MM:SS or HH:MM:SS timestamp.
 
@@ -388,7 +603,7 @@ def _format_timestamp(seconds: float) -> str:
 
 
 def main():
-    """Example usage demonstrating the service API"""
+    """Example usage demonstrating both service APIs"""
     import sys
 
     # Test with different URL formats
@@ -401,32 +616,74 @@ def main():
     if len(sys.argv) > 1:
         test_cases = [sys.argv[1]]
 
+    # Check if --with-metadata flag is present
+    with_metadata = '--with-metadata' in sys.argv
+
     for test_url in test_cases:
-        print(f"\n{'='*60}")
+        print(f"\n{'='*70}")
         print(f"Testing with: {test_url}")
-        print('='*60)
+        print(f"Mode: {'WITH METADATA' if with_metadata else 'MOMENTS ONLY'}")
+        print('='*70)
 
-        # Call the main service function
-        result = get_popular_moments(
-            url_or_video_id=test_url,
-            max_duration=30,
-            min_duration=10
-        )
+        if with_metadata:
+            # Call the enhanced service function with full metadata
+            result = get_moments_with_metadata(
+                url_or_video_id=test_url,
+                max_duration=40,
+                min_duration=10
+            )
 
-        # Display results as JSON
-        print(json.dumps(result, indent=2))
+            # Display results as JSON
+            print(json.dumps(result, indent=2))
 
-        # Pretty print for human readability
-        if result['success']:
-            print(f"\n✓ Successfully extracted {result['total_moments']} moments")
-            print(f"  Video ID: {result['video_id']}")
-            print("\n  Popular Moments:")
-            for i, moment in enumerate(result['moments'], 1):
-                print(f"  {i}. [{moment['timestamp']}] "
-                      f"{moment['start_time']:.1f}s - {moment['end_time']:.1f}s "
-                      f"(duration: {moment['duration']:.1f}s, score: {moment['score']:.2f})")
+            # Pretty print for human readability
+            if result['success']:
+                info = result['video_info']
+                print(f"\n{'='*70}")
+                print("VIDEO INFORMATION")
+                print('='*70)
+                print(f"Title: {info['title']}")
+                print(f"Channel: {info['channel']}")
+                print(f"Duration: {info['duration']}s ({info['duration']//60}m {info['duration']%60}s)")
+                print(f"Views: {info['view_count']:,}")
+                print(f"Likes: {info['like_count']:,}")
+                print(f"Comments: {info['comment_count']:,}")
+                print(f"Upload Date: {info['upload_date']}")
+                print(f"Video Age: {info['video_age_days']} days")
+                print(f"Analysis Date: {info['analysis_date']}")
+                print(f"Tags: {', '.join(info['tags'][:5])}{'...' if len(info['tags']) > 5 else ''}")
+
+                print(f"\n{'='*70}")
+                print(f"POPULAR MOMENTS ({result['total_moments']} found)")
+                print('='*70)
+                for i, moment in enumerate(result['moments'], 1):
+                    print(f"{i}. [{moment['timestamp']}] "
+                          f"{moment['start_time']:.1f}s - {moment['end_time']:.1f}s "
+                          f"(duration: {moment['duration']:.1f}s, score: {moment['score']:.3f})")
+            else:
+                print(f"\n✗ Error: {result['error']}")
         else:
-            print(f"\n✗ Error: {result['error']}")
+            # Call the simple moments-only function
+            result = get_popular_moments(
+                url_or_video_id=test_url,
+                max_duration=40,
+                min_duration=10
+            )
+
+            # Display results as JSON
+            print(json.dumps(result, indent=2))
+
+            # Pretty print for human readability
+            if result['success']:
+                print(f"\n✓ Successfully extracted {result['total_moments']} moments")
+                print(f"  Video ID: {result['video_id']}")
+                print("\n  Popular Moments:")
+                for i, moment in enumerate(result['moments'], 1):
+                    print(f"  {i}. [{moment['timestamp']}] "
+                          f"{moment['start_time']:.1f}s - {moment['end_time']:.1f}s "
+                          f"(duration: {moment['duration']:.1f}s, score: {moment['score']:.2f})")
+            else:
+                print(f"\n✗ Error: {result['error']}")
 
 
 if __name__ == "__main__":
