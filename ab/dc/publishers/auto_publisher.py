@@ -6,6 +6,7 @@ Automated video publishing using metadata and thumbnails from AI agents
 import os
 import json
 import logging
+import subprocess
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from datetime import datetime
@@ -321,6 +322,61 @@ class AutoPublisher:
 
         return category_map.get(category, 'Entertainment')  # Default: Entertainment
 
+    def _transcode_video(self, video_path: Path, output_codec: str = 'h264') -> Optional[Path]:
+        """
+        Transcode video to a YouTube-compatible codec
+
+        Args:
+            video_path: Path to input video
+            output_codec: Target codec (default: h264)
+
+        Returns:
+            Path to transcoded video or None if failed
+        """
+        # Create output path
+        output_path = video_path.parent / f"{video_path.stem}_transcoded{video_path.suffix}"
+
+        logger.info(f"Transcoding video to {output_codec}...")
+        logger.info(f"Input: {video_path.name}")
+        logger.info(f"Output: {output_path.name}")
+
+        try:
+            # Build ffmpeg command
+            cmd = [
+                'ffmpeg',
+                '-i', str(video_path),
+                '-c:v', 'libx264',  # H.264 codec
+                '-preset', 'medium',  # Encoding speed
+                '-crf', '23',  # Quality (18-28, lower = better)
+                '-c:a', 'aac',  # AAC audio
+                '-b:a', '192k',  # Audio bitrate
+                '-movflags', '+faststart',  # Optimize for web streaming
+                '-y',  # Overwrite output file
+                str(output_path)
+            ]
+
+            # Run ffmpeg
+            result = subprocess.run(
+                cmd,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
+
+            if result.returncode != 0:
+                logger.error(f"Transcoding failed: {result.stderr}")
+                return None
+
+            logger.info(f"Transcoding successful!")
+            logger.info(f"Original size: {video_path.stat().st_size / 1024 / 1024:.2f} MB")
+            logger.info(f"Transcoded size: {output_path.stat().st_size / 1024 / 1024:.2f} MB")
+
+            return output_path
+
+        except Exception as e:
+            logger.error(f"Transcoding error: {e}")
+            return None
+
     def publish_video(
         self,
         video_info: Dict,
@@ -378,10 +434,49 @@ class AutoPublisher:
                 status="published"
             )
 
+        # Ensure authenticated before publishing
+        if not self.publisher._authenticated:
+            logger.info("Authenticating with YouTube...")
+            if not self.publisher.authenticate():
+                return UploadResult(
+                    success=False,
+                    error="Authentication failed",
+                    status="failed"
+                )
+            logger.info("Authentication successful!")
+
         # Publish video
+        transcoded_file = None
         try:
+            # First, try to validate the video
+            validation = self.publisher.validate_video(video_file)
+
+            # Check if video needs transcoding
+            needs_transcoding = False
+            if not validation.valid:
+                # Check if it's a codec issue
+                for error in validation.errors:
+                    if 'Codec' in error and 'not supported' in error:
+                        needs_transcoding = True
+                        logger.warning(f"Video codec not supported, transcoding required")
+                        break
+
+            # Transcode if needed
+            video_to_upload = video_file
+            if needs_transcoding:
+                transcoded_file = self._transcode_video(video_file)
+                if not transcoded_file:
+                    return UploadResult(
+                        success=False,
+                        error="Video transcoding failed",
+                        status="failed"
+                    )
+                video_to_upload = transcoded_file
+                logger.info(f"Using transcoded video: {transcoded_file.name}")
+
+            # Upload the video
             result = self.publisher.upload_video(
-                video_path=video_file,
+                video_path=video_to_upload,
                 metadata=video_metadata
             )
 
@@ -390,7 +485,7 @@ class AutoPublisher:
                 return result
 
             logger.info(f"Video published! ID: {result.video_id}")
-            logger.info(f"URL: {result.url}")
+            logger.info(f"URL: {result.video_url}")
 
             # Upload thumbnail if available
             if thumbnail_files and thumbnail_index < len(thumbnail_files):
@@ -411,10 +506,18 @@ class AutoPublisher:
                 except Exception as e:
                     logger.error(f"Thumbnail upload error: {e}")
 
+            # Cleanup transcoded file if it was created
+            if transcoded_file and transcoded_file.exists():
+                logger.info(f"Cleaning up transcoded file: {transcoded_file.name}")
+                transcoded_file.unlink()
+
             return result
 
         except Exception as e:
             logger.error(f"Publishing error: {e}")
+            # Cleanup transcoded file on error
+            if transcoded_file and transcoded_file.exists():
+                transcoded_file.unlink()
             return UploadResult(
                 success=False,
                 video_id=None,
