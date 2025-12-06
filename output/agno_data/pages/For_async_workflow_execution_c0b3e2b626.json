@@ -1,0 +1,8 @@
+{
+  "title": "For async workflow execution",
+  "content": "workflow_tools = WorkflowTools(\n    workflow=my_async_workflow,\n    async_mode=True,  # This will use async versions of the tools\n    enable_run_workflow=True,\n)\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[workflow_tools],\n)\n\nawait agent.arun(...)\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#for-async-workflow-execution",
+  "links": []
+}

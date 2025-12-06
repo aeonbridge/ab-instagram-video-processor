@@ -1,0 +1,8 @@
+{
+  "title": "Define the structured message data",
+  "content": "class MediaRequest(BaseModel):\n    topic: str\n    content_type: str  # \"image\" or \"video\"\n    prompt: str\n    style: Optional[str] = \"realistic\"\n    duration: Optional[int] = None  # For video, duration in seconds\n    resolution: Optional[str] = \"1024x1024\"  # For image resolution",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-the-structured-message-data",
+  "links": []
+}

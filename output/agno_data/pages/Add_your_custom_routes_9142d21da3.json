@@ -1,0 +1,8 @@
+{
+  "title": "Add your custom routes",
+  "content": "@app.get(\"/status\")\nasync def status_check():\n    return {\"status\": \"healthy\"}",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-your-custom-routes",
+  "links": []
+}

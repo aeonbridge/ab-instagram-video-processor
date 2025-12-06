@@ -1,0 +1,8 @@
+{
+  "title": "Execute Evaluation",
+  "content": "Source: https://docs.agno.com/reference-api/schema/evals/execute-evaluation\n\npost /eval-runs\nRun evaluation tests on agents or teams. Supports accuracy, performance, and reliability evaluations. Requires either agent_id or team_id, but not both.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#execute-evaluation",
+  "links": []
+}

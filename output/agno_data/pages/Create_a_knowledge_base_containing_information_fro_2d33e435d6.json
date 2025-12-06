@@ -1,0 +1,13 @@
+{
+  "title": "Create a knowledge base containing information from a URL",
+  "content": "agno_docs = Knowledge(\n    # Use LanceDB as the vector database and store embeddings in the `agno_docs` table\n    vector_db=LanceDb(\n        uri=\"tmp/lancedb\",\n        table_name=\"agno_docs\",\n        search_type=SearchType.hybrid,\n        embedder=OpenAIEmbedder(id=\"text-embedding-3-small\"),\n    ),\n)\nagno_docs.add_content(\n    url=\"https://docs.agno.com/llms-full.txt\"\n)\n\nknowledge_tools = KnowledgeTools(\n    knowledge=agno_docs,\n    think=True,\n    search=True,\n    analyze=True,\n    add_few_shot=True,\n)\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[knowledge_tools],\n    markdown=True,\n)\n\nif __name__ == \"__main__\":\n    agent.print_response(\"How do I build multi-agent teams with Agno?\", stream=True)\npython  theme={null}\nfrom agno.tools.knowledge import KnowledgeTools\n\nknowledge_tools = KnowledgeTools(\n    knowledge=my_knowledge_base,\n    think=True,                # Enable the think tool\n    search=True,               # Enable the search tool\n    analyze=True,              # Enable the analyze tool\n    add_instructions=True,     # Add default instructions\n    add_few_shot=True,         # Add few-shot examples\n    few_shot_examples=None,    # Optional custom few-shot examples\n)\n```",
+  "code_samples": [
+    {
+      "code": "The toolkit comes with default instructions and few-shot examples to help the Agent use the tools effectively. Here is how you can configure them:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#create-a-knowledge-base-containing-information-from-a-url",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Define research team",
+  "content": "research_team = Team(\n    name=\"Research Team\",\n    members=[hackernews_agent, web_agent],\n    instructions=\"Research tech topics from Hackernews and the web\",\n)\n\ncontent_planner = Agent(\n    name=\"Content Planner\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=\"Plan a content schedule based on research\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-research-team",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Print session metrics",
+  "content": "print(\"Session Metrics\")\npprint(workflow.get_session_metrics().to_dict())\n```\n\nYou'll see the outputs with following information:\n\n**Workflow-level metrics:**\n\n* `duration`: Total workflow execution time in seconds (from start to finish, including orchestration overhead)\n* `steps`: Dictionary mapping step names to their individual step metrics\n\n**Step-level metrics:**\n\n* `step_name`: Name of the step\n* `executor_type`: Type of executor (\"agent\", \"team\", or \"function\")\n* `executor_name`: Name of the executor\n* `metrics`: Execution metrics including tokens, duration, and model information (see [Metrics schema](/reference/agents/metrics))\n\n* Aggregates step-level metrics (tokens, duration) across all runs in the session\n* Includes only agent/team execution time, not workflow orchestration overhead\n\n## Developer Resources\n\n* View the [Workflow schema](/reference/workflows/workflow)\n* View the [Session schema](/reference/workflows/session)\n* View the [WorkflowRunOutput schema](/reference/workflows/run-output)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/workflows/session/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#print-session-metrics",
+  "links": []
+}

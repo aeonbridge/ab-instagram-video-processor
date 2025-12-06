@@ -1,0 +1,45 @@
+{
+  "title": ")",
+  "content": "bash  theme={null}\n    export OPENAI_API_KEY=xxx\n    export SLACK_TOKEN=xxx\n    export EXA_API_KEY=xxx\n    bash  theme={null}\n    docker run -d --name pgvector-db -e POSTGRES_USER=ai -e POSTGRES_PASSWORD=ai -e POSTGRES_DB=ai -p 5532:5432 pgvector/pgvector:pg16\n    bash  theme={null}\n    pip install -U agno openai ddgs slack-sdk exa-py pgvector psycopg\n    bash Mac theme={null}\n      python ai_support_team.py\n      bash Windows theme={null}\n      python ai_support_team.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n* Modify the documentation URL in `knowledge.add_content()` to index your own docs\n* Adjust Slack channel names in `support_channel` and `feedback_channel` variables\n* Add more specialized agents for different inquiry types\n* Explore [Knowledge Bases](/basics/knowledge/knowledge-bases) for advanced configurations",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe team will analyze your inquiry and route it to the most appropriate agent. Documentation questions get answered by searching the knowledge base, bugs get escalated to Slack, and feedback gets collected and logged.\n\nYou'll see the team's classification decision and responses from the specific agents handling your request. The knowledge base integration enables accurate answers grounded in actual documentation, while Slack integration provides seamless escalation workflows.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API keys\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Start PostgreSQL database\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Team\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#)",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Initialize hybrid vector DB",
+  "content": "hybrid_db = PgVector(\n    table_name=\"recipes\",\n    db_url=db_url,\n    search_type=SearchType.hybrid  # Hybrid Search\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-hybrid-vector-db",
+  "links": []
+}

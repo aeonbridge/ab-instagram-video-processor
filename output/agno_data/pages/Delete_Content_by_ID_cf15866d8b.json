@@ -1,0 +1,8 @@
+{
+  "title": "Delete Content by ID",
+  "content": "Source: https://docs.agno.com/reference-api/schema/knowledge/delete-content-by-id\n\ndelete /knowledge/content/{content_id}\nPermanently remove a specific content item from the knowledge base. This action cannot be undone.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-content-by-id",
+  "links": []
+}

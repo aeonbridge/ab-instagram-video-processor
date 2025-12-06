@@ -1,0 +1,31 @@
+{
+  "title": "Run the same query twice to demonstrate caching",
+  "content": "for i in range(1, 3):\n    print(f\"\\n{'=' * 60}\")\n    print(\n        f\"Run {i}: {'Cache Miss (First Request)' if i == 1 else 'Cache Hit (Cached Response)'}\"\n    )\n    print(f\"{'=' * 60}\\n\")\n\nresponse = agent.run(\n        \"Write me a short story about a cat that can talk and solve problems.\"\n    )\n    print(response.content)\n    print(f\"\\n Elapsed time: {response.metrics.duration:.3f}s\")\n\n# Small delay between iterations for clarity\n    if i == 1:\n        time.sleep(0.5)\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U openai agno\n    bash Mac theme={null}\n        python cache_model_response.py\n      bash Windows theme={null}\n        python cache_model_response.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#run-the-same-query-twice-to-demonstrate-caching",
+  "links": []
+}

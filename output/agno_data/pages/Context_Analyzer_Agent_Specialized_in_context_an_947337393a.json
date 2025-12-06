@@ -1,0 +1,8 @@
+{
+  "title": "Context Analyzer Agent - Specialized in context analysis",
+  "content": "context_analyzer = Agent(\n    name=\"Context Analyzer\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Analyze context and relevance of reranked results\",\n    knowledge=validation_knowledge,\n    search_knowledge=True,\n    instructions=[\n        \"Analyze the context and relevance of reranked results.\",\n        \"Cross-validate information against the validation knowledge base.\",\n        \"Assess the quality and accuracy of retrieved content.\",\n        \"Identify the most contextually appropriate information.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#context-analyzer-agent---specialized-in-context-analysis",
+  "links": []
+}

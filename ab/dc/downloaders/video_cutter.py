@@ -85,7 +85,7 @@ def cut_video_segment(
     include_audio: bool = True,
     aspect_ratio: str = 'original',
     ffmpeg_path: str = 'ffmpeg',
-    timeout: int = 120
+    timeout: int = 600
 ) -> bool:
     """
     Cut a single video segment using FFmpeg

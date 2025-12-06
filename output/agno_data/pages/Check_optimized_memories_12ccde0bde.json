@@ -1,0 +1,8 @@
+{
+  "title": "Check optimized memories",
+  "content": "print(\"\\nAfter optimization:\")\nmemories_after = agent.get_user_memories(user_id=user_id)\nprint(f\"  Memory count: {len(memories_after)}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#check-optimized-memories",
+  "links": []
+}

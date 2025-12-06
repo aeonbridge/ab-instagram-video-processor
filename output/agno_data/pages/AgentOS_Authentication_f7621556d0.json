@@ -1,0 +1,29 @@
+{
+  "title": "AgentOS Authentication",
+  "content": "Source: https://docs.agno.com/agent-os/api/authentication\n\nLearn how to authenticate with AgentOS\n\nAgentOS supports bearer-token authentication to secure your API endpoints and protect your agentic systems from unauthorized access.\n\n## Authentication Methods\n\nWhen a Security Key is configured, all API routes require an `Authorization: Bearer <token>` header for access. Without a key configured, authentication is disabled and all endpoints are publicly accessible.\n\n### Using Bearer Token Authentication\n\nInclude the authorization header in your API requests:\n\nSet your security key when initializing AgentOS or through the configuration file. See the [AgentOS Security](/agent-os/security) guide for detailed setup instructions.\n\n## Developer Resources\n\n* See [AgentOS Security](/agent-os/security) for comprehensive security configuration",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication Methods",
+      "id": "authentication-methods"
+    },
+    {
+      "level": "h3",
+      "text": "Using Bearer Token Authentication",
+      "id": "using-bearer-token-authentication"
+    },
+    {
+      "level": "h3",
+      "text": "Configuration",
+      "id": "configuration"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#agentos-authentication",
+  "links": []
+}

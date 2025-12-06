@@ -1,0 +1,14 @@
+{
+  "title": "Jina Embedder",
+  "content": "Source: https://docs.agno.com/basics/knowledge/embedder/jina/usage/jina-embedder\n\n```python  theme={null}\n\nfrom agno.knowledge.embedder.jina import JinaEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#jina-embedder",
+  "links": []
+}

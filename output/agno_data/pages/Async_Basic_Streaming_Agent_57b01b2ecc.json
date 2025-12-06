@@ -1,0 +1,14 @@
+{
+  "title": "Async Basic Streaming Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/perplexity/usage/async-basic-stream\n\n```python cookbook/models/perplexity/async_basic_stream.py theme={null}\nimport asyncio\nfrom typing import Iterator  # noqa\n\nfrom agno.agent import Agent, RunOutputEvent  # noqa\nfrom agno.models.perplexity import Perplexity\n\nagent = Agent(model=Perplexity(id=\"sonar\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#async-basic-streaming-agent",
+  "links": []
+}

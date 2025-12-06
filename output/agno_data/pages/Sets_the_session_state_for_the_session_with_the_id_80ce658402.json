@@ -1,0 +1,8 @@
+{
+  "title": "Sets the session state for the session with the id \"user_1_session_1\"",
+  "content": "team.print_response(\"What is my name?\", session_id=\"user_1_session_1\", user_id=\"user_1\", session_state={\"user_name\": \"John\", \"age\": 30})",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#sets-the-session-state-for-the-session-with-the-id-\"user_1_session_1\"",
+  "links": []
+}

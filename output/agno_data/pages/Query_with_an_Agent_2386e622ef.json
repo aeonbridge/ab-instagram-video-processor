@@ -1,0 +1,19 @@
+{
+  "title": "Query with an Agent",
+  "content": "agent = Agent(knowledge=knowledge)\nagent.print_response(\"List down the ingredients to make Massaman Gai\", markdown=True)\n```\n\n<Snippet file=\"vectordb_redis_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/redis_db/redis_db.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Redis Params",
+      "id": "redis-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#query-with-an-agent",
+  "links": []
+}

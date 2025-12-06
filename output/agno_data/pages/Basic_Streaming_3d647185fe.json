@@ -1,0 +1,14 @@
+{
+  "title": "Basic Streaming",
+  "content": "Source: https://docs.agno.com/integrations/models/cloud/azure-openai/usage/basic-stream\n\n```python cookbook/models/azure/openai/basic_stream.py theme={null}\nfrom typing import Iterator  # noqa\n\nfrom agno.agent import Agent, RunOutputEvent  # noqa\nfrom agno.models.azure import AzureOpenAI\n\nagent = Agent(model=AzureOpenAI(id=\"gpt-5-mini\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#basic-streaming",
+  "links": []
+}

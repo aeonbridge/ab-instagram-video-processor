@@ -1,0 +1,29 @@
+{
+  "title": "Setup your Workflow",
+  "content": "workflow = Workflow(db=db, ...)\npython async_postgres_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import AsyncPostgresDb\n\ndb_url = \"postgresql+psycopg_async://ai:ai@localhost:5532/ai\"\n\ndb = AsyncPostgresDb(db_url=db_url)\n\nagent = Agent(db=db)\n```\n\n## Supported databases\n\nDatabases currently supported for storage:\n\n<CardGroup cols={3}>\n  <Card title=\"DynamoDB\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/dynamodb/overview\">\n    Amazon's NoSQL database service\n  </Card>\n\n<Card title=\"FireStore\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/firestore/overview\">\n    Google's NoSQL document database\n  </Card>\n\n<Card title=\"JSON\" icon=\"file-code\" iconType=\"duotone\" href=\"/integrations/database/json/overview\">\n    Simple file-based JSON storage\n  </Card>\n\n<Card title=\"JSON on GCS\" icon=\"cloud\" iconType=\"duotone\" href=\"/integrations/database/gcs/overview\">\n    JSON storage on Google Cloud Storage\n  </Card>\n\n<Card title=\"MongoDB\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/mongo/overview\">\n    Popular NoSQL document database\n  </Card>\n\n<Card title=\"MySQL\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/mysql/overview\">\n    Widely-used relational database\n  </Card>\n\n<Card title=\"Neon\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/neon/overview\">\n    Serverless PostgreSQL platform\n  </Card>\n\n<Card title=\"PostgreSQL\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/postgres/overview\">\n    Advanced open-source relational database\n  </Card>\n\n<Card title=\"Redis\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/redis/overview\">\n    In-memory data structure store\n  </Card>\n\n<Card title=\"SurrealDB\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/surrealdb/overview\">\n    Open source multi-modal database\n  </Card>\n\n<Card title=\"SingleStore\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/singlestore/overview\">\n    Real-time analytics database\n  </Card>\n\n<Card title=\"SQLite\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/sqlite/overview\">\n    Lightweight embedded database\n  </Card>\n\n<Card title=\"Supabase\" icon=\"database\" iconType=\"duotone\" href=\"/integrations/database/supabase/overview\">\n    Open source Firebase alternative\n  </Card>\n</CardGroup>\n\n<Note>\n  [In-Memory](/integrations/database/in-memory/overview) databases are also supported. This is not recommended for production, but perfect for demos and testing.\n</Note>\n\nYou can see a detailed list of [examples](/integrations/database) for all supported databases.\n\n<Tabs>\n  <Tab title=\"`MissingGreenlet` exception\">\n    If you are seeing `sqlalchemy.exc.MissingGreenlet: greenlet_spawn has not been called ...`, it means you are using a synchronous `db_engine` when using `AsyncPostgresDb` or `AsyncSqliteDb`.\n\nYou can create an asynchronous database engine by using the `create_async_engine` function from `sqlalchemy.ext.asyncio`.\n  </Tab>\n\n<Tab title=\"`AsyncContextNotStarted` exception\">\n    If you are seeing `sqlalchemy.ext.asyncio.exc.AsyncContextNotStarted: AsyncConnection context ...` error, it means you are using an asynchronous `db_engine` with `PostgresDb` or `SqliteDb`.\n\nYou can create a synchronous database engine by using the `create_engine` function from `sqlalchemy`.\n  </Tab>\n</Tabs>",
+  "code_samples": [
+    {
+      "code": "<Note>\n  Learn more about [Teams](/basics/teams/overview) and\n  [Workflows](/basics/workflows/overview), Agno abstractions to build\n  multi-agent systems.\n</Note>\n\n## Asynchronous Database Support\n\nAgno supports asynchronous database operations when using the `AsyncPostgresDb` and `AsyncSqliteDb` classes.\n\nFor example:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Asynchronous Database Support",
+      "id": "asynchronous-database-support"
+    },
+    {
+      "level": "h2",
+      "text": "Supported databases",
+      "id": "supported-databases"
+    },
+    {
+      "level": "h2",
+      "text": "Troubleshooting",
+      "id": "troubleshooting"
+    }
+  ],
+  "url": "llms-txt#setup-your-workflow",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create agents and team",
+  "content": "research_agent = Agent(\n    name=\"Research Agent\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    tools=[HackerNewsTools(), DuckDuckGoTools()],\n)\n\ncontent_agent = Agent(\n    name=\"Content Agent\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agents-and-team",
+  "links": []
+}

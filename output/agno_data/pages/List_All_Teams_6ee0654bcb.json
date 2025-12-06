@@ -1,0 +1,8 @@
+{
+  "title": "List All Teams",
+  "content": "Source: https://docs.agno.com/reference-api/schema/teams/list-all-teams\n\nget /teams\nRetrieve a comprehensive list of all teams configured in this OS instance.\n\n**Returns team information including:**\n- Team metadata (ID, name, description, execution mode)\n- Model configuration for team coordination\n- Team member roster with roles and capabilities\n- Knowledge sharing and memory configurations",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#list-all-teams",
+  "links": []
+}

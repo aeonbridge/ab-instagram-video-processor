@@ -1,0 +1,8 @@
+{
+  "title": "Function instead of steps",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/function-instead-of-steps\n\nThis example demonstrates how to use just a single function instead of steps in a workflow.\n\nThis example demonstrates **Workflows** using a single custom execution function instead of\ndiscrete steps. This pattern gives you complete control over the orchestration logic while still\nbenefiting from workflow features like storage, streaming, and session management.\n\n**When to use**: When you need maximum flexibility and control over the execution flow, similar\nto Workflows 1.0 approach but with a better structured approach.\n\n```python function_instead_of_steps.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.types import WorkflowExecutionInput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#function-instead-of-steps",
+  "links": []
+}

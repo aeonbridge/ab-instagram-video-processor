@@ -1,0 +1,8 @@
+{
+  "title": "Delete operations examples",
+  "content": "vector_db = knowledge.vector_db\nvector_db.delete_by_name(\"Recipes\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-operations-examples",
+  "links": []
+}

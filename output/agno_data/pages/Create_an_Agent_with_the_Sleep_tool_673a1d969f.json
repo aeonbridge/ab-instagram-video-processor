@@ -1,0 +1,8 @@
+{
+  "title": "Create an Agent with the Sleep tool",
+  "content": "agent = Agent(tools=[SleepTools()], name=\"Sleep Agent\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-the-sleep-tool",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Not just: \"send back\", \"item\", \"bought\", \"month\"",
+  "content": "",
+  "code_samples": [
+    {
+      "code": "### Source Attribution\n\nAgents can provide references to where they found information, building trust and enabling verification.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Source Attribution",
+      "id": "source-attribution"
+    }
+  ],
+  "url": "llms-txt#not-just:-\"send-back\",-\"item\",-\"bought\",-\"month\"",
+  "links": []
+}

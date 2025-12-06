@@ -1,0 +1,14 @@
+{
+  "title": "Alert if memory count is unusually high",
+  "content": "if len(memories) > 500:\n    print(\"⚠️ Warning: User has excessive memories. Consider pruning.\")\n```\n\n## Developer Resources\n\n* View [Examples](/basics/memory/working-with-memories/overview)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/memory/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#alert-if-memory-count-is-unusually-high",
+  "links": []
+}

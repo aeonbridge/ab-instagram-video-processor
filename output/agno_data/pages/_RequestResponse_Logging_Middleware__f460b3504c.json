@@ -1,0 +1,8 @@
+{
+  "title": "=== Request/Response Logging Middleware ===",
+  "content": "class RequestLoggingMiddleware(BaseHTTPMiddleware):\n    \"\"\"\n    Request/response logging middleware with timing and basic info.\n    \"\"\"\n\ndef __init__(self, app, log_body: bool = False, log_headers: bool = False):\n        super().__init__(app)\n        self.log_body = log_body\n        self.log_headers = log_headers\n        self.request_count = 0\n\nasync def dispatch(self, request: Request, call_next) -> Response:\n        self.request_count += 1\n        start_time = time.time()\n\n# Basic request info\n        client_ip = request.client.host if request.client else \"unknown\"\n        print(\n            f\"🔍 Request #{self.request_count}: {request.method} {request.url.path} from {client_ip}\"\n        )\n\n# Optional: Log headers\n        if self.log_headers:\n            print(f\"📋 Headers: {dict(request.headers)}\")\n\n# Optional: Log request body\n        if self.log_body and request.method in [\"POST\", \"PUT\", \"PATCH\"]:\n            body = await request.body()\n            if body:\n                print(f\"📝 Body: {body.decode()}\")\n\n# Process request\n        response = await call_next(request)\n\n# Log response info\n        duration = time.time() - start_time\n        status_emoji = \"✅\" if response.status_code < 400 else \"❌\"\n        print(\n            f\"{status_emoji} Response: {response.status_code} in {duration * 1000:.1f}ms\"\n        )\n\n# Add request count to response header\n        response.headers[\"X-Request-Count\"] = str(self.request_count)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#===-request/response-logging-middleware-===",
+  "links": []
+}

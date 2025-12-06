@@ -1,0 +1,8 @@
+{
+  "title": "Print workflow duration",
+  "content": "if response.metrics and response.metrics.duration:\n    print(f\"\\nTotal execution time: {response.metrics.duration:.2f} seconds\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#print-workflow-duration",
+  "links": []
+}

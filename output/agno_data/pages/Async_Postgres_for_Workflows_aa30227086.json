@@ -1,0 +1,24 @@
+{
+  "title": "Async Postgres for Workflows",
+  "content": "Source: https://docs.agno.com/integrations/database/async-postgres/usage/async-postgres-for-workflow\n\nAgno supports using [PostgreSQL](https://www.postgresql.org/) asynchronously, with the `AsyncPostgresDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **PgVector** on port **5532** using:\n\n```python async_postgres_for_workflow.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import AsyncPostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\n\ndb_url = \"postgresql+psycopg_async://ai:ai@localhost:5532/ai\"\ndb = AsyncPostgresDb(db_url=db_url)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run PgVector",
+      "id": "run-pgvector"
+    }
+  ],
+  "url": "llms-txt#async-postgres-for-workflows",
+  "links": []
+}

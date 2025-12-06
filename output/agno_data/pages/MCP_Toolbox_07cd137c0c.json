@@ -1,0 +1,24 @@
+{
+  "title": "MCP Toolbox",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/mcp-toolbox\n\nLearn how to use MCPToolbox with Agno to connect to MCP Toolbox for Databases with tool filtering capabilities.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.0.9\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.0.9\">v2.0.9</Tooltip>\n</Badge>\n\n**MCPToolbox** enables Agents to connect to Google's [MCP Toolbox for Databases](https://googleapis.github.io/genai-toolbox/getting-started/introduction/) with advanced filtering capabilities. It extends Agno's `MCPTools` functionality to filter tools by toolset or tool name, allowing agents to load only the specific database tools they need.\n\nYou'll need the following to use MCPToolbox:\n\nOur default setup will also require you to have Docker or Podman installed, to run the MCP Toolbox server and database for the examples.\n\nGet started with MCPToolbox instantly using our fully functional demo.\n\n```bash  theme={null}",
+  "code_samples": [
+    {
+      "code": "Our default setup will also require you to have Docker or Podman installed, to run the MCP Toolbox server and database for the examples.\n\n## Quick Start\n\nGet started with MCPToolbox instantly using our fully functional demo.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Quick Start",
+      "id": "quick-start"
+    }
+  ],
+  "url": "llms-txt#mcp-toolbox",
+  "links": []
+}

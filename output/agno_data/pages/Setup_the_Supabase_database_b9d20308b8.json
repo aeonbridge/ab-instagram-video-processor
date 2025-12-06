@@ -1,0 +1,8 @@
+{
+  "title": "Setup the Supabase database",
+  "content": "db = PostgresDb(db_url=SUPABASE_DB_URL)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-supabase-database",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Rename Session",
+  "content": "Source: https://docs.agno.com/reference-api/schema/sessions/rename-session\n\npost /sessions/{session_id}/rename\nUpdate the name of an existing session. Useful for organizing and categorizing sessions with meaningful names for better identification and management.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#rename-session",
+  "links": []
+}

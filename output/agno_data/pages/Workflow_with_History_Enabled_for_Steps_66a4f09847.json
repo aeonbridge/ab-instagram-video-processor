@@ -1,0 +1,8 @@
+{
+  "title": "Workflow with History Enabled for Steps",
+  "content": "Source: https://docs.agno.com/basics/chat-history/workflow/usage/workflow-with-history-enabled-for-steps\n\nThis example demonstrates a workflow with history enabled for specific steps.\n\nThis example shows how to use the `add_workflow_history_to_steps` flag to add workflow history to multiple steps in the workflow.\nIn this case we have a workflow with three steps.\n\n* The first step is a meal suggester that suggests meal categories and cuisines.\n* The second step is a preference analysis step that analyzes the conversation history to understand user food preferences.\n* The third step is a recipe specialist that provides recipe recommendations based on the user's preferences.\n\n```python 02_workflow_with_history_enabled_for_steps.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.workflow.step import Step, StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#workflow-with-history-enabled-for-steps",
+  "links": []
+}

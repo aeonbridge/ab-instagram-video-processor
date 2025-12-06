@@ -1,0 +1,39 @@
+{
+  "title": "Use custom reader",
+  "content": "knowledge_base.add_content(\n    path=\"data/documents\",\n    reader=reader  # Override default reader\n)\n```\n\n### Choose the Right Reader\n\n* Use specialized readers for better extraction quality\n* Consider format-specific features (PDF encryption, CSV delimiters, etc.)\n\n### Configure Chunking Appropriately\n\n* Smaller chunks for precise retrieval\n* Larger chunks for maintaining context\n* Use semantic chunking for structured documents\n\n### Optimize for Performance\n\n* Use async readers for I/O-heavy operations\n* Batch process multiple files when possible\n* Cache readers through ReaderFactory when processing many files\n\n### Handle Errors Gracefully\n\n* Readers return empty lists for failed processing\n* Check reader logs for debugging information\n* Provide fallback readers for unknown formats\n\n<CardGroup cols={3}>\n  <Card title=\"Chunking Strategies\" icon=\"scissors\" href=\"/basics/knowledge/chunking/overview\">\n    Learn how to optimize content chunking for better search results\n  </Card>\n\n<Card title=\"Content Types\" icon=\"file-lines\" href=\"/basics/knowledge/content-types\">\n    Understand different ways to add information to your knowledge base\n  </Card>\n\n<Card title=\"Vector Databases\" icon=\"database\" href=\"/basics/vectordb/overview\">\n    Choose the right storage solution for your processed content\n  </Card>\n\n<Card title=\"Examples\" icon=\"code\" href=\"/basics/knowledge/readers/usage/pdf-reader\">\n    See readers in action with practical examples\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Best Practices",
+      "id": "best-practices"
+    },
+    {
+      "level": "h3",
+      "text": "Choose the Right Reader",
+      "id": "choose-the-right-reader"
+    },
+    {
+      "level": "h3",
+      "text": "Configure Chunking Appropriately",
+      "id": "configure-chunking-appropriately"
+    },
+    {
+      "level": "h3",
+      "text": "Optimize for Performance",
+      "id": "optimize-for-performance"
+    },
+    {
+      "level": "h3",
+      "text": "Handle Errors Gracefully",
+      "id": "handle-errors-gracefully"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#use-custom-reader",
+  "links": []
+}

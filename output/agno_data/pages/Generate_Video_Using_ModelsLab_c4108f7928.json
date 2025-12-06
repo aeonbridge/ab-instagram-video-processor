@@ -1,0 +1,14 @@
+{
+  "title": "Generate Video Using ModelsLab",
+  "content": "Source: https://docs.agno.com/basics/multimodal/agent/usage/generate-video-using-models-lab\n\nThis example demonstrates how to create an AI agent that generates videos using the ModelsLab API.\n\n```python generate_video_using_models_lab.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.models_labs import ModelsLabTools\n\nvideo_agent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[ModelsLabTools()],\n    description=\"You are an AI agent that can generate videos using the ModelsLabs API.\",\n    instructions=[\n        \"When the user asks you to create a video, use the `generate_media` tool to create the video.\",\n        \"The video will be displayed in the UI automatically below your response, so you don't need to show the video URL in your response.\",\n        \"Politely and courteously let the user know that the video has been generated and will be displayed below as soon as its ready.\",\n    ],\n    markdown=True,\n)\n\nvideo_agent.print_response(\"Generate a video of a cat playing with a ball\")",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#generate-video-using-modelslab",
+  "links": []
+}

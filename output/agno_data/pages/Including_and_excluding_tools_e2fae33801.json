@@ -1,0 +1,23 @@
+{
+  "title": "Including and excluding tools",
+  "content": "Source: https://docs.agno.com/basics/tools/selecting-tools\n\nLearn how to include and exclude tools from a Toolkit.\n\nYou can specify which tools to include or exclude from a `Toolkit` by using the `include_tools` and `exclude_tools` parameters. This can be very useful to limit the number of tools that are available to an Agent.\n\nFor example, here's how to include only the `get_latest_emails` tool in the `GmailTools` toolkit:\n\nSimilarly, here's how to exclude the `create_draft_email` tool from the `GmailTools` toolkit:\n\nHere's an example of how to use the `include_tools` and `exclude_tools` parameters to limit the number of tools that are available to an Agent:",
+  "code_samples": [
+    {
+      "code": "Similarly, here's how to exclude the `create_draft_email` tool from the `GmailTools` toolkit:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nHere's an example of how to use the `include_tools` and `exclude_tools` parameters to limit the number of tools that are available to an Agent:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#including-and-excluding-tools",
+  "links": []
+}

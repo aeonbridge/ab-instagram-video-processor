@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with memory enabled",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    db=db,\n    enable_user_memories=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-memory-enabled",
+  "links": []
+}

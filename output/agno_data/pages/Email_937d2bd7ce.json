@@ -1,0 +1,29 @@
+{
+  "title": "Email",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/email\n\n**EmailTools** enable an Agent to send an email to a user. The Agent can send an email to a user with a specific subject and body.\n\n| Parameter           | Type            | Default | Description                         |\n| ------------------- | --------------- | ------- | ----------------------------------- |\n| `receiver_email`    | `Optional[str]` | `None`  | The email address of the receiver.  |\n| `sender_name`       | `Optional[str]` | `None`  | The name of the sender.             |\n| `sender_email`      | `Optional[str]` | `None`  | The email address of the sender.    |\n| `sender_passkey`    | `Optional[str]` | `None`  | The passkey for the sender's email. |\n| `enable_email_user` | `bool`          | `True`  | Enable the email\\_user function.    |\n| `all`               | `bool`          | `False` | Enable all available functions.     |\n\n| Function     | Description                                                                                                                                                                                                                       |\n| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `email_user` | Emails the user with the given subject and body. Parameters include `subject` (str) for the email subject and `body` (str) for the email content. Currently works with Gmail. Returns \"email sent successfully\" or error message. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/email.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/email_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#email",
+  "links": []
+}

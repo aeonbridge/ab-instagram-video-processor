@@ -1,0 +1,39 @@
+{
+  "title": "Arxiv",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/arxiv\n\n**ArxivTools** enable an Agent to search for publications on Arxiv.\n\nThe following example requires the `arxiv` and `pypdf` libraries.\n\nThe following agent will run seach arXiv for \"language models\" and print the response.\n\n| Parameter                  | Type   | Default | Description                                                        |\n| -------------------------- | ------ | ------- | ------------------------------------------------------------------ |\n| `enable_search_arxiv`      | `bool` | `True`  | Enables the functionality to search the arXiv database.            |\n| `enable_read_arxiv_papers` | `bool` | `True`  | Allows reading of arXiv papers directly.                           |\n| `download_dir`             | `Path` | -       | Specifies the directory path where downloaded files will be saved. |\n\n| Function                                 | Description                                                                                        |\n| ---------------------------------------- | -------------------------------------------------------------------------------------------------- |\n| `search_arxiv_and_update_knowledge_base` | This function searches arXiv for a topic, adds the results to the knowledge base and returns them. |\n| `search_arxiv`                           | Searches arXiv for a query.                                                                        |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/arxiv.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/arxiv_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will run seach arXiv for \"language models\" and print the response.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#arxiv",
+  "links": []
+}

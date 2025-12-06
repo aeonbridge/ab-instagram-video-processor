@@ -1,0 +1,8 @@
+{
+  "title": "Create MCPTools instance",
+  "content": "mcp_tools = MCPTools(\n    transport=\"streamable-http\",\n    url=\"https://docs.agno.com/mcp\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-mcptools-instance",
+  "links": []
+}

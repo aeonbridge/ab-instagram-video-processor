@@ -1,0 +1,24 @@
+{
+  "title": "When to use a Workflow vs a Team in Agno",
+  "content": "Source: https://docs.agno.com/faq/When-to-use-a-Workflow-vs-a-Team-in-Agno\n\nAgno offers two powerful ways to build multi-agent systems: **Workflows** and **Teams**. Each is suited for different kinds of use-cases.\n\n## Use a Workflow when:\n\nYou need **orchestrated, multi-step execution** with flexible control flow and a predictable outcome.\n\nWorkflows are ideal for:\n\n* **Sequential processes** - Step-by-step agent executions with dependencies\n* **Parallel execution** - Running independent tasks simultaneously\n* **Conditional logic** - Dynamic routing based on content analysis\n* **Quality assurance** - Iterative loops with end conditions\n* **Complex pipelines** - Mixed components (agents, teams, functions) with branching\n* **Structured processes** - Data transformation with predictable patterns\n\n[Learn more about Workflows](/basics/workflows/overview)\n\n## Use an Agent Team when:\n\nYour task requires reasoning, collaboration, or multi-tool decision-making.\n\nAgent Teams are best for:\n\n* Research and planning\n* Tasks where agents divide responsibilities\n\n[Learn more about Agent Teams](/basics/teams/overview)\n\n> Think of **Workflows** as assembly lines for known tasks,\n> and **Agent Teams** as collaborative task forces for solving open-ended problems.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Use a Workflow when:",
+      "id": "use-a-workflow-when:"
+    },
+    {
+      "level": "h2",
+      "text": "Use an Agent Team when:",
+      "id": "use-an-agent-team-when:"
+    },
+    {
+      "level": "h2",
+      "text": "💡 Pro Tip",
+      "id": "💡-pro-tip"
+    }
+  ],
+  "url": "llms-txt#when-to-use-a-workflow-vs-a-team-in-agno",
+  "links": []
+}

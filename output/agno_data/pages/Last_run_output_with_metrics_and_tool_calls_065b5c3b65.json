@@ -1,0 +1,19 @@
+{
+  "title": "Last run output with metrics and tool calls",
+  "content": "last_run = agent.get_last_run_output()\n```\n\n**When to use:** Building your own UI, analytics, debugging, or when you need raw transcripts.\n\n## Choosing a Pattern\n\n* **Short chats:** Leave defaults (history off) or enable `add_history_to_context` with `num_history_runs=3`\n* **Long-lived threads:** Combine limited history (`num_history_runs=2`) with [session summaries](/basics/sessions/session-summaries) to keep tokens manageable\n* **Tool-heavy agents:** Use `max_tool_calls_from_history` to limit tool call noise in context\n* **Audit/debug flows:** Enable `read_chat_history=True` so the model looks things up only when needed\n* **Cross-session recall:** Use `search_session_history=True` with `num_history_sessions=2` (keep low to avoid context limits)\n* **Programmatic workflows:** Call `get_session_messages()` / `get_chat_history()` directly in your code\n\nFor comprehensive guides, detailed examples, and advanced patterns:\n\n<CardGroup cols={3}>\n  <Card title=\"Chat History in Agents\" icon=\"robot\" iconType=\"duotone\" href=\"/basics/chat-history/agent/overview\">\n    Complete guide to agent history management with detailed examples and advanced patterns.\n  </Card>\n\n<Card title=\"Chat History in Teams\" icon=\"users\" iconType=\"duotone\" href=\"/basics/chat-history/team/overview\">\n    Team-specific history features, member coordination, and shared context patterns.\n  </Card>\n\n<Card title=\"Chat History Overview\" icon=\"book\" iconType=\"duotone\" href=\"/basics/chat-history/overview\">\n    Overview of all history capabilities across agents, teams, and workflows.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Choosing a Pattern",
+      "id": "choosing-a-pattern"
+    },
+    {
+      "level": "h2",
+      "text": "Learn More",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#last-run-output-with-metrics-and-tool-calls",
+  "links": []
+}

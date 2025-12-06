@@ -1,0 +1,8 @@
+{
+  "title": "Database Migrations",
+  "content": "Source: https://docs.agno.com/basics/database/migrations\n\nLearn how to migrate your Agno database tables.\n\nYou can expect the schemas in your Agno database tables to be stable across versions.\n\nHowever, in future versions, we may occasionally update or add new columns or tables.\n\nIf you need to apply a migration, you can use the `MigrationManager` class:\n\n```python  theme={null}\nimport asyncio\n\nfrom agno.db.migrations import MigrationManager\nfrom agno.db.postgres import AsyncPostgresDb",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#database-migrations",
+  "links": []
+}

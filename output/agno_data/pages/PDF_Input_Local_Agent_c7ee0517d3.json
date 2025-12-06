@@ -1,0 +1,14 @@
+{
+  "title": "PDF Input Local Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/pdf-input-local\n\n```python cookbook/models/anthropic/pdf_input_local.py theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import File\nfrom agno.models.anthropic import Claude\nfrom agno.utils.media import download_file\n\npdf_path = Path(__file__).parent.joinpath(\"ThaiRecipes.pdf\")",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#pdf-input-local-agent",
+  "links": []
+}

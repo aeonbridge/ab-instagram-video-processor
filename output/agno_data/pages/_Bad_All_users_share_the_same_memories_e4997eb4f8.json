@@ -1,0 +1,8 @@
+{
+  "title": "❌ Bad: All users share the same memories",
+  "content": "agent.print_response(\"I love pizza\")\nagent.print_response(\"I'm allergic to dairy\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#❌-bad:-all-users-share-the-same-memories",
+  "links": []
+}

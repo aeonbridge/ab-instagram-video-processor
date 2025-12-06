@@ -1,0 +1,14 @@
+{
+  "title": "YouTube Reader Async",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/youtube-reader-async\n\nThe **YouTube Reader** allows you to extract transcripts from YouTube videos and convert them into vector embeddings for your knowledge base.\n\n```python examples/basics/knowledge/readers/youtube_reader.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.youtube_reader import YouTubeReader\nfrom agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#youtube-reader-async",
+  "links": []
+}

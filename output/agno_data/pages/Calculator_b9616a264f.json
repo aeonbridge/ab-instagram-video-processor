@@ -1,0 +1,24 @@
+{
+  "title": "Calculator",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/local/calculator\n\n**Calculator** enables an Agent to perform mathematical calculations.\n\nThe following agent will calculate the result of `10*5` and then raise it to the power of `2`:\n\n| Function       | Description                                                                              |\n| -------------- | ---------------------------------------------------------------------------------------- |\n| `add`          | Adds two numbers and returns the result.                                                 |\n| `subtract`     | Subtracts the second number from the first and returns the result.                       |\n| `multiply`     | Multiplies two numbers and returns the result.                                           |\n| `divide`       | Divides the first number by the second and returns the result. Handles division by zero. |\n| `exponentiate` | Raises the first number to the power of the second number and returns the result.        |\n| `factorial`    | Calculates the factorial of a number and returns the result. Handles negative numbers.   |\n| `is_prime`     | Checks if a number is prime and returns the result.                                      |\n| `square_root`  | Calculates the square root of a number and returns the result. Handles negative numbers. |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/calculator.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/calculator_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#calculator",
+  "links": []
+}

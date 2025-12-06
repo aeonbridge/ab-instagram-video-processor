@@ -1,0 +1,39 @@
+{
+  "title": "DuckDb",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/database/duckdb\n\nThe DuckDbTools toolkit enables an Agent to run SQL and analyze data using DuckDb.\n\n**DuckDbTools** enable an Agent to run SQL and analyze data using DuckDb.\n\nThe following example requires DuckDB library. To install DuckDB, run the following command:\n\nFor more installation options, please refer to [DuckDB documentation](https://duckdb.org/docs/installation).\n\nThe following agent will analyze the movies file using SQL and return the result.\n\n| Parameter       | Type                 | Default | Description                                                   |\n| --------------- | -------------------- | ------- | ------------------------------------------------------------- |\n| `db_path`       | `str`                | `None`  | Specifies the path to the database file.                      |\n| `connection`    | `DuckDBPyConnection` | `None`  | Provides an existing DuckDB connection object.                |\n| `init_commands` | `List`               | `None`  | A list of initial SQL commands to run on database connection. |\n| `read_only`     | `bool`               | `False` | Configures the database connection to be read-only.           |\n| `config`        | `dict`               | `None`  | Configuration options for the database connection.            |\n\n| Function                   | Description                                                                                                                                                                                                                                    |\n| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `show_tables`              | Function to show tables in the database                                                                                                                                                                                                        |\n| `describe_table`           | Function to describe a table                                                                                                                                                                                                                   |\n| `inspect_query`            | Function to inspect a query and return the query plan. Always inspect your query before running them.                                                                                                                                          |\n| `run_query`                | Function that runs a query and returns the result.                                                                                                                                                                                             |\n| `summarize_table`          | Function to compute a number of aggregates over a table. The function launches a query that computes a number of aggregates over all columns, including min, max, avg, std and approx\\_unique.                                                 |\n| `get_table_name_from_path` | Get the table name from a path                                                                                                                                                                                                                 |\n| `create_table_from_path`   | Creates a table from a path                                                                                                                                                                                                                    |\n| `export_table_to_path`     | Save a table in a desired format (default: parquet). If the path is provided, the table will be saved under that path. Eg: If path is /tmp, the table will be saved as /tmp/table.parquet. Otherwise it will be saved in the current directory |\n| `load_local_path_to_table` | Load a local file into duckdb                                                                                                                                                                                                                  |\n| `load_local_csv_to_table`  | Load a local CSV file into duckdb                                                                                                                                                                                                              |\n| `load_s3_path_to_table`    | Load a file from S3 into duckdb                                                                                                                                                                                                                |\n| `load_s3_csv_to_table`     | Load a CSV file from S3 into duckdb                                                                                                                                                                                                            |\n| `create_fts_index`         | Create a full text search index on a table                                                                                                                                                                                                     |\n| `full_text_search`         | Full text Search in a table column for a specific text/keyword                                                                                                                                                                                 |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/duckdb.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/duckdb_tools.py)",
+  "code_samples": [
+    {
+      "code": "For more installation options, please refer to [DuckDB documentation](https://duckdb.org/docs/installation).\n\n## Example\n\nThe following agent will analyze the movies file using SQL and return the result.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#duckdb",
+  "links": []
+}

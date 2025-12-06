@@ -1,0 +1,48 @@
+{
+  "title": "LiteLLM OpenAI",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/litellm-openai/overview\n\nUse LiteLLM with Agno with an openai-compatible proxy server.\n\n## Proxy Server Integration\n\nLiteLLM can also be used as an OpenAI-compatible proxy server, allowing you to route requests to different models through a unified API.\n\n### Starting the Proxy Server\n\nFirst, install LiteLLM with proxy support:\n\nStart the proxy server:\n\nThe `LiteLLMOpenAI` class connects to the LiteLLM proxy using an OpenAI-compatible interface:\n\n### Configuration Options\n\nThe `LiteLLMOpenAI` class accepts the following parameters:\n\n| Parameter  | Type | Description                                                    | Default                                      |\n| ---------- | ---- | -------------------------------------------------------------- | -------------------------------------------- |\n| `id`       | str  | Model identifier                                               | \"gpt-5-mini\"                                 |\n| `name`     | str  | Display name for the model                                     | \"LiteLLM\"                                    |\n| `provider` | str  | Provider name                                                  | \"LiteLLM\"                                    |\n| `api_key`  | str  | API key (falls back to LITELLM\\_API\\_KEY environment variable) | None                                         |\n| `base_url` | str  | URL of the LiteLLM proxy server                                | \"[http://0.0.0.0:4000](http://0.0.0.0:4000)\" |\n\n`LiteLLMOpenAI` is a subclass of the [OpenAILike](/integrations/models/openai-like) class and has access to the same params.\n\nCheck out these examples in the cookbook:\n\n<Note> View more examples [here](/integrations/models/gateways/litellm-openai/usage/basic-stream). </Note>",
+  "code_samples": [
+    {
+      "code": "Start the proxy server:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Using the Proxy\n\nThe `LiteLLMOpenAI` class connects to the LiteLLM proxy using an OpenAI-compatible interface:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Proxy Server Integration",
+      "id": "proxy-server-integration"
+    },
+    {
+      "level": "h3",
+      "text": "Starting the Proxy Server",
+      "id": "starting-the-proxy-server"
+    },
+    {
+      "level": "h3",
+      "text": "Using the Proxy",
+      "id": "using-the-proxy"
+    },
+    {
+      "level": "h3",
+      "text": "Configuration Options",
+      "id": "configuration-options"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h3",
+      "text": "Proxy Examples",
+      "id": "proxy-examples"
+    }
+  ],
+  "url": "llms-txt#litellm-openai",
+  "links": []
+}

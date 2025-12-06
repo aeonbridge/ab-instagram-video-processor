@@ -1,0 +1,19 @@
+{
+  "title": "OpenAIModerationGuardrail",
+  "content": "Source: https://docs.agno.com/reference/hooks/openai-moderation-guardrail\n\n| Parameter              | Type        | Default                    | Description                                                                               |\n| ---------------------- | ----------- | -------------------------- | ----------------------------------------------------------------------------------------- |\n| `moderation_model`     | `str`       | `\"omni-moderation-latest\"` | The model to use for moderation.                                                          |\n| `raise_for_categories` | `List[str]` | `None`                     | The categories to raise for.                                                              |\n| `api_key`              | `str`       | `None`                     | The API key to use for moderation. Defaults to the OPENAI\\_API\\_KEY environment variable. |\n\n## Moderation categories\n\nYou can check the current list of moderation categories in [OpenAI's docs](https://platform.openai.com/docs/guides/moderation#content-classifications).",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    },
+    {
+      "level": "h2",
+      "text": "Moderation categories",
+      "id": "moderation-categories"
+    }
+  ],
+  "url": "llms-txt#openaimoderationguardrail",
+  "links": []
+}

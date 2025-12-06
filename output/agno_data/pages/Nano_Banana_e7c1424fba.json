@@ -1,0 +1,28 @@
+{
+  "title": "Nano Banana",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/nano-banana\n\n**NanoBananaTools** enables an Agent to generate images using [Google's Gemini 2.5 Flash Image model](https://ai.google.dev/gemini-api/docs/image-generation) (Nano Banana).\n\nYou need to install the `google-genai` and `Pillow` libraries.\n\nSet the `GOOGLE_API_KEY` environment variable. You can obtain an API key from [Google AI Studio](https://aistudio.google.com/apikey).\n\nThe following agent will use Nano Banana to generate an image based on a text prompt.\n\n```python nano_banana_tools.py theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.tools.nano_banana import NanoBananaTools",
+  "code_samples": [
+    {
+      "code": "Set the `GOOGLE_API_KEY` environment variable. You can obtain an API key from [Google AI Studio](https://aistudio.google.com/apikey).",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use Nano Banana to generate an image based on a text prompt.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#nano-banana",
+  "links": []
+}

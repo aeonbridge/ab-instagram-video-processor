@@ -1,0 +1,49 @@
+{
+  "title": "Example 1: Scrape a webpage as Markdown",
+  "content": "agent.print_response(\n    \"Scrape this webpage as markdown: https://docs.agno.com/introduction\",\n)\n```\n\n| Parameter                | Type            | Default           | Description                                                                                                               |\n| ------------------------ | --------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------- |\n| `api_key`                | `Optional[str]` | `None`            | BrightData API key. If not provided, uses BRIGHT\\_DATA\\_API\\_KEY environment variable.                                    |\n| `enable_scrape_markdown` | `bool`          | `True`            | Enable the scrape\\_as\\_markdown function.                                                                                 |\n| `enable_screenshot`      | `bool`          | `True`            | Enable the get\\_screenshot function.                                                                                      |\n| `enable_search_engine`   | `bool`          | `True`            | Enable the search\\_engine function.                                                                                       |\n| `enable_web_data_feed`   | `bool`          | `True`            | Enable the web\\_data\\_feed function.                                                                                      |\n| `all`                    | `bool`          | `False`           | Enable all available functions. When True, all enable flags are ignored.                                                  |\n| `serp_zone`              | `str`           | `\"serp_api\"`      | SERP zone for search operations. Can be overridden with BRIGHT\\_DATA\\_SERP\\_ZONE environment variable.                    |\n| `web_unlocker_zone`      | `str`           | `\"web_unlocker1\"` | Web unlocker zone for scraping operations. Can be overridden with BRIGHT\\_DATA\\_WEB\\_UNLOCKER\\_ZONE environment variable. |\n| `verbose`                | `bool`          | `False`           | Enable verbose logging.                                                                                                   |\n| `timeout`                | `int`           | `600`             | Timeout in seconds for operations.                                                                                        |\n\n| Function             | Description                                                                                                                                                                                                                           |\n| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `scrape_as_markdown` | Scrapes a webpage and returns content in Markdown format. Parameters: `url` (str) - URL to scrape.                                                                                                                                    |\n| `get_screenshot`     | Captures a screenshot of a webpage and adds it as an image artifact. Parameters: `url` (str) - URL to screenshot, `output_path` (str, optional) - Output path (default: \"screenshot.png\").                                            |\n| `search_engine`      | Searches using Google, Bing, or Yandex and returns results in Markdown. Parameters: `query` (str), `engine` (str, default: \"google\"), `num_results` (int, default: 10), `language` (Optional\\[str]), `country_code` (Optional\\[str]). |\n| `web_data_feed`      | Retrieves structured data from various sources like LinkedIn, Amazon, Instagram, etc. Parameters: `source_type` (str), `url` (str), `num_of_reviews` (Optional\\[int]).                                                                |\n\n## Supported Data Sources\n\n* `amazon_product` - Amazon product details\n* `amazon_product_reviews` - Amazon product reviews\n* `amazon_product_search` - Amazon product search results\n* `walmart_product` - Walmart product details\n* `walmart_seller` - Walmart seller information\n* `ebay_product` - eBay product details\n* `homedepot_products` - Home Depot products\n* `zara_products` - Zara products\n* `etsy_products` - Etsy products\n* `bestbuy_products` - Best Buy products\n\n### Professional Networks\n\n* `linkedin_person_profile` - LinkedIn person profiles\n* `linkedin_company_profile` - LinkedIn company profiles\n* `linkedin_job_listings` - LinkedIn job listings\n* `linkedin_posts` - LinkedIn posts\n* `linkedin_people_search` - LinkedIn people search results\n\n* `instagram_profiles` - Instagram profiles\n* `instagram_posts` - Instagram posts\n* `instagram_reels` - Instagram reels\n* `instagram_comments` - Instagram comments\n* `facebook_posts` - Facebook posts\n* `facebook_marketplace_listings` - Facebook Marketplace listings\n* `facebook_company_reviews` - Facebook company reviews\n* `facebook_events` - Facebook events\n* `tiktok_profiles` - TikTok profiles\n* `tiktok_posts` - TikTok posts\n* `tiktok_shop` - TikTok shop\n* `tiktok_comments` - TikTok comments\n* `x_posts` - X (Twitter) posts\n\n* `google_maps_reviews` - Google Maps reviews\n* `google_shopping` - Google Shopping results\n* `google_play_store` - Google Play Store apps\n* `apple_app_store` - Apple App Store apps\n* `youtube_profiles` - YouTube profiles\n* `youtube_videos` - YouTube videos\n* `youtube_comments` - YouTube comments\n* `reddit_posts` - Reddit posts\n* `zillow_properties_listing` - Zillow property listings\n* `booking_hotel_listings` - Booking.com hotel listings\n* `crunchbase_company` - Crunchbase company data\n* `zoominfo_company_profile` - ZoomInfo company profiles\n* `reuter_news` - Reuters news\n* `github_repository_file` - GitHub repository files\n* `yahoo_finance_business` - Yahoo Finance business data\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/brightdata.py)\n* View [Cookbook Example](https://github.com/agno-agi/agno/tree/main/cookbook/tools/brightdata_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Supported Data Sources",
+      "id": "supported-data-sources"
+    },
+    {
+      "level": "h3",
+      "text": "E-commerce",
+      "id": "e-commerce"
+    },
+    {
+      "level": "h3",
+      "text": "Professional Networks",
+      "id": "professional-networks"
+    },
+    {
+      "level": "h3",
+      "text": "Social Media",
+      "id": "social-media"
+    },
+    {
+      "level": "h3",
+      "text": "Other Platforms",
+      "id": "other-platforms"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example-1:-scrape-a-webpage-as-markdown",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Set up named loggers BEFORE creating agents/teams/workflows",
+  "content": "logger_configs = [\n    (\"agno\", \"agent.log\"),\n    (\"agno-team\", \"team.log\"),\n    (\"agno-workflow\", \"workflow.log\"),\n]\n\nfor logger_name, log_file in logger_configs:\n    logger = logging.getLogger(logger_name)\n    logger.setLevel(logging.INFO)\n    handler = logging.FileHandler(log_file)\n    handler.setFormatter(logging.Formatter(\"%(asctime)s - %(name)s - %(levelname)s - %(message)s\"))\n    logger.addHandler(handler)\n    logger.propagate = False",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-named-loggers-before-creating-agents/teams/workflows",
+  "links": []
+}

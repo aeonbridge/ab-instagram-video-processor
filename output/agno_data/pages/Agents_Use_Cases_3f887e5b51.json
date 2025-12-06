@@ -1,0 +1,19 @@
+{
+  "title": "Agents Use Cases",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/overview\n\nExplore Agno's Agent use cases showcasing what Agents have to offer.\n\nWelcome to Agno's Agent use cases! Here you'll discover practical examples of single-agent applications that solve real-world problems. You can either:\n\n* Run the examples individually\n* Clone the entire [Agno cookbook](https://github.com/agno-agi/agno/tree/main/cookbook)\n\nHave an interesting example to share? Please consider [contributing](https://github.com/agno-agi/agno-docs) to our growing collection.\n\nIf you're just getting started, follow the [Getting Started](/examples/getting-started) guide for a step-by-step tutorial. The examples build on each other, introducing new concepts and capabilities progressively.\n\nExplore these popular agent examples to see what's possible with Agno:\n\n<CardGroup cols={3}>\n  <Card title=\"Agno Assist\" icon=\"book\" iconType=\"duotone\" href=\"/examples/use-cases/agents/agno-assist\">\n    Build a documentation assistant using RAG to answer questions from your knowledge base.\n  </Card>\n\n<Card title=\"Competitor Analysis Agent\" icon=\"chart-line\" iconType=\"duotone\" href=\"/examples/use-cases/agents/competitor-analysis-agent\">\n    Perform competitive intelligence with web search, content scraping, and strategic analysis.\n  </Card>\n\n<Card title=\"Research Agent\" icon=\"magnifying-glass\" iconType=\"duotone\" href=\"/examples/use-cases/agents/research-agent\">\n    Create professional research articles with web search, fact-checking, and journalism.\n  </Card>\n\n<Card title=\"Web Extraction Agent\" icon=\"globe\" iconType=\"duotone\" href=\"/examples/use-cases/agents/web-extraction-agent\">\n    Transform unstructured web content into organized, structured data.\n  </Card>\n\n<Card title=\"YouTube Agent\" icon=\"video\" iconType=\"duotone\" href=\"/examples/use-cases/agents/youtube-agent\">\n    Analyze YouTube videos and create structured summaries with accurate timestamps.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Getting Started",
+      "id": "getting-started"
+    },
+    {
+      "level": "h2",
+      "text": "Featured Examples",
+      "id": "featured-examples"
+    }
+  ],
+  "url": "llms-txt#agents-use-cases",
+  "links": []
+}

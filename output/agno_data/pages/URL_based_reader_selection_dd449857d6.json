@@ -1,0 +1,24 @@
+{
+  "title": "URL-based reader selection",
+  "content": "reader = ReaderFactory.get_reader_for_url(\"https://youtube.com/watch?v=...\")  # YouTubeReader\nreader = ReaderFactory.get_reader_for_url(\"https://example.com/doc.pdf\")     # PDFReader\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Supported Readers\n\nThe following readers are currently supported:\n\n| Reader Name           | Description                                           |\n| --------------------- | ----------------------------------------------------- |\n| ArxivReader           | Fetches and processes academic papers from arXiv      |\n| CSVReader             | Parses CSV files and converts rows to documents       |\n| FieldLabeledCSVReader | Converts CSV rows to field-labeled text documents     |\n| FirecrawlReader       | Uses Firecrawl API to scrape and crawl web content    |\n| JSONReader            | Processes JSON files and converts them into documents |\n| MarkdownReader        | Reads and parses Markdown files                       |\n| PDFReader             | Reads and extracts text from PDF files                |\n| PPTXReader            | Reads and extracts text from PowerPoint (.pptx) files |\n| TextReader            | Handles plain text files                              |\n| WebsiteReader         | Crawls entire websites following links recursively    |\n| WebSearchReader       | Searches and reads web search results                 |\n| WikipediaReader       | Searches and reads Wikipedia articles                 |\n| YouTubeReader         | Extracts transcripts and metadata from YouTube videos |\n\n## Async Processing\n\nAll readers support asynchronous processing for better performance:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Supported Readers",
+      "id": "supported-readers"
+    },
+    {
+      "level": "h2",
+      "text": "Async Processing",
+      "id": "async-processing"
+    }
+  ],
+  "url": "llms-txt#url-based-reader-selection",
+  "links": []
+}

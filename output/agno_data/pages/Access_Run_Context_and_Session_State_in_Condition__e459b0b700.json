@@ -1,0 +1,21 @@
+{
+  "title": "Access Run Context and Session State in Condition Evaluator Function",
+  "content": "Source: https://docs.agno.com/basics/state/workflows/usage/access-session-state-in-condition-evaluator-function\n\nThis example demonstrates how to access the run context in the evaluator function of a condition step\n\n1. How to use `run_context` in a Condition evaluator function\n2. Reading and modifying `run_context.session_state` based on condition logic\n3. Accessing `user_id` and `session_id` from `run_context.session_state`\n4. Making conditional decisions based on `run_context.session_state`\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    Create a file named `access_session_state_in_condition_evaluator_function.py`\n  </Step>\n\n<Step title=\"Add code to file\">\n    \n  </Step>\n\n<Step title=\"Setup venv\">\n    <Snippet file=\"create-venv-step.mdx\" />\n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Set OpenAI Key\">\n    <Snippet file=\"set-openai-key.mdx\" />\n  </Step>\n\n<Step title=\"Run the workflow\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Setup venv\">\n    <Snippet file=\"create-venv-step.mdx\" />\n  </Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set OpenAI Key\">\n    <Snippet file=\"set-openai-key.mdx\" />\n  </Step>\n\n  <Step title=\"Run the workflow\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#access-run-context-and-session-state-in-condition-evaluator-function",
+  "links": []
+}

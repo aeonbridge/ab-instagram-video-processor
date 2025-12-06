@@ -1,0 +1,36 @@
+{
+  "title": "RAG Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/cloud/ibm-watsonx/usage/knowledge\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API key\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Set up PostgreSQL with pgvector\">\n    You need a PostgreSQL database with the pgvector extension installed. Adjust the `db_url` in the code to match your database configuration.\n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"For subsequent runs\">\n    After the first run, comment out the `knowledge_base.load(recreate=True)` line to avoid reloading the PDF.\n  </Step>\n</Steps>\n\nThis example shows how to integrate a knowledge base with IBM WatsonX. It loads a PDF from a URL, processes it into a vector database (PostgreSQL with pgvector in this case), and then creates an agent that can query this knowledge base.\n\nNote: You need to install several packages (`pgvector`, `pypdf`, etc.) and have a PostgreSQL database with the pgvector extension available.",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set up PostgreSQL with pgvector\">\n    You need a PostgreSQL database with the pgvector extension installed. Adjust the `db_url` in the code to match your database configuration.\n  </Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#rag-agent",
+  "links": []
+}

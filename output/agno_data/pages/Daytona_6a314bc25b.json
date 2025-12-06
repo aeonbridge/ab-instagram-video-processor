@@ -1,0 +1,28 @@
+{
+  "title": "Daytona",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/daytona\n\nEnable your Agents to run code in a remote, secure sandbox.\n\n**Daytona** offers secure and elastic infrastructure for runnning your AI-generated code. At Agno, we integrate with it to enable your Agents and Teams to run code in your Daytona sandboxes.\n\nThe Daytona tools require the `daytona_sdk` Python package:\n\nYou will also need a Daytona API key. You can get it from your [Daytona account](https://app.daytona.io/account):\n\nThe following example demonstrates how to create an agent that can run Python code in a Daytona sandbox:\n\n```python cookbook/tools/daytona_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.tools.daytona import DaytonaTools\n\ndaytona_tools = DaytonaTools()",
+  "code_samples": [
+    {
+      "code": "You will also need a Daytona API key. You can get it from your [Daytona account](https://app.daytona.io/account):",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following example demonstrates how to create an agent that can run Python code in a Daytona sandbox:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#daytona",
+  "links": []
+}

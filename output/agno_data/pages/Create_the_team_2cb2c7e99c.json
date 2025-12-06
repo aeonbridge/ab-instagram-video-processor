@@ -1,0 +1,23 @@
+{
+  "title": "Create the team",
+  "content": "team = Team(\n    name=\"News and Weather Team\",\n    members=[news_agent, weather_agent],\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=\"Coordinate with team members to provide comprehensive information. Delegate tasks based on the user's request.\"\n)\n\nteam.print_response(\"What's the latest news and weather in Tokyo?\", stream=True)\npython  theme={null}\nteam.print_response(\"What's the latest news and weather in Tokyo?\")\npython  theme={null}\nfrom typing import Iterator\nfrom agno.team import Team\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.utils.pprint import pprint_run_response\n\nnews_agent = Agent(name=\"News Agent\", role=\"Get the latest news\", tools=[DuckDuckGoTools()])\nweather_agent = Agent(name=\"Weather Agent\", role=\"Get the weather for the next 7 days\", tools=[DuckDuckGoTools()])\n\nteam = Team(\n    name=\"News and Weather Team\",\n    members=[news_agent, weather_agent],\n    model=OpenAIChat(id=\"gpt-4o\")\n)",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  It is recommended to specify the `id`, `name` and the `role` fields of each team member, for better identification by the team leader when delegating requests.\n  The `id` is used to identify the team member in the team and in the team leader's context.\n</Tip>\n\n<Note>\n  Team members inherit the `model` parameter from their parent `Team` if not specified. Members with an explicitly assigned `model` retain their own. In nested team structures, inheritance always happens from the direct parent.\n  Teams without a defined model default to OpenAI `gpt-4o`.\n\n  The `reasoning_model`, `parser_model`, and `output_model` must be explicitly defined for each team or team member.\n\n  See the [model inheritance example](/basics/teams/usage/other/model-inheritance).\n</Note>\n\n## Run your Team\n\nWhen running your team, use the `Team.print_response()` method to print the response in the terminal.\n\nYou can pass `show_members_responses=True` to also print the responses from the team members.\n\nFor example:",
+      "language": "unknown"
+    },
+    {
+      "code": "This is only for development purposes and not recommended for production use. In production, use the `Team.run()` or `Team.arun()` methods.\n\nFor example:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Run your Team",
+      "id": "run-your-team"
+    }
+  ],
+  "url": "llms-txt#create-the-team",
+  "links": []
+}

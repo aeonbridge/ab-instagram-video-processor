@@ -1,0 +1,8 @@
+{
+  "title": "Define a function to run the agent, decorated with weave.op()",
+  "content": "@weave.op()\ndef run(content: str):\n    return agent.run(content)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-a-function-to-run-the-agent,-decorated-with-weave.op()",
+  "links": []
+}

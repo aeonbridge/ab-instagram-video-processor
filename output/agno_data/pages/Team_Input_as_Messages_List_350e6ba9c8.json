@@ -1,0 +1,14 @@
+{
+  "title": "Team Input as Messages List",
+  "content": "Source: https://docs.agno.com/basics/input-output/team/usage/input-as-messages-list\n\nThis example demonstrates how to provide input to a team as a list of Message objects, creating a conversation context with multiple user and assistant messages for more complex interactions.\n\n```python cookbook/examples/teams/basic/input_as_messages_list.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.message import Message\nfrom agno.team import Team",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-input-as-messages-list",
+  "links": []
+}

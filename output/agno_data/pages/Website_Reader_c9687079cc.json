@@ -1,0 +1,8 @@
+{
+  "title": "Website Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/website\n\nWebsiteReader is a reader class that allows you to read data from websites.\n\n<Snippet file=\"website-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#website-reader",
+  "links": []
+}

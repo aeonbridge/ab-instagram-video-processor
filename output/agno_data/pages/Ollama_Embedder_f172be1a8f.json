@@ -1,0 +1,14 @@
+{
+  "title": "Ollama Embedder",
+  "content": "Source: https://docs.agno.com/basics/knowledge/embedder/ollama/usage/ollama-embedder\n\n```python  theme={null}\nfrom agno.knowledge.embedder.ollama import OllamaEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\n\nembeddings = OllamaEmbedder().get_embedding(\n    \"The quick brown fox jumps over the lazy dog.\"\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#ollama-embedder",
+  "links": []
+}

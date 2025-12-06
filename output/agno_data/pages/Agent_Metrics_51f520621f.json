@@ -1,0 +1,14 @@
+{
+  "title": "Agent Metrics",
+  "content": "Source: https://docs.agno.com/basics/sessions/metrics/agent\n\nLearn about agent run and session metrics.\n\nWhen you run an agent in Agno, the response you get (**RunOutput**) includes detailed metrics about the run. These metrics help you understand resource usage (like **token usage** and **time**), performance, and other aspects of the model and tool calls.\n\nMetrics are available at multiple levels:\n\n* **Per message**: Each message (assistant, tool, etc.) has its own metrics.\n* **Per run**: Each `RunOutput` has its own metrics.\n* **Per session**: The `AgentSession` contains aggregated `session_metrics` that are the sum of all `RunOutput.metrics` for the session.\n\nSuppose you have an agent that performs some tasks and you want to analyze the metrics after running it. Here's how you can access and print the metrics:\n\nYou run the following code to create an agent and run it with the following configuration:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.google import Gemini\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.db.sqlite import SqliteDb\nfrom rich.pretty import pprint\n\nagent = Agent(\n    model=Gemini(id=\"gemini-2.5-flash\"),\n    tools=[DuckDuckGoTools()],\n    db=SqliteDb(db_file=\"tmp/agents.db\"),\n    markdown=True,\n)\n\nrun_response = agent.run(\n    \"What is current news in the world?\"\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example Usage",
+      "id": "example-usage"
+    }
+  ],
+  "url": "llms-txt#agent-metrics",
+  "links": []
+}

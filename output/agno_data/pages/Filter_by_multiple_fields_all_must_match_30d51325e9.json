@@ -1,0 +1,8 @@
+{
+  "title": "Filter by multiple fields (all must match)",
+  "content": "results = knowledge.search(\n    \"deployment process\",\n    filters={\"department\": \"engineering\", \"type\": \"documentation\", \"status\": \"published\"}\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#filter-by-multiple-fields-(all-must-match)",
+  "links": []
+}

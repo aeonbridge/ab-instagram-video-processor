@@ -1,0 +1,24 @@
+{
+  "title": "Save the generated image if available",
+  "content": "if response.images and response.images[0].content:\n    output_path = Path(\"generated_image.png\")\n    with open(output_path, \"wb\") as f:\n        f.write(response.images[0].content)\n\nprint(f\"Image was successfully generated and saved to: {output_path}\")\n```\n\n| Parameter             | Type   | Default                    | Description                                                                                            |\n| --------------------- | ------ | -------------------------- | ------------------------------------------------------------------------------------------------------ |\n| `model`               | `str`  | `\"gemini-2.5-flash-image\"` | The Nano Banana model to use                                                                           |\n| `aspect_ratio`        | `str`  | `\"1:1\"`                    | Image aspect ratio. Supported: `1:1`, `2:3`, `3:2`, `3:4`, `4:3`, `4:5`, `5:4`, `9:16`, `16:9`, `21:9` |\n| `api_key`             | `str`  | `None`                     | The Google API key for authentication                                                                  |\n| `enable_create_image` | `bool` | `True`                     | Enable the create image functionality                                                                  |\n\n| Function       | Description                               |\n| -------------- | ----------------------------------------- |\n| `create_image` | Generates an image based on a text prompt |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/nano_banana.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/nano_banana_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#save-the-generated-image-if-available",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Memory",
+  "content": "Source: https://docs.agno.com/integrations/models/native/perplexity/usage/memory\n\n```python cookbook/models/perplexity/memory.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.perplexity import Perplexity\nfrom rich.pretty import pprint\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\nagent = Agent(\n    model=Perplexity(id=\"sonar-pro\"),\n    # Store the memories and summary in a database\n    db=PostgresDb(db_url=db_url),\n    enable_user_memories=True,\n    enable_session_summaries=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-memory",
+  "links": []
+}

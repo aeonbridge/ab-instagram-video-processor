@@ -1,0 +1,8 @@
+{
+  "title": "Add content (ingestion + chunking + embedding handled by Knowledge)",
+  "content": "knowledge.add_content(\n    name=\"Recipes\",\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n    metadata={\"doc_type\": \"recipe_book\"},\n    skip_if_exists=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-content-(ingestion-+-chunking-+-embedding-handled-by-knowledge)",
+  "links": []
+}

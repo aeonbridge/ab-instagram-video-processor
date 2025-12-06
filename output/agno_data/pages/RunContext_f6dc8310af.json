@@ -1,0 +1,14 @@
+{
+  "title": "RunContext",
+  "content": "Source: https://docs.agno.com/reference/run/run-context\n\nThe `RunContext` is an object that can be referenced in pre- and post-hooks, tools, and other parts of the run.\n\nSee [Agent State](/basics/state/agent) for examples of how to use the `RunContext` in your code.\n\n## RunContext Attributes\n\n| Attribute           | Type             | Description                      |\n| ------------------- | ---------------- | -------------------------------- |\n| `run_id`            | `str`            | Run ID                           |\n| `session_id`        | `str`            | Session ID for the run           |\n| `user_id`           | `Optional[str]`  | User ID associated with the run  |\n| `dependencies`      | `Dict[str, Any]` | Dependencies for the run         |\n| `knowledge_filters` | `Dict[str, Any]` | Knowledge filters for the run    |\n| `metadata`          | `Dict[str, Any]` | Metadata associated with the run |\n| `session_state`     | `Dict[str, Any]` | Session state for the run        |",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "RunContext Attributes",
+      "id": "runcontext-attributes"
+    }
+  ],
+  "url": "llms-txt#runcontext",
+  "links": []
+}

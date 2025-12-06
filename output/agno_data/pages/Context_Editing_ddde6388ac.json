@@ -1,0 +1,14 @@
+{
+  "title": "Context Editing",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/context-management\n\nLearn how to use Anthropic's context editing capabilities with Agno.\n\nWith Anthropic's [context editing capabilities](https://docs.anthropic.com/en/docs/build-with-claude/context-editing), you can automatically manage your context size.\n\nWhen your context grows larger, previous tool results and thinking blocks will be removed.\n\nThis is useful to reduce costs, improve performance, and reduce the chances of hitting context limits.\n\n```python anthropic_context_management.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nagent = Agent(\n    model=Claude(\n        id=\"claude-sonnet-4-5\",\n        # Activate and configure the context management feature\n        betas=[\"context-management-2025-06-27\"],\n        context_management={\n            \"edits\": [\n                {\n                    \"type\": \"clear_tool_uses_20250919\",\n                    \"trigger\": {\"type\": \"tool_uses\", \"value\": 2},\n                    \"keep\": {\"type\": \"tool_uses\", \"value\": 1},\n                }\n            ]\n        },\n    ),\n    instructions=\"You are a helpful assistant with access to the web.\",\n    tools=[DuckDuckGoTools()],\n    session_id=\"context-editing\",\n    add_history_to_context=True,\n    markdown=True,\n)\n\nagent.print_response(\n    \"Search for AI regulation in US. Make multiple searches to find the latest information.\"\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Working example",
+      "id": "working-example"
+    }
+  ],
+  "url": "llms-txt#context-editing",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "SurrealDB Async",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/surrealdb/usage/async-surreal-db\n\n```python cookbook/knowledge/vector_db/surrealdb/async_surreal_db.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.surrealdb import SurrealDb\nfrom surrealdb import AsyncSurreal\n\nSURREALDB_URL = \"ws://localhost:8000\"\nSURREALDB_USER = \"root\"\nSURREALDB_PASSWORD = \"root\"\nSURREALDB_NAMESPACE = \"test\"\nSURREALDB_DATABASE = \"test\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#surrealdb-async",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Image to Structured Movie Script Team",
+  "content": "Source: https://docs.agno.com/basics/multimodal/team/usage/image-to-structured-output\n\nThis example demonstrates how a team can collaborate to analyze images and create structured movie scripts using Pydantic models for consistent output format.\n\n```python cookbook/examples/teams/multimodal/image_to_structured_output.py theme={null}\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.media import Image\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom pydantic import BaseModel, Field\nfrom rich.pretty import pprint\n\nclass MovieScript(BaseModel):\n    name: str = Field(..., description=\"Give a name to this movie\")\n    setting: str = Field(\n        ..., description=\"Provide a nice setting for a blockbuster movie.\"\n    )\n    characters: List[str] = Field(..., description=\"Name of characters for this movie.\")\n    storyline: str = Field(\n        ..., description=\"3 sentence storyline for the movie. Make it exciting!\"\n    )\n\nimage_analyst = Agent(\n    name=\"Image Analyst\",\n    role=\"Analyze visual content and extract key elements\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=[\n        \"Analyze images for visual elements, setting, and characters\",\n        \"Focus on details that can inspire creative content\",\n    ],\n)\n\nscript_writer = Agent(\n    name=\"Script Writer\",\n    role=\"Create structured movie scripts from visual inspiration\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=[\n        \"Transform visual analysis into compelling movie concepts\",\n        \"Follow the structured output format precisely\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#image-to-structured-movie-script-team",
+  "links": []
+}

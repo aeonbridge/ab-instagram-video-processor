@@ -1,0 +1,8 @@
+{
+  "title": "Agent that uses JSON mode",
+  "content": "json_mode_agent = Agent(\n    model=Perplexity(id=\"sonar-pro\"),\n    description=\"You write movie scripts.\",\n    output_schema=MovieScript,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-that-uses-json-mode",
+  "links": []
+}

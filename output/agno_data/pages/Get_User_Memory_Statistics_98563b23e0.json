@@ -1,0 +1,8 @@
+{
+  "title": "Get User Memory Statistics",
+  "content": "Source: https://docs.agno.com/reference-api/schema/memory/get-user-memory-statistics\n\nget /user_memory_stats\nRetrieve paginated statistics about memory usage by user. Provides insights into user engagement and memory distribution across users.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-user-memory-statistics",
+  "links": []
+}

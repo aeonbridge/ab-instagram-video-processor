@@ -1,0 +1,8 @@
+{
+  "title": "Get the final app",
+  "content": "app = agent_os.get_app()",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-the-final-app",
+  "links": []
+}

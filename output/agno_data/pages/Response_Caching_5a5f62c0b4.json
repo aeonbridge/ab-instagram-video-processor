@@ -1,0 +1,14 @@
+{
+  "title": "Response Caching",
+  "content": "Source: https://docs.agno.com/integrations/models/native/openai/completion/usage/cache-response\n\nLearn how to cache model responses to avoid redundant API calls and reduce costs.\n\n<Note>\n  For a conceptual overview of response caching, see [Response Caching](/basics/models/cache-response).\n</Note>\n\nResponse caching allows you to cache model responses, which can significantly improve response times and reduce API costs during development and testing.\n\nEnable caching by setting `cache_response=True` when initializing the model. The first call will hit the API and cache the response, while subsequent identical calls will return the cached result.\n\n```python cache_model_response.py theme={null}\nimport time\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\nagent = Agent(model=OpenAIChat(id=\"gpt-4o\", cache_response=True))",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Basic Usage",
+      "id": "basic-usage"
+    }
+  ],
+  "url": "llms-txt#response-caching",
+  "links": []
+}

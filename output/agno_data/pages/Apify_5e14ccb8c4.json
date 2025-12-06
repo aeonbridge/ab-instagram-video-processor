@@ -1,0 +1,29 @@
+{
+  "title": "Apify",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/apify\n\nThis guide demonstrates how to integrate and use [Apify](https://apify.com/actors) Actors within the Agno framework to enhance your AI agents with web scraping, crawling, data extraction, and web automation capabilities.\n\n[Apify](https://apify.com/) is a platform that provides:\n\n* Data collection services for AI Agents, specializing in extracting data from social media, search engines, online maps, e-commerce sites, travel portals, or general websites\n* A marketplace of ready-to-use Actors (specialized tools) for various data tasks\n* Infrastructure to run and monetize our own AI Agents\n\n1. Sign up for an [Apify account](https://console.apify.com/sign-up)\n2. Obtain your Apify API token (can be obtained from [Apify](https://docs.apify.com/platform/integrations/api))\n3. Install the required packages:\n\nThe Agno framework makes it easy to integrate Apify Actors into your agents. Here's a simple example:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.apify import ApifyTools",
+  "code_samples": [
+    {
+      "code": "## Basic Usage\n\nThe Agno framework makes it easy to integrate Apify Actors into your agents. Here's a simple example:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What is Apify?",
+      "id": "what-is-apify?"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Basic Usage",
+      "id": "basic-usage"
+    }
+  ],
+  "url": "llms-txt#apify",
+  "links": []
+}

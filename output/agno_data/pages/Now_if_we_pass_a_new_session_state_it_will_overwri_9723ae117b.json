@@ -1,0 +1,24 @@
+{
+  "title": "Now if we pass a new session_state, it will overwrite the stored session_state.",
+  "content": "agent.print_response(\n    \"Can you tell me what is in your session_state?\",\n    session_state={\"secret_number\": 43},\n    stream=True,\n)\nprint(f\"Stored session state: {agent.get_session_state()}\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\n\nfrom agno.db.sqlite import SqliteDb\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\ndb = SqliteDb(db_file=\"tmp/agents.db\")\n\nweb_research_agent = Agent(\n    name=\"Web Research Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[DuckDuckGoTools()],\n    instructions=\"You are a web research agent that can answer questions from the web.\",\n)\n\nreport_agent = Agent(\n    name=\"Report Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=\"You are a report agent that can write a report from the web research.\",\n)\n\nteam = Team(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    db=db,\n    members=[web_research_agent, report_agent],\n    share_member_interactions=True,\n    instructions=[\n        \"You are a team of agents that can research the web and write a report.\",\n        \"First, research the web for information about the topic.\",\n        \"Then, use your report agent to write a report from the web research.\",\n    ],\n    show_members_responses=True,\n    debug_mode=True,\n)\n\nteam.print_response(\"How are LEDs made?\")\n```\n\n## Developer Resources\n\n* View the [Team schema](/reference/teams/team)\n* View the [RunContext schema](/reference/run/run-context)",
+  "code_samples": [
+    {
+      "code": "## Team Member Interactions\n\nAgent Teams can share interactions between members, allowing agents to learn from each other's outputs:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Team Member Interactions",
+      "id": "team-member-interactions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#now-if-we-pass-a-new-session_state,-it-will-overwrite-the-stored-session_state.",
+  "links": []
+}

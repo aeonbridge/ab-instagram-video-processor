@@ -1,0 +1,8 @@
+{
+  "title": "Response Composer Agent - Specialized in response composition",
+  "content": "response_composer = Agent(\n    name=\"Response Composer\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Compose comprehensive responses with proper source attribution\",\n    instructions=[\n        \"Combine validated information from all team members.\",\n        \"Create well-structured, comprehensive responses.\",\n        \"Include proper source attribution and data provenance.\",\n        \"Ensure clarity and coherence in the final response.\",\n        \"Format responses for optimal user experience.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#response-composer-agent---specialized-in-response-composition",
+  "links": []
+}

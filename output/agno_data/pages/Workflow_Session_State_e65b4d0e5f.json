@@ -1,0 +1,29 @@
+{
+  "title": "Workflow Session State",
+  "content": "Source: https://docs.agno.com/basics/state/workflows/overview\n\nCoordinate state across workflow steps, agents, teams, and custom functions\n\nWorkflow session state enables sharing and updating state data across all components within a workflow: agents, teams, and custom functions.\n\nSession state data will be persisted if a database is available, and loaded from there in subsequent runs of the workflow.\n\n<img className=\"block dark:hidden\" src=\"https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state-light.png?fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=eb9f2f37de2699763ae1cab8b26e5792\" alt=\"Workflows session state diagram\" data-og-width=\"2199\" width=\"2199\" data-og-height=\"1203\" height=\"1203\" data-path=\"images/workflows-session-state-light.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state-light.png?w=280&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=be8235601f44c3d5c899e769bd7e10a7 280w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state-light.png?w=560&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=c54d2a340511cf08b6f62ee2dc725ab6 560w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state-light.png?w=840&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=a8704d97da7f5fd6490acd6e9e847f21 840w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state-light.png?w=1100&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=88b25555c12572fbb92d1b7724e77cc6 1100w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state-light.png?w=1650&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=e0c24367b61326e2115cfa74059d1316 1650w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state-light.png?w=2500&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=c5d4f68f953670a714b4a5d334f9b5fb 2500w\" />\n\n<img className=\"hidden dark:block\" src=\"https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state.png?fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=5e56bc8354bbb79f31d6c4140e5dea2e\" alt=\"Workflows session state diagram\" data-og-width=\"2199\" width=\"2199\" data-og-height=\"1203\" height=\"1203\" data-path=\"images/workflows-session-state.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state.png?w=280&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=494e73f94a71a1611b068a2561ed6c7a 280w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state.png?w=560&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=3c754db0830ab28e7640f553c9dd93a9 560w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state.png?w=840&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=fa17e5cf5ebf2d45a85a328abbd52bf7 840w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state.png?w=1100&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=e82eae67add368163f04fcb09dab4271 1100w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state.png?w=1650&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=d66bd915da648ef787dd86aa2a5eede6 1650w, https://mintcdn.com/agno-v2/JYIBgMrzFEujZh3_/images/workflows-session-state.png?w=2500&fit=max&auto=format&n=JYIBgMrzFEujZh3_&q=85&s=5bf1239ad621457d50d67b28153b9a1b 2500w\" />\n\n## How Workflow Session State Works\n\n### 1. State Initialization\n\nInitialize session state when creating a workflow. The session state can start empty or with predefined data that all workflow components can access and modify.\n\n### 2. Access and Modify State Data\n\nAll workflow components - agents, teams, and functions - can read from and write to the shared session state. This enables persistent data flow and coordination across the entire workflow execution.\n\nFrom tools, you can access the session state via `run_context.session_state`.\n\n**Example: Shopping List Management**\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai.chat import OpenAIChat\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\nfrom agno.run import RunContext\n\ndb = SqliteDb(db_file=\"tmp/workflow.db\")",
+  "code_samples": [
+    {
+      "code": "### 2. Access and Modify State Data\n\nAll workflow components - agents, teams, and functions - can read from and write to the shared session state. This enables persistent data flow and coordination across the entire workflow execution.\n\nFrom tools, you can access the session state via `run_context.session_state`.\n\n**Example: Shopping List Management**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How Workflow Session State Works",
+      "id": "how-workflow-session-state-works"
+    },
+    {
+      "level": "h3",
+      "text": "1. State Initialization",
+      "id": "1.-state-initialization"
+    },
+    {
+      "level": "h3",
+      "text": "2. Access and Modify State Data",
+      "id": "2.-access-and-modify-state-data"
+    }
+  ],
+  "url": "llms-txt#workflow-session-state",
+  "links": []
+}

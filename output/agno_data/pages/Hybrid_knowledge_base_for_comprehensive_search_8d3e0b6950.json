@@ -1,0 +1,8 @@
+{
+  "title": "Hybrid knowledge base for comprehensive search",
+  "content": "hybrid_knowledge = Knowledge(\n    vector_db=PgVector(\n        table_name=\"recipes_hybrid\",\n        db_url=db_url,\n        search_type=SearchType.hybrid,\n        embedder=OpenAIEmbedder(id=\"text-embedding-3-small\"),\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#hybrid-knowledge-base-for-comprehensive-search",
+  "links": []
+}

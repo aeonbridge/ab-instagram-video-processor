@@ -1,0 +1,8 @@
+{
+  "title": "Count tokens after",
+  "content": "tokens_after = strategy.count_tokens(optimized)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#count-tokens-after",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Memory Optimization",
+  "content": "Source: https://docs.agno.com/basics/memory/working-with-memories/usage/memory-optimization\n\n```python memory-optimization.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.memory import MemoryManager, SummarizeStrategy\nfrom agno.memory.strategies.types import MemoryOptimizationStrategyType\nfrom agno.models.openai import OpenAIChat\n\ndb_file = \"tmp/memory_summarize_strategy.db\"\ndb = SqliteDb(db_file=db_file)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#memory-optimization",
+  "links": []
+}

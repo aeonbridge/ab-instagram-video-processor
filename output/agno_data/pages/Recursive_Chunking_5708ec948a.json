@@ -1,0 +1,8 @@
+{
+  "title": "Recursive Chunking",
+  "content": "Source: https://docs.agno.com/reference/knowledge/chunking/recursive\n\nRecursive chunking is a method of splitting documents into smaller chunks by recursively applying a chunking strategy.\nThis is useful when you want to process large documents in smaller, manageable pieces.\n\n<Snippet file=\"chunking-recursive.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#recursive-chunking",
+  "links": []
+}

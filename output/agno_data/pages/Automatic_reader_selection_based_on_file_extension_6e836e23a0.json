@@ -1,0 +1,8 @@
+{
+  "title": "Automatic reader selection based on file extension",
+  "content": "reader = ReaderFactory.get_reader_for_extension(\".pdf\")  # Returns PDFReader\nreader = ReaderFactory.get_reader_for_extension(\".csv\")  # Returns CSVReader",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#automatic-reader-selection-based-on-file-extension",
+  "links": []
+}

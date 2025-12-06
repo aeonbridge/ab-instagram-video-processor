@@ -1,0 +1,8 @@
+{
+  "title": "3. Generate Video Analysis",
+  "content": "response = agent.run(query, videos=[Video(filepath=video_path)])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#3.-generate-video-analysis",
+  "links": []
+}

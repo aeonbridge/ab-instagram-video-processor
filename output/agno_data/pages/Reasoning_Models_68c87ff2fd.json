@@ -1,0 +1,19 @@
+{
+  "title": "Reasoning Models",
+  "content": "Source: https://docs.agno.com/basics/reasoning/reasoning-models\n\nReasoning models are a class of large language models pre-trained to think before they answer. They produce a long internal chain of thought before responding.\n\nExamples of reasoning models include:\n\n* OpenAI o1-pro and gpt-5-mini\n* Claude 3.7 sonnet in extended-thinking mode\n* Gemini 2.0 flash thinking\n* DeepSeek-R1\n\nReasoning models deeply consider and think through a plan before taking action. Its all about what the model does **before it starts generating a response**. Reasoning models excel at single-shot use-cases. They're perfect for solving hard problems (coding, math, physics) that don't require multiple turns, or calling tools sequentially.\n\n```python gpt_5_mini.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h3",
+      "text": "gpt-5-mini",
+      "id": "gpt-5-mini"
+    }
+  ],
+  "url": "llms-txt#reasoning-models",
+  "links": []
+}

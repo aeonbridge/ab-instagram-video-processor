@@ -1,0 +1,14 @@
+{
+  "title": "Basic Streaming Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/perplexity/usage/basic-stream\n\n```python cookbook/models/perplexity/basic_stream.py theme={null}\nfrom typing import Iterator  # noqa\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.perplexity import Perplexity\n\nagent = Agent(model=Perplexity(id=\"sonar\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#basic-streaming-agent",
+  "links": []
+}

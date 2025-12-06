@@ -1,0 +1,8 @@
+{
+  "title": "Setup your Memory Manager, to adjust how memories are created",
+  "content": "memory_manager = MemoryManager(\n    db=db,\n    # Select the model used for memory creation and updates. If unset, the default model of the Agent is used.\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    # You can also provide additional instructions\n    additional_instructions=\"Don't store the user's real name\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-your-memory-manager,-to-adjust-how-memories-are-created",
+  "links": []
+}

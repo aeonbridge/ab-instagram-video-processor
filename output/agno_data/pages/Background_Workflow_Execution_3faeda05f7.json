@@ -1,0 +1,14 @@
+{
+  "title": "Background Workflow Execution",
+  "content": "Source: https://docs.agno.com/basics/workflows/background-execution\n\nHow to execute workflows as non-blocking background tasks\n\nExecute workflows as non-blocking background tasks by passing `background=True` to `Workflow.arun()`. This returns a `WorkflowRunOutput` object with a `run_id` for polling the workflow status until completion.\n\n<Note>\n  Background execution requires async workflows using `.arun()`. Poll for results using `workflow.get_run(run_id)` and check completion status with `.has_completed()`.\n\nIdeal for long-running operations like large-scale data processing, multi-step research, or batch operations that shouldn't block your main application thread.\n</Note>\n\n```python  theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.utils.pprint import pprint_run_response\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#background-workflow-execution",
+  "links": []
+}

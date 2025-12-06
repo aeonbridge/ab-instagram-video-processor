@@ -1,0 +1,44 @@
+{
+  "title": "Simple function we will use as a post-hook",
+  "content": "def validate_output_length(\n    run_output: RunOutput,\n) -> None:\n    \"\"\"Post-hook to validate output length.\"\"\"\n    max_length = 1000\n    if len(run_output.content) > max_length:\n        raise OutputCheckError(\n            f\"Output too long. Max {max_length} characters allowed\",\n            check_trigger=CheckTrigger.OUTPUT_NOT_ALLOWED,\n        )\n\nagent = Agent(\n    name=\"My Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    # Provide the post-hook to the Agent using the post_hooks parameter\n    post_hooks=[validate_output_length],\n)\npython  theme={null}\nfrom agno.hooks import hook\n\n@hook(run_in_background=True)\nasync def send_notification(run_output, agent):\n    \"\"\"This hook will run in the background without blocking the response.\"\"\"\n    await send_email_notification(run_output.content)\n```\n\n<Warning>\n  Background execution requires [AgentOS](/agent-os/overview). When running agents directly (not through AgentOS), hooks marked with `run_in_background=True` will still execute synchronously.\n</Warning>\n\n### When to Use Background Hooks\n\nBackground hooks are ideal for:\n\n* **Logging and analytics**: Record metrics without affecting response time\n* **Notifications**: Send emails, Slack messages, or webhooks\n* **Async data storage**: Write to external databases or APIs\n* **Non-critical post-processing**: Tasks that don't affect the response\n\n<Note>\n  Hooks running in background mode (both pre-hooks and post-hooks) cannot modify any of the hook parameters (like `run_input`, `run_output`, `run_context`, etc.) since the agent may process the request before the hook completes.\n  Use background mode primarily for post-hooks or for pre-hooks that only perform logging/monitoring. This means background mode is not suitable for Guardrails.\n</Note>\n\nFor complete documentation on background task execution, see the [Background Tasks](/agent-os/background-tasks/overview) guide.\n\nFor the full decorator API, see the [@hook Decorator Reference](/reference/hooks/hook-decorator).\n\n## Developer Resources\n\n* View [Agent Examples](/basics/hooks/usage/agent/input-transformation-pre-hook)\n* View [Team Examples](/basics/hooks/usage/team/input-transformation-pre-hook)\n* View [Agent Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/agents/hooks)\n* View [Team Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/teams/hooks)",
+  "code_samples": [
+    {
+      "code": "You can see complete examples of post-hooks in the [Examples](/basics/hooks/usage/agent/input-transformation-pre-hook) section.\n\n### Post-hook Parameters\n\nPost-hooks run automatically during the Agent run and receive the following parameters:\n\n* `run_output`: The output from the Agent run that can be validated or modified\n* `agent`: Reference to the Agent instance\n* `session`: The current agent session\n* `run_context`: The current run context. See the [Run Context](/reference/run/run-context) reference.\n* `user_id`: The user ID for the run (optional)\n* `debug_mode`: Whether debug mode is enabled (optional)\n\nThe framework automatically injects only the parameters your hook function accepts, so you can define hooks with just the parameters you need.\n\nYou can learn more about the parameters in the [Post-hooks](/reference/hooks/post-hooks) reference.\n\n## Guardrails\n\nA popular use case for hooks are Guardrails: built-in safeguards for your Agents.\n\nYou can learn more about them in the [Guardrails](/basics/guardrails/overview) section.\n\n## The `@hook` Decorator\n\nThe `@hook` decorator allows you to configure individual hook behavior. Currently, it supports marking hooks to run in the background when used with [AgentOS](/agent-os/overview).\n\n### Background Execution\n\nBy default, hooks are either executed synchronously or asynchronously, in an API context they still block the response until they complete. For hooks that perform non-critical tasks (logging, analytics, notifications), you can mark them to run in the background:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Post-hook Parameters",
+      "id": "post-hook-parameters"
+    },
+    {
+      "level": "h2",
+      "text": "Guardrails",
+      "id": "guardrails"
+    },
+    {
+      "level": "h2",
+      "text": "The `@hook` Decorator",
+      "id": "the-`@hook`-decorator"
+    },
+    {
+      "level": "h3",
+      "text": "Background Execution",
+      "id": "background-execution"
+    },
+    {
+      "level": "h3",
+      "text": "When to Use Background Hooks",
+      "id": "when-to-use-background-hooks"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#simple-function-we-will-use-as-a-post-hook",
+  "links": []
+}

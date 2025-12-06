@@ -1,0 +1,61 @@
+{
+  "title": "Transform a regular model into a reasoning system",
+  "content": "reasoning_agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    reasoning=True,\n    markdown=True,\n)\n\nreasoning_agent.print_response(\n    \"Solve the trolley problem. Evaluate multiple ethical frameworks. Include an ASCII diagram of your solution.\",\n    stream=True,\n    show_full_reasoning=True,  # Shows the complete reasoning process\n)\npython finance_reasoning.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nreasoning_agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    tools=[DuckDuckGoTools()],\n    instructions=[\"Use tables to display data\"],\n    reasoning=True,\n    markdown=True,\n)\n\nreasoning_agent.print_response(\n    \"Compare the market performance of NVDA, AMD, and INTC over the past quarter. What are the key drivers?\",\n    stream=True,\n    show_full_reasoning=True,\n)\npython  theme={null}\nagent.print_response(\n    \"Your question\",\n    show_full_reasoning=True,  # Display complete reasoning process (default: False)\n)\npython  theme={null}\nreasoning_agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    reasoning=True,\n    reasoning_min_steps=2,  # Minimum reasoning steps (default: 1)\n    reasoning_max_steps=15,  # Maximum reasoning steps (default: 10)\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "### What You'll See\n\nWith `show_full_reasoning=True`, you'll see:\n\n* **Each reasoning step** with its title, action, and result\n* **The agent's thought process** including why it chose each approach\n* **Tool calls made** during reasoning (if tools are provided)\n* **Validation checks** performed to verify the solution\n* **Confidence scores** for each step (0.0–1.0)\n* **Self-corrections** if the agent detects errors\n* **The final polished response** from your main agent\n\n## Reasoning with Tools\n\nHere's where reasoning agents truly excel: combining multi-step reasoning with tool use. The reasoning agent can call tools iteratively, analyze results, and build toward a comprehensive solution.",
+      "language": "unknown"
+    },
+    {
+      "code": "The reasoning agent will:\n\n1. Break down the task (need stock data for 3 companies)\n2. Use DuckDuckGo to search for current market data\n3. Analyze each company's performance\n4. Search for news about key drivers\n5. Validate findings across multiple sources\n6. Create a comprehensive comparison with tables\n7. Provide a final answer with clear insights\n\n## Configuration Options\n\n### Display Options\n\nWant to peek under the hood? Control what you see during reasoning:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Capturing Reasoning Events\n\nFor building custom UIs or programmatically tracking reasoning progress, you can capture reasoning events (`ReasoningStarted`, `ReasoningStep`, `ReasoningCompleted`) as they happen during streaming. See the [Reasoning Reference](/reference/reasoning/reasoning#reasoning-event-types) for event attributes and complete code examples.\n\n### Iteration Control\n\nAdjust how many reasoning steps the agent takes:",
+      "language": "unknown"
+    },
+    {
+      "code": "* **`reasoning_min_steps`**: Ensures the agent thinks through at least this many steps before answering\n* **`reasoning_max_steps`**: Prevents infinite loops by capping the iteration count\n\n### Custom Reasoning Agent\n\nFor advanced use cases, you can provide your own reasoning agent:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "What You'll See",
+      "id": "what-you'll-see"
+    },
+    {
+      "level": "h2",
+      "text": "Reasoning with Tools",
+      "id": "reasoning-with-tools"
+    },
+    {
+      "level": "h2",
+      "text": "Configuration Options",
+      "id": "configuration-options"
+    },
+    {
+      "level": "h3",
+      "text": "Display Options",
+      "id": "display-options"
+    },
+    {
+      "level": "h3",
+      "text": "Capturing Reasoning Events",
+      "id": "capturing-reasoning-events"
+    },
+    {
+      "level": "h3",
+      "text": "Iteration Control",
+      "id": "iteration-control"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Reasoning Agent",
+      "id": "custom-reasoning-agent"
+    }
+  ],
+  "url": "llms-txt#transform-a-regular-model-into-a-reasoning-system",
+  "links": []
+}

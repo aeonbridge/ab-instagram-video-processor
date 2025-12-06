@@ -1,0 +1,24 @@
+{
+  "title": "Cerebras OpenAI",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/cerebras-openai/overview\n\nLearn how to use Cerebras OpenAI with Agno.\n\n## OpenAI-Compatible Integration\n\nCerebras can also be used via an OpenAI-compatible interface, making it easy to integrate with tools and libraries that expect the OpenAI API.\n\n### Using the OpenAI-Compatible Class\n\nThe `CerebrasOpenAI` class provides an OpenAI-style interface for Cerebras models:\n\nFirst, install openai:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.cerebras import CerebrasOpenAI\n\nagent = Agent(\n    model=CerebrasOpenAI(\n        id=\"llama-4-scout-17b-16e-instruct\",  # Model ID to use\n        # base_url=\"https://api.cerebras.ai\", # Optional: default endpoint for Cerebras\n    ),\n    markdown=True,\n)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "OpenAI-Compatible Integration",
+      "id": "openai-compatible-integration"
+    },
+    {
+      "level": "h3",
+      "text": "Using the OpenAI-Compatible Class",
+      "id": "using-the-openai-compatible-class"
+    }
+  ],
+  "url": "llms-txt#cerebras-openai",
+  "links": []
+}

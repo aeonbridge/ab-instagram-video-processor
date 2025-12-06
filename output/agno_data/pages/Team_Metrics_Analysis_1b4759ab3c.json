@@ -1,0 +1,14 @@
+{
+  "title": "Team Metrics Analysis",
+  "content": "Source: https://docs.agno.com/basics/sessions/metrics/usage/team-metrics\n\nThis example demonstrates how to access and analyze comprehensive team metrics including message-level metrics, session metrics, and member-specific performance data.\n\n```python cookbook/examples/teams/metrics/01_team_metrics.py theme={null}\n\"\"\"\nThis example demonstrates how to access and analyze team metrics.\n\nShows how to retrieve detailed metrics for team execution, including\nmessage-level metrics, session metrics, and member-specific metrics.\n\nPrerequisites:\n1. Run: cookbook/run_pgvector.sh (to start PostgreSQL)\n2. Ensure PostgreSQL is running on localhost:5532\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.tools.exa import ExaTools\nfrom agno.utils.pprint import pprint_run_response\nfrom rich.pretty import pprint",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-metrics-analysis",
+  "links": []
+}

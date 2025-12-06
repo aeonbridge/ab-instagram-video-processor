@@ -1,0 +1,33 @@
+{
+  "title": "Multimodal Agents",
+  "content": "Source: https://docs.agno.com/basics/multimodal/agent/overview\n\nLearn how to create multimodal agents in Agno.\n\nAgno agents support text, image, audio, video and files inputs and can generate text, image, audio, video and files as output.\n\nFor a complete overview of multimodal support, please checkout the [multimodal](/basics/multimodal/overview) documentation.\n\n<Tip>\n  Not all models support multimodal inputs and outputs.\n  To see which models support multimodal inputs and outputs, please checkout the [compatibility matrix](/basics/models/compatibility).\n</Tip>\n\n## Multimodal inputs to an agent\n\nLet's create an agent that can understand images and make tool calls as needed\n\nSee [Image as input](/basics/multimodal/images/image-input) for more details.\n\n```python audio_agent.py theme={null}\nimport base64\n\nimport requests\nfrom agno.agent import Agent\nfrom agno.media import Audio\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "Run the agent:",
+      "language": "unknown"
+    },
+    {
+      "code": "See [Image as input](/basics/multimodal/images/image-input) for more details.\n\n### Audio Agent",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Multimodal inputs to an agent",
+      "id": "multimodal-inputs-to-an-agent"
+    },
+    {
+      "level": "h3",
+      "text": "Image Agent",
+      "id": "image-agent"
+    },
+    {
+      "level": "h3",
+      "text": "Audio Agent",
+      "id": "audio-agent"
+    }
+  ],
+  "url": "llms-txt#multimodal-agents",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Financial Analysis Agent",
+  "content": "finance_agent = Agent(\n    name=\"Financial Analyst\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[YFinanceTools(stock_price=True, company_info=True)],\n    instructions=\"Perform quantitative financial analysis\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#financial-analysis-agent",
+  "links": []
+}

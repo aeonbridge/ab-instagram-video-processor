@@ -1,0 +1,24 @@
+{
+  "title": "Initialize knowledge base",
+  "content": "knowledge = Knowledge()\nknowledge.load_documents(\"./docs/\")\n\nagent = Agent(\n    instructions=[\n        \"You are a knowledge assistant that helps find and analyze information\",\n        \"Search through the knowledge base to answer questions\",\n        \"Provide detailed analysis and reasoning about the information found\",\n        \"Always cite your sources and explain your reasoning\",\n    ],\n    tools=[KnowledgeTools(knowledge=knowledge)],\n)\n\nagent.print_response(\"What are the best practices for API design?\", stream=True)\n```\n\n| Parameter           | Type            | Default | Description                                   |\n| ------------------- | --------------- | ------- | --------------------------------------------- |\n| `knowledge`         | `Knowledge`     | `None`  | Knowledge base instance (required).           |\n| `enable_think`      | `bool`          | `True`  | Enable reasoning capabilities.                |\n| `enable_search`     | `bool`          | `True`  | Enable knowledge search functionality.        |\n| `enable_analyze`    | `bool`          | `True`  | Enable knowledge analysis capabilities.       |\n| `instructions`      | `Optional[str]` | `None`  | Custom instructions for knowledge operations. |\n| `add_instructions`  | `bool`          | `True`  | Whether to add instructions to the agent.     |\n| `add_few_shot`      | `bool`          | `False` | Whether to include few-shot examples.         |\n| `few_shot_examples` | `Optional[str]` | `None`  | Custom few-shot examples.                     |\n\n| Function  | Description                                                |\n| --------- | ---------------------------------------------------------- |\n| `think`   | Apply reasoning to knowledge-based problems and questions. |\n| `search`  | Search the knowledge base for relevant information.        |\n| `analyze` | Perform detailed analysis of knowledge base content.       |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/knowledge.py)\n* [Agno Knowledge Framework](https://docs.agno.com/knowledge)\n* [Vector Database Integration](https://docs.agno.com/vector-db)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#initialize-knowledge-base",
+  "links": []
+}

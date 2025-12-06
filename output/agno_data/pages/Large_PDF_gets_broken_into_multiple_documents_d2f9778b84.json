@@ -1,0 +1,8 @@
+{
+  "title": "Large PDF gets broken into multiple documents",
+  "content": "pdf_reader = PDFReader(chunk=True, chunk_size=1000)\ndocuments = pdf_reader.read(\"large_document.pdf\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#large-pdf-gets-broken-into-multiple-documents",
+  "links": []
+}

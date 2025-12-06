@@ -1,0 +1,8 @@
+{
+  "title": "Create filter expression",
+  "content": "filter_expr = AND(EQ(\"status\", \"published\"), GT(\"views\", 1000))",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-filter-expression",
+  "links": []
+}

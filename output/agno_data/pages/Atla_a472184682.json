@@ -1,0 +1,33 @@
+{
+  "title": "Atla",
+  "content": "Source: https://docs.agno.com/integrations/observability/atla\n\nIntegrate `Atla` with Agno for real-time monitoring, automated evaluation, and performance analytics of your AI agents.\n\n[Atla](https://www.atla-ai.com/) is an advanced observability platform designed specifically for AI agent monitoring and evaluation.\nThis integration provides comprehensive insights into agent performance, automated quality assessment, and detailed analytics for production AI systems.\n\n* **API Key**: Obtain your API key from the [Atla dashboard](https://app.atla-ai.com)\n\nInstall the Atla Insights SDK with Agno support:\n\nConfigure your API key as an environment variable:\n\n```python  theme={null}\nfrom os import getenv\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom atla_insights import configure, instrument_agno",
+  "code_samples": [
+    {
+      "code": "## Configuration\n\nConfigure your API key as an environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Configuration",
+      "id": "configuration"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#atla",
+  "links": []
+}

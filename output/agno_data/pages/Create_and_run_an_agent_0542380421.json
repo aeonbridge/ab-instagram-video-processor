@@ -1,0 +1,8 @@
+{
+  "title": "Create and run an agent",
+  "content": "agent = Agent(model=OpenAIChat(id=\"gpt-5-mini\"))\nresponse = agent.run(\"Share a 2 sentence horror story\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-and-run-an-agent",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Audio Sentiment Analysis",
+  "content": "Source: https://docs.agno.com/basics/multimodal/agent/usage/audio-sentiment-analysis\n\nThis example demonstrates how to perform sentiment analysis on audio conversations using Agno agents with multimodal capabilities.\n\n```python audio_sentiment_analysis.py theme={null}\nimport requests\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.media import Audio\nfrom agno.models.google import Gemini\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\nagent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    add_history_to_context=True,\n    markdown=True,\n    db=SqliteDb(\n        session_table=\"audio_sentiment_analysis_sessions\",\n        db_file=\"tmp/audio_sentiment_analysis.db\",\n    ),\n)\n\nurl = \"https://agno-public.s3.amazonaws.com/demo_data/sample_conversation.wav\"\n\nresponse = requests.get(url)\naudio_content = response.content",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#audio-sentiment-analysis",
+  "links": []
+}

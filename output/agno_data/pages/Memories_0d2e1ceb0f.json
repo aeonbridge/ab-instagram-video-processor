@@ -1,0 +1,34 @@
+{
+  "title": "Memories",
+  "content": "Source: https://docs.agno.com/agent-os/features/memories\n\nView and manage persistent memory storage for your agents in AgentOS\n\nThe Memories feature in AgentOS provides a centralized view of information that agents have learned and stored about you as a user. Memory gives agents the ability to recall information about you across conversations, enabling personalized and contextual interactions.\n\n* Memories are created and updated during an agent run\n* Each memory is tied to a specific user ID and contains learned information\n* Memories include content, topics, timestamps, and the input that generated them\n* Agents with memory enabled can learn about you and provide more relevant responses over time\n\n<Note>\n  <strong>Prerequisites</strong>: Your AgentOS must be connected and active. If\n  you see \"Disconnected\" or \"Inactive,\" review your{\" \"}\n  <a href=\"/agent-os/connecting-your-os\">connection settings</a>.\n</Note>\n\n## Accessing Memories\n\n* Open the `Memory` section in the sidebar.\n* View all stored memories in a chronological table format.\n* Click the `Refresh` button to sync the latest memory updates.\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/04J6ekYOTyb3RbcL/videos/memory-table-usage.mp4?fit=max&auto=format&n=04J6ekYOTyb3RbcL&q=85&s=4afbe866cc00ed3799f270e642fa842f\" type=\"video/mp4\" data-path=\"videos/memory-table-usage.mp4\" />\n  </video>\n</Frame>\n\nThe memory interface allows you to:\n\n1. **Create memories** - Create memories your agents can reference during chat sessions\n2. **View by topics** - See memories organized by thematic categories\n3. **Edit memories** - Update or correct stored information as needed\n4. **Delete memories** - Remove outdated or incorrect information\n5. **Monitor memory creation** - See when and from what inputs memories were generated\n\n<Tip>\n  Memories are automatically generated from your conversations, but you can also\n  manually create, edit, or remove them.\n</Tip>\n\n## Privacy and Control\n\n* All memories are tied to a specific user ID and stored in your AgentOS database\n* Memories are only accessible to agents within your connected OS instance\n* Memory data remains within your deployment and is never shared externally\n\n<CardGroup cols={3}>\n  <Card title=\"Memory Concepts\" icon=\"brain\" href=\"/basics/memory/overview\">\n    Learn how memory works and how agents learn about users\n  </Card>\n\n<Card title=\"Privacy & Security\" icon=\"shield-check\" href=\"/agent-os/security\">\n    Understand data protection and privacy features\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Overview",
+      "id": "overview"
+    },
+    {
+      "level": "h2",
+      "text": "Accessing Memories",
+      "id": "accessing-memories"
+    },
+    {
+      "level": "h2",
+      "text": "Memory Management",
+      "id": "memory-management"
+    },
+    {
+      "level": "h2",
+      "text": "Privacy and Control",
+      "id": "privacy-and-control"
+    },
+    {
+      "level": "h2",
+      "text": "Useful Links",
+      "id": "useful-links"
+    }
+  ],
+  "url": "llms-txt#memories",
+  "links": []
+}

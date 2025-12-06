@@ -1,0 +1,47 @@
+{
+  "title": "Transform Your Videos: Manfrotto Tripod & Amaran 60D Review!",
+  "description": "Discover the ultimate secrets to cinematic quality in your videos with the Manfrotto Compact Tripod and Amaran 60D lighting. Whether you're vlogging from the comfort of your home or on the go, these tools are game-changers. #Videography #ManfrottoTripod #AmaranLighting #VideoGearReview Dive into the world of professional-looking videos with our comprehensive review and tips on using these amazing tools. Don't forget to Like, Share, and Subscribe for more tech reviews and tips!",
+  "tags": [
+    "Manfrotto",
+    "Amaran 60D",
+    "Video Gear",
+    "Videography Tips",
+    "Lighting Setup"
+  ],
+  "category": "Tech & Gear",
+  "thumbnail_ideas": [
+    {
+      "concept": "Manfrotto tripod and Amaran light in a beautifully lit home studio setting",
+      "text_overlay": "Upgrade Your Video Quality!",
+      "color_scheme": "Warm tones"
+    },
+    {
+      "concept": "Close-up of the tripod and light with cinematic video shots in the background",
+      "text_overlay": "Secrets to Cinematic Videos",
+      "color_scheme": "Cool blues and greys"
+    },
+    {
+      "concept": "Split image showing a dimly lit scene vs. a professionally lit scene using the gear",
+      "text_overlay": "Before & After Lighting",
+      "color_scheme": "Half warm, half cool"
+    }
+  ],
+  "target_audience": "Aspiring videographers, YouTube content creators, and photography enthusiasts",
+  "video_hook": "Ever wondered how to make your videos look professional with just two pieces of gear?",
+  "call_to_action": "Hit Subscribe for more game-changing videography tips!",
+  "_generated_at": "2025-12-05T22:58:26.181637",
+  "_model": "gpt-4-turbo-preview",
+  "_source_file": "processed_videos/RusBe_8arLQ/RusBe_8arLQ_0003_40s_score_156_original_en.md",
+  "_platform": "youtube",
+  "_usage": {
+    "input_tokens": 656,
+    "output_tokens": 398,
+    "total_tokens": 1054,
+    "cost_usd": 0.0185,
+    "cost_breakdown": {
+      "input_cost_usd": 0.00656,
+      "output_cost_usd": 0.01194
+    },
+    "duration_seconds": 10.24
+  }
+}

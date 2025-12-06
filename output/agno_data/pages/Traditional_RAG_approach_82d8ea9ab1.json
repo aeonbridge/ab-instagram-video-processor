@@ -1,0 +1,14 @@
+{
+  "title": "Traditional RAG approach",
+  "content": "agent = Agent(\n    knowledge=knowledge,\n    add_knowledge_to_context=True  # Always includes knowledge\n)\n```\n\nNow that you understand how Knowledge works in Agno, here's where to go next:\n\n<CardGroup cols={3}>\n  <Card title=\"Getting Started Guide\" icon=\"rocket\" href=\"/basics/knowledge/getting-started\">\n    Follow our step-by-step tutorial to create your first knowledge base in minutes\n  </Card>\n\n<Card title=\"Performance Quick Wins\" icon=\"gauge\" href=\"/basics/knowledge/performance-tips\">\n    Optimize search quality, speed, and resource usage for production\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Ready to Build?",
+      "id": "ready-to-build?"
+    }
+  ],
+  "url": "llms-txt#traditional-rag-approach",
+  "links": []
+}

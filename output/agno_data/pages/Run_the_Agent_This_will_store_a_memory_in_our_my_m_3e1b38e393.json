@@ -1,0 +1,8 @@
+{
+  "title": "Run the Agent. This will store a memory in our \"my_memory_table\"",
+  "content": "agent.print_response(\"I love sushi!\", user_id=\"123\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-the-agent.-this-will-store-a-memory-in-our-\"my_memory_table\"",
+  "links": []
+}

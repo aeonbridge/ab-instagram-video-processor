@@ -1,0 +1,8 @@
+{
+  "title": "Web Search Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/web-search\n\nWebSearchReader is a reader class that allows you to read data from web search results.\n\n<Snippet file=\"web-search-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#web-search-reader",
+  "links": []
+}

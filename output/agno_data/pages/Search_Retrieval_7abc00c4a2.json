@@ -1,0 +1,71 @@
+{
+  "title": "Search & Retrieval",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/overview\n\nUnderstand how agents intelligently search and retrieve information from knowledge bases to provide accurate, contextual responses.\n\nWhen an agent needs information to answer a question, it doesn't dump everything into the prompt. Instead, it searches for just the most relevant pieces. This focused approach is what makes knowledge-powered agents both effective and efficient—they get exactly what they need, when they need it.\n\n## How Agents Search Knowledge\n\nThink of an agent's search process like a skilled researcher who knows what to look for and where to find it:\n\n<Steps>\n  <Step title=\"Query Analysis\">\n    The agent analyzes the user's question to understand what type of\n    information would be helpful.\n  </Step>\n\n<Step title=\"Search Strategy\">\n    Based on the analysis, the system formulates one or more searches (vector,\n    keyword, or hybrid).\n  </Step>\n\n<Step title=\"Information Retrieval\">\n    The knowledge base returns the most relevant content chunks.\n  </Step>\n\n<Step title=\"Context Integration\">\n    The retrieved information is combined with the original question to generate\n    a comprehensive response.\n  </Step>\n</Steps>\n\n## Agentic Search: The Smart Difference\n\nWhat makes Agno's approach special? Agents can programmatically decide when to search and how to use results. Think of it as giving your agent the keys to the library instead of handing it a fixed stack of books. You can even plug in custom retrieval logic to match your specific needs.\n\n**Key capabilities:**\n\n* **Automatic Decision Making** - The agent can choose to search when it needs additional information—or skip it when not necessary.\n\n* **Smart Query Generation** - Implement logic to reformulate queries for better recall—like expanding \"vacation\" to include \"PTO\" and \"time off.\"\n\n* **Multi-Step Search** - If the first search isn't enough, run follow-up searches with refined queries.\n\n* **Context Synthesis** - Combine information from multiple results to produce a thorough, grounded answer.\n\n### Traditional RAG vs. Agentic RAG\n\nHere's how they compare in practice:\n\n<Tabs>\n  <Tab title=\"Traditional RAG\">\n    \n  </Tab>\n\n<Tab title=\"Agentic RAG\">\n    \n  </Tab>\n</Tabs>\n\n## Configuring Search in Agno\n\nYou configure search behavior on your vector database, and Knowledge uses those settings when retrieving documents. It's a simple setup:\n\n### Types of Search Strategies\n\nAgno gives you three main approaches. Pick the one that fits your content and how users ask questions:\n\n#### Vector Similarity Search\n\nFinds content by meaning, not just matching words. When you ask \"How do I reset my password?\", it finds documents about \"changing credentials\" even though the exact words don't match.\n\n* Your query becomes a vector (list of numbers capturing meaning)\n* The system finds content with similar vectors\n* Results are ranked by how close the meanings are\n\n**Best for:** Conceptual questions where users might phrase things differently than your docs.\n\nClassic text search—looks for exact words and phrases in your content. When using PgVector, this leverages Postgres's full-text search under the hood.\n\n* Matches specific words and phrases\n* Supports search operators (where your backend allows)\n* Works great when users know the exact terminology\n\n**Best for:** Finding specific terms, product names, error codes, or technical identifiers.\n\nThe best of both worlds—combines semantic understanding with exact-match precision. This is usually your best bet for production.\n\n* Runs both vector similarity and keyword matching\n* Merges results intelligently\n* Can add a reranker on top for even better ordering\n\n**Best for:** Most real-world applications where you want both accuracy and flexibility.\n\n<Tip>\n  We recommend starting with <b>hybrid search with reranking</b> for strong\n  recall and precision.\n</Tip>\n\n## What Affects Search Quality\n\n### Content Chunking Strategy\n\nHow you split your content matters a lot:\n\n* **Smaller chunks** (200-500 chars): Super precise, but might miss the big picture\n* **Larger chunks** (1000-2000 chars): Better context, but less targeted\n* **Semantic chunking**: Splits at natural topic boundaries—usually the sweet spot\n\n### Embedding Model Quality\n\nYour embedder is what turns text into vectors that capture meaning:\n\n* **General-purpose** (like OpenAI's text-embedding-3-small): Works well for most content\n* **Domain-specific**: Better for specialized fields like medical or legal docs\n* **Multilingual**: Essential if you're working in multiple languages\n\n### Practical Configuration\n\n```python  theme={null}",
+  "code_samples": [
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Agentic RAG\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n</Tabs>\n\n## Configuring Search in Agno\n\nYou configure search behavior on your vector database, and Knowledge uses those settings when retrieving documents. It's a simple setup:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Types of Search Strategies\n\nAgno gives you three main approaches. Pick the one that fits your content and how users ask questions:\n\n#### Vector Similarity Search\n\nFinds content by meaning, not just matching words. When you ask \"How do I reset my password?\", it finds documents about \"changing credentials\" even though the exact words don't match.\n\n**How it works:**\n\n* Your query becomes a vector (list of numbers capturing meaning)\n* The system finds content with similar vectors\n* Results are ranked by how close the meanings are\n\n**Best for:** Conceptual questions where users might phrase things differently than your docs.\n\n#### Keyword Search\n\nClassic text search—looks for exact words and phrases in your content. When using PgVector, this leverages Postgres's full-text search under the hood.\n\n**How it works:**\n\n* Matches specific words and phrases\n* Supports search operators (where your backend allows)\n* Works great when users know the exact terminology\n\n**Best for:** Finding specific terms, product names, error codes, or technical identifiers.\n\n#### Hybrid Search\n\nThe best of both worlds—combines semantic understanding with exact-match precision. This is usually your best bet for production.\n\n**How it works:**\n\n* Runs both vector similarity and keyword matching\n* Merges results intelligently\n* Can add a reranker on top for even better ordering\n\n**Best for:** Most real-world applications where you want both accuracy and flexibility.",
+      "language": "unknown"
+    },
+    {
+      "code": "<Tip>\n  We recommend starting with <b>hybrid search with reranking</b> for strong\n  recall and precision.\n</Tip>\n\n## What Affects Search Quality\n\n### Content Chunking Strategy\n\nHow you split your content matters a lot:\n\n* **Smaller chunks** (200-500 chars): Super precise, but might miss the big picture\n* **Larger chunks** (1000-2000 chars): Better context, but less targeted\n* **Semantic chunking**: Splits at natural topic boundaries—usually the sweet spot\n\n### Embedding Model Quality\n\nYour embedder is what turns text into vectors that capture meaning:\n\n* **General-purpose** (like OpenAI's text-embedding-3-small): Works well for most content\n* **Domain-specific**: Better for specialized fields like medical or legal docs\n* **Multilingual**: Essential if you're working in multiple languages\n\n### Practical Configuration",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How Agents Search Knowledge",
+      "id": "how-agents-search-knowledge"
+    },
+    {
+      "level": "h2",
+      "text": "Agentic Search: The Smart Difference",
+      "id": "agentic-search:-the-smart-difference"
+    },
+    {
+      "level": "h3",
+      "text": "Traditional RAG vs. Agentic RAG",
+      "id": "traditional-rag-vs.-agentic-rag"
+    },
+    {
+      "level": "h2",
+      "text": "Configuring Search in Agno",
+      "id": "configuring-search-in-agno"
+    },
+    {
+      "level": "h3",
+      "text": "Types of Search Strategies",
+      "id": "types-of-search-strategies"
+    },
+    {
+      "level": "h2",
+      "text": "What Affects Search Quality",
+      "id": "what-affects-search-quality"
+    },
+    {
+      "level": "h3",
+      "text": "Content Chunking Strategy",
+      "id": "content-chunking-strategy"
+    },
+    {
+      "level": "h3",
+      "text": "Embedding Model Quality",
+      "id": "embedding-model-quality"
+    },
+    {
+      "level": "h3",
+      "text": "Practical Configuration",
+      "id": "practical-configuration"
+    }
+  ],
+  "url": "llms-txt#search-&-retrieval",
+  "links": []
+}

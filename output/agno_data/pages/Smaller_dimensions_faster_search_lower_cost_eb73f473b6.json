@@ -1,0 +1,19 @@
+{
+  "title": "Smaller dimensions = faster search, lower cost",
+  "content": "embedder = OpenAIEmbedder(\n    id=\"text-embedding-3-large\",\n    dimensions=1024  # Instead of full 3072\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Monitoring Performance\n\nKeep an eye on these metrics:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Monitoring Performance",
+      "id": "monitoring-performance"
+    }
+  ],
+  "url": "llms-txt#smaller-dimensions-=-faster-search,-lower-cost",
+  "links": []
+}

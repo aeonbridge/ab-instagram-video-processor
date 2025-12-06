@@ -1,0 +1,19 @@
+{
+  "title": "Now provide the adjusted Memory Manager to your Agent",
+  "content": "agent = Agent(\n    db=db,\n    memory_manager=memory_manager,\n    enable_user_memories=True,\n)\n\nagent.print_response(\"My name is John Doe and I like to play basketball on the weekends.\")\n\nagent.print_response(\"What's do I do in weekends?\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb",
+  "code_samples": [
+    {
+      "code": "In this example, the memory manager will store memories about hobbies, but won't include the user's actual name. This is useful for healthcare, legal, or other privacy-sensitive applications.\n\n## Memories and Context\n\nWhen enabled, memories about the current user are automatically added to the agent's context on each request. But in some scenarios, like when you're building analytics on memories or want the agent to explicitly search for memories using tools, you might want to store memories without auto-including them.\n\nUse `add_memories_to_context=False` to collect memories in the background while keeping the agent's context lean:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Memories and Context",
+      "id": "memories-and-context"
+    }
+  ],
+  "url": "llms-txt#now-provide-the-adjusted-memory-manager-to-your-agent",
+  "links": []
+}

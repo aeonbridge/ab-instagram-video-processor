@@ -1,0 +1,14 @@
+{
+  "title": "Memory with MongoDB",
+  "content": "Source: https://docs.agno.com/basics/memory/working-with-memories/usage/mongodb-memory\n\n```python mem-mongodb-memory.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.mongo import MongoDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#memory-with-mongodb",
+  "links": []
+}

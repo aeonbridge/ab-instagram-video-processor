@@ -1,0 +1,8 @@
+{
+  "title": "Create analysis steps",
+  "content": "trend_analysis_step = Step(\n    name=\"Trend Analysis\",\n    agent=analysis_agent,\n    description=\"Analyze trending patterns in the research\",\n)\n\nsentiment_analysis_step = Step(\n    name=\"Sentiment Analysis\",\n    agent=analysis_agent,\n    description=\"Analyze sentiment and opinions from the research\",\n)\n\ncontent_step = Step(\n    name=\"Create Content\",\n    agent=content_agent,\n    description=\"Create content based on research findings\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-analysis-steps",
+  "links": []
+}

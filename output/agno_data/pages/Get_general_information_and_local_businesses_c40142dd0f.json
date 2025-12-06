@@ -1,0 +1,24 @@
+{
+  "title": "Get general information and local businesses",
+  "content": "agent.print_response(\n    \"\"\"\n    I'm traveling to Tokyo next month.\n    1. Research the best time to visit and major attractions\n    2. Find one good rated sushi restaurants near Shinjuku\n    Compile a comprehensive travel guide with this information.\n    \"\"\",\n    markdown=True\n)\n```\n\n| Parameter         | Type                 | Default | Description                                                         |\n| ----------------- | -------------------- | ------- | ------------------------------------------------------------------- |\n| `apify_api_token` | `str`                | `None`  | Apify API token (or set via APIFY\\_API\\_TOKEN environment variable) |\n| `actors`          | `str` or `List[str]` | `None`  | Single Actor ID or list of Actor IDs to register                    |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/apify.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/apify_tools.py)\n\n* [Apify Actor Documentation](https://docs.apify.com/Actors)\n* [Apify Store - Browse available Actors](https://apify.com/store)\n* [How to build and monetize an AI agent on Apify](https://blog.apify.com/how-to-build-an-ai-agent/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    },
+    {
+      "level": "h2",
+      "text": "Resources",
+      "id": "resources"
+    }
+  ],
+  "url": "llms-txt#get-general-information-and-local-businesses",
+  "links": []
+}

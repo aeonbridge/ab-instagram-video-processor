@@ -1,0 +1,8 @@
+{
+  "title": "Create a database connection",
+  "content": "db = SqliteDb(\n    db_file=\"tmp/memory.db\"\n)\n\nmemory_tools = MemoryTools(\n    db=db,\n)\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[memory_tools],\n    markdown=True,\n)\n\nagent.print_response(\n    \"My name is John Doe and I like to hike in the mountains on weekends. \"\n    \"I like to travel to new places and experience different cultures. \"\n    \"I am planning to travel to Africa in December. \",\n    user_id=\"john_doe@example.com\",\n    stream=True\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-database-connection",
+  "links": []
+}

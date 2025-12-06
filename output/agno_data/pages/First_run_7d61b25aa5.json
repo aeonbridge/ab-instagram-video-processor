@@ -1,0 +1,8 @@
+{
+  "title": "First run",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    db=db,\n    session_id=\"conversation_123\",\n)\nagent.run(\"My name is Alice\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#first-run",
+  "links": []
+}

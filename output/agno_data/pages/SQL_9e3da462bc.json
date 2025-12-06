@@ -1,0 +1,61 @@
+{
+  "title": "SQL",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/database/sql\n\nThe SQLTools toolkit enables an Agent to run SQL queries and interact with databases.\n\n**SQLTools** enable an Agent to run SQL queries and interact with databases.\n\nThe following example requires the `sqlalchemy` library and a database URL.\n\nYou will also need to install the appropriate Python adapter for the specific database you intend to use.\n\nFor PostgreSQL, you can install the `psycopg2-binary` adapter:\n\nFor MySQL, you can install the `mysqlclient` adapter:\n\nThe `mysqlclient` adapter may have additional system-level dependencies. Please consult the [official installation guide](https://github.com/PyMySQL/mysqlclient/blob/main/README.md#install) for more details.\n\nYou will also need a database. The following example uses a Postgres database running in a Docker container.\n\nThe following agent will run a SQL query to list all tables in the database and describe the contents of one of the tables.\n\n| Parameter               | Type             | Default | Description                                                                 |\n| ----------------------- | ---------------- | ------- | --------------------------------------------------------------------------- |\n| `db_url`                | `str`            | `None`  | The URL for connecting to the database.                                     |\n| `db_engine`             | `Engine`         | `None`  | The database engine used for connections and operations.                    |\n| `user`                  | `str`            | `None`  | The username for database authentication.                                   |\n| `password`              | `str`            | `None`  | The password for database authentication.                                   |\n| `host`                  | `str`            | `None`  | The hostname or IP address of the database server.                          |\n| `port`                  | `int`            | `None`  | The port number on which the database server is listening.                  |\n| `schema`                | `str`            | `None`  | The specific schema within the database to use.                             |\n| `dialect`               | `str`            | `None`  | The SQL dialect used by the database.                                       |\n| `tables`                | `Dict[str, Any]` | `None`  | A dictionary mapping table names to their respective metadata or structure. |\n| `enable_list_tables`    | `bool`           | `True`  | Enables the functionality to list all tables in the database.               |\n| `enable_describe_table` | `bool`           | `True`  | Enables the functionality to describe the schema of a specific table.       |\n| `enable_run_sql_query`  | `bool`           | `True`  | Enables the functionality to execute SQL queries directly.                  |\n| `all`                   | `bool`           | `False` | Enables all functionality when set to True.                                 |\n\n| Function         | Description                               |\n| ---------------- | ----------------------------------------- |\n| `list_tables`    | Lists all tables in the database.         |\n| `describe_table` | Describes the schema of a specific table. |\n| `run_sql_query`  | Executes SQL queries directly.            |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/sql.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/sql_tools.py)",
+  "code_samples": [
+    {
+      "code": "You will also need to install the appropriate Python adapter for the specific database you intend to use.\n\n### PostgreSQL\n\nFor PostgreSQL, you can install the `psycopg2-binary` adapter:",
+      "language": "unknown"
+    },
+    {
+      "code": "### MySQL\n\nFor MySQL, you can install the `mysqlclient` adapter:",
+      "language": "unknown"
+    },
+    {
+      "code": "The `mysqlclient` adapter may have additional system-level dependencies. Please consult the [official installation guide](https://github.com/PyMySQL/mysqlclient/blob/main/README.md#install) for more details.\n\nYou will also need a database. The following example uses a Postgres database running in a Docker container.",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will run a SQL query to list all tables in the database and describe the contents of one of the tables.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h3",
+      "text": "PostgreSQL",
+      "id": "postgresql"
+    },
+    {
+      "level": "h3",
+      "text": "MySQL",
+      "id": "mysql"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#sql",
+  "links": []
+}

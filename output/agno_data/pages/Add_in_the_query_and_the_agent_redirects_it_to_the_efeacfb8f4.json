@@ -1,0 +1,8 @@
+{
+  "title": "Add in the query and the agent redirects it to the appropriate agent",
+  "content": "customer_support_team.print_response(\n    \"Hi Team, I want to build an educational platform where the models are have access to tons of study materials, How can Agno platform help me build this?\",\n    stream=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-in-the-query-and-the-agent-redirects-it-to-the-appropriate-agent",
+  "links": []
+}

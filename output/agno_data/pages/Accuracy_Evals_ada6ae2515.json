@@ -1,0 +1,24 @@
+{
+  "title": "Accuracy Evals",
+  "content": "Source: https://docs.agno.com/basics/evals/accuracy/overview\n\nAccuracy evals measure how well your Agents and Teams perform against a gold-standard answer using LLM-as-a-judge methodology.\n\nAccuracy evaluations compare your Agent's actual responses against expected outputs. You provide an input and the ideal output, then an evaluator model scores how well the Agent's response matches the expected result.\n\nIn this example, the `AccuracyEval` will run the Agent with the input, then use a different model (`o4-mini`) to score the Agent's response according to the guidelines provided.\n\nYou can use another agent to evaluate the accuracy of the Agent's response. This strategy is usually referred to as \"LLM-as-a-judge\".\n\nYou can adjust the evaluator Agent to make it fit the criteria you want to evaluate:\n\n```python accuracy_with_evaluator_agent.py theme={null}\nfrom typing import Optional\n\nfrom agno.agent import Agent\nfrom agno.eval.accuracy import AccuracyAgentResponse, AccuracyEval, AccuracyResult\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.calculator import CalculatorTools",
+  "code_samples": [
+    {
+      "code": "### Evaluator Agent\n\nYou can use another agent to evaluate the accuracy of the Agent's response. This strategy is usually referred to as \"LLM-as-a-judge\".\n\nYou can adjust the evaluator Agent to make it fit the criteria you want to evaluate:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Basic Example",
+      "id": "basic-example"
+    },
+    {
+      "level": "h3",
+      "text": "Evaluator Agent",
+      "id": "evaluator-agent"
+    }
+  ],
+  "url": "llms-txt#accuracy-evals",
+  "links": []
+}

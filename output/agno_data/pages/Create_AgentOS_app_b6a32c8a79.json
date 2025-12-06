@@ -1,0 +1,19 @@
+{
+  "title": "Create AgentOS app",
+  "content": "app = AgentOS(\n    description=\"Example app for basic agent with knowledge capabilities\",\n    id=\"knowledge-demo\",\n    agents=[knowledge_agent],\n)\n```\n\n### AgentOS Features Enabled by ContentsDB\n\nWith ContentsDB, the AgentOS Knowledge page provides:\n\n* **Content Browser**: View all uploaded content with metadata\n* **Upload Interface**: Add new content through the web UI\n* **Status Monitoring**: Real-time processing status updates\n* **Metadata Editor**: Update content metadata through forms\n* **Content Management**: Delete or modify content entries\n* **Search and Filtering**: Find content by metadata attributes\n* **Bulk Operations**: Manage multiple content items at once\n\nCheck out the [AgentOS Knowledge](/agent-os/features/knowledge-management) page for more in-depth information.\n\n<CardGroup cols={3}>\n  <Card title=\"Vector Databases\" icon=\"database\" href=\"/basics/vectordb/overview\">\n    Understand the embedding storage layer\n  </Card>\n\n<Card title=\"AgentOS\" icon=\"server\" href=\"/agent-os/introduction\">\n    Use your Knowledge in Agno AgentOS\n  </Card>\n\n<Card title=\"Database Setup\" icon=\"wrench\" href=\"/basics/database/overview\">\n    Detailed database configuration guides\n  </Card>\n\n<Card title=\"Getting Started\" icon=\"rocket\" href=\"/basics/knowledge/getting-started\">\n    Build your first knowledge-powered agent\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "AgentOS Features Enabled by ContentsDB",
+      "id": "agentos-features-enabled-by-contentsdb"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#create-agentos-app",
+  "links": []
+}

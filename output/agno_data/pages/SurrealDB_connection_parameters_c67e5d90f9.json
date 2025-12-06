@@ -1,0 +1,8 @@
+{
+  "title": "SurrealDB connection parameters",
+  "content": "SURREALDB_URL = \"ws://localhost:8000\"\nSURREALDB_USER = \"root\"\nSURREALDB_PASSWORD = \"root\"\nSURREALDB_NAMESPACE = \"test\"\nSURREALDB_DATABASE = \"test\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#surrealdb-connection-parameters",
+  "links": []
+}

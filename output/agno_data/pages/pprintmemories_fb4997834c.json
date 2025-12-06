@@ -1,0 +1,31 @@
+{
+  "title": "pprint(memories)",
+  "content": "bash  theme={null}\n    ./cookbook/run_pgvector.sh\n    bash  theme={null}\n    pip install agno openai psycopg sqlalchemy\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/memory/01_team_with_memory_manager.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set up PostgreSQL database\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#pprint(memories)",
+  "links": []
+}

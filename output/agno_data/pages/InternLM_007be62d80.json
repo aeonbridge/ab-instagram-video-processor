@@ -1,0 +1,14 @@
+{
+  "title": "InternLM",
+  "content": "Source: https://docs.agno.com/reference/models/internlm\n\nThe InternLM model provides access to the InternLM model.\n\n| Parameter  | Type            | Default                                                | Description                                                       |\n| ---------- | --------------- | ------------------------------------------------------ | ----------------------------------------------------------------- |\n| `id`       | `str`           | `\"internlm/internlm2_5-7b-chat\"`                       | The id of the InternLM model to use                               |\n| `name`     | `str`           | `\"InternLM\"`                                           | The name of the model                                             |\n| `provider` | `str`           | `\"InternLM\"`                                           | The provider of the model                                         |\n| `api_key`  | `Optional[str]` | `None`                                                 | The API key for InternLM (defaults to INTERNLM\\_API\\_KEY env var) |\n| `base_url` | `str`           | `\"https://internlm-chat.intern-ai.org.cn/puyu/api/v1\"` | The base URL for the InternLM API                                 |\n\n\\| `retries`    | `int`              | `0`                            | Number of retries to attempt before raising a ModelProviderError      |\n\\| `delay_between_retries` | `int`    | `1`                            | Delay between retries, in seconds                                     |\n\\| `exponential_backoff` | `bool`     | `False`                        | If True, the delay between retries is doubled each time               |\n\nInternLM extends the OpenAI-compatible interface and supports most parameters from OpenAI.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#internlm",
+  "links": []
+}

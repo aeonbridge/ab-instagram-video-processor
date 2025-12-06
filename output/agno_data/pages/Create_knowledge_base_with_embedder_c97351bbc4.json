@@ -1,0 +1,8 @@
+{
+  "title": "Create knowledge base with embedder",
+  "content": "knowledge = Knowledge(\n    vector_db=PgVector(\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n        table_name=\"my_embeddings\",\n        embedder=OpenAIEmbedder(),  # Default embedder\n    ),\n    max_results=2,  # Return top 2 most relevant chunks\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-knowledge-base-with-embedder",
+  "links": []
+}

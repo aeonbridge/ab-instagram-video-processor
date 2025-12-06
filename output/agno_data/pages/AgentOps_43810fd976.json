@@ -1,0 +1,33 @@
+{
+  "title": "AgentOps",
+  "content": "Source: https://docs.agno.com/integrations/observability/agentops\n\nIntegrate Agno with AgentOps to send traces and logs to a centralized observability platform.\n\n## Integrating Agno with AgentOps\n\n[AgentOps](https://app.agentops.ai/) provides automatic instrumentation for your Agno agents to track all operations including agent interactions, team coordination, tool usage, and workflow execution.\n\n1. **Install AgentOps**\n\nEnsure you have the AgentOps package installed:\n\n2. **Authentication**\n   Go to [AgentOps](https://app.agentops.ai/) and copy your API key\n\n## Logging Model Calls with AgentOps\n\nThis example demonstrates how to use AgentOps to log model calls.\n\n```python  theme={null}\nimport agentops\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "2. **Authentication**\n   Go to [AgentOps](https://app.agentops.ai/) and copy your API key",
+      "language": "unknown"
+    },
+    {
+      "code": "## Logging Model Calls with AgentOps\n\nThis example demonstrates how to use AgentOps to log model calls.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with AgentOps",
+      "id": "integrating-agno-with-agentops"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Logging Model Calls with AgentOps",
+      "id": "logging-model-calls-with-agentops"
+    }
+  ],
+  "url": "llms-txt#agentops",
+  "links": []
+}

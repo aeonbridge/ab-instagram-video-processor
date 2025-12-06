@@ -1,0 +1,13 @@
+{
+  "title": "Choose the AI model for your agent",
+  "content": "model = OpenAIChat(id=\"gpt-5-mini\")\nprint(f\"Model selected: {model.id}\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "We can now test our model setup:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#choose-the-ai-model-for-your-agent",
+  "links": []
+}

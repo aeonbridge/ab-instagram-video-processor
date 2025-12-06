@@ -1,0 +1,44 @@
+{
+  "title": "Control Plane",
+  "content": "Source: https://docs.agno.com/agent-os/control-plane\n\nThe main web interface for interacting with and managing your AgentOS instances\n\nThe AgentOS Control Plane is your primary web interface for accessing and managing all AgentOS features. This intuitive dashboard serves as the central hub where you interact with your agents, manage knowledge bases, track sessions, monitor performance, and control user access.\n\n<Frame>\n  <img src=\"https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-full-screenshot.png?fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=47cda181dd5fe3e35b00952cc2fc1e85\" alt=\"AgentOS Control Plane Dashboard\" style={{ borderRadius: \"0.5rem\" }} data-og-width=\"3477\" width=\"3477\" data-og-height=\"2005\" height=\"2005\" data-path=\"images/agentos-full-screenshot.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-full-screenshot.png?w=280&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=64b3f57b511b5082368b71ab2461fc91 280w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-full-screenshot.png?w=560&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=611e80fc18ec8b4d10f2c01711242bea 560w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-full-screenshot.png?w=840&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=d3d30a7be52757d5d2a444385094d2c0 840w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-full-screenshot.png?w=1100&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=e94a89850b6d5f063a1f5b13c9503002 1100w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-full-screenshot.png?w=1650&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=8a17eadbd7c02cdc2fb6f9e234f4ac61 1650w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-full-screenshot.png?w=2500&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=2450b803257dcc93c2621c855964fb2b 2500w\" />\n</Frame>\n\nConnect and inspect your OS runtimes from a single interface. Switch between local development and live production instances, monitor connection health, and configure endpoints for your different environments.\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/CnjZpOWVs1q9bnAO/videos/agentos-select-os.mp4?fit=max&auto=format&n=CnjZpOWVs1q9bnAO&q=85&s=c6514be6950c2e9c7b103f071ac85b11\" type=\"video/mp4\" data-path=\"videos/agentos-select-os.mp4\" />\n  </video>\n</Frame>\n\nManage your organization members and their access to AgentOS features. Configure your organization name, invite team members, and control permissions from a centralized interface.\n\nAdd new team members to your organization by entering their email addresses. You can invite multiple users at once by separating emails with commas or pressing Enter/Tab between addresses.\n\nControl what each member can access:\n\n* **Owner**: Full administrative access including billing and member management\n* **Member**: Access to AgentOS features and collaboration capabilities\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/CnjZpOWVs1q9bnAO/videos/agentos-invite-member.mp4?fit=max&auto=format&n=CnjZpOWVs1q9bnAO&q=85&s=f54f71b63fd4b2110e211e0d1f0602c6\" type=\"video/mp4\" data-path=\"videos/agentos-invite-member.mp4\" />\n  </video>\n</Frame>\n\nConfigure your account preferences and organization settings. Access your profile information, manage billing and subscription details, and adjust organization-wide preferences from a centralized settings interface.\n\nThe control plane provides direct access to all main AgentOS capabilities through an intuitive interface:\n\n<Note>\n  **Getting Started Tip**: The control plane is your gateway to all AgentOS\n  features. Start by connecting your OS instance, then explore each feature\n  section to familiarize yourself with the interface.\n</Note>\n\n<CardGroup cols={3}>\n  <Card title=\"Chat Interface\" icon=\"comment\" href=\"/agent-os/features/chat-interface\">\n    Start conversations with your agents and access multi-agent interactions\n  </Card>\n\n<Card title=\"Knowledge Management\" icon=\"book\" href=\"/basics/knowledge/overview\">\n    Upload and organize documents with search and browsing capabilities\n  </Card>\n\n<Card title=\"Memory System\" icon=\"brain\" href=\"/basics/memory/overview\">\n    Browse stored memories and search through conversation history\n  </Card>\n\n<Card title=\"Session Tracking\" icon=\"clock\" href=\"/basics/sessions/overview\">\n    Track and analyze agent interactions and performance\n  </Card>\n\n<Card title=\"Evaluation & Testing\" icon=\"chart-bar\" href=\"/basics/evals/overview\">\n    Test and evaluate agent performance with comprehensive metrics\n  </Card>\n\n<Card title=\"Metrics & Monitoring\" icon=\"chart-line\" href=\"/basics/sessions/metrics/overview\">\n    Monitor system performance and usage analytics\n  </Card>\n</CardGroup>\n\nReady to get started with the AgentOS control plane? Here's what you need to do:\n\n<CardGroup cols={3}>\n  <Card title=\"Create Your First OS\" icon=\"plus\" href=\"/agent-os/creating-your-first-os\">\n    Set up a new AgentOS instance from scratch using our templates\n  </Card>\n\n<Card title=\"Connect Your AgentOS\" icon=\"link\" href=\"/agent-os/connecting-your-os\">\n    Learn how to connect your local development environment to the platform\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "OS Management",
+      "id": "os-management"
+    },
+    {
+      "level": "h2",
+      "text": "User Management",
+      "id": "user-management"
+    },
+    {
+      "level": "h3",
+      "text": "Inviting Members",
+      "id": "inviting-members"
+    },
+    {
+      "level": "h3",
+      "text": "Member Roles",
+      "id": "member-roles"
+    },
+    {
+      "level": "h2",
+      "text": "General Settings",
+      "id": "general-settings"
+    },
+    {
+      "level": "h2",
+      "text": "Feature Access",
+      "id": "feature-access"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#control-plane",
+  "links": []
+}

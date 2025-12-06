@@ -1,0 +1,8 @@
+{
+  "title": "Intent Routing with Workflow History",
+  "content": "Source: https://docs.agno.com/basics/chat-history/workflow/usage/intent-routing-with-history\n\nThis example demonstrates how to use workflow history in intent routing.\n\nThis example demonstrates:\n\n1. A simple Router that routes to different specialist agents\n2. All agents share the same conversation history for context continuity\n3. The power of shared context across different agents\n\nThe router uses basic intent detection, but the real value is in the shared history.\n\n```python 06_intent_routing_with_history.py theme={null}\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.workflow.router import Router\nfrom agno.workflow.step import Step\nfrom agno.workflow.types import StepInput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#intent-routing-with-workflow-history",
+  "links": []
+}

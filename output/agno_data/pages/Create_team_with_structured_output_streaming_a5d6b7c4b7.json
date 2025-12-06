@@ -1,0 +1,27 @@
+{
+  "title": "Create team with structured output streaming",
+  "content": "team = Team(\n    name=\"Stock Research Team\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    members=[stock_searcher, company_info_agent],\n    output_schema=StockReport,\n    markdown=True,\n    show_members_responses=True,\n)\n\nasync def test_structured_streaming():\n    \"\"\"Test async structured output streaming.\"\"\"\n    # Run with streaming and consume the async generator to get the final response\n    async_stream = team.arun(\n        \"Give me a stock report for NVDA\", stream=True, stream_events=True\n    )\n\n# Consume the async streaming events and get the final response\n    run_response = None\n    async for event_or_response in async_stream:\n        # The last item in the stream is the final TeamRunOutput\n        run_response = event_or_response\n\nassert isinstance(run_response.content, StockReport)\n    print(f\"✅ Stock Symbol: {run_response.content.symbol}\")\n    print(f\"✅ Company Name: {run_response.content.company_name}\")\n\nasync def test_structured_streaming_with_arun():\n    \"\"\"Test async structured output streaming using arun() method.\"\"\"\n    await apprint_run_response(\n        team.arun(\n            input=\"Give me a stock report for AAPL\",\n            stream=True,\n        )\n    )\n\nif __name__ == \"__main__\":\n    asyncio.run(test_structured_streaming())\n\nasyncio.run(test_structured_streaming_with_arun())\nbash  theme={null}\n    pip install agno exa_py pydantic\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    export EXA_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/structured_input_output/05_async_structured_output_streaming.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-team-with-structured-output-streaming",
+  "links": []
+}

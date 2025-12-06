@@ -1,0 +1,8 @@
+{
+  "title": "Define the embedder",
+  "content": "embedder = OpenAIEmbedder(id=\"text-embedding-3-small\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-the-embedder",
+  "links": []
+}

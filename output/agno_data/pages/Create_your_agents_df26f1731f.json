@@ -1,0 +1,8 @@
+{
+  "title": "Create your agents",
+  "content": "agno_agent = Agent(\n    name=\"Agno Agent\",\n    model=OpenAIChat(id=\"gpt-4.1\"),\n    tools=[MCPTools(transport=\"streamable-http\", url=\"https://docs.agno.com/mcp\")],\n    db=db,\n    enable_user_memories=True,\n    knowledge=knowledge,\n    markdown=True,\n)\n\nsimple_agent = Agent(\n    name=\"Simple Agent\",\n    role=\"Simple agent\",\n    id=\"simple_agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=[\"You are a simple agent\"],\n    db=db,\n    enable_user_memories=True,\n)\n\nresearch_agent = Agent(\n    name=\"Research Agent\",\n    role=\"Research agent\",\n    id=\"research_agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=[\"You are a research agent\"],\n    tools=[DuckDuckGoTools()],\n    db=db,\n    enable_user_memories=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-your-agents",
+  "links": []
+}

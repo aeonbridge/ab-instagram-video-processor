@@ -1,0 +1,19 @@
+{
+  "title": "Implementing a Custom Retriever",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/custom-retriever\n\nLearn how to implement a custom retriever for precise control over document retrieval in your knowledge base.\n\nIn some cases, complete control over how an agent retrieves information from the knowledge base is required. This can be achieved by implementing a custom retriever function, which defines the logic for searching and retrieving documents from a vector database.\n\nFollow the instructions in the [Qdrant Setup Guide](https://qdrant.tech/documentation/guides/installation/) to install Qdrant locally. Here is a guide to get API keys: [Qdrant API Keys](https://qdrant.tech/documentation/cloud/authentication/).\n\n### Example: Custom Retriever for `Knowledge`\n\nBelow is a detailed example of how to implement a custom retriever function using the `agno` library. This example demonstrates how to set up a knowledge base with PDF documents, define a custom retriever, and use it with an agent.\n\n```python  theme={null}\nfrom typing import Optional\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.qdrant import Qdrant\nfrom qdrant_client import QdrantClient",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h3",
+      "text": "Example: Custom Retriever for `Knowledge`",
+      "id": "example:-custom-retriever-for-`knowledge`"
+    }
+  ],
+  "url": "llms-txt#implementing-a-custom-retriever",
+  "links": []
+}

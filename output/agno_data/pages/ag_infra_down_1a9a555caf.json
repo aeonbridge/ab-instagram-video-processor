@@ -1,0 +1,14 @@
+{
+  "title": "ag infra down",
+  "content": "Source: https://docs.agno.com/reference/agno-infra/cli/ws/down\n\nDelete resources for active infra\n\n<ResponseField name=\"resources_filter\" type=\"str\">\n  Resource filter. Format - ENV:INFRA:GROUP:NAME:TYPE\n</ResponseField>\n\n<ResponseField name=\"env_filter\" type=\"str\">\n  Filter the environment to deploy `--env` `-e`\n</ResponseField>\n\n<ResponseField name=\"infra_filter\" type=\"str\">\n  Filter the infra to deploy. `--infra` `-i`\n</ResponseField>\n\n<ResponseField name=\"group_filter\" type=\"str\">\n  Filter resources using group name. `--group` `-g`\n</ResponseField>\n\n<ResponseField name=\"name_filter\" type=\"str\">\n  Filter resource using name. `--name` `-n`\n</ResponseField>\n\n<ResponseField name=\"type_filter\" type=\"str\">\n  Filter resource using type `--type` `-t`\n</ResponseField>\n\n<ResponseField name=\"dry_run\" type=\"bool\">\n  Print resources and exit. `--dry-run` `-dr`\n</ResponseField>\n\n<ResponseField name=\"auto_confirm\" type=\"bool\">\n  Skip the confirmation before deploying resources. `--yes` `-y`\n</ResponseField>\n\n<ResponseField name=\"print_debug_log\" type=\"bool\">\n  Print debug logs. `--debug` `-d`\n</ResponseField>\n\n<ResponseField name=\"force\" type=\"bool\">\n  Force `--force` `-f`\n</ResponseField>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#ag-infra-down",
+  "links": []
+}

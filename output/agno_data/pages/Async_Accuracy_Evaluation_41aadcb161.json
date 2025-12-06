@@ -1,0 +1,33 @@
+{
+  "title": "Async Accuracy Evaluation",
+  "content": "Source: https://docs.agno.com/basics/evals/accuracy/usage/accuracy-async\n\nExample showing how to run accuracy evaluations asynchronously for better performance.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#async-accuracy-evaluation",
+  "links": []
+}

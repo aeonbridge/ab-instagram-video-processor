@@ -1,0 +1,19 @@
+{
+  "title": "OR set environment variables manually",
+  "content": "export AWS_ACCESS_KEY_ID=****\nexport AWS_SECRET_ACCESS_KEY=****\nexport AWS_DEFAULT_REGION=us-east-1\npython aws_ses_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.aws_ses import AWSSESTool\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [
+    {
+      "code": "<Note>\n  Make sure to add the domain or email address you want to send FROM (and, if\n  still in sandbox mode, the TO address) to the verified emails in the [SES\n  Console](https://console.aws.amazon.com/ses/home).\n</Note>\n\n## Example\n\nThe following agent researches the latest AI news and then emails a summary via AWS SES:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#or-set-environment-variables-manually",
+  "links": []
+}

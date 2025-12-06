@@ -1,0 +1,43 @@
+{
+  "title": "Serpapi",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/serpapi\n\n**SerpApiTools** enable an Agent to search Google and YouTube for a query.\n\nThe following example requires the `google-search-results` library and an API key from [SerpApi](https://serpapi.com/).\n\nThe following agent will search Google for the query: \"Whats happening in the USA\" and share results.\n\n| Parameter               | Type            | Default | Description                                                                     |\n| ----------------------- | --------------- | ------- | ------------------------------------------------------------------------------- |\n| `api_key`               | `Optional[str]` | `None`  | SerpApi API key. If not provided, will use SERP\\_API\\_KEY environment variable. |\n| `enable_search_google`  | `bool`          | `True`  | Enable Google search functionality.                                             |\n| `enable_search_youtube` | `bool`          | `False` | Enable YouTube search functionality.                                            |\n| `all`                   | `bool`          | `False` | Enable all available functions in the toolkit.                                  |\n\n| Function         | Description                                                                                                                                                                                                                                                                              |\n| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `search_google`  | Search Google using the Serpapi API. Parameters include `query` (str) for the search query and `num_results` (int, default=10) for the number of results. Returns JSON formatted search results with organic results, recipes, shopping results, knowledge graph, and related questions. |\n| `search_youtube` | Search YouTube using the Serpapi API. Parameters include `query` (str) for the search query. Returns JSON formatted search results with video results, movie results, and channel results.                                                                                               |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/serpapi.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/serpapi_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will search Google for the query: \"Whats happening in the USA\" and share results.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#serpapi",
+  "links": []
+}

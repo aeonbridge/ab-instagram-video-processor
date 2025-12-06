@@ -1,0 +1,8 @@
+{
+  "title": "Create a Loop step for deep tech research",
+  "content": "deep_tech_research_loop = Loop(\n    name=\"Deep Tech Research Loop\",\n    steps=[research_hackernews],\n    end_condition=research_quality_check,\n    max_iterations=3,\n    description=\"Perform iterative deep research on tech topics\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-loop-step-for-deep-tech-research",
+  "links": []
+}

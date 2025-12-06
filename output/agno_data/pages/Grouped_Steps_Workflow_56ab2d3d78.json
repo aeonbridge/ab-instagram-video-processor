@@ -1,0 +1,14 @@
+{
+  "title": "Grouped Steps Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/workflow-patterns/grouped-steps-workflow\n\nOrganize multiple steps into reusable, logical sequences for complex workflows with clean separation of concerns\n\n**Key Benefits**: Reusable sequences, cleaner branching logic, modular workflow design\n\nGrouped steps enable modular workflow architecture with reusable components and clear logical boundaries.\n\n```python grouped_steps_workflow.py theme={null}\nfrom agno.workflow import Steps, Step, Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Basic Example",
+      "id": "basic-example"
+    }
+  ],
+  "url": "llms-txt#grouped-steps-workflow",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Agent Same Run Image Analysis",
+  "content": "Source: https://docs.agno.com/basics/multimodal/agent/usage/agent-same-run-image-analysis\n\nThis example demonstrates how to create an agent that generates an image using DALL-E and then analyzes the generated image in the same run, providing insights about the image's contents.\n\n```python agent_same_run_image_analysis.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.dalle import DalleTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-same-run-image-analysis",
+  "links": []
+}

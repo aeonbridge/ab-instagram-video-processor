@@ -1,0 +1,8 @@
+{
+  "title": "Create Postgres-backed vector store",
+  "content": "vector_db = PgVector(\n    db_url=db_url,\n    table_name=\"agno_docs\",\n)\nknowledge = Knowledge(\n    name=\"Agno Docs\",\n    contents_db=db,\n    vector_db=vector_db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-postgres-backed-vector-store",
+  "links": []
+}

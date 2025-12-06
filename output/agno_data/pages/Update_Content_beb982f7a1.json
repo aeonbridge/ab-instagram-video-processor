@@ -1,0 +1,8 @@
+{
+  "title": "Update Content",
+  "content": "Source: https://docs.agno.com/reference-api/schema/knowledge/update-content\n\npatch /knowledge/content/{content_id}\nUpdate content properties such as name, description, metadata, or processing configuration. Allows modification of existing content without re-uploading.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#update-content",
+  "links": []
+}

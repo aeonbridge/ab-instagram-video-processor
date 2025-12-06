@@ -1,0 +1,19 @@
+{
+  "title": "Or clone and copy",
+  "content": "git clone https://github.com/agno-agi/agno.git\ncp agno/.cursorrules /path/to/your/project/\n```\n\nYour AI assistant (Cursor, Windsurf, etc.) will automatically detect and use it.\n\n<Card title=\"View .cursorrules on GitHub\" icon=\"github\" href=\"https://github.com/agno-agi/agno/blob/main/.cursorrules\">\n  View the full .cursorrules file for building agents with Agno\n</Card>\n\n`.cursorrules` works with:\n\n* **Cursor** - Automatic detection\n* **Windsurf** - Native support\n* **Other AI assistants** - Support may vary depending on integration\n\nFor detailed examples and patterns:\n\n<CardGroup cols={3}>\n  <Card title=\"Agent Examples\" icon=\"code\" href=\"/examples/basics/agent\">\n    See complete agent examples\n  </Card>\n\n<Card title=\"Agent Concepts\" icon=\"book\" href=\"/basics/agents/overview\">\n    Learn agent fundamentals\n  </Card>\n\n<Card title=\"Teams\" icon=\"users\" href=\"/basics/teams/overview\">\n    Multi-agent coordination\n  </Card>\n\n<Card title=\"Workflows\" icon=\"workflow\" href=\"/basics/workflows/overview\">\n    Deterministic agent orchestration\n  </Card>\n</CardGroup>\n\n<Note>\n  The `.cursorrules` file is focused on **building agents with Agno**. If you're contributing to the Agno framework itself, that will be covered separately.\n</Note>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "IDE Support",
+      "id": "ide-support"
+    },
+    {
+      "level": "h2",
+      "text": "Learn More",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#or-clone-and-copy",
+  "links": []
+}

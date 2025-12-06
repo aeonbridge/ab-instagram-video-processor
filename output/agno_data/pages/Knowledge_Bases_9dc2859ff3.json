@@ -1,0 +1,39 @@
+{
+  "title": "Knowledge Bases",
+  "content": "Source: https://docs.agno.com/basics/knowledge/knowledge-bases\n\nDeep dive into knowledge base design, architecture, and how they're optimized for AI agent retrieval.\n\nKnowledge bases in Agno are architecturally designed for AI agent retrieval, with specialized components that bridge the gap between raw data storage and intelligent information access.\n\n## Knowledge Base Components\n\nKnowledge bases consist of several interconnected layers that work together to optimize information for agent retrieval:\n\n**Vector Database**: Stores processed content as embeddings optimized for similarity search\n\n* PgVector for production scalability\n* LanceDB for development and testing\n* Pinecone for managed cloud deployments\n\n**Content Pipeline**: Transforms raw information into searchable format\n\n* Readers parse different file types\n* Chunking strategies break content into optimal pieces\n* Embedders convert text to vector representations\n\n**Search Interface**: Enables intelligent information retrieval\n\n* Semantic similarity search\n* Hybrid search combining vector and keyword matching\n* Metadata filtering for precise results\n\n## How Agents Use Knowledge Bases\n\nWhen you give an agent access to a knowledge base, several powerful capabilities emerge:\n\n### Automatic Information Retrieval\n\nThe agent doesn't need to be told when to search - it automatically determines when additional information would help answer a question or complete a task.\nAlthough - explicitly instructing the agent to search a knowledge base is a perfectly fine and very common use case.\n\n```python  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Knowledge Base Components",
+      "id": "knowledge-base-components"
+    },
+    {
+      "level": "h3",
+      "text": "Storage Layer",
+      "id": "storage-layer"
+    },
+    {
+      "level": "h3",
+      "text": "Processing Layer",
+      "id": "processing-layer"
+    },
+    {
+      "level": "h3",
+      "text": "Access Layer",
+      "id": "access-layer"
+    },
+    {
+      "level": "h2",
+      "text": "How Agents Use Knowledge Bases",
+      "id": "how-agents-use-knowledge-bases"
+    },
+    {
+      "level": "h3",
+      "text": "Automatic Information Retrieval",
+      "id": "automatic-information-retrieval"
+    }
+  ],
+  "url": "llms-txt#knowledge-bases",
+  "links": []
+}

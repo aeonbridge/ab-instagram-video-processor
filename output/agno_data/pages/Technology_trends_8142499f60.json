@@ -1,0 +1,8 @@
+{
+  "title": "Technology trends",
+  "content": "tech_prompt = \"\"\"\\\nAnalyze media trends for:\nKeywords: artificial intelligence, machine learning, automation\nSources: techcrunch.com, arstechnica.com, wired.com\n\"\"\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#technology-trends",
+  "links": []
+}

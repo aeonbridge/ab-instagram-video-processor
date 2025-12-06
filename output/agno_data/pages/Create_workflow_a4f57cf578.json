@@ -1,0 +1,14 @@
+{
+  "title": "Create workflow",
+  "content": "workflow = Workflow(\n    name=\"Content Workflow\",\n    db=db,\n    steps=[research_step, content_step],\n)\n\nworkflow.print_response(\"AI trends in 2024\")\n```\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/in_memory/in_memory_storage_for_workflow.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#create-workflow",
+  "links": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Create distributed RAG team",
+  "content": "distributed_rag_team = Team(\n    name=\"Distributed RAG Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[\n        primary_retriever,\n        context_expander,\n        answer_synthesizer,\n        quality_validator,\n    ],\n    instructions=[\n        \"Work together to provide comprehensive, high-quality RAG responses.\",\n        \"Primary Retriever: First retrieve core relevant information.\",\n        \"Context Expander: Then expand with related context and background.\",\n        \"Answer Synthesizer: Synthesize all information into a comprehensive answer.\",\n        \"Quality Validator: Finally validate and suggest any improvements.\",\n        \"Ensure all responses are accurate, complete, and well-structured.\",\n    ],\n    show_members_responses=True,\n    markdown=True,\n)\n\nasync def async_distributed_rag_demo():\n    \"\"\"Demonstrate async distributed RAG processing.\"\"\"\n    print(\"📚 Async Distributed RAG with LanceDB Demo\")\n    print(\"=\" * 50)\n\nquery = \"How do I make chicken and galangal in coconut milk soup? Include cooking tips and variations.\"\n\n# Add content to knowledge bases\n    await primary_knowledge.add_contents_async(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n    await context_knowledge.add_contents_async(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n\n# # Run async distributed RAG\n    # await distributed_rag_team.aprint_response(\n    #     query, stream=True\n    # )\n    await distributed_rag_team.aprint_response(input=query)\n\ndef sync_distributed_rag_demo():\n    \"\"\"Demonstrate sync distributed RAG processing.\"\"\"\n    print(\"📚 Distributed RAG with LanceDB Demo\")\n    print(\"=\" * 40)\n\nquery = \"How do I make chicken and galangal in coconut milk soup? Include cooking tips and variations.\"\n\n# Add content to knowledge bases\n    primary_knowledge.add_contents(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n    context_knowledge.add_contents(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n\n# Run distributed RAG\n    distributed_rag_team.print_response(input=query)\n\ndef multi_course_meal_demo():\n    \"\"\"Demonstrate distributed RAG for complex multi-part queries.\"\"\"\n    print(\"🍽️ Multi-Course Meal Planning with Distributed RAG\")\n    print(\"=\" * 55)\n\nquery = \"\"\"Hi, I want to make a 3 course Thai meal. Can you recommend some recipes?\n    I'd like to start with a soup, then a thai curry for the main course and finish with a dessert.\n    Please include cooking techniques and any special tips.\"\"\"\n\n# Add content to knowledge bases\n    primary_knowledge.add_contents(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n    context_knowledge.add_contents(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n\ndistributed_rag_team.print_response(input=query)\n\nif __name__ == \"__main__\":\n    # Choose which demo to run\n    asyncio.run(async_distributed_rag_demo())\n\n# multi_course_meal_demo()\n\n# sync_distributed_rag_demo()\nbash  theme={null}\n    pip install agno openai lancedb tantivy pypdf sqlalchemy\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/distributed_rag/02_distributed_rag_lancedb.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-distributed-rag-team",
+  "links": []
+}

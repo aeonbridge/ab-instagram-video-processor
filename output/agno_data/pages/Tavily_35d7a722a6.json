@@ -1,0 +1,43 @@
+{
+  "title": "Tavily",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/tavily\n\n**TavilyTools** enable an Agent to search the web using the Tavily API.\n\nThe following examples requires the `tavily-python` library and an API key from [Tavily](https://tavily.com/).\n\nThe following agent will run a search on Tavily for \"language models\" and print the response.\n\n| Parameter               | Type                           | Default      | Description                                                                               |\n| ----------------------- | ------------------------------ | ------------ | ----------------------------------------------------------------------------------------- |\n| `api_key`               | `Optional[str]`                | `None`       | Tavily API key. If not provided, will use TAVILY\\_API\\_KEY environment variable.          |\n| `enable_search`         | `bool`                         | `True`       | Enable search functionality.                                                              |\n| `enable_search_context` | `bool`                         | `False`      | Enable search context functionality using Tavily's context API.                           |\n| `all`                   | `bool`                         | `False`      | Enable all available functions in the toolkit.                                            |\n| `max_tokens`            | `int`                          | `6000`       | Maximum number of tokens to use in search results.                                        |\n| `include_answer`        | `bool`                         | `True`       | Whether to include an AI-generated answer summary in the response.                        |\n| `search_depth`          | `Literal['basic', 'advanced']` | `'advanced'` | Depth of search - 'basic' for faster results or 'advanced' for more comprehensive search. |\n| `format`                | `Literal['json', 'markdown']`  | `'markdown'` | Output format - 'json' for raw data or 'markdown' for formatted text.                     |\n\n| Function                  | Description                                                                                                                                                                                                                                                                    |\n| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| `web_search_using_tavily` | Search the web for a given query using Tavily API. Parameters include `query` (str) for the search query and `max_results` (int, default=5) for maximum number of results. Returns JSON string of results with titles, URLs, content and relevance scores in specified format. |\n| `web_search_with_tavily`  | Alternative search function that uses Tavily's search context API. Parameters include `query` (str) for the search query. Returns contextualized search results. Only available when `enable_search_context` is True.                                                          |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/tavily.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/tavily_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will run a search on Tavily for \"language models\" and print the response.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#tavily",
+  "links": []
+}

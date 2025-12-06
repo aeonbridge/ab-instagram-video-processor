@@ -1,0 +1,41 @@
+{
+  "title": "WhatsApp Reasoning Finance Agent",
+  "content": "Source: https://docs.agno.com/agent-os/usage/interfaces/whatsapp/reasoning-agent\n\nWhatsApp agent with advanced reasoning and financial analysis capabilities\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set Environment Variables\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Example\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* **Advanced Reasoning**: ThinkingTools for step-by-step financial analysis\n* **Real-time Data**: Stock prices, analyst recommendations, company news\n* **Claude Powered**: Superior analytical and reasoning capabilities\n* **Structured Output**: Well-formatted tables and financial insights\n* **Market Intelligence**: Comprehensive company analysis and recommendations",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    }
+  ],
+  "url": "llms-txt#whatsapp-reasoning-finance-agent",
+  "links": []
+}

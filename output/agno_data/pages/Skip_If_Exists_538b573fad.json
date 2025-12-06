@@ -1,0 +1,14 @@
+{
+  "title": "Skip If Exists",
+  "content": "Source: https://docs.agno.com/basics/knowledge/getting-started/usage/skip-if-exists\n\n```python 11_skip_if_exists.py theme={null}\nimport asyncio\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\n\nknowledge = Knowledge(\n    name=\"Basic SDK Knowledge Base\",\n    description=\"Agno 2.0 Knowledge Implementation\",\n    vector_db=PgVector(\n        table_name=\"vectors\", db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n    ),\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#skip-if-exists",
+  "links": []
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Agentic RAG with LightRAG",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/usage/agentic-rag-with-lightrag\n\nThis example demonstrates how to implement Agentic RAG using LightRAG as the vector database, with support for PDF documents, Wikipedia content, and web URLs.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your API keys\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Create a Python file\">\n    Create a Python file and add the above code.\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/agents/agentic_search\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your API keys\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Create a Python file\">\n    Create a Python file and add the above code.",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#agentic-rag-with-lightrag",
+  "links": []
+}

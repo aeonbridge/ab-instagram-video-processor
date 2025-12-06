@@ -1,0 +1,14 @@
+{
+  "title": "Social Media Agent",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/social_media_agent\n\nSocial Media Agent Example with Dummy Dataset\n\nThis example demonstrates how to create an agent that:\n\n1. Analyzes a dummy dataset of tweets\n2. Leverages LLM capabilities to perform sophisticated sentiment analysis\n3. Provides insights about the overall sentiment around a topic\n\n```python cookbook/examples/agents/social_media_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.x import XTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#social-media-agent",
+  "links": []
+}

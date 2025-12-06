@@ -1,0 +1,8 @@
+{
+  "title": "Setup basic research agent",
+  "content": "web_research_agent = Agent(\n    id=\"web-research-agent\",\n    name=\"Web Research Agent\",\n    model=Claude(id=\"claude-sonnet-4-0\"),\n    db=db,\n    tools=[DuckDuckGoTools()],\n    add_history_to_context=True,\n    num_history_runs=3,\n    add_datetime_to_context=True,\n    enable_session_summaries=True,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-basic-research-agent",
+  "links": []
+}

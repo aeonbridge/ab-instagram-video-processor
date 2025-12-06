@@ -1,0 +1,8 @@
+{
+  "title": "Define two completely different workflows as Steps",
+  "content": "image_sequence = Steps(\n    name=\"image_generation\",\n    description=\"Complete image generation and analysis workflow\",\n    steps=[\n        Step(name=\"generate_image\", agent=image_generator),\n        Step(name=\"describe_image\", agent=image_describer),\n    ],\n)\n\nvideo_sequence = Steps(\n    name=\"video_generation\",\n    description=\"Complete video production and analysis workflow\",\n    steps=[\n        Step(name=\"generate_video\", agent=video_generator),\n        Step(name=\"describe_video\", agent=video_describer),\n    ],\n)\n\ndef media_sequence_selector(step_input) -> List[Step]:\n    \"\"\"Route to appropriate media generation pipeline\"\"\"\n    if not step_input.input:\n        return [image_sequence]\n\nmessage_lower = step_input.input.lower()\n\nif \"video\" in message_lower:\n        return [video_sequence]\n    elif \"image\" in message_lower:\n        return [image_sequence]\n    else:\n        return [image_sequence]  # Default",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-two-completely-different-workflows-as-steps",
+  "links": []
+}

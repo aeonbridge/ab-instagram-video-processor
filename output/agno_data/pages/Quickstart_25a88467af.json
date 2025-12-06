@@ -1,0 +1,14 @@
+{
+  "title": "Quickstart",
+  "content": "Source: https://docs.agno.com/get-started/quickstart\n\nBuild and run your first Agent using Agno.\n\n## Build your first Agent\n\n**Agents are AI programs where a language model controls the flow of execution.**\n\nInstead of a toy demo, let's build an Agent that you can extend by connecting to any MCP server. We'll connect our agent to the Agno MCP server, and give it a database to store conversation history and state.\n\nSave the following code in a file named `agno_agent.py`\n\n```python agno_agent.py lines theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.anthropic import Claude\nfrom agno.os import AgentOS\nfrom agno.tools.mcp import MCPTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Build your first Agent",
+      "id": "build-your-first-agent"
+    }
+  ],
+  "url": "llms-txt#quickstart",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Set up your database",
+  "content": "db = SQLiteDb(db_file=\"agno.db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-your-database",
+  "links": []
+}

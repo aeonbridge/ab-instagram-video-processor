@@ -1,0 +1,44 @@
+{
+  "title": "Tool Hooks",
+  "content": "Source: https://docs.agno.com/basics/tools/hooks\n\nLearn how to use tool hooks to modify the behavior of a tool.\n\nYou can use tool hooks to perform validation, logging, or any other logic before or after a tool is called.\n\nA tool hook is a function that takes a function name, function call, and arguments. Optionally, you can access the `Agent` or `Team` object as well.  Inside the tool hook, you have to call the function call and return the result.\n\n<Note>\n  It is important to use exact parameter names when defining a tool hook. `agent`, `team`, `run_context`, `function_name`, `function_call`, and `arguments` are available parameters.\n</Note>\n\nYou can assign tool hooks on agents and teams.  The tool hooks will be applied to all tool calls made by the agent or team.\n\nYou can also get access to the `RunContext` object in the tool hook. Inside the run context, you will find the session state, dependencies, and metadata.\n\n### Multiple Tool Hooks\n\nYou can also assign multiple tool hooks at once. They will be applied in the order they are assigned.\n\nYou can also assign tool hooks to specific custom tools.\n\n## Pre and Post Hooks\n\nPre and post hooks let's you modify what happens before and after a tool is called. It is an alternative to tool hooks.\n\nSet the `pre_hook` in the `@tool` decorator to run a function before the tool call.\n\nSet the `post_hook` in the `@tool` decorator to run a function after the tool call.\n\nHere's a demo example of using a `pre_hook`, `post_hook` along with Agent Context.",
+  "code_samples": [
+    {
+      "code": "or",
+      "language": "unknown"
+    },
+    {
+      "code": "You can assign tool hooks on agents and teams.  The tool hooks will be applied to all tool calls made by the agent or team.\n\nFor example:",
+      "language": "unknown"
+    },
+    {
+      "code": "You can also get access to the `RunContext` object in the tool hook. Inside the run context, you will find the session state, dependencies, and metadata.",
+      "language": "unknown"
+    },
+    {
+      "code": "### Multiple Tool Hooks\n\nYou can also assign multiple tool hooks at once. They will be applied in the order they are assigned.",
+      "language": "unknown"
+    },
+    {
+      "code": "You can also assign tool hooks to specific custom tools.",
+      "language": "unknown"
+    },
+    {
+      "code": "## Pre and Post Hooks\n\nPre and post hooks let's you modify what happens before and after a tool is called. It is an alternative to tool hooks.\n\nSet the `pre_hook` in the `@tool` decorator to run a function before the tool call.\n\nSet the `post_hook` in the `@tool` decorator to run a function after the tool call.\n\nHere's a demo example of using a `pre_hook`, `post_hook` along with Agent Context.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Multiple Tool Hooks",
+      "id": "multiple-tool-hooks"
+    },
+    {
+      "level": "h2",
+      "text": "Pre and Post Hooks",
+      "id": "pre-and-post-hooks"
+    }
+  ],
+  "url": "llms-txt#tool-hooks",
+  "links": []
+}

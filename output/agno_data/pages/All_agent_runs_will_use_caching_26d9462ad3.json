@@ -1,0 +1,19 @@
+{
+  "title": "All agent runs will use caching",
+  "content": "agent.run(\"Your query\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.team import Team\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "## Usage with Teams\n\nResponse caching works with `Team` as well. You can enable it on individual team members and the team leader model:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage with Teams",
+      "id": "usage-with-teams"
+    }
+  ],
+  "url": "llms-txt#all-agent-runs-will-use-caching",
+  "links": []
+}

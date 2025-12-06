@@ -1,0 +1,14 @@
+{
+  "title": "Agent sessions stored in memory",
+  "content": "agent.print_response(\"Give me an easy dinner recipe\")\n```\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/in_memory/in_memory_storage_for_agent.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#agent-sessions-stored-in-memory",
+  "links": []
+}

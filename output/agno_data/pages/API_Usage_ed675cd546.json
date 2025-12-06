@@ -1,0 +1,19 @@
+{
+  "title": "API Usage",
+  "content": "Source: https://docs.agno.com/agent-os/api/usage\n\nRunning your Agent / Team / Workflow with the AgentOS API\n\nThe AgentOS API provides endpoints:\n\n* **Run an Agent**: `POST /agents/{agent_id}/runs`  (See the [API reference](/reference-api/schema/agents/create-agent-run))\n* **Run a Team**: `POST /teams/{team_id}/runs`  (See the [API reference](/reference-api/schema/teams/create-team-run))\n* **Run a Workflow**: `POST /workflows/{workflow_id}/runs`  (See the [API reference](/reference-api/schema/workflows/execute-workflow))\n\nThese endpoints support form-based input. Below is an example of how to run an agent with the API:\n\n## Passing parameters to your Agent / Team / Workflow\n\nAgent, Team and Workflow `run()` and `arun()` endpoints support various runtime parameters. See the [Agent run schema](/reference/agents/agent#run), [Team run schema](/reference/teams/team#run), [Workflow run schema](/reference/workflows/workflow#run) for more details.\n\nIt is a common pattern to want to pass `session_state`, `dependencies`, `metadata`, etc. to your Agent, Team or Workflow via the API.\n\nTo pass these parameters via the AgentOS API, you can simply specify them as form-based parameters.\n\nBelow is an example where `dependencies` are passed to the agent:\n\n```python dependencies_to_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.os import AgentOS",
+  "code_samples": [
+    {
+      "code": "## Passing parameters to your Agent / Team / Workflow\n\nAgent, Team and Workflow `run()` and `arun()` endpoints support various runtime parameters. See the [Agent run schema](/reference/agents/agent#run), [Team run schema](/reference/teams/team#run), [Workflow run schema](/reference/workflows/workflow#run) for more details.\n\nIt is a common pattern to want to pass `session_state`, `dependencies`, `metadata`, etc. to your Agent, Team or Workflow via the API.\n\nTo pass these parameters via the AgentOS API, you can simply specify them as form-based parameters.\n\nBelow is an example where `dependencies` are passed to the agent:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Passing parameters to your Agent / Team / Workflow",
+      "id": "passing-parameters-to-your-agent-/-team-/-workflow"
+    }
+  ],
+  "url": "llms-txt#api-usage",
+  "links": []
+}

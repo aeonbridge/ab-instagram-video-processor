@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with PowerPoint skills",
+  "content": "powerpoint_agent = Agent(\n    name=\"PowerPoint Creator\",\n    model=Claude(\n        id=\"claude-sonnet-4-5-20250929\",\n        skills=[\n            {\"type\": \"anthropic\", \"skill_id\": \"pptx\", \"version\": \"latest\"}\n        ],\n    ),\n    instructions=[\n        \"You are a professional presentation creator with access to PowerPoint skills.\",\n        \"Create well-structured presentations with clear slides and professional design.\",\n        \"Keep text concise - no more than 6 bullet points per slide.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-powerpoint-skills",
+  "links": []
+}

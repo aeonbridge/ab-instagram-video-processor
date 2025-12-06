@@ -1,0 +1,24 @@
+{
+  "title": "Overriding Routes",
+  "content": "Source: https://docs.agno.com/agent-os/custom-fastapi/override-routes\n\nLearn how to override AgentOS routes with your own custom routes when conflicts occur\n\nWhen integrating your custom FastAPI application with AgentOS, route conflicts can occur if both your app and AgentOS define the same endpoint paths. For example, both might define a `/health` endpoint or a root `/` route.\n\nAgentOS provides the `on_route_conflict` parameter to control how these conflicts are resolved, allowing you to choose whether your custom routes or AgentOS routes take precedence.\n\nOverride routes when you need:\n\n* **Custom health checks**: Replace AgentOS's `/health` endpoint with your own monitoring logic\n* **Branded landing pages**: Serve a custom homepage at `/` instead of the default AgentOS interface\n* **Custom authentication**: Implement your own auth endpoints that conflict with AgentOS defaults\n* **API versioning**: Control which version of an endpoint is exposed\n* **Custom error handlers**: Define specialized error handling for specific routes\n\n## Configuration Options\n\nAgentOS provides two values for the `on_route_conflict` parameter for handling route conflicts:\n\n| Option                       | Custom Routes | AgentOS Routes             | Warnings Logged |\n| ---------------------------- | ------------- | -------------------------- | --------------- |\n| `preserve_base_app`          | ✓ Preserved   | ✗ Skipped (conflicts only) | Yes             |\n| `preserve_agentos` (default) | ✗ Overridden  | ✓ Preserved                | Yes             |\n\n<Note>\n  Non-conflicting routes from both your app and AgentOS are always included regardless of the mode.\n</Note>\n\nThis example demonstrates using `on_route_conflict=\"preserve_base_app\"` to preserve custom routes for the home page and health endpoint.\n\n```python override_routes.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.anthropic import Claude\nfrom agno.os import AgentOS\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom fastapi import FastAPI",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "When to Use",
+      "id": "when-to-use"
+    },
+    {
+      "level": "h2",
+      "text": "Configuration Options",
+      "id": "configuration-options"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#overriding-routes",
+  "links": []
+}

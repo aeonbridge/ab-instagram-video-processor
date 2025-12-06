@@ -1,0 +1,19 @@
+{
+  "title": "✅ Good: Each user has isolated memories",
+  "content": "agent.print_response(\"I love pizza\", user_id=\"user_123\")\nagent.print_response(\"I'm allergic to dairy\", user_id=\"user_456\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "**Best practice:** Always pass `user_id` explicitly, especially in multi-user applications.\n\n### The Double-Enable Pitfall\n\n**The Problem:** Using both `enable_user_memories=True` and `enable_agentic_memory=True` doesn't give you both—agentic mode overrides automatic mode.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "The Double-Enable Pitfall",
+      "id": "the-double-enable-pitfall"
+    }
+  ],
+  "url": "llms-txt#✅-good:-each-user-has-isolated-memories",
+  "links": []
+}

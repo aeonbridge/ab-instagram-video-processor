@@ -1,0 +1,8 @@
+{
+  "title": "Create steps",
+  "content": "manage_items_step = Step(\n    name=\"manage_items\",\n    description=\"Help manage shopping list items (add/remove)\",\n    agent=shopping_assistant,\n)\n\nview_list_step = Step(\n    name=\"view_list\",\n    description=\"View and manage the complete shopping list\",\n    agent=list_manager,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-steps",
+  "links": []
+}

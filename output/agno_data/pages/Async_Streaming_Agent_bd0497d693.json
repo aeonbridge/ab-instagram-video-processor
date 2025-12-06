@@ -1,0 +1,14 @@
+{
+  "title": "Async Streaming Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/xai/usage/basic-async-stream\n\n```python cookbook/models/xai/basic_async_stream.py theme={null}\nimport asyncio\nfrom typing import Iterator\n\nfrom agno.agent import Agent, RunOutputEvent\nfrom agno.models.xai import xAI\n\nagent = Agent(model=xAI(id=\"grok-3\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#async-streaming-agent",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Example 2: Generate an image with custom settings",
+  "content": "custom_dalle = Dalle(model=\"dall-e-3\", size=\"1792x1024\", quality=\"hd\", style=\"natural\")\n\nagent_custom = Agent(\n    tools=[custom_dalle],\n    name=\"Custom DALL-E Generator\",\n    )\n\nagent_custom.print_response(\"Create a panoramic nature scene showing a peaceful mountain lake at sunset\", markdown=True)\n```\n\n| Parameter             | Type   | Default       | Description                                                       |\n| --------------------- | ------ | ------------- | ----------------------------------------------------------------- |\n| `model`               | `str`  | `\"dall-e-3\"`  | The DALL-E model to use                                           |\n| `enable_create_image` | `bool` | `True`        | Enable the create image functionality                             |\n| `n`                   | `int`  | `1`           | Number of images to generate                                      |\n| `size`                | `str`  | `\"1024x1024\"` | Image size (256x256, 512x512, 1024x1024, 1792x1024, or 1024x1792) |\n| `quality`             | `str`  | `\"standard\"`  | Image quality (standard or hd)                                    |\n| `style`               | `str`  | `\"vivid\"`     | Image style (vivid or natural)                                    |\n| `api_key`             | `str`  | `None`        | The OpenAI API key for authentication                             |\n| `all`                 | `bool` | `False`       | Enable all functionality when set to True                         |\n\n| Function         | Description                               |\n| ---------------- | ----------------------------------------- |\n| `generate_image` | Generates an image based on a text prompt |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/dalle.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/dalle_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example-2:-generate-an-image-with-custom-settings",
+  "links": []
+}

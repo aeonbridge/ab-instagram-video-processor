@@ -1,0 +1,8 @@
+{
+  "title": "Initialize the Agent",
+  "content": "agent = Agent(\n    model=OpenAIChat(),\n    tools=[zep_tools],\n    dependencies={\"memory\": zep_tools.get_zep_memory(memory_type=\"context\")},\n    add_dependencies_to_context=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-the-agent",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Add a memory for the default user",
+  "content": "memory.add_user_memory(\n    memory=UserMemory(memory=\"The user's name is John Doe\", topics=[\"name\"]),\n)\nprint(\"Memories:\")\npprint(memory.get_user_memories())",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-a-memory-for-the-default-user",
+  "links": []
+}

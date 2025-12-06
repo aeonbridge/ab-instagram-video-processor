@@ -1,0 +1,19 @@
+{
+  "title": "Run the evaluation calling the arun method.",
+  "content": "result: Optional[AccuracyResult] = asyncio.run(evaluation.arun(print_results=True))\nassert result is not None and result.avg_score >= 8\n\npython accuracy_with_team.py theme={null}\nfrom typing import Optional\n\nfrom agno.agent import Agent\nfrom agno.eval.accuracy import AccuracyEval, AccuracyResult\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team",
+  "code_samples": [
+    {
+      "code": "## Accuracy with Teams\n\nEvaluate accuracy with a team:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Accuracy with Teams",
+      "id": "accuracy-with-teams"
+    }
+  ],
+  "url": "llms-txt#run-the-evaluation-calling-the-arun-method.",
+  "links": []
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Web Extraction Agent",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/web-extraction-agent\n\nBuild an AI agent that transforms unstructured web content into organized, structured data by combining Firecrawl's web scraping with Pydantic's structured output validation.\n\nBy building this agent, you'll understand:\n\n* How to integrate Firecrawl for reliable web scraping and content extraction\n* How to define structured output schemas using Pydantic models\n* How to create nested data structures for complex web content\n* How to handle optional fields and varied page structures\n\nBuild competitive intelligence tools, content aggregation systems, knowledge base constructors, or automated documentation generators.\n\nThe agent extracts structured data from web pages in a systematic process:\n\n1. **Fetch**: Uses Firecrawl to retrieve and parse the target webpage\n2. **Analyze**: Identifies key sections, elements, and hierarchical structure\n3. **Extract**: Pulls information according to the Pydantic output schema\n4. **Structure**: Organizes content into nested models (sections, metadata, links, contact info)\n\nThe Pydantic schema ensures consistent output format regardless of the source website's structure, with optional fields handling varied page layouts gracefully.\n\nThe agent will scrape the target URL using Firecrawl and extract all information into a structured PageInformation object. The output includes the page title, description, features, organized content sections with headings, important links, contact information, and additional metadata.\n\nThe structured output ensures consistency and makes the extracted data easy to process, store, or display programmatically. Optional fields handle pages with varying structures gracefully.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API key\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* Change the target URL to extract data from different websites\n* Modify the `PageInformation` Pydantic model to capture additional fields\n* Adjust the agent's instructions to focus on specific content types\n* Explore [Firecrawl Tools](/integrations/toolkits/web-scrape/firecrawl) for advanced scraping options",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe agent will scrape the target URL using Firecrawl and extract all information into a structured PageInformation object. The output includes the page title, description, features, organized content sections with headings, important links, contact information, and additional metadata.\n\nThe structured output ensures consistency and makes the extracted data easy to process, store, or display programmatically. Optional fields handle pages with varying structures gracefully.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#web-extraction-agent",
+  "links": []
+}

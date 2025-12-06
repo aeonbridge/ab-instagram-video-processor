@@ -1,0 +1,8 @@
+{
+  "title": "Audio As Input",
+  "content": "Source: https://docs.agno.com/basics/multimodal/audio/audio_input\n\nLearn how to use audio as input with Agno agents.\n\nAgno supports audio as input to agents and teams.  Take a look at the [compatibility matrix](/basics/models/compatibility#multimodal-support) to see which models support audio as input.\n\nLet's create an agent that can understand audio input.\n\n```python audio_agent.py theme={null}\nimport base64\n\nimport requests\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.media import Audio\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#audio-as-input",
+  "links": []
+}

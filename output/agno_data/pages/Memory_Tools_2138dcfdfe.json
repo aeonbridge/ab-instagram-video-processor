@@ -1,0 +1,14 @@
+{
+  "title": "Memory Tools",
+  "content": "Source: https://docs.agno.com/basics/tools/reasoning_tools/memory-tools\n\nThe `MemoryTools` toolkit enables Agents to manage user memories through create, update, and delete operations. This toolkit integrates with a provided database where memories are stored.\n\nThe toolkit implements a \"Think → Operate → Analyze\" cycle that allows an Agent to:\n\n1. Think through memory management requirements and plan operations\n2. Execute memory operations (add, update, delete) on the database\n3. Analyze the results to ensure operations completed successfully and meet requirements\n\nThis approach gives Agents the ability to persistently store, retrieve, and manage user information, preferences, and context across conversations.\n\nThe toolkit includes the following tools:\n\n* `think`: A scratchpad for planning memory operations, brainstorming content, and refining approaches. These thoughts remain internal to the Agent and are not shown to users.\n* `get_memories`: Gets a list of memories for the current user from the database.\n* `add_memory`: Creates new memories in the database with specified content and optional topics.\n* `update_memory`: Modifies existing memories by memory ID, allowing updates to content and topics.\n* `delete_memory`: Removes memories from the database by memory ID.\n* `analyze`: Evaluates whether memory operations completed successfully and produced the expected results.\n\nHere's an example of how to use the `MemoryTools` toolkit:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.memory import MemoryTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#memory-tools",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Generate unique IDs",
+  "content": "user_id = str(uuid4())\nid = str(uuid4())",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#generate-unique-ids",
+  "links": []
+}

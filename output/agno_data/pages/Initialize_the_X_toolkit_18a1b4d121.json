@@ -1,0 +1,8 @@
+{
+  "title": "Initialize the X toolkit",
+  "content": "x_tools = XTools(\n    wait_on_rate_limit=True # Retry when rate limits are reached\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-the-x-toolkit",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Print step-level metrics",
+  "content": "print(\"Step Metrics\")\nif response.metrics:\n    for step_name, step_metrics in response.metrics.steps.items():\n        print(f\"\\nStep: {step_name}\")\n        print(f\"Executor: {step_metrics.executor_name} ({step_metrics.executor_type})\")\n        if step_metrics.metrics:\n            print(f\"Duration: {step_metrics.metrics.duration:.2f}s\")\n            print(f\"Tokens: {step_metrics.metrics.total_tokens}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#print-step-level-metrics",
+  "links": []
+}

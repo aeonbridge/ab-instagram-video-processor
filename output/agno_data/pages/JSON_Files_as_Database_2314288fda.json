@@ -1,0 +1,14 @@
+{
+  "title": "JSON Files as Database",
+  "content": "Source: https://docs.agno.com/integrations/database/json/overview\n\nLearn to use JSON files as a database for your Agents\n\nAgno supports using local JSON files as a \"database\" with the `JsonDb` class.\nThis is a simple way to store your Agent's session data without having to setup a database.\n\n<Warning>\n  Using JSON files as a database is not recommended for production applications.\n  Use it for demos, testing and any other use case where you don't want to setup a database.\n</Warning>\n\n```python json_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.json import JsonDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#json-files-as-database",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Secure deployment pipeline",
+  "content": "workflow = Workflow(\n    name=\"Secure Deployment Pipeline\",\n    steps=[\n        Step(name=\"Security Scan\", agent=security_scanner),\n        Step(name=\"Security Gate\", executor=security_gate),  # May stop here\n        Step(name=\"Deploy Code\", agent=code_deployer),       # Only if secure\n        Step(name=\"Setup Monitoring\", agent=monitoring_agent), # Only if deployed\n    ]\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#secure-deployment-pipeline",
+  "links": []
+}

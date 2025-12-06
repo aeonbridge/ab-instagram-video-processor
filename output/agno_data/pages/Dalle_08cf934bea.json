@@ -1,0 +1,28 @@
+{
+  "title": "Dalle",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/dalle\n\nYou need to install the `openai` library.\n\nSet the `OPENAI_API_KEY` environment variable.\n\nThe following agent will use DALL-E to generate an image based on a text prompt.\n\n```python cookbook/tools/dalle_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.dalle import DalleTools",
+  "code_samples": [
+    {
+      "code": "Set the `OPENAI_API_KEY` environment variable.",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use DALL-E to generate an image based on a text prompt.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#dalle",
+  "links": []
+}

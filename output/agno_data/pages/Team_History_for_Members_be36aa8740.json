@@ -1,0 +1,24 @@
+{
+  "title": "Team History for Members",
+  "content": "Source: https://docs.agno.com/basics/chat-history/team/usage/team-history\n\nThis example demonstrates a team where the team leader routes requests to the appropriate member, and the members respond directly to the user.\n\nUsing `add_team_history_to_members=True`, each team member has access to the shared history of the team, allowing them to use context from previous interactions with other members.\n\nWhen `add_team_history_to_members=True`, team history is appended to tasks sent to members:\n\nThis allows the Spanish agent to recall the name \"John\" that was originally shared with the German agent.\n\n```python team_history.py theme={null}\nfrom uuid import uuid4\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\n\ngerman_agent = Agent(\n    name=\"German Agent\",\n    role=\"You answer German questions.\",\n    model=OpenAIChat(id=\"o3-mini\"),\n)\n\nspanish_agent = Agent(\n    name=\"Spanish Agent\",\n    role=\"You answer Spanish questions.\",\n    model=OpenAIChat(id=\"o3-mini\"),\n)\n\nmulti_lingual_q_and_a_team = Team(\n    name=\"Multi Lingual Q and A Team\",\n    model=OpenAIChat(\"o3-mini\"),\n    members=[german_agent, spanish_agent],\n    instructions=[\n        \"You are a multi lingual Q and A team that can answer questions in English and Spanish. You MUST delegate the task to the appropriate member based on the language of the question.\",\n        \"If the question is in German, delegate to the German agent. If the question is in Spanish, delegate to the Spanish agent.\",\n        \"Always translate the response from the appropriate language to English and show both the original and translated responses.\",\n    ],\n    db=SqliteDb(\n        db_file=\"tmp/multi_lingual_q_and_a_team.db\"\n    ),  # Add a database to store the conversation history. This is a requirement for history to work correctly.\n    determine_input_for_members=False,  # Send the input directly to the member agents without the team leader synthesizing its own input.\n    respond_directly=True,\n    add_team_history_to_members=True,  # Send all interactions between the user and the team to the member agents.\n)\n\nsession_id = f\"conversation_{uuid4()}\"",
+  "code_samples": [
+    {
+      "code": "<team_history_context>\ninput: Hallo, wie heißt du? Meine Name ist John.\nresponse: Ich heiße ChatGPT.\n</team_history_context>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How it Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-history-for-members",
+  "links": []
+}

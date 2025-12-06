@@ -1,0 +1,32 @@
+{
+  "title": "Example usage with different types of movie queries",
+  "content": "movie_recommendation_agent.print_response(\n    \"Suggest some thriller movies to watch with a rating of 8 or above on IMDB. \"\n    \"My previous favourite thriller movies are The Dark Knight, Venom, Parasite, Shutter Island.\",\n    stream=True,\n)\nbash  theme={null}\n    pip install openai exa_py agno\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    export EXA_API_KEY=****\n    bash  theme={null}\n    python movie_recommender.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## More example prompts to explore:\n\n**Genre-specific queries:**\n\n1. \"Find me psychological thrillers similar to Black Swan and Gone Girl\"\n2. \"What are the best animated movies from Studio Ghibli?\"\n3. \"Recommend some mind-bending sci-fi movies like Inception and Interstellar\"\n4. \"What are the highest-rated crime documentaries from the last 5 years?\"\n\n**International Cinema:**\n\n1. \"Suggest Korean movies similar to Parasite and Train to Busan\"\n2. \"What are the must-watch French films from the last decade?\"\n3. \"Recommend Japanese animated movies for adults\"\n4. \"Find me award-winning European drama films\"\n\n**Family & Group Watching:**\n\n1. \"What are good family movies for kids aged 8-12?\"\n2. \"Suggest comedy movies perfect for a group movie night\"\n3. \"Find educational documentaries suitable for teenagers\"\n4. \"Recommend adventure movies that both adults and children would enjoy\"\n\n**Upcoming Releases:**\n\n1. \"What are the most anticipated movies coming out next month?\"\n2. \"Show me upcoming superhero movie releases\"\n3. \"What horror movies are releasing this Halloween season?\"\n4. \"List upcoming book-to-movie adaptations\"\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "More example prompts to explore:",
+      "id": "more-example-prompts-to-explore:"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#example-usage-with-different-types-of-movie-queries",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Initialize Agent",
+  "content": "memory_agent = Agent(\n    model=OpenAIChat(id=\"gpt-4.1\"),\n    db=db,\n    # Give the Agent the ability to update memories\n    enable_agentic_memory=True,\n    # OR - Run the MemoryManager automatically after each response\n    enable_user_memories=True,\n    markdown=True,\n)\n\nmemory_agent.print_response(\n    \"My name is Ava and I like to ski.\",\n    user_id=user_id,\n    stream=True,\n)\nprint(\"Memories about Ava:\")\npprint(memory_agent.get_user_memories(user_id=user_id))\n\nmemory_agent.print_response(\n    \"I live in san francisco, where should i move within a 4 hour drive?\",\n    user_id=user_id,\n    stream=True,\n)\nprint(\"Memories about Ava:\")\npprint(memory_agent.get_user_memories(user_id=user_id))\n```\n\n<Tip>\n  `enable_agentic_memory=True` gives the Agent a tool to manage memories of the\n  user, this tool passes the task to the `MemoryManager` class. You may also set\n  `enable_user_memories=True` which always runs the `MemoryManager` after each\n  user message.\n</Tip>\n\n<Note>\n  Read more about Memory in the [Memory Overview](/basics/memory/overview) page.\n</Note>\n\n## Developer Resources\n\n* View the [Agent schema](/reference/agents/agent)\n* View [Examples](/examples/basics/memory)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/memory/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#initialize-agent",
+  "links": []
+}

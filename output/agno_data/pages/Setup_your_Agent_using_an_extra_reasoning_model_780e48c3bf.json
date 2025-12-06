@@ -1,0 +1,8 @@
+{
+  "title": "Setup your Agent using an extra reasoning model",
+  "content": "deepseek_plus_claude = Agent(\n    model=Claude(id=\"claude-3-7-sonnet-20250219\"),\n    reasoning_model=Groq(\n        id=\"deepseek-r1-distill-llama-70b\", temperature=0.6, max_tokens=1024, top_p=0.95\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-your-agent-using-an-extra-reasoning-model",
+  "links": []
+}

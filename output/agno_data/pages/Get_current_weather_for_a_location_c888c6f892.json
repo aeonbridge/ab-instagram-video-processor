@@ -1,0 +1,24 @@
+{
+  "title": "Get current weather for a location",
+  "content": "agent.print_response(\"What's the current weather in Tokyo?\", markdown=True)\n```\n\n| Parameter                | Type   | Default  | Description                                                                  |\n| ------------------------ | ------ | -------- | ---------------------------------------------------------------------------- |\n| `api_key`                | `str`  | `None`   | OpenWeatherMap API key. If not provided, uses OPENWEATHER\\_API\\_KEY env var. |\n| `units`                  | `str`  | `metric` | Units of measurement. Options: 'standard', 'metric', 'imperial'.             |\n| `enable_current_weather` | `bool` | `True`   | Enable current weather function.                                             |\n| `enable_forecast`        | `bool` | `True`   | Enable forecast function.                                                    |\n| `enable_air_pollution`   | `bool` | `True`   | Enable air pollution function.                                               |\n| `enable_geocoding`       | `bool` | `True`   | Enable geocoding function.                                                   |\n\n| Function              | Description                                                                                          |\n| --------------------- | ---------------------------------------------------------------------------------------------------- |\n| `get_current_weather` | Gets current weather data for a location. Takes a location name (e.g., \"London\").                    |\n| `get_forecast`        | Gets weather forecast for a location. Takes a location name and optional number of days (default 5). |\n| `get_air_pollution`   | Gets current air pollution data for a location. Takes a location name.                               |\n| `geocode_location`    | Converts a location name to geographic coordinates. Takes a location name and optional result limit. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/openweather.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/openweather_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#get-current-weather-for-a-location",
+  "links": []
+}

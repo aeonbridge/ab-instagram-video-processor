@@ -1,0 +1,8 @@
+{
+  "title": "Model Context Protocol (MCP)",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/overview\n\nLearn how to use MCP with Agno to enable your agents to interact with external systems through a standardized interface.\n\nThe [Model Context Protocol (MCP)](https://modelcontextprotocol.io) enables Agents to interact with external systems through a standardized interface.\nYou can connect your Agents to any MCP server, using Agno's MCP integration.\n\nBelow is a simple example shows how to connect an Agent to the Agno MCP server:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.tools.mcp import MCPTools",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#model-context-protocol-(mcp)",
+  "links": []
+}

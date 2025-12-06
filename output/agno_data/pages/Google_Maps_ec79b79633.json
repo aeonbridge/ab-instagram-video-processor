@@ -1,0 +1,48 @@
+{
+  "title": "Google Maps",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/google-maps\n\nTools for interacting with Google Maps services including place search, directions, geocoding, and more\n\n**GoogleMapTools** enable an Agent to interact with various Google Maps services for location-based operations including place search, directions, geocoding, and more.\n\nThe following example requires the `googlemaps` library and an API key which can be obtained from the [Google Cloud Console](https://console.cloud.google.com/projectselector2/google/maps-apis/credentials).\n\nYou'll need to enable the following APIs in your Google Cloud Console:\n\n* Places API\n* Directions API\n* Geocoding API\n* Address Validation API\n* Distance Matrix API\n* Elevation API\n* Time Zone API\n\nBasic usage of the Google Maps toolkit:\n\nFor more examples, see the [Google Maps Tools Examples](/examples/basics/tools/others/google_maps).\n\n| Parameter | Type            | Default | Description                                                                         |\n| --------- | --------------- | ------- | ----------------------------------------------------------------------------------- |\n| `key`     | `Optional[str]` | `None`  | Optional API key. If not provided, uses GOOGLE\\_MAPS\\_API\\_KEY environment variable |\n\n| Function              | Description                                                                                                                                                                                               |\n| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `search_places`       | Search for places using Google Maps Places API. Parameters: `query` (str) for the search query. Returns stringified JSON with place details including name, address, phone, website, rating, and hours.   |\n| `get_directions`      | Get directions between locations. Parameters: `origin` (str), `destination` (str), optional `mode` (str) for travel mode, optional `avoid` (List\\[str]) for features to avoid. Returns route information. |\n| `validate_address`    | Validate an address. Parameters: `address` (str), optional `region_code` (str), optional `locality` (str). Returns address validation results.                                                            |\n| `geocode_address`     | Convert address to coordinates. Parameters: `address` (str), optional `region` (str). Returns location information with coordinates.                                                                      |\n| `reverse_geocode`     | Convert coordinates to address. Parameters: `lat` (float), `lng` (float), optional `result_type` and `location_type` (List\\[str]). Returns address information.                                           |\n| `get_distance_matrix` | Calculate distances between locations. Parameters: `origins` (List\\[str]), `destinations` (List\\[str]), optional `mode` (str) and `avoid` (List\\[str]). Returns distance and duration matrix.             |\n| `get_elevation`       | Get elevation for a location. Parameters: `lat` (float), `lng` (float). Returns elevation data.                                                                                                           |\n| `get_timezone`        | Get timezone for a location. Parameters: `lat` (float), `lng` (float), optional `timestamp` (datetime). Returns timezone information.                                                                     |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\nGoogle Maps APIs have usage limits and quotas that vary by service and billing plan. Please refer to the [Google Maps Platform pricing](https://cloud.google.com/maps-platform/pricing) for details.\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/google_maps.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/google_maps_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "You'll need to enable the following APIs in your Google Cloud Console:\n\n* Places API\n* Directions API\n* Geocoding API\n* Address Validation API\n* Distance Matrix API\n* Elevation API\n* Time Zone API\n\n## Example\n\nBasic usage of the Google Maps toolkit:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Rate Limits",
+      "id": "rate-limits"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#google-maps",
+  "links": []
+}

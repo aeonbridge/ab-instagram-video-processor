@@ -1,0 +1,29 @@
+{
+  "title": "Hacker News",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/hackernews\n\n**HackerNews** enables an Agent to search Hacker News website.\n\nThe following agent will write an engaging summary of the users with the top 2 stories on hackernews along with the stories.\n\n| Parameter                 | Type   | Default | Description                    |\n| ------------------------- | ------ | ------- | ------------------------------ |\n| `enable_get_top_stories`  | `bool` | `True`  | Enables fetching top stories.  |\n| `enable_get_user_details` | `bool` | `True`  | Enables fetching user details. |\n| `all`                     | `bool` | `False` | Enables all functionality.     |\n\n| Function                     | Description                                                                                                                                                                      |\n| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `get_top_hackernews_stories` | Retrieves the top stories from Hacker News. Parameters include `num_stories` to specify the number of stories to return (default is 10). Returns the top stories in JSON format. |\n| `get_user_details`           | Retrieves the details of a Hacker News user by their username. Parameters include `username` to specify the user. Returns the user details in JSON format.                       |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/hackernews.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/hackernews_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#hacker-news",
+  "links": []
+}

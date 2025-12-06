@@ -1,0 +1,33 @@
+{
+  "title": "Traceloop",
+  "content": "Source: https://docs.agno.com/integrations/observability/traceloop\n\nIntegrate Agno with Traceloop to send traces and gain insights into your agent's performance.\n\n## Integrating Agno with Traceloop\n\n[Traceloop](https://www.traceloop.com/) provides an LLM observability platform built on [OpenLLMetry](https://github.com/traceloop/openllmetry), an open-source OpenTelemetry extension. By integrating Agno with Traceloop, you can automatically trace agent execution, team workflows, tool calls, and token usage metrics.\n\n1. **Install Dependencies**\n\nEnsure you have the necessary packages installed:\n\n2. **Setup Traceloop Account**\n\n* Sign up for an account at [Traceloop](https://app.traceloop.com/).\n   * Obtain your API key from [Settings > API Keys](https://app.traceloop.com/settings/api-keys).\n\n3. **Set Environment Variables**\n\nConfigure your environment with the Traceloop API key:\n\n## Sending Traces to Traceloop\n\n* ### Example: Basic Agent Instrumentation\n\nInitialize Traceloop at the start of your application. The SDK automatically instruments Agno agent execution.\n\n```python  theme={null}\nfrom traceloop.sdk import Traceloop\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "2. **Setup Traceloop Account**\n\n   * Sign up for an account at [Traceloop](https://app.traceloop.com/).\n   * Obtain your API key from [Settings > API Keys](https://app.traceloop.com/settings/api-keys).\n\n3. **Set Environment Variables**\n\n   Configure your environment with the Traceloop API key:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Sending Traces to Traceloop\n\n* ### Example: Basic Agent Instrumentation\n\nInitialize Traceloop at the start of your application. The SDK automatically instruments Agno agent execution.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with Traceloop",
+      "id": "integrating-agno-with-traceloop"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Sending Traces to Traceloop",
+      "id": "sending-traces-to-traceloop"
+    }
+  ],
+  "url": "llms-txt#traceloop",
+  "links": []
+}

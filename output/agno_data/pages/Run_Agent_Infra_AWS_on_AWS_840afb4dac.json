@@ -1,0 +1,14 @@
+{
+  "title": "Run Agent Infra AWS on AWS",
+  "content": "Source: https://docs.agno.com/templates/agent-infra-aws/run-aws\n\n<Snippet file=\"run-agent-infra-aws-prd.mdx\" />\n\nFor managing the AWS infrastructure, make sure to look at the infra management documentation [here](/templates/infra-management).\n\nCongratulations on running your Agent Infra AWS. Next Steps:\n\n* Read how to [update infra settings](/templates/infra-management/infra-settings)\n* Read how to [create a git repository for your workspace](/templates/infra-management/git-repo)\n* Read how to [manage the development application](/templates/infra-management/development-app)\n* Read how to [format and validate your code](/templates/infra-management/format-and-validate)\n* Read how to [add python libraries](/templates/infra-management/install)\n* Chat with us on [discord](https://agno.link/discord)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Next",
+      "id": "next"
+    }
+  ],
+  "url": "llms-txt#run-agent-infra-aws-on-aws",
+  "links": []
+}

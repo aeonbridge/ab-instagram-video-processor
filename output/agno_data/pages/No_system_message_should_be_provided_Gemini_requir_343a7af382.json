@@ -1,0 +1,8 @@
+{
+  "title": "No system message should be provided (Gemini requires only the image)",
+  "content": "agent = Agent(\n    model=Gemini(\n        id=\"gemini-2.0-flash-exp-image-generation\",\n        response_modalities=[\"Text\", \"Image\"],\n    )\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#no-system-message-should-be-provided-(gemini-requires-only-the-image)",
+  "links": []
+}

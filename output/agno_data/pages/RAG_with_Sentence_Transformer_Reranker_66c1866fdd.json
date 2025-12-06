@@ -1,0 +1,68 @@
+{
+  "title": "RAG with Sentence Transformer Reranker",
+  "content": "Source: https://docs.agno.com/basics/knowledge/agents/usage/rag-sentence-transformer\n\nThis example demonstrates Agentic RAG using Sentence Transformer Reranker with multilingual data for improved search relevance.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Start Postgres with pgvector\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Create a Python file\">\n    Create a Python file and add the above code.\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/agents/rag\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Start Postgres with pgvector\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Create a Python file\">\n    Create a Python file and add the above code.",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Setup Instructions:",
+      "id": "setup-instructions:"
+    },
+    {
+      "level": "h3",
+      "text": "1. Install Dependencies",
+      "id": "1.-install-dependencies"
+    },
+    {
+      "level": "h3",
+      "text": "2. Start the Postgres Server with pgvector",
+      "id": "2.-start-the-postgres-server-with-pgvector"
+    },
+    {
+      "level": "h3",
+      "text": "3. Run the example",
+      "id": "3.-run-the-example"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#rag-with-sentence-transformer-reranker",
+  "links": []
+}

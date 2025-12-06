@@ -1,0 +1,61 @@
+{
+  "title": "Context Compression",
+  "content": "Source: https://docs.agno.com/basics/context-compression/overview\n\nLearn how to compress tool call results to save context space while preserving critical information.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.2.3\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.2.3\">v2.2.3</Tooltip>\n</Badge>\n\nContext Compression allows you to manage your agent context while it is running, helping the agent stay within its context window and avoid rate limits or decreases in response quality.\n\nThink of it like a research assistant who reads lengthy reports and gives you the key bullet points instead of the full documents.\n\n## The Problem: Verbose Tool Results\n\nIf you are using tools with large response sizes, without compression, tool results quickly consume your context window:\n\n| Component     | Cumulative Token Count | Notes             |\n| ------------- | ---------------------- | ----------------- |\n| System Prompt | 1,200 tokens           |                   |\n| User Message  | 1,300 tokens           |                   |\n| LLM Response  | 1,500 tokens           |                   |\n| Tool Call 1   | 2,500 tokens           |                   |\n| Tool Call 2   | 5,700 tokens           | 2,500 + 3,200 new |\n| Tool Call 3   | 8,500 tokens           | 5,700 + 2,800 new |\n| Tool Call 4   | 12,000 tokens          | 8,500 + 3,500 new |\n\nThis quickly becomes expensive and hits context limits during complex workflows.\n\n## The Solution: Automatic Compression\n\nContext compression summarizes tool results after a threshold:\n\n* Dramatically reduced token costs\n* Stay within context window limits\n* Preserve critical facts and data\n* Automatic compression\n\nContext compression follows a simple pattern:\n\n<Steps>\n  <Step title=\"Enable Compression\">\n    Set `compress_tool_results=True` on your agent or team. This comes with a default threshold of 3 tool calls. The system monitors tool call results as they come in.\n  </Step>\n\n<Step title=\"Threshold Reached\">\n    After the threshold is reached, compression is triggered. Each uncompressed tool call result is individually summarized.\n  </Step>\n\n<Step title=\"Intelligent Summarization\">\n    The compression model preserves key facts (numbers, dates, entities, URLs) while removing boilerplate, redundancy, and filler text.\n  </Step>\n\n<Step title=\"The LLM loop continues\">\n    The compressed tool results are used in the next LLM executions, reducing token usage and extending the life of your context window.\n  </Step>\n</Steps>\n\n<Note>\n  When using `arun` on `Agent` or `Team`, compression is handled asynchronously and the uncompressed tool call results are summarised concurrently.\n</Note>\n\n## Enable Compression\n\nTurn on `compress_tool_results=True` to automatically compress tool results. This comes with a default threshold of 3 tool calls.\n\n<Info>\n  You can also enable `compress_tool_results=True` on individual team members to compress their tool results independently.\n</Info>\n\n## Custom Compression\n\nProvide a [`CompressionManager`](/reference/compression/compression-manager) to customize the compression behavior:\n\n<Tip>\n  Use a faster, cheaper model like `gpt-4o-mini` for compression to reduce latency and cost while using a more capable model as your Agent's main model.\n</Tip>\n\n## When to Use Context Compression\n\n* Agents with tools that return verbose results (web search, APIs)\n* Multi-step workflows with many tool calls\n* Long-running sessions where context accumulates\n* Production systems where cost matters\n\n## Developer Resources\n\n* [CompressionManager Reference](/reference/compression/compression-manager) - Full CompressionManager documentation\n* [Agent Reference](/reference/agents/agent) - Agent parameter documentation\n* [Team Reference](/reference/teams/team) - Team parameter documentation\n* [Cookbook Examples](https://github.com/agno-agi/agno/tree/main/cookbook/agents/context_compression)",
+  "code_samples": [
+    {
+      "code": "Tool Call 1: 2,500 tokens\nTool Call 2: 5,700 tokens\nTool Call 3: 8,500 tokens\n[Compression triggered]\nTool Call 4: 1,300 tokens (800 compressed + 500 new)",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n<Info>\n  You can also enable `compress_tool_results=True` on individual team members to compress their tool results independently.\n</Info>\n\n## Custom Compression\n\nProvide a [`CompressionManager`](/reference/compression/compression-manager) to customize the compression behavior:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "The Problem: Verbose Tool Results",
+      "id": "the-problem:-verbose-tool-results"
+    },
+    {
+      "level": "h2",
+      "text": "The Solution: Automatic Compression",
+      "id": "the-solution:-automatic-compression"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Enable Compression",
+      "id": "enable-compression"
+    },
+    {
+      "level": "h2",
+      "text": "Custom Compression",
+      "id": "custom-compression"
+    },
+    {
+      "level": "h2",
+      "text": "When to Use Context Compression",
+      "id": "when-to-use-context-compression"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#context-compression",
+  "links": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "No event storage",
+  "content": "fast_workflow = Workflow(\n    name=\"Fast Workflow\",\n    store_events=False,\n    steps=[...]\n)\nbash  theme={null}\nexport AGNO_TELEMETRY=false\npython  theme={null}\nworkflow = Workflow(..., telemetry=False)\n```\n\nSee the [Workflow class reference](/reference/workflows/workflow) for more details.\n\n## Developer Resources\n\n* View the [Workflow reference](/reference/workflows/workflow)\n* View the [WorkflowRunOutput schema](/reference/workflows/run-output)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/workflows/README.md)",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  See this [example](/basics/workflows/usage/store-events-and-events-to-skip-in-a-workflow) for more information.\n</Tip>\n\n## Agno Telemetry\n\nAgno logs which model an workflow used so we can prioritize updates to the most popular providers. You can disable this by setting `AGNO_TELEMETRY=false` in your environment or by setting `telemetry=False` on the workflow.",
+      "language": "unknown"
+    },
+    {
+      "code": "or:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Agno Telemetry",
+      "id": "agno-telemetry"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#no-event-storage",
+  "links": []
+}

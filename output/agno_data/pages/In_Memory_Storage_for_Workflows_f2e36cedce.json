@@ -1,0 +1,14 @@
+{
+  "title": "In-Memory Storage for Workflows",
+  "content": "Source: https://docs.agno.com/integrations/database/in-memory/usage/in-memory-for-workflow\n\nExample using `InMemoryDb` with workflows for multi-step processes.\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.in_memory import InMemoryDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#in-memory-storage-for-workflows",
+  "links": []
+}

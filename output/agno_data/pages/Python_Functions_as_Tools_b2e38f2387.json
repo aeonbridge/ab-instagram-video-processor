@@ -1,0 +1,19 @@
+{
+  "title": "Python Functions as Tools",
+  "content": "Source: https://docs.agno.com/basics/tools/creating-tools/python-functions\n\nLearn how to create tools with python functions.\n\nAny python function can be used as a tool by an Agent.\n\nFor example, here's how to use a `get_top_hackernews_stories` function as a tool:\n\n## Magic of the @tool decorator\n\nTo modify the behavior of a tool, use the `@tool` decorator. Some notable features:\n\n* `requires_confirmation=True`: Requires user confirmation before execution.\n* `requires_user_input=True`: Requires user input before execution. Use `user_input_fields` to specify which fields require user input.\n* `external_execution=True`: The tool will be executed outside of the agent's control.\n* `show_result=True`: Show the output of the tool call in the Agent's response, `True` by default. Without this flag, the result of the tool call is sent to the model for further processing.\n* `stop_after_tool_call=True`: Stop the agent run after the tool call.\n* `tool_hooks`: Run custom logic before and after this tool call.\n* `cache_results=True`: Cache the tool result to avoid repeating the same call. Use `cache_dir` and `cache_ttl` to configure the cache.\n\nHere's an example that uses many possible parameters on the `@tool` decorator.\n\nSee the [@tool Decorator Reference](/reference/tools/decorator) for more details.",
+  "code_samples": [
+    {
+      "code": "## Magic of the @tool decorator\n\nTo modify the behavior of a tool, use the `@tool` decorator. Some notable features:\n\n* `requires_confirmation=True`: Requires user confirmation before execution.\n* `requires_user_input=True`: Requires user input before execution. Use `user_input_fields` to specify which fields require user input.\n* `external_execution=True`: The tool will be executed outside of the agent's control.\n* `show_result=True`: Show the output of the tool call in the Agent's response, `True` by default. Without this flag, the result of the tool call is sent to the model for further processing.\n* `stop_after_tool_call=True`: Stop the agent run after the tool call.\n* `tool_hooks`: Run custom logic before and after this tool call.\n* `cache_results=True`: Cache the tool result to avoid repeating the same call. Use `cache_dir` and `cache_ttl` to configure the cache.\n\nHere's an example that uses many possible parameters on the `@tool` decorator.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Magic of the @tool decorator",
+      "id": "magic-of-the-@tool-decorator"
+    }
+  ],
+  "url": "llms-txt#python-functions-as-tools",
+  "links": []
+}

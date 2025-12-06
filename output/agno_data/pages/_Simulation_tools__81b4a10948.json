@@ -1,0 +1,8 @@
+{
+  "title": "--- Simulation tools ---",
+  "content": "def simulate_zoom_scheduling(\n    agent: Agent, candidate_name: str, candidate_email: str\n) -> str:\n    \"\"\"Simulate Zoom call scheduling\"\"\"\n    # Generate a future time slot (1-7 days from now, between 10am-6pm IST)\n    base_time = datetime.now() + timedelta(days=random.randint(1, 7))\n    hour = random.randint(10, 17)  # 10am to 5pm\n    scheduled_time = base_time.replace(hour=hour, minute=0, second=0, microsecond=0)\n\n# Generate fake Zoom URL\n    meeting_id = random.randint(100000000, 999999999)\n    zoom_url = f\"https://zoom.us/j/{meeting_id}\"\n\nresult = \"Zoom call scheduled successfully!\\n\"\n    result += f\"Time: {scheduled_time.strftime('%Y-%m-%d %H:%M')} IST\\n\"\n    result += f\"Meeting URL: {zoom_url}\\n\"\n    result += f\"Participant: {candidate_name} ({candidate_email})\"\n\ndef simulate_email_sending(agent: Agent, to_email: str, subject: str, body: str) -> str:\n    \"\"\"Simulate email sending\"\"\"\n    result = \"Email sent successfully!\\n\"\n    result += f\"To: {to_email}\\n\"\n    result += f\"Subject: {subject}\\n\"\n    result += f\"Body length: {len(body)} characters\\n\"\n    result += f\"Sent at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#----simulation-tools----",
+  "links": []
+}

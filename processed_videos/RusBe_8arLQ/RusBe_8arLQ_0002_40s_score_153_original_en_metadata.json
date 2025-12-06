@@ -1,0 +1,47 @@
+{
+  "title": "Vlog Like a Pro: Tiny Gear, Huge Impact!",
+  "description": "Unlock the secrets of pro vlogging within a small space! Discover how a simple wireless remote and the Sony ZVE10 camera can transform your content creation game. Perfect for beginners and seasoned vloggers alike. #VloggingTips #SonyZVE10 #ContentCreationHack Subscribe for more life-changing hacks!",
+  "tags": [
+    "Vlogging",
+    "SonyZVE10",
+    "ContentCreation",
+    "VideoEditing",
+    "TechHack"
+  ],
+  "category": "Howto & Style",
+  "thumbnail_ideas": [
+    {
+      "concept": "A person holding a wireless remote with the Sony ZVE10 setup in the background",
+      "text_overlay": "Vlog Secret Weapon!",
+      "color_scheme": "Vibrant"
+    },
+    {
+      "concept": "Close-up of the Sony ZVE10 camera with a glowing effect to highlight its features",
+      "text_overlay": "Upgrade Your Vlog!",
+      "color_scheme": "Cool tones"
+    },
+    {
+      "concept": "A split screen showing a cluttered desk on one side and a clean, professional vlogging setup on the other",
+      "text_overlay": "Small Space, Big Impact!",
+      "color_scheme": "Contrast"
+    }
+  ],
+  "target_audience": "Aspiring and experienced vloggers, content creators looking for efficiency, tech enthusiasts",
+  "video_hook": "Ever wondered how to make your vlogs look professional with minimal gear?",
+  "call_to_action": "Hit that like button, subscribe, and share your vlogging hacks in the comments below!",
+  "_generated_at": "2025-12-05T22:58:46.104799",
+  "_model": "gpt-4-turbo-preview",
+  "_source_file": "processed_videos/RusBe_8arLQ/RusBe_8arLQ_0002_40s_score_153_original_en.md",
+  "_platform": "youtube",
+  "_usage": {
+    "input_tokens": 672,
+    "output_tokens": 352,
+    "total_tokens": 1024,
+    "cost_usd": 0.01728,
+    "cost_breakdown": {
+      "input_cost_usd": 0.00672,
+      "output_cost_usd": 0.01056
+    },
+    "duration_seconds": 9.6
+  }
+}

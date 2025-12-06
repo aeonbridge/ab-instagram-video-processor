@@ -1,0 +1,47 @@
+{
+  "title": "Mastering Audio & Camera Setup: Best Gear Revealed!",
+  "description": "Discover the ultimate audio and camera setup tips! Timestamps: 0:00 - Importance of good audio 1:15 - Sony ZV-E10 camera review 2:45 - Sigma 16mm lens overview #CameraSetup #AudioTips #SonyZVE10",
+  "tags": [
+    "camera setup",
+    "audio tips",
+    "Sony ZVE10",
+    "Sigma 16mm lens",
+    "video gear"
+  ],
+  "category": "Howto & Style",
+  "thumbnail_ideas": [
+    {
+      "concept": "Close-up of camera lens with colorful background",
+      "text_overlay": "Pro Video Setup",
+      "color_scheme": "Blue, Yellow, White"
+    },
+    {
+      "concept": "Person adjusting audio equipment with tech gadgets around",
+      "text_overlay": "Audio Mastery",
+      "color_scheme": "Black, Red, Silver"
+    },
+    {
+      "concept": "Split screen showing before and after shots with camera settings",
+      "text_overlay": "Visual Transformation",
+      "color_scheme": "Green, Purple, Orange"
+    }
+  ],
+  "target_audience": "Tech-savvy content creators and videography enthusiasts",
+  "video_hook": "Want to upgrade your video quality? Stay tuned to uncover the secrets!",
+  "call_to_action": "Ready to level up your video game? Hit like and subscribe for more pro tips!",
+  "_generated_at": "2025-12-05T22:25:21.062321",
+  "_model": "gpt-3.5-turbo",
+  "_source_file": "processed_videos/RusBe_8arLQ/RusBe_8arLQ_0001_40s_score_137_original_en.md",
+  "_platform": "youtube",
+  "_usage": {
+    "input_tokens": 654,
+    "output_tokens": 315,
+    "total_tokens": 969,
+    "cost_usd": 0.0008,
+    "cost_breakdown": {
+      "input_cost_usd": 0.000327,
+      "output_cost_usd": 0.000473
+    },
+    "duration_seconds": 2.16
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Manual Knowledge Filters",
+  "content": "Manual filtering gives you full control over which documents are searched by specifying filters directly in your code.\n\n## Step 1: Attach Metadata\n\nThere are two ways to attach metadata to your documents:\n\n1. **Attach Metadata When Initializing the Knowledge Base**\n\n2. **Attach Metadata When Loading Documents One by One**\n\n> 💡 **Tips:**\\\n> • Use **Option 1** if you have all your documents and metadata ready at once.\\\n> • Use **Option 2** if you want to add documents incrementally or as they become available.\n\n## Step 2: Query with Filters\n\nYou can pass filters in two ways:\n\n### 1. On the Agent (applies to all queries)\n\n### 2. On Each Query (overrides Agent filters for that run)\n\n<Note>If you pass filters both on the Agent and on the query, the query-level filters take precedence.</Note>\n\n## Combining Multiple Filters\n\nYou can filter by multiple fields:\n\n* Load documents with different metadata.\n* Query with different filter combinations.\n* Observe how the results change!\n\n## Developer Resources\n\n* [Manual filtering](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/filters/filtering.py)\n* [Manual filtering on load](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/filters/filtering_on_load.py)",
+  "code_samples": [
+    {
+      "code": "2. **Attach Metadata When Loading Documents One by One**",
+      "language": "unknown"
+    },
+    {
+      "code": "***\n\n> 💡 **Tips:**\\\n> • Use **Option 1** if you have all your documents and metadata ready at once.\\\n> • Use **Option 2** if you want to add documents incrementally or as they become available.\n\n## Step 2: Query with Filters\n\nYou can pass filters in two ways:\n\n### 1. On the Agent (applies to all queries)",
+      "language": "unknown"
+    },
+    {
+      "code": "### 2. On Each Query (overrides Agent filters for that run)",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>If you pass filters both on the Agent and on the query, the query-level filters take precedence.</Note>\n\n## Combining Multiple Filters\n\nYou can filter by multiple fields:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Step 1: Attach Metadata",
+      "id": "step-1:-attach-metadata"
+    },
+    {
+      "level": "h2",
+      "text": "Step 2: Query with Filters",
+      "id": "step-2:-query-with-filters"
+    },
+    {
+      "level": "h3",
+      "text": "1. On the Agent (applies to all queries)",
+      "id": "1.-on-the-agent-(applies-to-all-queries)"
+    },
+    {
+      "level": "h3",
+      "text": "2. On Each Query (overrides Agent filters for that run)",
+      "id": "2.-on-each-query-(overrides-agent-filters-for-that-run)"
+    },
+    {
+      "level": "h2",
+      "text": "Combining Multiple Filters",
+      "id": "combining-multiple-filters"
+    },
+    {
+      "level": "h2",
+      "text": "Try It Yourself!",
+      "id": "try-it-yourself!"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#manual-knowledge-filters",
+  "links": []
+}

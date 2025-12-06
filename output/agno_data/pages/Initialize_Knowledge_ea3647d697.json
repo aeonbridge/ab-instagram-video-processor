@@ -1,0 +1,8 @@
+{
+  "title": "Initialize Knowledge",
+  "content": "knowledge = Knowledge(\n    vector_db=vector_db,\n    max_results=5,\n    contents_db=PostgresDb(\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n        knowledge_table=\"knowledge_contents\",\n    ),\n)\n\nknowledge.add_content(\n    path=downloaded_csv_paths[0],\n    metadata={\n        \"data_type\": \"sales\",\n        \"quarter\": \"Q1\",\n        \"year\": 2024,\n        \"region\": \"north_america\",\n        \"currency\": \"USD\",\n    },\n)\n\nknowledge.add_content(\n    path=downloaded_csv_paths[1],\n    metadata={\n        \"data_type\": \"sales\",\n        \"year\": 2024,\n        \"region\": \"europe\",\n        \"currency\": \"EUR\",\n    },\n)\n\nknowledge.add_content(\n    path=downloaded_csv_paths[2],\n    metadata={\n        \"data_type\": \"survey\",\n        \"survey_type\": \"customer_satisfaction\",\n        \"year\": 2024,\n        \"target_demographic\": \"mixed\",\n    },\n)\n\nknowledge.add_content(\n    path=downloaded_csv_paths[3],\n    metadata={\n        \"data_type\": \"financial\",\n        \"sector\": \"technology\",\n        \"year\": 2024,\n        \"report_type\": \"quarterly_earnings\",\n    },\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-knowledge",
+  "links": []
+}

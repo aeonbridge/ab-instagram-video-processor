@@ -1,0 +1,8 @@
+{
+  "title": "Custom function step that has access to ALL previous step outputs",
+  "content": "def create_comprehensive_report(step_input: StepInput) -> StepOutput:\n    \"\"\"\n    Custom function that creates a report using data from multiple previous steps.\n    This function has access to ALL previous step outputs and the original workflow message.\n    \"\"\"\n\n# Access original workflow input\n    original_topic = step_input.input or \"\"\n\n# Access specific step outputs by name\n    hackernews_data = step_input.get_step_content(\"research_hackernews\") or \"\"\n    web_data = step_input.get_step_content(\"research_web\") or \"\"\n\n# Or access ALL previous content\n    _ = step_input.get_all_previous_content()\n\n# Create a comprehensive report combining all sources\n    report = f\"\"\"\n        # Comprehensive Research Report: {original_topic}\n\n## Executive Summary\n        Based on research from HackerNews and web sources, here's a comprehensive analysis of {original_topic}.\n\n## HackerNews Insights\n        {hackernews_data[:500]}...\n\n## Web Research Findings\n        {web_data[:500]}...\n    \"\"\"\n\nreturn StepOutput(\n        step_name=\"comprehensive_report\", content=report.strip(), success=True\n    )\n\ncomprehensive_report_step = Step(\n    name=\"comprehensive_report\",\n    executor=create_comprehensive_report,\n    description=\"Create comprehensive report from all research sources\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#custom-function-step-that-has-access-to-all-previous-step-outputs",
+  "links": []
+}

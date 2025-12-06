@@ -1,0 +1,8 @@
+{
+  "title": "Agents",
+  "content": "notion_agent = Agent(\n    name=\"Notion Manager\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    tools=[\n        NotionTools(\n            api_key=os.getenv(\"NOTION_API_KEY\", \"\"),\n            database_id=os.getenv(\"NOTION_DATABASE_ID\", \"\"),\n        )\n    ],\n    instructions=[\n        \"You are a Notion page manager.\",\n        \"You will receive instructions with a query and a pre-classified tag.\",\n        \"CRITICAL: Use ONLY the exact tag provided in the instructions. Do NOT create new tags or modify the tag name.\",\n        \"The valid tags are: travel, tech, general-blogs, fashion, documents\",\n        \"Workflow:\",\n        \"1. Search for existing pages with the EXACT tag provided\",\n        \"2. If a page exists: Update that page with the new query content\",\n        \"3. If no page exists: Create a new page using the EXACT tag provided\",\n        \"Always preserve the exact tag name as given in the instructions.\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agents",
+  "links": []
+}

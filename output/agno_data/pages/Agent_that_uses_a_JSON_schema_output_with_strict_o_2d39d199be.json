@@ -1,0 +1,8 @@
+{
+  "title": "Agent that uses a JSON schema output with strict_output=True (default)",
+  "content": "json_schema_output_agent = Agent(\n    model=Cerebras(id=\"llama-3.3-70b\"),\n    description=\"You are a helpful assistant. Summarize the movie script based on the location in a JSON object.\",\n    output_schema=MovieScript,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-that-uses-a-json-schema-output-with-strict_output=true-(default)",
+  "links": []
+}

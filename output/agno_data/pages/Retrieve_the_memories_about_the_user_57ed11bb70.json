@@ -1,0 +1,19 @@
+{
+  "title": "Retrieve the memories about the user",
+  "content": "memories = agent.get_user_memories(user_id=\"123\")\nprint(memories)\n```\n\nEach memory stored in your database contains the following fields:\n\n| Field        | Type   | Description                                     |\n| ------------ | ------ | ----------------------------------------------- |\n| `memory_id`  | `str`  | The unique identifier for the memory.           |\n| `memory`     | `str`  | The memory content, stored as a string.         |\n| `topics`     | `list` | The topics of the memory.                       |\n| `input`      | `str`  | The input that generated the memory.            |\n| `user_id`    | `str`  | The user ID of the memory.                      |\n| `agent_id`   | `str`  | The agent ID of the memory.                     |\n| `team_id`    | `str`  | The team ID of the memory.                      |\n| `updated_at` | `int`  | The timestamp when the memory was last updated. |\n\n<Tip>\n  View and manage all your memories visually through the [Memories page in AgentOS](https://os.agno.com/memory)/\n</Tip>\n\n<CardGroup cols={3}>\n  <Card title=\"Agent Memory\" icon=\"robot\" iconType=\"duotone\" href=\"/basics/memory/agent\">\n    Learn about agent memory.\n  </Card>\n\n<Card title=\"Team Memory\" icon=\"users\" iconType=\"duotone\" href=\"/basics/memory/team\">\n    Learn about team memory.\n  </Card>\n\n<Card title=\"Working with Memories\" icon=\"file-lines\" iconType=\"duotone\" href=\"/basics/memory/working-with-memories\">\n    Learn about the nuances of working with memories.\n  </Card>\n\n<Card title=\"Production Best Practices\" icon=\"shield-check\" iconType=\"duotone\" href=\"/basics/memory/best-practices\">\n    Learn about best practices for production use of memories.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Memory Data Model",
+      "id": "memory-data-model"
+    },
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#retrieve-the-memories-about-the-user",
+  "links": []
+}

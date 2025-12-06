@@ -1,0 +1,14 @@
+{
+  "title": "Test with vulnerable code - workflow stops at security gate",
+  "content": "workflow.print_response(\"Scan this code: exec(input('Enter command: '))\")\n```\n\n## Developer Resources\n\n* [Early Stop Workflow](/basics/workflows/usage/early-stop-workflow)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#test-with-vulnerable-code---workflow-stops-at-security-gate",
+  "links": []
+}

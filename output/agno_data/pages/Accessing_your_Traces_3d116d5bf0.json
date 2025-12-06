@@ -1,0 +1,19 @@
+{
+  "title": "Accessing your Traces",
+  "content": "Source: https://docs.agno.com/basics/tracing/db-functions\n\nDatabase convenience functions for querying traces and spans\n\nAgno provides convenience functions on your database instance to query traces and spans. These functions work with any supported database (SQLite, PostgreSQL, etc.).\n\nGet a single trace by identifier.\n\n```python  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Trace Functions",
+      "id": "trace-functions"
+    },
+    {
+      "level": "h3",
+      "text": "`db.get_trace()`",
+      "id": "`db.get_trace()`"
+    }
+  ],
+  "url": "llms-txt#accessing-your-traces",
+  "links": []
+}

@@ -1,0 +1,33 @@
+{
+  "title": "After resolving all requirements, you can continue the run:",
+  "content": "response = agent.continue_run(run_id=run_response.run_id, requirements=run_response.requirements)\npython  theme={null}\nresponse = agent.continue_run(run_response=run_response)\npython  theme={null}\nfor run_event in agent.run(\"Perform sensitive operation\", stream=True):\n    if run_event.is_paused:\n        for requirement in run_event.active_requirements:\n            # You handle any active requirements here\n\nresponse = agent.continue_run(run_id=run_event.run_id, requirements=run_event.requirements, stream=True)\n```\n\n<Note>\n  You can also stream the events resulting from calling the `continue_run` or `acontinue_run` methods.\n</Note>\n\n<CardGroup cols={3}>\n  <Card title=\"User Confirmation\" icon=\"circle-check\" href=\"/basics/hitl/user-confirmation\">\n    Require explicit user approval before executing tool calls\n  </Card>\n\n<Card title=\"User Input\" icon=\"keyboard\" href=\"/basics/hitl/user-input\">\n    Gather specific information from users during execution\n  </Card>\n\n<Card title=\"Dynamic User Input\" icon=\"comments\" href=\"/basics/hitl/dynamic-user-input\">\n    Let agents request user input dynamically when needed\n  </Card>\n\n<Card title=\"External Tool Execution\" icon=\"plug\" href=\"/basics/hitl/external-execution\">\n    Execute tools outside of the agent's control\n  </Card>\n</CardGroup>\n\n## Developer Resources\n\n* View more [Examples](/basics/hitl/usage/)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/agents/human_in_the_loop)",
+  "code_samples": [
+    {
+      "code": "The `continue_run` method continues with the state of the agent at the time of the pause.\n\nYou can also call the `continue_run` method passing the `RunOutput` of the specific run to continue:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Streaming Human-in-the-Loop Flows\n\nYou can also stream the responses you get during a Human-in-the-Loop flow. This is useful when you want to process or show the response in real-time.\n\nIt works similarly to non-streaming. You will just need to handle the events you get from streaming the Agent run.\n\nIf any event is paused, then you will need to handle the active requirements:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Streaming Human-in-the-Loop Flows",
+      "id": "streaming-human-in-the-loop-flows"
+    },
+    {
+      "level": "h2",
+      "text": "Learn More",
+      "id": "learn-more"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#after-resolving-all-requirements,-you-can-continue-the-run:",
+  "links": []
+}

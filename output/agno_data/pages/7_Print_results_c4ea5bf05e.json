@@ -1,0 +1,47 @@
+{
+  "title": "7. Print results",
+  "content": "print(\"\\n--- Generated Shorts ---\")\nfor short in shorts:\n    print(f\"Short at {short['path']}\")\n    print(f\"Description: {short['description']}\")\n    print(f\"Engagement Score: {short['score']}/10\\n\")\nbash  theme={null}\n    pip install -U agno opencv-python sqlalchemy\n    bash Mac theme={null}\n      brew install ffmpeg\n      bash Windows   theme={null}\n      # Install ffmpeg from https://ffmpeg.org/download.html\n      bash Mac/Linux theme={null}\n       export GOOGLE_API_KEY=\"your_google_api_key_here\"\n      bash Windows theme={null}\n        $Env:GOOGLE_API_KEY=\"your_google_api_key_here\"\n      bash  theme={null}\n    touch video_to_shorts.py\n    bash Mac theme={null}\n      python video_to_shorts.py\n      bash Windows   theme={null}\n      python video_to_shorts.py\n      ```\n    </CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/agents/multimodal\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install ffmpeg\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Export your GOOGLE API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Create a Python file\">\n    Create a Python file and add the above code.",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#7.-print-results",
+  "links": []
+}

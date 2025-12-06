@@ -1,0 +1,8 @@
+{
+  "title": "Add content - gets embedded automatically",
+  "content": "knowledge.add_content(\n    text_content=\"The sky is blue during the day and dark at night.\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-content---gets-embedded-automatically",
+  "links": []
+}

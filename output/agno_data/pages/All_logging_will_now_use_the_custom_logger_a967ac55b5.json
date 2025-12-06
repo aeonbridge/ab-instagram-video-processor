@@ -1,0 +1,19 @@
+{
+  "title": "All logging will now use the custom logger",
+  "content": "log_info(\"This is using our custom logger!\")\n\nagent = Agent()\nagent.print_response(\"What is 2+2?\")\npython  theme={null}\nimport logging\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.utils.log import configure_agno_logging, log_info",
+  "code_samples": [
+    {
+      "code": "## Logging to a File\n\nYou can configure Agno to log to a file instead of the console:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Logging to a File",
+      "id": "logging-to-a-file"
+    }
+  ],
+  "url": "llms-txt#all-logging-will-now-use-the-custom-logger",
+  "links": []
+}

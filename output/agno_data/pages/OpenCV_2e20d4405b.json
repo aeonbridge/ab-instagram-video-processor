@@ -1,0 +1,29 @@
+{
+  "title": "OpenCV",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/opencv\n\nOpenCVTools enables agents to capture images and videos from webcam using OpenCV computer vision library.\n\nThe following agent can capture images and videos from your webcam:\n\n| Parameter              | Type   | Default | Description                                           |\n| ---------------------- | ------ | ------- | ----------------------------------------------------- |\n| `show_preview`         | `bool` | `False` | Whether to show camera preview window during capture. |\n| `enable_capture_image` | `bool` | `True`  | Enable image capture functionality.                   |\n| `enable_capture_video` | `bool` | `True`  | Enable video capture functionality.                   |\n\n| Function        | Description                                              |\n| --------------- | -------------------------------------------------------- |\n| `capture_image` | Capture a single image from the webcam.                  |\n| `capture_video` | Record a video from the webcam for a specified duration. |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/opencv.py)\n* [OpenCV Documentation](https://docs.opencv.org/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#opencv",
+  "links": []
+}

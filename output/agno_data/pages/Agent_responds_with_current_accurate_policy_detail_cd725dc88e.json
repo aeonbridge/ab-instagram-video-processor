@@ -1,0 +1,19 @@
+{
+  "title": "Agent responds with current, accurate policy details",
+  "content": "",
+  "code_samples": [
+    {
+      "code": "### Contextual Understanding\n\nThe agent understands the context of questions and searches for the most relevant information, not just keyword matches.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Contextual Understanding",
+      "id": "contextual-understanding"
+    }
+  ],
+  "url": "llms-txt#agent-responds-with-current,-accurate-policy-details",
+  "links": []
+}

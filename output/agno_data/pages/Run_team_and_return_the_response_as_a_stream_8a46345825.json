@@ -1,0 +1,19 @@
+{
+  "title": "Run team and return the response as a stream",
+  "content": "stream: Iterator[TeamRunOutputEvent] = team.run(\"What is the weather in Tokyo?\", stream=True)\nfor chunk in stream:\n    print(chunk.content, end=\"\", flush=True)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Streaming team events\n\nWhen you stream a response, only the `TeamRunContent` events will be streamed by default.\n\nYou can also stream all run events by setting `stream_events=True`.\n\nThis will provide real-time updates about the team's internal processes, like tool calling or reasoning:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Streaming team events",
+      "id": "streaming-team-events"
+    }
+  ],
+  "url": "llms-txt#run-team-and-return-the-response-as-a-stream",
+  "links": []
+}

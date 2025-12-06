@@ -1,0 +1,8 @@
+{
+  "title": "Initialize Searxng with your Searxng instance URL",
+  "content": "searxng = SearxngTools(\n    host=\"http://localhost:53153\",\n    engines=[],\n    fixed_max_results=5,\n    news=True,\n    science=True\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-searxng-with-your-searxng-instance-url",
+  "links": []
+}

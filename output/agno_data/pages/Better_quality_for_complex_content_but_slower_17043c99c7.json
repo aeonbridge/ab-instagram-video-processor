@@ -1,0 +1,33 @@
+{
+  "title": "Better quality for complex content (but slower)",
+  "content": "quality_chunking = SemanticChunking(\n    chunk_size=1200,\n    similarity_threshold=0.5\n)\npython  theme={null}\nimport asyncio\n\nasync def load_knowledge_efficiently():\n    # Load multiple content sources in parallel\n    tasks = [\n        knowledge.add_content_async(path=\"docs/hr/\"),\n        knowledge.add_content_async(path=\"docs/engineering/\"),\n        knowledge.add_content_async(url=\"https://company.com/api-docs\"),\n    ]\n    await asyncio.gather(*tasks)\n\nasyncio.run(load_knowledge_efficiently())\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "Learn more about [choosing chunking strategies](/basics/knowledge/chunking/overview).\n\n### 5. Use Async for Batch Operations\n\nProcess multiple items concurrently:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Common Performance Pitfalls\n\n### Issue: Search Returns Irrelevant Results\n\n**What's happening:** Chunks are too large, too small, or chunking strategy doesn't match your content.\n\n**Quick fixes:**\n\n1. Check your chunking strategy - try semantic chunking for better context\n2. Verify content actually loaded: `knowledge.get_content_status(content_id)`\n3. Increase `max_results` to see if relevant results are just ranked lower\n4. Add metadata filters to narrow the search scope",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "5. Use Async for Batch Operations",
+      "id": "5.-use-async-for-batch-operations"
+    },
+    {
+      "level": "h2",
+      "text": "Common Performance Pitfalls",
+      "id": "common-performance-pitfalls"
+    },
+    {
+      "level": "h3",
+      "text": "Issue: Search Returns Irrelevant Results",
+      "id": "issue:-search-returns-irrelevant-results"
+    }
+  ],
+  "url": "llms-txt#better-quality-for-complex-content-(but-slower)",
+  "links": []
+}

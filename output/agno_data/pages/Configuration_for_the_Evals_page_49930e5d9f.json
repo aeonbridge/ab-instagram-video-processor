@@ -1,0 +1,8 @@
+{
+  "title": "Configuration for the Evals page",
+  "content": "evals:\n  available_models:\n    - <MODEL_STRING>\n    ...\n  display_name: <DISPLAY_NAME>\n  dbs:\n    - <DB_ID>\n      domain_config:\n        available_models:\n          - <MODEL_STRING>\n          ...\n        display_name: <DISPLAY_NAME>\n    ...",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configuration-for-the-evals-page",
+  "links": []
+}

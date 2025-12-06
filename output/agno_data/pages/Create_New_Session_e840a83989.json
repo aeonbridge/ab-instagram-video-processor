@@ -1,0 +1,8 @@
+{
+  "title": "Create New Session",
+  "content": "Source: https://docs.agno.com/reference-api/schema/sessions/create-new-session\n\npost /sessions\nCreate a new empty session with optional configuration. Useful for pre-creating sessions with specific session_state, metadata, or other properties before running any agent/team/workflow interactions. The session can later be used by providing its session_id in run requests.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-new-session",
+  "links": []
+}

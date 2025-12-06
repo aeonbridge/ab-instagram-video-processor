@@ -1,0 +1,36 @@
+{
+  "title": "Initialize the Agent with the knowledge",
+  "content": "agent = Agent(\n    knowledge=knowledge,\n    search_knowledge=True,\n)\n\nif __name__ == \"__main__\":\n    # Comment out after first run\n    asyncio.run(\n        knowledge.add_content_async(\n            topics=[\"web3 latest trends 2025\"],\n            reader=WebSearchReader(\n                max_results=3,\n                search_engine=\"duckduckgo\",\n                chunk=True,\n            ),\n        )\n    )\n\n# Create and use the agent\n    asyncio.run(\n        agent.aprint_response(\n            \"What are the latest AI trends according to the search results?\",\n            markdown=True,\n        )\n    )\n\nbash  theme={null}\n    pip install -U requests beautifulsoup4 agno openai\n    bash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash Mac theme={null}\n      python examples/basics/knowledge/readers/web_search_reader_async.py\n      bash Windows theme={null}\n      python examples/basics/knowledge/readers/web_search_reader_async.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n<Snippet file=\"web-search-reader-reference.mdx\" />",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#initialize-the-agent-with-the-knowledge",
+  "links": []
+}

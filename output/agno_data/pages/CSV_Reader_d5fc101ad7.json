@@ -1,0 +1,8 @@
+{
+  "title": "CSV Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/csv\n\nCSVReader is a reader class that allows you to read data from CSV files.\n\n<Snippet file=\"csv-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#csv-reader",
+  "links": []
+}

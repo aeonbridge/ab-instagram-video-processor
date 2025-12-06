@@ -1,0 +1,19 @@
+{
+  "title": "PromptInjectionGuardrail",
+  "content": "Source: https://docs.agno.com/reference/hooks/prompt-injection-guardrail\n\n| Parameter            | Type                  | Default | Description                                                                              |\n| -------------------- | --------------------- | ------- | ---------------------------------------------------------------------------------------- |\n| `injection_patterns` | `Optional[List[str]]` | `None`  | A list of patterns to check for. Defaults to a list of common prompt injection patterns. |\n\n## Injection patterns\n\nThe default list of injection patterns handled by the guardrail are:\n\n* \"ignore previous instructions\"\n* \"ignore your instructions\"\n* \"you are now a\"\n* \"forget everything above\"\n* \"developer mode\"\n* \"override safety\"\n* \"disregard guidelines\"\n* \"system prompt\"\n* \"jailbreak\"\n* \"act as if\"\n* \"pretend you are\"\n* \"roleplay as\"\n* \"simulate being\"\n* \"bypass restrictions\"\n* \"ignore safeguards\"\n* \"admin override\"\n* \"root access\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    },
+    {
+      "level": "h2",
+      "text": "Injection patterns",
+      "id": "injection-patterns"
+    }
+  ],
+  "url": "llms-txt#promptinjectionguardrail",
+  "links": []
+}

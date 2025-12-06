@@ -1,0 +1,33 @@
+{
+  "title": "Nebius Token Factory",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/nebius/overview\n\nLearn how to use Nebius models in Agno.\n\nNebius Token Factory is a platform from Nebius that simplifies the process of building applications using AI models. It provides a suite of tools and services for developers to easily test, integrate and fine-tune various AI models, including those for text and image generation.\nYou can checkout the list of available models [here](https://tokenfactory.nebius.com/).\n\nWe recommend experimenting to find the best-suited-model for your use-case.\n\nSet your `NEBIUS_API_KEY` environment variable. Get your key [from Nebius Token Factory here](https://tokenfactory.nebius.com/?modals=create-api-key).\n\nUse `Nebius` with your `Agent`:\n\n<CodeGroup>\n  \n</CodeGroup>\n\n<Note> View more examples [here](/integrations/models/gateways/nebius/usage/basic-stream). </Note>\n\n| Parameter  | Type            | Default                                    | Description                                                   |\n| ---------- | --------------- | ------------------------------------------ | ------------------------------------------------------------- |\n| `id`       | `str`           | `\"meta-llama/Meta-Llama-3.1-70B-Instruct\"` | The id of the Nebius model to use                             |\n| `name`     | `str`           | `\"Nebius\"`                                 | The name of the model                                         |\n| `provider` | `str`           | `\"Nebius\"`                                 | The provider of the model                                     |\n| `api_key`  | `Optional[str]` | `None`                                     | The API key for Nebius (defaults to NEBIUS\\_API\\_KEY env var) |\n| `base_url` | `str`           | `\"https://api.tokenfactory.nebius.com/v1\"` | The base URL for the Nebius API                               |",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Example\n\nUse `Nebius` with your `Agent`:\n\n<CodeGroup>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication",
+      "id": "authentication"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#nebius-token-factory",
+  "links": []
+}

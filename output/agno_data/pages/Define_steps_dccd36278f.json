@@ -1,0 +1,8 @@
+{
+  "title": "Define steps",
+  "content": "research_step = Step(\n    name=\"Research Step\",\n    team=research_team,\n)\n\ncontent_planning_step = Step(\n    name=\"Content Planning Step\",\n    agent=content_planner,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-steps",
+  "links": []
+}

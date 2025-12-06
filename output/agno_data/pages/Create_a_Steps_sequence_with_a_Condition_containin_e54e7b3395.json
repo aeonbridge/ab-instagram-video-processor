@@ -1,0 +1,8 @@
+{
+  "title": "Create a Steps sequence with a Condition containing Parallel steps",
+  "content": "article_creation_sequence = Steps(\n    name=\"ArticleCreation\",\n    description=\"Complete article creation workflow from research to final edit\",\n    steps=[\n        initial_research_step,\n        # Condition with Parallel steps inside\n        Condition(\n            name=\"TechResearchCondition\",\n            description=\"If topic is tech-related, do specialized parallel research\",\n            evaluator=is_tech_topic,\n            steps=[\n                Parallel(\n                    tech_research_step,\n                    news_research_step,\n                    name=\"SpecializedResearch\",\n                    description=\"Parallel tech and news research\",\n                ),\n                content_prep_step,\n            ],\n        ),\n        writing_step,\n        editing_step,\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-steps-sequence-with-a-condition-containing-parallel-steps",
+  "links": []
+}

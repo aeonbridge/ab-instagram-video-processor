@@ -1,0 +1,24 @@
+{
+  "title": "MySQL Workflow Storage",
+  "content": "Source: https://docs.agno.com/integrations/database/mysql/usage/mysql-for-workflow\n\nAgno supports using MySQL as a storage backend for Workflows using the `MysqlDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **MySQL** on port **3306** using:\n\n```python mysql_for_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.mysql import MySQLDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\n\ndb_url = \"mysql+pymysql://ai:ai@localhost:3306/ai\"\n\ndb = MySQLDb(db_url=db_url)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run MySQL",
+      "id": "run-mysql"
+    }
+  ],
+  "url": "llms-txt#mysql-workflow-storage",
+  "links": []
+}

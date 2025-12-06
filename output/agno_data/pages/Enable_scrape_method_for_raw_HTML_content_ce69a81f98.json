@@ -1,0 +1,19 @@
+{
+  "title": "Enable scrape method for raw HTML content",
+  "content": "scrapegraph_scrape = ScrapeGraphTools(enable_scrape=True, enable_smartscraper=False)\n\nscrape_agent = Agent(\n    tools=[scrapegraph_scrape],\n    model=agent_model,\n    markdown=True,\n    stream=True,\n)\n\nscrape_agent.print_response(\n    \"Use the scrape tool to get the complete raw HTML content from https://en.wikipedia.org/wiki/2025_FIFA_Club_World_Cup\"\n)\npython cookbook/tools/scrapegraph_tools.py theme={null}",
+  "code_samples": [
+    {
+      "code": "### All Functions with JavaScript Rendering\n\nEnable all ScrapeGraph functions with heavy JavaScript support:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "All Functions with JavaScript Rendering",
+      "id": "all-functions-with-javascript-rendering"
+    }
+  ],
+  "url": "llms-txt#enable-scrape-method-for-raw-html-content",
+  "links": []
+}

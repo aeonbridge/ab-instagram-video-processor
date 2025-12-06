@@ -1,0 +1,39 @@
+{
+  "title": "Newspaper",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/newspaper\n\n**NewspaperTools** enable an Agent to read news articles using the Newspaper4k library.\n\nThe following example requires the `newspaper3k` library.\n\nThe following agent will summarize the wikipedia article on language models.\n\n| Parameter                 | Type   | Default | Description                                                   |\n| ------------------------- | ------ | ------- | ------------------------------------------------------------- |\n| `enable_get_article_text` | `bool` | `True`  | Enables the functionality to retrieve the text of an article. |\n\n| Function           | Description                                                                                                                                                                             |\n| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `get_article_text` | Retrieves the text of an article from a specified URL. Parameters include `url` for the URL of the article. Returns the text of the article or an error message if the retrieval fails. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/newspaper.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/newspaper_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will summarize the wikipedia article on language models.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#newspaper",
+  "links": []
+}

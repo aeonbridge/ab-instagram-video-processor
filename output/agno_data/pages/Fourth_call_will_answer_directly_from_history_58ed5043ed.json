@@ -1,0 +1,14 @@
+{
+  "title": "Fourth call - will answer directly from history",
+  "content": "workflow.print_response(\n    \"Compare Rocky and Luna\", stream=True\n)\n```\n\n## Developer Resources\n\nExplore the different examples in [Conversational Workflows Examples](/basics/workflows/usage/conversational-workflow-with-conditional-step) section for more details.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#fourth-call---will-answer-directly-from-history",
+  "links": []
+}

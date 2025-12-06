@@ -1,0 +1,8 @@
+{
+  "title": "Define a research workflow",
+  "content": "research_workflow = Workflow(\n    name=\"research-workflow\",\n    steps=[\n        Step(name=\"search\", agent=search_agent),\n        Step(name=\"summarize\", agent=summary_agent),\n        Step(name=\"fact-check\", agent=fact_check_agent),\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-a-research-workflow",
+  "links": []
+}

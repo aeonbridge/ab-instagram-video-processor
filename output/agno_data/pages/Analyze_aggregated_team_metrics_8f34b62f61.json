@@ -1,0 +1,8 @@
+{
+  "title": "Analyze aggregated team metrics",
+  "content": "print(\"=\" * 50)\nprint(\"AGGREGATED TEAM METRICS\")\nprint(\"=\" * 50)\npprint(run_output.metrics)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#analyze-aggregated-team-metrics",
+  "links": []
+}

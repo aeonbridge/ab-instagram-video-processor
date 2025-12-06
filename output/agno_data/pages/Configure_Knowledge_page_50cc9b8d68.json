@@ -1,0 +1,8 @@
+{
+  "title": "Configure Knowledge page",
+  "content": "knowledge:\n  display_name: \"Knowledge Base\"\n  dbs:\n    - db_id: db-0001\n      domain_config:\n        display_name: Product documentation",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-knowledge-page",
+  "links": []
+}

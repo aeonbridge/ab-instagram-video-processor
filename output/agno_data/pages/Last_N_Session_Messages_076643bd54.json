@@ -1,0 +1,21 @@
+{
+  "title": "Last N Session Messages",
+  "content": "Source: https://docs.agno.com/basics/state/agent/usage/last-n-session-messages\n\nThis example demonstrates how to configure agents to search through previous sessions and limit the number of historical sessions included in context. This helps manage context length while maintaining relevant conversation history.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    Create a file called `last_n_session_messages.py`\n  </Step>\n\n<Step title=\"Add code to file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Snippet file=\"set-openai-key.mdx\" />\n\n<Step title=\"Run the agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/agents/state\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"set-openai-key.mdx\" />\n\n  <Step title=\"Run the agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#last-n-session-messages",
+  "links": []
+}

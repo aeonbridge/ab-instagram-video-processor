@@ -1,0 +1,43 @@
+{
+  "title": "Create agent with workflow tools",
+  "content": "orchestrator = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    tools=[WorkflowTools(workflow=research_workflow, add_instructions=True)],\n)\n\norchestrator.print_response(\n    \"Research climate change impacts on agriculture\",\n    stream=True,\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.pdf import PDFKnowledgeBase\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.knowledge import KnowledgeTools\nfrom agno.tools.memory import MemoryTools\nfrom agno.tools.reasoning import ReasoningTools\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    tools=[\n        ReasoningTools(add_instructions=True),\n        KnowledgeTools(\n            knowledge=my_knowledge,\n            enable_think=False,\n            enable_analyze=False,\n            add_instructions=False,\n        ),\n        MemoryTools(\n            db=my_db,\n            enable_think=False,\n            enable_analyze=False,\n            add_instructions=False,\n        ),\n    ],\n    instructions=\"Use reasoning for planning, knowledge for facts, and memory for personalization\",\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "**How it works:**\n\n1. Agent calls `think()`: \"I need to run the research workflow with 'climate change agriculture' as input.\"\n2. Agent calls `run_workflow(input_data=\"climate change impacts on agriculture\")`\n3. Workflow executes all steps (search → summarize → fact-check)\n4. Agent calls `analyze()`: \"Workflow completed successfully. All fact-checks passed.\"\n5. Agent provides final synthesized answer\n\n## Common Pattern: Think → Act → Analyze\n\nAll four toolkits follow the same reasoning cycle:\n\n1. **THINK** - Plan what to do, refine approach, brainstorm\n2. **ACT** (Domain-Specific)\n   * ReasoningTools: Direct reasoning\n   * KnowledgeTools: `search_knowledge()`\n   * MemoryTools: `get/add/update/delete_memory()`\n   * WorkflowTools: `run_workflow()`\n3. **ANALYZE** - Evaluate results, decide next action\n4. **REPEAT** - Loop back to THINK if needed, or provide answer\n\nThis mirrors how humans solve complex problems: we think before acting, evaluate results, and adjust our approach based on what we learn.\n\n## Choosing the Right Reasoning Toolkit\n\n| If you need to...                    | Use                   | Example                                                |\n| ------------------------------------ | --------------------- | ------------------------------------------------------ |\n| Solve logic puzzles or math problems | `ReasoningTools`      | \"Solve: If x² + 5x + 6 = 0, what is x?\"                |\n| Search through documents             | `KnowledgeTools`      | \"Find all mentions of user authentication in our docs\" |\n| Remember user preferences            | `MemoryTools`         | \"Remember that I'm allergic to shellfish\"              |\n| Orchestrate complex multi-step tasks | `WorkflowTools`       | \"Research, write, and fact-check an article\"           |\n| Combine multiple domains             | Use multiple toolkits | See examples for more patterns                         |\n\n## Combining Multiple Reasoning Toolkits\n\nYou can use multiple reasoning toolkits together for powerful multi-domain reasoning. Just remember that tool names must stay unique, so disable overlapping `think`/`analyze` entries (or rename the later ones) to prevent silent overrides:",
+      "language": "unknown"
+    },
+    {
+      "code": "With this setup:\n\n* `ReasoningTools` supplies the shared `think`/`analyze` scratchpad.\n* `KnowledgeTools` still exposes `search_knowledge()` (and any other unique methods) without trying to register duplicate scratchpad functions.\n* `MemoryTools` contributes the CRUD memory tools while inheriting the same central thinking loop.\n\nIf you need separate scratchpads per domain, create custom wrappers around `think()`/`analyze()` so each toolkit registers uniquely named functions (e.g., `knowledge_think`, `memory_analyze`).\n\n## Configuration Options\n\n### Enable/Disable Specific Tools\n\nYou can control which reasoning tools are available:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Common Pattern: Think → Act → Analyze",
+      "id": "common-pattern:-think-→-act-→-analyze"
+    },
+    {
+      "level": "h2",
+      "text": "Choosing the Right Reasoning Toolkit",
+      "id": "choosing-the-right-reasoning-toolkit"
+    },
+    {
+      "level": "h2",
+      "text": "Combining Multiple Reasoning Toolkits",
+      "id": "combining-multiple-reasoning-toolkits"
+    },
+    {
+      "level": "h2",
+      "text": "Configuration Options",
+      "id": "configuration-options"
+    },
+    {
+      "level": "h3",
+      "text": "Enable/Disable Specific Tools",
+      "id": "enable/disable-specific-tools"
+    }
+  ],
+  "url": "llms-txt#create-agent-with-workflow-tools",
+  "links": []
+}

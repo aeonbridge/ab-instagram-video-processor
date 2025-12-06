@@ -1,0 +1,19 @@
+{
+  "title": "Define the quality standards for analysis",
+  "content": "analysis_principles = dedent(\"\"\"\n    ANALYSIS PRINCIPLES:\n    - Evidence-based conclusions with supporting metrics\n    - Actionable insights that drive business decisions\n    - Cross-platform correlation analysis\n    - Influence-weighted sentiment scoring\n    - Proactive risk and opportunity identification\n\"\"\")\n\nprint(\"Analysis principles defined\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### 3f. Combine Into Complete Instructions",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3f. Combine Into Complete Instructions",
+      "id": "3f.-combine-into-complete-instructions"
+    }
+  ],
+  "url": "llms-txt#define-the-quality-standards-for-analysis",
+  "links": []
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Can also use custom binaries: command=\"./my-mcp-server\"",
+  "content": "mcp_tools = MCPTools(command=\"uvx mcp-server-git\")\nawait mcp_tools.connect()\n\ntry:\n    agent = Agent(model=OpenAIChat(id=\"gpt-5-mini\"), tools=[mcp_tools])\n    await agent.aprint_response(\"What is the license for this project?\", stream=True)\nfinally:\n    # Always close the connection when done\n    await mcp_tools.close()\npython  theme={null}\nimport asyncio\nimport os\n\nfrom agno.agent import Agent\nfrom agno.tools.mcp import MultiMCPTools\n\nasync def run_agent(message: str) -> None:\n    \"\"\"Run the Airbnb and Google Maps agent with the given message.\"\"\"\n\nenv = {\n        **os.environ,\n        \"GOOGLE_MAPS_API_KEY\": os.getenv(\"GOOGLE_MAPS_API_KEY\"),\n    }\n\n# Initialize and connect to multiple MCP servers\n    mcp_tools = MultiMCPTools(\n        commands=[\n            \"npx -y @openbnb/mcp-server-airbnb --ignore-robots-txt\",\n            \"npx -y @modelcontextprotocol/server-google-maps\",\n        ],\n        env=env,\n    )\n    await mcp_tools.connect()\n\ntry:\n        agent = Agent(\n            tools=[mcp_tools],\n            markdown=True,\n        )\n\nawait agent.aprint_response(message, stream=True)\n    finally:\n        # Always close the connection when done\n        await mcp_tools.close()",
+  "code_samples": [
+    {
+      "code": "You can also use multiple MCP servers at once, with the `MultiMCPTools` class. For example:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#can-also-use-custom-binaries:-command=\"./my-mcp-server\"",
+  "links": []
+}

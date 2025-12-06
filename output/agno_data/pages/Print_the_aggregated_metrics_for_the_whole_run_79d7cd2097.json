@@ -1,0 +1,8 @@
+{
+  "title": "Print the aggregated metrics for the whole run",
+  "content": "print(\"---\" * 5, \"Run Metrics\", \"---\" * 5)\npprint(run_response.metrics.to_dict())",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#print-the-aggregated-metrics-for-the-whole-run",
+  "links": []
+}

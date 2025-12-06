@@ -1,0 +1,19 @@
+{
+  "title": "Enable tracing - traces stored in the shared db",
+  "content": "agent_os = AgentOS(\n    agents=[agent],\n    db=db,\n    tracing=True,  # Traces go to the shared db\n)\n\napp = agent_os.get_app()\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools",
+  "code_samples": [
+    {
+      "code": "In this setup, traces are automatically stored in the shared database alongside sessions and other data.\n\n## Multiple Databases Setup\n\n<Warning>\n  When agents or teams have **different databases**, it is highly recommended that you specify a dedicated `tracing_db` to ensure all traces are stored in one central location.\n</Warning>\n\nIf you have multiple agents with their own databases, traces need a dedicated database:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Multiple Databases Setup",
+      "id": "multiple-databases-setup"
+    }
+  ],
+  "url": "llms-txt#enable-tracing---traces-stored-in-the-shared-db",
+  "links": []
+}

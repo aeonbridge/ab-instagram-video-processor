@@ -1,0 +1,8 @@
+{
+  "title": "JsonDb",
+  "content": "Source: https://docs.agno.com/reference/storage/json\n\n`JsonDb` is a class that implements the Db interface using JSON files as the backend storage system. It provides a simple, file-based storage solution for agent sessions with each session stored in a separate JSON file.\n\n<Snippet file=\"db-json-params.mdx\" />\n\n<Snippet file=\"db-new-bulk-methods.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#jsondb",
+  "links": []
+}

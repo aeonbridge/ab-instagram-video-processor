@@ -1,0 +1,8 @@
+{
+  "title": "PPTX Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/pptx\n\nPPTXReader is a reader class that allows you to read data from PowerPoint (.pptx) files.\n\n<Snippet file=\"pptx-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#pptx-reader",
+  "links": []
+}

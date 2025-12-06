@@ -1,0 +1,19 @@
+{
+  "title": "app.router.routes.append(route)",
+  "content": "app = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    \"\"\"Run the AgentOS application.\n\nYou can see the docs at:\n    http://localhost:7777/docs\n\n\"\"\"\n    agent_os.serve(app=\"custom_fastapi_app:app\", reload=True)\npython  theme={null}\nfrom fastapi import FastAPI, Depends, HTTPException\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom fastapi.security import HTTPBearer",
+  "code_samples": [
+    {
+      "code": "## Middleware and Dependencies\n\nYou can add middleware and dependencies to your custom FastAPI app:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Middleware and Dependencies",
+      "id": "middleware-and-dependencies"
+    }
+  ],
+  "url": "llms-txt#app.router.routes.append(route)",
+  "links": []
+}

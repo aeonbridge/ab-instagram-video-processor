@@ -1,0 +1,8 @@
+{
+  "title": "Agent that returns a structured output",
+  "content": "structured_output_agent = Agent(\n    model=xAI(id=\"grok-2-latest\"),\n    description=\"You write movie scripts.\",\n    output_schema=MovieScript,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-that-returns-a-structured-output",
+  "links": []
+}

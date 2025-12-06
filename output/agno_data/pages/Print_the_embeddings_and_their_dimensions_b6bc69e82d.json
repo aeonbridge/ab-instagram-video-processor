@@ -1,0 +1,8 @@
+{
+  "title": "Print the embeddings and their dimensions",
+  "content": "print(f\"Embeddings: {embeddings[:5]}\")\nprint(f\"Dimensions: {len(embeddings)}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#print-the-embeddings-and-their-dimensions",
+  "links": []
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Memory creation requires a db to be provided",
+  "content": "db = SqliteDb(db_file=\"tmp/memory.db\")\n\ndef run_agent():\n    agent = Agent(\n        model=OpenAIChat(id=\"gpt-5-mini\"),\n        system_message=\"Be concise, reply with one sentence.\",\n        db=db,\n        enable_user_memories=True,\n    )\n\nresponse = agent.run(\"My name is Tom! I'm 25 years old and I live in New York.\")\n    print(f\"Agent response: {response.content}\")\n\nresponse_with_memory_updates_perf = PerformanceEval(\n    name=\"Memory Updates Performance\",\n    func=run_agent,\n    num_iterations=5,\n    warmup_runs=0,\n)\n\nif __name__ == \"__main__\":\n    response_with_memory_updates_perf.run(print_results=True, print_summary=True)\n\npython storage_performance.py theme={null}\n\"\"\"Run `pip install openai agno` to install dependencies.\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.eval.performance import PerformanceEval\nfrom agno.models.openai import OpenAIChat\n\ndb = SqliteDb(db_file=\"tmp/storage.db\")\n\ndef run_agent():\n    agent = Agent(\n        model=OpenAIChat(id=\"gpt-5-mini\"),\n        system_message=\"Be concise, reply with one sentence.\",\n        add_history_to_context=True,\n        db=db,\n    )\n    response_1 = agent.run(\"What is the capital of France?\")\n    print(response_1.content)\n\nresponse_2 = agent.run(\"How many people live there?\")\n    print(response_2.content)\n\nreturn response_2.content\n\nresponse_with_storage_perf = PerformanceEval(\n    name=\"Storage Performance\",\n    func=run_agent,\n    num_iterations=1,\n    warmup_runs=0,\n)\n\nif __name__ == \"__main__\":\n    response_with_storage_perf.run(print_results=True, print_summary=True)\npython agent_instantiation.py theme={null}\n\"\"\"Run `pip install agno openai` to install dependencies.\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.eval.performance import PerformanceEval\n\ndef instantiate_agent():\n    return Agent(system_message=\"Be concise, reply with one sentence.\")\n\ninstantiation_perf = PerformanceEval(\n    name=\"Instantiation Performance\", func=instantiate_agent, num_iterations=1000\n)\n\nif __name__ == \"__main__\":\n    instantiation_perf.run(print_results=True, print_summary=True)\npython team_instantiation.py theme={null}\n\"\"\"Run `pip install agno openai` to install dependencies.\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.eval.performance import PerformanceEval\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\n\nteam_member = Agent(model=OpenAIChat(id=\"gpt-5-mini\"))\n\ndef instantiate_team():\n    return Team(members=[team_member])\n\ninstantiation_perf = PerformanceEval(\n    name=\"Instantiation Performance Team\", func=instantiate_team, num_iterations=1000\n)\n\nif __name__ == \"__main__\":\n    instantiation_perf.run(print_results=True, print_summary=True)\npython team_performance_with_memory_updates.py theme={null}\n\n\"\"\"Run `pip install agno openai` to install dependencies.\"\"\"\n\nimport asyncio\nimport random\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.eval.performance import PerformanceEval\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\n\ncities = [\n    \"New York\",\n    \"Los Angeles\",\n    \"Chicago\",\n    \"Houston\",\n    \"Miami\",\n    \"San Francisco\",\n    \"Seattle\",\n    \"Boston\",\n    \"Washington D.C.\",\n    \"Atlanta\",\n    \"Denver\",\n    \"Las Vegas\",\n]",
+  "code_samples": [
+    {
+      "code": "## Agent Performance with Storage\n\nTest agent performance with storage:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Agent Instantiation Performance\n\nTest agent instantiation performance:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Team Instantiation Performance\n\nTest team instantiation performance:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Team Performance with Memory Updates\n\nTest team performance with memory updates:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Agent Performance with Storage",
+      "id": "agent-performance-with-storage"
+    },
+    {
+      "level": "h2",
+      "text": "Agent Instantiation Performance",
+      "id": "agent-instantiation-performance"
+    },
+    {
+      "level": "h2",
+      "text": "Team Instantiation Performance",
+      "id": "team-instantiation-performance"
+    },
+    {
+      "level": "h2",
+      "text": "Team Performance with Memory Updates",
+      "id": "team-performance-with-memory-updates"
+    }
+  ],
+  "url": "llms-txt#memory-creation-requires-a-db-to-be-provided",
+  "links": []
+}

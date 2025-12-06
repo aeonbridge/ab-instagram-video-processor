@@ -1,0 +1,14 @@
+{
+  "title": "Creating your own tools",
+  "content": "Source: https://docs.agno.com/basics/tools/creating-tools/overview\n\nLearn how to write your own tools and how to use the `@tool` decorator to modify the behavior of a tool.\n\nIn most production cases, you will need to write your own tools. Which is why we're focused on provide the best tool-use experience in Agno.\n\n* Any Python function can be used as a tool by an Agent.\n* Use the `@tool` decorator to modify what happens before and after this tool is called.\n\nThere are two main ways to create tools in Agno:\n\n1. Create a python function (optionally using the `@tool` decorator)\n2. Create a Toolkit\n\n<CardGroup>\n  <Card title=\"Python Functions as Tools\" href=\"/basics/tools/creating-tools/python-functions\">\n    Learn how to create tools with python functions.\n  </Card>\n\n<Card title=\"Toolkits\" href=\"/basics/tools/creating-tools/toolkits\">\n    Learn how to create tools with toolkits.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#creating-your-own-tools",
+  "links": []
+}

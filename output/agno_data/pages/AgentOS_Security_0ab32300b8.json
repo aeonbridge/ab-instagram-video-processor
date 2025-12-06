@@ -1,0 +1,59 @@
+{
+  "title": "AgentOS Security",
+  "content": "Source: https://docs.agno.com/agent-os/security\n\nLearn how to secure your AgentOS instance with a security key\n\nAgentOS supports bearer-token authentication to secure your instance. When a Security Key is configured, all API routes require an `Authorization: Bearer <token>` header for access. Without a key configured, authentication is disabled.\n\n<Tip>\n  You can generate a security key from the AgentOS Control Plane, which also enables secure communication between your AgentOS and the Control Plane.\n</Tip>\n\n## Generate a Security Key\n\nFrom the AgentOS control plane, generate a security key or set your own.\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/xm93WWN8gg4nzCGE/videos/agentos-security-key.mp4?fit=max&auto=format&n=xm93WWN8gg4nzCGE&q=85&s=0a87c2a894982a3eb075fe282a21c491\" type=\"video/mp4\" data-path=\"videos/agentos-security-key.mp4\" />\n  </video>\n</Frame>\n\n<Tip>\n  You can also create your own security key and set it on the AgentOS UI.\n</Tip>\n\n## Security Key Authentication\n\nSet the `OS_SECURITY_KEY` environment variable where your AgentOS server runs. When present, the server automatically enforces bearer authentication on all API routes.\n\n### macOS / Linux (bash or zsh)\n\n<Note>\n  **How it works**: AgentOS reads `OS_SECURITY_KEY` into the AgentOS router's\n  internal authorization logic. If configured, requests without a valid\n  `Authorization: Bearer` header return `401 Unauthorized`.\n</Note>\n\n1. In the UI, click the **Generate** icon next to \"Security Key\" to generate a new value\n2. Update the server's `OS_SECURITY_KEY` environment variable and reload/redeploy AgentOS\n3. Update all clients, workers, and CI/CD systems that call the AgentOS API\n\n### Security Best Practices\n\n* **Environment Isolation**: Use different keys per environment with least-privilege distribution\n* **Code Safety**: Never commit keys to version control or print them in logs\n\n* **401 Unauthorized**: Verify the header format is exactly `Authorization: Bearer <key>` and that the server has `OS_SECURITY_KEY` configured\n* **Local vs Production**: Confirm your local shell exported `OS_SECURITY_KEY` before starting the application\n* **Post-Rotation Failures**: Ensure all clients received the new key. Restart CI/CD runners that may cache environment variables\n* **Connection Issues**: Check that your AgentOS instance is running and accessible at the configured endpoint\n\n## JWT Authentication\n\nAgentOS provides a middleware solution for custom JWT authentication.\n\nLearn more about [JWT Middleware](/agent-os/middleware/jwt)\n\n<Check>\n  Although the JWT Middleware is already powerful feature, Agno is working on further extending authentication capabilities and better role-based access control in AgentOS.\n</Check>",
+  "code_samples": [
+    {
+      "code": "### Docker Compose",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Overview",
+      "id": "overview"
+    },
+    {
+      "level": "h2",
+      "text": "Generate a Security Key",
+      "id": "generate-a-security-key"
+    },
+    {
+      "level": "h2",
+      "text": "Security Key Authentication",
+      "id": "security-key-authentication"
+    },
+    {
+      "level": "h3",
+      "text": "macOS / Linux (bash or zsh)",
+      "id": "macos-/-linux-(bash-or-zsh)"
+    },
+    {
+      "level": "h3",
+      "text": "Docker Compose",
+      "id": "docker-compose"
+    },
+    {
+      "level": "h3",
+      "text": "Key Rotation",
+      "id": "key-rotation"
+    },
+    {
+      "level": "h3",
+      "text": "Security Best Practices",
+      "id": "security-best-practices"
+    },
+    {
+      "level": "h3",
+      "text": "Troubleshooting",
+      "id": "troubleshooting"
+    },
+    {
+      "level": "h2",
+      "text": "JWT Authentication",
+      "id": "jwt-authentication"
+    }
+  ],
+  "url": "llms-txt#agentos-security",
+  "links": []
+}

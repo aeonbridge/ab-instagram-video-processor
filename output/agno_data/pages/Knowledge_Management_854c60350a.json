@@ -1,0 +1,24 @@
+{
+  "title": "Knowledge Management",
+  "content": "* **View Content**: Browse your Knowledge base contents\n* **Add Content**: Upload new documents, add URLs, or input text directly\n* **Edit Content**: Modify metadata on existing Knowledge entries\n* **Delete Content**: Remove outdated content\n\n* Files: `.pdf`, `.csv`, `.json`, `.txt`, `.doc`, `.docx` , `.md`, `.xlsx`, `.xls`, `.pptx`.\n\n* Web: Website URLs (pages) or direct file links\n\n* Text: Type or paste content directly\n\n<Tip>\n  Available processing options (Readers and Chunkers) are provided by your OS\n  and may vary by file/URL type.\n</Tip>\n\n* Click `ADD NEW CONTENT`, then choose `FILE`, `WEB`, or `TEXT`.\n\n* Drag & drop or select files. You can also add a file URL.\n* Add details per item: Name, Description, Metadata, Reader, and optional Chunker.\n* Names must be unique across items.\n* Save to upload one or many at once.\n\n* Enter one or more URLs and add them to the list.\n* Add details per item as above (Name, Description, Metadata, Reader/Chunker).\n* Save to upload all listed URLs.\n\n* Paste or type content.\n* Set Name, optional Description/Metadata, and Reader/Chunker.\n* Add Content to upload.\n\n<CardGroup cols={3}>\n  <Card title=\"Agent Knowledge\" icon=\"user\" href=\"/basics/knowledge/agents/overview\">\n    Learn how to add knowledge to agents and use RAG\n  </Card>\n\n<Card title=\"Team Knowledge\" icon=\"users\" href=\"/basics/knowledge/teams/overview\">\n    Understand knowledge sharing in team environments\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You Can Add",
+      "id": "what-you-can-add"
+    },
+    {
+      "level": "h2",
+      "text": "Adding Content",
+      "id": "adding-content"
+    },
+    {
+      "level": "h2",
+      "text": "Useful Links",
+      "id": "useful-links"
+    }
+  ],
+  "url": "llms-txt#knowledge-management",
+  "links": []
+}

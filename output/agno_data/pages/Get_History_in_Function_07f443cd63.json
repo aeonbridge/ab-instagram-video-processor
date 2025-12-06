@@ -1,0 +1,8 @@
+{
+  "title": "Get History in Function",
+  "content": "Source: https://docs.agno.com/basics/chat-history/workflow/usage/get-history-in-function\n\nThis example demonstrates how to get workflow history in a custom function.\n\nThis example shows how to get workflow history in a custom function.\n\n* Using `step_input.get_workflow_history(num_runs=5)` we can get the history as a list of tuples.\n* We can also use `step_input.get_workflow_history_context(num_runs=5)` to get the history as a string.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-history-in-function",
+  "links": []
+}

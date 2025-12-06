@@ -1,0 +1,8 @@
+{
+  "title": "Use async methods for better performance",
+  "content": "async def embed_texts():\n    embedder = JinaEmbedder()\n    texts = [\"First text\", \"Second text\", \"Third text\"]\n    \n    # Get embeddings in batches\n    embeddings, usage = await embedder.async_get_embeddings_batch_and_usage(texts)\n    print(f\"Generated {len(embeddings)} embeddings\")\n    print(f\"Usage info: {usage[0]}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#use-async-methods-for-better-performance",
+  "links": []
+}

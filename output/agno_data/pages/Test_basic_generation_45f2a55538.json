@@ -1,0 +1,8 @@
+{
+  "title": "Test basic generation",
+  "content": "agent.print_response(\n    \"Generate an image of a futuristic city with flying cars\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#test-basic-generation",
+  "links": []
+}

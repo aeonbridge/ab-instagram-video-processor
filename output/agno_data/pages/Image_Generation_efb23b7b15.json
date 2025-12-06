@@ -1,0 +1,14 @@
+{
+  "title": "Image Generation",
+  "content": "Source: https://docs.agno.com/examples/getting-started/14-image-generation\n\nThis example shows how to create an AI agent that generates images using DALL-E.\nYou can use this agent to create various types of images, from realistic photos to artistic\nillustrations and creative concepts.\n\nExample prompts to try:\n\n* \"Create a surreal painting of a floating city in the clouds at sunset\"\n* \"Generate a photorealistic image of a cozy coffee shop interior\"\n* \"Design a cute cartoon mascot for a tech startup\"\n* \"Create an artistic portrait of a cyberpunk samurai\"\n\n```python image_generation.py theme={null}\nfrom textwrap import dedent\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.run.agent import RunOutput\nfrom agno.tools.dalle import DalleTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#image-generation",
+  "links": []
+}

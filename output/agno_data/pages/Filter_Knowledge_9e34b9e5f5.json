@@ -1,0 +1,53 @@
+{
+  "title": "Filter Knowledge",
+  "content": "Source: https://docs.agno.com/agent-os/knowledge/filter-knowledge\n\nLearn how to use advanced filter expressions through the Agno API for precise knowledge base filtering.\n\nWhen using the AgentOS API, you can apply filters to precisely control which knowledge base documents your agents search, without changing your agent code.\nFilter expressions serialize to JSON and are automatically reconstructed server-side for powerful, programmatic filtering.\n\n## Two Approaches to Filtering\n\nAgno supports two ways to filter knowledge through the API:\n\n* Use **dictionary filters** for simple \"field = value\" lookups\n* Use **filter expressions** when you need OR/NOT logic or ranges\n\n### 1. Dictionary Filters (Simple)\n\nBest for straightforward equality matching. Send a JSON object with key-value pairs:\n\n### 2. Filter Expressions (Advanced)\n\nBest for complex filtering with full logical control. Send structured filter objects:\n\n<Tip>\n  **When to use which:**\n\n* Use **dict filters** for simple queries like filtering by category or status\n  * Use **filter expressions** when you need OR logic, exclusions (NOT), or range queries (GT/LT)\n</Tip>\n\nFilter expressions support a range of comparison and logical operators:\n\n### Comparison Operators\n\n* **`EQ(key, value)`** - Equality: field equals value\n* **`GT(key, value)`** - Greater than: field > value\n* **`LT(key, value)`** - Less than: field \\< value\n* **`IN(key, [values])`** - Inclusion: field in list of values\n\n### Logical Operators\n\n* **`AND(*filters)`** - All conditions must be true\n* **`OR(*filters)`** - At least one condition must be true\n* **`NOT(filter)`** - Negate a condition\n\n## Serialization Format\n\nFilter expression objects use a dictionary format with an `\"op\"` key that distinguishes them from regular dict filters:\n\n```python  theme={null}\nfrom agno.filters import EQ, GT, AND",
+  "code_samples": [
+    {
+      "code": "### 2. Filter Expressions (Advanced)\n\nBest for complex filtering with full logical control. Send structured filter objects:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Tip>\n  **When to use which:**\n\n  * Use **dict filters** for simple queries like filtering by category or status\n  * Use **filter expressions** when you need OR logic, exclusions (NOT), or range queries (GT/LT)\n</Tip>\n\n## Filter Operators\n\nFilter expressions support a range of comparison and logical operators:\n\n### Comparison Operators\n\n* **`EQ(key, value)`** - Equality: field equals value\n* **`GT(key, value)`** - Greater than: field > value\n* **`LT(key, value)`** - Less than: field \\< value\n* **`IN(key, [values])`** - Inclusion: field in list of values\n\n### Logical Operators\n\n* **`AND(*filters)`** - All conditions must be true\n* **`OR(*filters)`** - At least one condition must be true\n* **`NOT(filter)`** - Negate a condition\n\n## Serialization Format\n\nFilter expression objects use a dictionary format with an `\"op\"` key that distinguishes them from regular dict filters:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Two Approaches to Filtering",
+      "id": "two-approaches-to-filtering"
+    },
+    {
+      "level": "h3",
+      "text": "1. Dictionary Filters (Simple)",
+      "id": "1.-dictionary-filters-(simple)"
+    },
+    {
+      "level": "h3",
+      "text": "2. Filter Expressions (Advanced)",
+      "id": "2.-filter-expressions-(advanced)"
+    },
+    {
+      "level": "h2",
+      "text": "Filter Operators",
+      "id": "filter-operators"
+    },
+    {
+      "level": "h3",
+      "text": "Comparison Operators",
+      "id": "comparison-operators"
+    },
+    {
+      "level": "h3",
+      "text": "Logical Operators",
+      "id": "logical-operators"
+    },
+    {
+      "level": "h2",
+      "text": "Serialization Format",
+      "id": "serialization-format"
+    }
+  ],
+  "url": "llms-txt#filter-knowledge",
+  "links": []
+}

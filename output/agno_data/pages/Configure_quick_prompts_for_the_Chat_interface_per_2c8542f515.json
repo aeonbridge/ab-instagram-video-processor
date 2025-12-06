@@ -1,0 +1,8 @@
+{
+  "title": "Configure quick prompts for the Chat interface (per agent)",
+  "content": "chat:\n  quick_prompts:\n    marketing-agent:\n      - \"What can you do?\"\n      - \"How is our latest post working?\"\n      - \"Tell me about our active marketing campaigns\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-quick-prompts-for-the-chat-interface-(per-agent)",
+  "links": []
+}

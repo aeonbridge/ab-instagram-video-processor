@@ -1,0 +1,8 @@
+{
+  "title": "Custom Toolkits",
+  "content": "Source: https://docs.agno.com/basics/tools/creating-tools/toolkits\n\nLearn how to write your own toolkits.\n\nMany advanced use-cases will require writing custom Toolkits. A Toolkit is a collection of functions that can be added to an Agent. The functions in a Toolkit are designed to work together, share internal state and provide a better development experience.\n\nHere's the general flow:\n\n1. Create a class inheriting the `agno.tools.Toolkit` class.\n2. Add your functions to the class.\n3. Include all the functions in the `tools` argument to the `Toolkit` constructor.\n\n<Tip>\n  Important Tips:\n\n* Fill in the docstrings for each function with detailed descriptions of the function and its arguments.\n  * Remember that this function is provided to the LLM and is not used elsewhere in code, so the docstring should make sense to an LLM and the name of the functions need to be descriptive.\n</Tip>\n\nSee the [Toolkit Reference](/reference/tools/toolkit) for more details.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#custom-toolkits",
+  "links": []
+}

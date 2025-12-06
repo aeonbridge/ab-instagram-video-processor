@@ -1,0 +1,19 @@
+{
+  "title": "Search for either customer feedback or survey data from the last two years",
+  "content": "feedback_filter = AND(\n    OR(\n        EQ(\"data_type\", \"feedback\"),\n        EQ(\"data_type\", \"survey\")\n    ),\n    GT(\"year\", 2022)\n)\n\nagent.print_response(\n    \"What do our customers think about our new features?\",\n    knowledge_filters=[feedback_filter]  # ← List wrapper required\n)\npython  theme={null}\nfrom agno.team.team import Team\nfrom agno.agent import Agent\nfrom agno.filters import IN, AND, NOT, EQ",
+  "code_samples": [
+    {
+      "code": "## Using Filters with Teams\n\nTeams can also leverage filtered knowledge searches:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using Filters with Teams",
+      "id": "using-filters-with-teams"
+    }
+  ],
+  "url": "llms-txt#search-for-either-customer-feedback-or-survey-data-from-the-last-two-years",
+  "links": []
+}

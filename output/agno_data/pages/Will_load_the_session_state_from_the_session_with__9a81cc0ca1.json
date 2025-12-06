@@ -1,0 +1,8 @@
+{
+  "title": "Will load the session state from the session with the id \"user_1_session_1\"",
+  "content": "team.print_response(\"How old am I?\", session_id=\"user_1_session_1\", user_id=\"user_1\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#will-load-the-session-state-from-the-session-with-the-id-\"user_1_session_1\"",
+  "links": []
+}

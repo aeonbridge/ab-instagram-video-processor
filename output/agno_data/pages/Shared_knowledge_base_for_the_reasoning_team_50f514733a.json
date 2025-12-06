@@ -1,0 +1,8 @@
+{
+  "title": "Shared knowledge base for the reasoning team",
+  "content": "knowledge = Knowledge(\n    vector_db=LanceDb(\n        uri=\"tmp/lancedb\",\n        table_name=\"agno_docs_reasoning_team\",\n        search_type=SearchType.hybrid,\n        embedder=CohereEmbedder(id=\"embed-v4.0\"),\n        reranker=CohereReranker(model=\"rerank-v3.5\"),\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#shared-knowledge-base-for-the-reasoning-team",
+  "links": []
+}

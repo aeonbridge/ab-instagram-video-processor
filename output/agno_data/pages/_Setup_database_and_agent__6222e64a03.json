@@ -1,0 +1,8 @@
+{
+  "title": "=== Setup database and agent ===",
+  "content": "db = PostgresDb(db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\")\n\nagent = Agent(\n    id=\"demo-agent\",\n    name=\"Demo Agent\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    db=db,\n    tools=[DuckDuckGoTools()],\n    markdown=True,\n)\n\nagent_os = AgentOS(\n    description=\"Essential middleware demo with rate limiting and logging\",\n    agents=[agent],\n)\n\napp = agent_os.get_app()",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#===-setup-database-and-agent-===",
+  "links": []
+}

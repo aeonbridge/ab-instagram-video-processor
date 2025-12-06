@@ -1,0 +1,8 @@
+{
+  "title": "Define individual steps",
+  "content": "initial_research_step = Step(\n    name=\"InitialResearch\",\n    agent=researcher,\n    description=\"Initial research on the topic\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-individual-steps",
+  "links": []
+}

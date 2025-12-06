@@ -1,0 +1,14 @@
+{
+  "title": "Memory with PostgreSQL",
+  "content": "Source: https://docs.agno.com/basics/memory/working-with-memories/usage/postgres-memory\n\n```python mem-postgres-memory.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#memory-with-postgresql",
+  "links": []
+}

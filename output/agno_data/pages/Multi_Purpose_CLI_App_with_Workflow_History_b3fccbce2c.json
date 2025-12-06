@@ -1,0 +1,8 @@
+{
+  "title": "Multi Purpose CLI App with Workflow History",
+  "content": "Source: https://docs.agno.com/basics/chat-history/workflow/usage/multi-purpose-cli\n\nThis example demonstrates how to use workflow history in a multi purpose CLI.\n\nThis example shows how to use the `add_workflow_history_to_steps` flag to add workflow history to the steps.\nIn this case we have a multi-step workflow with a single agent.\n\nWe show different scenarios of a continuous execution of the workflow.\nWe have 5 different demos:\n\n* Customer Support\n* Medical Consultation\n* Tutoring\n\n```python 05_multi_purpose_cli.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#multi-purpose-cli-app-with-workflow-history",
+  "links": []
+}

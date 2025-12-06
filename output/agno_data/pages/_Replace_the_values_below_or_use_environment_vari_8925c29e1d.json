@@ -1,0 +1,8 @@
+{
+  "title": "- Replace the values below or use environment variables",
+  "content": "vector_db = UpstashVectorDb(\n    url=os.getenv(\"UPSTASH_VECTOR_REST_URL\"),\n    token=os.getenv(\"UPSTASH_VECTOR_REST_TOKEN\"),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#--replace-the-values-below-or-use-environment-variables",
+  "links": []
+}

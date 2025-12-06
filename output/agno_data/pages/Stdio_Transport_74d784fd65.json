@@ -1,0 +1,8 @@
+{
+  "title": "Stdio Transport",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/transports/stdio\n\nThe stdio (standard input/output) transport is the default one in Agno's integration. It works best for local integrations.\n\nTo use it, simply initialize the `MCPTools` class with the `command` argument.\nThe command you want to pass is the one used to run the MCP server the agent will have access to.\n\nFor example `uvx mcp-server-git`, which runs a [git MCP server](https://github.com/modelcontextprotocol/servers/tree/main/src/git):\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.mcp import MCPTools",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#stdio-transport",
+  "links": []
+}

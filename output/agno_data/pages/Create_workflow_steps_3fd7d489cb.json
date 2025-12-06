@@ -1,0 +1,8 @@
+{
+  "title": "Create workflow steps",
+  "content": "research_step = Step(\n    name=\"Research Step\",\n    agent=researcher_agent,\n)\n\nwriting_step = Step(\n    name=\"Writing Step\",\n    agent=writer_agent,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-workflow-steps",
+  "links": []
+}

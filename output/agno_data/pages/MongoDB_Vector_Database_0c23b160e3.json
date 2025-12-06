@@ -1,0 +1,24 @@
+{
+  "title": "MongoDB Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/mongodb/overview\n\nLearn how to use MongoDB as a vector database for your Knowledge Base\n\nFollow the instructions in the [MongoDB Setup Guide](https://www.mongodb.com/docs/atlas/getting-started/) to get connection string\n\nInstall MongoDB packages\n\n```python agent_with_knowledge.py theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.mongodb import MongoVectorDb",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#mongodb-vector-database",
+  "links": []
+}

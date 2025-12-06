@@ -1,0 +1,19 @@
+{
+  "title": "Configure X Tools for social media data",
+  "content": "x_tools = XTools(\n    include_post_metrics=True,    # Critical: gets likes, retweets, replies for influence analysis\n    wait_on_rate_limit=True,      # Handles API limits gracefully\n)\n\nprint(\"XTools configured with post metrics enabled\")\npython  theme={null}\nfrom agno.tools.exa import ExaTools",
+  "code_samples": [
+    {
+      "code": "**What `include_post_metrics=True` gives you:**\n\n* Like counts (engagement volume)\n* Retweet counts (viral spread)\n* Reply counts (conversation depth)\n* Author verification status (influence weighting)\n\n### 2b. Add ExaTools for Web Intelligence\n\n**Why ExaTools?** Social media discussions often reference broader conversations happening across the web. ExaTools finds this context.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "2b. Add ExaTools for Web Intelligence",
+      "id": "2b.-add-exatools-for-web-intelligence"
+    }
+  ],
+  "url": "llms-txt#configure-x-tools-for-social-media-data",
+  "links": []
+}

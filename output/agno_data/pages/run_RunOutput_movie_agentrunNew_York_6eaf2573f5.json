@@ -1,0 +1,27 @@
+{
+  "title": "run: RunOutput = movie_agent.run(\"New York\")",
+  "content": "bash  theme={null}\n    export ANTHROPIC_API_KEY=xxx\n    bash  theme={null}\n    pip install -U anthropic agno\n    bash  theme={null}\n    python structured_output.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#run:-runoutput-=-movie_agent.run(\"new-york\")",
+  "links": []
+}

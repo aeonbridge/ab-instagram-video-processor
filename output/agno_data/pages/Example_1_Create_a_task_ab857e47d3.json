@@ -1,0 +1,8 @@
+{
+  "title": "Example 1: Create a task",
+  "content": "print(\"\\n=== Create a task ===\")\ntodoist_agent.print_response(\"Create a todoist task to buy groceries tomorrow at 10am\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-1:-create-a-task",
+  "links": []
+}

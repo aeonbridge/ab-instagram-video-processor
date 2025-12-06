@@ -1,0 +1,8 @@
+{
+  "title": "Create knowledge search agent",
+  "content": "web_agent = Agent(\n    name=\"Knowledge Search Agent\",\n    role=\"Handle knowledge search\",\n    knowledge=knowledge_base,\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-knowledge-search-agent",
+  "links": []
+}

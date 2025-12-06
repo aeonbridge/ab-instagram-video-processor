@@ -1,0 +1,8 @@
+{
+  "title": "Create individual specialized agents",
+  "content": "researcher = Agent(\n    name=\"Researcher\",\n    role=\"Expert at finding information\",\n    tools=[DuckDuckGoTools()],\n    model=OpenAIChat(id=\"gpt-4o\"),\n)\n\nwriter = Agent(\n    name=\"Writer\",\n    role=\"Expert at writing clear, engaging content\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-individual-specialized-agents",
+  "links": []
+}

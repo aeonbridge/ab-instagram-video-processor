@@ -1,0 +1,8 @@
+{
+  "title": "Step 1: Configure Atla",
+  "content": "configure(token=getenv(\"ATLA_API_KEY\"))",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#step-1:-configure-atla",
+  "links": []
+}

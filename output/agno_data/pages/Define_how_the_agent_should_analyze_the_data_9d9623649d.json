@@ -1,0 +1,19 @@
+{
+  "title": "Define how the agent should analyze the data",
+  "content": "analysis_framework = dedent(\"\"\"\n    ANALYSIS FRAMEWORK:\n    - Classify sentiment as Positive/Negative/Neutral/Mixed with detailed reasoning\n    - Weight analysis by engagement volume and author influence (verified accounts = 1.5x)\n    - Identify engagement patterns: viral advocacy, controversy, influence concentration\n    - Extract cross-platform themes and recurring discussion points\n\"\"\")\n\nprint(\"Analysis framework defined\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### 3c. Define the Intelligence Synthesis",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3c. Define the Intelligence Synthesis",
+      "id": "3c.-define-the-intelligence-synthesis"
+    }
+  ],
+  "url": "llms-txt#define-how-the-agent-should-analyze-the-data",
+  "links": []
+}

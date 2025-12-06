@@ -1,0 +1,13 @@
+{
+  "title": "Agent execution is automatically traced",
+  "content": "response = agent.run(\"What is the capital of France?\")\nprint(response.content)\npython  theme={null}\nfrom traceloop.sdk import Traceloop\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "* ### Example: Development Mode (Disable Batching)\n\nFor local development, disable batching to see traces immediately:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#agent-execution-is-automatically-traced",
+  "links": []
+}

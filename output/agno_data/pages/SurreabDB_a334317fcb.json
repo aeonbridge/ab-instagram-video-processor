@@ -1,0 +1,19 @@
+{
+  "title": "SurreabDB",
+  "content": "Source: https://docs.agno.com/integrations/database/surrealdb/overview\n\nLearn to use SurreabDB as a database for your Agents\n\nAgno supports using [SurreabDB](https://surrealdb.com/) as a database with the `SurrealDb` class.\n\nYou can get started with SurreabDB following their [documentation](https://surrealdb.com/docs).\n\nRun SurreabDB locally with the following command:\n\n```python surrealdb_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.surrealdb import SurrealDb",
+  "code_samples": [
+    {
+      "code": "## Usage",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#surreabdb",
+  "links": []
+}

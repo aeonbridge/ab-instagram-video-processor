@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent with the PostgresTools",
+  "content": "agent = Agent(tools=[postgres_tools])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-the-postgrestools",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Configure the language model",
+  "content": "model = Ollama(id=\"llama3.1:8b\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-the-language-model",
+  "links": []
+}

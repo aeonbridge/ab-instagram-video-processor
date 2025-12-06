@@ -1,0 +1,14 @@
+{
+  "title": "Couchbase Async",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/couchbase/usage/async-couchbase-db\n\n```python cookbook/knowledge/vector_db/couchbase_db/async_couchbase_db.py theme={null}\nimport asyncio\nimport os\nimport time\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.couchbase import CouchbaseSearch\nfrom couchbase.auth import PasswordAuthenticator\nfrom couchbase.management.search import SearchIndex\nfrom couchbase.options import ClusterOptions, KnownConfigProfiles",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#couchbase-async",
+  "links": []
+}

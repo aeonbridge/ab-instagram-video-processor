@@ -1,0 +1,8 @@
+{
+  "title": "Knowledge base setup (same as synchronous example)",
+  "content": "embedder = OpenAIEmbedder(id=\"text-embedding-3-small\")\nvector_db = Qdrant(collection=\"thai-recipes\", url=\"http://localhost:6333\", embedder=embedder)\nknowledge_base = Knowledge(\n    vector_db=vector_db,\n)\n\nknowledge_base.add_content(\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#knowledge-base-setup-(same-as-synchronous-example)",
+  "links": []
+}

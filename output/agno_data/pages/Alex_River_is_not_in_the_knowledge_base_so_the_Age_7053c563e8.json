@@ -1,0 +1,31 @@
+{
+  "title": "Alex River is not in the knowledge base, so the Agent should not find any information about him",
+  "content": "agent.print_response(\n    \"Do you think Alex Rivera is a good candidate?\",\n    markdown=True,\n)\nbash  theme={null}\n    pip install -U agno sqlalchemy psycopg pgvector openai    \n    bash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash Mac theme={null}\n      python cookbook/knowledge/basic_operations/08_include_exclude_files.py\n      bash Windows theme={null}\n      python cookbook/knowledge/basic_operations/08_include_exclude_files.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Run the example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#alex-river-is-not-in-the-knowledge-base,-so-the-agent-should-not-find-any-information-about-him",
+  "links": []
+}

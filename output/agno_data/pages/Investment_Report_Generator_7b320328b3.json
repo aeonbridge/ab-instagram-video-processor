@@ -1,0 +1,29 @@
+{
+  "title": "Investment Report Generator",
+  "content": "Source: https://docs.agno.com/examples/use-cases/workflows/investment-report-generator\n\nBuild a sophisticated investment analysis system that combines market research, financial analysis, and portfolio management. This workflow analyzes stocks, evaluates investment potential, and generates strategic portfolio allocation recommendations.\n\nBy building this workflow, you'll understand:\n\n* How to structure multi-stage financial analysis workflows\n* How to integrate web search for real-time market research\n* How to rank and compare investment opportunities systematically\n* How to generate comprehensive investment reports with rationale\n\nBuild investment research platforms, portfolio analysis tools, financial advisory systems, or automated stock screening applications.\n\nThe workflow follows a three-stage investment analysis process:\n\n1. **Research**: Market analyst agent uses DuckDuckGo to gather comprehensive information on each stock\n2. **Evaluate**: Investment analyst ranks stocks by potential and provides detailed rationale\n3. **Allocate**: Portfolio manager creates strategic allocation recommendations based on rankings\n4. **Report**: Generates a professional investment report with analysis and recommendations\n\nThe workflow processes multiple stocks simultaneously and provides comparative analysis.\n\n```python investment_report_generator.py theme={null}\n\"\"\"Investment Report Generator - Your AI Financial Analysis Studio!\n\nThis advanced example demonstrates how to build a sophisticated investment analysis system that combines\nmarket research, financial analysis, and portfolio management. The workflow uses a three-stage\napproach:\n1. Comprehensive stock analysis and market research\n2. Investment potential evaluation and ranking\n3. Strategic portfolio allocation recommendations\n\nKey capabilities:\n- Real-time market data analysis\n- Professional financial research\n- Investment risk assessment\n- Portfolio allocation strategy\n- Detailed investment rationale\n\nExample companies to analyze:\n- \"AAPL, MSFT, GOOGL\" (Tech Giants)\n- \"NVDA, AMD, INTC\" (Semiconductor Leaders)\n- \"TSLA, F, GM\" (Automotive Innovation)\n- \"JPM, BAC, GS\" (Banking Sector)\n- \"AMZN, WMT, TGT\" (Retail Competition)\n- \"PFE, JNJ, MRNA\" (Healthcare Focus)\n- \"XOM, CVX, BP\" (Energy Sector)\n\nRun `pip install openai ddgs agno` to install dependencies.\n\"\"\"\n\nimport asyncio\nimport random\nfrom pathlib import Path\nfrom shutil import rmtree\nfrom textwrap import dedent\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.utils.pprint import pprint_run_response\nfrom agno.workflow.types import WorkflowExecutionInput\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#investment-report-generator",
+  "links": []
+}

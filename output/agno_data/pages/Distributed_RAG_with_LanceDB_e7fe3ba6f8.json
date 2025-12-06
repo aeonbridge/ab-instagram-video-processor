@@ -1,0 +1,14 @@
+{
+  "title": "Distributed RAG with LanceDB",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/usage/distributed-rag-lancedb\n\nThis example demonstrates how multiple specialized agents coordinate to provide comprehensive RAG responses using distributed knowledge bases and specialized retrieval strategies with LanceDB. The team includes primary retrieval, context expansion, answer synthesis, and quality validation.\n\n```python cookbook/examples/teams/distributed_rag/02_distributed_rag_lancedb.py theme={null}\n\"\"\"\nThis example demonstrates how multiple specialized agents coordinate to provide\ncomprehensive RAG responses using distributed knowledge bases and specialized\nretrieval strategies with LanceDB.\n\nTeam Composition:\n- Primary Retriever: Handles primary document retrieval from main knowledge base\n- Context Expander: Expands context by finding related information\n- Answer Synthesizer: Synthesizes retrieved information into comprehensive answers\n- Quality Validator: Validates answer quality and suggests improvements\n\nSetup:\n1. Run: `pip install openai lancedb tantivy pypdf sqlalchemy agno`\n2. Run this script to see distributed RAG in action\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.vectordb.lancedb import LanceDb, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#distributed-rag-with-lancedb",
+  "links": []
+}

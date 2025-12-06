@@ -1,0 +1,28 @@
+{
+  "title": "Option B: Manually add cultural knowledge without a model",
+  "content": "response_format = CulturalKnowledge(\n    name=\"Response Format Standard\",\n    summary=\"Keep responses concise, scannable, and runnable-first\",\n    categories=[\"communication\", \"ux\"],\n    content=(\n        \"- Lead with minimal runnable snippet\\n\"\n        \"- Use numbered steps for procedures\\n\"\n        \"- End with validation checklist\"\n    ),\n    notes=[\"Derived from user feedback\"],\n)\n\nculture_manager.add_cultural_knowledge(response_format)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\n\ndb = PostgresDb(\n    db_url=\"postgresql://user:password@localhost:5432/my_database\",\n    cultural_knowledge_table=\"my_culture_table\",  # Custom table name\n)\n\nagent = Agent(\n    db=db, \n    add_culture_to_context=True,\n    update_cultural_knowledge=True,\n)\npython  theme={null}\nfrom agno.culture.manager import CultureManager\nfrom agno.db.sqlite import SqliteDb\n\ndb = SqliteDb(db_file=\"agno.db\")\nculture_manager = CultureManager(db=db)",
+  "code_samples": [
+    {
+      "code": "**Best for:** Seeding initial organizational principles, onboarding standards, or brand guidelines that all agents should follow.\n\n## Storage: Where Culture Lives\n\nCultural knowledge is stored in the database you connect to your agent. Agno supports all major database systems: Postgres, SQLite, MongoDB, and more. Check the [Database documentation](/basics/database/overview) for the full list.\n\nBy default, cultural knowledge is stored in the `agno_cultural_knowledge` table (or collection for document databases). A custom table name can also be configured. If this table doesn't exist, Agno creates it automatically.",
+      "language": "unknown"
+    },
+    {
+      "code": "### Manual Culture Retrieval\n\nYou can manually retrieve cultural knowledge using the `CultureManager`:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Storage: Where Culture Lives",
+      "id": "storage:-where-culture-lives"
+    },
+    {
+      "level": "h3",
+      "text": "Manual Culture Retrieval",
+      "id": "manual-culture-retrieval"
+    }
+  ],
+  "url": "llms-txt#option-b:-manually-add-cultural-knowledge-without-a-model",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "=== AGENTS ===",
+  "content": "story_writer = Agent(\n    name=\"Story Writer\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    instructions=\"You are tasked with writing a 100 word story based on a given topic\",\n)\n\nstory_editor = Agent(\n    name=\"Story Editor\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    instructions=\"Review and improve the story's grammar, flow, and clarity\",\n)\n\nstory_formatter = Agent(\n    name=\"Story Formatter\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    instructions=\"Break down the story into prologue, body, and epilogue sections\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#===-agents-===",
+  "links": []
+}

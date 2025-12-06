@@ -1,0 +1,19 @@
+{
+  "title": "Optimize memories for a user",
+  "content": "optimized = agent.memory_manager.optimize_memories(\n    user_id=\"user_123\",\n    strategy=MemoryOptimizationStrategyType.SUMMARIZE,\n    apply=True,  # Set to False to preview without saving\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.memory import MemoryTools",
+  "code_samples": [
+    {
+      "code": "See the [Memory Optimization](/basics/memory/working-with-memories/memory-optimization) guide for detailed usage and best practices.\n\n## Using Memory Tools\n\nInstead of automatic memory management, you can give your agent explicit tools to create, retrieve, update, and delete memories. This approach gives the agent more control and reasoning ability, so it can decide when to store something versus when to search for existing memories.\n\n**When to use Memory Tools:**\n\n* You want the agent to reason about whether something is worth remembering\n* You need fine-grained control over memory operations (create, update, delete separately)\n* You're building a system where the agent should explicitly search memories rather than having them auto-loaded",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using Memory Tools",
+      "id": "using-memory-tools"
+    }
+  ],
+  "url": "llms-txt#optimize-memories-for-a-user",
+  "links": []
+}

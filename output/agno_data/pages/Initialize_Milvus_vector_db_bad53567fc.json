@@ -1,0 +1,8 @@
+{
+  "title": "Initialize Milvus vector db",
+  "content": "vector_db = Milvus(\n    collection=\"recipes\",\n    uri=\"tmp/milvus.db\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-milvus-vector-db",
+  "links": []
+}

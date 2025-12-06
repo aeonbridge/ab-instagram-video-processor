@@ -1,0 +1,37 @@
+{
+  "title": "ScrapeGraph",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/scrapegraph\n\nScrapeGraphTools enable an Agent to extract structured data from webpages, convert content to markdown, and retrieve raw HTML content.\n\n**ScrapeGraphTools** enable an Agent to extract structured data from webpages, convert content to markdown, and retrieve raw HTML content using the ScrapeGraphAI API.\n\nThe toolkit provides 5 core capabilities:\n\n1. **smartscraper**: Extract structured data using natural language prompts\n2. **markdownify**: Convert web pages to markdown format\n3. **searchscraper**: Search the web and extract information\n4. **crawl**: Crawl websites with structured data extraction\n5. **scrape**: Get raw HTML content from websites *(NEW!)*\n\nThe scrape method is particularly useful when you need:\n\n* Complete HTML source code\n* Raw content for further processing\n* HTML structure analysis\n* Content that needs to be parsed differently\n\nAll methods support heavy JavaScript rendering when needed.\n\nThe following examples require the `scrapegraph-py` library.\n\nOptionally, if your ScrapeGraph configuration or specific models require an API key, set the `SGAI_API_KEY` environment variable:\n\nThe following agent will extract structured data from a website using the smartscraper tool:\n\n### Raw HTML Scraping\n\nGet complete HTML content from websites for custom processing:\n\n```python cookbook/tools/scrapegraph_tools.py theme={null}",
+  "code_samples": [
+    {
+      "code": "Optionally, if your ScrapeGraph configuration or specific models require an API key, set the `SGAI_API_KEY` environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will extract structured data from a website using the smartscraper tool:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Raw HTML Scraping\n\nGet complete HTML content from websites for custom processing:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h3",
+      "text": "Raw HTML Scraping",
+      "id": "raw-html-scraping"
+    }
+  ],
+  "url": "llms-txt#scrapegraph",
+  "links": []
+}

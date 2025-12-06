@@ -1,0 +1,14 @@
+{
+  "title": "vLLM",
+  "content": "Source: https://docs.agno.com/reference/knowledge/embedder/vllm\n\nThe vLLM Embedder provides high-performance embedding inference with support for both local and remote deployment modes. It can load models directly for local inference or connect to a remote vLLM server via an OpenAI-compatible API.\n\n```python  theme={null}\nfrom agno.knowledge.embedder.vllm import VLLMEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#vllm",
+  "links": []
+}

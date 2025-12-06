@@ -1,0 +1,87 @@
+{
+  "title": "Setting Environment Variables",
+  "content": "Source: https://docs.agno.com/faq/environment-variables\n\nTo configure your environment for applications, you may need to set environment variables. This guide provides instructions for setting environment variables in both macOS (Shell) and Windows (PowerShell and Windows Command Prompt).\n\n### Setting Environment Variables in Shell\n\n#### Temporary Environment Variables\n\nThese environment variables will only be available in the current shell session.\n\nTo display the environment variable:\n\n#### Permanent Environment Variables\n\nTo make environment variables persist across sessions, add them to your shell configuration file (e.g., `.bashrc`, `.bash_profile`, `.zshrc`).\n\nTo display the environment variable:\n\n### Setting Environment Variables in PowerShell\n\n#### Temporary Environment Variables\n\nThese environment variables will only be available in the current PowerShell session.\n\nTo display the environment variable:\n\n#### Permanent Environment Variables\n\nTo make environment variables persist across sessions, add them to your PowerShell profile script (e.g., `Microsoft.PowerShell_profile.ps1`).\n\nAdd the following line to the profile script:\n\nSave and close the file, then reload the profile:\n\nTo display the environment variable:\n\n### Setting Environment Variables in Windows Command Prompt\n\n#### Temporary Environment Variables\n\nThese environment variables will only be available in the current Command Prompt session.\n\nTo display the environment variable:\n\n#### Permanent Environment Variables\n\nTo make environment variables persist across sessions, you can use the `setx` command:\n\nNote: After setting an environment variable using `setx`, you need to restart the Command Prompt or any applications that need to read the new environment variable.\n\nTo display the environment variable in a new Command Prompt session:\n\nBy following these steps, you can effectively set and display environment variables in macOS Shell, Windows Command Prompt, and PowerShell. This will ensure your environment is properly configured for your applications.",
+  "code_samples": [
+    {
+      "code": "To display the environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "#### Permanent Environment Variables\n\nTo make environment variables persist across sessions, add them to your shell configuration file (e.g., `.bashrc`, `.bash_profile`, `.zshrc`).\n\nFor Zsh:",
+      "language": "unknown"
+    },
+    {
+      "code": "To display the environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Windows\n\n### Setting Environment Variables in PowerShell\n\n#### Temporary Environment Variables\n\nThese environment variables will only be available in the current PowerShell session.",
+      "language": "unknown"
+    },
+    {
+      "code": "To display the environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "#### Permanent Environment Variables\n\nTo make environment variables persist across sessions, add them to your PowerShell profile script (e.g., `Microsoft.PowerShell_profile.ps1`).",
+      "language": "unknown"
+    },
+    {
+      "code": "Add the following line to the profile script:",
+      "language": "unknown"
+    },
+    {
+      "code": "Save and close the file, then reload the profile:",
+      "language": "unknown"
+    },
+    {
+      "code": "To display the environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Setting Environment Variables in Windows Command Prompt\n\n#### Temporary Environment Variables\n\nThese environment variables will only be available in the current Command Prompt session.",
+      "language": "unknown"
+    },
+    {
+      "code": "To display the environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "#### Permanent Environment Variables\n\nTo make environment variables persist across sessions, you can use the `setx` command:",
+      "language": "unknown"
+    },
+    {
+      "code": "Note: After setting an environment variable using `setx`, you need to restart the Command Prompt or any applications that need to read the new environment variable.\n\nTo display the environment variable in a new Command Prompt session:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "macOS",
+      "id": "macos"
+    },
+    {
+      "level": "h3",
+      "text": "Setting Environment Variables in Shell",
+      "id": "setting-environment-variables-in-shell"
+    },
+    {
+      "level": "h2",
+      "text": "Windows",
+      "id": "windows"
+    },
+    {
+      "level": "h3",
+      "text": "Setting Environment Variables in PowerShell",
+      "id": "setting-environment-variables-in-powershell"
+    },
+    {
+      "level": "h3",
+      "text": "Setting Environment Variables in Windows Command Prompt",
+      "id": "setting-environment-variables-in-windows-command-prompt"
+    }
+  ],
+  "url": "llms-txt#setting-environment-variables",
+  "links": []
+}

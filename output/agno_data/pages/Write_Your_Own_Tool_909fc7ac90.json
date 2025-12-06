@@ -1,0 +1,14 @@
+{
+  "title": "Write Your Own Tool",
+  "content": "Source: https://docs.agno.com/examples/getting-started/04-write-your-own-tool\n\nThis example shows how to create and use your own custom tool with Agno.\nYou can replace the Hacker News functionality with any API or service you want!\n\nSome ideas for your own tools:\n\n* Weather data fetcher\n* Stock price analyzer\n* Personal calendar integration\n* Custom database queries\n* Local file operations\n\n```python custom_tools.py theme={null}\nimport json\nfrom textwrap import dedent\n\nimport httpx\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\ndef get_top_hackernews_stories(num_stories: int = 10) -> str:\n    \"\"\"Use this function to get top stories from Hacker News.\n\nArgs:\n        num_stories (int): Number of stories to return. Defaults to 10.\n\nReturns:\n        str: JSON string of top stories.\n    \"\"\"\n\n# Fetch top story IDs\n    response = httpx.get(\"https://hacker-news.firebaseio.com/v0/topstories.json\")\n    story_ids = response.json()\n\n# Fetch story details\n    stories = []\n    for story_id in story_ids[:num_stories]:\n        story_response = httpx.get(\n            f\"https://hacker-news.firebaseio.com/v0/item/{story_id}.json\"\n        )\n        story = story_response.json()\n        if \"text\" in story:\n            story.pop(\"text\", None)\n        stories.append(story)\n    return json.dumps(stories)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#write-your-own-tool",
+  "links": []
+}

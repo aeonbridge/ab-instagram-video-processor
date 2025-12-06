@@ -1,0 +1,8 @@
+{
+  "title": "To equipt our Agent with our tool, we simply pass it with the tools parameter",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-5-nano\"),\n    tools=[get_weather],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#to-equipt-our-agent-with-our-tool,-we-simply-pass-it-with-the-tools-parameter",
+  "links": []
+}

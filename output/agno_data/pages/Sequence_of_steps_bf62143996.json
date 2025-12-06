@@ -1,0 +1,14 @@
+{
+  "title": "Sequence of steps",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/sequence-of-steps\n\nThis example demonstrates how to use named steps in a workflow.\n\nThis example demonstrates **Workflows** using named Step objects for better tracking\nand organization. This pattern provides clear step identification and enhanced logging\nwhile maintaining simple sequential execution.\n\n## Pattern: Sequential Named Steps\n\n**When to use**: Linear processes where you want clear step identification, better logging,\nand future platform support. Ideal when you have distinct phases that benefit from naming.\n\n```python sequence_of_steps.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Pattern: Sequential Named Steps",
+      "id": "pattern:-sequential-named-steps"
+    }
+  ],
+  "url": "llms-txt#sequence-of-steps",
+  "links": []
+}

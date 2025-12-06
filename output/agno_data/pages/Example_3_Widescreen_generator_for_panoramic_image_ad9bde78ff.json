@@ -1,0 +1,8 @@
+{
+  "title": "Example 3: Widescreen generator for panoramic images",
+  "content": "widescreen_agent = Agent(\n    tools=[\n        NanoBananaTools(\n            aspect_ratio=\"16:9\"  # Widescreen format\n        )\n    ],\n    name=\"Widescreen NanoBanana Generator\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-3:-widescreen-generator-for-panoramic-images",
+  "links": []
+}

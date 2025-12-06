@@ -1,0 +1,8 @@
+{
+  "title": "Context Expander Agent - Specialized in expanding context",
+  "content": "context_expander = Agent(\n    name=\"Context Expander\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Expand context by finding related and supplementary information\",\n    knowledge=context_knowledge,\n    search_knowledge=True,\n    instructions=[\n        \"Find related information that complements the primary retrieval.\",\n        \"Look for background context, related topics, and supplementary details.\",\n        \"Search for information that helps understand the broader context.\",\n        \"Identify connections between different pieces of information.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#context-expander-agent---specialized-in-expanding-context",
+  "links": []
+}

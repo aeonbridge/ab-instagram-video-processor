@@ -1,0 +1,47 @@
+{
+  "title": "Quick start - SQLite",
+  "content": "workflow = Workflow(\n    name=\"Research Pipeline\",\n    db=SqliteDb(db_file=\"workflows.db\"),\n    steps=[...],\n)\npython  theme={null}\nfrom agno.workflow import Workflow\nfrom agno.db.sqlite import SqliteDb\n\nworkflow = Workflow(\n    name=\"Content Pipeline\",\n    db=SqliteDb(db_file=\"workflows.db\"),\n    steps=[...],\n    add_workflow_history_to_steps=True,  # Include previous runs\n    num_history_runs=5,                  # Limit how many runs to load\n)\nxml  theme={null}\n<workflow_history_context>\n[Workflow Run-1]\nUser input: Create a blog post about AI\nWorkflow output: [Full output from run]\n\n[Workflow Run-2]\nUser input: Write about machine learning\nWorkflow output: [Full output from run]\n</workflow_history_context>\npython  theme={null}\nfrom agno.workflow import Workflow\nfrom agno.db.sqlite import SqliteDb\n\nworkflow = Workflow(\n    name=\"Research Pipeline\",\n    db=SqliteDb(db_file=\"workflows.db\"),\n    steps=[...],\n)\n\nworkflow.run(input=\"Analyze AI trends\", session_id=\"session_123\")\nworkflow.set_session_name(session_id=\"session_123\", session_name=\"AI Trends Analysis Q4 2024\")",
+  "code_samples": [
+    {
+      "code": "<Card title=\"Database Configuration Guide\" icon=\"database\" href=\"/basics/database/overview\">\n  See all supported databases, connection options, and production recommendations\n</Card>\n\n## Workflow History\n\nWorkflow history lets workflow steps access results from previous runs. When enabled, Agno formats prior run results and prepends them to each step input so future executions can build on that context.\n\n### Enable history for your steps",
+      "language": "unknown"
+    },
+    {
+      "code": "<Check>\n  Why it helps:\n\n  * **Access previous runs** instead of repeating work\n  * **Reference past decisions** to keep outputs consistent\n  * **Maintain context** across multi-run workflows\n  * **Build on prior results** for richer analysis\n</Check>\n\n### History format\n\nAgno wraps past runs in a structured XML block before inserting it into each step input:",
+      "language": "unknown"
+    },
+    {
+      "code": "See the [workflow history implementation guide](/basics/chat-history/workflow/overview) for advanced controls, per-step overrides, and programmatic access patterns.\n\n## Session Naming\n\nGive your workflow sessions meaningful names for easier identification:\n\n### Manual Naming",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Workflow History",
+      "id": "workflow-history"
+    },
+    {
+      "level": "h3",
+      "text": "Enable history for your steps",
+      "id": "enable-history-for-your-steps"
+    },
+    {
+      "level": "h3",
+      "text": "History format",
+      "id": "history-format"
+    },
+    {
+      "level": "h2",
+      "text": "Session Naming",
+      "id": "session-naming"
+    },
+    {
+      "level": "h3",
+      "text": "Manual Naming",
+      "id": "manual-naming"
+    }
+  ],
+  "url": "llms-txt#quick-start---sqlite",
+  "links": []
+}

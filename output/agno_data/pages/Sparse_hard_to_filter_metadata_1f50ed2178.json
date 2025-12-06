@@ -1,0 +1,13 @@
+{
+  "title": "Sparse, hard to filter metadata",
+  "content": "poor_metadata = {\n    \"type\": \"doc\",\n    \"id\": \"12345\"\n}\npython  theme={null}\nfrom datetime import datetime\n\ndef assign_metadata(file_path: str) -> dict:\n    \"\"\"Generate metadata based on file characteristics.\"\"\"\n    metadata = {}\n\n# Extract from filename\n    if \"policy\" in file_path.lower():\n        metadata[\"document_type\"] = \"policy\"\n    elif \"guide\" in file_path.lower():\n        metadata[\"document_type\"] = \"guide\"\n\n# Extract department from path\n    if \"/hr/\" in file_path:\n        metadata[\"department\"] = \"hr\"\n    elif \"/engineering/\" in file_path:\n        metadata[\"department\"] = \"engineering\"\n\n# Add timestamp\n    metadata[\"indexed_at\"] = datetime.now().isoformat()",
+  "code_samples": [
+    {
+      "code": "**Metadata Best Practices:**\n\n* **Be Consistent**: Use standardized values (e.g., always \"hr\" not sometimes \"HR\" or \"human\\_resources\")\n* **Think Hierarchically**: Use nested categories when appropriate (`department.team`, `location.region`)\n* **Include Temporal Data**: Add dates, versions, or other time-based metadata for lifecycle management\n* **Add Semantic Tags**: Include searchable tags or keywords that might not appear in the content\n\n**Dynamic Metadata Assignment:**\n\nAdd metadata programmatically based on content:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#sparse,-hard-to-filter-metadata",
+  "links": []
+}

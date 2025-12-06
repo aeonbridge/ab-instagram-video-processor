@@ -1,0 +1,8 @@
+{
+  "title": "Create the workflow",
+  "content": "query_to_notion_workflow = Workflow(\n    name=\"query-to-notion-workflow\",\n    description=\"Classify user queries and organize them in Notion\",\n    db=SqliteDb(\n        session_table=\"workflow_session\",\n        db_file=\"tmp/workflow.db\",\n    ),\n    steps=[classify_step, notion_prep_step, notion_step],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-the-workflow",
+  "links": []
+}

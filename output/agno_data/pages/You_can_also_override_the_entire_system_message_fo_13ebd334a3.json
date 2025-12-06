@@ -1,0 +1,27 @@
+{
+  "title": "You can also override the entire `system_message` for the memory manager",
+  "content": "memory_manager = MemoryManager(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    additional_instructions=\"\"\"\n    IMPORTANT: Don't store any memories about the user's name. Just say \"The User\" instead of referencing the user's name.\n    \"\"\",\n    db=db,\n)\n\njohn_doe_id = \"john_doe@example.com\"\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    db=db,\n    memory_manager=memory_manager,\n    enable_user_memories=True,\n    user_id=john_doe_id,\n)\n\nagent.print_response(\n    \"My name is John Doe and I like to swim and play soccer.\", stream=True\n)\n\nagent.print_response(\"I dont like to swim\", stream=True)\n\nmemories = agent.get_user_memories(user_id=john_doe_id)\n\nprint(\"John Doe's memories:\")\npprint(memories)\n\nbash  theme={null}\n    pip install -U agno\n    bash Mac theme={null}\n      python cookbook/memory/04_custom_memory_manager.py\n      bash Windows theme={null}\n      python cookbook/memory/04_custom_memory_manager.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#you-can-also-override-the-entire-`system_message`-for-the-memory-manager",
+  "links": []
+}

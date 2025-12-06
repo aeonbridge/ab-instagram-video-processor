@@ -1,0 +1,29 @@
+{
+  "title": "Linkup",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/linkup\n\nLinkupTools provides advanced web search capabilities with deep search options and structured results.\n\nThe following agent can perform advanced web searches using Linkup:\n\n| Parameter                       | Type            | Default           | Description                                        |\n| ------------------------------- | --------------- | ----------------- | -------------------------------------------------- |\n| `api_key`                       | `Optional[str]` | `None`            | Linkup API key. Uses LINKUP\\_API\\_KEY if not set.  |\n| `depth`                         | `Literal`       | `\"standard\"`      | Search depth: \"standard\" or \"deep\".                |\n| `output_type`                   | `Literal`       | `\"searchResults\"` | Output format: \"searchResults\" or \"sourcedAnswer\". |\n| `enable_web_search_with_linkup` | `bool`          | `True`            | Enable web search functionality.                   |\n\n| Function                 | Description                                                       |\n| ------------------------ | ----------------------------------------------------------------- |\n| `web_search_with_linkup` | Perform advanced web searches with configurable depth and format. |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/linkup.py)\n* [Linkup SDK Documentation](https://docs.linkup.com/)\n* [Linkup API Reference](https://api.linkup.com/docs)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#linkup",
+  "links": []
+}

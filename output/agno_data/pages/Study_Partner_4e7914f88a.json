@@ -1,0 +1,41 @@
+{
+  "title": "Study Partner",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/study-partner\n\nThis Study Partner agent demonstrates how to create an AI-powered study partner that combines multiple information sources and tools to provide comprehensive learning support. The agent showcases several key capabilities:\n\n**Multi-tool Integration**: Combines Exa search tools for web research and YouTube tools for video content discovery, enabling the agent to access diverse learning resources.\n\n**Personalized Learning Support**: Creates customized study plans based on user constraints (time available, current knowledge level, daily study hours) and learning preferences.\n\n**Resource Curation**: Searches and recommends high-quality learning materials including documentation, tutorials, research papers, and community discussions from reliable sources.\n\n**Interactive Learning**: Provides step-by-step explanations, practical examples, and hands-on project suggestions to reinforce understanding.\n\n**Progress Tracking**: Designs structured study plans with clear milestones and deadlines to help users stay on track with their learning goals.\n\n**Learning Strategy**: Offers tips on effective study techniques, time management, and motivation maintenance for sustained learning success.\n\nThis example is particularly useful for developers, students, or anyone looking to build AI agents that can assist with educational content discovery, personalized learning path creation, and comprehensive study support across various subjects and skill levels.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API key\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Description",
+      "id": "description"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#study-partner",
+  "links": []
+}

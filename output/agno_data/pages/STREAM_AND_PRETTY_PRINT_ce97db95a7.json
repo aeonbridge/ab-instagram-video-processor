@@ -1,0 +1,29 @@
+{
+  "title": "STREAM AND PRETTY PRINT",
+  "content": "stream = team.run(\"What is the weather in Tokyo?\", stream=True)\npprint_run_response(stream, markdown=True)\npython  theme={null}\n...\n\nteam = Team(\n    name=\"News and Weather Team\", \n    members=[news_agent, weather_agent],\n    model=OpenAIChat(id=\"gpt-4o\")\n    show_members_responses=True,\n)\n\nteam.print_response(\"What is the weather in Tokyo?\")\n```\n\n## The Passthrough-Team Pattern\n\nIt is a common pattern to have a team that decides which member to delegate the request to, and then passes the request to the team member without any modification, and also applies no processing to the response before returning it to the user. I.e. this team is a \"passthrough\" team (or \"router\" team).\n\nIn that case the team leader is effectively bypassed and all communication is directly with a team member. See the [Passthrough Teams](/basics/teams/delegation#passthrough-teams) section for more details.\n\nNext, continue building your team by adding functionality as needed. Common questions:\n\n* **How do I run my team?** -> See the [running teams](/basics/teams/running-teams) documentation.\n* **How do I add history to my team?** -> See the [chat history](/basics/chat-history/team/overview) documentation.\n* **How do I manage sessions?** -> See the [sessions](/basics/sessions/overview) documentation.\n* **How do I manage input and capture output?** -> See the [input and output](/basics/input-output/overview) documentation.\n* **How do I manage the team context?** -> See the [context engineering](/basics/context/team) documentation.\n* **How do I add knowledge?** -> See the [knowledge](/basics/knowledge/overview) documentation.\n* **How do I add guardrails?** -> See the [guardrails](/basics/guardrails/overview) documentation.\n* **How do I cache responses during development?** -> See the [response caching](/basics/models/cache-response) documentation.",
+  "code_samples": [
+    {
+      "code": "### Modify what is show on the terminal\n\nWhen using `print_response`, only the team tool calls (typically all of the delegation to members) are printed. If you want to print the responses from the members, you can use the `show_members_responses` parameter.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Modify what is show on the terminal",
+      "id": "modify-what-is-show-on-the-terminal"
+    },
+    {
+      "level": "h2",
+      "text": "The Passthrough-Team Pattern",
+      "id": "the-passthrough-team-pattern"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#stream-and-pretty-print",
+  "links": []
+}

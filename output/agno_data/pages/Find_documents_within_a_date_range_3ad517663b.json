@@ -1,0 +1,19 @@
+{
+  "title": "Find documents within a date range",
+  "content": "LT(\"year\", 2025)\npython  theme={null}\nfrom agno.filters import AND, EQ",
+  "code_samples": [
+    {
+      "code": "### Logical Operators\n\nCombine multiple conditions using logical operators:\n\n#### AND\n\nAll conditions must be true.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Logical Operators",
+      "id": "logical-operators"
+    }
+  ],
+  "url": "llms-txt#find-documents-within-a-date-range",
+  "links": []
+}

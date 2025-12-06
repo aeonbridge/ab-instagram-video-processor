@@ -1,0 +1,67 @@
+{
+  "title": "AG-UI",
+  "content": "Source: https://docs.agno.com/agent-os/interfaces/ag-ui/introduction\n\nExpose Agno agents via the AG-UI protocol\n\nAG-UI, the [Agent-User Interaction Protocol](https://github.com/ag-ui-protocol/ag-ui), standardizes how AI agents connect to frontend applications.\n\n<Note>\n  **Migration from Apps**: For migration from `AGUIApp`, see the [v2 migration guide](/how-to/v2-migration#7-apps-interfaces) for complete steps.\n</Note>\n\n<Steps>\n  <Step title=\"Install backend dependencies\">\n    \n  </Step>\n\n<Step title=\"Run the backend\">\n    Expose an Agno agent through the AG-UI interface using `AgentOS` and `AGUI`.\n\n<Step title=\"Run the frontend\">\n    Use Dojo (`ag-ui`'s frontend) as an advanced, customizable interface for AG-UI agents.\n\n1. Clone: `git clone https://github.com/ag-ui-protocol/ag-ui.git`\n    2. Install dependencies in `/ag-ui/typescript-sdk`: `pnpm install`\n    3. Build the Agno package in `/ag-ui/integrations/agno`: `pnpm run build`\n    4. Start Dojo following the instructions in the repository.\n  </Step>\n\n<Step title=\"Chat with the Agno Agent\">\n    With Dojo running, open `http://localhost:3000` and select the Agno agent.\n  </Step>\n</Steps>\n\nAdditional examples are available in the [cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/agent_os/interfaces/agui/).\n\nCustom events created in tools are automatically delivered to AG-UI in the AG-UI custom event format.\n\n**Creating custom events:**\n\n**Yielding from tools:**\n\nCustom events are streamed in real-time to the AG-UI frontend.\n\nSee [Custom Events documentation](/basics/agents/running-agents#custom-events) for more details.\n\n* `AGUI` (interface): Wraps an Agno `Agent` or `Team` into an AG-UI compatible FastAPI router.\n* `AgentOS.serve`: Serves the FastAPI app (including the AGUI router) with Uvicorn.\n\n`AGUI` mounts protocol-compliant routes on the app.\n\nMain entry point for AG-UI exposure.\n\n### Initialization Parameters\n\n| Parameter | Type              | Default | Description            |\n| --------- | ----------------- | ------- | ---------------------- |\n| `agent`   | `Optional[Agent]` | `None`  | Agno `Agent` instance. |\n| `team`    | `Optional[Team]`  | `None`  | Agno `Team` instance.  |\n\nProvide `agent` or `team`.\n\n| Method       | Parameters               | Return Type | Description                                              |\n| ------------ | ------------------------ | ----------- | -------------------------------------------------------- |\n| `get_router` | `use_async: bool = True` | `APIRouter` | Returns the AG-UI FastAPI router and attaches endpoints. |\n\nMounted at the interface's route prefix (root by default):\n\n* `POST /agui`: Main entrypoint. Accepts `RunAgentInput` from `ag-ui-protocol`. Streams AG-UI events.\n* `GET /status`: Health/status endpoint for the interface.\n\nRefer to `ag-ui-protocol` docs for payload details.\n\nUse `AgentOS.serve` to run the app with Uvicorn.\n\n| Parameter | Type                  | Default       | Description                            |\n| --------- | --------------------- | ------------- | -------------------------------------- |\n| `app`     | `Union[str, FastAPI]` | required      | FastAPI app instance or import string. |\n| `host`    | `str`                 | `\"localhost\"` | Host to bind.                          |\n| `port`    | `int`                 | `7777`        | Port to bind.                          |\n| `reload`  | `bool`                | `False`       | Enable auto-reload for development.    |\n\nSee [cookbook examples](https://github.com/agno-agi/agno/tree/main/cookbook/agent_os/interfaces/agui/) for updated interface patterns.",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the backend\">\n    Expose an Agno agent through the AG-UI interface using `AgentOS` and `AGUI`.",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the frontend\">\n    Use Dojo (`ag-ui`'s frontend) as an advanced, customizable interface for AG-UI agents.\n\n    1. Clone: `git clone https://github.com/ag-ui-protocol/ag-ui.git`\n    2. Install dependencies in `/ag-ui/typescript-sdk`: `pnpm install`\n    3. Build the Agno package in `/ag-ui/integrations/agno`: `pnpm run build`\n    4. Start Dojo following the instructions in the repository.\n  </Step>\n\n  <Step title=\"Chat with the Agno Agent\">\n    With Dojo running, open `http://localhost:3000` and select the Agno agent.\n  </Step>\n</Steps>\n\nAdditional examples are available in the [cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/agent_os/interfaces/agui/).\n\n## Custom Events\n\nCustom events created in tools are automatically delivered to AG-UI in the AG-UI custom event format.\n\n**Creating custom events:**",
+      "language": "unknown"
+    },
+    {
+      "code": "**Yielding from tools:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example usage",
+      "id": "example-usage"
+    },
+    {
+      "level": "h2",
+      "text": "Custom Events",
+      "id": "custom-events"
+    },
+    {
+      "level": "h2",
+      "text": "Core Components",
+      "id": "core-components"
+    },
+    {
+      "level": "h2",
+      "text": "`AGUI` interface",
+      "id": "`agui`-interface"
+    },
+    {
+      "level": "h3",
+      "text": "Initialization Parameters",
+      "id": "initialization-parameters"
+    },
+    {
+      "level": "h3",
+      "text": "Key Method",
+      "id": "key-method"
+    },
+    {
+      "level": "h2",
+      "text": "Endpoints",
+      "id": "endpoints"
+    },
+    {
+      "level": "h2",
+      "text": "Serving AgentOS",
+      "id": "serving-agentos"
+    },
+    {
+      "level": "h3",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#ag-ui",
+  "links": []
+}

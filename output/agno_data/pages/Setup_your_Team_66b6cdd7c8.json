@@ -1,0 +1,8 @@
+{
+  "title": "Setup your Team",
+  "content": "team = Team(db=db, ...)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-your-team",
+  "links": []
+}

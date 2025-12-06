@@ -1,0 +1,8 @@
+{
+  "title": "Document Chunking",
+  "content": "Source: https://docs.agno.com/reference/knowledge/chunking/document\n\nDocument chunking is a method of splitting documents into smaller chunks based on document structure like paragraphs and sections.\nIt analyzes natural document boundaries rather than splitting at fixed character counts. This is useful when you want to process large documents while preserving semantic meaning and context.\n\n<Snippet file=\"chunking-document.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#document-chunking",
+  "links": []
+}

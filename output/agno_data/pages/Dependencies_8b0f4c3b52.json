@@ -1,0 +1,24 @@
+{
+  "title": "Dependencies",
+  "content": "Source: https://docs.agno.com/basics/dependencies/overview\n\nLearn how to use dependencies to add context to your agents and teams.\n\n**Dependencies** are a way to inject variables into your Agent or Team context. The `dependencies` parameter accepts a dictionary containing functions or static variables that are automatically resolved before the agent or team runs.\n\n<Note>\n  You can use dependencies to inject memories, dynamic few-shot examples, \"retrieved\" documents, etc.\n</Note>\n\nYou can reference the dependencies in your agent instructions or user message.\n\n<Tip>\n  You can set `dependencies` on `Agent`/`Team` initialization, or pass it to the `run()` and `arun()` methods.\n</Tip>\n\n## How dependencies work\n\nDependencies are resolved at runtime, just before your agent or team executes. Here's the flow:\n\n1. **Define dependencies**: Provide a dictionary of key-value pairs where values can be static data or callable functions\n2. **Resolution**: When the agent/team runs, Agno calls all callable dependencies and replaces them with their return values\n3. **Template substitution**: Resolved dependencies are available in your instructions using `{dependency_name}` syntax\n4. **Context injection**: When `add_dependencies_to_context=True`, dependencies are automatically added to the user message\n\n<CardGroup cols={2}>\n  <Card title=\"Dependencies with Agents\" icon=\"robot\" href=\"/basics/dependencies/agent\">\n    Learn how to use dependencies with agents\n  </Card>\n\n<Card title=\"Dependencies with Teams\" icon=\"users\" href=\"/basics/dependencies/team\">\n    Learn how to use dependencies with teams\n  </Card>\n\n<Card title=\"AgentOS API\" icon=\"code-branch\" href=\"/agent-os/api/usage\">\n    Pass dependencies via the AgentOS API\n  </Card>\n\n<Card title=\"Agent Schema\" icon=\"book\" href=\"/reference/agents/agent\">\n    View the full Agent schema reference\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Basic usage",
+      "id": "basic-usage"
+    },
+    {
+      "level": "h2",
+      "text": "How dependencies work",
+      "id": "how-dependencies-work"
+    },
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#dependencies",
+  "links": []
+}

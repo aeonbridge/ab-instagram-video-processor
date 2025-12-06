@@ -1,0 +1,24 @@
+{
+  "title": "Cursor Rules for Building Agents",
+  "content": "Source: https://docs.agno.com/how-to/cursor-rules\n\nUse .cursorrules to improve AI coding assistant suggestions when building agents with Agno\n\nA [`.cursorrules`](https://docs.cursor.com/context/rules-for-ai) file teaches AI coding assistants (like Cursor, Windsurf) how to build better agents with Agno.\n\n## What is .cursorrules?\n\n`.cursorrules` is a configuration file that provides your AI coding assistant with instructions on how to generate specific code.\nAgno's recommended `.cursorrules` file contains:\n\n* Agno-specific patterns and best practices\n* Correct parameter names and syntax\n* Common mistakes to avoid\n* When to use Agent vs Team vs Workflow\n\nThink of it as a reference guide that helps your AI assistant build agents correctly with Agno.\n\nWithout `.cursorrules`, AI assistants might suggest:\n\n* Wrong parameter names (like `agents=` instead of `members=` for Teams)\n* Outdated patterns or incorrect syntax\n* Performance anti-patterns (creating agents in loops)\n* Non-existent methods or features\n\nWith `.cursorrules`, your AI will:\n\n* Suggest correct Agno patterns automatically\n* Follow performance best practices\n* Use the right approach for your use case\n* Catch common mistakes before you make them\n\n## How to Use .cursorrules\n\nCopy the Agno `.cursorrules` file to your project root:\n\n```bash  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What is .cursorrules?",
+      "id": "what-is-.cursorrules?"
+    },
+    {
+      "level": "h2",
+      "text": "Why Use It?",
+      "id": "why-use-it?"
+    },
+    {
+      "level": "h2",
+      "text": "How to Use .cursorrules",
+      "id": "how-to-use-.cursorrules"
+    }
+  ],
+  "url": "llms-txt#cursor-rules-for-building-agents",
+  "links": []
+}

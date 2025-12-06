@@ -1,0 +1,31 @@
+{
+  "title": "Custom Chunking",
+  "content": "Source: https://docs.agno.com/basics/knowledge/chunking/custom-chunking\n\nCustom chunking allows you to implement your own chunking strategy by creating a class that inherits from `ChunkingStrategy`. This is useful when you need to split documents based on specific separators, apply custom logic, or handle domain-specific content formats.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Snippet file=\"run-pgvector-step.mdx\" />\n\n<Step title=\"Run the script\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n## Custom Chunking Params\n\n<Snippet file=\"chunking-custom.mdx\" />",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Run the script\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Custom Chunking Params",
+      "id": "custom-chunking-params"
+    }
+  ],
+  "url": "llms-txt#custom-chunking",
+  "links": []
+}

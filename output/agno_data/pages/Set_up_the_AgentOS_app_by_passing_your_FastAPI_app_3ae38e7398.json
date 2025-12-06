@@ -1,0 +1,8 @@
+{
+  "title": "Set up the AgentOS app by passing your FastAPI app",
+  "content": "agent_os = AgentOS(\n    description=\"Example app with custom routers\",\n    agents=[web_research_agent],\n    base_app=app,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-the-agentos-app-by-passing-your-fastapi-app",
+  "links": []
+}

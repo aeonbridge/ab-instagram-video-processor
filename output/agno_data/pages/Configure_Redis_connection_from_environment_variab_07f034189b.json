@@ -1,0 +1,8 @@
+{
+  "title": "Configure Redis connection (from environment variables if available, otherwise use local defaults)",
+  "content": "REDIS_URL = os.getenv(\"REDIS_URL\", \"redis://localhost:6379/0\")\nINDEX_NAME = os.getenv(\"REDIS_INDEX\", \"agno_cookbook_vectors\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-redis-connection-(from-environment-variables-if-available,-otherwise-use-local-defaults)",
+  "links": []
+}

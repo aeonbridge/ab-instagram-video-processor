@@ -1,0 +1,8 @@
+{
+  "title": "Create custom FastAPI app",
+  "content": "app = FastAPI(\n    title=\"Example Custom App\",\n    version=\"1.0.0\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-custom-fastapi-app",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Find content from multiple regions",
+  "content": "IN(\"region\", [\"north_america\", \"europe\", \"asia\"])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#find-content-from-multiple-regions",
+  "links": []
+}

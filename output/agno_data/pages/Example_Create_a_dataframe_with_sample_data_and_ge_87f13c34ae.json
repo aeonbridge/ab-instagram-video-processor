@@ -1,0 +1,24 @@
+{
+  "title": "Example: Create a dataframe with sample data and get the first 5 rows",
+  "content": "agent.print_response(\"\"\"\nPlease perform these tasks:\n1. Create a pandas dataframe named 'sales_data' using DataFrame() with this sample data:\n   {'date': ['2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05'],\n    'product': ['Widget A', 'Widget B', 'Widget A', 'Widget C', 'Widget B'],\n    'quantity': [10, 15, 8, 12, 20],\n    'price': [9.99, 15.99, 9.99, 12.99, 15.99]}\n2. Show me the first 5 rows of the sales_data dataframe\n\"\"\")\n```\n\n| Parameter                        | Type   | Default | Description                                        |\n| -------------------------------- | ------ | ------- | -------------------------------------------------- |\n| `enable_create_pandas_dataframe` | `bool` | `True`  | Enables functionality to create pandas DataFrames. |\n| `enable_run_dataframe_operation` | `bool` | `True`  | Enables functionality to run DataFrame operations. |\n| `all`                            | `bool` | `False` | Enables all functionality when set to True.        |\n\n| Function                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                           |\n| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `create_pandas_dataframe` | Creates a Pandas DataFrame named `dataframe_name` by using the specified function `create_using_function` with parameters `function_parameters`. Parameters include 'dataframe\\_name' for the name of the DataFrame, 'create\\_using\\_function' for the function to create it (e.g., 'read\\_csv'), and 'function\\_parameters' for the arguments required by the function. Returns the name of the created DataFrame if successful, otherwise returns an error message. |\n| `run_dataframe_operation` | Runs a specified operation `operation` on a DataFrame `dataframe_name` with the parameters `operation_parameters`. Parameters include 'dataframe\\_name' for the DataFrame to operate on, 'operation' for the operation to perform (e.g., 'head', 'tail'), and 'operation\\_parameters' for the arguments required by the operation. Returns the result of the operation if successful, otherwise returns an error message.                                             |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/pandas.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/pandas_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example:-create-a-dataframe-with-sample-data-and-get-the-first-5-rows",
+  "links": []
+}

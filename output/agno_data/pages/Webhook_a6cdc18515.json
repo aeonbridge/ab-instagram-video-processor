@@ -1,0 +1,8 @@
+{
+  "title": "Webhook",
+  "content": "Source: https://docs.agno.com/reference-api/schema/whatsapp/webhook\n\npost /whatsapp/webhook\nHandle incoming WhatsApp messages",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#webhook",
+  "links": []
+}

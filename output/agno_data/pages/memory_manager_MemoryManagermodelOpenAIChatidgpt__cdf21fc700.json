@@ -1,0 +1,8 @@
+{
+  "title": "memory_manager = MemoryManager(model=OpenAIChat(id=\"gpt-5-mini\"))",
+  "content": "",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#memory_manager-=-memorymanager(model=openaichat(id=\"gpt-5-mini\"))",
+  "links": []
+}

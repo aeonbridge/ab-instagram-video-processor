@@ -1,0 +1,19 @@
+{
+  "title": "Will load the session state from the session with the id \"user_2_session_1\"",
+  "content": "team.print_response(\"How old am I?\", session_id=\"user_2_session_1\", user_id=\"user_2\")\npython overwriting_session_state_in_db.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "## Overwriting the state in the db\n\nBy default, if you pass `session_state` to the run methods, this new state will be merged with the `session_state` in the db.\n\nYou can change that behavior if you want to overwrite the `session_state` in the db:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Overwriting the state in the db",
+      "id": "overwriting-the-state-in-the-db"
+    }
+  ],
+  "url": "llms-txt#will-load-the-session-state-from-the-session-with-the-id-\"user_2_session_1\"",
+  "links": []
+}

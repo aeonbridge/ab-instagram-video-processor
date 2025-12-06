@@ -1,0 +1,13 @@
+{
+  "title": "Common events you might want to skip",
+  "content": "events_to_skip = [\n    WorkflowRunEvent.workflow_started,\n    WorkflowRunEvent.workflow_completed,\n    WorkflowRunEvent.workflow_cancelled,\n    WorkflowRunEvent.step_started,\n    WorkflowRunEvent.step_completed,\n    WorkflowRunEvent.parallel_execution_started,\n    WorkflowRunEvent.parallel_execution_completed,\n    WorkflowRunEvent.condition_execution_started,\n    WorkflowRunEvent.condition_execution_completed,\n    WorkflowRunEvent.loop_execution_started,\n    WorkflowRunEvent.loop_execution_completed,\n    WorkflowRunEvent.router_execution_started,\n    WorkflowRunEvent.router_execution_completed,\n]\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "**Use Cases**\n\n* **Debugging**: Store all events to analyze workflow execution flow\n* **Audit Trails**: Keep records of all workflow activities for compliance\n* **Performance Analysis**: Analyze timing and execution patterns\n* **Error Investigation**: Review event sequences leading to failures\n* **Noise Reduction**: Skip verbose events like `step_started` to focus on results\n\n**Configuration Examples**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#common-events-you-might-want-to-skip",
+  "links": []
+}

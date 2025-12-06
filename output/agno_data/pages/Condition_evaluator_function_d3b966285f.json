@@ -1,0 +1,8 @@
+{
+  "title": "Condition evaluator function",
+  "content": "def is_tech_topic(step_input) -> bool:\n    \"\"\"Check if the topic is tech-related and needs specialized research\"\"\"\n    message = step_input.input.lower() if step_input.input else \"\"\n    tech_keywords = [\n        \"ai\",\n        \"machine learning\",\n        \"technology\",\n        \"software\",\n        \"programming\",\n        \"tech\",\n        \"startup\",\n        \"blockchain\",\n    ]\n    return any(keyword in message for keyword in tech_keywords)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#condition-evaluator-function",
+  "links": []
+}

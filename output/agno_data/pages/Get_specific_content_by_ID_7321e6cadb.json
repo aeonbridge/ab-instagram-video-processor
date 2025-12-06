@@ -1,0 +1,8 @@
+{
+  "title": "Get specific content by ID",
+  "content": "content = knowledge.get_content_by_id(content_id)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-specific-content-by-id",
+  "links": []
+}

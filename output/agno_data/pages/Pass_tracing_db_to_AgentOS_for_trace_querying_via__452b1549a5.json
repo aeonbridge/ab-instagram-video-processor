@@ -1,0 +1,8 @@
+{
+  "title": "Pass tracing_db to AgentOS for trace querying via API",
+  "content": "agent_os = AgentOS(\n    agents=[agent1, agent2],\n    tracing_db=tracing_db,  # Makes traces queryable via AgentOS API\n)\n\napp = agent_os.get_app()\n```\n\n<Note>\n  Even when using `setup_tracing()`, pass `tracing_db` to AgentOS so traces are accessible through the AgentOS API and UI.\n</Note>\n\n<Tip>\n  **Best Practice**: Always use a dedicated `tracing_db` in production, even with a single agent. This keeps observability data separate and makes it easier to scale or migrate later.\n</Tip>",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#pass-tracing_db-to-agentos-for-trace-querying-via-api",
+  "links": []
+}

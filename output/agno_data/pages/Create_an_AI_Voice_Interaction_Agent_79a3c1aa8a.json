@@ -1,0 +1,8 @@
+{
+  "title": "Create an AI Voice Interaction Agent",
+  "content": "agent = Agent(\n    model=OpenAIChat(\n        id=\"gpt-5-mini-audio-preview\",\n        modalities=[\"text\", \"audio\"],\n        audio={\"voice\": \"sage\", \"format\": \"wav\"},\n    ),\n    description=dedent(\"\"\"\\\n        You are an expert in audio processing and voice interaction, capable of understanding\n        and analyzing spoken content while providing natural, engaging voice responses.\n        You excel at comprehending context, emotion, and nuance in speech.\\\n    \"\"\"),\n    instructions=dedent(\"\"\"\\\n        As a voice interaction specialist, follow these guidelines:\n        1. Listen carefully to audio input to understand both content and context\n        2. Provide clear, concise responses that address the main points\n        3. When generating voice responses, maintain a natural, conversational tone\n        4. Consider the speaker's tone and emotion in your analysis\n        5. If the audio is unclear, ask for clarification\n\nFocus on creating engaging and helpful voice interactions!\\\n    \"\"\"),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-ai-voice-interaction-agent",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Count tokens after optimization",
+  "content": "tokens_after = strategy.count_tokens(memories_after)\nprint(f\"  Token count: {tokens_after} tokens\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#count-tokens-after-optimization",
+  "links": []
+}

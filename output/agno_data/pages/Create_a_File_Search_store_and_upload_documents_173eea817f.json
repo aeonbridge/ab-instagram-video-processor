@@ -1,0 +1,8 @@
+{
+  "title": "Create a File Search store and upload documents",
+  "content": "store = model.create_file_search_store(display_name=\"My Docs\")\noperation = model.upload_to_file_search_store(\n    file_path=Path(\"documents/sample.txt\"),\n    store_name=store.name,\n    display_name=\"Sample Document\",\n)\nmodel.wait_for_operation(operation)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-file-search-store-and-upload-documents",
+  "links": []
+}

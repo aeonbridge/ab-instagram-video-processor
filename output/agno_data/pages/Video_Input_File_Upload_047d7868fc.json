@@ -1,0 +1,14 @@
+{
+  "title": "Video Input (File Upload)",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/video-input-file-upload\n\n```python cookbook/models/google/gemini/video_input_file_upload.py theme={null}\nimport time\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import Video\nfrom agno.models.google import Gemini\nfrom agno.utils.log import logger\n\nmodel = Gemini(id=\"gemini-2.0-flash-exp\")\nagent = Agent(\n    model=model,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#video-input-(file-upload)",
+  "links": []
+}

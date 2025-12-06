@@ -1,0 +1,14 @@
+{
+  "title": "Distributed Search with Infinity Reranker",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/usage/distributed-infinity-search\n\nThis example demonstrates how multiple agents coordinate to perform distributed search using Infinity reranker for high-performance ranking across team members.\n\n```python cookbook/examples/teams/search_coordination/03_distributed_infinity_search.py theme={null}\n\"\"\"\nThis example demonstrates how multiple agents coordinate to perform distributed\nsearch using Infinity reranker for high-performance ranking across team members.\n\nTeam Composition:\n- Primary Searcher: Performs initial broad search with infinity reranking\n- Secondary Searcher: Performs targeted search on specific topics\n- Cross-Reference Validator: Validates information across different sources\n- Result Synthesizer: Combines and ranks all results for final response\n\nSetup:\n1. Install dependencies: `pip install agno anthropic infinity-client lancedb`\n2. Set up Infinity Server:\n   \\`\\`\\`bash\n   pip install \"infinity-emb[all]\"\n   infinity_emb v2 --model-id BAAI/bge-reranker-base --port 7997\n   \\`\\`\\`\n3. Export ANTHROPIC_API_KEY\n4. Run this script\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.cohere import CohereEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reranker.infinity import InfinityReranker\nfrom agno.models.anthropic import Claude\nfrom agno.team.team import Team\nfrom agno.vectordb.lancedb import LanceDb, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#distributed-search-with-infinity-reranker",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Workflows Use Cases",
+  "content": "Source: https://docs.agno.com/examples/use-cases/workflows/overview\n\nExplore Agno's Workflow use cases showcasing what advanced Workflows have to offer.\n\nWelcome to Agno's Workflow use cases! Here you'll discover practical examples of multi-phase workflows that orchestrate complex business processes. You can either:\n\n* Run the examples individually\n* Clone the entire [Agno cookbook](https://github.com/agno-agi/agno/tree/main/cookbook)\n\nHave an interesting example to share? Please consider [contributing](https://github.com/agno-agi/agno-docs) to our growing collection.\n\nIf you're just getting started, follow the [Getting Started](/examples/getting-started) guide for a step-by-step tutorial. The examples build on each other, introducing new concepts and capabilities progressively.\n\nExplore these popular workflow examples to see what's possible with Agno:\n\n<CardGroup cols={3}>\n  <Card title=\"Startup Idea Validator\" icon=\"lightbulb\" iconType=\"duotone\" href=\"/examples/use-cases/workflows/startup-idea-validator\">\n    Evaluate business ideas through market research and competitive analysis.\n  </Card>\n\n<Card title=\"Notion Knowledge Manager\" icon=\"database\" iconType=\"duotone\" href=\"/examples/use-cases/workflows/notion-knowledge-manager\">\n    Automatically create, update, and organize content in Notion databases.\n  </Card>\n\n<Card title=\"Blog Post Generator\" icon=\"blog\" iconType=\"duotone\" href=\"/examples/use-cases/workflows/blog-post-generator\">\n    Create high-quality blog posts with web research and professional writing.\n  </Card>\n\n<Card title=\"Investment Report Generator\" icon=\"chart-line\" iconType=\"duotone\" href=\"/examples/use-cases/workflows/investment-report-generator\">\n    Analyze stocks and generate strategic portfolio allocation recommendations.\n  </Card>\n\n<Card title=\"Employee Recruiter\" icon=\"user-tie\" iconType=\"duotone\" href=\"/examples/use-cases/workflows/employee-recruiter\">\n    Automate resume screening, interview scheduling, and email communication.\n  </Card>\n\n<Card title=\"Company Description\" icon=\"building\" iconType=\"duotone\" href=\"/examples/use-cases/workflows/company-description\">\n    Generate comprehensive supplier profiles with web crawling and analysis.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Getting Started",
+      "id": "getting-started"
+    },
+    {
+      "level": "h2",
+      "text": "Featured Examples",
+      "id": "featured-examples"
+    }
+  ],
+  "url": "llms-txt#workflows-use-cases",
+  "links": []
+}

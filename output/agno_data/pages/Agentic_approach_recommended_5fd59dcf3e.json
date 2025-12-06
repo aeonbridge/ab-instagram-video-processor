@@ -1,0 +1,8 @@
+{
+  "title": "Agentic approach (recommended)",
+  "content": "agent = Agent(\n    knowledge=knowledge,\n    search_knowledge=True  # Agent decides when to search\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agentic-approach-(recommended)",
+  "links": []
+}

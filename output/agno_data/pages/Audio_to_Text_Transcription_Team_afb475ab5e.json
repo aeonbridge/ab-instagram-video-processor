@@ -1,0 +1,14 @@
+{
+  "title": "Audio to Text Transcription Team",
+  "content": "Source: https://docs.agno.com/basics/multimodal/team/usage/audio-to-text\n\nThis example demonstrates how a team can collaborate to transcribe audio content and analyze the transcribed text for insights and themes.\n\n```python cookbook/examples/teams/multimodal/audio_to_text.py theme={null}\nimport requests\nfrom agno.agent import Agent\nfrom agno.media import Audio\nfrom agno.models.google import Gemini\nfrom agno.team import Team\n\ntranscription_specialist = Agent(\n    name=\"Transcription Specialist\",\n    role=\"Convert audio to accurate text transcriptions\",\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    instructions=[\n        \"Transcribe audio with high accuracy\",\n        \"Identify speakers clearly as Speaker A, Speaker B, etc.\",\n        \"Maintain conversation flow and context\",\n    ],\n)\n\ncontent_analyzer = Agent(\n    name=\"Content Analyzer\",\n    role=\"Analyze transcribed content for insights\",\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    instructions=[\n        \"Analyze transcription for key themes and insights\",\n        \"Provide summaries and extract important information\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#audio-to-text-transcription-team",
+  "links": []
+}

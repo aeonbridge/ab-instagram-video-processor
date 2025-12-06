@@ -1,0 +1,24 @@
+{
+  "title": "Get user profile",
+  "content": "agent.print_response(\"Get my X profile\", markdown=True)\n```\n\nCheck out the [Tweet Analysis Agent](/examples/use-cases/agents/tweet-analysis-agent)\n  for a more advanced example.{\" \"}\n</Note>\n\n| Parameter              | Type   | Default | Description                                                    |\n| ---------------------- | ------ | ------- | -------------------------------------------------------------- |\n| `bearer_token`         | `str`  | `None`  | Bearer token for authentication                                |\n| `consumer_key`         | `str`  | `None`  | Consumer key for authentication                                |\n| `consumer_secret`      | `str`  | `None`  | Consumer secret for authentication                             |\n| `access_token`         | `str`  | `None`  | Access token for authentication                                |\n| `access_token_secret`  | `str`  | `None`  | Access token secret for authentication                         |\n| `include_post_metrics` | `bool` | `False` | Include post metrics (likes, retweets, etc.) in search results |\n| `wait_on_rate_limit`   | `bool` | `False` | Retry when rate limits are reached                             |\n\n| Function            | Description                                 |\n| ------------------- | ------------------------------------------- |\n| `create_post`       | Creates and posts a new post                |\n| `reply_to_post`     | Replies to an existing post                 |\n| `send_dm`           | Sends a direct message to a X user          |\n| `get_user_info`     | Retrieves information about a X user        |\n| `get_home_timeline` | Gets the authenticated user's home timeline |\n| `search_posts`      | Searches for tweets                         |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/x.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/x_tools.py)\n* View [Tweet Analysis Agent Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/examples/agents/social_media_agent.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#get-user-profile",
+  "links": []
+}

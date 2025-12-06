@@ -1,0 +1,14 @@
+{
+  "title": "AgentOS Middleware",
+  "content": "Source: https://docs.agno.com/agent-os/middleware/overview\n\nAdd authentication, logging, monitoring, and security features to your AgentOS application using middleware\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.1.0\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.1.0\">v2.1.0</Tooltip>\n</Badge>\n\nAgentOS is built on FastAPI, allowing you to add any [FastAPI/Starlette compatible middleware](https://fastapi.tiangolo.com/tutorial/middleware/) for authentication, logging, monitoring, and security. Agno provides built-in JWT middleware for authentication, and you can create custom middleware for rate limiting, request logging, and security headers.\n\nAdditionally, Agno provides some built-in middleware for common use cases, including authentication.\n\nSee the following guides:\n\n<CardGroup cols={2}>\n  <Card title=\"Custom Middleware\" icon=\"code\" href=\"/agent-os/middleware/custom\">\n    Create your own middleware for logging, rate limiting, monitoring, and security.\n  </Card>\n\n<Card title=\"JWT Middleware\" icon=\"key\" href=\"/agent-os/middleware/jwt\">\n    Built-in JWT authentication with automatic parameter injection and claims extraction.\n  </Card>\n</CardGroup>\n\nAdding middleware to your AgentOS application is straightforward:\n\n```python agent_os_with_jwt_middleware.py theme={null}\nfrom agno.os import AgentOS\nfrom agno.os.middleware import JWTMiddleware\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.agent import Agent\n\ndb = PostgresDb(db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\")\n\nagent = Agent(\n    name=\"Basic Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    db=db,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Quick Start",
+      "id": "quick-start"
+    }
+  ],
+  "url": "llms-txt#agentos-middleware",
+  "links": []
+}

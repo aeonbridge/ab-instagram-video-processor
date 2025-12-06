@@ -1,0 +1,28 @@
+{
+  "title": "In our run_response, we will find a list of active requirements:",
+  "content": "for requirement in run_response.active_requirements:\n\n# We can now iterate over the requirements and resolve them:\n\n# For example, if the requirement needs user confirmation:\n    if requirement.needs_confirmation:\n        # Ask the user for confirmation\n        confirmation = input(f\"Do you approve the tool call to {requirement.tool.tool_name} with args {requirement.tool.tool_args}? (y/n): \")\n\n# Resolve the requirement by confirming or rejecting it, based on the user's input\n        if confirmation.lower() == \"y\":\n            requirement.confirm()\n        else:\n            requirement.reject()\npython  theme={null}\nfor requirement in run_response.active_requirements:\n\n# If the requirement is about user confirmation:\n    if requirement.needs_confirmation:\n        ...\n\n# If the requirement is about obtaining user input:\n    if requirement.needs_user_input:\n        ...\n\n# If the requirement is about executing an external tool:\n    if requirement.is_external_tool_execution:\n        ...\npython  theme={null}\nrun_response = agent.run(\"Perform sensitive operation\")\n\nfor requirement in run_response.active_requirements:\n    # You handle any active requirements here",
+  "code_samples": [
+    {
+      "code": "## Types of Human-in-the-Loop Requirements\n\nThere are three types of Human-in-the-Loop requirements you can handle in your code: User confirmation, user input and external tool execution.\n\nThis is how you can check the type of a requirement in your code:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Resuming Agent Execution\n\nAfter all active requirements have been resolved, you will want to continue the run. You do this by calling the `continue_run` method:\n\nThis is how the full flow would look like in your code:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Types of Human-in-the-Loop Requirements",
+      "id": "types-of-human-in-the-loop-requirements"
+    },
+    {
+      "level": "h2",
+      "text": "Resuming Agent Execution",
+      "id": "resuming-agent-execution"
+    }
+  ],
+  "url": "llms-txt#in-our-run_response,-we-will-find-a-list-of-active-requirements:",
+  "links": []
+}

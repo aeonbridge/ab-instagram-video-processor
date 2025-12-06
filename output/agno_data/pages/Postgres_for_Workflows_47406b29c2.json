@@ -1,0 +1,24 @@
+{
+  "title": "Postgres for Workflows",
+  "content": "Source: https://docs.agno.com/integrations/database/postgres/usage/postgres-for-workflow\n\nAgno supports using PostgreSQL as a storage backend for Workflows using the `PostgresDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **PgVector** on port **5532** using:\n\n```python postgres_for_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run PgVector",
+      "id": "run-pgvector"
+    }
+  ],
+  "url": "llms-txt#postgres-for-workflows",
+  "links": []
+}

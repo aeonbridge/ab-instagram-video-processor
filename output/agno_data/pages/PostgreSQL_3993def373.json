@@ -1,0 +1,14 @@
+{
+  "title": "PostgreSQL",
+  "content": "Source: https://docs.agno.com/integrations/database/postgres/overview\n\nLearn to use PostgreSQL as a database for your Agents\n\nAgno supports using [PostgreSQL](https://www.postgresql.org/) as a database with the `PostgresDb` class.\n\n```python postgres_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\" # Replace with your own connection string",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#postgresql",
+  "links": []
+}

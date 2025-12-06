@@ -1,0 +1,13 @@
+{
+  "title": "Find multiple document types",
+  "content": "IN(\"document_type\", [\"policy\", \"guideline\", \"procedure\"])\npython  theme={null}\nfrom agno.filters import GT, LT",
+  "code_samples": [
+    {
+      "code": "#### GT (Greater Than) & LT (Less Than)\n\nMatch content based on numeric comparisons.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#find-multiple-document-types",
+  "links": []
+}

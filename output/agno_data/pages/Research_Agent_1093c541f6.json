@@ -1,0 +1,8 @@
+{
+  "title": "Research Agent",
+  "content": "research_agent = Agent(\n    name=\"Market Research Agent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[DuckDuckGoTools()],\n    instructions=\"Research current market conditions and news\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#research-agent",
+  "links": []
+}

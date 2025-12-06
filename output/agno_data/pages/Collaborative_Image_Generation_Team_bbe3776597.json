@@ -1,0 +1,14 @@
+{
+  "title": "Collaborative Image Generation Team",
+  "content": "Source: https://docs.agno.com/basics/multimodal/team/usage/generate-image-with-team\n\nThis example demonstrates how a team can collaborate to generate high-quality images using a prompt engineer to optimize prompts and an image creator to generate images with DALL-E.\n\n```python cookbook/examples/teams/multimodal/generate_image_with_team.py theme={null}\nfrom typing import Iterator\n\nfrom agno.agent import Agent, RunOutputEvent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.dalle import DalleTools\nfrom agno.utils.common import dataclass_to_dict\nfrom rich.pretty import pprint\n\nimage_generator = Agent(\n    name=\"Image Creator\",\n    role=\"Generate images using DALL-E\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[DalleTools()],\n    instructions=[\n        \"Use the DALL-E tool to create high-quality images\",\n        \"Return image URLs in markdown format: `![description](URL)`\",\n    ],\n)\n\nprompt_engineer = Agent(\n    name=\"Prompt Engineer\",\n    role=\"Optimize and enhance image generation prompts\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=[\n        \"Enhance user prompts for better image generation results\",\n        \"Consider artistic style, composition, and technical details\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#collaborative-image-generation-team",
+  "links": []
+}

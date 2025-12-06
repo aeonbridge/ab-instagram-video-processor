@@ -1,0 +1,37 @@
+{
+  "title": "Combine model, tools, and instructions into a complete agent",
+  "content": "social_media_agent = Agent(\n    name=\"Social Media Intelligence Analyst\",\n    model=model,                 # The GPT-5 mini model we chose\n    tools=tools,                 # The X and Exa tools we configured\n    instructions=complete_instructions,  # The strategy we defined\n    markdown=True,               # Enable rich formatting for reports\n    show_tool_calls=True,        # Show transparency in data collection\n)\n\nprint(f\"Agent created: {social_media_agent.name}\")\npython  theme={null}\ndef analyze_brand_sentiment(query: str, tweet_count: int = 20):\n    \"\"\"\n    Execute comprehensive social media intelligence analysis.\n\nArgs:\n        query: Brand or topic search query (e.g., \"Tesla OR @elonmusk\")\n        tweet_count: Number of recent tweets to analyze\n    \"\"\"\n\n# Create a detailed prompt for the agent\n    analysis_prompt = f\"\"\"\n    Conduct comprehensive social media intelligence analysis for: \"{query}\"\n\nANALYSIS PARAMETERS:\n    - Twitter Analysis: {tweet_count} most recent tweets with engagement metrics\n    - Web Intelligence: Related articles, discussions, and broader context via Exa\n    - Cross-Platform Synthesis: Correlate social sentiment with web discussions\n    - Strategic Focus: Brand positioning, competitive analysis, risk assessment\n\nMETHODOLOGY:\n    1. Gather direct social media mentions and engagement data\n    2. Search for related web discussions and broader context\n    3. Analyze sentiment patterns and engagement indicators\n    4. Identify cross-platform themes and influence networks\n    5. Generate strategic recommendations with evidence backing\n\nProvide comprehensive intelligence report following the structured format.\n    \"\"\"\n\n# Execute the analysis\n    return social_media_agent.print_response(analysis_prompt, stream=True)\n\nprint(\"Analysis function created\")\npython  theme={null}\ndef test_agent():\n    \"\"\"Test the complete agent with a sample query.\"\"\"\n    print(\"Testing social media intelligence agent...\")\n    analyze_brand_sentiment(\"Agno OR AgnoAGI\", tweet_count=10)\n\nprint(\"Test function ready\")\npython  theme={null}\n\"\"\"\nComplete Social Media Intelligence Agent\nBuilt with Agno framework\n\"\"\"\nfrom pathlib import Path\nfrom textwrap import dedent\nfrom dotenv import load_dotenv\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.x import XTools\nfrom agno.tools.exa import ExaTools",
+  "code_samples": [
+    {
+      "code": "For detailed information about each Agent parameter, see the [Agent Reference Documentation](/reference/agents/agent).\n\n### 4b. Create the Analysis Function",
+      "language": "unknown"
+    },
+    {
+      "code": "### 4c. Create a Test Function",
+      "language": "unknown"
+    },
+    {
+      "code": "### 4d. Complete Working Example\n\nHere's your complete `app/social_media_agent.py` file:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "4b. Create the Analysis Function",
+      "id": "4b.-create-the-analysis-function"
+    },
+    {
+      "level": "h3",
+      "text": "4c. Create a Test Function",
+      "id": "4c.-create-a-test-function"
+    },
+    {
+      "level": "h3",
+      "text": "4d. Complete Working Example",
+      "id": "4d.-complete-working-example"
+    }
+  ],
+  "url": "llms-txt#combine-model,-tools,-and-instructions-into-a-complete-agent",
+  "links": []
+}

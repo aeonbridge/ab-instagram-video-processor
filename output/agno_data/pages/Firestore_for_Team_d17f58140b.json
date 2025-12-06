@@ -1,0 +1,14 @@
+{
+  "title": "Firestore for Team",
+  "content": "Source: https://docs.agno.com/integrations/database/firestore/usage/firestore-for-team\n\nAgno supports using Firestore as a storage backend for Teams using the `FirestoreDb` class.\n\nYou need to provide a `project_id` parameter to the `FirestoreDb` class. Firestore will connect automatically using your Google Cloud credentials.\n\n```python firestore_for_team.py theme={null}\n\"\"\"\nRun: `pip install openai ddgs newspaper4k lxml_html_clean agno` to install the dependencies\n\"\"\"\n\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.db.firestore import FirestoreDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom pydantic import BaseModel",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#firestore-for-team",
+  "links": []
+}

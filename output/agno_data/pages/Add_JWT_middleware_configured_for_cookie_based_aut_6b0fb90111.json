@@ -1,0 +1,8 @@
+{
+  "title": "Add JWT middleware configured for cookie-based authentication",
+  "content": "app.add_middleware(\n    JWTMiddleware,\n    secret_key=JWT_SECRET, # or use JWT_SECRET_KEY environment variable\n    algorithm=\"HS256\",\n    excluded_route_paths=[\n        \"/set-auth-cookie\",\n        \"/clear-auth-cookie\",\n    ],\n    token_source=TokenSource.COOKIE,  # Extract JWT from cookies\n    cookie_name=\"auth_token\",  # Name of the cookie containing the JWT\n    user_id_claim=\"sub\",  # Extract user_id from 'sub' claim\n    session_id_claim=\"session_id\",  # Extract session_id from 'session_id' claim\n    dependencies_claims=[\n        \"name\",\n        \"email\",\n        \"roles\",\n        \"org\",\n    ],  # Additional claims to extract\n    validate=True,  # We want to ensure the token is valid\n)\n\nagent_os = AgentOS(\n    description=\"JWT Cookie-Based AgentOS\",\n    agents=[profile_agent],\n    base_app=app,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-jwt-middleware-configured-for-cookie-based-authentication",
+  "links": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Cartesia",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/cartesia\n\nTools for interacting with Cartesia Voice AI services including text-to-speech and voice localization\n\n**CartesiaTools** enable an Agent to perform text-to-speech, list available voices, and localize voices using [Cartesia](https://docs.cartesia.ai/).\n\nThe following example requires the `cartesia` library and an API key.\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.cartesia import CartesiaTools\nfrom agno.utils.audio import write_audio_to_file",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#cartesia",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Configure model to use File Search",
+  "content": "model.file_search_store_names = [store.name]",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-model-to-use-file-search",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Debugging Agents",
+  "content": "Source: https://docs.agno.com/basics/agents/debugging-agents\n\nLearn how to debug Agno Agents.\n\nAgno comes with a exceptionally well-built debug mode that helps you understand the flow of execution and the intermediate steps. For example:\n\n* Inspect the messages sent to the model and the response it generates.\n* Trace intermediate steps and monitor metrics like token usage, execution time, etc.\n* Inspect tool calls, errors, and their results. This can help you identify issues with your tools.\n\nTo enable debug mode:\n\n1. Set the `debug_mode` parameter on your agent, to enable it for all runs.\n2. Set the `debug_mode` parameter on the `run` method, to enable it for the current run.\n3. Set the `AGNO_DEBUG` environment variable to `True`, to enable debug mode for all agents.\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.tools.hackernews import HackerNewsTools\n\nagent = Agent(\n    model=Claude(id=\"claude-sonnet-4-5\"),\n    tools=[HackerNewsTools()],\n    instructions=\"Write a report on the topic. Output only the report.\",\n    markdown=True,\n    debug_mode=True,\n    # debug_level=2, # Uncomment to get more detailed logs\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Debug Mode",
+      "id": "debug-mode"
+    }
+  ],
+  "url": "llms-txt#debugging-agents",
+  "links": []
+}

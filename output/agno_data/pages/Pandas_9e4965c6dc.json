@@ -1,0 +1,8 @@
+{
+  "title": "Pandas",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/database/pandas\n\nThe PandasTools toolkit enables an Agent to perform data manipulation tasks using the Pandas library.\n\n**PandasTools** enable an Agent to perform data manipulation tasks using the Pandas library.\n\n```python cookbook/tools/pandas_tool.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.pandas import PandasTools",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#pandas",
+  "links": []
+}

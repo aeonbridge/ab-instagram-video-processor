@@ -1,0 +1,8 @@
+{
+  "title": "Setup a basic agent with the SQLite database",
+  "content": "agent = Agent(\n    db=db,\n    tools=[DuckDuckGoTools()],\n    add_history_to_context=True,\n    add_datetime_to_context=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-a-basic-agent-with-the-sqlite-database",
+  "links": []
+}

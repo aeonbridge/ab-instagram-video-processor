@@ -1,0 +1,19 @@
+{
+  "title": "Run workflow and display events",
+  "content": "for event in workflow.run(\n    \"What is Python?\",\n    stream=True,\n    stream_events=True,\n):\n    event_name = event.event if hasattr(event, \"event\") else type(event).__name__\n    print(f\"  → {event_name}\")\nPython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Async Streaming\n\nThe `Workflow.arun(stream=True)` returns an async iterator of `WorkflowRunOutputEvent` objects instead of a single response.\nSo for example, if you want to stream the response, you can do the following:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Async Streaming",
+      "id": "async-streaming"
+    }
+  ],
+  "url": "llms-txt#run-workflow-and-display-events",
+  "links": []
+}

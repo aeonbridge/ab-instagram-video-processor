@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with LangDB model (uses environment variables automatically)",
+  "content": "agent = Agent(\n    name=\"Web Research Agent\",\n    model=LangDB(id=\"openai/gpt-4.1\"),\n    tools=[DuckDuckGoTools()],\n    instructions=\"Answer questions using web search and provide comprehensive information\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-langdb-model-(uses-environment-variables-automatically)",
+  "links": []
+}

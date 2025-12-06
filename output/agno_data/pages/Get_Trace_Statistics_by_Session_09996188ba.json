@@ -1,0 +1,8 @@
+{
+  "title": "Get Trace Statistics by Session",
+  "content": "Source: https://docs.agno.com/reference-api/schema/tracing/get-trace-session-stats\n\nget /trace_session_stats\nRetrieve aggregated trace statistics grouped by session ID with pagination.\n\n**Provides insights into:**\n- Total traces per session\n- First and last trace timestamps per session\n- Associated user and agent information\n\n**Filtering Options:**\n- By user ID\n- By agent ID\n- By team ID\n- By workflow ID\n- By time range\n\n**Use Cases:**\n- Monitor session-level activity\n- Track conversation flows\n- Identify high-activity sessions\n- Analyze user engagement patterns",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-trace-statistics-by-session",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Define workflow with steps",
+  "content": "workflow = Workflow(\n    name=\"Content Creation Workflow\",\n    steps=[\n        Step(name=\"Research Step\", team=research_team),\n        Step(name=\"Content Planning Step\", executor=custom_content_planning_function),\n    ]\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-workflow-with-steps",
+  "links": []
+}

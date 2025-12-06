@@ -1,0 +1,43 @@
+{
+  "title": "AgentQL",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/agentql\n\n**AgentQLTools** enable an Agent to browse and scrape websites using the AgentQL API.\n\nThe following example requires the `agentql` library and an API token which can be obtained from [AgentQL](https://agentql.com/).\n\nThe following agent will open a web browser and scrape all the text from the page.\n\n<Note>\n  AgentQL will open up a browser instance (don't close it) and do scraping on\n  the site.\n</Note>\n\n| Parameter                      | Type   | Default | Description                                       |\n| ------------------------------ | ------ | ------- | ------------------------------------------------- |\n| `api_key`                      | `str`  | `None`  | API key for AgentQL                               |\n| `scrape`                       | `bool` | `True`  | Whether to use the scrape text tool               |\n| `agentql_query`                | `str`  | `None`  | Custom AgentQL query                              |\n| `enable_scrape_website`        | `bool` | `True`  | Enable the scrape\\_website functionality.         |\n| `enable_custom_scrape_website` | `bool` | `True`  | Enable the custom\\_scrape\\_website functionality. |\n| `all`                          | `bool` | `False` | Enable all functionality.                         |\n\n| Function                | Description                                          |\n| ----------------------- | ---------------------------------------------------- |\n| `scrape_website`        | Used to scrape all text from a web page              |\n| `custom_scrape_website` | Uses the custom `agentql_query` to scrape a web page |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/agentql.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/agentql_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will open a web browser and scrape all the text from the page.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#agentql",
+  "links": []
+}

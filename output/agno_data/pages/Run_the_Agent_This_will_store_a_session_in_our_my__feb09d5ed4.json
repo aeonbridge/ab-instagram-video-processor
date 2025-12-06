@@ -1,0 +1,19 @@
+{
+  "title": "Run the Agent. This will store a session in our \"my_session_table\"",
+  "content": "agent.print_response(\"What is the capital of France?\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SQLiteDb",
+  "code_samples": [
+    {
+      "code": "## Retrieving sessions\n\nYou can manually retrieve stored sessions using the `get_session` method. This also works for `Teams` and `Workflows`:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Retrieving sessions",
+      "id": "retrieving-sessions"
+    }
+  ],
+  "url": "llms-txt#run-the-agent.-this-will-store-a-session-in-our-\"my_session_table\"",
+  "links": []
+}

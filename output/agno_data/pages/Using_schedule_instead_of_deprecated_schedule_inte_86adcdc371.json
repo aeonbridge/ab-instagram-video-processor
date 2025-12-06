@@ -1,0 +1,24 @@
+{
+  "title": "Using 'schedule' instead of deprecated 'schedule_interval'",
+  "content": "with DAG(\n    'example_dag',\n    default_args=default_args,\n    description='A simple example DAG',\n    schedule='@daily',  # Changed from schedule_interval\n    catchup=False\n) as dag:\n    def print_hello():\n        print(\"Hello from Airflow!\")\n        return \"Hello task completed\"\n    task = PythonOperator(\n        task_id='hello_task',\n        python_callable=print_hello,\n        dag=dag,\n    )\n\"\"\"\n\nagent.run(f\"Save this DAG file as 'example_dag.py': {dag_content}\")\n\nagent.print_response(\"Read the contents of 'example_dag.py'\")\n```\n\n| Parameter              | Type            | Default | Description                                     |\n| ---------------------- | --------------- | ------- | ----------------------------------------------- |\n| `dags_dir`             | `Path` or `str` | `None`  | Directory for DAG files                         |\n| `enable_save_dag_file` | `bool`          | `True`  | Enables functionality to save Airflow DAG files |\n| `enable_read_dag_file` | `bool`          | `True`  | Enables functionality to read Airflow DAG files |\n| `all`                  | `bool`          | `False` | Enables all functionality when set to True      |\n\n| Function        | Description                                        |\n| --------------- | -------------------------------------------------- |\n| `save_dag_file` | Saves python code for an Airflow DAG to a file     |\n| `read_dag_file` | Reads an Airflow DAG file and returns the contents |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/airflow.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/airflow_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#using-'schedule'-instead-of-deprecated-'schedule_interval'",
+  "links": []
+}

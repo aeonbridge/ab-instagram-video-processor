@@ -1,0 +1,14 @@
+{
+  "title": "AI Image Transformation Team",
+  "content": "Source: https://docs.agno.com/basics/multimodal/team/usage/image-to-image-transformation\n\nThis example demonstrates how a team can collaborate to transform images using a style advisor to recommend transformations and an image transformer to apply AI-powered changes.\n\n```python cookbook/examples/teams/multimodal/image_to_image_transformation.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.fal import FalTools\n\nstyle_advisor = Agent(\n    name=\"Style Advisor\",\n    role=\"Analyze and recommend artistic styles and transformations\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=[\n        \"Analyze the input image and transformation request\",\n        \"Provide style recommendations and enhancement suggestions\",\n        \"Consider artistic elements like composition, lighting, and mood\",\n    ],\n)\n\nimage_transformer = Agent(\n    name=\"Image Transformer\",\n    role=\"Transform images using AI tools\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[FalTools()],\n    instructions=[\n        \"Use the `image_to_image` tool to generate transformed images\",\n        \"Apply the recommended styles and transformations\",\n        \"Return the image URL as provided without markdown conversion\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#ai-image-transformation-team",
+  "links": []
+}

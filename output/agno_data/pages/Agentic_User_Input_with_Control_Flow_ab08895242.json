@@ -1,0 +1,33 @@
+{
+  "title": "Agentic User Input with Control Flow",
+  "content": "Source: https://docs.agno.com/basics/hitl/usage/agentic-user-input\n\nThis example demonstrates how to use UserControlFlowTools to allow agents to dynamically request user input when they need additional information to complete tasks.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    Create a Python file for the example.\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/agents/human_in_the_loop\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#agentic-user-input-with-control-flow",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create a team with both shared and private state",
+  "content": "shopping_team = Team(\n    name=\"Shopping Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[shopping_agent],\n    session_state={\"shopping_list\": [], \"chores\": []},\n    tools=[list_items, add_chore],\n    instructions=[\n        \"You manage a shopping list.\",\n        \"Forward add/remove requests to the Shopping List Agent.\",\n        \"Use list_items to show the current list.\",\n        \"Log completed tasks using add_chore.\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-team-with-both-shared-and-private-state",
+  "links": []
+}

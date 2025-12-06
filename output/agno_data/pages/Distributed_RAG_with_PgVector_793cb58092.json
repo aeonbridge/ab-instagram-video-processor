@@ -1,0 +1,14 @@
+{
+  "title": "Distributed RAG with PgVector",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/usage/distributed-rag-pgvector\n\nThis example demonstrates how multiple specialized agents coordinate to provide comprehensive RAG responses using distributed PostgreSQL vector databases with pgvector for scalable, production-ready retrieval. The team includes vector retrieval, hybrid search, data validation, and response composition specialists.\n\n```python cookbook/examples/teams/distributed_rag/01_distributed_rag_pgvector.py theme={null}\n\"\"\"\nThis example demonstrates how multiple specialized agents coordinate to provide\ncomprehensive RAG responses using distributed PostgreSQL vector databases with\npgvector for scalable, production-ready retrieval.\n\nTeam Composition:\n- Vector Retriever: Specialized in vector similarity search using pgvector\n- Hybrid Searcher: Combines vector and text search for comprehensive results\n- Data Validator: Validates retrieved data quality and relevance\n- Response Composer: Composes final responses with proper source attribution\n\nSetup:\n1. Run: `./cookbook/run_pgvector.sh` to start a postgres container with pgvector\n2. Run: `pip install openai sqlalchemy 'psycopg[binary]' pgvector agno`\n3. Run this script to see distributed PgVector RAG in action\n\"\"\"\n\nimport asyncio  # noqa: F401\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.vectordb.pgvector import PgVector, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#distributed-rag-with-pgvector",
+  "links": []
+}

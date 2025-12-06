@@ -1,0 +1,14 @@
+{
+  "title": "Slack Research Workflow",
+  "content": "Source: https://docs.agno.com/agent-os/usage/interfaces/slack/research-workflow\n\nIntegrate a research and writing workflow with Slack for structured AI-powered content creation\n\n```python research_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.os.interfaces.slack import Slack\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\n\nworkflow_db = PostgresDb(db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\")",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#slack-research-workflow",
+  "links": []
+}

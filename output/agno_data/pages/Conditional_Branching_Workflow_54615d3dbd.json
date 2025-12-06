@@ -1,0 +1,8 @@
+{
+  "title": "Conditional Branching Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/router-steps-workflow\n\nThis example demonstrates **Workflows 2.0** router pattern for intelligent, content-based workflow routing.\n\nThis example demonstrates **Workflows 2.0** to dynamically select the best execution path based on input\nanalysis, enabling adaptive workflows that choose optimal strategies per topic.\n\n**When to use**: When you need mutually exclusive execution paths based on business logic.\nIdeal for topic-specific workflows, expertise routing, or when different subjects require\ncompletely different processing strategies. Unlike Conditions which can trigger multiple\nparallel paths, Router selects exactly one path.\n\n```python router_steps_workflow.py theme={null}\nfrom typing import List\n\nfrom agno.agent.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.router import Router\nfrom agno.workflow.step import Step\nfrom agno.workflow.types import StepInput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#conditional-branching-workflow",
+  "links": []
+}

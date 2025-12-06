@@ -1,0 +1,54 @@
+{
+  "title": "Our Agent will now be able to use our tool, when it deems it relevant",
+  "content": "agent.print_response(\"What is the weather in San Francisco?\", stream=True)\npython  theme={null}\ndef get_weather(city: str) -> str:\n    \"\"\"\n    Get the weather for a given city.\n\nArgs:\n        city (str): The city to get the weather for.\n    \"\"\"\n    return f\"The weather in {city} is sunny.\"\njson  theme={null}\n{\n    \"type\": \"function\",\n    \"function\": {\n        \"name\": \"get_weather\",\n        \"description\": \"Get the weather for a given city.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"city\": {\n                    \"type\": \"string\",\n                    \"description\": \"The city to get the weather for.\"\n                }\n            },\n            \"required\": [\"city\"]\n        }\n    }\n}\npython  theme={null}\n\nfrom pydantic import BaseModel, Field\n\nclass GetWeatherRequest(BaseModel):\n    city: str = Field(description=\"The city to get the weather for\")\n\ndef get_weather(request: GetWeatherRequest) -> str:\n    \"\"\"\n    Get the weather for a given city.\n\nArgs:\n        request (GetWeatherRequest): The request object containing the city to get the weather for.\n\n\"\"\"\n    return f\"The weather in {request.city} is sunny.\"\njson  theme={null}\n{\n    \"type\": \"function\",\n    \"function\": {\n        \"name\": \"get_weather\",\n        \"description\": \"Get the weather for a given city.\",\n        \"parameters\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"request\": {\n                \"type\": \"object\",\n                \"properties\": {\n                  \"city\": {\n                    \"type\": \"string\",\n                    \"description\": \"The city to get the weather for.\"\n                  }\n                },\n                \"required\": [\"city\"]\n              }\n            },\n            \"required\": [\"request\"]\n        }\n    }\n}\npython async_tools.py theme={null}\n  import asyncio\n  import time\n\nfrom agno.agent import Agent\n  from agno.models.openai import OpenAIChat\n  from agno.utils.log import logger\n\nasync def atask1(delay: int):\n      \"\"\"Simulate a task that takes a random amount of time to complete\n      Args:\n          delay (int): The amount of time to delay the task\n      \"\"\"\n      logger.info(\"Task 1 has started\")\n      for _ in range(delay):\n          await asyncio.sleep(1)\n          logger.info(\"Task 1 has slept for 1s\")\n      logger.info(\"Task 1 has completed\")\n      return f\"Task 1 completed in {delay:.2f}s\"\n\nasync def atask2(delay: int):\n      \"\"\"Simulate a task that takes a random amount of time to complete\n      Args:\n          delay (int): The amount of time to delay the task\n      \"\"\"\n      logger.info(\"Task 2 has started\")\n      for _ in range(delay):\n          await asyncio.sleep(1)\n          logger.info(\"Task 2 has slept for 1s\")\n      logger.info(\"Task 2 has completed\")\n      return f\"Task 2 completed in {delay:.2f}s\"\n\nasync def atask3(delay: int):\n      \"\"\"Simulate a task that takes a random amount of time to complete\n      Args:\n          delay (int): The amount of time to delay the task\n      \"\"\"\n      logger.info(\"Task 3 has started\")\n      for _ in range(delay):\n          await asyncio.sleep(1)\n          logger.info(\"Task 3 has slept for 1s\")\n      logger.info(\"Task 3 has completed\")\n      return f\"Task 3 completed in {delay:.2f}s\"\n\nasync_agent = Agent(\n      model=OpenAIChat(id=\"gpt-5-mini\"),\n      tools=[atask2, atask1, atask3],\n      markdown=True,\n  )\n\nasyncio.run(\n      async_agent.aprint_response(\"Please run all tasks with a delay of 3s\", stream=True)\n  )\n  python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  In the example above, the `get_weather` function is a tool. When called, the tool result is shown in the output.\n</Tip>\n\n## How do tools work?\n\nThe heart of Agent execution is the LLM loop. The typical execution flow of the LLM loop is:\n\n1. The agent sends the run context (system message, user message, chat history, etc) and tool definitions to the model.\n2. The model responds with a message or a tool call.\n3. If the model makes a tool call, the tool is executed and the result is returned to the model.\n4. The model processes the updated context, repeating this loop until it produces a final message without any tool calls.\n5. The agent returns this final response to the caller.\n\n### Tool definitions\n\nAgno automatically converts your tool functions into the required tool definition format for the model. Typically this is a JSON schema that describes the parameters and return type of the tool.\n\nFor example:",
+      "language": "unknown"
+    },
+    {
+      "code": "This will be converted into the following tool definition:",
+      "language": "unknown"
+    },
+    {
+      "code": "This tool definition is then sent to the model so that it knows how to call the tool when it is requested.\nYou'll notice as well that the `Args` section is automatically stripped from the definition, parsed and used to populate the definitions of individualproperties.\n\nWhen using a Pydantic model in an argument of a tool function, Agno will automatically convert the model into the required tool definition format.\n\nFor example:",
+      "language": "unknown"
+    },
+    {
+      "code": "This will be converted into the following tool definition:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Tip>\n  * Always create a docstring for your tool functions. Make sure to include the `Args` section and cover each of the arguments of the function.\n  * Use sensible names for your tool functions. Remember this is directly used by the model to call the tool when it is requested.\n</Tip>\n\n### Tool Execution\n\nWhen the model requests a tool call, the tool is executed and the result is returned to the model.\n\n* A model can request multiple tool calls in a single response.\n* When using `arun` to execute the agent or team, and the model requested multiple tool calls, the tools will be executed concurrently.\n\nAgno Agents can execute multiple tools concurrently, allowing you to process function calls that the model makes efficiently. This is especially valuable when the functions involve time-consuming operations. It improves responsiveness and reduces overall execution time.\n\n<Check>\n  When you call `arun` or `aprint_response`, your tools will execute concurrently. If you provide synchronous functions as tools, they will execute concurrently on separate threads.\n</Check>\n\n<Note>\n  Concurrent execution of tools requires a model that supports parallel function\n  calling. For example, OpenAI models have a `parallel_tool_calls` parameter\n  (enabled by default) that allows multiple tool calls to be requested and\n  executed simultaneously.\n</Note>\n\n<Accordion title=\"Async Execution Example\">",
+      "language": "unknown"
+    },
+    {
+      "code": "In this example, `gpt-5-mini` makes three simultaneous tool calls to `atask1`, `atask2` and `atask3`. Normally these tool calls would execute sequentially, but using the `aprint_response` function, they run concurrently, improving execution time.\n\n  <img height=\"200\" src=\"https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/async-tools.png?fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=4ec6216f4c1dafa6c7a675bd345c6ad2\" style={{ borderRadius: \"8px\" }} data-og-width=\"344\" data-og-height=\"463\" data-path=\"images/async-tools.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/async-tools.png?w=280&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=2ef332604d86c02722791a3beffa7589 280w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/async-tools.png?w=560&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=948e641806ce6a2224074a78a5dd9521 560w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/async-tools.png?w=840&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=9bbc9234b871fdec04c5229f69637c4a 840w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/async-tools.png?w=1100&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=7a8dcfeb62df06475d15981339375437 1100w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/async-tools.png?w=1650&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=7078423de7061f62251c3f6209dbb38e 1650w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/async-tools.png?w=2500&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=512ee4e5ccf4e4bfa33edac026b3a472 2500w\" />\n</Accordion>\n\n## Using a Toolkit\n\nAn Agno Toolkit provides a way to manage multiple tools with additional control over their execution.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How do tools work?",
+      "id": "how-do-tools-work?"
+    },
+    {
+      "level": "h3",
+      "text": "Tool definitions",
+      "id": "tool-definitions"
+    },
+    {
+      "level": "h3",
+      "text": "Tool Execution",
+      "id": "tool-execution"
+    },
+    {
+      "level": "h2",
+      "text": "Using a Toolkit",
+      "id": "using-a-toolkit"
+    }
+  ],
+  "url": "llms-txt#our-agent-will-now-be-able-to-use-our-tool,-when-it-deems-it-relevant",
+  "links": []
+}

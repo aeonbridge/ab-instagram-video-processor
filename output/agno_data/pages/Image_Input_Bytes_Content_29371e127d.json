@@ -1,0 +1,14 @@
+{
+  "title": "Image Input Bytes Content",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/image-input-bytes\n\n```python cookbook/models/anthropic/image_input_bytes.py theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import Image\nfrom agno.models.anthropic.claude import Claude\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.utils.media import download_image\n\nagent = Agent(\n    model=Claude(id=\"claude-sonnet-4-20250514\"),\n    tools=[DuckDuckGoTools()],\n    markdown=True,\n)\n\nimage_path = Path(__file__).parent.joinpath(\"sample.jpg\")\n\ndownload_image(\n    url=\"https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg\",\n    output_path=str(image_path),\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#image-input-bytes-content",
+  "links": []
+}

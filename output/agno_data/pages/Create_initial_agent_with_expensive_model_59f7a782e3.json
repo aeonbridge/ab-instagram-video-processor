@@ -1,0 +1,8 @@
+{
+  "title": "Create initial agent with expensive model",
+  "content": "expensive_agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=\"You are a helpful assistant for technical discussions.\",\n    db=db,\n    add_history_to_context=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-initial-agent-with-expensive-model",
+  "links": []
+}

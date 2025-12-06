@@ -1,0 +1,24 @@
+{
+  "title": "Each content object includes:",
+  "content": "print(content.name)         # Content name\nprint(content.description)  # Description\nprint(content.metadata)     # Custom metadata\nprint(content.file_type)    # File type (.pdf, .txt, etc.)\nprint(content.size)         # File size in bytes\nprint(content.status)       # Processing status\nprint(content.created_at)   # When it was added\nprint(content.updated_at)   # Last modification\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Management Features\n\n### Content Deletion with Vector Cleanup\n\nDelete content and automatically clean up associated vectors:\n\nThis automatically:\n\n1. Removes the content metadata from ContentsDB\n2. Deletes associated vectors from the vector database\n3. Maintains consistency between both databases",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Management Features",
+      "id": "management-features"
+    },
+    {
+      "level": "h3",
+      "text": "Content Deletion with Vector Cleanup",
+      "id": "content-deletion-with-vector-cleanup"
+    }
+  ],
+  "url": "llms-txt#each-content-object-includes:",
+  "links": []
+}

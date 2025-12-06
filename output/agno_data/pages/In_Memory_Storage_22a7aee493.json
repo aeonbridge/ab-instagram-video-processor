@@ -1,0 +1,14 @@
+{
+  "title": "In-Memory Storage",
+  "content": "Source: https://docs.agno.com/integrations/database/in-memory/overview\n\nLearn to use In-Memory storage for your Agents\n\nAgno supports using In-Memory storage with the `InMemoryDb` class. By doing this, you will be able to use all features that depend on having a database, without having to set one up.\n\n<Warning>\n  Using the In-Memory storage is not recommended for production applications.\n  Use it for demos, testing and any other use case where you don't want to setup a database.\n</Warning>\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.in_memory import InMemoryDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#in-memory-storage",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Configure embedder with custom settings",
+  "content": "embedder = JinaEmbedder(\n    id=\"jina-embeddings-v3\",\n    dimensions=1024,\n    embedding_type=\"float\",\n    late_chunking=True,\n    batch_size=50,\n    timeout=30.0\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-embedder-with-custom-settings",
+  "links": []
+}

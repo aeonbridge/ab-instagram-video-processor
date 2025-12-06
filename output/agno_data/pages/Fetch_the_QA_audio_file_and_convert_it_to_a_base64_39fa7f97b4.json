@@ -1,0 +1,8 @@
+{
+  "title": "Fetch the QA audio file and convert it to a base64 encoded string",
+  "content": "url = \"https://agno-public.s3.us-east-1.amazonaws.com/demo_data/QA-01.mp3\"\nresponse = requests.get(url)\nresponse.raise_for_status()\nmp3_data = response.content",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#fetch-the-qa-audio-file-and-convert-it-to-a-base64-encoded-string",
+  "links": []
+}

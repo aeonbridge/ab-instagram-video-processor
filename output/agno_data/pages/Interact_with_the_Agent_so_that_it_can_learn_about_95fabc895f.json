@@ -1,0 +1,8 @@
+{
+  "title": "Interact with the Agent so that it can learn about the user",
+  "content": "agent.print_response(\"My name is John Billings\")\nagent.print_response(\"I live in NYC\")\nagent.print_response(\"I'm going to a concert tomorrow\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#interact-with-the-agent-so-that-it-can-learn-about-the-user",
+  "links": []
+}

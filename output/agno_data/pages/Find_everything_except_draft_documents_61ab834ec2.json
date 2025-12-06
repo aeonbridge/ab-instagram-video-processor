@@ -1,0 +1,24 @@
+{
+  "title": "Find everything except draft documents",
+  "content": "NOT(EQ(\"status\", \"draft\"))\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.filters import EQ, IN, AND\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [
+    {
+      "code": "## Using Filters with Agents\n\nHere's how to apply filters when running agents with knowledge.\n\n<Note>\n  You need a [contents database](/basics/knowledge/content-db) with your Knowledge base to use agentic filtering.\n</Note>\n\n### Basic Agent Filtering",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using Filters with Agents",
+      "id": "using-filters-with-agents"
+    },
+    {
+      "level": "h3",
+      "text": "Basic Agent Filtering",
+      "id": "basic-agent-filtering"
+    }
+  ],
+  "url": "llms-txt#find-everything-except-draft-documents",
+  "links": []
+}

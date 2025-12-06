@@ -1,0 +1,14 @@
+{
+  "title": "Knowledge Content Types",
+  "content": "Source: https://docs.agno.com/basics/knowledge/content-types\n\nAgno Knowledge uses `content` as the building block of any piece of knowledge.\nContent can be added to knowledge from different sources.\n\n| Content Origin | Description                                                           |\n| -------------- | --------------------------------------------------------------------- |\n| Path           | Local files or directories containing files                           |\n| Url            | Direct links to files or other sites                                  |\n| Text           | Raw text content                                                      |\n| Topic          | Search topics from repositories like Arxiv or Wikipedia               |\n| Remote Content | Content stored in remote repositories like S3 or Google Cloud Storage |\n\nKnowledge content needs to be read and chunked before it can be passed to any VectorDB for embedding, storage and ultimately, retrieval.\nWhen content is added to Knowledge, a default reader is selected. Readers are used to parse content from the origin and then chunk it into smaller\npieces that will then be embedded by the VectorDB.\n\nCustom readers or an override to the default reader and/or its settings can be passed when adding the content. In the below example, an instance of the standard `PDFReader` class is created\nbut we update the chunk\\_size. Similarly, we can update the `chunking_strategy` and other parameters that will influence how content is ingested and processed.\n\nFor more information about the different readers and their capabilities checkout the [Readers](/basics/knowledge/readers) page.\n\n<CardGroup cols={3}>\n  <Card title=\"Search & Retrieval\" icon=\"magnifying-glass\" href=\"/basics/knowledge/search-and-retrieval/overview\">\n    Learn how agents search and find information in your knowledge base\n  </Card>\n\n<Card title=\"Readers\" icon=\"book-open\" href=\"/basics/knowledge/readers\">\n    Explore content parsing and ingestion options in detail\n  </Card>\n\n<Card title=\"Chunking Strategies\" icon=\"scissors\" href=\"/basics/knowledge/chunking/overview\">\n    Optimize how content is broken down for better search results\n  </Card>\n\n<Card title=\"Vector Databases\" icon=\"database\" href=\"/basics/vectordb/overview\">\n    Choose the right storage solution for your knowledge base\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#knowledge-content-types",
+  "links": []
+}

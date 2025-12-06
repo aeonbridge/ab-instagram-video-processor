@@ -1,0 +1,19 @@
+{
+  "title": "Initialize your Agent passing the database",
+  "content": "agent = Agent(db=db)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SQLiteDb",
+  "code_samples": [
+    {
+      "code": "<Note>\n  It's recommended to add an `id` for better management and easier identification of your database. You can add it to your database configuration like this:\n</Note>\n\n<Tip>\n  **When should I use Storage on my Agents?**\n\n  Agents are ephemeral by default. They won't remember previous conversations.\n\n  But in production environments, you will often need to continue the same session across multiple requests. Storage is the way to persist the session history and state in a database, enabling you and your users to pick up where you left off.\n\n  Storage also lets us inspect and evaluate Agent sessions, extract few-shot examples and build internal monitoring tools. In general, it lets you **keep track of the data**, to build better Agents.\n</Tip>\n\n### Adding session history to the context\n\nAgents backed by a database persist their [sessions](/basics/sessions/overview) to it. You can then load this persisted history into the context to maintain continuity across sessions.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Adding session history to the context",
+      "id": "adding-session-history-to-the-context"
+    }
+  ],
+  "url": "llms-txt#initialize-your-agent-passing-the-database",
+  "links": []
+}

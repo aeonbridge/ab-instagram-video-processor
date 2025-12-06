@@ -1,0 +1,24 @@
+{
+  "title": "AWS Lambda",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/aws-lambda\n\nThe following example requires the `boto3` library.\n\nThe following agent will use AWS Lambda to list all Lambda functions in our AWS account and invoke a specific Lambda function.\n\n```python cookbook/tools/aws_lambda_tools.py theme={null}\n\nfrom agno.agent import Agent\nfrom agno.tools.aws_lambda import AWSLambdaTools",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will use AWS Lambda to list all Lambda functions in our AWS account and invoke a specific Lambda function.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#aws-lambda",
+  "links": []
+}

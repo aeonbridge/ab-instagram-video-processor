@@ -1,0 +1,29 @@
+{
+  "title": "In-memory for testing",
+  "content": "from agno.db.in_memory import InMemoryDb\ncontents_db = InMemoryDb()\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Core Functionality\n\n### Contents DB Schema\n\nIf you have a Contents DB configured for your Knowledge, the content metadata will be stored in a contents table in your database.\n\nThe schema for the contents table is as follows:\n\n| Field            | Type   | Description                                                                               |\n| ---------------- | ------ | ----------------------------------------------------------------------------------------- |\n| `id`             | `str`  | The unique identifier for the content.                                                    |\n| `name`           | `str`  | The name of the content.                                                                  |\n| `description`    | `str`  | The description of the content.                                                           |\n| `metadata`       | `dict` | The metadata for the content.                                                             |\n| `type`           | `str`  | The type of the content.                                                                  |\n| `size`           | `int`  | The size of the content. Applicable only to files.                                        |\n| `linked_to`      | `str`  | The ID of the content that this content is linked to.                                     |\n| `access_count`   | `int`  | The number of times this content has been accessed.                                       |\n| `status`         | `str`  | The status of the content.                                                                |\n| `status_message` | `str`  | The message associated with the status of the content.                                    |\n| `created_at`     | `int`  | The timestamp when the content was created.                                               |\n| `updated_at`     | `int`  | The timestamp when the content was last updated.                                          |\n| `external_id`    | `str`  | The external ID of the content. Used when external vector stores are used, like LightRAG. |\n\nThis data is best displayed on the [knowledge page of the AgentOS UI](https://os.agno.com/knowledge).\n\n### Content Metadata Tracking",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Core Functionality",
+      "id": "core-functionality"
+    },
+    {
+      "level": "h3",
+      "text": "Contents DB Schema",
+      "id": "contents-db-schema"
+    },
+    {
+      "level": "h3",
+      "text": "Content Metadata Tracking",
+      "id": "content-metadata-tracking"
+    }
+  ],
+  "url": "llms-txt#in-memory-for-testing",
+  "links": []
+}

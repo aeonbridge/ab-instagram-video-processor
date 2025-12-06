@@ -1,0 +1,24 @@
+{
+  "title": "Retrieve our freshly created session",
+  "content": "session_history = agent.get_session(session_id=\"123\")\npython  theme={null}\nfrom agno.team import Team\nfrom agno.workflow import Workflow\nfrom agno.db.sqlite import SQLiteDb",
+  "code_samples": [
+    {
+      "code": "## Benefits of using session storage\n\nStorage is often an important feature when building production-ready agentic applications. It enables the system to:\n\n* Continue a session: retrieve previous messages and enable users to pick up a conversation where they left off.\n* Keep a record of sessions: enable users to inspect their past conversations.\n* Data ownership: keeping sessions in your own database gives you full control over the data.\n\n<Warning>\n  Storage is a critical part of your Agentic infrastructure. We recommend to\n  never offload it to a third-party service. You should almost always use your\n  own storage layer for your Agents.\n</Warning>\n\n## Storage for Teams and Workflows\n\nStorage also works with Teams and Workflows, providing persistent memory for your more complex agentic applications.\n\nSimilarly to Agents, you simply need to provide your Team or Workflow with a database for sessions to be persisted:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Benefits of using session storage",
+      "id": "benefits-of-using-session-storage"
+    },
+    {
+      "level": "h2",
+      "text": "Storage for Teams and Workflows",
+      "id": "storage-for-teams-and-workflows"
+    }
+  ],
+  "url": "llms-txt#retrieve-our-freshly-created-session",
+  "links": []
+}

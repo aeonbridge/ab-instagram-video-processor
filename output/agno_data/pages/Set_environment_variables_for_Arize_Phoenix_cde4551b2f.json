@@ -1,0 +1,8 @@
+{
+  "title": "Set environment variables for Arize Phoenix",
+  "content": "os.environ[\"PHOENIX_CLIENT_HEADERS\"] = f\"api_key={os.getenv('ARIZE_PHOENIX_API_KEY')}\"\nos.environ[\"PHOENIX_COLLECTOR_ENDPOINT\"] = \"https://app.phoenix.arize.com\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-environment-variables-for-arize-phoenix",
+  "links": []
+}

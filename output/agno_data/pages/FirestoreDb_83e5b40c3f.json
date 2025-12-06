@@ -1,0 +1,8 @@
+{
+  "title": "FirestoreDb",
+  "content": "Source: https://docs.agno.com/reference/storage/firestore\n\n`FirestoreDb` is a class that implements the Db interface using Google Firestore as the backend storage system. It provides high-performance, distributed storage for agent sessions with support for JSON data types and schema versioning.\n\n<Snippet file=\"db-firestore-params.mdx\" />\n\n<Snippet file=\"db-new-bulk-methods.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#firestoredb",
+  "links": []
+}

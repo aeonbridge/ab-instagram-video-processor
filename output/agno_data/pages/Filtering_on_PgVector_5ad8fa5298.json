@@ -1,0 +1,14 @@
+{
+  "title": "Filtering on PgVector",
+  "content": "Source: https://docs.agno.com/basics/knowledge/filters/usage/vector-dbs/filtering-pgvector\n\nLearn how to filter knowledge base searches using Pdf documents with user-specific metadata in PgVector.\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.utils.media import (\n    SampleDataFileExtension,\n    download_knowledge_filters_sample_data,\n)\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#filtering-on-pgvector",
+  "links": []
+}

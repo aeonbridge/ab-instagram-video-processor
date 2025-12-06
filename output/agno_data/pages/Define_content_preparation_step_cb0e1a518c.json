@@ -1,0 +1,8 @@
+{
+  "title": "Define content preparation step",
+  "content": "content_prep_step = Step(\n    name=\"ContentPreparation\",\n    agent=content_agent,\n    description=\"Prepare and organize all research for writing\",\n)\n\nwriting_step = Step(\n    name=\"Writing\",\n    agent=writer,\n    description=\"Write an article based on the research\",\n)\n\nediting_step = Step(\n    name=\"Editing\",\n    agent=editor,\n    description=\"Edit and polish the article\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-content-preparation-step",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Ask the agent to process web content",
+  "content": "agent.print_response(\"Summarize the content from https://docs.agno.com/introduction\", markdown=True)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.apify import ApifyTools\n\nagent = Agent(\n    tools=[\n        ApifyTools(actors=[\"compass/crawler-google-places\"])\n    ]\n)",
+  "code_samples": [
+    {
+      "code": "### 3. Google Places Crawler\n\nThe [Google Places Crawler](https://apify.com/compass/crawler-google-places) extracts data about businesses from Google Maps and Google Places.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3. Google Places Crawler",
+      "id": "3.-google-places-crawler"
+    }
+  ],
+  "url": "llms-txt#ask-the-agent-to-process-web-content",
+  "links": []
+}

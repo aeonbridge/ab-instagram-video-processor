@@ -1,0 +1,29 @@
+{
+  "title": "Stagehand MCP agent",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/usage/stagehand\n\nA web scraping agent that uses the Stagehand MCP server to automate browser interactions and create a structured content digest from Hacker News.\n\n* **Safe Navigation**: Proper initialization sequence prevents common browser automation errors\n* **Structured Data Extraction**: Methodical approach to extracting and organizing web content\n* **Flexible Output**: Creates well-structured digests with headlines, summaries, and insights\n\nBefore running this example, you'll need:\n\n* **Browserbase Account**: Get API credentials from [Browserbase](https://browserbase.com)\n* **OpenAI API Key**: Get an API Key from [OpenAI](https://platform.openai.com/settings/organization/api-keys)\n\n## Setup Instructions\n\n### 1. Clone and Build Stagehand MCP Server\n\n```bash  theme={null}\ngit clone https://github.com/browserbase/mcp-server-browserbase",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Setup Instructions",
+      "id": "setup-instructions"
+    },
+    {
+      "level": "h3",
+      "text": "1. Clone and Build Stagehand MCP Server",
+      "id": "1.-clone-and-build-stagehand-mcp-server"
+    }
+  ],
+  "url": "llms-txt#stagehand-mcp-agent",
+  "links": []
+}

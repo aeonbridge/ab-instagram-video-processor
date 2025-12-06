@@ -1,0 +1,19 @@
+{
+  "title": "Run the agent - Agno auto-generates session_id and run_id",
+  "content": "response = agent.run(\"Tell me a 5 second short story about a robot\")\nprint(response.content)\nprint(f\"Run ID: {response.run_id}\")        # Auto-generated UUID\nprint(f\"Session ID: {response.session_id}\") # Auto-generated UUID\n```\n\nThis creates a new session with a single run. But here's the catch: without a database configured, there's no persistence. The `session_id` exists for this single run, but you can't continue the conversation later because nothing is saved. To actually use sessions for multi-turn conversations, you need to configure a database (even an `InMemoryDb` works).\n\n## Multi-User Conversations\n\nIn production, multiple users often talk to the same agent or team simultaneously. Sessions keep those threads isolated:\n\n* `user_id` distinguishes the person using your product.\n* `session_id` distinguishes conversation threads for that user (think \"chat tabs\").\n* Conversation history only flows into the run when you enable it via [`add_history_to_context`](/basics/chat-history/agent/overview#add-history-to-the-agent-context).\n\nFor a full walkthrough that includes persistence, history, and per-user session IDs, follow the [Persisting Sessions guide](/basics/sessions/persisting-sessions#multi-user-sessions) or the [Chat History cookbook example](/examples/basics/agent/session/05_chat_history).\n\n<CardGroup cols={3}>\n  <Card title=\"Session Management\" icon=\"tag\" iconType=\"duotone\" href=\"/basics/sessions/session-management\">\n    Learn how to manage session IDs, names, and optimize session performance for agents and teams.\n  </Card>\n\n<Card title=\"History Management\" icon=\"clock-rotate-left\" iconType=\"duotone\" href=\"/basics/sessions/history-management\">\n    Control how conversation history is accessed and used in your sessions.\n  </Card>\n\n<Card title=\"Session Summaries\" icon=\"file-lines\" iconType=\"duotone\" href=\"/basics/sessions/session-summaries\">\n    Automatically condense long conversations into concise summaries to reduce token costs.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Multi-User Conversations",
+      "id": "multi-user-conversations"
+    },
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#run-the-agent---agno-auto-generates-session_id-and-run_id",
+  "links": []
+}

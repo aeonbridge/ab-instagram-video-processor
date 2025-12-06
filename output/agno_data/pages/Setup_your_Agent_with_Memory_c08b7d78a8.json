@@ -1,0 +1,19 @@
+{
+  "title": "Setup your Agent with Memory",
+  "content": "agent = Agent(\n    db=db,\n    enable_user_memories=True, # This enables Memory for the Agent\n    add_memories_to_context=False, # This disables adding memories to the context\n)\npython  theme={null}\nfrom agno.memory.strategies.types import MemoryOptimizationStrategyType",
+  "code_samples": [
+    {
+      "code": "## Memory Optimization\n\nAs users accumulate memories over time, and these memories are added to your context on each request, token costs can grow significantly.\nMemory optimization helps reduce these costs by combining multiple memories into fewer, more efficient memories while preserving all the key information.\n\n**When to optimize:**\n\n* Users with 50+ memories\n* Before high-cost operations\n* Periodic maintenance for long-running applications",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Memory Optimization",
+      "id": "memory-optimization"
+    }
+  ],
+  "url": "llms-txt#setup-your-agent-with-memory",
+  "links": []
+}

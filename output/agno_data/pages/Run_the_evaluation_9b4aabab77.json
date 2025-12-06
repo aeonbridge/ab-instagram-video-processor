@@ -1,0 +1,19 @@
+{
+  "title": "Run the evaluation",
+  "content": "result: Optional[AccuracyResult] = evaluation.run(print_results=True)\nassert result is not None and result.avg_score >= 8\n```\n\n* **Start Simple:** Begin with basic accuracy tests before progressing to complex performance and reliability evaluations\n* **Use Multiple Test Cases:** Don't rely on a single test case—build comprehensive test suites that cover edge cases\n* **Track Over Time:** Monitor your eval metrics continuously as you iterate on your agents\n* **Combine Dimensions:** Evaluate across all three dimensions for a holistic view of agent quality\n\nDive deeper into each evaluation dimension:\n\n1. **[Accuracy Evals](/basics/evals/accuracy)** - Learn LLM-as-a-judge techniques and multiple test case strategies\n2. **[Performance Evals](/basics/evals/performance)** - Measure latency, memory usage, and compare different configurations\n3. **[Reliability Evals](/basics/evals/reliability)** - Test tool calls, error handling, and rate limiting behavior",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Best Practices",
+      "id": "best-practices"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#run-the-evaluation",
+  "links": []
+}

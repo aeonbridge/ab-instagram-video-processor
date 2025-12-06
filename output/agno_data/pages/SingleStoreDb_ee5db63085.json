@@ -1,0 +1,8 @@
+{
+  "title": "SingleStoreDb",
+  "content": "Source: https://docs.agno.com/reference/storage/singlestore\n\n`SingleStoreDb` is a class that implements the Db interface using SingleStore  as the backend storage system. It provides high-performance, distributed storage for agent sessions with support for JSON data types and schema versioning.\n\n<Snippet file=\"db-singlestore-params.mdx\" />\n\n<Snippet file=\"db-new-bulk-methods.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#singlestoredb",
+  "links": []
+}

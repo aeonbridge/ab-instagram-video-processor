@@ -1,0 +1,43 @@
+{
+  "title": "Lumalabs",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/lumalabs\n\n**LumaLabTools** enables an Agent to generate media using the [Lumalabs platform](https://lumalabs.ai/dream-machine).\n\nThe following example requires the `lumaai` library. To install the Lumalabs client, run the following command:\n\nThe following agent will use Lumalabs to generate any video requested by the user.\n\n| Parameter               | Type   | Default | Description                                          |\n| ----------------------- | ------ | ------- | ---------------------------------------------------- |\n| `api_key`               | `str`  | `None`  | If you want to manually supply the Lumalabs API key. |\n| `enable_generate_video` | `bool` | `True`  | Enable the generate\\_video functionality.            |\n| `enable_image_to_video` | `bool` | `True`  | Enable the image\\_to\\_video functionality.           |\n| `all`                   | `bool` | `False` | Enable all functionality.                            |\n\n| Function         | Description                                                           |\n| ---------------- | --------------------------------------------------------------------- |\n| `generate_video` | Generate a video from a prompt.                                       |\n| `image_to_video` | Generate a video from a prompt, a starting image and an ending image. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/lumalabs.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/lumalabs_tools.py)",
+  "code_samples": [
+    {
+      "code": "The following example requires the `lumaai` library. To install the Lumalabs client, run the following command:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use Lumalabs to generate any video requested by the user.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#lumalabs",
+  "links": []
+}

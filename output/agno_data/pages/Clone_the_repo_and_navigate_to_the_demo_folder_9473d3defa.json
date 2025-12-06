@@ -1,0 +1,8 @@
+{
+  "title": "Clone the repo and navigate to the demo folder",
+  "content": "git clone https://github.com/agno-agi/agno.git\ncd agno/cookbook/tools/mcp/mcp_toolbox_demo",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#clone-the-repo-and-navigate-to-the-demo-folder",
+  "links": []
+}

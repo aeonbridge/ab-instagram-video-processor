@@ -1,0 +1,8 @@
+{
+  "title": "Cheap model for memory operations (60x less expensive)",
+  "content": "memory_manager = MemoryManager(\n    db=db,\n    model=OpenAIChat(id=\"gpt-4o-mini\")\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#cheap-model-for-memory-operations-(60x-less-expensive)",
+  "links": []
+}

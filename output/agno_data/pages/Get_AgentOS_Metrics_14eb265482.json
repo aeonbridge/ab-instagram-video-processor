@@ -1,0 +1,8 @@
+{
+  "title": "Get AgentOS Metrics",
+  "content": "Source: https://docs.agno.com/reference-api/schema/metrics/get-agentos-metrics\n\nget /metrics\nRetrieve AgentOS metrics and analytics data for a specified date range. If no date range is specified, returns all available metrics.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-agentos-metrics",
+  "links": []
+}

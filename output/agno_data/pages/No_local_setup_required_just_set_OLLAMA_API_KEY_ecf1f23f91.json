@@ -1,0 +1,8 @@
+{
+  "title": "No local setup required - just set OLLAMA_API_KEY",
+  "content": "agent = Agent(model=Ollama(id=\"gpt-oss:120b-cloud\", host=\"https://ollama.com\"))\nagent.print_response(\"Share a 2 sentence horror story\", stream=True)\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#no-local-setup-required---just-set-ollama_api_key",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "The second Agent will be able to retrieve the Memory about the user name here:",
+  "content": "agent_2.print_response(\"What is my name?\")\n```\n\nAll agents connected to the same database automatically share memories for each user. This works across agent types, teams, and workflows, as long as they use the same `user_id`.\n\n## Developer Resources\n\n* View [Examples](/basics/memory/working-with-memories/usage/memory-creation)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/memory/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#the-second-agent-will-be-able-to-retrieve-the-memory-about-the-user-name-here:",
+  "links": []
+}

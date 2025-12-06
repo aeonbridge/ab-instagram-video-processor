@@ -1,0 +1,8 @@
+{
+  "title": "Audio Streaming",
+  "content": "Source: https://docs.agno.com/basics/multimodal/agent/usage/audio-streaming\n\nThis example demonstrates how to use Agno agents to generate streaming audio responses using OpenAI's GPT-4o audio preview model.\n\n```python  theme={null}\nimport base64\nimport wave\nfrom typing import Iterator\n\nfrom agno.agent import Agent, RunOutputEvent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#audio-streaming",
+  "links": []
+}

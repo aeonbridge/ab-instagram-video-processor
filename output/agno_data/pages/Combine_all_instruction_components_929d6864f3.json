@@ -1,0 +1,24 @@
+{
+  "title": "Combine all instruction components",
+  "content": "complete_instructions = f\"\"\"\nYou are a Senior Social Media Intelligence Analyst specializing in cross-platform\nbrand monitoring and strategic analysis.\n\n{data_collection_strategy}\n\n{intelligence_synthesis}\n\n{analysis_principles}\n\"\"\"\n\nprint(f\"Complete instructions created: {len(complete_instructions)} characters\")\npython  theme={null}\nfrom agno.agent import Agent",
+  "code_samples": [
+    {
+      "code": "## Step 4: Create the Complete Agent\n\nNow let's put all the pieces together - model, tools, and instructions - to create your complete social media intelligence agent.\n\n### 4a. Create the Agent",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Step 4: Create the Complete Agent",
+      "id": "step-4:-create-the-complete-agent"
+    },
+    {
+      "level": "h3",
+      "text": "4a. Create the Agent",
+      "id": "4a.-create-the-agent"
+    }
+  ],
+  "url": "llms-txt#combine-all-instruction-components",
+  "links": []
+}

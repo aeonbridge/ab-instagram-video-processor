@@ -1,0 +1,8 @@
+{
+  "title": "Set up vector database - stores embeddings",
+  "content": "vector_db = PgVector(\n    table_name=\"vectors\",\n    db_url=\"postgresql+psycopg://user:pass@localhost:5432/db\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-vector-database---stores-embeddings",
+  "links": []
+}

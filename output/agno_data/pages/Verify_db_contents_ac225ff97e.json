@@ -1,0 +1,19 @@
+{
+  "title": "Verify db contents",
+  "content": "print(\"\\nVerifying db contents...\")\nall_sessions = db.get_sessions(session_type=SessionType.AGENT)\nprint(f\"Total sessions in Redis: {len(all_sessions)}\")\n\nif all_sessions:\n    print(\"\\nSession details:\")\n    session = all_sessions[0]\n    print(f\"The stored session: {session}\")\n\n<Snippet file=\"db-redis-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/db/redis/redis_for_agent.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#verify-db-contents",
+  "links": []
+}

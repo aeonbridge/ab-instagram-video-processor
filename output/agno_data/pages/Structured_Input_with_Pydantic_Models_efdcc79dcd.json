@@ -1,0 +1,14 @@
+{
+  "title": "Structured Input with Pydantic Models",
+  "content": "Source: https://docs.agno.com/basics/input-output/agent/usage/structured-input\n\nThis example demonstrates how to use structured Pydantic models as input to agents, enabling type-safe and validated input parameters for complex research tasks.\n\n```python structured_input.py theme={null}\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.hackernews import HackerNewsTools\nfrom pydantic import BaseModel, Field\n\nclass ResearchTopic(BaseModel):\n    \"\"\"Structured research topic with specific requirements\"\"\"\n\ntopic: str\n    focus_areas: List[str] = Field(description=\"Specific areas to focus on\")\n    target_audience: str = Field(description=\"Who this research is for\")\n    sources_required: int = Field(description=\"Number of sources needed\", default=5)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#structured-input-with-pydantic-models",
+  "links": []
+}

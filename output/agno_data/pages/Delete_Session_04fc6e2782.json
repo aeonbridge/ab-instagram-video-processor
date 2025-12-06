@@ -1,0 +1,8 @@
+{
+  "title": "Delete Session",
+  "content": "Source: https://docs.agno.com/reference-api/schema/sessions/delete-session\n\ndelete /sessions/{session_id}\nPermanently delete a specific session and all its associated runs. This action cannot be undone and will remove all conversation history.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-session",
+  "links": []
+}

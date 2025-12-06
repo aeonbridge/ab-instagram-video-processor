@@ -1,0 +1,14 @@
+{
+  "title": "Async Team with Tools",
+  "content": "Source: https://docs.agno.com/basics/tools/usage/async-team-with-tools\n\nThis example demonstrates how to create an async team with various tools for information gathering using multiple agents with different tools (Wikipedia, DuckDuckGo, AgentQL) to gather comprehensive information asynchronously.\n\n```python cookbook/examples/teams/tools/03_async_team_with_tools.py theme={null}\n\"\"\"\nThis example demonstrates how to create an async team with various tools for information gathering.\n\nThe team uses multiple agents with different tools (Wikipedia, DuckDuckGo, AgentQL) to\ngather comprehensive information about a company asynchronously.\n\"\"\"\n\nimport asyncio\nfrom uuid import uuid4\n\nfrom agno.agent.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.models.mistral import MistralChat\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.agentql import AgentQLTools\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.wikipedia import WikipediaTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#async-team-with-tools",
+  "links": []
+}

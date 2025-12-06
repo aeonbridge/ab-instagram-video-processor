@@ -1,0 +1,8 @@
+{
+  "title": "Optional: Define a TypedDict with optional fields",
+  "content": "class ResearchTopicWithOptionals(TypedDict, total=False):\n    topic: str\n    focus_areas: List[str]\n    target_audience: str\n    sources_required: int\n    priority: Optional[str]",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#optional:-define-a-typeddict-with-optional-fields",
+  "links": []
+}

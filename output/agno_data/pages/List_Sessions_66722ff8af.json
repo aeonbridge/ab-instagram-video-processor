@@ -1,0 +1,8 @@
+{
+  "title": "List Sessions",
+  "content": "Source: https://docs.agno.com/reference-api/schema/sessions/list-sessions\n\nget /sessions\nRetrieve paginated list of sessions with filtering and sorting options. Supports filtering by session type (agent, team, workflow), component, user, and name. Sessions represent conversation histories and execution contexts.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#list-sessions",
+  "links": []
+}

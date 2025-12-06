@@ -1,0 +1,28 @@
+{
+  "title": "ModelsLabs",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/models-labs\n\nYou need to install the `requests` library.\n\nSet the `MODELS_LAB_API_KEY` environment variable.\n\nThe following agent will use ModelsLabs to generate a video based on a text prompt.\n\n```python cookbook/tools/models_labs_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.models_labs import ModelsLabsTools",
+  "code_samples": [
+    {
+      "code": "Set the `MODELS_LAB_API_KEY` environment variable.",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use ModelsLabs to generate a video based on a text prompt.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#modelslabs",
+  "links": []
+}

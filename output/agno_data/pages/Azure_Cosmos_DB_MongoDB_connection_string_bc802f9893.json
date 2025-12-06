@@ -1,0 +1,8 @@
+{
+  "title": "Azure Cosmos DB MongoDB connection string",
+  "content": "\"\"\"\nExample connection strings:\n\"mongodb+srv://<username>:<encoded_password>@cluster0.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000\"\n\"\"\"\nmdb_connection_string = f\"mongodb+srv://<username>:<encoded_password>@cluster0.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000\"\n\nknowledge_base = Knowledge(\n    vector_db=MongoVectorDb(\n        collection_name=\"recipes\",\n        db_url=mdb_connection_string,\n        search_index_name=\"recipes\",\n        cosmos_compatibility=True,\n    ),\n)\n\nknowledge.add_content(\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#azure-cosmos-db-mongodb-connection-string",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Readers",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/overview\n\nLearn how to use readers to convert raw data into searchable knowledge for your Agents.\n\nReaders are the first step in the process of creating Knowledge from content.\nThey transform raw content from various sources into structured `Document` objects that can be embedded, chunked, and stored in vector databases.\n\nA **Reader** is a specialized component that knows how to parse and extract content from specific data sources or file formats. Think of readers as translators that convert different content formats into a standardized format that Agno can work with.\n\nEvery piece of content that enters your knowledge base must pass through a reader first. The reader's job is to:\n\n1. **Parse** the raw content from its original format\n2. **Extract** the meaningful text and metadata\n3. **Structure** the content into `Document` objects\n4. **Apply chunking** strategies to break large content into manageable pieces\n\nAll readers inherit from the base `Reader` class and follow a consistent pattern:\n\n```python  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What are Readers?",
+      "id": "what-are-readers?"
+    },
+    {
+      "level": "h2",
+      "text": "How Readers Work",
+      "id": "how-readers-work"
+    }
+  ],
+  "url": "llms-txt#readers",
+  "links": []
+}

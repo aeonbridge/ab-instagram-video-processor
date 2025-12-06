@@ -1,0 +1,33 @@
+{
+  "title": "Multi-DB Tracing with tracing=True",
+  "content": "Source: https://docs.agno.com/agent-os/tracing/usage/tracing-with-multi-db-scenario-and-tracing-flag\n\nLearn how to trace agents with multiple databases using tracing=True in AgentOS\n\nThis example shows how to configure tracing when agents have separate databases using the `tracing=True` flag. A dedicated `tracing_db` ensures all traces are stored in one central location.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run AgentOS\">\n    <CodeGroup>\n\nYour AgentOS will be available at `http://localhost:7777`. View traces in the AgentOS dashboard.\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run AgentOS\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#multi-db-tracing-with-tracing=true",
+  "links": []
+}

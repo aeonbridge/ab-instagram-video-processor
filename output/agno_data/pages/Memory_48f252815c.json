@@ -1,0 +1,14 @@
+{
+  "title": "Memory",
+  "content": "Source: https://docs.agno.com/integrations/models/native/openai/responses/usage/memory\n\n```python cookbook/models/openai/responses/memory.py theme={null}\n\"\"\"\nThis recipe shows how to use personalized memories and summaries in an agent.\nSteps:\n1. Run: `./cookbook/scripts/run_pgvector.sh` to start a postgres container with pgvector\n2. Run: `pip install openai sqlalchemy 'psycopg[binary]' pgvector` to install the dependencies\n3. Run: `python cookbook/agents/personalized_memories_and_summaries.py` to run the agent\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.base import SessionType\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIResponses\nfrom rich.pretty import pprint",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#memory",
+  "links": []
+}

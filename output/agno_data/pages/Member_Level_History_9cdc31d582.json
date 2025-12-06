@@ -1,0 +1,47 @@
+{
+  "title": "Member-Level History",
+  "content": "Source: https://docs.agno.com/basics/chat-history/team/usage/history-of-members\n\nThis example demonstrates a team where each member has access to its own history through `add_history_to_context=True` set on individual agents.\n\nUnlike team-level history, each member only has access to its own conversation history, not the history of other members or the team.\n\nUse member-level history when:\n\n* Each member handles distinct, independent tasks\n* You don't need cross-member context sharing\n* Members should maintain isolated conversation threads\n* You want to minimize context size for each member\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install required libraries\">\n    \n  </Step>\n\n<Step title=\"Set environment variables\">\n    \n  </Step>\n\n<Step title=\"Run the agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Ask question in German",
+      "id": "ask-question-in-german"
+    },
+    {
+      "level": "h2",
+      "text": "Follow up in German",
+      "id": "follow-up-in-german"
+    },
+    {
+      "level": "h2",
+      "text": "Ask question in Spanish",
+      "id": "ask-question-in-spanish"
+    },
+    {
+      "level": "h2",
+      "text": "Follow up in Spanish",
+      "id": "follow-up-in-spanish"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#member-level-history",
+  "links": []
+}

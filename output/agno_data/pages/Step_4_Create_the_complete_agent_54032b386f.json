@@ -1,0 +1,37 @@
+{
+  "title": "Step 4: Create the complete agent",
+  "content": "social_media_agent = Agent(\n    name=\"Social Media Intelligence Analyst\",\n    model=model,\n    tools=tools,\n    instructions=complete_instructions,\n    markdown=True,\n    show_tool_calls=True,\n)\n\ndef analyze_brand_sentiment(query: str, tweet_count: int = 20):\n    \"\"\"Execute comprehensive social media intelligence analysis.\"\"\"\n    prompt = f\"\"\"\n    Conduct comprehensive social media intelligence analysis for: \"{query}\"\n\nANALYSIS PARAMETERS:\n    - Twitter Analysis: {tweet_count} most recent tweets with engagement metrics\n    - Web Intelligence: Related articles, discussions, and broader context via Exa\n    - Cross-Platform Synthesis: Correlate social sentiment with web discussions\n    - Strategic Focus: Brand positioning, competitive analysis, risk assessment\n\nMETHODOLOGY:\n    1. Gather direct social media mentions and engagement data\n    2. Search for related web discussions and broader context\n    3. Analyze sentiment patterns and engagement indicators\n    4. Identify cross-platform themes and influence networks\n    5. Generate strategic recommendations with evidence backing\n\nProvide comprehensive intelligence report following the structured format.\n    \"\"\"\n\nreturn social_media_agent.print_response(prompt, stream=True)\n\nif __name__ == \"__main__\":\n    # Test the complete agent\n    analyze_brand_sentiment(\"Agno OR AgnoAGI\", tweet_count=25)\nbash  theme={null}\nag infra up\nbash  theme={null}\npython app/social_media_agent.py\nbash  theme={null}",
+  "code_samples": [
+    {
+      "code": "### 4e. Spin-up the infrastructure for our project:\n\nNow that we have completed our agent, we can spin-up the infrastructure for our project:",
+      "language": "unknown"
+    },
+    {
+      "code": "Your [AgentOS](/agent-os/introduction) API is now running. We are ready to start building!\n\n### 4f. Test Your Complete Agent",
+      "language": "unknown"
+    },
+    {
+      "code": "You should see your agent:\n\n1. **Use X Tools** to gather Twitter data with engagement metrics\n2. **Use Exa Tools** to find broader web context\n3. **Generate a structured report** following your defined format\n4. **Provide strategic recommendations** based on the analysis\n\n## Step 5: Test and experiment via AgentOS\n\n**Why API-first?** The AgentOS infrastructure automatically exposes your agent as a REST API, making it ready for production integration without additional deployment work.\n\nYour agent is automatically available via the AgentOS API. Let's test it!\n\n**Find your API endpoint:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "4e. Spin-up the infrastructure for our project:",
+      "id": "4e.-spin-up-the-infrastructure-for-our-project:"
+    },
+    {
+      "level": "h3",
+      "text": "4f. Test Your Complete Agent",
+      "id": "4f.-test-your-complete-agent"
+    },
+    {
+      "level": "h2",
+      "text": "Step 5: Test and experiment via AgentOS",
+      "id": "step-5:-test-and-experiment-via-agentos"
+    }
+  ],
+  "url": "llms-txt#step-4:-create-the-complete-agent",
+  "links": []
+}

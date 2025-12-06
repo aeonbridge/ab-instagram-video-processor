@@ -1,0 +1,8 @@
+{
+  "title": "Create memory manager and optimize memories",
+  "content": "memory_manager = MemoryManager(\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    db=db,\n)\n\nprint(\"\\nOptimizing memories with 'summarize' strategy...\")\nmemory_manager.optimize_memories(\n    user_id=user_id,\n    strategy=MemoryOptimizationStrategyType.SUMMARIZE,  # Combine all memories into one\n    apply=True,  # Apply changes to database\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-memory-manager-and-optimize-memories",
+  "links": []
+}

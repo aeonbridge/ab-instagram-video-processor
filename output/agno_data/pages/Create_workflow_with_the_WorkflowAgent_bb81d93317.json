@@ -1,0 +1,8 @@
+{
+  "title": "Create workflow with the WorkflowAgent",
+  "content": "workflow = Workflow(\n    name=\"Story Generation Workflow\",\n    description=\"A workflow that generates stories, formats them, and adds references\",\n    agent=workflow_agent,\n    steps=[story_writer, story_formatter, add_references],\n    db=PostgresDb(db_url),\n)\n\ndef main():\n    print(\"\\n\\n\" + \"=\" * 80)\n    print(\"STREAMING MODE EXAMPLES\")\n    print(\"=\" * 80)\n\nprint(\"\\n\" + \"=\" * 80)\n    print(\"FIRST CALL (STREAMING): Tell me a story about a dog named Rocky\")\n    print(\"=\" * 80)\n    workflow.print_response(\n        \"Tell me a story about a dog named Rocky\",\n        stream=True,\n    )\n\nprint(\"\\n\" + \"=\" * 80)\n    print(\"SECOND CALL (STREAMING): What was Rocky's personality?\")\n    print(\"=\" * 80)\n    workflow.print_response(\n        \"What was Rocky's personality?\", stream=True\n    )\n\nprint(\"\\n\" + \"=\" * 80)\n    print(\"THIRD CALL (STREAMING): Now tell me a story about a cat named Luna\")\n    print(\"=\" * 80)\n    workflow.print_response(\n        \"Now tell me a story about a cat named Luna\",\n        stream=True,\n    )\n\nprint(\"\\n\" + \"=\" * 80)\n    print(\"FOURTH CALL (STREAMING): Compare Rocky and Luna\")\n    print(\"=\" * 80)\n    workflow.print_response(\n        \"Compare Rocky and Luna\", stream=True\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-workflow-with-the-workflowagent",
+  "links": []
+}

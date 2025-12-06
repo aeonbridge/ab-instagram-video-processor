@@ -1,0 +1,8 @@
+{
+  "title": "Get recent traces",
+  "content": "traces, total_count = db.get_traces(limit=20)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-recent-traces",
+  "links": []
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Background Hooks (Global)",
+  "content": "Source: https://docs.agno.com/agent-os/usage/background-hooks-global\n\nRun all agent hooks as background tasks using AgentOS\n\nThis example demonstrates how to run **all** hooks as FastAPI background tasks by enabling `run_hooks_in_background` at the AgentOS level.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run the server\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Test the endpoint\">\n\nThe response will be returned immediately. Check the server logs to see the background hooks executing after the response is sent.\n  </Step>\n</Steps>\n\n1. The agent processes the request\n2. The response is sent immediately to the user\n3. All pre-hooks and post-hooks run in the background\n4. The user doesn't have to wait for these tasks to complete\n\n<Note>\n  With `run_hooks_in_background=True` on AgentOS, **all** hooks for all agents run in the background. Use the `@hook` decorator for more granular control over which hooks run in the background.\n</Note>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run the server\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Test the endpoint\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What Happens",
+      "id": "what-happens"
+    }
+  ],
+  "url": "llms-txt#background-hooks-(global)",
+  "links": []
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Team Session State",
+  "content": "Source: https://docs.agno.com/basics/state/team/overview\n\nShare and coordinate state across multiple agents in a team\n\nTeam Session State enables sharing and updating state data across teams of agents. Teams often need to coordinate on shared information.\n\n<Check>\n  Shared state propagates through nested team structures as well\n</Check>\n\n## How to use Shared State\n\nYou can set the `session_state` parameter on `Team` to set initial session state data.\nThis state data will be shared between the team leader and its members.\n\nThis state will be available to all team members and is synchronized between them.\n\nMembers can access the shared state using `run_context.session_state` in tools.\n\n<Note>\n  The `run_context` object is automatically passed to the tool as an argument. Use it to access the session state.\n  Any updates to `run_context.session_state` will be automatically persisted in the database and reflected in the shared state.\n  See the [RunContext schema](/reference/run/run-context) for more information.\n</Note>\n\nHere's a simple example of a team managing a shared shopping list:\n\n```python team_session_state.py theme={null}\nfrom agno.models.openai import OpenAIChat\nfrom agno.agent import Agent\nfrom agno.team import Team\nfrom agno.run import RunContext",
+  "code_samples": [
+    {
+      "code": "Members can access the shared state using `run_context.session_state` in tools.\n\nFor example:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>\n  The `run_context` object is automatically passed to the tool as an argument. Use it to access the session state.\n  Any updates to `run_context.session_state` will be automatically persisted in the database and reflected in the shared state.\n  See the [RunContext schema](/reference/run/run-context) for more information.\n</Note>\n\n### Example\n\nHere's a simple example of a team managing a shared shopping list:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How to use Shared State",
+      "id": "how-to-use-shared-state"
+    },
+    {
+      "level": "h3",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#team-session-state",
+  "links": []
+}

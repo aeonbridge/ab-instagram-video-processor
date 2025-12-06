@@ -1,0 +1,28 @@
+{
+  "title": "Guardrails",
+  "content": "Source: https://docs.agno.com/basics/guardrails/overview\n\nLearn about securing the input of your Agents using guardrails.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.1.0\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.1.0\">v2.1.0</Tooltip>\n</Badge>\n\nGuardrails are built-in safeguards for your Agents and Teams. You can use them to make sure the input you send to the LLM is safe and doesn't contain anything undesired.\n\nSome of the most popular usages are:\n\n* PII detection and redaction\n* Prompt injection defense\n* Jailbreak defense\n* Data leakage prevention\n* NSFW content filtering\n\n## Agno included Guardrails\n\nAgno provides some built-in guardrails you can use out of the box with your Agents and Teams:\n\n* [PII Detection Guardrail](/basics/guardrails/included/pii): detect PII (Personally Identifiable Information).\n* [Prompt Injection Guardrail](/basics/guardrails/included/prompt-injection): detect and stop prompt injection attemps.\n* [OpenAI Moderation Guardrail](/basics/guardrails/included/openai-moderation): detect content that violates OpenAI's content policy.\n\nTo use the Agno included guardrails, you just need to import them and pass them to the Agent or Team with the `pre_hooks` parameter.\n\nGuardrails are implemented as [pre-hooks](/basics/hooks/overview), which execute before your Agent processes input.\n\nFor example, to use the PII Detection Guardrail:\n\nYou can see complete examples using the Agno Guardrails in the [Usage](/basics/guardrails/usage) section.\n\nYou can create custom guardrails by extending the `BaseGuardrail` class. See the [BaseGuardrail Reference](/reference/hooks/base-guardrail) for more details.\n\nThis is useful if you need to perform any check or transformation not handled by the built-in guardrails, or just to implement your own validation logic.\n\nYou will need to implement the `check` and `async_check` methods to perform your validation and raise exceptions when detecting undesired content.\n\n<Check>\n  Agno automatically uses the sync or async version of the guardrail based on whether you are running the agent with `.run()` or `.arun()`.\n</Check>\n\nFor example, let's create a simple custom guardrail that checks if the input contains any URLs:\n\nNow you can use your custom guardrail in your Agent:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "You can see complete examples using the Agno Guardrails in the [Usage](/basics/guardrails/usage) section.\n\n## Custom Guardrails\n\nYou can create custom guardrails by extending the `BaseGuardrail` class. See the [BaseGuardrail Reference](/reference/hooks/base-guardrail) for more details.\n\nThis is useful if you need to perform any check or transformation not handled by the built-in guardrails, or just to implement your own validation logic.\n\nYou will need to implement the `check` and `async_check` methods to perform your validation and raise exceptions when detecting undesired content.\n\n<Check>\n  Agno automatically uses the sync or async version of the guardrail based on whether you are running the agent with `.run()` or `.arun()`.\n</Check>\n\nFor example, let's create a simple custom guardrail that checks if the input contains any URLs:",
+      "language": "unknown"
+    },
+    {
+      "code": "Now you can use your custom guardrail in your Agent:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Agno included Guardrails",
+      "id": "agno-included-guardrails"
+    },
+    {
+      "level": "h2",
+      "text": "Custom Guardrails",
+      "id": "custom-guardrails"
+    }
+  ],
+  "url": "llms-txt#guardrails",
+  "links": []
+}

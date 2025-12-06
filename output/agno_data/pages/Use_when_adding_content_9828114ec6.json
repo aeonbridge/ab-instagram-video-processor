@@ -1,0 +1,19 @@
+{
+  "title": "Use when adding content",
+  "content": "for file_path in document_files:\n    knowledge.add_content(\n        path=file_path,\n        metadata=assign_metadata(file_path)\n    )\npython  theme={null}\nfrom agno.knowledge.reader.pdf_reader import PdfReader",
+  "code_samples": [
+    {
+      "code": "For advanced filtering with complex logical conditions (OR, NOT, comparisons), see [Advanced Filtering](/basics/knowledge/filters/advanced-filtering).\n\n### Working with Different Content Types\n\nUse appropriate readers; they handle parsing their formats.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Working with Different Content Types",
+      "id": "working-with-different-content-types"
+    }
+  ],
+  "url": "llms-txt#use-when-adding-content",
+  "links": []
+}

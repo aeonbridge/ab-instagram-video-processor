@@ -1,0 +1,14 @@
+{
+  "title": "MCPTools within AgentOS",
+  "content": "Source: https://docs.agno.com/agent-os/mcp/tools\n\nLearn how to use MCPTools in the Agents, Teams and Workflows within your AgentOS\n\nThe [Model Context Protocol (MCP)](https://modelcontextprotocol.io) enables Agents to interact with external systems through a standardized interface.\n\nYou can give your Agents access to MCP tools using the `MCPTools` class. Read more about using MCP tools [here](/basics/tools/mcp/overview).\n\nYour `MCPTools` will work normally within AgentOS. Their lifecycle is automatically handled, you don't need to handle their connection and disconnection.\n\n<Note>\n  If you are using `MCPTools` within AgentOS, you should not use `reload=True` when serving your AgentOS.\n  This can break the MCP connection during the FastAPI lifecycle.\n</Note>\n\n```python mcp_tools_example.py theme={null}\nfrom agno.agent import Agent\nfrom agno.os import AgentOS\nfrom agno.tools.mcp import MCPTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#mcptools-within-agentos",
+  "links": []
+}

@@ -132,7 +132,8 @@ def convert_video(
     codec: str = 'libx264',
     crf: int = 23,
     preset: str = 'medium',
-    force: bool = False
+    force: bool = False,
+    timeout: int = 1200
 ) -> bool:
     """
     Convert video to specified aspect ratio
@@ -145,6 +146,7 @@ def convert_video(
         crf: Quality (18-28, lower=better)
         preset: Encoding preset
         force: Overwrite if exists
+        timeout: Timeout in seconds (default: 1200 = 20 min)
 
     Returns:
         True if successful, False otherwise
@@ -188,7 +190,7 @@ def convert_video(
             command,
             capture_output=True,
             text=True,
-            timeout=600,  # 10 minutes max
+            timeout=timeout,
             check=True
         )
 
@@ -335,6 +337,13 @@ Aspect ratios suportados:
         help='Log detalhado'
     )
 
+    parser.add_argument(
+        '--timeout',
+        type=int,
+        default=1200,
+        help='Timeout por vídeo em segundos (padrão: 1200 = 20min)'
+    )
+
     args = parser.parse_args()
 
     # Set log level
@@ -396,7 +405,8 @@ Aspect ratios suportados:
             codec=args.codec,
             crf=args.crf,
             preset=args.preset,
-            force=args.force
+            force=args.force,
+            timeout=args.timeout
         )
 
         if success:

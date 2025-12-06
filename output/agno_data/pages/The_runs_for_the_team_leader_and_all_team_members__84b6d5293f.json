@@ -1,0 +1,69 @@
+{
+  "title": "The runs for the team leader and all team members are here",
+  "content": "team_session.runs\npython v1_memory.py theme={null}\nfrom agno.agent import Agent\nfrom agno.memory.v2.db.sqlite import SqliteMemoryDb\nfrom agno.memory.v2.memory import Memory\n\nmemory_db = SqliteMemoryDb(table_name=\"memory\", db_file=\"agno.db\")\nmemory = Memory(db=memory_db)\n\nagent = Agent(memory=memory)\npython v2_memory.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\n\ndb = SqliteDb(db_file=\"agno.db\")\n\nagent = Agent(db=db, enable_user_memories=True)\npython v2_memory_set_table.py theme={null}\ndb = SqliteDb(db_file=\"agno.db\", memory_table=\"your_memory_table_name\")\npython v2_memory_db_methods.py theme={null}\nagent.get_user_memories(user_id=\"123\")\npython  theme={null}\nfrom agno.app.agui.app import AGUIApp\n\nagui_app = AGUIApp(agent=agent)\napp = agui_app.get_app()\nagui_app.serve(port=8000)\npython  theme={null}\nfrom agno.os import AgentOS\nfrom agno.os.interfaces.agui import AGUI\n\nagent_os = AgentOS(agents=[agent], interfaces=[AGUI(agent=agent)])\napp = agent_os.get_app()\nagent_os.serve(port=8000)\n```\n\n1. **Update imports**: Replace app imports with interface imports\n2. **Use AgentOS**: Wrap agents with `AgentOS` and specify interfaces\n3. **Update serving**: Use `agent_os.serve()` instead of `app.serve()`\n\n### 8. Playground -> AgentOS\n\nOur `Playground` has been deprecated. Our new [AgentOS](/agent-os/introduction) offering will substitute all usecases.\n\nSee [AgentOS](/agent-os/introduction) for more details!",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  See more changes in the [Storage Updates](/how-to/v2-changelog#storage)\n  section of the changelog.\n</Tip>\n\n### 3. Memory\n\nMemory gives an Agent the ability to recall relevant information.\n\nThis is how Memory looks like on V1:",
+      "language": "unknown"
+    },
+    {
+      "code": "These are the changes we have made for v2:\n\n3.1. The `MemoryDb` classes have been deprecated. The main `Db` classes are to be used.\n3.2. The `Memory` class has been deprecated. You now just need to set `enable_user_memories=True` on an Agent with a `db` for Memory to work.",
+      "language": "unknown"
+    },
+    {
+      "code": "3.3. The generated memories will be stored in the `memories_table`. By default, the `agno_memories` will be used. It will be created if needed. You can also set the memory table like this:",
+      "language": "unknown"
+    },
+    {
+      "code": "3.4. The methods you previously had access to through the Memory class, are now direclty available on the relevant `db` object. For example:",
+      "language": "unknown"
+    },
+    {
+      "code": "You can find examples for other all other databases and advanced scenarios in the [examples](/examples/basics/memory) section.\n\n<Tip>\n  See more changes in the [Memory Updates](/how-to/v2-changelog#memory)\n  section of the changelog.\n</Tip>\n\n### 4. Knowledge\n\nKnowledge gives an Agent the ability to search and retrieve relevant, domain-specific information from a knowledge base.\n\nThese are the changes we have made for v2:\n\n4.1. `AgentKnowledge` has been deprecated in favor of the new `Knowledge` class.\nAlong with this, all of the child classes that used `AgentKnowledge` as a base have been removed. Their capabilities are now supported\nby default in `Knowledge`. This also means that the correct reader for the content that you are adding is now selected automatically, with\nthe option to override it at any time.\n\n4.2. The `load()` method and its variations have been replaced by `add_content()`. Content is the building block of any piece of knowledge originating\nfrom any sources. For a full example of the usage, see the [Content Types](/basics/knowledge/content-types) page.\n\n4.3. `Knowledge` now supports a `contents_db`. This allows the storage and management of every piece of content that is added to your knowledge.\nFurthermore, we now support deletion of individual vectors using the `remove_vectors_by_id()`, `remove_vectors_by_name()` and remove\\_vectors by metadata()`methods.\nYou can also delete all vectors created by a specific piece of content using`remove\\_content\\_by\\_id()\\`.\n\n4.4 In order to support the deletion mentioned above, VectorDB tables have been updated. Two new columns, `content_hash` and `content_id` have been added.\n\n4.5. The `retriever` field has been renamed to `knowledge_retriever`.\n\n4.6. The `add_references` method has been renamed to `add_knowledge_to_context`.\n\n**Renamed**\n\n* `retriever` -> `knowledge_retriever`\n* `add_references` -> `add_knowledge_to_context`\n\n<Tip>\n  See more changes in the [Knowledge Updates](/how-to/v2-changelog#knowledge) section of the changelog.\n</Tip>\n\n### 5. Metrics\n\nMetrics are used to understand the usage and consumption related to a Session, a Run or a Message.\n\nThese are the changes we have made for v2:\n\n5.1. **Field name changes**:\n\n* `time` → `duration`\n* `audio_tokens` → `audio_total_tokens`\n* `input_audio_tokens` → `audio_input_tokens`\n* `output_audio_tokens` → `audio_output_tokens`\n* `cached_tokens` → `cache_read_tokens`\n\n5.2. **Deprecated fields** (removed in v2):\n\n* `prompt_tokens` and `completion_tokens` - replaced by `input_tokens` and `output_tokens`\n* `prompt_tokens_details` and `completion_tokens_details` - detailed info moved to `provider_metrics`\n\n5.3. **New structure**:\n\n* Provider-specific metrics fields are now inside the `provider_metrics` field\n* A new `additional_metrics` field has been added for custom metrics\n\n<Tip>\n  The migration script automatically converts all metrics from v1 to v2 format, including nested metrics in session data.\n</Tip>\n\n### 6. Teams\n\nWe have refactored the `Team` class to be more flexible and powerful.\n\nThe biggest changes is that the `mode` parameter has been deprecated. Instead there are attributes that can be used to control the behavior of the team:\n\n* `respond_directly` -> If True, the team leader won't process responses from the members and instead will return them directly\n* `delegate_to_all_members` -> If True, the team leader will delegate tasks to all members simultaneously, instead of one by one. When running async (using `arun`) members will run concurrently.\n* `determine_input_for_members` -> `True` by default. Set to False if you want to send the run input directly to the member agents without the team leader synthesizing its own input. This is useful if you want to send pydantic model input directly to the member agents.\n\nHere is a quick migration guide:\n\n* If you previously used `mode=coordinate`, this is now the default behaviour and you can use the `Team` without any modifications.\n* If you previously used `mode=route`, you can now use `respond_directly=True` and `determine_input_for_members=False` to achieve the same behaviour.\n* If you previously used `mode=collaborate`, you can set `delegate_to_all_members=True` to achieve the same behaviour.\n\nSee the [Team updates](/how-to/v2-changelog#team-updates) section of the changelog for more details.\n\n### 7. Workflows\n\nWe have heavily updated our Workflows, aiming to provide top-of-the-line tooling to build agentic systems.\n\n<Tip>\n  Make sure to check our [comprehensive migration guide for\n  Workflows](/how-to/workflows-migration).\n</Tip>\n\n### 7. Apps -> Interfaces\n\nThe old \"apps\" system (`AGUIApp`, `SlackApi`, `WhatsappApi`) has been replaced with a unified interfaces system within AgentOS.\n\n#### Before - Standalone Apps",
+      "language": "unknown"
+    },
+    {
+      "code": "#### After - Unified Interfaces",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3. Memory",
+      "id": "3.-memory"
+    },
+    {
+      "level": "h3",
+      "text": "4. Knowledge",
+      "id": "4.-knowledge"
+    },
+    {
+      "level": "h3",
+      "text": "5. Metrics",
+      "id": "5.-metrics"
+    },
+    {
+      "level": "h3",
+      "text": "6. Teams",
+      "id": "6.-teams"
+    },
+    {
+      "level": "h3",
+      "text": "7. Workflows",
+      "id": "7.-workflows"
+    },
+    {
+      "level": "h3",
+      "text": "7. Apps -> Interfaces",
+      "id": "7.-apps-->-interfaces"
+    },
+    {
+      "level": "h3",
+      "text": "8. Playground -> AgentOS",
+      "id": "8.-playground-->-agentos"
+    }
+  ],
+  "url": "llms-txt#the-runs-for-the-team-leader-and-all-team-members-are-here",
+  "links": []
+}

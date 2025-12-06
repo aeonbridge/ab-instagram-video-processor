@@ -1,0 +1,29 @@
+{
+  "title": "Ask the Agent about the user",
+  "content": "agent.print_response(\"What do you know about me?\")\n```\n\n| Parameter                   | Type   | Default | Description                                                 |\n| --------------------------- | ------ | ------- | ----------------------------------------------------------- |\n| `session_id`                | `str`  | `None`  | Optional session ID. Auto-generated if not provided.        |\n| `user_id`                   | `str`  | `None`  | Optional user ID. Auto-generated if not provided.           |\n| `api_key`                   | `str`  | `None`  | Zep API key. If not provided, uses ZEP\\_API\\_KEY env var.   |\n| `ignore_assistant_messages` | `bool` | `False` | Whether to ignore assistant messages when adding to memory. |\n| `enable_add_zep_message`    | `bool` | `True`  | Add a message to the current Zep session memory.            |\n| `enable_get_zep_memory`     | `bool` | `True`  | Retrieve memory for the current Zep session.                |\n| `enable_search_zep_memory`  | `bool` | `True`  | Search the Zep memory store for relevant information.       |\n| `instructions`              | `str`  | `None`  | Custom instructions for using the Zep tools.                |\n| `add_instructions`          | `bool` | `False` | Whether to add default instructions.                        |\n\n| Function            | Description                                                                                                                                                                                                                                |\n| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| `add_zep_message`   | Adds a message to the current Zep session memory. Takes `role` (str) for the message sender and `content` (str) for the message text. Returns a confirmation or error message.                                                             |\n| `get_zep_memory`    | Retrieves memory for the current Zep session. Takes optional `memory_type` (str) parameter with options \"context\" (default), \"summary\", or \"messages\". Returns the requested memory content or an error.                                   |\n| `search_zep_memory` | Searches the Zep memory store for relevant information. Takes `query` (str) to find relevant facts and optional `search_scope` (str) parameter with options \"messages\" (default) or \"summary\". Returns search results or an error message. |\n\nThe `ZepAsyncTools` class extends the `ZepTools` class and provides asynchronous versions of the toolkit functions.\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/zep.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/zep_tools.py)\n* View [Async Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/zep_async_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Async Toolkit",
+      "id": "async-toolkit"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#ask-the-agent-about-the-user",
+  "links": []
+}

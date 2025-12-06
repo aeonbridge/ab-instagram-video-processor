@@ -1,0 +1,8 @@
+{
+  "title": "Search with metadata filters for more precise results",
+  "content": "results = knowledge.search(\n    query=\"vacation policy\",\n    max_results=5,\n    filters={\"department\": \"hr\", \"type\": \"policy\"}\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#search-with-metadata-filters-for-more-precise-results",
+  "links": []
+}

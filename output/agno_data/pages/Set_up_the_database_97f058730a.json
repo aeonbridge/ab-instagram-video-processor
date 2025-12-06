@@ -1,0 +1,8 @@
+{
+  "title": "Set up the database",
+  "content": "db = SqliteDb(db_file=\"tmp/agentos.db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-the-database",
+  "links": []
+}

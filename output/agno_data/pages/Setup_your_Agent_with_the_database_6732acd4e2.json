@@ -1,0 +1,19 @@
+{
+  "title": "Setup your Agent with the Database",
+  "content": "agent = Agent(db=db)\n```\n\n<Snippet file=\"db-postgres-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/db/postgres/postgres_for_agent.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#setup-your-agent-with-the-database",
+  "links": []
+}

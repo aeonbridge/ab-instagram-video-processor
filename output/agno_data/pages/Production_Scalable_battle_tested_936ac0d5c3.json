@@ -1,0 +1,19 @@
+{
+  "title": "Production: Scalable, battle-tested",
+  "content": "prod_db = PgVector(\n    table_name=\"prod_knowledge\",\n    db_url=\"postgresql+psycopg://user:pass@db:5432/knowledge\"\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "**Guidelines:**\n\n* **LanceDB** for development and testing (no setup required)\n* **PgVector** for production (up to 1M documents, need SQL features)\n* **Pinecone** for managed services (no ops overhead, auto-scaling)\n\n### 2. Skip Already-Processed Files\n\nThe single biggest speed-up when re-running ingestion:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "2. Skip Already-Processed Files",
+      "id": "2.-skip-already-processed-files"
+    }
+  ],
+  "url": "llms-txt#production:-scalable,-battle-tested",
+  "links": []
+}

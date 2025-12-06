@@ -1,0 +1,41 @@
+{
+  "title": "Basic Slack Agent",
+  "content": "Source: https://docs.agno.com/agent-os/usage/interfaces/slack/basic\n\nCreate a basic AI agent that integrates with Slack for conversations\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set Environment Variables\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Example\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* **Slack Integration**: Responds to direct messages and channel mentions\n* **Conversation History**: Maintains context with last 3 interactions\n* **Persistent Memory**: SQLite database for session storage\n* **DateTime Context**: Time-aware responses\n* **GPT-4o Powered**: Intelligent conversational capabilities",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    }
+  ],
+  "url": "llms-txt#basic-slack-agent",
+  "links": []
+}

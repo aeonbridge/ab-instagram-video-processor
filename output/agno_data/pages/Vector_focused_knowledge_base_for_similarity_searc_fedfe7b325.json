@@ -1,0 +1,8 @@
+{
+  "title": "Vector-focused knowledge base for similarity search",
+  "content": "vector_knowledge = Knowledge(\n    vector_db=PgVector(\n        table_name=\"recipes_vector\",\n        db_url=db_url,\n        search_type=SearchType.vector,\n        embedder=OpenAIEmbedder(id=\"text-embedding-3-small\"),\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#vector-focused-knowledge-base-for-similarity-search",
+  "links": []
+}

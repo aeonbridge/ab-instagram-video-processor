@@ -1,0 +1,24 @@
+{
+  "title": "WhatsApp",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/whatsapp\n\n**WhatsAppTools** enable an Agent to interact with the WhatsApp Business API, allowing it to send text and template messages.\n\nThis cookbook demonstrates how to use WhatsApp integration with Agno. Before running this example,\nyou'''ll need to complete these setup steps:\n\n1. Create Meta Developer Account\n   * Go to [Meta Developer Portal](https://developers.facebook.com/) and create a new account\n   * Create a new app at [Meta Apps Dashboard](https://developers.facebook.com/apps/)\n   * Enable WhatsApp integration for your app [here](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started)\n\n2. Set Up WhatsApp Business API\n   You can get your WhatsApp Business Account ID from [Business Settings](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started)\n\n3. Configure Environment\n   * Set these environment variables:\n\n* For first-time outreach, you must use pre-approved message templates\n  [here](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates)\n* Test messages can only be sent to numbers that are registered in your test environment\n\nThe example below shows how to send a template message using Agno'''s WhatsApp tools.\nFor more complex use cases, check out the WhatsApp Cloud API documentation:\n[here](https://developers.facebook.com/docs/whatsapp/cloud-api/overview)\n\nThe following agent will send a template message using WhatsApp:\n\n```python cookbook/tools/whatsapp_tool.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.google import Gemini\nfrom agno.tools.whatsapp import WhatsAppTools\n\nagent = Agent(\n    name=\"whatsapp\",\n    model=Gemini(id=\"gemini-2.0-flash\"),\n    tools=[WhatsAppTools()]\n)",
+  "code_samples": [
+    {
+      "code": "Important Notes:\n\n* For first-time outreach, you must use pre-approved message templates\n  [here](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates)\n* Test messages can only be sent to numbers that are registered in your test environment\n\nThe example below shows how to send a template message using Agno'''s WhatsApp tools.\nFor more complex use cases, check out the WhatsApp Cloud API documentation:\n[here](https://developers.facebook.com/docs/whatsapp/cloud-api/overview)\n\n## Example\n\nThe following agent will send a template message using WhatsApp:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#whatsapp",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Example 1: Using IN operator",
+  "content": "print(\"Using IN operator\")\nsales_agent.print_response(\n    \"Describe revenue performance for the region\",\n    knowledge_filters=[IN(\"region\", [\"north_america\"])],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-1:-using-in-operator",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent equipped with X toolkit",
+  "content": "agent = Agent(\n    instructions=[\n        \"Use X tools to interact as the authorized user\",\n        \"Generate appropriate content when asked to create posts\",\n        \"Only post content when explicitly instructed\",\n        \"Respect X's usage policies and rate limits\",\n    ],\n    tools=[x_tools],\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-equipped-with-x-toolkit",
+  "links": []
+}

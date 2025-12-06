@@ -1,0 +1,27 @@
+{
+  "title": "Create coordinated reasoning RAG team",
+  "content": "coordinated_reasoning_team = Team(\n    name=\"Coordinated Reasoning RAG Team\",\n    model=Claude(id=\"claude-sonnet-4-20250514\"),\n    members=[\n        information_gatherer,\n        reasoning_analyst,\n        evidence_evaluator,\n        response_coordinator,\n    ],\n    instructions=[\n        \"Work together to provide comprehensive, well-reasoned responses.\",\n        \"Information Gatherer: First search and gather all relevant information.\",\n        \"Reasoning Analyst: Then apply structured reasoning to analyze the information.\",\n        \"Evidence Evaluator: Evaluate the evidence quality and identify any gaps.\",\n        \"Response Coordinator: Finally synthesize everything into a clear, reasoned response.\",\n        \"All agents should use reasoning tools to structure their contributions.\",\n        \"Show your reasoning process transparently in responses.\",\n    ],\n    show_members_responses=True,\n    markdown=True,\n)\n\nasync def async_reasoning_demo():\n    \"\"\"Demonstrate async coordinated reasoning RAG with streaming.\"\"\"\n    print(\"🧠 Async Coordinated Reasoning RAG Team Demo\")\n    print(\"=\" * 60)\n\nquery = \"What are Agents and how do they work with tools? Explain the reasoning behind their design.\"\n\n# Add documentation content\n    await knowledge.add_contents_async(urls=[\"https://docs.agno.com/introduction/agents.md\"])\n\n# Run async with streaming and reasoning\n    await coordinated_reasoning_team.aprint_response(\n        query, stream=True, show_full_reasoning=True\n    )\n\ndef sync_reasoning_demo():\n    \"\"\"Demonstrate sync coordinated reasoning RAG.\"\"\"\n    print(\"🧠 Coordinated Reasoning RAG Team Demo\")\n    print(\"=\" * 50)\n\nquery = \"What are Agents and how do they work with tools? Explain the reasoning behind their design.\"\n\n# Add documentation content\n    knowledge.add_contents(urls=[\"https://docs.agno.com/introduction/agents.md\"])\n\n# Run with detailed reasoning output\n    coordinated_reasoning_team.print_response(\n        query, stream=True, show_full_reasoning=True\n    )\n\nif __name__ == \"__main__\":\n    # Choose which demo to run\n    # asyncio.run(async_reasoning_demo())\n\nsync_reasoning_demo()\nbash  theme={null}\n    pip install agno cohere lancedb tantivy sqlalchemy\n    bash  theme={null}\n    export ANTHROPIC_API_KEY=****\n    export CO_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/search_coordination/02_coordinated_reasoning_rag.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-coordinated-reasoning-rag-team",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Create an agent with SingleStore db",
+  "content": "agent = Agent(\n    db=db,\n    tools=[DuckDuckGoTools()],\n    add_history_to_context=True,\n)\nagent.print_response(\"How many people live in Canada?\")\nagent.print_response(\"What is their national anthem called?\")\n\n<Snippet file=\"db-singlestore-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/db/singlestore/singlestore_for_agent.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#create-an-agent-with-singlestore-db",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Result Synthesizer Agent - Combines and ranks all findings",
+  "content": "result_synthesizer = Agent(\n    name=\"Result Synthesizer\",\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    role=\"Synthesize and rank all search results into comprehensive response\",\n    instructions=[\n        \"Combine results from all team members into a unified response.\",\n        \"Rank information based on relevance and reliability.\",\n        \"Ensure comprehensive coverage of the query topic.\",\n        \"Present results with clear source attribution and confidence levels.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#result-synthesizer-agent---combines-and-ranks-all-findings",
+  "links": []
+}

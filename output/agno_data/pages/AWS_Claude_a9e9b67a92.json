@@ -1,0 +1,54 @@
+{
+  "title": "AWS Claude",
+  "content": "Source: https://docs.agno.com/integrations/models/cloud/aws-claude/overview\n\nLearn how to use AWS Claude models in Agno.\n\nUse Claude models through AWS Bedrock. This provides a native Claude integration optimized for AWS infrastructure.\n\nWe recommend experimenting to find the best-suited model for your use-case. Here are some general recommendations:\n\n* `anthropic.claude-sonnet-4-20250514-v1:0` model is their most capable model (Claude Sonnet 4).\n* `anthropic.claude-3-5-sonnet-20241022-v2:0` model is good for most use-cases and supports image input.\n* `anthropic.claude-3-5-haiku-20241022-v2:0` model is their fastest model.\n\nAWS Claude supports three authentication methods:\n\n### Method 1: API Key Authentication (Recommended)\n\nUse the AWS Bedrock API key for simplified authentication:\n\nOr pass them directly to the model:\n\n### Method 2: Access Key and Secret Key\n\nSet your `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_REGION` environment variables.\n\nGet your keys from [here](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/home).\n\nOr pass them directly:\n\n### Method 3: Boto3 Session\n\nUse a pre-configured boto3 Session for advanced authentication scenarios:\n\n```python  theme={null}\nfrom boto3.session import Session\nfrom agno.agent import Agent\nfrom agno.models.aws import Claude",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\nOr pass them directly to the model:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Method 2: Access Key and Secret Key\n\nSet your `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` and `AWS_REGION` environment variables.\n\nGet your keys from [here](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/home).\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\nOr pass them directly:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Method 3: Boto3 Session\n\nUse a pre-configured boto3 Session for advanced authentication scenarios:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication",
+      "id": "authentication"
+    },
+    {
+      "level": "h3",
+      "text": "Method 1: API Key Authentication (Recommended)",
+      "id": "method-1:-api-key-authentication-(recommended)"
+    },
+    {
+      "level": "h3",
+      "text": "Method 2: Access Key and Secret Key",
+      "id": "method-2:-access-key-and-secret-key"
+    },
+    {
+      "level": "h3",
+      "text": "Method 3: Boto3 Session",
+      "id": "method-3:-boto3-session"
+    }
+  ],
+  "url": "llms-txt#aws-claude",
+  "links": []
+}

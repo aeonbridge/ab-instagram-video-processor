@@ -1,0 +1,8 @@
+{
+  "title": "Add Agno JWT middleware to your custom FastAPI app",
+  "content": "app.add_middleware(\n    JWTMiddleware,\n    secret_key=JWT_SECRET,\n    excluded_route_paths=[\n        \"/auth/login\"\n    ],  # We don't want to validate the token for the login endpoint\n    validate=True,  # Set validate to False to skip token validation\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-agno-jwt-middleware-to-your-custom-fastapi-app",
+  "links": []
+}

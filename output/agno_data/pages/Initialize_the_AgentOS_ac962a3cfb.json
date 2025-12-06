@@ -1,0 +1,41 @@
+{
+  "title": "Initialize the AgentOS",
+  "content": "agent_os = AgentOS(\n    description=\"Query classification and Notion organization system\",\n    workflows=[query_to_notion_workflow],\n)\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    agent_os.serve(app=\"notion_manager:app\", reload=True)\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    export NOTION_API_KEY=xxx\n    export NOTION_DATABASE_ID=xxx\n    bash  theme={null}\n    pip install -U agno openai fastapi notion-client\n    bash Mac theme={null}\n      python notion_knowledge_manager.py\n      bash Windows theme={null}\n      python notion_knowledge_manager.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n* Customize classification categories in the classification agent's instructions\n* Modify Notion page templates to match your database structure\n* Add more sophisticated routing logic based on content type\n* Explore [Workflows](/basics/workflows/overview) for advanced workflow patterns",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe workflow will classify your input content, determine the appropriate Notion operation (create, update, or search), and execute it automatically. You'll see classification results showing the assigned tags and categories.\n\nThe workflow integrates directly with your Notion database, automatically creating pages with proper tags, updating existing pages, or searching for related content based on the classification.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API keys\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Workflow\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#initialize-the-agentos",
+  "links": []
+}

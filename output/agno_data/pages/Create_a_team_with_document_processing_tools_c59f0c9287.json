@@ -1,0 +1,14 @@
+{
+  "title": "Create a team with document processing tools",
+  "content": "team = Team(\n    members=[member_agent],\n    model=Gemini(id=\"gemini-2.5-pro\"),\n    tools=[DocumentProcessingTools()],\n    name=\"Document Processing Team\",\n    instructions=[\n        \"When files are uploaded, use the extract_text_from_pdf tool to process them.\",\n        \"Analyze the extracted content and provide insights directly in your response.\",\n    ],\n    send_media_to_model=False,\n    store_media=True,\n)\n\npdf_content = b\"Sample PDF content\"\nsample_file = File(content=pdf_content)\n\nresponse = team.run(\n    input=\"Extract text from the uploaded PDF and analyze it.\",\n    files=[sample_file],\n)\n```\n\n## Developer Resources\n\n* View [Image Team Examples](/basics/multimodal/team/usage/image-to-text)\n* View [Audio Team Examples](/basics/multimodal/team/usage/audio-to-text)\n* View [Video Team Examples](/basics/multimodal/team/usage/video-caption-generation)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#create-a-team-with-document-processing-tools",
+  "links": []
+}

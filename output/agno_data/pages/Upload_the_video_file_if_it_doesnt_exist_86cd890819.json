@@ -1,0 +1,31 @@
+{
+  "title": "Upload the video file if it doesn't exist",
+  "content": "if not video_file:\n    try:\n        logger.info(f\"Uploading video: {video_path}\")\n        video_file = model.get_client().files.upload(\n            file=video_path,\n            config=dict(name=video_path.stem, display_name=video_path.stem),\n        )\n\n# Check whether the file is ready to be used.\n        while video_file.state.name == \"PROCESSING\":\n            time.sleep(2)\n            video_file = model.get_client().files.get(name=video_file.name)\n\nlogger.info(f\"Uploaded video: {video_file}\")\n    except Exception as e:\n        logger.error(f\"Error uploading video: {e}\")\n\nif __name__ == \"__main__\":\n    agent.print_response(\n        \"Tell me about this video\",\n        videos=[Video(content=video_file)],\n        stream=True,\n    )\nbash  theme={null}\n    export GOOGLE_API_KEY=xxx\n    bash  theme={null}\n    pip install -U google-genai agno\n    bash Mac theme={null}\n      python cookbook/models/google/gemini/video_input_file_upload.py\n      bash Windows theme={null}\n      python cookbook/models/google/gemini/video_input_file_upload.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#upload-the-video-file-if-it-doesn't-exist",
+  "links": []
+}

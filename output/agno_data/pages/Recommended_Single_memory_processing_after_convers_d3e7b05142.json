@@ -1,0 +1,8 @@
+{
+  "title": "Recommended: Single memory processing after conversation",
+  "content": "agent = Agent(\n    db=db,\n    enable_user_memories=True  # Processes memories once at end\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#recommended:-single-memory-processing-after-conversation",
+  "links": []
+}

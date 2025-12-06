@@ -1,0 +1,33 @@
+{
+  "title": "Delegate to All Members (Cooperation)",
+  "content": "Source: https://docs.agno.com/basics/teams/usage/basic-flows/delegate-to-all-members\n\nThis example demonstrates a collaborative team of AI agents working together to research topics across different platforms.\n\nThe team consists of two specialized agents:\n\n1. **Reddit Researcher** - Uses DuckDuckGo to find and analyze relevant Reddit posts\n2. **HackerNews Researcher** - Uses HackerNews API to find and analyze relevant HackerNews posts\n\nThe agents work in a collaborative mode by using `delegate_to_all_members=True`, meaning they:\n\n* Both are given the same task at the same time\n* Work towards reaching consensus through discussion\n* Are coordinated by a team leader that guides the discussion\n\nThe team leader moderates the discussion and determines when consensus is reached.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run Team\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/teams/basic_flows\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run Team\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#delegate-to-all-members-(cooperation)",
+  "links": []
+}

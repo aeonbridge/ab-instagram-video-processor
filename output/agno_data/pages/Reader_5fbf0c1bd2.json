@@ -1,0 +1,8 @@
+{
+  "title": "Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/base\n\nReader is the base class for all reader classes in Agno.\n\n<Snippet file=\"base-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#reader",
+  "links": []
+}

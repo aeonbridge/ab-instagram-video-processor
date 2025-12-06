@@ -1,0 +1,32 @@
+{
+  "title": "Add middleware",
+  "content": "app.add_middleware(\n    JWTMiddleware,\n    secret_key=\"your-secret-key\",\n    validate=True\n)\n\nif __name__ == \"__main__\":\n    agent_os.serve(app=\"agent_os_with_jwt_middleware:app\", reload=True)\npython  theme={null}\n    class RateLimitMiddleware(BaseHTTPMiddleware):\n        def __init__(self, app, requests_per_minute: int = 60):\n            super().__init__(app)\n            self.requests_per_minute = requests_per_minute\n            # ... implementation\n\napp.add_middleware(RateLimitMiddleware, requests_per_minute=100)\n    python  theme={null}\n\nclass LoggingMiddleware(BaseHTTPMiddleware):\n        async def dispatch(self, request: Request, call_next):\n            start_time = time.time()\n            response = await call_next(request)\n            process_time = time.time() - start_time\n            # Log request details...\n            return response\n    python  theme={null}\napp.add_middleware(MiddlewareA)  # Runs third (closest to route)\napp.add_middleware(MiddlewareB)  # Runs second\napp.add_middleware(MiddlewareC)  # Runs first (outermost)",
+  "code_samples": [
+    {
+      "code": "<Note>\n  Test middleware thoroughly in your own staging environment before production deployment.\n</Note>\n\n<Tip>\n  **Performance Impact:** Each middleware adds latency to requests\n</Tip>\n\n## Common Use Cases\n\n<Tabs>\n  <Tab title=\"Authentication\">\n    **Secure your AgentOS with JWT authentication:**\n\n    * Extract tokens from headers or cookies\n    * Automatic parameter injection (user\\_id, session\\_id)\n    * Custom claims extraction for `dependencies` and `session_state`\n    * Route exclusion for public endpoints\n\n    [Learn more about JWT Middleware](/agent-os/middleware/jwt)\n  </Tab>\n\n  <Tab title=\"Rate Limiting\">\n    **Prevent API abuse with rate limiting:**",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Logging\">\n    **Monitor requests and responses:**",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n</Tabs>\n\n## Middleware Execution Order\n\n<Warning>\n  Middleware is executed in reverse order of addition. The last middleware added runs first.\n</Warning>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Common Use Cases",
+      "id": "common-use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "Middleware Execution Order",
+      "id": "middleware-execution-order"
+    }
+  ],
+  "url": "llms-txt#add-middleware",
+  "links": []
+}

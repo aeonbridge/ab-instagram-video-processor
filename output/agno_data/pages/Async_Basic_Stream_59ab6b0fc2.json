@@ -1,0 +1,14 @@
+{
+  "title": "Async Basic Stream",
+  "content": "Source: https://docs.agno.com/integrations/models/native/openai/responses/usage/async-basic-stream\n\n```python cookbook/models/openai/responses/async_basic_stream.py theme={null}\nimport asyncio\nfrom typing import Iterator  # noqa\n\nfrom agno.agent import Agent, RunOutputEvent  # noqa\nfrom agno.models.openai import OpenAIResponses\n\nagent = Agent(model=OpenAIResponses(id=\"gpt-5-mini\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#async-basic-stream",
+  "links": []
+}

@@ -1,0 +1,39 @@
+{
+  "title": "BaiduSearch",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/baidusearch\n\n**BaiduSearch** enables an Agent to search the web for information using the Baidu search engine.\n\nThe following example requires the `baidusearch` library. To install BaiduSearch, run the following command:\n\n| Parameter             | Type   | Default | Description                                                                                          |\n| --------------------- | ------ | ------- | ---------------------------------------------------------------------------------------------------- |\n| `fixed_max_results`   | `int`  | -       | Sets a fixed number of maximum results to return. No default is provided, must be specified if used. |\n| `fixed_language`      | `str`  | -       | Set the fixed language for the results.                                                              |\n| `headers`             | `Any`  | -       | Headers to be used in the search request.                                                            |\n| `proxy`               | `str`  | -       | Specifies a single proxy address as a string to be used for the HTTP requests.                       |\n| `timeout`             | `int`  | `10`    | Sets the timeout for HTTP requests, in seconds.                                                      |\n| `enable_baidu_search` | `bool` | `True`  | Enable the baidu\\_search functionality.                                                              |\n| `all`                 | `bool` | `False` | Enable all functionality.                                                                            |\n\n| Function       | Description                                    |\n| -------------- | ---------------------------------------------- |\n| `baidu_search` | Use this function to search Baidu for a query. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/baidusearch.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/baidusearch_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#baidusearch",
+  "links": []
+}

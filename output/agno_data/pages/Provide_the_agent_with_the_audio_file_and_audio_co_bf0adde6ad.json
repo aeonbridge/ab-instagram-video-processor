@@ -1,0 +1,8 @@
+{
+  "title": "Provide the agent with the audio file and audio configuration and get result as text + audio",
+  "content": "agent = Agent(\n    model=OpenAIChat(\n        id=\"gpt-4o-audio-preview\",\n        modalities=[\"text\", \"audio\"],\n        audio={\"voice\": \"sage\", \"format\": \"wav\"},\n    ),\n    db=InMemoryDb(),\n    add_history_to_context=True,\n    markdown=True,\n)\nrun_output: RunOutput = agent.run(\"Tell me a 5 second scary story\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#provide-the-agent-with-the-audio-file-and-audio-configuration-and-get-result-as-text-+-audio",
+  "links": []
+}

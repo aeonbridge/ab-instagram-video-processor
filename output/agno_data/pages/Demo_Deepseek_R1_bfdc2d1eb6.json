@@ -1,0 +1,14 @@
+{
+  "title": "Demo Deepseek R1",
+  "content": "Source: https://docs.agno.com/integrations/models/local/ollama/usage/demo-deepseek-r1\n\n```python cookbook/models/ollama/demo_deepseek_r1.py theme={null}\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.ollama import Ollama\n\nagent = Agent(model=Ollama(id=\"deepseek-r1:14b\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#demo-deepseek-r1",
+  "links": []
+}

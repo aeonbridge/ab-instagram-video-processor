@@ -1,0 +1,8 @@
+{
+  "title": "Create a knowledge base with the PDFs from the data/pdfs directory",
+  "content": "knowledge = Knowledge(\n    vector_db=PgVector(\n        table_name=\"pdf_documents\",\n        db_url=db_url,\n    )\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-knowledge-base-with-the-pdfs-from-the-data/pdfs-directory",
+  "links": []
+}

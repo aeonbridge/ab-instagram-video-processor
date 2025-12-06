@@ -1,0 +1,8 @@
+{
+  "title": "MongoDB for document-based storage",
+  "content": "from agno.db.mongo import MongoDb\ncontents_db = MongoDb(\n    uri=\"mongodb://localhost:27017\",\n    database=\"agno_db\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#mongodb-for-document-based-storage",
+  "links": []
+}

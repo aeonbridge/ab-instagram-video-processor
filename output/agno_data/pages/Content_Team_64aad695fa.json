@@ -1,0 +1,29 @@
+{
+  "title": "Content Team",
+  "content": "Source: https://docs.agno.com/examples/use-cases/teams/content_team\n\nBuild a content creation team with specialized researchers and writers that collaborate to produce high-quality articles. This example demonstrates team coordination where agents work together on complex tasks.\n\nBy building this team, you'll understand:\n\n* How to create specialized agents with distinct roles and capabilities\n* How teams coordinate multiple agents using the coordinate mode\n* How to combine web search tools with writing expertise for content creation\n* How to structure team instructions for collaborative workflows\n\nBuild content creation platforms, automated journalism systems, research report generators, or marketing content pipelines.\n\nThe team uses coordinate mode to manage collaboration between specialized agents:\n\n1. **Research**: Researcher agent searches the web using DuckDuckGo for relevant information\n2. **Coordinate**: Team leader coordinates task distribution between members\n3. **Write**: Writer agent crafts clear, engaging content based on research findings\n4. **Integrate**: Team combines research and writing into cohesive articles\n\nThe team leader manages the workflow and ensures both agents contribute their expertise.\n\n```python content_team.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#content-team",
+  "links": []
+}

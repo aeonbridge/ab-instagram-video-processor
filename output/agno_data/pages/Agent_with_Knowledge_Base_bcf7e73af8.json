@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Knowledge Base",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/cerebras/usage/knowledge\n\n```python cookbook/models/cerebras/basic_knowledge.py theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.cerebras import Cerebras\nfrom agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\nknowledge = Knowledge(\n    vector_db=PgVector(table_name=\"recipes\", db_url=db_url),\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-knowledge-base",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "The Agent sessions and runs will now be stored in SQLite with custom table names",
+  "content": "agent.print_response(\"How many people live in Canada?\")\nagent.print_response(\"And in Mexico?\")\nagent.print_response(\"List my messages one by one\")\n```\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/examples/selecting_tables.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#the-agent-sessions-and-runs-will-now-be-stored-in-sqlite-with-custom-table-names",
+  "links": []
+}

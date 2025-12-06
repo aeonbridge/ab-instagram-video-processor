@@ -1,0 +1,8 @@
+{
+  "title": "Download the .cursorrules file",
+  "content": "curl -o .cursorrules https://raw.githubusercontent.com/agno-agi/agno/main/.cursorrules",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#download-the-.cursorrules-file",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Protected route",
+  "content": "@app.get(\"/protected\", dependencies=[Depends(verify_token)])\nasync def protected_endpoint():\n    return {\"message\": \"Access granted\"}",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#protected-route",
+  "links": []
+}

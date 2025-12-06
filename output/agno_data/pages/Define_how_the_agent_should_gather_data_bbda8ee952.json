@@ -1,0 +1,19 @@
+{
+  "title": "Define how the agent should gather data",
+  "content": "data_collection_strategy = dedent(\"\"\"\n    DATA COLLECTION STRATEGY:\n    - Use X Tools to gather direct social media mentions with full engagement metrics\n    - Use Exa Tools to find broader web discussions, articles, and forum conversations\n    - Cross-reference findings between social and web sources for comprehensive coverage\n\"\"\")\n\nprint(\"Data collection strategy defined\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### 3b. Define the Analysis Framework",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3b. Define the Analysis Framework",
+      "id": "3b.-define-the-analysis-framework"
+    }
+  ],
+  "url": "llms-txt#define-how-the-agent-should-gather-data",
+  "links": []
+}

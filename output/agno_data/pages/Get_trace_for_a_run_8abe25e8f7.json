@@ -1,0 +1,14 @@
+{
+  "title": "Get trace for a run",
+  "content": "trace = db.get_trace(run_id=response.run_id)\n\nif trace:\n    print(f\"Trace: {trace.name} ({trace.duration_ms}ms)\")\n    \n    # Get all spans\n    spans = db.get_spans(trace_id=trace.trace_id)\n    \n    # Print execution tree\n    for span in sorted(spans, key=lambda s: s.start_time):\n        indent = \"  \" if span.parent_span_id else \"\"\n        print(f\"{indent}- {span.name} ({span.duration_ms}ms)\")\n```\n\n* [Trace Reference](/reference/tracing/trace) - Full `Trace` object definition\n* [Span Reference](/reference/tracing/span) - Full `Span` object definition\n* [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/integrations/observability/trace_to_database.py) - Full example code",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "See Also",
+      "id": "see-also"
+    }
+  ],
+  "url": "llms-txt#get-trace-for-a-run",
+  "links": []
+}

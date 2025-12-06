@@ -1,0 +1,14 @@
+{
+  "title": "Video Caption Generation Team",
+  "content": "Source: https://docs.agno.com/basics/multimodal/team/usage/video-caption-generation\n\nThis example demonstrates how a team can collaborate to process videos and generate captions by extracting audio, transcribing it, and embedding captions back into the video.\n\n```python cookbook/examples/teams/multimodal/video_caption_generation.py theme={null}\n\"\"\"Please install dependencies using:\npip install openai moviepy ffmpeg\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.moviepy_video import MoviePyVideoTools\nfrom agno.tools.openai import OpenAITools\n\nvideo_processor = Agent(\n    name=\"Video Processor\",\n    role=\"Handle video processing and audio extraction\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[MoviePyVideoTools(process_video=True, generate_captions=True)],\n    instructions=[\n        \"Extract audio from videos for processing\",\n        \"Handle video file operations efficiently\",\n    ],\n)\n\ncaption_generator = Agent(\n    name=\"Caption Generator\",\n    role=\"Generate and embed captions in videos\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[MoviePyVideoTools(embed_captions=True), OpenAITools()],\n    instructions=[\n        \"Transcribe audio to create accurate captions\",\n        \"Generate SRT format captions with proper timing\",\n        \"Embed captions seamlessly into videos\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#video-caption-generation-team",
+  "links": []
+}

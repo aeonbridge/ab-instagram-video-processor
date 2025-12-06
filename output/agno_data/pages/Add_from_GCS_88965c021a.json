@@ -1,0 +1,32 @@
+{
+  "title": "Add from GCS",
+  "content": "asyncio.run(\n    knowledge.add_content_async(\n        name=\"GCS PDF\",\n        remote_content=GCSContent(\n            bucket_name=\"thai-recepies\", blob_name=\"ThaiRecipes.pdf\"\n        ),\n        metadata={\"remote_content\": \"GCS\"},\n    )\n)\n\nagent = Agent(\n    name=\"My Agent\",\n    description=\"Agno 2.0 Agent Implementation\",\n    knowledge=knowledge,\n    search_knowledge=True,\n    debug_mode=True,\n)\n\nagent.print_response(\n    \"What is the best way to make a Thai curry?\",\n    markdown=True,\n)\nbash  theme={null}\n    pip install -U agno sqlalchemy psycopg pgvector google-cloud-storage\n    bash Mac theme={null}\n      python cookbook/knowledge/basic_operations/07_from_gcs.py\n      bash Windows theme={null}\n      python cookbook/knowledge/basic_operations/07_from_gcs.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n<Snippet file=\"gcs-remote-content-params.mdx\" />",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Configure Google Cloud credentials\">\n    Set up your GCS credentials using one of these methods:\n\n    * Service Account Key: Set `GOOGLE_APPLICATION_CREDENTIALS` environment variable\n    * gcloud CLI: `gcloud auth application-default login`\n    * Workload Identity (if running on Google Cloud)\n  </Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Run the example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#add-from-gcs",
+  "links": []
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Code Generation",
+  "content": "Source: https://docs.agno.com/integrations/models/local/vllm/usage/code-generation\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install Libraries\">\n    \n  </Step>\n\n<Step title=\"Start vLLM server\">\n    \n  </Step>\n\n<Step title=\"Run Agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install Libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Start vLLM server\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#code-generation",
+  "links": []
+}

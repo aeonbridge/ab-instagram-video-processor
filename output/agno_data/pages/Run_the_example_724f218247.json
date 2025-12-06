@@ -1,0 +1,19 @@
+{
+  "title": "Run the example",
+  "content": "asyncio.run(main())\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "## How MCPToolbox Works\n\nMCPToolbox solves the **tool overload problem**. Without filtering, your agent gets overwhelmed with too many database tools:\n\n**Without MCPToolbox (50+ tools):**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How MCPToolbox Works",
+      "id": "how-mcptoolbox-works"
+    }
+  ],
+  "url": "llms-txt#run-the-example",
+  "links": []
+}

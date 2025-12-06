@@ -1,0 +1,8 @@
+{
+  "title": "Create project proposal",
+  "content": "prompt = (\n    \"Create a project proposal document for 'Mobile App Development':\\n\\n\"\n    \"Title: Mobile App Development Proposal\\n\\n\"\n    \"1. Executive Summary:\\n\"\n    \"   Project to build a task management mobile app\\n\"\n    \"   Timeline: 12 weeks, Budget: $120K\\n\\n\"\n    \"2. Project Overview:\\n\"\n    \"   - Native iOS and Android app\\n\"\n    \"   - Key features: Task lists, reminders, team collaboration\\n\"\n    \"   - Target users: Small business teams\\n\\n\"\n    \"3. Scope of Work:\\n\"\n    \"   - Requirements gathering (Week 1-2)\\n\"\n    \"   - Design and prototyping (Week 3-4)\\n\"\n    \"   - Development (Week 5-10)\\n\"\n    \"   - Testing and launch (Week 11-12)\\n\\n\"\n    \"4. Team:\\n\"\n    \"   - 2 developers, 1 designer, 1 project manager\\n\\n\"\n    \"5. Budget Breakdown:\\n\"\n    \"   - Development: $80K\\n\"\n    \"   - Design: $25K\\n\"\n    \"   - Testing: $10K\\n\"\n    \"   - Contingency: $5K\\n\\n\"\n    \"6. Success Metrics:\\n\"\n    \"   - 1000 users in first month\\n\"\n    \"   - 4.5+ star rating\\n\"\n    \"   - 70% user retention\\n\\n\"\n    \"Save as 'mobile_app_proposal.docx'\"\n)\n\nresponse = document_agent.run(prompt)\nprint(response.content)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-project-proposal",
+  "links": []
+}

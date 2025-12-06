@@ -1,0 +1,33 @@
+{
+  "title": "OpenAI Responses",
+  "content": "Source: https://docs.agno.com/integrations/models/native/openai/responses/overview\n\nLearn how to use OpenAI Responses with Agno.\n\n`OpenAIResponses` is a class for interacting with OpenAI models using the Responses API. This class provides a streamlined interface for working with OpenAI's newer Responses API, which is distinct from the traditional Chat API. It supports advanced features like tool use, file processing, and knowledge retrieval.\n\nSet your `OPENAI_API_KEY` environment variable. You can get one [from OpenAI here](https://platform.openai.com/account/api-keys).\n\nUse `OpenAIResponses` with your `Agent`:\n\n<CodeGroup>\n  \n</CodeGroup>\n\n<Note> View more examples [here](/integrations/models/native/openai/responses/usage/basic-stream). </Note>\n\nFor more information, please refer to the [OpenAI Responses docs](https://platform.openai.com/docs/api-reference/responses) as well.\n\n| Parameter               | Type                                               | Default             | Description                                                                       |\n| ----------------------- | -------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------- |\n| `id`                    | `str`                                              | `\"gpt-5-mini\"`      | The id of the OpenAI model to use with Responses API                              |\n| `name`                  | `str`                                              | `\"OpenAIResponses\"` | The name of the model                                                             |\n| `provider`              | `str`                                              | `\"OpenAI\"`          | The provider of the model                                                         |\n| `instructions`          | `Optional[str]`                                    | `None`              | System-level instructions for the assistant                                       |\n| `response_format`       | `Optional[Union[str, Dict]]`                       | `None`              | Response format specification for structured outputs                              |\n| `temperature`           | `Optional[float]`                                  | `None`              | Controls randomness in the model's output (0.0 to 2.0)                            |\n| `top_p`                 | `Optional[float]`                                  | `None`              | Controls diversity via nucleus sampling (0.0 to 1.0)                              |\n| `max_completion_tokens` | `Optional[int]`                                    | `None`              | Maximum number of completion tokens to generate                                   |\n| `truncation_strategy`   | `Optional[Dict[str, Any]]`                         | `None`              | Strategy for truncating messages when they exceed context limits                  |\n| `tool_choice`           | `Optional[Union[str, Dict]]`                       | `None`              | Controls which function is called by the model                                    |\n| `parallel_tool_calls`   | `Optional[bool]`                                   | `None`              | Whether to enable parallel function calling                                       |\n| `metadata`              | `Optional[Dict[str, str]]`                         | `None`              | Developer-defined metadata to associate with the response                         |\n| `strict_output`         | `bool`                                             | `True`              | Controls schema adherence for structured outputs                                  |\n| `api_key`               | `Optional[str]`                                    | `None`              | The API key for authenticating with OpenAI (defaults to OPENAI\\_API\\_KEY env var) |\n| `organization`          | `Optional[str]`                                    | `None`              | The organization ID to use for requests                                           |\n| `base_url`              | `Optional[Union[str, httpx.URL]]`                  | `None`              | The base URL for the OpenAI API                                                   |\n| `timeout`               | `Optional[float]`                                  | `None`              | Request timeout in seconds                                                        |\n| `max_retries`           | `Optional[int]`                                    | `None`              | Maximum number of retries for failed requests                                     |\n| `default_headers`       | `Optional[Any]`                                    | `None`              | Default headers to include in all requests                                        |\n| `http_client`           | `Optional[Union[httpx.Client, httpx.AsyncClient]]` | `None`              | HTTP client instance for making requests                                          |\n\n`OpenAIResponses` is a subclass of the [Model](/reference/models/model) class and has access to the same params.",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Example\n\nUse `OpenAIResponses` with your `Agent`:\n\n<CodeGroup>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication",
+      "id": "authentication"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#openai-responses",
+  "links": []
+}

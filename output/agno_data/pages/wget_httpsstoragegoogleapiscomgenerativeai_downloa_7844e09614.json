@@ -1,0 +1,14 @@
+{
+  "title": "wget https://storage.googleapis.com/generativeai-downloads/images/GreatRedSpot.mp4",
+  "content": "video_path = Path(__file__).parent.joinpath(\"GreatRedSpot.mp4\")\n\nagent.print_response(\"Tell me about this video\", videos=[Video(filepath=video_path)])\n```\n\n## Developer Resources\n\nView more [Examples](/basics/multimodal/video/usage/video-caption)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#wget-https://storage.googleapis.com/generativeai-downloads/images/greatredspot.mp4",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Video As Input",
+  "content": "Source: https://docs.agno.com/basics/multimodal/video/video_input\n\nLearn how to use video as input with Agno agents.\n\nAgno supports videos as input to agents and teams.  Take a look at the [compatibility matrix](/basics/models/compatibility#multimodal-support) to see which models support videos as input.\n\nLet's create an agent that can understand video input.\n\n```python video_agent.py theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import Video\nfrom agno.models.google import Gemini\n\nagent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-001\"),\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#video-as-input",
+  "links": []
+}

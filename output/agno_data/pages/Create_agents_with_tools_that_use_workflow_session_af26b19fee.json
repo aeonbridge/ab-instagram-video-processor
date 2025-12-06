@@ -1,0 +1,8 @@
+{
+  "title": "Create agents with tools that use workflow session state",
+  "content": "shopping_assistant = Agent(\n    name=\"Shopping Assistant\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[add_item, remove_item, list_items],\n    instructions=[\n        \"You are a helpful shopping assistant.\",\n        \"You can help users manage their shopping list by adding, removing, and listing items.\",\n        \"Always use the provided tools to interact with the shopping list.\",\n        \"Be friendly and helpful in your responses.\",\n    ],\n)\n\nlist_manager = Agent(\n    name=\"List Manager\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[list_items, remove_all_items],\n    instructions=[\n        \"You are a list management specialist.\",\n        \"You can view the current shopping list and clear it when needed.\",\n        \"Always show the current list when asked.\",\n        \"Confirm actions clearly to the user.\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agents-with-tools-that-use-workflow-session-state",
+  "links": []
+}

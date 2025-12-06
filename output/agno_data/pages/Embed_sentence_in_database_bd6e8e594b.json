@@ -1,0 +1,8 @@
+{
+  "title": "Embed sentence in database",
+  "content": "embeddings = GeminiEmbedder().get_embedding(\"The quick brown fox jumps over the lazy dog.\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#embed-sentence-in-database",
+  "links": []
+}

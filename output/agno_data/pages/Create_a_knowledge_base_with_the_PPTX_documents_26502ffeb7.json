@@ -1,0 +1,8 @@
+{
+  "title": "Create a knowledge base with the PPTX documents",
+  "content": "knowledge = Knowledge(\n    # Table name: ai.pptx_documents\n    vector_db=PgVector(\n        table_name=\"pptx_documents\",\n        db_url=db_url,\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-knowledge-base-with-the-pptx-documents",
+  "links": []
+}

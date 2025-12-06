@@ -1,0 +1,27 @@
+{
+  "title": "Show team capabilities",
+  "content": "print(\"\\n🔧 Team Tools Available:\")\nfor t in team.tools:\n    print(f\"   - {t.name}: {t.description}\")\n\nprint(\"\\n👥 Team Members:\")\nfor member in team.members:\n    print(f\"   - {member.name}: {member.role}\")\nbash  theme={null}\n    pip install agno ddgs\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/tools/01_team_with_custom_tools.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#show-team-capabilities",
+  "links": []
+}

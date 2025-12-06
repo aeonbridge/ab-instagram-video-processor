@@ -1,0 +1,19 @@
+{
+  "title": "Image Generation Tools",
+  "content": "Source: https://docs.agno.com/basics/multimodal/images/image-generation\n\nLearn how to use image generation tools with Agno agents.\n\nSimilar to providing multimodal inputs, you can also get multimodal outputs from an agent.\n\n## Image Generation using a tool\n\nThe following example demonstrates how to generate an image using an OpenAI tool with an agent.\n\n<Check>\n  The output of the tool generating a media also goes to the model's input as a\n  message so it has access to the media (image, audio, video) and can use it in\n  the response. For example, if you say \"Generate an image of a dog and tell me\n  its color.\" the model will have access to the image and can use it to describe\n  the dog's color in the response in the same run.\n\nThat also means you can ask follow-up questions about the image, since it would be available in the history of the agent.\n</Check>\n\n## Developer Resources\n\n* View more [Examples](/basics/multimodal/images/usage/generate-image)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Image Generation using a tool",
+      "id": "image-generation-using-a-tool"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#image-generation-tools",
+  "links": []
+}

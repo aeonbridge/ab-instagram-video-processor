@@ -1,0 +1,8 @@
+{
+  "title": "Continue Agent Run",
+  "content": "Source: https://docs.agno.com/reference-api/schema/agents/continue-agent-run\n\npost /agents/{agent_id}/runs/{run_id}/continue\nContinue a paused or incomplete agent run with updated tool results.\n\n**Use Cases:**\n- Resume execution after tool approval/rejection\n- Provide manual tool execution results\n\n**Tools Parameter:**\nJSON string containing array of tool execution objects with results.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#continue-agent-run",
+  "links": []
+}

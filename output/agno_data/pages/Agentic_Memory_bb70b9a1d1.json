@@ -1,0 +1,32 @@
+{
+  "title": "Agentic Memory",
+  "content": "Source: https://docs.agno.com/basics/memory/agent/usage/agentic-memory\n\nThis example shows you how to use persistent memory with an Agent.\n\nDuring each run the Agent can create/update/delete user memories.\n\nTo enable this, set `enable_agentic_memory=True` in the Agent config.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Example\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#agentic-memory",
+  "links": []
+}

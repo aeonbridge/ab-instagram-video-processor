@@ -1,0 +1,8 @@
+{
+  "title": "Create and post a tweet",
+  "content": "agent.print_response(\"Create a post about AI ethics\", markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-and-post-a-tweet",
+  "links": []
+}

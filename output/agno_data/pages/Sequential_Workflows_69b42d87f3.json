@@ -1,0 +1,8 @@
+{
+  "title": "Sequential Workflows",
+  "content": "Source: https://docs.agno.com/basics/workflows/workflow-patterns/sequential\n\nLinear, deterministic processes where each step depends on the output of the previous step.\n\nSequential workflows ensure predictable execution order and clear data flow between steps.\n\n**Example Flow**: Research → Data Processing → Content Creation → Final Review\n\nSequential workflows ensure predictable execution order and clear data flow between steps.\n\n<Note>\n  For more information on how to use custom functions, refer to the\n  [Workflow with custom function step](/basics/workflows/workflow-patterns/custom-function-step-workflow) page.\n</Note>\n\n* [Sequence of Functions and Agents](/basics/workflows/usage/function-instead-of-steps) - Complete workflow with functions and agents\n\n<Note>\n  `StepInput` and `StepOutput` provides standardized interfaces for data flow between steps:\n  So if you make a custom function as an executor for a step, make sure that the input and output types are compatible with the `StepInput` and `StepOutput` interfaces.\n  This will ensure that your custom function can seamlessly integrate into the workflow system.\n\nTake a look at the schemas for [`StepInput`](/reference/workflows/step_input) and [`StepOutput`](/reference/workflows/step_output).\n</Note>",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#sequential-workflows",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create and configure the agent",
+  "content": "agent = Agent(model=OpenAIChat(id=\"gpt-5-mini\"), markdown=True, debug_mode=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-and-configure-the-agent",
+  "links": []
+}

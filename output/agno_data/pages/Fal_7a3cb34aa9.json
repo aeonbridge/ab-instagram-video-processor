@@ -1,0 +1,43 @@
+{
+  "title": "Fal",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/fal\n\n**FalTools** enable an Agent to perform media generation tasks.\n\nThe following example requires the `fal_client` library and an API key which can be obtained from [Fal](https://fal.ai/).\n\nThe following agent will use FAL to generate any video requested by the user.\n\n| Parameter               | Type   | Default | Description                                |\n| ----------------------- | ------ | ------- | ------------------------------------------ |\n| `api_key`               | `str`  | `None`  | API key for authentication purposes.       |\n| `model`                 | `str`  | `None`  | The model to use for the media generation. |\n| `enable_generate_media` | `bool` | `True`  | Enable the generate\\_media functionality.  |\n| `enable_image_to_image` | `bool` | `True`  | Enable the image\\_to\\_image functionality. |\n| `all`                   | `bool` | `False` | Enable all functionality.                  |\n\n| Function         | Description                                                    |\n| ---------------- | -------------------------------------------------------------- |\n| `generate_media` | Generate either images or videos depending on the user prompt. |\n| `image_to_image` | Transform an input image based on a text prompt.               |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/fal.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/fal_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use FAL to generate any video requested by the user.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#fal",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Custom health endpoint (conflicts with AgentOS health route)",
+  "content": "@app.get(\"/health\")\nasync def get_custom_health():\n    return {\"status\": \"custom_ok\", \"note\": \"This is your custom health endpoint\"}",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#custom-health-endpoint-(conflicts-with-agentos-health-route)",
+  "links": []
+}

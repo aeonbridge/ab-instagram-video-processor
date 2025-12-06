@@ -1,0 +1,8 @@
+{
+  "title": "Create MCP-enabled agent",
+  "content": "agent = Agent(\n    id=\"agno-agent\",\n    name=\"Agno Agent\",\n    tools=[mcp_tools],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-mcp-enabled-agent",
+  "links": []
+}

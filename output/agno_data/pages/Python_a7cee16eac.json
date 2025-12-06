@@ -1,0 +1,29 @@
+{
+  "title": "Python",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/local/python\n\n**PythonTools** enable an Agent to write and run python code.\n\nThe following agent will write a python script that creates the fibonacci series, save it to a file, run it and return the result.\n\n| Parameter      | Type   | Default | Description                                                                                            |\n| -------------- | ------ | ------- | ------------------------------------------------------------------------------------------------------ |\n| `base_dir`     | `Path` | `None`  | Specifies the base directory for operations. Default is None, indicating the current working directory |\n| `safe_globals` | `dict` | `None`  | Dictionary of global variables that are considered safe to use during execution                        |\n| `safe_locals`  | `dict` | `None`  | Dictionary of local variables that are considered safe to use during execution                         |\n\n| Function                          | Description                                                                                                                                                                                                                                                            |\n| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `save_to_file_and_run`            | This function saves Python code to a file called `file_name` and then runs it. If successful, returns the value of `variable_to_return` if provided otherwise returns a success message. If failed, returns an error message. Make sure the file\\_name ends with `.py` |\n| `run_python_file_return_variable` | This function runs code in a Python file. If successful, returns the value of `variable_to_return` if provided otherwise returns a success message. If failed, returns an error message.                                                                               |\n| `read_file`                       | Reads the contents of the file `file_name` and returns the contents if successful.                                                                                                                                                                                     |\n| `list_files`                      | Returns a list of files in the base directory                                                                                                                                                                                                                          |\n| `run_python_code`                 | This function runs Python code in the current environment. If successful, returns the value of `variable_to_return` if provided otherwise returns a success message. If failed, returns an error message.                                                              |\n| `pip_install_package`             | This function installs a package using pip in the current environment. If successful, returns a success message. If failed, returns an error message.                                                                                                                  |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/python.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/python_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#python",
+  "links": []
+}

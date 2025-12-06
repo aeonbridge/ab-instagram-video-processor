@@ -1,0 +1,29 @@
+{
+  "title": "Web Tools",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/webtools\n\nWebTools provides utilities for working with web URLs including URL expansion and web-related operations.\n\nThe following agent can work with web URLs and expand shortened links:\n\n| Parameter           | Type   | Default | Description                                  |\n| ------------------- | ------ | ------- | -------------------------------------------- |\n| `retries`           | `int`  | `3`     | Number of retry attempts for URL operations. |\n| `enable_expand_url` | `bool` | `True`  | Enable URL expansion functionality.          |\n\n| Function     | Description                                       |\n| ------------ | ------------------------------------------------- |\n| `expand_url` | Expand shortened URLs to their final destination. |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/webtools.py)\n* [HTTPX Documentation](https://www.python-httpx.org/)\n* [URL Standards](https://tools.ietf.org/html/rfc3986)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#web-tools",
+  "links": []
+}

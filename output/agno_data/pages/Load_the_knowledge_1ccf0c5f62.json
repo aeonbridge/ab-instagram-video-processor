@@ -1,0 +1,8 @@
+{
+  "title": "Load the knowledge",
+  "content": "knowledge.add_content(\n    path=\"data/pptx_files\",\n    reader=PPTXReader(),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#load-the-knowledge",
+  "links": []
+}

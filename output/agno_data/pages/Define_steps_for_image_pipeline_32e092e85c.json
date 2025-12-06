@@ -1,0 +1,8 @@
+{
+  "title": "Define steps for image pipeline",
+  "content": "generate_image_step = Step(\n    name=\"generate_image\",\n    agent=image_generator,\n    description=\"Generate a detailed image creation prompt based on the user's request\",\n)\n\ndescribe_image_step = Step(\n    name=\"describe_image\",\n    agent=image_describer,\n    description=\"Analyze and describe the generated image concept in vivid detail\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-steps-for-image-pipeline",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Input Transformation Pre-Hook",
+  "content": "Source: https://docs.agno.com/basics/hooks/usage/team/input-transformation-pre-hook\n\nThis example demonstrates how to use a pre-hook to transform the input of an Team, before it is presented to the LLM.\n\n```python  theme={null}\nfrom typing import Optional\n\nfrom agno.team import Team\nfrom agno.models.openai import OpenAIChat\nfrom agno.run.team import RunInput\nfrom agno.session.team import TeamSession\nfrom agno.utils.log import log_debug\n\ndef transform_input(\n    run_input: RunInput,\n    session: TeamSession,\n    user_id: Optional[str] = None,\n    debug_mode: Optional[bool] = None,\n) -> None:\n    \"\"\"\n    Pre-hook: Rewrite the input to be more relevant to the team's purpose.\n\nThis hook rewrites the input to be more relevant to the team's purpose.\n    \"\"\"\n    log_debug(\n        f\"Transforming input: {run_input.input_content} for user {user_id} and session {session.session_id}\"\n    )\n\n# Input transformation team\n    transformer_team = Team(\n        name=\"Input Transformer\",\n        model=OpenAIChat(id=\"gpt-5-mini\"),\n        instructions=[\n            \"You are an input transformation specialist.\",\n            \"Rewrite the user request to be more relevant to the team's purpose.\",\n            \"Use known context engineering standards to rewrite the input.\",\n            \"Keep the input as concise as possible.\",\n            \"The team's purpose is to provide investment guidance and financial planning advice.\",\n        ],\n        debug_mode=debug_mode,\n    )\n\ntransformation_result = transformer_team.run(\n        input=f\"Transform this user request: '{run_input.input_content}'\"\n    )\n\n# Overwrite the input with the transformed input\n    run_input.input_content = transformation_result.content\n    log_debug(f\"Transformed input: {run_input.input_content}\")\n\nprint(\"🚀 Input Transformation Pre-Hook Example\")\nprint(\"=\" * 60)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#input-transformation-pre-hook",
+  "links": []
+}

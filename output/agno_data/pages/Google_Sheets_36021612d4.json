@@ -1,0 +1,48 @@
+{
+  "title": "Google Sheets",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/google-sheets\n\n**GoogleSheetsTools** enable an Agent to interact with Google Sheets API for reading, creating, updating, and duplicating spreadsheets.\n\nYou need to install the required Google API client libraries:\n\nSet up the following environment variables:\n\n## How to Get Credentials\n\n1. Go to Google Cloud Console ([https://console.cloud.google.com](https://console.cloud.google.com))\n\n2. Create a new project or select an existing one\n\n3. Enable the Google Sheets API:\n   * Go to \"APIs & Services\" > \"Enable APIs and Services\"\n   * Search for \"Google Sheets API\"\n   * Click \"Enable\"\n\n4. Create OAuth 2.0 credentials:\n   * Go to \"APIs & Services\" > \"Credentials\"\n   * Click \"Create Credentials\" > \"OAuth client ID\"\n   * Go through the OAuth consent screen setup\n   * Give it a name and click \"Create\"\n   * You'll receive:\n     * Client ID (GOOGLE\\_CLIENT\\_ID)\n     * Client Secret (GOOGLE\\_CLIENT\\_SECRET)\n   * The Project ID (GOOGLE\\_PROJECT\\_ID) is visible in the project dropdown at the top of the page\n\nThe following agent will use Google Sheets to read and update spreadsheet data.\n\n| Parameter                       | Type                    | Default | Description                                                |\n| ------------------------------- | ----------------------- | ------- | ---------------------------------------------------------- |\n| `scopes`                        | `Optional[List[str]]`   | `None`  | Custom OAuth scopes. If None, uses write scope by default. |\n| `spreadsheet_id`                | `Optional[str]`         | `None`  | ID of the target spreadsheet.                              |\n| `spreadsheet_range`             | `Optional[str]`         | `None`  | Range within the spreadsheet.                              |\n| `creds`                         | `Optional[Credentials]` | `None`  | Pre-existing credentials.                                  |\n| `creds_path`                    | `Optional[str]`         | `None`  | Path to credentials file.                                  |\n| `token_path`                    | `Optional[str]`         | `None`  | Path to token file.                                        |\n| `oauth_port`                    | `int`                   | `0`     | Port to use for OAuth authentication.                      |\n| `enable_read_sheet`             | `bool`                  | `True`  | Enable reading from a sheet.                               |\n| `enable_create_sheet`           | `bool`                  | `False` | Enable creating a sheet.                                   |\n| `enable_update_sheet`           | `bool`                  | `False` | Enable updating a sheet.                                   |\n| `enable_create_duplicate_sheet` | `bool`                  | `False` | Enable creating a duplicate sheet.                         |\n| `all`                           | `bool`                  | `False` | Enable all tools.                                          |\n\n| Function                 | Description                                                                                                                                                                                                                                                                                 |\n| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `read_sheet`             | Read values from a Google Sheet. Parameters include `spreadsheet_id` (Optional\\[str]) for fallback spreadsheet ID and `spreadsheet_range` (Optional\\[str]) for fallback range. Returns JSON of list of rows.                                                                                |\n| `create_sheet`           | Create a new Google Sheet. Parameters include `title` (str) for the title of the Google Sheet. Returns the ID of the created Google Sheet.                                                                                                                                                  |\n| `update_sheet`           | Update data in a Google Sheet. Parameters include `data` (List\\[List\\[Any]]) for the data to update, `spreadsheet_id` (Optional\\[str]) for the ID of the Google Sheet, and `range_name` (Optional\\[str]) for the range to update. Returns success or failure message.                       |\n| `create_duplicate_sheet` | Create a duplicate of an existing Google Sheet. Parameters include `source_id` (str) for the ID of the source spreadsheet, `new_title` (Optional\\[str]) for new title, and `copy_permissions` (bool, default=True) for whether to copy permissions. Returns link to duplicated spreadsheet. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/googlesheets.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/googlesheets_tools.py)",
+  "code_samples": [
+    {
+      "code": "Set up the following environment variables:",
+      "language": "unknown"
+    },
+    {
+      "code": "## How to Get Credentials\n\n1. Go to Google Cloud Console ([https://console.cloud.google.com](https://console.cloud.google.com))\n\n2. Create a new project or select an existing one\n\n3. Enable the Google Sheets API:\n   * Go to \"APIs & Services\" > \"Enable APIs and Services\"\n   * Search for \"Google Sheets API\"\n   * Click \"Enable\"\n\n4. Create OAuth 2.0 credentials:\n   * Go to \"APIs & Services\" > \"Credentials\"\n   * Click \"Create Credentials\" > \"OAuth client ID\"\n   * Go through the OAuth consent screen setup\n   * Give it a name and click \"Create\"\n   * You'll receive:\n     * Client ID (GOOGLE\\_CLIENT\\_ID)\n     * Client Secret (GOOGLE\\_CLIENT\\_SECRET)\n   * The Project ID (GOOGLE\\_PROJECT\\_ID) is visible in the project dropdown at the top of the page\n\n## Example\n\nThe following agent will use Google Sheets to read and update spreadsheet data.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "How to Get Credentials",
+      "id": "how-to-get-credentials"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#google-sheets",
+  "links": []
+}

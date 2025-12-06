@@ -1,0 +1,8 @@
+{
+  "title": "Building Teams",
+  "content": "Source: https://docs.agno.com/basics/teams/building-teams\n\nLearn how to build Teams with Agno.\n\nTo build effective teams, start simple -- just a model, team members, and instructions. Once that works, add more functionality as needed.\n\nHere's a minimal example of a team with specialized agents:\n\n```python news_weather_team.py theme={null}\nfrom agno.team import Team\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#building-teams",
+  "links": []
+}

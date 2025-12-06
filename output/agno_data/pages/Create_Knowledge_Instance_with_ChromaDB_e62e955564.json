@@ -1,0 +1,8 @@
+{
+  "title": "Create Knowledge Instance with ChromaDB",
+  "content": "knowledge = Knowledge(\n    name=\"Basic SDK Knowledge Base\",\n    description=\"Agno 2.0 Knowledge Implementation with ChromaDB\",\n    vector_db=ChromaDb(\n        collection=\"vectors\", path=\"tmp/chromadb\", persistent_client=True\n    ),\n)\n\nknowledge.add_content(\n        name=\"Recipes\",\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n        metadata={\"doc_type\": \"recipe_book\"},\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-knowledge-instance-with-chromadb",
+  "links": []
+}

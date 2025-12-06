@@ -1,0 +1,8 @@
+{
+  "title": "Agent with both structured outputs and strict tool",
+  "content": "agent = Agent(\n    model=Claude(id=\"claude-sonnet-4-5-20250929\"),\n    tools=[weather_tool],\n    output_schema=WeatherInfo,\n    description=\"You help users get weather information.\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-with-both-structured-outputs-and-strict-tool",
+  "links": []
+}

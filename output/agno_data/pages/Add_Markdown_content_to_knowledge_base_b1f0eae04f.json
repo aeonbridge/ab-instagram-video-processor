@@ -1,0 +1,8 @@
+{
+  "title": "Add Markdown content to knowledge base",
+  "content": "knowledge.add_content(\n    path=Path(\"README.md\"),\n    reader=MarkdownReader(),\n)\n\nagent = Agent(\n    knowledge=knowledge,\n    search_knowledge=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-markdown-content-to-knowledge-base",
+  "links": []
+}

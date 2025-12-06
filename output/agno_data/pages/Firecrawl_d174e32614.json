@@ -1,0 +1,43 @@
+{
+  "title": "Firecrawl",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/firecrawl\n\nUse Firecrawl with Agno to scrape and crawl the web.\n\n**FirecrawlTools** enable an Agent to perform web crawling and scraping tasks.\n\nThe following example requires the `firecrawl-py` library and an API key which can be obtained from [Firecrawl](https://firecrawl.dev).\n\nThe following agent will scrape the content from [https://finance.yahoo.com/](https://finance.yahoo.com/) and return a summary of the content:\n\n| Parameter        | Type             | Default                     | Description                                                                  |\n| ---------------- | ---------------- | --------------------------- | ---------------------------------------------------------------------------- |\n| `api_key`        | `str`            | `None`                      | API key for authentication. Uses FIRECRAWL\\_API\\_KEY env var if not provided |\n| `enable_scrape`  | `bool`           | `True`                      | Enables website scraping functionality                                       |\n| `enable_crawl`   | `bool`           | `False`                     | Enables website crawling functionality                                       |\n| `enable_mapping` | `bool`           | `False`                     | Enables website mapping functionality                                        |\n| `enable_search`  | `bool`           | `False`                     | Enables web search functionality                                             |\n| `all`            | `bool`           | `False`                     | Enables all functionality when set to True                                   |\n| `formats`        | `List[str]`      | `None`                      | List of formats to be used for operations                                    |\n| `limit`          | `int`            | `10`                        | Maximum number of items to retrieve                                          |\n| `poll_interval`  | `int`            | `30`                        | Interval in seconds between polling for results                              |\n| `search_params`  | `Dict[str, Any]` | `None`                      | Parameters for search operations                                             |\n| `api_url`        | `str`            | `https://api.firecrawl.dev` | API URL to use for the Firecrawl app                                         |\n\n| Function         | Description                                                                                                                                                                                                                                             |\n| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `scrape_website` | Scrapes a website using Firecrawl. Parameters include `url` to specify the URL to scrape. The function supports optional formats if specified. Returns the results of the scraping in JSON format.                                                      |\n| `crawl_website`  | Crawls a website using Firecrawl. Parameters include `url` to specify the URL to crawl, and an optional `limit` to define the maximum number of pages to crawl. The function supports optional formats and returns the crawling results in JSON format. |\n| `map_website`    | Maps a website structure using Firecrawl. Parameters include `url` to specify the URL to map. Returns the mapping results in JSON format.                                                                                                               |\n| `search`         | Performs a web search using Firecrawl. Parameters include `query` for the search term and optional `limit` for maximum results. Returns search results in JSON format.                                                                                  |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/firecrawl.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/firecrawl_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will scrape the content from [https://finance.yahoo.com/](https://finance.yahoo.com/) and return a summary of the content:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#firecrawl",
+  "links": []
+}

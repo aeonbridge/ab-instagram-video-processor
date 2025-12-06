@@ -1,0 +1,61 @@
+{
+  "title": "Multi Language Team",
+  "content": "Source: https://docs.agno.com/examples/use-cases/teams/multi_language_team\n\nBuild a language routing team that automatically detects user language and responds with native speakers. This example demonstrates intelligent routing across multiple AI models specialized for different languages.\n\nBy building this team, you'll understand:\n\n* How to create language-specific agents using different AI models\n* How to implement intelligent routing based on user input language\n* How to use multiple AI providers (OpenAI, Claude, Mistral, DeepSeek) in one team\n* How to handle unsupported languages with graceful fallback responses\n\nBuild multilingual customer support, international chatbots, translation services, or global help desk systems.\n\nThe team uses route mode to direct queries to language-specific agents:\n\n1. **Detect**: Team leader analyzes the language of the user's question\n2. **Route**: Directs the query to the appropriate language-specialized agent\n3. **Respond**: Language agent answers in the user's native language\n4. **Fallback**: Handles unsupported languages with English response\n\nEach language agent uses a different AI model optimized for that language's characteristics.\n\nThe team will automatically detect the language of your input and route it to the appropriate language-specific agent. Each agent responds fluently in their designated language using models optimized for that language.\n\nThe output shows which agent handled each request. For unsupported languages, you'll receive a polite message in English listing available languages.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API keys\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Team\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* Add more language agents for additional language support\n* Modify the routing logic in `instructions` to handle dialects or regional variations\n* Experiment with different AI models for each language to optimize quality\n* Explore [Teams](/basics/teams/overview) for advanced request distribution",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe team will automatically detect the language of your input and route it to the appropriate language-specific agent. Each agent responds fluently in their designated language using models optimized for that language.\n\nThe output shows which agent handled each request. For unsupported languages, you'll receive a polite message in English listing available languages.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API keys\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Team\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#multi-language-team",
+  "links": []
+}

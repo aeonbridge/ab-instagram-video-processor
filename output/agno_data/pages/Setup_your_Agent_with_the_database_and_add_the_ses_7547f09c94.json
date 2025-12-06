@@ -1,0 +1,19 @@
+{
+  "title": "Setup your Agent with the database and add the session history to the context",
+  "content": "agent = Agent(\n    db=db,\n    add_history_to_context=True, # Automatically add the persisted session history to the context\n    num_history_runs=3, # Specify how many messages to add to the context\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb",
+  "code_samples": [
+    {
+      "code": "### Where are sessions stored?\n\nBy default, sessions are stored in the `agno_sessions` table of the database.\n\nIf the table or collection doesn't exist, it is created automatically when first storing a session.\n\nYou can specify where the sessions are stored exactly using the `session_table` parameter:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Where are sessions stored?",
+      "id": "where-are-sessions-stored?"
+    }
+  ],
+  "url": "llms-txt#setup-your-agent-with-the-database-and-add-the-session-history-to-the-context",
+  "links": []
+}

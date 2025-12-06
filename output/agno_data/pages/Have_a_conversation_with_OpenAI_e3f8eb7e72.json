@@ -1,0 +1,8 @@
+{
+  "title": "Have a conversation with OpenAI",
+  "content": "openai_agent.print_response(\n    \"Explain machine learning basics\", session_id=session_id, user_id=user_id\n)\nopenai_agent.print_response(\n    \"What about deep learning?\", session_id=session_id, user_id=user_id\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#have-a-conversation-with-openai",
+  "links": []
+}

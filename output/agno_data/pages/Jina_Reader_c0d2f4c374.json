@@ -1,0 +1,39 @@
+{
+  "title": "Jina Reader",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/jina-reader\n\n**JinaReaderTools** enable an Agent to perform web search tasks using Jina.\n\nThe following example requires the `jina` library.\n\nThe following agent will use Jina API to summarize the content of [https://github.com/AgnoAgi](https://github.com/AgnoAgi)\n\n| Parameter              | Type            | Default                | Description                                                                                         |\n| ---------------------- | --------------- | ---------------------- | --------------------------------------------------------------------------------------------------- |\n| `api_key`              | `Optional[str]` | `None`                 | The API key for authentication purposes. If not provided, uses JINA\\_API\\_KEY environment variable. |\n| `base_url`             | `str`           | `\"https://r.jina.ai/\"` | The base URL of the API.                                                                            |\n| `search_url`           | `str`           | `\"https://s.jina.ai/\"` | The URL used for search queries.                                                                    |\n| `max_content_length`   | `int`           | `10000`                | The maximum length of content allowed.                                                              |\n| `timeout`              | `Optional[int]` | `None`                 | Timeout in seconds for API requests.                                                                |\n| `search_query_content` | `bool`          | `True`                 | Include content in search query results.                                                            |\n| `enable_read_url`      | `bool`          | `True`                 | Enable the read\\_url functionality.                                                                 |\n| `enable_search_query`  | `bool`          | `False`                | Enable the search\\_query functionality.                                                             |\n| `all`                  | `bool`          | `False`                | Enable all functionality.                                                                           |\n\n| Function       | Description                                                                                                                                                                                            |\n| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| `read_url`     | Reads the content of a specified URL using Jina Reader API. Parameters include `url` for the URL to read. Returns the truncated content or an error message if the request fails.                      |\n| `search_query` | Performs a web search using Jina Reader API based on a specified query. Parameters include `query` for the search term. Returns the truncated search results or an error message if the request fails. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/jina_reader.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/jina_reader_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will use Jina API to summarize the content of [https://github.com/AgnoAgi](https://github.com/AgnoAgi)",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#jina-reader",
+  "links": []
+}

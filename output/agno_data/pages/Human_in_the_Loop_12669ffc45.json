@@ -1,0 +1,14 @@
+{
+  "title": "Human in the Loop",
+  "content": "Source: https://docs.agno.com/examples/getting-started/12-human-in-the-loop\n\nThis example shows how to implement human-in-the-loop functionality in your Agno tools.\nIt shows how to:\n\n* Add pre-hooks to tools for user confirmation\n* Handle user input during tool execution\n* Gracefully cancel operations based on user choice\n\nSome practical applications:\n\n* Confirming sensitive operations before execution\n* Reviewing API calls before they're made\n* Validating data transformations\n* Approving automated actions in critical systems\n\n```python human_in_the_loop.py theme={null}\nimport json\nfrom textwrap import dedent\n\nimport httpx\nfrom agno.agent import Agent\nfrom agno.tools import tool\nfrom agno.utils import pprint\nfrom rich.console import Console\nfrom rich.prompt import Prompt\n\n@tool(requires_confirmation=True)\ndef get_top_hackernews_stories(num_stories: int) -> str:\n    \"\"\"Fetch top stories from Hacker News.\n\nArgs:\n        num_stories (int): Number of stories to retrieve\n\nReturns:\n        str: JSON string containing story details\n    \"\"\"\n    # Fetch top story IDs\n    response = httpx.get(\"https://hacker-news.firebaseio.com/v0/topstories.json\")\n    story_ids = response.json()\n\n# Yield story details\n    all_stories = []\n    for story_id in story_ids[:num_stories]:\n        story_response = httpx.get(\n            f\"https://hacker-news.firebaseio.com/v0/item/{story_id}.json\"\n        )\n        story = story_response.json()\n        if \"text\" in story:\n            story.pop(\"text\", None)\n        all_stories.append(story)\n    return json.dumps(all_stories)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#human-in-the-loop",
+  "links": []
+}

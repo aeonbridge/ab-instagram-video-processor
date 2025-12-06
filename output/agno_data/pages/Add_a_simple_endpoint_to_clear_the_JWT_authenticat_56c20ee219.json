@@ -1,0 +1,8 @@
+{
+  "title": "Add a simple endpoint to clear the JWT authentication cookie",
+  "content": "@app.get(\"/clear-auth-cookie\")\nasync def clear_auth_cookie(response: Response):\n    \"\"\"Endpoint to clear the JWT authentication cookie (logout).\"\"\"\n    response.delete_cookie(key=\"auth_token\")\n    return {\"message\": \"Authentication cookie cleared successfully\"}",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-a-simple-endpoint-to-clear-the-jwt-authentication-cookie",
+  "links": []
+}

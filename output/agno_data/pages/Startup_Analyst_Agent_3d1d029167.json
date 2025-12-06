@@ -1,0 +1,32 @@
+{
+  "title": "Startup Analyst Agent",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/startup-analyst-agent\n\nA sophisticated startup intelligence agent that leverages the `ScrapeGraph` Toolkit for comprehensive due diligence on companies\n\n* Comprehensive company analysis and due diligence\n* Market intelligence and competitive positioning\n* Financial assessment and funding history research\n* Risk evaluation and strategic recommendations\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Set environment variables\">\n    \n  </Step>\n\n<Step title=\"Run the agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#startup-analyst-agent",
+  "links": []
+}

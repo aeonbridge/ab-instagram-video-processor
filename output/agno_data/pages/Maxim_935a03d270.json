@@ -1,0 +1,42 @@
+{
+  "title": "Maxim",
+  "content": "Source: https://docs.agno.com/integrations/observability/maxim\n\nConnect Agno with Maxim to monitor, trace, and evaluate your agent's activity and performance.\n\n## Integrating Agno with Maxim\n\nMaxim AI provides comprehensive agent monitoring, evaluation, and observability for your Agno applications. With Maxim's one-line integration, you can easily trace and analyse agent interactions, performance metrics, and more.\n\n1. **Install Dependencies**\n\nEnsure you have the necessary packages installed:\n\nOr install Maxim separately:\n\n2. **Setup Maxim Account**\n\n* Sign up for an account at [Maxim](https://getmaxim.ai/).\n   * Generate your API key from the Maxim dashboard.\n   * Create a repository to store your traces.\n\n3. **Set Environment Variables**\n\nConfigure your environment with the Maxim API key:\n\n## Sending Traces to Maxim\n\n### Example: Basic Maxim Integration\n\nThis example demonstrates how to instrument your Agno agent with Maxim and send traces for monitoring and evaluation.\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.yfinance import YFinanceTools\n\ntry:\n    from maxim import Maxim\n    from maxim.logger.agno import instrument_agno\nexcept ImportError:\n    raise ImportError(\n        \"`maxim` not installed. Please install using `pip install maxim-py`\"\n    )",
+  "code_samples": [
+    {
+      "code": "Or install Maxim separately:",
+      "language": "unknown"
+    },
+    {
+      "code": "2. **Setup Maxim Account**\n\n   * Sign up for an account at [Maxim](https://getmaxim.ai/).\n   * Generate your API key from the Maxim dashboard.\n   * Create a repository to store your traces.\n\n3. **Set Environment Variables**\n\n   Configure your environment with the Maxim API key:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Sending Traces to Maxim\n\n### Example: Basic Maxim Integration\n\nThis example demonstrates how to instrument your Agno agent with Maxim and send traces for monitoring and evaluation.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with Maxim",
+      "id": "integrating-agno-with-maxim"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Sending Traces to Maxim",
+      "id": "sending-traces-to-maxim"
+    },
+    {
+      "level": "h3",
+      "text": "Example: Basic Maxim Integration",
+      "id": "example:-basic-maxim-integration"
+    }
+  ],
+  "url": "llms-txt#maxim",
+  "links": []
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Process only necessary content",
+  "content": "knowledge.add_contents(\n    paths=[\"large_dataset/\"],\n    include=[\"*.pdf\"],       # Only PDFs\n    exclude=[\"*backup*\"],    # Skip backups\n    skip_if_exists=True,\n    metadata={\"batch\": \"current\"}\n)\npython  theme={null}\nfrom agno.vectordb.pgvector import PgVector, SearchType\n\nvector_db = PgVector(\n    table_name=\"knowledge\",\n    db_url=\"postgresql+psycopg://user:pass@localhost:5432/db\",\n    search_type=SearchType.hybrid  # Vector + keyword search\n)\npython  theme={null}\nfrom agno.knowledge.reranker.cohere import CohereReranker\n\nvector_db = PgVector(\n    table_name=\"knowledge\",\n    db_url=\"postgresql+psycopg://user:pass@localhost:5432/db\",\n    reranker=CohereReranker(\n        model=\"rerank-multilingual-v3.0\",\n        top_n=10\n    )\n)\npython  theme={null}\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder",
+  "code_samples": [
+    {
+      "code": "## Advanced Optimizations\n\nOnce you've applied the quick wins above, consider these for further improvements:\n\n### Use Hybrid Search\n\nCombine vector and keyword search for better results:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Add Reranking\n\nImprove result quality by reranking with Cohere:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Optimize Embedder Dimensions\n\nReduce dimensions for faster search (with slight quality trade-off):",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Advanced Optimizations",
+      "id": "advanced-optimizations"
+    },
+    {
+      "level": "h3",
+      "text": "Use Hybrid Search",
+      "id": "use-hybrid-search"
+    },
+    {
+      "level": "h3",
+      "text": "Add Reranking",
+      "id": "add-reranking"
+    },
+    {
+      "level": "h3",
+      "text": "Optimize Embedder Dimensions",
+      "id": "optimize-embedder-dimensions"
+    }
+  ],
+  "url": "llms-txt#process-only-necessary-content",
+  "links": []
+}

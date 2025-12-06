@@ -1,0 +1,19 @@
+{
+  "title": "Define how to turn analysis into actionable insights",
+  "content": "intelligence_synthesis = dedent(\"\"\"\n    INTELLIGENCE SYNTHESIS:\n    - Detect crisis indicators through sentiment velocity and coordination patterns\n    - Identify competitive positioning and feature gap discussions\n    - Surface growth opportunities and advocacy moments\n    - Generate strategic recommendations with clear priority levels\n\"\"\")\n\nprint(\"Intelligence synthesis defined\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### 3d. Define the Report Format",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3d. Define the Report Format",
+      "id": "3d.-define-the-report-format"
+    }
+  ],
+  "url": "llms-txt#define-how-to-turn-analysis-into-actionable-insights",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Use default memory manager",
+  "content": "memory = MemoryManager(model=Claude(id=\"claude-3-5-sonnet-latest\"), db=memory_db)\njane_doe_id = \"jane_doe@example.com\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#use-default-memory-manager",
+  "links": []
+}

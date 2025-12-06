@@ -1,0 +1,14 @@
+{
+  "title": "Use the function to log a model call",
+  "content": "run(\"Share a 2 sentence horror story\")\n```\n\n* **Environment Variables**: Ensure your environment variable is correctly set for the WandB API key.\n* **Initialization**: Call `weave.init(\"project-name\")` to initialize Weave with your project name.\n* **Decorators**: Use `@weave.op()` to decorate functions you want to log with Weave.\n\nBy following these steps, you can effectively integrate Agno with Weave, enabling comprehensive logging and visualization of your AI agents' model calls.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Notes",
+      "id": "notes"
+    }
+  ],
+  "url": "llms-txt#use-the-function-to-log-a-model-call",
+  "links": []
+}

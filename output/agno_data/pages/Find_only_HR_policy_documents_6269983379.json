@@ -1,0 +1,8 @@
+{
+  "title": "Find only HR policy documents",
+  "content": "EQ(\"department\", \"hr\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#find-only-hr-policy-documents",
+  "links": []
+}

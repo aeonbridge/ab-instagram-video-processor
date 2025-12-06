@@ -1,0 +1,38 @@
+{
+  "title": "SingleStore Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/singlestore/overview\n\nLearn how to use SingleStore as a vector database for your Knowledge Base\n\nAfter running the container, set the environment variables:\n\nSingleStore supports both cloud-based and local deployments. For step-by-step guidance on setting up your cloud deployment, please refer to the [SingleStore Setup Guide](https://docs.singlestore.com/cloud/connect-to-singlestore/connect-with-mysql/connect-with-mysql-client/connect-to-singlestore-helios-using-tls-ssl/).\n\n## SingleStore Params\n\n<Snippet file=\"vectordb_singlestore_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/singlestore_db/singlestore_db.py)",
+  "code_samples": [
+    {
+      "code": "After running the container, set the environment variables:",
+      "language": "unknown"
+    },
+    {
+      "code": "SingleStore supports both cloud-based and local deployments. For step-by-step guidance on setting up your cloud deployment, please refer to the [SingleStore Setup Guide](https://docs.singlestore.com/cloud/connect-to-singlestore/connect-with-mysql/connect-with-mysql-client/connect-to-singlestore-helios-using-tls-ssl/).\n\n## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "SingleStore Params",
+      "id": "singlestore-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#singlestore-vector-database",
+  "links": []
+}

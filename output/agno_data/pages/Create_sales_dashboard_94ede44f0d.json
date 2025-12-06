@@ -1,0 +1,8 @@
+{
+  "title": "Create sales dashboard",
+  "content": "prompt = (\n    \"Create a sales dashboard for January 2026 with:\\n\"\n    \"Sales data for 5 reps:\\n\"\n    \"- Alice: 24 deals, $385K revenue, 65% close rate\\n\"\n    \"- Bob: 19 deals, $298K revenue, 58% close rate\\n\"\n    \"- Carol: 31 deals, $467K revenue, 72% close rate\\n\"\n    \"- David: 22 deals, $356K revenue, 61% close rate\\n\"\n    \"- Emma: 27 deals, $412K revenue, 68% close rate\\n\\n\"\n    \"Include:\\n\"\n    \"1. Table with all metrics\\n\"\n    \"2. Total revenue calculation\\n\"\n    \"3. Bar chart showing revenue by rep\\n\"\n    \"4. Quota attainment (quota: $350K per rep)\\n\"\n    \"5. Conditional formatting (green if above quota, red if below)\\n\"\n    \"Save as 'sales_dashboard.xlsx'\"\n)\n\nresponse = excel_agent.run(prompt)\nprint(response.content)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-sales-dashboard",
+  "links": []
+}

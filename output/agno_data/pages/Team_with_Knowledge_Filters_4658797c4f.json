@@ -1,0 +1,14 @@
+{
+  "title": "Team with Knowledge Filters",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/usage/team-with-knowledge-filters\n\nThis example demonstrates how to use knowledge filters with teams to restrict knowledge searches to specific documents or metadata criteria, enabling personalized and contextual responses based on predefined filter conditions.\n\n```python cookbook/examples/teams/knowledge/02_team_with_knowledge_filters.py theme={null}\n\"\"\"\nThis example demonstrates how to use knowledge filters with teams.\n\nKnowledge filters allow you to restrict knowledge searches to specific documents\nor metadata criteria, enabling personalized and contextual responses.\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.pdf_reader import PDFReader\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.utils.media import (\n    SampleDataFileExtension,\n    download_knowledge_filters_sample_data,\n)\nfrom agno.vectordb.lancedb import LanceDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-with-knowledge-filters",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "AgentOS Demo",
+  "content": "Source: https://docs.agno.com/agent-os/usage/demo\n\nAgentOS demo with agents and teams\n\nHere is a full example of an AgentOS with multiple agents and teams. It also shows how to instantiate agents with a database, knowledge base, and tools.\n\n```python cookbook/agent_os/demo.py theme={null}\n\"\"\"\nAgentOS Demo\n\nPrerequisites:\npip install -U fastapi uvicorn sqlalchemy pgvector psycopg openai ddgs mcp\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.mcp import MCPTools\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agentos-demo",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "User-assistant message pairs from each run",
+  "content": "messages = agent.get_session_messages()",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#user-assistant-message-pairs-from-each-run",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "SqliteDb",
+  "content": "Source: https://docs.agno.com/reference/storage/sqlite\n\n`SqliteDb` is a class that implements the Db interface using SQLite as the backend storage system. It provides lightweight, file-based storage for agent sessions with support for JSON data types and schema versioning.\n\n<Snippet file=\"db-sqlite-params.mdx\" />\n\n<Snippet file=\"db-new-bulk-methods.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#sqlitedb",
+  "links": []
+}

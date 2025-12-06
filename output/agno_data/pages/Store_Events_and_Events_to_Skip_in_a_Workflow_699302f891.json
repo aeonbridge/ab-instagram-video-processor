@@ -1,0 +1,14 @@
+{
+  "title": "Store Events and Events to Skip in a Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/store-events-and-events-to-skip-in-a-workflow\n\nThis example demonstrates **Workflows 2.0** event storage capabilities\n\nThis example demonstrates **Workflows 2.0** event storage capabilities, showing how to:\n\n1. **Store execution events** for debugging/auditing (`store_events=True`)\n2. **Filter noisy events** (`events_to_skip`) to focus on critical workflow milestones\n3. **Access stored events** post-execution via `workflow.run_response.events`\n\n* **Selective Storage**: Skip verbose events (e.g., `step_started`) while retaining key milestones.\n* **Debugging/Audit**: Capture execution flow for analysis without manual logging.\n* **Performance Optimization**: Reduce storage overhead by filtering non-essential events.\n\n```python store_events_and_events_to_skip_in_a_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.run.agent import (\n    RunContentEvent,\n    ToolCallCompletedEvent,\n    ToolCallStartedEvent,\n)\nfrom agno.run.workflow import WorkflowRunEvent, WorkflowRunOutput\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.run.agent import RunEvent\nfrom agno.workflow.parallel import Parallel\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Features:",
+      "id": "key-features:"
+    }
+  ],
+  "url": "llms-txt#store-events-and-events-to-skip-in-a-workflow",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Define agents for different tasks",
+  "content": "researcher = Agent(\n    name=\"Research Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[DuckDuckGoTools()],\n    instructions=\"Research the given topic and provide key facts and insights.\",\n)\n\ntech_researcher = Agent(\n    name=\"Tech Research Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[HackerNewsTools()],\n    instructions=\"Research tech-related topics from Hacker News and provide latest developments.\",\n)\n\nnews_researcher = Agent(\n    name=\"News Research Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[ExaTools()],\n    instructions=\"Research current news and trends using Exa search.\",\n)\n\nwriter = Agent(\n    name=\"Writing Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=\"Write a comprehensive article based on the research provided. Make it engaging and well-structured.\",\n)\n\neditor = Agent(\n    name=\"Editor Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=\"Review and edit the article for clarity, grammar, and flow. Provide a polished final version.\",\n)\n\ncontent_agent = Agent(\n    name=\"Content Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=\"Prepare and format content for writing based on research inputs.\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-agents-for-different-tasks",
+  "links": []
+}

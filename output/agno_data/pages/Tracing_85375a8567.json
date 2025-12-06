@@ -1,0 +1,62 @@
+{
+  "title": "Tracing",
+  "content": "Source: https://docs.agno.com/basics/tracing/overview\n\nGain deep visibility into your Agno agents with OpenTelemetry-based observability\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.3.5\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.3.5\">v2.3.5</Tooltip>\n</Badge>\n\nIn the systems you build with Agno, agents will make autonomous decisions, interact with external tools, and coordinate with each other in ways that aren't immediately visible from your recorded sessions alone. Observability is key to staying on top of what your agents are doing and how your system is performing.\n\n**Agno Tracing** is the recommended way to introduce observability for your Agno agents and teams.\nIt automatically captures all relevant execution details, helping you understand what your agents are doing, simplifying debugging and helping you optimize your system.\n\nTracing leverages [OpenTelemetry](https://opentelemetry.io/) to instrument the Agno agents and teams, capturing traces and spans.\n\n<Frame caption=\"Traces stored in SQLite database viewed with AgentOS\">\n  <img src=\"https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-os.png?fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=0e007064a21a14cabadeed560a9c207a\" alt=\"Traces viewed in AgentOS\" data-og-width=\"2932\" width=\"2932\" data-og-height=\"1314\" height=\"1314\" data-path=\"images/traces-in-os.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-os.png?w=280&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=651a73bbca101d922693ec384ee47083 280w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-os.png?w=560&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=b4cb3fd081298932ffc2679447686574 560w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-os.png?w=840&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=5bc9389ffb66d6cf7047c41b15a40d87 840w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-os.png?w=1100&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=4f06c18c6b7189c26089ca56bbe432af 1100w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-os.png?w=1650&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=83cf8de1945335ee4e2ef71a400c29a3 1650w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-os.png?w=2500&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=682376786ba9a10592e684390a0f301e 2500w\" />\n</Frame>\n\n<Note>\n  Agno Tracing is currently not supported for Workflows. It is in works and will be added soon.\n</Note>\n\n## Why is Observability Important?\n\nAs your Agno system become more complex (Agents using multiple tools, making sequential decisions, and coordinating with other agents), understanding its behavior becomes challenging.\n\n**Agno Tracing** solves this:\n\n* **Debugging**: See exactly what went wrong when an agent fails\n* **Performance**: Identify bottlenecks in agent execution\n* **Cost Tracking**: Monitor token usage and API calls\n* **Behavior Analysis**: Understand decision-making patterns\n* **Audit Trail**: Track what agents did and why\n\n<Note>\n  All Agno Tracing data is stored in your own database. No tracing data will leave your system, or be sent to third parties: you are in complete control.\n</Note>\n\n## Understanding Traces and Spans\n\nThink of tracing like a family tree for your agent's execution:\n\nA **trace** represents one complete agent execution from start to finish. Each trace has a unique `trace_id` that groups all related operations together.\n\nA **span** is a single operation within that execution. Spans form a parent-child hierarchy:\n\n<img className=\"block dark:hidden\" src=\"https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-light.png?fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=9154b13c041f6fd5674224fda47065c0\" alt=\"Traces vs spans diagram\" data-og-width=\"1827\" width=\"1827\" data-og-height=\"930\" height=\"930\" data-path=\"images/traces-vs-spans-light.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-light.png?w=280&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=9cfde54b1f868542f84929eaa38d27a9 280w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-light.png?w=560&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=7ad28bf2fdaf0313bae5ef3fdfe97ae3 560w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-light.png?w=840&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=174cf3379538b44ba11efae87677fc78 840w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-light.png?w=1100&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=700830eaa494fa36c945ac0fc07c895b 1100w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-light.png?w=1650&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=dc52b7d0d20c4b2c96ec2991c22cee54 1650w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-light.png?w=2500&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=3ad50142e5cf8a6b7370f23ba508842b 2500w\" />\n\n<img className=\"hidden dark:block\" src=\"https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-dark.png?fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=c513cdba94b11c908653287085397bd0\" alt=\"Traces vs spans diagram\" data-og-width=\"1827\" width=\"1827\" data-og-height=\"930\" height=\"930\" data-path=\"images/traces-vs-spans-dark.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-dark.png?w=280&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=49fe1ffa407cab97107331cda9101ced 280w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-dark.png?w=560&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=f8693e2efa8f079a6208d6a2dd947d37 560w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-dark.png?w=840&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=0e0f880e9a920ad9b11150adcf4c7d22 840w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-dark.png?w=1100&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=e24b518f77b3bfa4ffcd0ec0291e9078 1100w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-dark.png?w=1650&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=7b0e4ceed3c629c174f9c4f3ef8f8693 1650w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-vs-spans-dark.png?w=2500&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=08d4acaa62b95a71966216809f102104 2500w\" />\n\n* **What happened**: Operation name (e.g., `agent.run`, `model.response`)\n* **When**: Start and end timestamps\n* **Context**: Input arguments, outputs, token usage\n* **Relationships**: Parent span, child spans\n* **Metadata**: Agent ID, session ID, run ID\n\nAgno automatically captures:\n\n| Operation               | What Gets Traced                                               |\n| ----------------------- | -------------------------------------------------------------- |\n| **Agent Runs**          | Every `agent.run()` or `agent.arun()` call with full context   |\n| **Model Calls**         | LLM interactions including prompts, responses, and token usage |\n| **Tool Executions**     | Tool invocations with arguments and results                    |\n| **Team Operations**     | Team coordination and member agent runs                        |\n| **Workflow Operations** | Coming soon!                                                   |\n\n* **Zero-Code Instrumentation**: No need to modify your agent code\n* **Database Storage**: Traces stored in your Agno database (SQLite, PostgreSQL, etc.)\n* **Flexible Querying**: Filter by agent, session, run, or time range\n* **OpenTelemetry Standard**: Export to external tools like Arize Phoenix, Langfuse\n* **Non-Blocking**: Tracing never slows down your agents\n* **Configurable**: Adjust batch sizes and processing for your needs\n\n<Steps>\n  <Step title=\"Install Dependencies\">\n    \n  </Step>\n\n<Step title=\"Enable Tracing\">\n    \n  </Step>\n\n<Step title=\"Run Your Agent\">\n    \n  </Step>\n\n<Step title=\"Query Traces\">\n    \n  </Step>\n</Steps>\n\n<CardGroup cols={3}>\n  <Card title=\"Basic Setup\" icon=\"rocket\" href=\"/basics/tracing/basic-setup\">\n    Configure and enable tracing\n  </Card>\n\n<Card title=\"Tracing in AgentOS\" icon=\"rocket\" href=\"/agent-os/tracing/overview\">\n    Trace your agents and teams in AgentOS\n  </Card>\n\n<Card title=\"DB Functions\" icon=\"database\" href=\"/basics/tracing/db-functions\">\n    Query traces and spans from your database\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Enable Tracing\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Your Agent\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Query Traces\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Why is Observability Important?",
+      "id": "why-is-observability-important?"
+    },
+    {
+      "level": "h2",
+      "text": "Understanding Traces and Spans",
+      "id": "understanding-traces-and-spans"
+    },
+    {
+      "level": "h3",
+      "text": "Trace",
+      "id": "trace"
+    },
+    {
+      "level": "h3",
+      "text": "Span",
+      "id": "span"
+    },
+    {
+      "level": "h2",
+      "text": "What Gets Traced",
+      "id": "what-gets-traced"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    },
+    {
+      "level": "h2",
+      "text": "Quick Start",
+      "id": "quick-start"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#tracing",
+  "links": []
+}

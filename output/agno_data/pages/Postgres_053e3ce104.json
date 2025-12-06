@@ -1,0 +1,28 @@
+{
+  "title": "Postgres",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/database/postgres\n\nThe PostgresTools toolkit enables an Agent to interact with a PostgreSQL database.\n\n**PostgresTools** enable an Agent to interact with a PostgreSQL database.\n\nThe following example requires the `psycopg2` library.\n\nYou will also need a database. The following example uses a Postgres database running in a Docker container.\n\nThe following agent will list all tables in the database.\n\n```python cookbook/tools/postgres.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.postgres import PostgresTools",
+  "code_samples": [
+    {
+      "code": "You will also need a database. The following example uses a Postgres database running in a Docker container.",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will list all tables in the database.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#postgres",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Example usage with a famous landmark",
+  "content": "agent.print_response(\n    \"Tell me about this image and share the latest relevant news.\",\n    images=[\n        Image(\n            url=\"https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg\"\n        )\n    ],\n    stream=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage-with-a-famous-landmark",
+  "links": []
+}

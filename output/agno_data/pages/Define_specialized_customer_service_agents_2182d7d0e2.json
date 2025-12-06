@@ -1,0 +1,8 @@
+{
+  "title": "Define specialized customer service agents",
+  "content": "tech_support_agent = Agent(\n    name=\"Technical Support Specialist\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=[\n        \"You are a technical support specialist with deep product knowledge.\",\n        \"You have access to the full conversation history with this customer.\",\n        \"Reference previous interactions to provide better help.\",\n        \"Build on any troubleshooting steps already attempted.\",\n        \"Be patient and provide step-by-step technical guidance.\",\n    ],\n)\n\nbilling_agent = Agent(\n    name=\"Billing & Account Specialist\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=[\n        \"You are a billing and account specialist.\",\n        \"You have access to the full conversation history with this customer.\",\n        \"Reference any account details or billing issues mentioned previously.\",\n        \"Build on any payment or account information already discussed.\",\n        \"Be helpful with billing questions, refunds, and account changes.\",\n    ],\n)\n\ngeneral_support_agent = Agent(\n    name=\"General Customer Support\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=[\n        \"You are a general customer support representative.\",\n        \"You have access to the full conversation history with this customer.\",\n        \"Handle general inquiries, product information, and basic support.\",\n        \"Reference the conversation context - build on what was discussed.\",\n        \"Be friendly and acknowledge their previous interactions.\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-specialized-customer-service-agents",
+  "links": []
+}

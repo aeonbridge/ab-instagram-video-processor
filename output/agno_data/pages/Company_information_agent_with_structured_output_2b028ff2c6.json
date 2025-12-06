@@ -1,0 +1,8 @@
+{
+  "title": "Company information agent with structured output",
+  "content": "company_info_agent = Agent(\n    name=\"Company Info Searcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    role=\"Searches the web for information on a stock.\",\n    output_schema=CompanyAnalysis,\n    tools=[\n        ExaTools(\n            include_domains=[\"cnbc.com\", \"reuters.com\", \"bloomberg.com\", \"wsj.com\"],\n            text=False,\n            show_results=True,\n            highlights=False,\n        )\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#company-information-agent-with-structured-output",
+  "links": []
+}

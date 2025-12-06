@@ -1,0 +1,8 @@
+{
+  "title": "Check content processing status",
+  "content": "content_list, total_count = knowledge.get_content()\n\nfailed = [c for c in content_list if c.status == \"failed\"]\nif failed:\n    print(f\"Failed items: {len(failed)}\")\n    for content in failed:\n        status, message = knowledge.get_content_status(content.id)\n        print(f\"  {content.name}: {message}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#check-content-processing-status",
+  "links": []
+}

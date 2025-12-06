@@ -1,0 +1,8 @@
+{
+  "title": "=== BASIC LINEAR WORKFLOW ===",
+  "content": "basic_workflow = Workflow(\n    name=\"Basic Linear Workflow\",\n    description=\"Research -> Summarize -> Condition(Fact Check) -> Write Article\",\n    steps=[\n        research_step,\n        summarize_step,\n        Condition(\n            name=\"fact_check_condition\",\n            description=\"Check if fact-checking is needed\",\n            evaluator=needs_fact_checking,\n            steps=[fact_check_step],\n        ),\n        write_article,\n    ],\n)\n\nif __name__ == \"__main__\":\n    print(\"🚀 Running Basic Linear Workflow Example\")\n    print(\"=\" * 50)\n\ntry:\n        basic_workflow.print_response(\n            input=\"Recent breakthroughs in quantum computing\",\n            stream=True,\n        )\n    except Exception as e:\n        print(f\"❌ Error: {e}\")\n        import traceback\n\ntraceback.print_exc()\n```\n\nTo see the async example, see the cookbook-\n\n* [Condition steps workflow (async streaming)](https://github.com/agno-agi/agno/blob/main/cookbook/workflows/_02_workflows_conditional_execution/sync/condition_steps_workflow_stream.py)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#===-basic-linear-workflow-===",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Parallel Steps",
+  "content": "Source: https://docs.agno.com/reference/workflows/parallel-steps\n\n| Parameter     | Type             | Default  | Description                                     |\n| ------------- | ---------------- | -------- | ----------------------------------------------- |\n| `*steps`      | `*WorkflowSteps` | Required | Variable number of steps to execute in parallel |\n| `name`        | `Optional[str]`  | `None`   | Name of the parallel execution block            |\n| `description` | `Optional[str]`  | `None`   | Description of the parallel execution           |",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#parallel-steps",
+  "links": []
+}

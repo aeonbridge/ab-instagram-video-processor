@@ -1,0 +1,19 @@
+{
+  "title": "Building our Social Media Intelligence System",
+  "content": "## Step 1: Choose Your AI Model\n\n**Which model should I use?**: You can choose any model from our supported providers. Normally models are chosen based on costs and performance. In this case, we will be using OpenAI's GPT-5 Mini.\n\n* **Cost-effective**: Better price/performance ratio than other GPT models\n* **Tool usage**: Excellent at deciding when and how to use tools\n* **Complex reasoning**: Can follow detailed analysis methodologies\n* **Structured output**: Reliable at generating formatted reports\n\nLet's first create the file where we will define our agent:\n\nNow let's add the basic imports and model setup:\n\n```python  theme={null}\nfrom pathlib import Path\nfrom dotenv import load_dotenv\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "Now let's add the basic imports and model setup:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Step 1: Choose Your AI Model",
+      "id": "step-1:-choose-your-ai-model"
+    }
+  ],
+  "url": "llms-txt#building-our-social-media-intelligence-system",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Refresh the context",
+  "content": "agent.context[\"memory\"] = zep_tools.get_zep_memory(memory_type=\"context\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#refresh-the-context",
+  "links": []
+}

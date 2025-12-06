@@ -1,0 +1,8 @@
+{
+  "title": "Create a knowledge base with Postgres and PgVector",
+  "content": "knowledge = Knowledge(\n    contents_db=PostgresDb(\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5432/db\",\n        knowledge_table=\"knowledge_contents\",\n    ),\n    vector_db=PgVector(\n        table_name=\"knowledge_documents\",\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5432/db\"\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-knowledge-base-with-postgres-and-pgvector",
+  "links": []
+}

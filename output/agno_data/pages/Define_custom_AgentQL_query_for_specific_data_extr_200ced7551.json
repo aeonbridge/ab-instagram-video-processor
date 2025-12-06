@@ -1,0 +1,8 @@
+{
+  "title": "Define custom AgentQL query for specific data extraction (see https://docs.agentql.com/basics/query-language)",
+  "content": "custom_query = \"\"\"\n{\n    title\n    text_content[]\n}\n\"\"\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-custom-agentql-query-for-specific-data-extraction-(see-https://docs.agentql.com/basics/query-language)",
+  "links": []
+}

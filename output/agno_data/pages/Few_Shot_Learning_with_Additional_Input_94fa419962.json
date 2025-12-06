@@ -1,0 +1,14 @@
+{
+  "title": "Few-Shot Learning with Additional Input",
+  "content": "Source: https://docs.agno.com/basics/context/agent/usage/few-shot-learning\n\nThis example demonstrates how to use additional\\_input with an Agent to teach proper response patterns through few-shot learning, specifically for customer support scenarios.\n\n```python few_shot_learning.py theme={null}\n\"\"\"\nThis example demonstrates how to use additional_input with an Agent\nto teach proper response patterns through few-shot learning.\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.models.message import Message\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#few-shot-learning-with-additional-input",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "MySQL",
+  "content": "Source: https://docs.agno.com/integrations/database/mysql/overview\n\nLearn to use MySQL as a database for your Agents\n\nAgno supports using [MySQL](https://www.mysql.com/) as a database with the `MySQLDb` class.\n\n```python mysql_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.mysql import MySQLDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#mysql",
+  "links": []
+}

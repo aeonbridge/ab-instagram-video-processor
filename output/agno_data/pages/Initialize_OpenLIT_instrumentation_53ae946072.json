@@ -1,0 +1,8 @@
+{
+  "title": "Initialize OpenLIT instrumentation",
+  "content": "openlit.init(otlp_endpoint=\"http://127.0.0.1:4318\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-openlit-instrumentation",
+  "links": []
+}

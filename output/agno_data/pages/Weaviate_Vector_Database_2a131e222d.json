@@ -1,0 +1,32 @@
+{
+  "title": "Weaviate Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/weaviate/overview\n\nLearn how to use Weaviate as a vector database for your Knowledge Base\n\nFollow steps mentioned in [Weaviate setup guide](https://weaviate.io/developers/weaviate/quickstart) to setup Weaviate.\n\nInstall weaviate packages\n\n```python agent_with_knowledge.py theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.search import SearchType\nfrom agno.vectordb.weaviate import Distance, VectorIndex, Weaviate\n\nvector_db = Weaviate(\n    collection=\"recipes\",\n    search_type=SearchType.hybrid,\n    vector_index=VectorIndex.HNSW,\n    distance=Distance.COSINE,\n    local=True,  # Set to False if using Weaviate Cloud and True if using local instance\n)",
+  "code_samples": [
+    {
+      "code": "Run weaviate",
+      "language": "unknown"
+    },
+    {
+      "code": "or",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#weaviate-vector-database",
+  "links": []
+}

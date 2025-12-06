@@ -1,0 +1,19 @@
+{
+  "title": "And automatically recalled here",
+  "content": "agent.print_response(\"What's the best way to reach me?\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb",
+  "code_samples": [
+    {
+      "code": "**Best for:** Customer support, personal assistants, conversational apps where you want consistent memory behavior.\n\n### Agentic Memory (`enable_agentic_memory=True`)\n\nThe agent gets full control over memory management through built-in tools. It decides when to create, update, or delete memories based on the conversation context.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Agentic Memory (`enable_agentic_memory=True`)",
+      "id": "agentic-memory-(`enable_agentic_memory=true`)"
+    }
+  ],
+  "url": "llms-txt#and-automatically-recalled-here",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Check current memories",
+  "content": "print(\"\\nBefore optimization:\")\nmemories_before = agent.get_user_memories(user_id=user_id)\nprint(f\"  Memory count: {len(memories_before)}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#check-current-memories",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create knowledge base with hybrid search",
+  "content": "knowledge = Knowledge(\n    vector_db=LanceDb(\n        uri=\"tmp/lancedb\",\n        table_name=\"agno_assist_knowledge\",\n        search_type=SearchType.hybrid,  # Semantic + keyword search\n        embedder=OpenAIEmbedder(id=\"text-embedding-3-small\"),\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-knowledge-base-with-hybrid-search",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Define agents for the workflow",
+  "content": "researcher_agent = Agent(\n    name=\"Research Agent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[DuckDuckGoTools()],\n    role=\"Search the web and gather comprehensive research on the given topic\",\n    instructions=[\n        \"Search for the most recent and relevant information\",\n        \"Focus on credible sources and key insights\",\n        \"Summarize findings clearly and concisely\",\n    ],\n)\n\nwriter_agent = Agent(\n    name=\"Content Writer\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    role=\"Create engaging content based on research findings\",\n    instructions=[\n        \"Write in a clear, engaging, and professional tone\",\n        \"Structure content with proper headings and bullet points\",\n        \"Include key insights from the research\",\n        \"Keep content informative yet accessible\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-agents-for-the-workflow",
+  "links": []
+}

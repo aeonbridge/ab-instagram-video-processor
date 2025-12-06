@@ -1,0 +1,28 @@
+{
+  "title": "Workflow Run Cancellation",
+  "content": "Source: https://docs.agno.com/execution-control/run-cancellation/workflow-cancel-run\n\nLearn how to cancel a running workflow execution by starting a workflow run in a separate thread and cancelling it from another thread.\n\nThis example demonstrates how to cancel a running workflow execution by starting a workflow run in a separate thread and cancelling it from another thread. It shows proper handling of cancelled responses and thread management.\n\nWorkflow runs can be cancelled via the AgentOS API:\n\n**Reference:** [Cancel Workflow Run API](/reference-api/schema/workflows/cancel-workflow-run)",
+  "code_samples": [
+    {
+      "code": "## API Endpoint\n\nWorkflow runs can be cancelled via the AgentOS API:",
+      "language": "unknown"
+    },
+    {
+      "code": "**Example:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "API Endpoint",
+      "id": "api-endpoint"
+    }
+  ],
+  "url": "llms-txt#workflow-run-cancellation",
+  "links": []
+}

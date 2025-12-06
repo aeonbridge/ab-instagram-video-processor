@@ -1,0 +1,8 @@
+{
+  "title": "Example 2: Custom aspect ratio generator",
+  "content": "portrait_agent = Agent(\n    tools=[\n        NanoBananaTools(\n            aspect_ratio=\"2:3\"  # Portrait orientation\n        )\n    ],\n    name=\"Portrait NanoBanana Generator\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-2:-custom-aspect-ratio-generator",
+  "links": []
+}

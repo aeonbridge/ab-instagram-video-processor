@@ -1,0 +1,19 @@
+{
+  "title": "Selector for Image Video Generation Pipelines",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/selector-for-image-video-generation-pipelines\n\nThis example demonstrates **Workflows 2.0** router pattern for dynamically selecting between image and video generation pipelines.\n\nThis example demonstrates **Workflows 2.0** router pattern for dynamically selecting between image and video generation pipelines. It uses `Steps` to encapsulate each media type's workflow and a `Router` to intelligently choose the pipeline based on input analysis.\n\n* **Dynamic Routing**: Selects pipelines (`Steps`) based on input keywords (e.g., \"image\" or \"video\").\n* **Modular Pipelines**: Encapsulates image/video workflows as reusable `Steps` objects.\n* **Structured Inputs**: Uses Pydantic models for type-safe configuration (e.g., resolution, style).\n\n* **Nested Logic**: Embeds `Condition` and `Parallel` within a `Steps` sequence.\n* **Topic-Specialized Research**: Uses `Condition` to trigger parallel tech/news research for tech topics.\n* **Modular Design**: Encapsulates the entire workflow as a reusable `Steps` object.\n\n```python selector_for_image_video_generation_pipelines.py theme={null}\nfrom typing import List, Optional\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.models.gemini import GeminiTools\nfrom agno.tools.openai import OpenAITools\nfrom agno.workflow.router import Router\nfrom agno.workflow.step import Step\nfrom agno.workflow.steps import Steps\nfrom agno.workflow.types import StepInput\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Features:",
+      "id": "key-features:"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features:",
+      "id": "key-features:"
+    }
+  ],
+  "url": "llms-txt#selector-for-image-video-generation-pipelines",
+  "links": []
+}

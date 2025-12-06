@@ -1,0 +1,28 @@
+{
+  "title": "Cassandra Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/cassandra/overview\n\nLearn how to use Cassandra as a vector database for your Knowledge Base\n\nInstall cassandra packages\n\n```python agent_with_knowledge.py theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.cassandra import Cassandra\nfrom agno.knowledge.embedder.mistral import MistralEmbedder\nfrom agno.models.mistral import MistralChat\nfrom cassandra.cluster import Cluster",
+  "code_samples": [
+    {
+      "code": "Run cassandra",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#cassandra-vector-database",
+  "links": []
+}

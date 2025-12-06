@@ -1,0 +1,24 @@
+{
+  "title": "Configure Exa for broader web intelligence",
+  "content": "exa_tools = ExaTools(\n    num_results=10,               # Comprehensive but not overwhelming\n    include_domains=[\"reddit.com\", \"news.ycombinator.com\", \"medium.com\"],\n)\n\nprint(\"ExaTools configured for web search\")\npython  theme={null}\nfrom textwrap import dedent",
+  "code_samples": [
+    {
+      "code": "**Why these specific domains?**\n\n* **Reddit**: Early discussion indicators, community sentiment\n* **HackerNews**: Tech industry insights, developer opinions\n* **Medium**: Thought leadership, analysis articles\n\n## Step 3: Define Intelligence Strategy\n\n**Why do we need instructions?** We need to describe the strategy that the agent should take to collect and analyze content. Without clear instructions, the agent won't know how to use the tools effectively or what kind of analysis to provide.\n\n### 3a. Define the Data Collection Strategy",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Step 3: Define Intelligence Strategy",
+      "id": "step-3:-define-intelligence-strategy"
+    },
+    {
+      "level": "h3",
+      "text": "3a. Define the Data Collection Strategy",
+      "id": "3a.-define-the-data-collection-strategy"
+    }
+  ],
+  "url": "llms-txt#configure-exa-for-broader-web-intelligence",
+  "links": []
+}

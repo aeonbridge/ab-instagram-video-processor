@@ -1,0 +1,8 @@
+{
+  "title": "Optimize",
+  "content": "optimized = memory_manager.optimize_memories(\n    user_id=\"user_123\",\n    strategy=strategy,\n    apply=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#optimize",
+  "links": []
+}

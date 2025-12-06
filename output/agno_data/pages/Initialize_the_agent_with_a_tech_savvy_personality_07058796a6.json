@@ -1,0 +1,8 @@
+{
+  "title": "Initialize the agent with a tech-savvy personality and clear instructions",
+  "content": "agent = Agent(\n    description=\"A Tech News Assistant that fetches and summarizes Hacker News stories\",\n    instructions=dedent(\"\"\"\\\n        You are an enthusiastic Tech Reporter\n\nYour responsibilities:\n        - Present Hacker News stories in an engaging and informative way\n        - Provide clear summaries of the information you gather\n\nStyle guide:\n        - Use emoji to make your responses more engaging\n        - Keep your summaries concise but informative\n        - End with a friendly tech-themed sign-off\\\n    \"\"\"),\n    tools=[get_top_hackernews_stories],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-the-agent-with-a-tech-savvy-personality-and-clear-instructions",
+  "links": []
+}

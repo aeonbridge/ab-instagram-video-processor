@@ -1,0 +1,39 @@
+{
+  "title": "Browserbase",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/browserbase\n\n**BrowserbaseTools** enable an Agent to automate browser interactions using Browserbase, a headless browser service.\n\nThe following example requires Browserbase API credentials after you signup [here](https://www.browserbase.com/), and the Playwright library.\n\nThe following agent will use Browserbase to visit `https://quotes.toscrape.com` and extract content. Then navigate to page two of the website and get quotes from there as well.\n\n<Tip>View the [Startup Analyst MCP agent](/basics/tools/mcp/usage/stagehand)</Tip>\n\n| Parameter                 | Type   | Default | Description                                                                                                                                                                                           |\n| ------------------------- | ------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `api_key`                 | `str`  | `None`  | Browserbase API key. If not provided, uses BROWSERBASE\\_API\\_KEY env var.                                                                                                                             |\n| `project_id`              | `str`  | `None`  | Browserbase project ID. If not provided, uses BROWSERBASE\\_PROJECT\\_ID env var.                                                                                                                       |\n| `base_url`                | `str`  | `None`  | Custom Browserbase API endpoint URL. Only use this if you're using a self-hosted Browserbase instance or need to connect to a different region. If not provided, uses BROWSERBASE\\_BASE\\_URL env var. |\n| `enable_navigate_to`      | `bool` | `True`  | Enable the navigate\\_to functionality.                                                                                                                                                                |\n| `enable_screenshot`       | `bool` | `True`  | Enable the screenshot functionality.                                                                                                                                                                  |\n| `enable_get_page_content` | `bool` | `True`  | Enable the get\\_page\\_content functionality.                                                                                                                                                          |\n| `enable_close_session`    | `bool` | `True`  | Enable the close\\_session functionality.                                                                                                                                                              |\n| `all`                     | `bool` | `False` | Enable all functionality.                                                                                                                                                                             |\n\n| Function           | Description                                                                                                                                           |\n| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `navigate_to`      | Navigates to a URL. Takes a URL and an optional connect\\_url parameter.                                                                               |\n| `screenshot`       | Takes a screenshot of the current page. Takes a path to save the screenshot, a boolean for full-page capture, and an optional connect\\_url parameter. |\n| `get_page_content` | Gets the HTML content of the current page. Takes an optional connect\\_url parameter.                                                                  |\n| `close_session`    | Closes a browser session.                                                                                                                             |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/browserbase.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/browserbase_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will use Browserbase to visit `https://quotes.toscrape.com` and extract content. Then navigate to page two of the website and get quotes from there as well.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#browserbase",
+  "links": []
+}

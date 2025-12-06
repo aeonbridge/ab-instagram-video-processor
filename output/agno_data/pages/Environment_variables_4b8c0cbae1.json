@@ -1,0 +1,13 @@
+{
+  "title": "Environment variables",
+  "content": "Source: https://docs.agno.com/templates/infra-management/env-vars\n\nEnvironment variables can be added to resources using the `env_vars` parameter or the `env_file` parameter pointing to a `yaml` file. Examples\n\nThe apps in your templates are already configured to read environment variables.",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#environment-variables",
+  "links": []
+}

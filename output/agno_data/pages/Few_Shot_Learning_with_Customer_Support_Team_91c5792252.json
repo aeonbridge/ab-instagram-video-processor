@@ -1,0 +1,14 @@
+{
+  "title": "Few-Shot Learning with Customer Support Team",
+  "content": "Source: https://docs.agno.com/basics/input-output/team/usage/few-shot-learning\n\nThis example demonstrates few-shot learning by providing example conversations to teach a customer support team proper response patterns. The team learns from provided examples to handle different types of customer issues with appropriate escalation and communication patterns.\n\n```python cookbook/examples/teams/basic/few_shot_learning.py theme={null}\n\"\"\"\nThis example shows a straightforward use case of additional_input\nto teach a customer support team proper response patterns.\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.models.message import Message\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#few-shot-learning-with-customer-support-team",
+  "links": []
+}

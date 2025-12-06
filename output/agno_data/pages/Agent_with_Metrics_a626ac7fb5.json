@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Metrics",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/groq/usage/metrics\n\n```python cookbook/models/groq/metrics.py theme={null}\nfrom agno.agent import Agent, RunOutput\nfrom agno.models.groq import Groq\nfrom agno.tools.yfinance import YFinanceTools\nfrom agno.utils.pprint import pprint_run_response\nfrom rich.pretty import pprint\n\nagent = Agent(\n    model=Groq(id=\"llama-3.3-70b-versatile\"),\n    tools=[YFinanceTools(stock_price=True)],\n    markdown=True,\n)\n\nrun_output: RunOutput = agent.run(\"What is the stock price of NVDA\")\npprint_run_response(run_output)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-metrics",
+  "links": []
+}

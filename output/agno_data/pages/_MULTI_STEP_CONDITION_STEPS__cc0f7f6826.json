@@ -1,0 +1,8 @@
+{
+  "title": "=== MULTI-STEP CONDITION STEPS ===",
+  "content": "deep_exa_analysis_step = Step(\n    name=\"DeepExaAnalysis\",\n    description=\"Conduct deep analysis using Exa search capabilities\",\n    agent=exa_agent,\n)\n\ntrend_analysis_step = Step(\n    name=\"TrendAnalysis\",\n    description=\"Analyze trends and patterns from the research data\",\n    agent=trend_analyzer_agent,\n)\n\nfact_verification_step = Step(\n    name=\"FactVerification\",\n    description=\"Verify facts and cross-reference information\",\n    agent=fact_checker_agent,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#===-multi-step-condition-steps-===",
+  "links": []
+}

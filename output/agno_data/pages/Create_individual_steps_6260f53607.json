@@ -1,0 +1,8 @@
+{
+  "title": "Create individual steps",
+  "content": "research_hn_step = Step(name=\"Research HackerNews\", agent=researcher)\nresearch_web_step = Step(name=\"Research Web\", agent=researcher)\nwrite_step = Step(name=\"Write Article\", agent=writer)\nreview_step = Step(name=\"Review Article\", agent=reviewer)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-individual-steps",
+  "links": []
+}

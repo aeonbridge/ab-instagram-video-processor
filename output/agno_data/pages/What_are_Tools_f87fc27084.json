@@ -1,0 +1,8 @@
+{
+  "title": "What are Tools?",
+  "content": "Source: https://docs.agno.com/basics/tools/overview\n\nTools are functions your Agno Agents can use to get things done.\n\nTools are what make Agents and Teams capable of real-world action. While using LLMs directly you can only generate text responses, Agents and Teams equipped with tools can interact with external systems and perform practical actions.\n\nSome examples of actions that can be performed with tools are: searching the web, running SQL, sending an email or calling APIs.\n\nAgno comes with 120+ pre-built toolkits, which you can use to give your Agents all kind of abilities. You can also write your own tools, to give your Agents even more capabilities. The general syntax is:\n\n```python  theme={null}\nimport random\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools import tool\n\ndef get_weather(city: str) -> str:\n    \"\"\"Get the weather for the given city.\n    \n    Args:\n        city (str): The city to get the weather for.\n    \"\"\"\n\n# In a real implementation, this would call a weather API\n    weather_conditions = [\"sunny\", \"cloudy\", \"rainy\", \"snowy\", \"windy\"]\n    random_weather = random.choice(weather_conditions)\n\nreturn f\"The weather in {city} is {random_weather}.\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#what-are-tools?",
+  "links": []
+}

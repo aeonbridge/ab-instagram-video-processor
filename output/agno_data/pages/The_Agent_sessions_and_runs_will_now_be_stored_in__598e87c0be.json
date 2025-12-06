@@ -1,0 +1,19 @@
+{
+  "title": "The Agent sessions and runs will now be stored in SQLite",
+  "content": "agent.print_response(\"How many people live in Canada?\")\nagent.print_response(\"What is their national anthem?\")\nagent.print_response(\"List my messages one by one\")\n\n<Snippet file=\"db-sqlite-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/sqlite/sqlite_for_agent.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#the-agent-sessions-and-runs-will-now-be-stored-in-sqlite",
+  "links": []
+}

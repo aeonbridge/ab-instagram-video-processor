@@ -1,0 +1,28 @@
+{
+  "title": "Agent Session",
+  "content": "Source: https://docs.agno.com/examples/getting-started/09-agent-session\n\nThis example shows how to create an agent with persistent memory stored in a SQLite database. We set the session\\_id on the agent when resuming the conversation, this way the previous chat history is preserved.\n\n* Stores conversation history in a SQLite database\n* Continues conversations across multiple sessions\n* References previous context in responses\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run the agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#agent-session",
+  "links": []
+}

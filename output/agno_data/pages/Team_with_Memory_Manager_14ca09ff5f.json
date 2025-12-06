@@ -1,0 +1,14 @@
+{
+  "title": "Team with Memory Manager",
+  "content": "Source: https://docs.agno.com/basics/memory/team/usage/team-with-memory-manager\n\nThis example demonstrates how to use persistent memory with a team. After each run, user memories are created and updated, allowing the team to remember information about users across sessions and provide personalized experiences.\n\n```python cookbook/examples/teams/memory/01_team_with_memory_manager.py theme={null}\n\"\"\"\nThis example shows you how to use persistent memory with an Agent.\n\nAfter each run, user memories are created/updated.\n\nTo enable this, set `enable_user_memories=True` in the Agent config.\n\"\"\"\n\nfrom uuid import uuid4\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.memory import MemoryManager  # noqa: F401\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\ndb = PostgresDb(db_url=db_url)\n\nsession_id = str(uuid4())\njohn_doe_id = \"john_doe@example.com\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-with-memory-manager",
+  "links": []
+}

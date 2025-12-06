@@ -1,0 +1,29 @@
+{
+  "title": "Local File System",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/local/local-file-system\n\nLocalFileSystemTools enables agents to write files to the local file system with automatic directory management.\n\nThe following agent can write content to local files:\n\n| Parameter           | Type            | Default | Description                                                  |\n| ------------------- | --------------- | ------- | ------------------------------------------------------------ |\n| `target_directory`  | `Optional[str]` | `None`  | Default directory to write files to. Uses current directory. |\n| `default_extension` | `str`           | `\"txt\"` | Default file extension to use if none specified.             |\n| `enable_write_file` | `bool`          | `True`  | Enable file writing functionality.                           |\n\n| Function     | Description                                              |\n| ------------ | -------------------------------------------------------- |\n| `write_file` | Write content to a local file with customizable options. |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/local_file_system.py)\n* [Python pathlib Documentation](https://docs.python.org/3/library/pathlib.html)\n* [File I/O Best Practices](https://docs.python.org/3/tutorial/inputoutput.html)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#local-file-system",
+  "links": []
+}

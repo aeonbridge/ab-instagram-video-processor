@@ -1,0 +1,8 @@
+{
+  "title": "Send a direct message",
+  "content": "agent.print_response(\n    \"Send direct message to the user @AgnoAgi telling them I want to learn more about them and a link to their community.\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#send-a-direct-message",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Image As Input",
+  "content": "Source: https://docs.agno.com/basics/multimodal/images/image-input\n\nLearn how to use image as input with Agno agents.\n\nAgno supports images as input to agents and teams.  Take a look at the [compatibility matrix](/basics/models/compatibility#multimodal-support) to see which models support images as input.\n\nLet's create an agent that can understand images and make tool calls as needed\n\n## Developer Resources\n\n* View more [Examples](/basics/multimodal/images/usage/image-to-text)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#image-as-input",
+  "links": []
+}

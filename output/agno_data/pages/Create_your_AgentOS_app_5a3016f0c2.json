@@ -1,0 +1,8 @@
+{
+  "title": "Create your AgentOS app",
+  "content": "agent_os = AgentOS(agents=[agent])\napp = agent_os.get_app()",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-your-agentos-app",
+  "links": []
+}

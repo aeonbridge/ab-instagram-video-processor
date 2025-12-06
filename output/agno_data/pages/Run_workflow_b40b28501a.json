@@ -1,0 +1,8 @@
+{
+  "title": "Run workflow",
+  "content": "response = workflow.run(input=\"AI trends in 2024\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-workflow",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "=== WORKFLOW STEPS ===",
+  "content": "write_step = Step(\n    name=\"write_story\",\n    description=\"Write initial story\",\n    agent=story_writer,\n)\n\nedit_step = Step(\n    name=\"edit_story\",\n    description=\"Edit and improve the story\",\n    agent=story_editor,\n)\n\nformat_step = Step(\n    name=\"format_story\",\n    description=\"Format the story into sections\",\n    agent=story_formatter,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#===-workflow-steps-===",
+  "links": []
+}

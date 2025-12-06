@@ -1,0 +1,13 @@
+{
+  "title": "Initialize and connect to the SSE MCP server",
+  "content": "mcp_tools = MCPTools(url=server_url, transport=\"sse\")\nawait mcp_tools.connect()\n\ntry:\n    agent = Agent(model=OpenAIChat(id=\"gpt-5-mini\"), tools=[mcp_tools])\n    await agent.aprint_response(\"What is the license for this project?\", stream=True)\nfinally:\n    # Always close the connection when done\n    await mcp_tools.close()\npython  theme={null}\nfrom agno.tools.mcp import MCPTools, SSEClientParams\n\nserver_params = SSEClientParams(\n    url=...,\n    headers=...,\n    timeout=...,\n    sse_read_timeout=...,\n)",
+  "code_samples": [
+    {
+      "code": "You can also use the `server_params` argument to define the MCP connection. This way you can specify the headers to send to the MCP server with every request, and the timeout values:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#initialize-and-connect-to-the-sse-mcp-server",
+  "links": []
+}

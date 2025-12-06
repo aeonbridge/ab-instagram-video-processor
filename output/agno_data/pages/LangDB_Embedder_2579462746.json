@@ -1,0 +1,14 @@
+{
+  "title": "LangDB Embedder",
+  "content": "Source: https://docs.agno.com/basics/knowledge/embedder/langdb/usage/langdb-embedder\n\n```python  theme={null}\n\nfrom agno.knowledge.embedder.langdb import LangDBEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\n\nembeddings = LangDBEmbedder().get_embedding(\"Embed me\")",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#langdb-embedder",
+  "links": []
+}

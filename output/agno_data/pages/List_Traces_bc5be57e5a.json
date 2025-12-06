@@ -1,0 +1,8 @@
+{
+  "title": "List Traces",
+  "content": "Source: https://docs.agno.com/reference-api/schema/tracing/list-traces\n\nget /traces\nRetrieve a paginated list of execution traces with optional filtering.\n\n**Traces provide observability into:**\n- Agent execution flows\n- Model invocations and token usage\n- Tool calls and their results\n- Errors and performance bottlenecks\n\n**Filtering Options:**\n- By run, session, user, or agent ID\n- By status (OK, ERROR)\n- By time range\n\n**Pagination:**\n- Use `page` (1-indexed) and `limit` parameters\n- Response includes pagination metadata (total_pages, total_count, etc.)\n\n**Response Format:**\nReturns summary information for each trace. Use GET `/traces/{trace_id}` for detailed hierarchy.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#list-traces",
+  "links": []
+}

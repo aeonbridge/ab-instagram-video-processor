@@ -1,0 +1,14 @@
+{
+  "title": "Workflow Tools",
+  "content": "Source: https://docs.agno.com/basics/workflows/workflow-tools\n\nHow to execute a workflow inside an Agent or Team\n\nYou can give a workflow to an Agent or Team to execute using `WorkflowTools`.\n\n```python  theme={null}\nfrom agno.agent import Agent    \nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.workflow import WorkflowTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#workflow-tools",
+  "links": []
+}

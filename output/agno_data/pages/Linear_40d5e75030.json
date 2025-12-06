@@ -1,0 +1,39 @@
+{
+  "title": "Linear",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/linear\n\n**LinearTool** enable an Agent to perform [Linear](https://linear.app/) tasks.\n\nThe following examples require Linear API key, which can be obtained from [here](https://linear.app/settings/account/security).\n\nThe following agent will use Linear API to search for issues in a project for a specific user.\n\n| Parameter | Type  | Default | Description         |\n| --------- | ----- | ------- | ------------------- |\n| `api_key` | `str` | `None`  | Add Linear API key. |\n\n| Function                   | Description                                                      |\n| -------------------------- | ---------------------------------------------------------------- |\n| `get_user_details`         | Fetch authenticated user details.                                |\n| `get_issue_details`        | Retrieve details of a specific issue by issue ID.                |\n| `create_issue`             | Create a new issue within a specific project and team.           |\n| `update_issue`             | Update the title or state of a specific issue by issue ID.       |\n| `get_user_assigned_issues` | Retrieve issues assigned to a specific user by user ID.          |\n| `get_workflow_issues`      | Retrieve issues within a specific workflow state by workflow ID. |\n| `get_high_priority_issues` | Retrieve issues with a high priority (priority `<=` 2).          |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/linear.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/linear_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will use Linear API to search for issues in a project for a specific user.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#linear",
+  "links": []
+}

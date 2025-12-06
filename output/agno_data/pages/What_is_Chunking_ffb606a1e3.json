@@ -1,0 +1,19 @@
+{
+  "title": "What is Chunking?",
+  "content": "Source: https://docs.agno.com/basics/knowledge/chunking/overview\n\nChunking is the process of breaking down large documents into smaller pieces for effective vector search and retrieval.\n\nChunking is the process of dividing content into manageable pieces before converting them into embeddings and storing them in vector databases. The chunking strategy you choose directly impacts search quality and retrieval accuracy.\n\nDifferent chunking strategies serve different purposes. For example, when processing a recipe book, different strategies produce different results:\n\n* **Fixed Size**: Splits text every 500 characters (which may break recipes mid-instruction)\n* **Semantic**: Keeps complete recipes together based on meaning\n* **Document**: Each page becomes a chunk\n\nThe strategy affects whether you get complete, relevant results or fragmented pieces.\n\n## Available Chunking Strategies\n\n<CardGroup cols={3}>\n  <Card title=\"Fixed Size Chunking\" icon=\"ruler\" href=\"/basics/knowledge/chunking/fixed-size-chunking\">\n    Split content into uniform chunks with specified size and overlap.\n  </Card>\n\n<Card title=\"Semantic Chunking\" icon=\"brain\" href=\"/basics/knowledge/chunking/semantic-chunking\">\n    Use semantic similarity to identify natural breakpoints in content.\n  </Card>\n\n<Card title=\"Recursive Chunking\" icon=\"sitemap\" href=\"/basics/knowledge/chunking/recursive-chunking\">\n    Recursively split content using multiple separators for hierarchical processing.\n  </Card>\n\n<Card title=\"Document Chunking\" icon=\"file-lines\" href=\"/basics/knowledge/chunking/document-chunking\">\n    Preserve document structure by treating sections as individual chunks.\n  </Card>\n\n<Card title=\"CSV Row Chunking\" icon=\"table\" href=\"/basics/knowledge/chunking/csv-row-chunking\">\n    Splits CSV files by treating each row as an individual chunk. Only compatible with CSVs.\n  </Card>\n\n<Card title=\"Markdown Chunking\" icon=\"markdown\" href=\"/basics/knowledge/chunking/markdown-chunking\">\n    Split markdown content while preserving heading structure and hierarchy. Only compatible with Markdown files.\n  </Card>\n\n<Card title=\"Agentic Chunking\" icon=\"robot\" href=\"/basics/knowledge/chunking/agentic-chunking\">\n    Use AI to intelligently determine optimal chunk boundaries.\n  </Card>\n\n<Card title=\"Custom Chunking\" icon=\"code\" href=\"/basics/knowledge/chunking/custom-chunking\">\n    Build your own chunking strategy for specialized use cases.\n  </Card>\n</CardGroup>\n\n## Using Chunking Strategies\n\nChunking strategies are configured when setting up readers for your knowledge base:\n\n```python  theme={null}\nfrom agno.knowledge.chunking.semantic import SemanticChunking\nfrom agno.knowledge.reader.pdf_reader import PDFReader\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\nfrom agno.db.postgres import PostgresDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Available Chunking Strategies",
+      "id": "available-chunking-strategies"
+    },
+    {
+      "level": "h2",
+      "text": "Using Chunking Strategies",
+      "id": "using-chunking-strategies"
+    }
+  ],
+  "url": "llms-txt#what-is-chunking?",
+  "links": []
+}

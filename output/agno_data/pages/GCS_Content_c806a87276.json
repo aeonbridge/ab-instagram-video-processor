@@ -1,0 +1,8 @@
+{
+  "title": "GCS Content",
+  "content": "Source: https://docs.agno.com/reference/knowledge/remote-content/gcs-content\n\nGCSContent is a class that allows you to add content from a GCS bucket to the knowledge base.\n\n<Snippet file=\"gcs-remote-content-params.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#gcs-content",
+  "links": []
+}

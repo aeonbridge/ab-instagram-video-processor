@@ -1,0 +1,14 @@
+{
+  "title": "Agent with URL Context and Search",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/url-context-with-search\n\n```python cookbook/models/google/gemini/url_context_with_search.py theme={null}\n\"\"\"Combine URL context with Google Search for comprehensive web analysis.\n\nfrom agno.agent import Agent\nfrom agno.models.google import Gemini",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-url-context-and-search",
+  "links": []
+}

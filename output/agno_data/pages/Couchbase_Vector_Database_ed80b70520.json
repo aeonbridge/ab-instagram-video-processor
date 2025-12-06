@@ -1,0 +1,52 @@
+{
+  "title": "Couchbase Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/couchbase/overview\n\nLearn how to use Couchbase as a vector database for your Knowledge Base\n\n### Local Setup (Docker)\n\nRun Couchbase locally using Docker:\n\n1. Access the Couchbase UI at: [http://localhost:8091](http://localhost:8091)\n2. Login with username: `Administrator` and password: `password`\n3. Create a bucket named `recipe_bucket`, a scope `recipe_scope`, and a collection `recipes`\n\n### Managed Setup (Capella)\n\nFor a managed cluster, use [Couchbase Capella](https://cloud.couchbase.com/):\n\n* Follow Capella's UI to create a database, bucket, scope, and collection\n\n### Environment Variables\n\nSet up your environment variables:\n\nFor Capella, set `COUCHBASE_CONNECTION_STRING` to your Capella connection string.\n\n### Install Dependencies\n\n```python agent_with_knowledge.py theme={null}\nimport os\nimport time\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.couchbase import CouchbaseSearch\nfrom couchbase.options import ClusterOptions, KnownConfigProfiles\nfrom couchbase.auth import PasswordAuthenticator\nfrom couchbase.management.search import SearchIndex",
+  "code_samples": [
+    {
+      "code": "1. Access the Couchbase UI at: [http://localhost:8091](http://localhost:8091)\n2. Login with username: `Administrator` and password: `password`\n3. Create a bucket named `recipe_bucket`, a scope `recipe_scope`, and a collection `recipes`\n\n### Managed Setup (Capella)\n\nFor a managed cluster, use [Couchbase Capella](https://cloud.couchbase.com/):\n\n* Follow Capella's UI to create a database, bucket, scope, and collection\n\n### Environment Variables\n\nSet up your environment variables:",
+      "language": "unknown"
+    },
+    {
+      "code": "For Capella, set `COUCHBASE_CONNECTION_STRING` to your Capella connection string.\n\n### Install Dependencies",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h3",
+      "text": "Local Setup (Docker)",
+      "id": "local-setup-(docker)"
+    },
+    {
+      "level": "h3",
+      "text": "Managed Setup (Capella)",
+      "id": "managed-setup-(capella)"
+    },
+    {
+      "level": "h3",
+      "text": "Environment Variables",
+      "id": "environment-variables"
+    },
+    {
+      "level": "h3",
+      "text": "Install Dependencies",
+      "id": "install-dependencies"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#couchbase-vector-database",
+  "links": []
+}

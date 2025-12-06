@@ -1,0 +1,41 @@
+{
+  "title": "Agent Tools",
+  "content": "Source: https://docs.agno.com/basics/tools/agent\n\nLearn how to use tools in Agno to build AI agents.\n\n**Agents use tools to take actions and interact with external systems**.\n\nTools are functions that an Agent can run to achieve tasks. For example: searching the web, running SQL, sending an email or calling APIs. You can use any python function as a tool or use a pre-built Agno **toolkit**.\n\nThe general syntax is:\n\nAgno provides many pre-built **toolkits** that you can add to your Agents. For example, let's use the DuckDuckGo toolkit to search the web.\n\n<Tip>\n  You can find more toolkits in the [Toolkits](/integrations/toolkits) guide.\n</Tip>\n\n<Steps>\n  <Step title=\"Create Web Search Agent\">\n    Create a file `web_search.py`\n\n<Step title=\"Run the agent\">\n    Install libraries\n\n## Writing your own Tools\n\nFor more control, write your own python functions and add them as tools to an Agent. For example, here's how to add a `get_top_hackernews_stories` tool to an Agent.\n\n* [Available toolkits](/integrations/toolkits)\n* [Creating your own tools](/basics/tools/creating-tools/overview)\n\n## Developer Resources\n\n* View the [Agent schema](/reference/agents/agent)\n* View the [Knowledge schema](/reference/knowledge/knowledge)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/knowledge/)",
+  "code_samples": [
+    {
+      "code": "## Using a Toolkit\n\nAgno provides many pre-built **toolkits** that you can add to your Agents. For example, let's use the DuckDuckGo toolkit to search the web.\n\n<Tip>\n  You can find more toolkits in the [Toolkits](/integrations/toolkits) guide.\n</Tip>\n\n<Steps>\n  <Step title=\"Create Web Search Agent\">\n    Create a file `web_search.py`",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">\n    Install libraries",
+      "language": "unknown"
+    },
+    {
+      "code": "Run the agent",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n</Steps>\n\n## Writing your own Tools\n\nFor more control, write your own python functions and add them as tools to an Agent. For example, here's how to add a `get_top_hackernews_stories` tool to an Agent.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using a Toolkit",
+      "id": "using-a-toolkit"
+    },
+    {
+      "level": "h2",
+      "text": "Writing your own Tools",
+      "id": "writing-your-own-tools"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#agent-tools",
+  "links": []
+}

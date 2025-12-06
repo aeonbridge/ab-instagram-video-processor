@@ -1,0 +1,8 @@
+{
+  "title": "Teams with Knowledge",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/overview\n\nLearn how to use teams with knowledge bases.\n\nTeams can use a knowledge base to store and retrieve information, just like agents:\n\n```python  theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge import Knowledge\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.vectordb.lancedb import LanceDb",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#teams-with-knowledge",
+  "links": []
+}

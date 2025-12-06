@@ -1,0 +1,31 @@
+{
+  "title": "Initialize Redis Vector DB",
+  "content": "vector_db = RedisVectorDb(\n    index_name=INDEX_NAME,\n    redis_url=REDIS_URL,\n    search_type=SearchType.vector,  # try SearchType.hybrid for hybrid search\n)\n\ncontents_db = PostgresDb(\n    db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n    knowledge_table=\"knowledge_contents\",\n)\n\nknowledge = Knowledge(\n    name=\"My Qdrant Vector Knowledge Base\",\n    description=\"This is a knowledge base that uses a Qdrant Vector DB\",\n    vector_db=vector_db,\n    contents_db=contents_db,\n)\n\nknowledge.add_content(\n    name=\"Recipes\",\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n    metadata={\"doc_type\": \"recipe_book\"},\n)\n\nagent = Agent(knowledge=knowledge)\nagent.print_response(\"List down the ingredients to make Massaman Gai\", markdown=True)\n\nvector_db.delete_by_name(\"Recipes\")\n\nvector_db.delete_by_metadata({\"doc_type\": \"recipe_book\"})\nbash  theme={null}\n    pip install -U redis redisvl pypdf openai agno\n    bash  theme={null}\n    docker run -d --name my-redis -p 6379:6379 -p 8001:8001 redis/redis-stack:latest\n    bash Mac theme={null}\n      python redis_db.py\n      bash Windows theme={null}\n      python redis_db.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Redis\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#initialize-redis-vector-db",
+  "links": []
+}

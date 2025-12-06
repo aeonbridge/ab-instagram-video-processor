@@ -1,0 +1,24 @@
+{
+  "title": "(Optional) Set up your Cassandra DB",
+  "content": "session = cluster.connect()\nsession.execute(\n    \"\"\"\n    CREATE KEYSPACE IF NOT EXISTS testkeyspace\n    WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 }\n    \"\"\"\n)\n\nknowledge_base = Knowledge(\n    vector_db=Cassandra(table_name=\"recipes\", keyspace=\"testkeyspace\", session=session, embedder=MistralEmbedder()),\n)\n\nknowledge_base.add_content(\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n)\n\nagent = Agent(\n    model=MistralChat(provider=\"mistral-large-latest\", api_key=os.getenv(\"MISTRAL_API_KEY\")),\n    knowledge=knowledge_base,\n)\n\nagent.print_response(\n    \"What are the health benefits of Khao Niew Dam Piek Maphrao Awn?\", markdown=True, show_full_reasoning=True\n)\npython async_cassandra.py theme={null}\n    import asyncio\n\nfrom agno.agent import Agent\n    from agno.knowledge.embedder.mistral import MistralEmbedder\n    from agno.knowledge.knowledge import Knowledge\n    from agno.models.mistral import MistralChat\n    from agno.vectordb.cassandra import Cassandra\n\ntry:\n        from cassandra.cluster import Cluster  # type: ignore\n    except (ImportError, ModuleNotFoundError):\n        raise ImportError(\n            \"Could not import cassandra-driver python package.Please install it with pip install cassandra-driver.\"\n        )\n\nsession = cluster.connect()\n    session.execute(\n        \"\"\"\n        CREATE KEYSPACE IF NOT EXISTS testkeyspace\n        WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 }\n        \"\"\"\n    )\n\nknowledge_base = Knowledge(\n        vector_db=Cassandra(\n            table_name=\"recipes\",\n            keyspace=\"testkeyspace\",\n            session=session,\n            embedder=MistralEmbedder(),\n        ),\n    )\n\nagent = Agent(\n        model=MistralChat(),\n        knowledge=knowledge_base,\n    )\n\nif __name__ == \"__main__\":\n        asyncio.run(knowledge_base.add_content_async(\n            url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n            )\n        )\n\n# Create and use the agent\n        asyncio.run(\n            agent.aprint_response(\n                \"What are the health benefits of Khao Niew Dam Piek Maphrao Awn?\",\n                markdown=True,\n            )\n        )\n    ```\n\n<Tip className=\"mt-4\">\n      Use <code>aload()</code> and <code>aprint\\_response()</code> methods with <code>asyncio.run()</code> for non-blocking operations in high-throughput applications.\n    </Tip>\n  </div>\n</Card>\n\n<Snippet file=\"vectordb_cassandra_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook (Sync)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/cassandra_db/cassandra_db.py)\n* View [Cookbook (Async)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/cassandra_db/async_cassandra_db.py)",
+  "code_samples": [
+    {
+      "code": "<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      Cassandra also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Cassandra Params",
+      "id": "cassandra-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#(optional)-set-up-your-cassandra-db",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "JWT Middleware with Cookies",
+  "content": "Source: https://docs.agno.com/agent-os/usage/middleware/jwt-cookies\n\nAgentOS with JWT middleware using HTTP-only cookies for secure web authentication\n\nThis example demonstrates how to use JWT middleware with AgentOS using HTTP-only cookies instead of Authorization headers.\nThis approach is more secure for web applications as it prevents XSS attacks.\n\n```python jwt_cookies.py theme={null}\nfrom datetime import UTC, datetime, timedelta\n\nimport jwt\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.os.middleware import JWTMiddleware\nfrom agno.os.middleware.jwt import TokenSource\nfrom fastapi import FastAPI, Response",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#jwt-middleware-with-cookies",
+  "links": []
+}

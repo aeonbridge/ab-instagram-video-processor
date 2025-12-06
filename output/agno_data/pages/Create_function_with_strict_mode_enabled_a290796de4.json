@@ -1,0 +1,8 @@
+{
+  "title": "Create function with strict mode enabled",
+  "content": "weather_tool = Function(\n    name=\"get_weather\",\n    description=\"Get current weather information for a location\",\n    parameters={\n        \"type\": \"object\",\n        \"properties\": {\n            \"location\": {\n                \"type\": \"string\",\n                \"description\": \"The city and state, e.g. San Francisco, CA\",\n            },\n            \"unit\": {\n                \"type\": \"string\",\n                \"enum\": [\"celsius\", \"fahrenheit\"],\n                \"description\": \"Temperature unit\",\n            },\n        },\n        \"required\": [\"location\"],\n        \"additionalProperties\": False,\n    },\n    strict=True,  # Enable strict mode for validated tool parameters\n    entrypoint=get_weather,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-function-with-strict-mode-enabled",
+  "links": []
+}

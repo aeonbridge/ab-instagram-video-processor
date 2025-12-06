@@ -1,0 +1,52 @@
+{
+  "title": "Oxylabs",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/oxylabs\n\n**OxylabsTools** provide Agents with access to Oxylabs' powerful web scraping capabilities, including SERP, Amazon product data, and universal web scraping endpoints.\n\nThe following examples require the `oxylabs-sdk` library:\n\nSet your credentials as environment variables (recommended):\n\n## Amazon Product Search\n\n| Parameter  | Type  | Default | Description                                                                             |\n| ---------- | ----- | ------- | --------------------------------------------------------------------------------------- |\n| `username` | `str` | `None`  | Oxylabs dashboard username. If not provided, it defaults to `OXYLABS_USERNAME` env var. |\n| `password` | `str` | `None`  | Oxylabs dashboard password. If not provided, it defaults to `OXYLABS_PASSWORD` env var. |\n\n| Function                 | Description                                                                                            |\n| ------------------------ | ------------------------------------------------------------------------------------------------------ |\n| `search_google`          | Performs a Google SERP search. Accepts all the standard Oxylabs params (e.g. `query`, `geo_location`). |\n| `get_amazon_product`     | Retrieves the details of Amazon product(s). Accepts ASIN code or full product URL.                     |\n| `search_amazon_products` | Searches for Amazon product(s) using a search term.                                                    |\n| `scrape_website`         | Scrapes a webpage URL.                                                                                 |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/oxylabs.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/oxylabs_tools.py)\n* View [Oxylabs MCP Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/mcp/oxylabs.py)",
+  "code_samples": [
+    {
+      "code": "Set your credentials as environment variables (recommended):",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    },
+    {
+      "code": "## Amazon Product Search",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Amazon Product Search",
+      "id": "amazon-product-search"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#oxylabs",
+  "links": []
+}

@@ -1,0 +1,25 @@
+{
+  "title": "-*- FastAPI running on ECS",
+  "content": "prd_fastapi = FastApi(\n    ...\n    # To enable HTTPS, create an ACM certificate and add the ARN below:\n    load_balancer_enable_https=True,\n    load_balancer_certificate_arn=\"arn:aws:acm:us-east-1:497891874516:certificate/6598c24a-d4fc-4f17-8ee0-0d3906eb705f\",\n    ...\n)\nbash terminal theme={null}\n  ag infra up --env prd --infra aws --name listener\n  bash shorthand theme={null}\n  ag infra up -e prd -i aws -n listener\n  bash terminal theme={null}\n  ag infra patch --env prd --infra aws --name listener\n  bash shorthand theme={null}\n  ag infra patch -e prd -i aws -n listener\n  ```\n</CodeGroup>\n\nAfter this, all HTTP requests should redirect to HTTPS automatically.",
+  "code_samples": [
+    {
+      "code": "4. Create new Loadbalancer Listeners\n\nCreate new listeners for the loadbalancer to pickup the HTTPs configuration.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n<Note>The certificate should be `Issued` before applying it.</Note>\n\nAfter this, `https` should be working on your custom domain.\n\n5. Update existing listeners to redirect HTTP to HTTPS\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#-*--fastapi-running-on-ecs",
+  "links": []
+}

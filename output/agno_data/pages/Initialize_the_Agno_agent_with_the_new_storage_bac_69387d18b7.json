@@ -1,0 +1,8 @@
+{
+  "title": "Initialize the Agno agent with the new storage backend and a DuckDuckGo search tool.",
+  "content": "agent1 = Agent(\n    db=db,\n    tools=[DuckDuckGoTools()],\n    add_history_to_context=True,\n    debug_mode=False,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-the-agno-agent-with-the-new-storage-backend-and-a-duckduckgo-search-tool.",
+  "links": []
+}

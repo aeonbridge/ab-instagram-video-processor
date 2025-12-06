@@ -1,0 +1,75 @@
+{
+  "title": "Migrating to Agno v2.0",
+  "content": "Source: https://docs.agno.com/how-to/v2-migration\n\nGuide to migrate your Agno applications from v1 to v2.\n\nIf you have questions during your migration, we can help! Find us on [Discord](https://discord.gg/4MtYHHrgA8) or [Discourse](https://community.agno.com/).\n\n<Tip>\n  Reference the [v2.0 Changelog](/how-to/v2-changelog) for the full list of\n  changes.\n</Tip>\n\n## Installing Agno v2\n\nIf you are already using Agno, you can upgrade to v2 by running:\n\nOtherwise, you can install the latest version of Agno v2 by running:\n\n## Migrating your Agno DB\n\nIf you used our `Storage` or `Memory` functionalities to store Agent sessions and memories in your database, you can start by migrating your tables.\n\nUse our migration script: [`libs/agno/migrations/v1_to_v2/migrate_to_v2.py`](https://github.com/agno-agi/agno/blob/main/libs/agno/migrations/v1_to_v2/migrate_to_v2.py)\n\nThe script supports PostgreSQL, MySQL, SQLite, and MongoDB. Update the database connection settings, the batch size (useful if you are migrating large tables) in the script and run it.\n\n* The script won't cleanup the old tables, in case you still need them.\n* The script is idempotent. If something goes wrong or if you stop it mid-run, you can run it again.\n* Metrics are automatically converted from v1 to v2 format.\n\n## Migrating your Agno code\n\nEach section here covers a specific framework domain, with before and after examples and detailed explanations where needed.\n\n### 1. Agents and Teams\n\n[Agents](/basics/agents/overview) and [Teams](/basics/teams/overview) are the main building blocks in the Agno framework.\n\nBelow are some of the v2 updates we have made to the `Agent` and `Team` classes:\n\n1.1. Streaming responses with `arun` now returns an `AsyncIterator`, not a coroutine. This is how you consume the resulting events now, when streaming a run:\n\n1.2. The `RunResponse` class is now `RunOutput`. This is the type of the results you get when running an Agent:\n\n1.3. The events you get when streaming an Agent result have been renamed:\n\n* `RunOutputStartedEvent` → `RunStartedEvent`\n* `RunOutputCompletedEvent` → `RunCompletedEvent`\n* `RunOutputErrorEvent` → `RunErrorEvent`\n* `RunOutputCancelledEvent` → `RunCancelledEvent`\n* `RunOutputContinuedEvent` → `RunContinuedEvent`\n* `RunOutputPausedEvent` → `RunPausedEvent`\n* `RunOutputContentEvent` → `RunContentEvent`\n\n1.4. Similarly, for Team output events:\n\n* `TeamRunOutputStartedEvent` → `TeamRunStartedEvent`\n* `TeamRunOutputCompletedEvent` → `TeamRunCompletedEvent`\n* `TeamRunOutputErrorEvent` → `TeamRunErrorEvent`\n* `TeamRunOutputCancelledEvent` → `TeamRunCancelledEvent`\n* `TeamRunOutputContentEvent` → `TeamRunContentEvent`\n\n1.5. The `add_state_in_messages` parameter has been deprecated. Variables in instructions are now resolved automatically by default.\n1.6. The `context` parameter has been renamed to `dependencies`.\n\nThis is how it looked like on v1:\n\nThis is how it looks like now, on v2:\n\n<Tip>\n  See the full list of changes in the [Agent\n  Updates](/how-to/v2-changelog#agent-updates) section of the changelog.\n</Tip>\n\nStorage is used to persist Agent sessions, state and memories in a database.\n\nThis is how Storage looks like on v1:\n\nThese are the changes we have made for v2:\n\n2.1. The `Storage` classes have moved from `agno/storage` to `agno/db`. We will now refer to them as our `Db` classes.\n2.2. The `mode` parameter has been deprecated. The same instance can now be used by Agents, Teams and Workflows.\n\n2.3. The `table_name` parameter has been deprecated. One instance now handles multiple tables, you can define their names individually.\n\nThese are all the supported tables, each used to persist data related to a specific domain:\n\n2.4. Previously running a `Team` would create a team session and sessions for every team member participating in the run. Now, only the `Team` session is created. The runs for the team leader and all members can be found in the `Team` session.\n\n```python v2_storage_team_sessions.py theme={null}\nteam.run(...)\n\nteam_session = team.get_latest_session()",
+  "code_samples": [
+    {
+      "code": "Otherwise, you can install the latest version of Agno v2 by running:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Migrating your Agno DB\n\nIf you used our `Storage` or `Memory` functionalities to store Agent sessions and memories in your database, you can start by migrating your tables.\n\nUse our migration script: [`libs/agno/migrations/v1_to_v2/migrate_to_v2.py`](https://github.com/agno-agi/agno/blob/main/libs/agno/migrations/v1_to_v2/migrate_to_v2.py)\n\nThe script supports PostgreSQL, MySQL, SQLite, and MongoDB. Update the database connection settings, the batch size (useful if you are migrating large tables) in the script and run it.\n\nNotice:\n\n* The script won't cleanup the old tables, in case you still need them.\n* The script is idempotent. If something goes wrong or if you stop it mid-run, you can run it again.\n* Metrics are automatically converted from v1 to v2 format.\n\n## Migrating your Agno code\n\nEach section here covers a specific framework domain, with before and after examples and detailed explanations where needed.\n\n### 1. Agents and Teams\n\n[Agents](/basics/agents/overview) and [Teams](/basics/teams/overview) are the main building blocks in the Agno framework.\n\nBelow are some of the v2 updates we have made to the `Agent` and `Team` classes:\n\n1.1. Streaming responses with `arun` now returns an `AsyncIterator`, not a coroutine. This is how you consume the resulting events now, when streaming a run:",
+      "language": "unknown"
+    },
+    {
+      "code": "1.2. The `RunResponse` class is now `RunOutput`. This is the type of the results you get when running an Agent:",
+      "language": "unknown"
+    },
+    {
+      "code": "1.3. The events you get when streaming an Agent result have been renamed:\n\n* `RunOutputStartedEvent` → `RunStartedEvent`\n* `RunOutputCompletedEvent` → `RunCompletedEvent`\n* `RunOutputErrorEvent` → `RunErrorEvent`\n* `RunOutputCancelledEvent` → `RunCancelledEvent`\n* `RunOutputContinuedEvent` → `RunContinuedEvent`\n* `RunOutputPausedEvent` → `RunPausedEvent`\n* `RunOutputContentEvent` → `RunContentEvent`\n\n1.4. Similarly, for Team output events:\n\n* `TeamRunOutputStartedEvent` → `TeamRunStartedEvent`\n* `TeamRunOutputCompletedEvent` → `TeamRunCompletedEvent`\n* `TeamRunOutputErrorEvent` → `TeamRunErrorEvent`\n* `TeamRunOutputCancelledEvent` → `TeamRunCancelledEvent`\n* `TeamRunOutputContentEvent` → `TeamRunContentEvent`\n\n1.5. The `add_state_in_messages` parameter has been deprecated. Variables in instructions are now resolved automatically by default.\n1.6. The `context` parameter has been renamed to `dependencies`.\n\nThis is how it looked like on v1:",
+      "language": "unknown"
+    },
+    {
+      "code": "This is how it looks like now, on v2:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Tip>\n  See the full list of changes in the [Agent\n  Updates](/how-to/v2-changelog#agent-updates) section of the changelog.\n</Tip>\n\n### 2. Storage\n\nStorage is used to persist Agent sessions, state and memories in a database.\n\nThis is how Storage looks like on v1:",
+      "language": "unknown"
+    },
+    {
+      "code": "These are the changes we have made for v2:\n\n2.1. The `Storage` classes have moved from `agno/storage` to `agno/db`. We will now refer to them as our `Db` classes.\n2.2. The `mode` parameter has been deprecated. The same instance can now be used by Agents, Teams and Workflows.",
+      "language": "unknown"
+    },
+    {
+      "code": "2.3. The `table_name` parameter has been deprecated. One instance now handles multiple tables, you can define their names individually.",
+      "language": "unknown"
+    },
+    {
+      "code": "These are all the supported tables, each used to persist data related to a specific domain:",
+      "language": "unknown"
+    },
+    {
+      "code": "2.4. Previously running a `Team` would create a team session and sessions for every team member participating in the run. Now, only the `Team` session is created. The runs for the team leader and all members can be found in the `Team` session.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Installing Agno v2",
+      "id": "installing-agno-v2"
+    },
+    {
+      "level": "h2",
+      "text": "Migrating your Agno DB",
+      "id": "migrating-your-agno-db"
+    },
+    {
+      "level": "h2",
+      "text": "Migrating your Agno code",
+      "id": "migrating-your-agno-code"
+    },
+    {
+      "level": "h3",
+      "text": "1. Agents and Teams",
+      "id": "1.-agents-and-teams"
+    },
+    {
+      "level": "h3",
+      "text": "2. Storage",
+      "id": "2.-storage"
+    }
+  ],
+  "url": "llms-txt#migrating-to-agno-v2.0",
+  "links": []
+}

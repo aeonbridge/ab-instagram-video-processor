@@ -1,0 +1,8 @@
+{
+  "title": "Create a team",
+  "content": "research_team = Team(\n    name=\"Research Team\",\n    description=\"A team of agents that research the web\",\n    members=[research_agent, simple_agent],\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    id=\"research_team\",\n    instructions=[\n        \"You are the lead researcher of a research team! 🔍\",\n    ],\n    db=db,\n    enable_user_memories=True,\n    add_datetime_to_context=True,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-team",
+  "links": []
+}

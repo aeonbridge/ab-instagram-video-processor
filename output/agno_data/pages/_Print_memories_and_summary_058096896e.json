@@ -1,0 +1,8 @@
+{
+  "title": "-*- Print memories and summary",
+  "content": "if agent.db:\n    pprint(agent.get_user_memories(user_id=\"test_user\"))\n    pprint(\n        agent.get_session(session_id=\"test_session\").summary  # type: ignore\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#-*--print-memories-and-summary",
+  "links": []
+}

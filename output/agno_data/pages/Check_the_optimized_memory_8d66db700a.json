@@ -1,0 +1,19 @@
+{
+  "title": "Check the optimized memory",
+  "content": "if preview:\n    print(f\"Original memories: {len(memory_manager.get_user_memories('user_123'))}\")\n    print(f\"Optimized to: {len(preview)} memories\")\n    print(f\"Content: {preview[0].memory}\")\npython  theme={null}\nimport asyncio\nfrom agno.db.postgres import PostgresDb\nfrom agno.memory import MemoryManager\nfrom agno.models.openai import OpenAIChat\n\nasync def optimize_user_memories():\n    db = PostgresDb(db_url=\"postgresql://...\")\n    memory_manager = MemoryManager(\n        db=db,\n        model=OpenAIChat(id=\"gpt-4o-mini\"),\n    )\n    \n    # Async optimization\n    optimized = await memory_manager.aoptimize_memories(\n        user_id=\"user_123\",\n        apply=True,\n    )\n    \n    return optimized",
+  "code_samples": [
+    {
+      "code": "## Async Usage\n\nFor async applications, use `aoptimize_memories`:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Async Usage",
+      "id": "async-usage"
+    }
+  ],
+  "url": "llms-txt#check-the-optimized-memory",
+  "links": []
+}

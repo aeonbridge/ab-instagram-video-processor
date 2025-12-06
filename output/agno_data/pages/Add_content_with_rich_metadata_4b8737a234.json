@@ -1,0 +1,8 @@
+{
+  "title": "Add content with rich metadata",
+  "content": "knowledge.add_content(\n    path=\"sales_report_q1.csv\",\n    metadata={\n        \"data_type\": \"sales\",\n        \"quarter\": \"Q1\",\n        \"year\": 2024,\n        \"region\": \"north_america\",\n        \"currency\": \"USD\"\n    }\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-content-with-rich-metadata",
+  "links": []
+}

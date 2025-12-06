@@ -1,0 +1,8 @@
+{
+  "title": "Cohere Reranker",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reranker/cohere\n\n<Snippet file=\"reranker-cohere-params.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#cohere-reranker",
+  "links": []
+}

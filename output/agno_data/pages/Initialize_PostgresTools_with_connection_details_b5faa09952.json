@@ -1,0 +1,8 @@
+{
+  "title": "Initialize PostgresTools with connection details",
+  "content": "postgres_tools = PostgresTools(\n    host=\"localhost\",\n    port=5532,\n    db_name=\"ai\",\n    user=\"ai\",\n    password=\"ai\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-postgrestools-with-connection-details",
+  "links": []
+}

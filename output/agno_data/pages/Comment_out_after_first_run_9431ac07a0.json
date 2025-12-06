@@ -1,0 +1,24 @@
+{
+  "title": "Comment out after first run",
+  "content": "agent.knowledge.load(recreate=False)  # type: ignore\n\nagent.print_response(\"How do I make pad thai?\", markdown=True)\nagent.print_response(\"What was my last question?\", stream=True)\npython async_clickhouse.py theme={null}\n    import asyncio\n\nfrom agno.agent import Agent\n    from agno.knowledge.knowledge import Knowledge\n    from agno.db.sqlite import SqliteDb\n    from agno.vectordb.clickhouse import Clickhouse\n\nagent = Agent(\n        db=SqliteDb(db_file=\"agno.db\"),\n        knowledge=Knowledge(\n            vector_db=Clickhouse(\n                table_name=\"recipe_documents\",\n                host=\"localhost\",\n                port=8123,\n                username=\"ai\",\n                password=\"ai\",\n            ),\n        ),\n        # Enable the agent to search the knowledge base\n        search_knowledge=True,\n        # Enable the agent to read the chat history\n        read_chat_history=True,\n    )\n\nif __name__ == \"__main__\":\n        # Comment out after first run\n        asyncio.run(agent.knowledge.add_content_async(\n            url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n          )\n        )\n\n# Create and use the agent\n        asyncio.run(agent.aprint_response(\"How to make Tom Kha Gai\", markdown=True))\n    ```\n\n<Tip className=\"mt-4\">\n      Use <code>aload()</code> and <code>aprint\\_response()</code> methods with <code>asyncio.run()</code> for non-blocking operations in high-throughput applications.\n    </Tip>\n  </div>\n</Card>\n\n<Snippet file=\"vectordb_clickhouse_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook (Sync)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/clickhouse_db/clickhouse.py)\n* View [Cookbook (Async)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/clickhouse_db/async_clickhouse.py)",
+  "code_samples": [
+    {
+      "code": "<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      Clickhouse also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Clickhouse Params",
+      "id": "clickhouse-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#comment-out-after-first-run",
+  "links": []
+}

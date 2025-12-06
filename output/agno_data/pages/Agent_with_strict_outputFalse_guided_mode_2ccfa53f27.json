@@ -1,0 +1,8 @@
+{
+  "title": "Agent with strict_output=False (guided mode)",
+  "content": "guided_output_agent = Agent(\n    model=OpenAIResponses(id=\"gpt-5-mini\", strict_output=False),\n    description=\"You write movie scripts.\",\n    output_schema=MovieScript,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-with-strict_output=false-(guided-mode)",
+  "links": []
+}

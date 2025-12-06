@@ -1,0 +1,8 @@
+{
+  "title": "Load knowledge from web search",
+  "content": "knowledge.add_content(\n    topics=[\"agno\"],\n    reader=WebSearchReader(\n        max_results=3,\n        search_engine=\"duckduckgo\",\n        chunk=True,\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#load-knowledge-from-web-search",
+  "links": []
+}

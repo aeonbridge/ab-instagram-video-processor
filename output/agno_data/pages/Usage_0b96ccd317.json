@@ -1,0 +1,8 @@
+{
+  "title": "Usage",
+  "content": "```python aws_bedrock_embedder.py theme={null}\nimport asyncio\nfrom agno.knowledge.embedder.aws_bedrock import AwsBedrockEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.pdf_reader import PDFReader\nfrom agno.vectordb.pgvector import PgVector\n\nembeddings = AwsBedrockEmbedder().get_embedding(\n    \"The quick brown fox jumps over the lazy dog.\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#usage",
+  "links": []
+}

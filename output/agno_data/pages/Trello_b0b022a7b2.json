@@ -1,0 +1,48 @@
+{
+  "title": "Trello",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/trello\n\nAgno TrelloTools helps to integrate Trello functionalities into your agents, enabling management of boards, lists, and cards.\n\nThe following examples require the `trello` library and Trello API credentials which can be obtained by following Trello's developer documentation.\n\nSet the following environment variables:\n\nThe following agent will create a board called `ai-agent` and inside it create list called `todo` and `doing` and inside each of them create card called `create agent`.\n\n| Function          | Description                                                   |\n| ----------------- | ------------------------------------------------------------- |\n| `create_card`     | Creates a new card in a specified board and list.             |\n| `get_board_lists` | Retrieves all lists on a specified Trello board.              |\n| `move_card`       | Moves a card to a different list.                             |\n| `get_cards`       | Retrieves all cards from a specified list.                    |\n| `create_board`    | Creates a new Trello board.                                   |\n| `create_list`     | Creates a new list on a specified board.                      |\n| `list_boards`     | Lists all Trello boards accessible by the authenticated user. |\n\n| Parameter    | Type            | Default | Description                                                                        |\n| ------------ | --------------- | ------- | ---------------------------------------------------------------------------------- |\n| `api_key`    | `Optional[str]` | `None`  | Trello API key. If not provided, uses TRELLO\\_API\\_KEY environment variable.       |\n| `api_secret` | `Optional[str]` | `None`  | Trello API secret. If not provided, uses TRELLO\\_API\\_SECRET environment variable. |\n| `token`      | `Optional[str]` | `None`  | Trello token. If not provided, uses TRELLO\\_TOKEN environment variable.            |\n\n### Board Filter Options for `list_boards`\n\nThe `list_boards` function accepts a `board_filter` argument with the following options:\n\n* `all` (default)\n* `open`\n* `closed`\n* `organization`\n* `public`\n* `starred`\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/trello.py)\n* View [Cookbook Example](https://github.com/agno-agi/agno/tree/main/cookbook/tools/trello_tools.py)",
+  "code_samples": [
+    {
+      "code": "Set the following environment variables:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will create a board called `ai-agent` and inside it create list called `todo` and `doing` and inside each of them create card called `create agent`.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h3",
+      "text": "Board Filter Options for `list_boards`",
+      "id": "board-filter-options-for-`list_boards`"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#trello",
+  "links": []
+}

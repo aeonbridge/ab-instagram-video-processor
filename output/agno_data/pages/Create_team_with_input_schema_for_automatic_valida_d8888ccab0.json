@@ -1,0 +1,8 @@
+{
+  "title": "Create team with input_schema for automatic validation",
+  "content": "research_team = Team(\n    name=\"Research Team with Input Validation\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[hackernews_agent, web_researcher],\n    input_schema=ResearchProject,\n    instructions=[\n        \"Conduct thorough research based on the validated input\",\n        \"Coordinate between team members to avoid duplicate work\",\n        \"Ensure research depth matches the specified level\",\n        \"Respect the maximum sources limit\",\n        \"Focus on recent sources if requested\",\n    ],\n)\n\nprint(\"=== Example 1: Valid Dictionary Input (will be auto-validated) ===\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-team-with-input_schema-for-automatic-validation",
+  "links": []
+}

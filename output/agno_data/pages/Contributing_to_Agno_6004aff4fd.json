@@ -1,0 +1,24 @@
+{
+  "title": "Contributing to Agno",
+  "content": "Source: https://docs.agno.com/how-to/contribute\n\nLearn how to contribute to Agno through our fork and pull request workflow.\n\nAgno is an open-source project and we welcome contributions.\n\n## 👩‍💻 How to contribute\n\nPlease follow the [fork and pull request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) workflow:\n\n* Fork the repository.\n* Create a new branch for your feature.\n* Add your feature or improvement.\n* Send a pull request.\n* We appreciate your support & input!\n\n1. Clone the repository.\n2. Create a virtual environment:\n   * For Unix, use `./scripts/dev_setup.sh`.\n   * This setup will:\n     * Create a `.venv` virtual environment in the current directory.\n     * Install the required packages.\n     * Install the `agno` package in editable mode.\n3. Activate the virtual environment:\n   * On Unix: `source .venv/bin/activate`\n\n> From here on you have to use `uv pip install` to install missing packages\n\n## Formatting and validation\n\nEnsure your code meets our quality standards by running the appropriate formatting and validation script before submitting a pull request:\n\n* For Unix:\n  * `./scripts/format.sh`\n  * `./scripts/validate.sh`\n\nThese scripts will perform code formatting with `ruff` and static type checks with `mypy`.\n\nRead more about the guidelines [here](https://github.com/agno-agi/agno/tree/main/CONTRIBUTING.md)\n\nMessage us on [Discord](https://discord.gg/4MtYHHrgA8) or post on [Discourse](https://community.agno.com/) if you have any questions or need help with credits.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "👩‍💻 How to contribute",
+      "id": "👩‍💻-how-to-contribute"
+    },
+    {
+      "level": "h2",
+      "text": "Development setup",
+      "id": "development-setup"
+    },
+    {
+      "level": "h2",
+      "text": "Formatting and validation",
+      "id": "formatting-and-validation"
+    }
+  ],
+  "url": "llms-txt#contributing-to-agno",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Setup the Firestore database",
+  "content": "db = FirestoreDb(project_id=PROJECT_ID)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-firestore-database",
+  "links": []
+}

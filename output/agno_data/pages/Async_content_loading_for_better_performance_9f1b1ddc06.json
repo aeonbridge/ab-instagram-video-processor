@@ -1,0 +1,8 @@
+{
+  "title": "Async content loading for better performance",
+  "content": "await knowledge.add_content_async(path=\"large_dataset/\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#async-content-loading-for-better-performance",
+  "links": []
+}

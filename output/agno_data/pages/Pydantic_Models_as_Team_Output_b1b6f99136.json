@@ -1,0 +1,14 @@
+{
+  "title": "Pydantic Models as Team Output",
+  "content": "Source: https://docs.agno.com/basics/input-output/team/usage/pydantic-model-output\n\nThis example demonstrates how to use Pydantic models as output from teams, showing how structured data can be returned as responses for more precise and validated output handling.\n\n```python cookbook/examples/teams/structured_input_output/00_pydantic_model_output.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.utils.pprint import pprint_run_response\nfrom pydantic import BaseModel\n\nclass StockAnalysis(BaseModel):\n    symbol: str\n    company_name: str\n    analysis: str\n\nclass CompanyAnalysis(BaseModel):\n    company_name: str\n    analysis: str\n\nstock_searcher = Agent(\n    name=\"Stock Searcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    output_schema=StockAnalysis,\n    role=\"Searches for information on stocks and provides price analysis.\",\n    tools=[DuckDuckGoTools()],\n)\n\ncompany_info_agent = Agent(\n    name=\"Company Info Searcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    role=\"Searches for information about companies and recent news.\",\n    output_schema=CompanyAnalysis,\n    tools=[DuckDuckGoTools()],\n)\n\nclass StockReport(BaseModel):\n    symbol: str\n    company_name: str\n    analysis: str\n\nteam = Team(\n    name=\"Stock Research Team\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    members=[stock_searcher, company_info_agent],\n    output_schema=StockReport,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#pydantic-models-as-team-output",
+  "links": []
+}

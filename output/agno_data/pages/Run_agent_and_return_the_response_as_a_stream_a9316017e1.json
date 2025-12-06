@@ -1,0 +1,138 @@
+{
+  "title": "Run agent and return the response as a stream",
+  "content": "stream: Iterator[RunOutputEvent] = agent.run(\"Trending products\", stream=True)\nfor chunk in stream:\n    if chunk.event == RunEvent.run_content:\n        print(chunk.content)\npython  theme={null}\nresponse_stream: Iterator[RunOutputEvent] = agent.run(\n    \"Trending products\",\n    stream=True,\n    stream_events=True\n)\npython  theme={null}\nfrom agno.agent import Agent, RunEvent\nfrom agno.models.anthropic import Claude\nfrom agno.tools.hackernews import HackerNewsTools\n\nagent = Agent(\n    model=Claude(id=\"claude-sonnet-4-5\"),\n    tools=[HackerNewsTools()],\n    instructions=\"Write a report on the topic. Output only the report.\",\n    markdown=True,\n)\n\nstream = agent.run(\"Trending products\", stream=True, stream_events=True)\n\nfor chunk in stream:\n    if chunk.event == RunEvent.run_content:\n        print(f\"Content: {chunk.content}\")\n    elif chunk.event == RunEvent.tool_call_started:\n        print(f\"Tool call started: {chunk.tool.tool_name}\")\n    elif chunk.event == RunEvent.reasoning_step:\n        print(f\"Reasoning step: {chunk.reasoning_content}\")\npython  theme={null}\nfrom dataclasses import dataclass\nfrom agno.run.agent import CustomEvent\nfrom typing import Optional\n\n@dataclass\nclass CustomerProfileEvent(CustomEvent):\n    \"\"\"CustomEvent for customer profile.\"\"\"\n\ncustomer_name: Optional[str] = None\n    customer_email: Optional[str] = None\n    customer_phone: Optional[str] = None\npython  theme={null}\nfrom agno.tools import tool\n\n@tool()\nasync def get_customer_profile():\n    \"\"\"Example custom tool that simply yields a custom event.\"\"\"\n\nyield CustomerProfileEvent(\n        customer_name=\"John Doe\",\n        customer_email=\"john.doe@example.com\",\n        customer_phone=\"1234567890\",\n    )\npython  theme={null}\nagent.run(\"Tell me a 5 second short story about a robot\", user_id=\"john@example.com\", session_id=\"session_123\")\npython  theme={null}\nagent.run(\"Tell me a 5 second short story about this image\", images=[Image(url=\"https://example.com/image.jpg\")])\npython  theme={null}\nfrom pydantic import BaseModel\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\nclass TVShow(BaseModel):\n    title: str\n    episodes: int\n\nagent = Agent(model=OpenAIChat(id=\"gpt-4o-mini\"))\nagent.run(\"Create a TV show\", output_schema=TVShow)\n```\n\nFor more information see the [Input & Output](/basics/input-output/overview) documentation.\n\n## Pausing and Continuing a Run\n\nAn agent run can be paused when a human-in-the-loop flow is initiated. You can then continue the execution of the agent by calling the `Agent.continue_run()` method.\n\nSee more details in the [Human-in-the-Loop](/basics/hitl/overview) documentation.\n\nA run can be cancelled by calling the `Agent.cancel_run()` method.\n\nSee more details in the [Cancelling a Run](/execution-control/run-cancellation/overview) documentation.\n\n## Developer Resources\n\n* View the [Agent reference](/reference/agents/agent)\n* View the [RunOutput schema](/reference/agents/run-response)\n* View [Agent Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/agents/README.md)",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  For asynchronous streaming, see this [example](/basics/agents/usage/streaming).\n</Tip>\n\n## Streaming Internal Events\n\nBy default, when you stream a response, only the events that contain a response from the model (i.e. `RunContent` events) are streamed.\n\nBut there are numerous other events that can be emitted during an agent run, like tool calling, reasoning, memory updates, etc.\n\nYou can stream all run events by setting `stream_events=True` in the `run()` method. This will emit all the events related to the agent's internal processes:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Handling Events\n\nYou can process events as they arrive by iterating over the response stream:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Check>\n  `RunEvents` make it possible to build exceptional agent experiences, by giving you complete information about the agent's internal processes.\n</Check>\n\n## Event Types\n\nThe following events can be yielded by the `Agent.run()` and `Agent.arun()` functions, depending on the agent's configuration:\n\n### Core Events\n\n| Event Type               | Description                                                                                                    |\n| ------------------------ | -------------------------------------------------------------------------------------------------------------- |\n| `RunStarted`             | Indicates the start of a run                                                                                   |\n| `RunContent`             | Contains the model's response text as individual chunks                                                        |\n| `RunContentCompleted`    | Signals completion of content streaming                                                                        |\n| `RunIntermediateContent` | Contains the model's intermediate response text as individual chunks. This is used when `output_model` is set. |\n| `RunCompleted`           | Signals successful completion of the run                                                                       |\n| `RunError`               | Indicates an error occurred during the run                                                                     |\n| `RunCancelled`           | Signals that the run was cancelled                                                                             |\n\n### Control Flow Events\n\n| Event Type     | Description                                  |\n| -------------- | -------------------------------------------- |\n| `RunPaused`    | Indicates the run has been paused            |\n| `RunContinued` | Signals that a paused run has been continued |\n\n### Tool Events\n\n| Event Type          | Description                                                    |\n| ------------------- | -------------------------------------------------------------- |\n| `ToolCallStarted`   | Indicates the start of a tool call                             |\n| `ToolCallCompleted` | Signals completion of a tool call, including tool call results |\n\n### Reasoning Events\n\n| Event Type           | Description                                          |\n| -------------------- | ---------------------------------------------------- |\n| `ReasoningStarted`   | Indicates the start of the agent's reasoning process |\n| `ReasoningStep`      | Contains a single step in the reasoning process      |\n| `ReasoningCompleted` | Signals completion of the reasoning process          |\n\n### Memory Events\n\n| Event Type              | Description                                     |\n| ----------------------- | ----------------------------------------------- |\n| `MemoryUpdateStarted`   | Indicates that the agent is updating its memory |\n| `MemoryUpdateCompleted` | Signals completion of a memory update           |\n\n### Session Summary Events\n\n| Event Type                | Description                                       |\n| ------------------------- | ------------------------------------------------- |\n| `SessionSummaryStarted`   | Indicates the start of session summary generation |\n| `SessionSummaryCompleted` | Signals completion of session summary generation  |\n\n### Pre-Hook Events\n\n| Event Type         | Description                                    |\n| ------------------ | ---------------------------------------------- |\n| `PreHookStarted`   | Indicates the start of a pre-run hook          |\n| `PreHookCompleted` | Signals completion of a pre-run hook execution |\n\n### Post-Hook Events\n\n| Event Type          | Description                                     |\n| ------------------- | ----------------------------------------------- |\n| `PostHookStarted`   | Indicates the start of a post-run hook          |\n| `PostHookCompleted` | Signals completion of a post-run hook execution |\n\n### Parser Model events\n\n| Event Type                     | Description                                      |\n| ------------------------------ | ------------------------------------------------ |\n| `ParserModelResponseStarted`   | Indicates the start of the parser model response |\n| `ParserModelResponseCompleted` | Signals completion of the parser model response  |\n\n### Output Model events\n\n| Event Type                     | Description                                      |\n| ------------------------------ | ------------------------------------------------ |\n| `OutputModelResponseStarted`   | Indicates the start of the output model response |\n| `OutputModelResponseCompleted` | Signals completion of the output model response  |\n\n### Custom Events\n\nIf you are using your own custom tools, you can yield custom events along with the rest of the Agno events.\n\nYou can create your custom event class by extending the `CustomEvent` class:",
+      "language": "unknown"
+    },
+    {
+      "code": "You can then yield your custom event from your tool. The event will be handled internally as an Agno event, and you will be able to access it in the same way you would access any other Agno event:",
+      "language": "unknown"
+    },
+    {
+      "code": "See the [full example](/examples/basics/agent/events/custom_events) for more details.\n\n## Specify Run User and Session\n\nYou can specify which user and session to use when running the agent by passing the `user_id` and `session_id` parameters. This ensures the current run is associated with the correct user and session. For example:",
+      "language": "unknown"
+    },
+    {
+      "code": "For more information see the [Agent Sessions](/basics/sessions/overview) documentation.\n\n## Passing Images / Audio / Video / Files\n\nYou can pass images, audio, video, or files to the agent by passing the `images`, `audio`, `video`, or `files` parameters. For example:",
+      "language": "unknown"
+    },
+    {
+      "code": "For more information see the [Multimodal Agents](/basics/multimodal/overview) documentation.\n\n## Passing Output Schema\n\nYou can pass an output schema for a specific run by passing the `output_schema` parameter. For example:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Streaming Internal Events",
+      "id": "streaming-internal-events"
+    },
+    {
+      "level": "h2",
+      "text": "Handling Events",
+      "id": "handling-events"
+    },
+    {
+      "level": "h2",
+      "text": "Event Types",
+      "id": "event-types"
+    },
+    {
+      "level": "h3",
+      "text": "Core Events",
+      "id": "core-events"
+    },
+    {
+      "level": "h3",
+      "text": "Control Flow Events",
+      "id": "control-flow-events"
+    },
+    {
+      "level": "h3",
+      "text": "Tool Events",
+      "id": "tool-events"
+    },
+    {
+      "level": "h3",
+      "text": "Reasoning Events",
+      "id": "reasoning-events"
+    },
+    {
+      "level": "h3",
+      "text": "Memory Events",
+      "id": "memory-events"
+    },
+    {
+      "level": "h3",
+      "text": "Session Summary Events",
+      "id": "session-summary-events"
+    },
+    {
+      "level": "h3",
+      "text": "Pre-Hook Events",
+      "id": "pre-hook-events"
+    },
+    {
+      "level": "h3",
+      "text": "Post-Hook Events",
+      "id": "post-hook-events"
+    },
+    {
+      "level": "h3",
+      "text": "Parser Model events",
+      "id": "parser-model-events"
+    },
+    {
+      "level": "h3",
+      "text": "Output Model events",
+      "id": "output-model-events"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Events",
+      "id": "custom-events"
+    },
+    {
+      "level": "h2",
+      "text": "Specify Run User and Session",
+      "id": "specify-run-user-and-session"
+    },
+    {
+      "level": "h2",
+      "text": "Passing Images / Audio / Video / Files",
+      "id": "passing-images-/-audio-/-video-/-files"
+    },
+    {
+      "level": "h2",
+      "text": "Passing Output Schema",
+      "id": "passing-output-schema"
+    },
+    {
+      "level": "h2",
+      "text": "Pausing and Continuing a Run",
+      "id": "pausing-and-continuing-a-run"
+    },
+    {
+      "level": "h2",
+      "text": "Cancelling a Run",
+      "id": "cancelling-a-run"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#run-agent-and-return-the-response-as-a-stream",
+  "links": []
+}

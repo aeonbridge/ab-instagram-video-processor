@@ -1,0 +1,29 @@
+{
+  "title": "Trafilatura",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/trafilatura\n\nTrafilaturaTools provides advanced web scraping and text extraction capabilities with support for crawling and content analysis.\n\nThe following agent can extract and analyze web content:\n\n| Parameter                 | Type            | Default | Description                                                  |\n| ------------------------- | --------------- | ------- | ------------------------------------------------------------ |\n| `output_format`           | `str`           | `\"txt\"` | Default output format (txt, json, xml, markdown, csv, html). |\n| `include_comments`        | `bool`          | `False` | Whether to extract comments along with main text.            |\n| `include_tables`          | `bool`          | `False` | Whether to include table content.                            |\n| `include_images`          | `bool`          | `False` | Whether to include image information (experimental).         |\n| `include_formatting`      | `bool`          | `False` | Whether to preserve text formatting.                         |\n| `include_links`           | `bool`          | `False` | Whether to preserve links (experimental).                    |\n| `with_metadata`           | `bool`          | `False` | Whether to include metadata in extractions.                  |\n| `favor_precision`         | `bool`          | `False` | Whether to prefer precision over recall.                     |\n| `favor_recall`            | `bool`          | `False` | Whether to prefer recall over precision.                     |\n| `target_language`         | `Optional[str]` | `None`  | Target language filter (ISO 639-1 format).                   |\n| `deduplicate`             | `bool`          | `True`  | Whether to remove duplicate segments.                        |\n| `max_crawl_urls`          | `int`           | `100`   | Maximum number of URLs to crawl per website.                 |\n| `max_known_urls`          | `int`           | `1000`  | Maximum number of known URLs during crawling.                |\n| `enable_extract_text`     | `bool`          | `True`  | Whether to extract text content.                             |\n| `enable_extract_metadata` | `bool`          | `True`  | Whether to extract metadata information.                     |\n| `enable_html_to_text`     | `bool`          | `True`  | Whether to convert HTML content to clean text.               |\n| `enable_batch_extract`    | `bool`          | `True`  | Whether to extract content from multiple URLs in batch.      |\n\n| Function           | Description                                              |\n| ------------------ | -------------------------------------------------------- |\n| `extract_text`     | Extract clean text content from a URL or HTML.           |\n| `extract_metadata` | Extract metadata information from web pages.             |\n| `html_to_text`     | Convert HTML content to clean text.                      |\n| `crawl_website`    | Crawl a website and extract content from multiple pages. |\n| `batch_extract`    | Extract content from multiple URLs in batch.             |\n| `get_page_info`    | Get comprehensive page information including metadata.   |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/trafilatura.py)\n* [Trafilatura Documentation](https://trafilatura.readthedocs.io/)\n* [Web Scraping Best Practices](https://trafilatura.readthedocs.io/en/latest/corefunctions.html)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#trafilatura",
+  "links": []
+}

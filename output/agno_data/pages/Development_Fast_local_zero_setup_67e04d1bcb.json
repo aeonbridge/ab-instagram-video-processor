@@ -1,0 +1,8 @@
+{
+  "title": "Development: Fast, local, zero setup",
+  "content": "dev_db = LanceDb(\n    table_name=\"dev_knowledge\",\n    uri=\"./local_db\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#development:-fast,-local,-zero-setup",
+  "links": []
+}

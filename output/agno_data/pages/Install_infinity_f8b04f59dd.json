@@ -1,0 +1,8 @@
+{
+  "title": "Install infinity",
+  "content": "pip install \"infinity-emb[all]\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#install-infinity",
+  "links": []
+}

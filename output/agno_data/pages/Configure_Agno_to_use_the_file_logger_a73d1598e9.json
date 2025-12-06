@@ -1,0 +1,8 @@
+{
+  "title": "Configure Agno to use the file logger",
+  "content": "configure_agno_logging(custom_default_logger=custom_logger)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-agno-to-use-the-file-logger",
+  "links": []
+}

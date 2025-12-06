@@ -1,0 +1,14 @@
+{
+  "title": "PPTX Reader Async",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/pptx-reader-async\n\nThe **PPTX Reader** with asynchronous processing allows you to read and extract text content from PowerPoint (.pptx) files with better performance for concurrent operations.\n\n```python pptx_reader_async.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.pptx_reader import PPTXReader\nfrom agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\nknowledge = Knowledge(\n    # Table name: ai.pptx_documents\n    vector_db=PgVector(\n        table_name=\"pptx_documents\",\n        db_url=db_url,\n    ),\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#pptx-reader-async",
+  "links": []
+}

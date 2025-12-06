@@ -1,0 +1,14 @@
+{
+  "title": "Filtering on Load",
+  "content": "Source: https://docs.agno.com/basics/knowledge/filters/usage/filtering-on-load\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres.postgres import PostgresDb\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.utils.media import (\n    SampleDataFileExtension,\n    download_knowledge_filters_sample_data,\n)\nfrom agno.vectordb.lancedb import LanceDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#filtering-on-load",
+  "links": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Read the image file content as bytes",
+  "content": "image_bytes = image_path.read_bytes()\n\nagent.print_response(\n    \"Tell me about this image and give me the latest news about it.\",\n    images=[\n        Image(content=image_bytes),\n    ],\n    stream=True,\n)\n\nbash  theme={null}\n    export XAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U xai ddgs agno\n    bash Mac theme={null}\n      python cookbook/models/xai/image_agent_bytes.py\n      bash Windows theme={null}\n      python cookbook/models/xai/image_agent_bytes.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#read-the-image-file-content-as-bytes",
+  "links": []
+}

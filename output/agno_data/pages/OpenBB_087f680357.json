@@ -1,0 +1,8 @@
+{
+  "title": "OpenBB",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/openbb\n\n**OpenBBTools** enable an Agent to provide information about stocks and companies.\n\n```python cookbook/tools/openbb_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.openbb import OpenBBTools\n\nagent = Agent(tools=[OpenBBTools()], debug_mode=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#openbb",
+  "links": []
+}

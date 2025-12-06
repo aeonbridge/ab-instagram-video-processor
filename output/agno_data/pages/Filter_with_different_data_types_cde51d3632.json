@@ -1,0 +1,50 @@
+{
+  "title": "Filter with different data types",
+  "content": "{\"active\": True, \"priority\": 1, \"department\": \"engineering\"}\npython Python Client theme={null}\n  import requests\n  import json\n  from agno.filters import EQ\n\n# Create filter expression\n  filter_expr = EQ(\"category\", \"technology\")\n\n# Serialize to JSON\n  filter_json = json.dumps(filter_expr.to_dict())\n\n# Send request\n  response = requests.post(\n      \"http://localhost:7777/agents/my-agent/runs\",\n      data={\n          \"message\": \"What are the latest tech articles?\",\n          \"stream\": \"false\",\n          \"knowledge_filters\": filter_json,\n      }\n  )\n\nresult = response.json()\n  bash cURL theme={null}\n  curl -X 'POST' \\\n    'http://localhost:7777/agents/my-agent/runs' \\\n    -H 'Content-Type: multipart/form-data' \\\n    -F 'message=What are the latest tech articles?' \\\n    -F 'stream=false' \\\n    -F 'knowledge_filters={\"op\": \"EQ\", \"key\": \"category\", \"value\": \"technology\"}'\n  python Python Client theme={null}\n  from agno.filters import EQ, GT\n\n# Create multiple filters\n  filters = [\n      EQ(\"status\", \"published\"),\n      GT(\"date\", \"2024-01-01\")\n  ]\n\n# Serialize list to JSON\n  filters_json = json.dumps([f.to_dict() for f in filters])\n\nresponse = requests.post(\n      \"http://localhost:7777/agents/my-agent/runs\",\n      data={\n          \"message\": \"Show recent published articles\",\n          \"stream\": \"false\",\n          \"knowledge_filters\": filters_json,\n      }\n  )\n  bash cURL theme={null}\n  curl -X 'POST' \\\n    'http://localhost:7777/agents/my-agent/runs' \\\n    -H 'Content-Type: multipart/form-data' \\\n    -F 'message=Show recent published articles' \\\n    -F 'stream=false' \\\n    -F 'knowledge_filters=[{\"op\": \"EQ\", \"key\": \"status\", \"value\": \"published\"}, {\"op\": \"GT\", \"key\": \"date\", \"value\": \"2024-01-01\"}]'\n  bash  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Filter Expressions (Advanced Approach)\n\nFor complex filtering with logical operators and comparisons:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Multiple Filter Expressions\n\nSend multiple filter expressions as a JSON array:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Error Handling\n\n### Invalid Filter Structure\n\nWhen filters have errors, they're gracefully ignored with warnings:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Filter Expressions (Advanced Approach)",
+      "id": "filter-expressions-(advanced-approach)"
+    },
+    {
+      "level": "h3",
+      "text": "Multiple Filter Expressions",
+      "id": "multiple-filter-expressions"
+    },
+    {
+      "level": "h2",
+      "text": "Error Handling",
+      "id": "error-handling"
+    },
+    {
+      "level": "h3",
+      "text": "Invalid Filter Structure",
+      "id": "invalid-filter-structure"
+    }
+  ],
+  "url": "llms-txt#filter-with-different-data-types",
+  "links": []
+}

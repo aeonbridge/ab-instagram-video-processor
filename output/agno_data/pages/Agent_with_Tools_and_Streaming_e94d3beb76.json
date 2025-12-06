@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Tools and Streaming",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/portkey/usage/tool-use-stream\n\n```python cookbook/models/portkey/tool_use_stream.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.portkey import Portkey\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nagent = Agent(\n    model=Portkey(id=\"@first-integrati-707071/gpt-5-nano\"),\n    tools=[DuckDuckGoTools()],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-tools-and-streaming",
+  "links": []
+}

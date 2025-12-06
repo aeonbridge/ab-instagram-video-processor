@@ -1,0 +1,8 @@
+{
+  "title": "Display context management metrics",
+  "content": "print(\"\\n\" + \"=\" * 60)\nprint(\"CONTEXT MANAGEMENT SUMMARY\")\nprint(\"=\" * 60)\nresponse = agent.get_last_run_output()\nif response and response.metrics:\n    print(f\"\\nInput tokens: {response.metrics.input_tokens:,}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#display-context-management-metrics",
+  "links": []
+}

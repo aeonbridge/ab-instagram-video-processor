@@ -1,0 +1,14 @@
+{
+  "title": "Custom Logging",
+  "content": "Source: https://docs.agno.com/basics/custom-logging\n\nLearn how to use custom logging in your Agno setup.\n\nYou can provide your own logging configuration to Agno, to be used instead of the default ones.\n\nThis can be useful if you need your system to log in any specific format.\n\n## Specifying a custom logging configuration\n\nYou can configure Agno to use your own logging configuration by using the `configure_agno_logging` function.\n\n```python  theme={null}\nimport logging\n\nfrom agno.agent import Agent\nfrom agno.utils.log import configure_agno_logging, log_info",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Specifying a custom logging configuration",
+      "id": "specifying-a-custom-logging-configuration"
+    }
+  ],
+  "url": "llms-txt#custom-logging",
+  "links": []
+}

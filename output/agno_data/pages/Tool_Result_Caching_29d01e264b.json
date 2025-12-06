@@ -1,0 +1,24 @@
+{
+  "title": "Tool Result Caching",
+  "content": "Source: https://docs.agno.com/basics/tools/caching\n\nLearn how to cache tool results in Agno.\n\nTool result caching is designed to avoid unnecessary recomputation by storing the results of function calls on disk.\nThis is useful during development and testing to speed up the development process, avoid rate limiting, and reduce costs.\n\n<Check>\n  This is supported for all Agno Toolkits\n</Check>\n\nPass `cache_results=True` to the Toolkit constructor to enable caching for that Toolkit.\n\nPass `cache_results=True` to the `@tool` decorator to enable caching for that tool.",
+  "code_samples": [
+    {
+      "code": "## On @tool\n\nPass `cache_results=True` to the `@tool` decorator to enable caching for that tool.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "On Toolkit",
+      "id": "on-toolkit"
+    },
+    {
+      "level": "h2",
+      "text": "On @tool",
+      "id": "on-@tool"
+    }
+  ],
+  "url": "llms-txt#tool-result-caching",
+  "links": []
+}

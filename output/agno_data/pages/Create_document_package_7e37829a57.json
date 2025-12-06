@@ -1,0 +1,8 @@
+{
+  "title": "Create document package",
+  "content": "prompt = (\n    \"Create a sales report package with 2 documents:\\n\\n\"\n    \"1. EXCEL SPREADSHEET (sales_report.xlsx):\\n\"\n    \"   - Q4 sales data: Oct $450K, Nov $520K, Dec $610K\\n\"\n    \"   - Include a total formula\\n\"\n    \"   - Add a simple bar chart\\n\\n\"\n    \"2. WORD DOCUMENT (sales_summary.docx):\\n\"\n    \"   - Brief Q4 sales summary\\n\"\n    \"   - Total sales: $1.58M\\n\"\n    \"   - Growth trend: Strong December performance\\n\"\n)\n\nresponse = multi_skill_agent.run(prompt)\nprint(response.content)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-document-package",
+  "links": []
+}

@@ -1,0 +1,35 @@
+{
+  "title": "This is the function that the agent will use to retrieve documents",
+  "content": "def knowledge_retriever(\n    query: str, agent: Optional[Agent] = None, num_documents: int = 5, **kwargs\n) -> Optional[list[dict]]:\n    \"\"\"\n    Custom knowledge retriever function to search the vector database for relevant documents.\n\nArgs:\n        query (str): The search query string\n        agent (Agent): The agent instance making the query\n        num_documents (int): Number of documents to retrieve (default: 5)\n        **kwargs: Additional keyword arguments\n\nReturns:\n        Optional[list[dict]]: List of retrieved documents or None if search fails\n    \"\"\"\n    try:\n        qdrant_client = QdrantClient(url=\"http://localhost:6333\")\n        query_embedding = embedder.get_embedding(query)\n        results = qdrant_client.query_points(\n            collection_name=\"thai-recipes\",\n            query=query_embedding,\n            limit=num_documents,\n        )\n        results_dict = results.model_dump()\n        if \"points\" in results_dict:\n            return results_dict[\"points\"]\n        else:\n            return None\n    except Exception as e:\n        print(f\"Error during vector database search: {str(e)}\")\n        return None\n\ndef main():\n    \"\"\"Main function to demonstrate agent usage.\"\"\"\n    # Initialize agent with custom knowledge retriever\n    # Remember to set search_knowledge=True to use agentic_rag or add_reference=True for traditional RAG\n    # search_knowledge=True is default when you add a knowledge base but is needed here\n    agent = Agent(\n        knowledge_retriever=knowledge_retriever,\n        search_knowledge=True,\n        instructions=\"Search the knowledge base for information\",\n    )\n\n# Example query\n    query = \"List down the ingredients to make Massaman Gai\"\n    agent.print_response(query, markdown=True)\n\nif __name__ == \"__main__\":\n    main()\nbash  theme={null}\n    pip install -U agno openai qdrant-client\n    bash  theme={null}\n    docker run -p 6333:6333 qdrant/qdrant\n    bash  theme={null}\n    export OPENAI_API_KEY=your_openai_api_key_here\n    bash Mac theme={null}\n      python cookbook/knowledge/custom_retriever/retriever.py\n      bash Windows theme={null}\n      python cookbook/knowledge/custom_retriever/retriever.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Qdrant\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set OpenAI API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#this-is-the-function-that-the-agent-will-use-to-retrieve-documents",
+  "links": []
+}

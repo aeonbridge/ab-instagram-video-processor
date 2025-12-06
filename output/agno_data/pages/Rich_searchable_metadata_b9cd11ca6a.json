@@ -1,0 +1,8 @@
+{
+  "title": "Rich, searchable metadata",
+  "content": "good_metadata = {\n    \"document_type\": \"policy\",\n    \"department\": \"hr\",\n    \"category\": \"benefits\",\n    \"audience\": \"all_employees\",\n    \"last_updated\": \"2024-01-15\",\n    \"version\": \"2.1\",\n    \"tags\": [\"health_insurance\", \"401k\", \"vacation\"],\n    \"sensitivity\": \"internal\"\n}",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#rich,-searchable-metadata",
+  "links": []
+}

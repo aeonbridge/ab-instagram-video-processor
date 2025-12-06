@@ -1,0 +1,24 @@
+{
+  "title": "Example showing economic indicators",
+  "content": "agent.print_response(\n    \"Show me the latest GDP growth rate and inflation numbers for the US\"\n)\n```\n\n| Parameter                      | Type   | Default      | Description                                                                                                              |\n| ------------------------------ | ------ | ------------ | ------------------------------------------------------------------------------------------------------------------------ |\n| `obb`                          | `Any`  | `None`       | OpenBB app instance. If not provided, uses default.                                                                      |\n| `openbb_pat`                   | `str`  | `None`       | Personal Access Token for OpenBB API authentication.                                                                     |\n| `provider`                     | `str`  | `\"yfinance\"` | Data provider for financial information. Options: \"benzinga\", \"fmp\", \"intrinio\", \"polygon\", \"tiingo\", \"tmx\", \"yfinance\". |\n| `enable_get_stock_price`       | `bool` | `True`       | Enable the stock price retrieval function.                                                                               |\n| `enable_search_company_symbol` | `bool` | `False`      | Enable the company symbol search function.                                                                               |\n| `enable_get_company_news`      | `bool` | `False`      | Enable the company news retrieval function.                                                                              |\n| `enable_get_company_profile`   | `bool` | `False`      | Enable the company profile retrieval function.                                                                           |\n| `enable_get_price_targets`     | `bool` | `False`      | Enable the price targets retrieval function.                                                                             |\n| `all`                          | `bool` | `False`      | Enable all available functions. When True, all enable flags are ignored.                                                 |\n\n| Function                | Description                                                                       |\n| ----------------------- | --------------------------------------------------------------------------------- |\n| `get_stock_price`       | This function gets the current stock price for a stock symbol or list of symbols. |\n| `search_company_symbol` | This function searches for the stock symbol of a company.                         |\n| `get_price_targets`     | This function gets the price targets for a stock symbol or list of symbols.       |\n| `get_company_news`      | This function gets the latest news for a stock symbol or list of symbols.         |\n| `get_company_profile`   | This function gets the company profile for a stock symbol or list of symbols.     |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/openbb.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/openbb_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example-showing-economic-indicators",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Workflow Sessions",
+  "content": "Source: https://docs.agno.com/basics/sessions/workflow-sessions\n\nLearn how workflow sessions track multi-step pipeline executions\n\nWorkflow sessions track the execution history of your workflows. Unlike agent or team sessions that store conversation messages, workflow sessions store complete **workflow runs**, where each run represents a full execution of all your workflow steps from input to final output.\n\nThink of it this way:\n\n* **Agent/Team sessions** = conversation history (messages back and forth)\n* **Workflow sessions** = execution history (complete pipeline runs with results)\n\n## When to Use Workflow Sessions\n\nUse workflow sessions when you need to:\n\n* **Track workflow execution history** across multiple runs\n* **Share state between steps** in a workflow (like passing data between pipeline stages)\n* **Enable workflows to learn from previous runs** by accessing past inputs and outputs\n* **Persist workflow results** for analysis and debugging\n* **Maintain context** across multiple workflow executions\n\n<Tip>\n  In most cases it is recommended to add session persistence to your workflow.\n</Tip>\n\n## How Workflow Sessions Work\n\nWhen you create a workflow with a database, Agno automatically manages sessions for you:\n\n```python  theme={null}\nfrom agno.workflow import Workflow\nfrom agno.db.sqlite import SqliteDb\n\nworkflow = Workflow(\n    name=\"Research Pipeline\",\n    db=SqliteDb(db_file=\"workflows.db\"),\n    steps=[...],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "When to Use Workflow Sessions",
+      "id": "when-to-use-workflow-sessions"
+    },
+    {
+      "level": "h2",
+      "text": "How Workflow Sessions Work",
+      "id": "how-workflow-sessions-work"
+    }
+  ],
+  "url": "llms-txt#workflow-sessions",
+  "links": []
+}

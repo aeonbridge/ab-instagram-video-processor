@@ -1,0 +1,8 @@
+{
+  "title": "Get Config",
+  "content": "Source: https://docs.agno.com/reference-api/schema/knowledge/get-config\n\nget /knowledge/config\nRetrieve available readers, chunkers, and configuration options for content processing. This endpoint provides metadata about supported file types, processing strategies, and filters.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-config",
+  "links": []
+}

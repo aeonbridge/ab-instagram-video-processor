@@ -1,0 +1,14 @@
+{
+  "title": "Azure OpenAI Embedder",
+  "content": "Source: https://docs.agno.com/basics/knowledge/embedder/azure-openai/usage/azure-embedder\n\n```python  theme={null}\nfrom agno.knowledge.embedder.azure_openai import AzureOpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\n\nembeddings = AzureOpenAIEmbedder(id=\"text-embedding-3-small\").get_embedding(\n    \"The quick brown fox jumps over the lazy dog.\"\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#azure-openai-embedder",
+  "links": []
+}

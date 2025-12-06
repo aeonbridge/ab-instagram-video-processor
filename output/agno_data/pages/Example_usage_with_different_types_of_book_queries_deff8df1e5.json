@@ -1,0 +1,8 @@
+{
+  "title": "Example usage with different types of book queries",
+  "content": "book_recommendation_agent.print_response(\n    \"I really enjoyed 'Anxious People' and 'Lessons in Chemistry', can you suggest similar books?\",\n    stream=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage-with-different-types-of-book-queries",
+  "links": []
+}

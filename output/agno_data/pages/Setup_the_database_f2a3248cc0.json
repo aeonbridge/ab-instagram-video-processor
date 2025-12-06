@@ -1,0 +1,8 @@
+{
+  "title": "Setup the database",
+  "content": "db_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\ndb = PostgresDb(db_url=db_url)\n\nagent = Agent(\n    model=OpenAIResponses(id=\"gpt-5-mini\"),\n    user_id=\"test_user\",\n    session_id=\"test_session\",\n    # Pass the database to the Agent\n    db=db,\n    # Enable user memories\n    enable_user_memories=True,\n    # Enable session summaries\n    enable_session_summaries=True,\n    # Show debug logs so, you can see the memory being created\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-database",
+  "links": []
+}

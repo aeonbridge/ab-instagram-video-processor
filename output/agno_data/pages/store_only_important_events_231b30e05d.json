@@ -1,0 +1,8 @@
+{
+  "title": "store only important events",
+  "content": "production_workflow = Workflow(\n    name=\"Production Workflow\",\n    store_events=True,\n    events_to_skip=[\n        WorkflowRunEvent.step_started,\n        WorkflowRunEvent.parallel_execution_started,\n        # keep step_completed and workflow_completed\n    ],\n    steps=[...]\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#store-only-important-events",
+  "links": []
+}

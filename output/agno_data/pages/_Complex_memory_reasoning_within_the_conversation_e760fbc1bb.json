@@ -1,0 +1,19 @@
+{
+  "title": "- Complex memory reasoning within the conversation flow",
+  "content": "python  theme={null}\nfrom agno.memory import MemoryManager\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "## Mitigation Strategy #2: Use a Cheaper Model for Memory Operations\n\nIf you do need agentic memory, use a less expensive model for memory management while keeping a powerful model for conversation:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Mitigation Strategy #2: Use a Cheaper Model for Memory Operations",
+      "id": "mitigation-strategy-#2:-use-a-cheaper-model-for-memory-operations"
+    }
+  ],
+  "url": "llms-txt#--complex-memory-reasoning-within-the-conversation-flow",
+  "links": []
+}

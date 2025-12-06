@@ -1,0 +1,8 @@
+{
+  "title": "Ensure tmp directory exists",
+  "content": "log_file_path = Path(\"tmp/log.txt\")\nlog_file_path.parent.mkdir(parents=True, exist_ok=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#ensure-tmp-directory-exists",
+  "links": []
+}

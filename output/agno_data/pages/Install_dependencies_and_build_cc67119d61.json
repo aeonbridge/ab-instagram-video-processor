@@ -1,0 +1,42 @@
+{
+  "title": "Install dependencies and build",
+  "content": "npm install\nnpm run build\nbash  theme={null}\npip install agno mcp openai\nbash  theme={null}\nexport BROWSERBASE_API_KEY=your_browserbase_api_key\nexport BROWSERBASE_PROJECT_ID=your_browserbase_project_id\nexport OPENAI_API_KEY=your_openai_api_key\npython  theme={null}\nimport asyncio\nfrom os import environ\nfrom textwrap import dedent\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.mcp import MCPTools\nfrom mcp import StdioServerParameters\n\nasync def run_agent(message: str) -> None:\n    server_params = StdioServerParameters(\n        command=\"node\",\n        # Update this path to the location where you cloned the repository\n        args=[\"mcp-server-browserbase/stagehand/dist/index.js\"],\n        env=environ.copy(),\n    )\n\nasync with MCPTools(server_params=server_params, timeout_seconds=60) as mcp_tools:\n        agent = Agent(\n            model=OpenAIChat(id=\"gpt-5-mini\"),\n            tools=[mcp_tools],\n            instructions=dedent(\"\"\"\\\n                You are a web scraping assistant that creates concise reader's digests from Hacker News.\n\nCRITICAL INITIALIZATION RULES - FOLLOW EXACTLY:\n                1. NEVER use screenshot tool until AFTER successful navigation\n                2. ALWAYS start with stagehand_navigate first\n                3. Wait for navigation success message before any other actions\n                4. If you see initialization errors, restart with navigation only\n                5. Use stagehand_observe and stagehand_extract to explore pages safely\n\nAvailable tools and safe usage order:\n                - stagehand_navigate: Use FIRST to initialize browser\n                - stagehand_extract: Use to extract structured data from pages\n                - stagehand_observe: Use to find elements and understand page structure\n                - stagehand_act: Use to click links and navigate to comments\n                - screenshot: Use ONLY after navigation succeeds and page loads\n\nYour goal is to create a comprehensive but concise digest that includes:\n                - Top headlines with brief summaries\n                - Key themes and trends\n                - Notable comments and insights\n                - Overall tech news landscape overview\n\nBe methodical, extract structured data, and provide valuable insights.\n            \"\"\"),\n            markdown=True,\n                    )\n        await agent.aprint_response(message, stream=True)\n\nif __name__ == \"__main__\":\n    asyncio.run(\n        run_agent(\n            \"Create a comprehensive Hacker News Reader's Digest from https://news.ycombinator.com\"\n        )\n    )\n```\n\nThe Stagehand MCP server provides several tools for web automation:\n\n| Tool                 | Purpose                                     | Usage Notes                            |\n| -------------------- | ------------------------------------------- | -------------------------------------- |\n| `stagehand_navigate` | Navigate to web pages                       | **Use first** for initialization       |\n| `stagehand_extract`  | Extract structured data                     | Safe for content extraction            |\n| `stagehand_observe`  | Find elements and understand page structure | Good for exploration                   |\n| `stagehand_act`      | Interact with page elements                 | Click, type, scroll actions            |\n| `screenshot`         | Take screenshots                            | **Use only after** navigation succeeds |",
+  "code_samples": [
+    {
+      "code": "### 2. Install Python Dependencies",
+      "language": "unknown"
+    },
+    {
+      "code": "### 3. Set Environment Variables",
+      "language": "unknown"
+    },
+    {
+      "code": "## Code Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "2. Install Python Dependencies",
+      "id": "2.-install-python-dependencies"
+    },
+    {
+      "level": "h3",
+      "text": "3. Set Environment Variables",
+      "id": "3.-set-environment-variables"
+    },
+    {
+      "level": "h2",
+      "text": "Code Example",
+      "id": "code-example"
+    },
+    {
+      "level": "h2",
+      "text": "Available Tools",
+      "id": "available-tools"
+    }
+  ],
+  "url": "llms-txt#install-dependencies-and-build",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Audio Model Output",
+  "content": "Source: https://docs.agno.com/basics/multimodal/audio/audio_output\n\nLearn how to use audio from models as output with Agno agents.\n\nSimilar to providing audio inputs, you can also get audio outputs from an agent. Take a look at the [compatibility matrix](/basics/models/compatibility#multimodal-support) to see which models support audio as output.\n\n## Audio response modality\n\nThe following example demonstrates how some models can directly generate audio as part of their response.\n\n```python audio_agent.py theme={null}\nfrom agno.agent import Agent, RunOutput\nfrom agno.models.openai import OpenAIChat\nfrom agno.utils.audio import write_audio_to_file\n\nagent = Agent(\n    model=OpenAIChat(\n        id=\"gpt-5-mini-audio-preview\",\n        modalities=[\"text\", \"audio\"],\n        audio={\"voice\": \"alloy\", \"format\": \"wav\"},\n    ),\n    markdown=True,\n)\nresponse: RunOutput = agent.run(\"Tell me a 5 second scary story\")",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Audio response modality",
+      "id": "audio-response-modality"
+    }
+  ],
+  "url": "llms-txt#audio-model-output",
+  "links": []
+}

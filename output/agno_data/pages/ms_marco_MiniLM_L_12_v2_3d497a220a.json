@@ -1,0 +1,43 @@
+{
+  "title": "ms-marco-MiniLM-L-12-v2",
+  "content": "3. Export API Keys\nexport ANTHROPIC_API_KEY=\"your-anthropic-api-key\"\n\n4. Run the Example\npython cookbook/agent_basics/agentic_search/agentic_rag_infinity_reranker.py\n\nAbout Infinity Reranker:\n- Provides fast, local reranking without external API calls\n- Supports multiple state-of-the-art reranking models\n- Can be deployed on GPU for better performance\n- Offers both sync and async reranking capabilities\n- More deployment options: https://michaelfeil.eu/infinity/0.0.76/deploy/\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.cohere import CohereEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reranker import InfinityReranker\nfrom agno.models.anthropic import Claude\nfrom agno.vectordb.lancedb import LanceDb, SearchType\n\nknowledge = Knowledge(\n    # Use LanceDB as the vector database, store embeddings in the `agno_docs_infinity` table\n    vector_db=LanceDb(\n        uri=\"tmp/lancedb\",\n        table_name=\"agno_docs_infinity\",\n        search_type=SearchType.hybrid,\n        embedder=CohereEmbedder(id=\"embed-v4.0\"),\n        # Use Infinity reranker for local, fast reranking\n        reranker=InfinityReranker(\n            model=\"BAAI/bge-reranker-base\",  # You can change this to other models\n            host=\"localhost\",\n            port=7997,\n            top_n=5,  # Return top 5 reranked documents\n        ),\n    ),\n)\n\nasyncio.run(\n    knowledge.add_contents(\n        urls=[\n            \"https://docs.agno.com/introduction/agents.md\",\n            \"https://docs.agno.com/agents/tools.md\",\n            \"https://docs.agno.com/agents/knowledge.md\",\n        ]\n    )\n)\n\nagent = Agent(\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    # Agentic RAG is enabled by default when `knowledge` is provided to the Agent.\n    knowledge=knowledge,\n    # search_knowledge=True gives the Agent the ability to search on demand\n    # search_knowledge is True by default\n    search_knowledge=True,\n    instructions=[\n        \"Include sources in your response.\",\n        \"Always search your knowledge before answering the question.\",\n        \"Provide detailed and accurate information based on the retrieved documents.\",\n    ],\n    markdown=True,\n)\n\ndef test_infinity_connection():\n    \"\"\"Test if Infinity server is running and accessible\"\"\"\n    try:\n        from infinity_client import Client\n\n_ = Client(base_url=\"http://localhost:7997\")\n        print(\"✅ Successfully connected to Infinity server at localhost:7997\")\n        return True\n    except Exception as e:\n        print(f\"❌ Failed to connect to Infinity server: {e}\")\n        print(\n            \"\\nPlease make sure Infinity server is running. See setup instructions above.\"\n        )\n        return False\n\nif __name__ == \"__main__\":\n    print(\"🚀 Agentic RAG with Infinity Reranker Example\")\n    print(\"=\" * 50)\n\n# Test Infinity connection first\n    if not test_infinity_connection():\n        exit(1)\n\nprint(\"\\n🤖 Starting agent interaction...\")\n    print(\"=\" * 50)\n\n# Example questions to test the reranking capabilities\n    questions = [\n        \"What are Agents and how do they work?\",\n        \"How do I use tools with agents?\",\n        \"What is the difference between knowledge and tools?\",\n    ]\n\nfor i, question in enumerate(questions, 1):\n        print(f\"\\n🔍 Question {i}: {question}\")\n        print(\"-\" * 40)\n        agent.print_response(question, stream=True)\n        print(\"\\n\" + \"=\" * 50)\n\nprint(\"\\n🎉 Example completed!\")\n    print(\"\\nThe Infinity reranker helped improve the relevance of retrieved documents\")\n    print(\"by reranking them based on semantic similarity to your queries.\")\nbash  theme={null}\n    pip install -U agno anthropic infinity-client lancedb \"infinity-emb[all]\"\n    bash  theme={null}\n    # Run infinity server with reranking model\n    infinity_emb v2 --model-id BAAI/bge-reranker-base --port 7997\n    bash Mac/Linux theme={null}\n        export ANTHROPIC_API_KEY=\"your_anthropic_api_key_here\"\n      bash Windows theme={null}\n        $Env:ANTHROPIC_API_KEY=\"your_anthropic_api_key_here\"\n      bash  theme={null}\n    touch agentic_rag_infinity_reranker.py\n    bash Mac theme={null}\n      python agentic_rag_infinity_reranker.py\n      bash Windows theme={null}\n      python agentic_rag_infinity_reranker.py\n      ```\n    </CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/agents/agentic_search\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Setup Infinity Server\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your ANTHROPIC API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Create a Python file\">\n    Create a Python file and add the above code.",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#ms-marco-minilm-l-12-v2",
+  "links": []
+}

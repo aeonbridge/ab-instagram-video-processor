@@ -1,0 +1,8 @@
+{
+  "title": "Delete a memory",
+  "content": "print(\"\\nDeleting memory\")\nassert memory_id_2 is not None\nmemory.delete_user_memory(user_id=jane_doe_id, memory_id=memory_id_2)\nprint(\"Memory deleted\\n\")\nmemories = memory.get_user_memories(user_id=jane_doe_id)\nprint(\"Memories:\")\npprint(memories)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-a-memory",
+  "links": []
+}

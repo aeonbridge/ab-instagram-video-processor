@@ -1,0 +1,29 @@
+{
+  "title": "State Management",
+  "content": "Source: https://docs.agno.com/basics/state/overview\n\nPersist and share data across agent runs, team coordination, and workflow execution\n\n**State** is data that persists across multiple runs within a session, enabling agents, teams, and workflows to maintain context and remember information.\n\nCommon use cases include managing user-specific data like shopping lists, todo lists, preferences, or any information that needs to persist across interactions. State is managed through `session_state`, which can be accessed and updated in tools, then automatically persisted to your database.\n\nState in Agno follows this pattern:\n\n1. **Initialize** - Set default `session_state` when creating agents, teams, or workflows\n2. **Access** - Tools access state via `run_context.session_state`\n3. **Update** - Modifications are automatically persisted to the database\n4. **Load** - Subsequent runs in the same session retrieve the stored state\n\nHere's a simple agent that maintains a shopping list:\n\n<CardGroup cols={3}>\n  <Card title=\"Agent State\" icon=\"robot\" iconType=\"duotone\" href=\"/basics/state/agent\">\n    Learn about state in agents.\n  </Card>\n\n<Card title=\"Team State\" icon=\"users\" iconType=\"duotone\" href=\"/basics/state/team\">\n    Learn about state in teams.\n  </Card>\n\n<Card title=\"Workflow State\" icon=\"diagram-project\" iconType=\"duotone\" href=\"/basics/state/workflows/overview\">\n    Learn about state in workflows.\n  </Card>\n</CardGroup>\n\n## Developer Resources\n\n* View the [Agent schema](/reference/agents/agent)\n* View the [Team schema](/reference/teams/team)\n* View the [Workflow schema](/reference/workflows/workflow)\n* View the [RunContext schema](/reference/run/run-context)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How State Works",
+      "id": "how-state-works"
+    },
+    {
+      "level": "h3",
+      "text": "Basic Example",
+      "id": "basic-example"
+    },
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#state-management",
+  "links": []
+}

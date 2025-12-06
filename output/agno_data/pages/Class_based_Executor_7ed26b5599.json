@@ -1,0 +1,8 @@
+{
+  "title": "Class-based Executor",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/class-based-executor\n\nThis example demonstrates how to use a class-based executor in a workflow.\n\nThis example demonstrates how to use a class-based executor in a workflow.\n\n```python class_based_executor.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step, StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#class-based-executor",
+  "links": []
+}

@@ -1,0 +1,13 @@
+{
+  "title": "This won't use the session history, but instead will use the memory tools to get the memories",
+  "content": "agent.print_response(\"What have you remembered about me?\", stream=True, user_id=\"john_doe@example.com\")\npython  theme={null}\nfrom agno.tools.memory import MemoryTools\n\nmemory_tools = MemoryTools(\n    db=my_database,\n    enable_think=True,            # Enable the think tool (true by default)\n    enable_get_memories=True,     # Enable the get_memories tool (true by default)\n    enable_add_memory=True,       # Enable the add_memory tool (true by default)\n    enable_update_memory=True,    # Enable the update_memory tool (true by default)\n    enable_delete_memory=True,    # Enable the delete_memory tool (true by default)\n    enable_analyze=True,          # Enable the analyze tool (true by default)\n    add_instructions=True,        # Add default instructions\n    instructions=None,            # Optional custom instructions\n    add_few_shot=True,           # Add few-shot examples\n    few_shot_examples=None,      # Optional custom few-shot examples\n)\n```",
+  "code_samples": [
+    {
+      "code": "Here is how you can configure the toolkit:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#this-won't-use-the-session-history,-but-instead-will-use-the-memory-tools-to-get-the-memories",
+  "links": []
+}

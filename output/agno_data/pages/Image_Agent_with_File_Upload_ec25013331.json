@@ -1,0 +1,14 @@
+{
+  "title": "Image Agent with File Upload",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/image-input-file-upload\n\n```python cookbook/models/google/gemini/image_input_file_upload.py theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import Image\nfrom agno.models.google import Gemini\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom google.generativeai import upload_file\nfrom google.generativeai.types import file_types\n\nagent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    tools=[DuckDuckGoTools()],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#image-agent-with-file-upload",
+  "links": []
+}

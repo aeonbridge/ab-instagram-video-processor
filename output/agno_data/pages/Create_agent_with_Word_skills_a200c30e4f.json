@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with Word skills",
+  "content": "document_agent = Agent(\n    name=\"Document Creator\",\n    model=Claude(\n        id=\"claude-sonnet-4-5-20250929\",\n        skills=[\n            {\"type\": \"anthropic\", \"skill_id\": \"docx\", \"version\": \"latest\"}\n        ],\n    ),\n    instructions=[\n        \"You are a professional document writer with access to Word document skills.\",\n        \"Create well-structured documents with clear sections and professional formatting.\",\n        \"Use headings, lists, and tables where appropriate.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-word-skills",
+  "links": []
+}

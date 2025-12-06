@@ -1,0 +1,14 @@
+{
+  "title": "Running Workflows",
+  "content": "Source: https://docs.agno.com/basics/workflows/running-workflows\n\nLearn how to run a workflow and get the response.\n\nThe `Workflow.run()` function runs the agent and generates a response, either as a `WorkflowRunOutput` object or a stream of `WorkflowRunOutput` objects.\n\nMany of our examples use `workflow.print_response()` which is a helper utility to print the response in the terminal. This uses `workflow.run()` under the hood.\n\n## Running your Workflow\n\nHere's how to run your workflow. The response is captured in the `response`.\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.db.sqlite import SqliteDb\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow import Step, Workflow\nfrom agno.run.workflow import WorkflowRunOutput\nfrom agno.utils.pprint import pprint_run_response",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Running your Workflow",
+      "id": "running-your-workflow"
+    }
+  ],
+  "url": "llms-txt#running-workflows",
+  "links": []
+}

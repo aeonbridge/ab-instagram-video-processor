@@ -1,0 +1,8 @@
+{
+  "title": "Get Evaluation Run",
+  "content": "Source: https://docs.agno.com/reference-api/schema/evals/get-evaluation-run\n\nget /eval-runs/{eval_run_id}\nRetrieve detailed results and metrics for a specific evaluation run.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-evaluation-run",
+  "links": []
+}

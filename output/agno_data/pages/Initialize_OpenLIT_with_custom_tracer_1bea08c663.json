@@ -1,0 +1,8 @@
+{
+  "title": "Initialize OpenLIT with custom tracer",
+  "content": "openlit.init(\n    tracer=trace.get_tracer(__name__),\n    disable_batch=True\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-openlit-with-custom-tracer",
+  "links": []
+}

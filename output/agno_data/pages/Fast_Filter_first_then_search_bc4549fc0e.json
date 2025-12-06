@@ -1,0 +1,8 @@
+{
+  "title": "Fast: Filter first, then search",
+  "content": "results = knowledge.search(\n    query=\"deployment process\",\n    max_results=10,\n    filters={\"department\": \"engineering\", \"type\": \"procedure\"}\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#fast:-filter-first,-then-search",
+  "links": []
+}

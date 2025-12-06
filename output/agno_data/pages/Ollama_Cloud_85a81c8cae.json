@@ -1,0 +1,41 @@
+{
+  "title": "Ollama Cloud",
+  "content": "Source: https://docs.agno.com/integrations/models/local/ollama/usage/cloud\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set up Ollama Cloud API Key\">\n    Sign up at [ollama.com](https://ollama.com) and get your API key, then export it:\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* **No local setup required**: Access powerful models instantly without downloading or managing local installations\n* **Production-ready**: Enterprise-grade infrastructure with reliable uptime and performance\n* **Wide model selection**: Access to powerful models including GPT-OSS and other optimized cloud models\n* **Automatic configuration**: When `api_key` is provided, the host automatically defaults to `https://ollama.com`",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set up Ollama Cloud API Key\">\n    Sign up at [ollama.com](https://ollama.com) and get your API key, then export it:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    }
+  ],
+  "url": "llms-txt#ollama-cloud",
+  "links": []
+}

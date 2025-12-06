@@ -1,0 +1,14 @@
+{
+  "title": "Basic Agent with Streaming",
+  "content": "Source: https://docs.agno.com/integrations/models/native/dashscope/usage/basic-stream\n\n```python cookbook/models/dashscope/basic_stream.py theme={null}\nfrom typing import Iterator  # noqa\nfrom agno.agent import Agent, RunOutputEvent  # noqa\nfrom agno.models.dashscope import DashScope\n\nagent = Agent(model=DashScope(id=\"qwen-plus\", temperature=0.5), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#basic-agent-with-streaming",
+  "links": []
+}

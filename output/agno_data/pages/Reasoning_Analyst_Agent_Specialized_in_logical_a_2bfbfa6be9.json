@@ -1,0 +1,8 @@
+{
+  "title": "Reasoning Analyst Agent - Specialized in logical analysis",
+  "content": "reasoning_analyst = Agent(\n    name=\"Reasoning Analyst\",\n    model=Claude(id=\"claude-sonnet-4-20250514\"),\n    role=\"Apply logical reasoning to analyze gathered information\",\n    tools=[ReasoningTools(add_instructions=True)],\n    instructions=[\n        \"Analyze information using structured reasoning approaches.\",\n        \"Identify logical connections and relationships.\",\n        \"Apply deductive and inductive reasoning where appropriate.\",\n        \"Break down complex topics into logical components.\",\n        \"Use reasoning tools to structure your analysis.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#reasoning-analyst-agent---specialized-in-logical-analysis",
+  "links": []
+}

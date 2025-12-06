@@ -1,0 +1,8 @@
+{
+  "title": "❌ Doesn't work as expected - automatic memory is disabled",
+  "content": "agent = Agent(\n    db=db,\n    enable_user_memories=True,\n    enable_agentic_memory=True  # This disables automatic behavior\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#❌-doesn't-work-as-expected---automatic-memory-is-disabled",
+  "links": []
+}

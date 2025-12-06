@@ -1,0 +1,14 @@
+{
+  "title": "Recipe Rag Image",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/recipe_rag_image\n\nAn agent that uses Llama 4 for multi-modal RAG and OpenAITools to create a visual, step-by-step image manual for a recipe.\n\n```python cookbook/examples/agents/recipe_rag_image.py theme={null}\nimport asyncio\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.cohere import CohereEmbedder\nfrom agno.knowledge.knowledge import Knowledge",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#recipe-rag-image",
+  "links": []
+}

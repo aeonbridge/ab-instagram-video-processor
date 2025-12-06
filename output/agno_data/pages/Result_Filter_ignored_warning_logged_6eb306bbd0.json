@@ -1,0 +1,24 @@
+{
+  "title": "Result: Filter ignored, warning logged",
+  "content": "python  theme={null}\ndef validate_and_send_filter(filter_expr, message):\n    \"\"\"Validate filter before sending to API.\"\"\"\n    try:\n        # Test serialization\n        filter_dict = filter_expr.to_dict()\n        filter_json = json.dumps(filter_dict)\n        \n        # Verify it's valid JSON\n        json.loads(filter_json)\n        \n        # Send request\n        return send_filtered_agent_request(message, filter_expr)\n        \n    except (AttributeError, TypeError, json.JSONDecodeError) as e:\n        print(f\"Filter validation failed: {e}\")\n        return None\n```\n\n<CardGroup cols={2}>\n  <Card title=\"Advanced Filtering Guide\" icon=\"filter\" href=\"/basics/knowledge/filters/advanced-filtering\">\n    Learn about filter expressions and metadata design in detail\n  </Card>\n\n<Card title=\"Agent OS API\" icon=\"code\" href=\"/agent-os/api\">\n    Explore the full Agent OS API reference\n  </Card>\n\n<Card title=\"Knowledge Bases\" icon=\"database\" href=\"/basics/knowledge/knowledge-bases\">\n    Understand knowledge base architecture and setup\n  </Card>\n\n<Card title=\"Search & Retrieval\" icon=\"magnifying-glass\" href=\"/basics/knowledge/search-and-retrieval/overview\">\n    Optimize your search strategies\n  </Card>\n\n<Card title=\"Filter Expressions Example\" icon=\"code\" href=\"/basics/knowledge/filters/usage/filter-expressions\">\n    See working examples of filter expressions via API\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "<Warning>\n  When filters fail to parse, the search proceeds **without filters** rather than throwing an error. Always verify your filter JSON is valid and check server logs if results seem unfiltered.\n</Warning>\n\n### Client-Side Validation\n\nAdd validation before sending requests:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Client-Side Validation",
+      "id": "client-side-validation"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#result:-filter-ignored,-warning-logged",
+  "links": []
+}

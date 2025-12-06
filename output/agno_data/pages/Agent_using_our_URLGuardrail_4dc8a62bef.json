@@ -1,0 +1,8 @@
+{
+  "title": "Agent using our URLGuardrail",
+  "content": "agent = Agent(\n    name=\"URL-Protected Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    # Provide the Guardrails to be used with the pre_hooks parameter\n    pre_hooks=[URLGuardrail()],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-using-our-urlguardrail",
+  "links": []
+}

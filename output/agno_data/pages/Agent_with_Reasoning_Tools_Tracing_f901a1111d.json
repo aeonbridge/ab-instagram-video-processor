@@ -1,0 +1,33 @@
+{
+  "title": "Agent with Reasoning Tools Tracing",
+  "content": "Source: https://docs.agno.com/agent-os/tracing/usage/agent-with-reasoning-tools-tracing\n\nLearn how to trace your agents with reasoning tools with Agno in AgentOS\n\nThis example shows how to trace an agent that uses reasoning tools in AgentOS. The traces capture the agent's reasoning process, including all intermediate steps.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run AgentOS\">\n    <CodeGroup>\n\nYour AgentOS will be available at `http://localhost:7777`. View traces in the AgentOS dashboard.\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run AgentOS\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#agent-with-reasoning-tools-tracing",
+  "links": []
+}

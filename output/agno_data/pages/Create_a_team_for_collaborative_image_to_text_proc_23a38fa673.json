@@ -1,0 +1,31 @@
+{
+  "title": "Create a team for collaborative image-to-text processing",
+  "content": "image_team = Team(\n    name=\"Image Story Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[image_analyzer, creative_writer],\n    instructions=[\n        \"Work together to create compelling fiction stories from images.\",\n        \"Image Analyst: First analyze the image for visual details and context.\",\n        \"Creative Writer: Transform the analysis into engaging fiction narratives.\",\n        \"Ensure the story captures the essence and mood of the image.\",\n    ],\n    markdown=True,\n)\n\nimage_path = Path(__file__).parent.joinpath(\"sample.jpg\")\nimage_team.print_response(\n    \"Write a 3 sentence fiction story about the image\",\n    images=[Image(filepath=image_path)],\n)\nbash  theme={null}\n    pip install agno\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    # Add a sample.jpg image file in the same directory as the script\n    bash  theme={null}\n    python cookbook/examples/teams/multimodal/image_to_text.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Add sample image\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-a-team-for-collaborative-image-to-text-processing",
+  "links": []
+}

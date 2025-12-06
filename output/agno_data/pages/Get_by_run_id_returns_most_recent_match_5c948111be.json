@@ -1,0 +1,19 @@
+{
+  "title": "Get by run_id (returns most recent match)",
+  "content": "trace = db.get_trace(run_id=response.run_id)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "**Parameters:**\n\n| Parameter  | Type            | Description             |\n| ---------- | --------------- | ----------------------- |\n| `trace_id` | `Optional[str]` | Unique trace identifier |\n| `run_id`   | `Optional[str]` | Filter by run ID        |\n\n**Returns:** `Trace` or `None`\n\nSee the reference for [Trace](/reference/tracing/trace) for more information.\n\n### `db.get_traces()`\n\nGet multiple traces with filtering and pagination.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "`db.get_traces()`",
+      "id": "`db.get_traces()`"
+    }
+  ],
+  "url": "llms-txt#get-by-run_id-(returns-most-recent-match)",
+  "links": []
+}

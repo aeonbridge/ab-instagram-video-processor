@@ -1,0 +1,27 @@
+{
+  "title": "Pass a Pydantic model directly - no additional validation needed",
+  "content": "research_request = ResearchProject(\n    project_name=\"Blockchain Development Tools\",\n    research_topics=[\"Ethereum\", \"Solana\", \"Web3 Libraries\"],\n    target_audience=\"Blockchain Developers\",\n    depth_level=\"advanced\",\n    max_sources=12,\n    include_recent_only=False,\n)\n\nresearch_team.print_response(input=research_request)\nbash  theme={null}\n    pip install agno pydantic ddgs\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/structured_input_output/06_input_schema_on_team.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#pass-a-pydantic-model-directly---no-additional-validation-needed",
+  "links": []
+}

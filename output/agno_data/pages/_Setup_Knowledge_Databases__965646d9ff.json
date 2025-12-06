@@ -1,0 +1,8 @@
+{
+  "title": "************* Setup Knowledge Databases *************",
+  "content": "db_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\ndocuments_db = PostgresDb(\n    db_url,\n    id=\"agno_knowledge_db\",\n    knowledge_table=\"agno_knowledge_contents\",\n)\nfaq_db = PostgresDb(\n    db_url,\n    id=\"agno_faq_db\",\n    knowledge_table=\"agno_faq_contents\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#*************-setup-knowledge-databases-*************",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create team with knowledge filters",
+  "content": "team_with_knowledge = Team(\n    name=\"Team with Knowledge\",\n    members=[\n        web_agent\n    ],  # If you omit the member, the leader will search the knowledge base itself.\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    knowledge=knowledge_base,\n    show_members_responses=True,\n    markdown=True,\n    knowledge_filters={\n        \"user_id\": \"jordan_mitchell\"\n    },  # Filter to specific user's documents\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-team-with-knowledge-filters",
+  "links": []
+}

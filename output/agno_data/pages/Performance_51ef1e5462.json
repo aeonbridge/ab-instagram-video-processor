@@ -1,0 +1,19 @@
+{
+  "title": "Performance",
+  "content": "Source: https://docs.agno.com/get-started/performance\n\nGet extreme performance out of the box with Agno.\n\nIf you're building with Agno, you're guaranteed best-in-class performance by default. Our obsession with performance is necessary because even simple AI workflows can spawn hundreds of Agents and because many tasks are long-running -- stateless, horizontal scalability is key for success.\n\nAt Agno, we optimize performance across 3 dimensions:\n\n1. **Agent performance:** We optimize static operations (instantiation, memory footprint) and runtime operations (tool calls, memory updates, history management).\n2. **System performance:** The AgentOS API is async by default and has a minimal memory footprint. The system is stateless and horizontally scalable, with a focus on preventing memory leaks. It handles parallel and batch embedding generation during knowledge ingestion, metrics collection in background tasks, and other system-level optimizations.\n3. **Agent reliability and accuracy:** Monitored through evals, which we’ll explore later.\n\nLet's measure the time it takes to instantiate an Agent and the memory footprint of an Agent. Here are the numbers (last measured in Oct 2025, on an Apple M4 MacBook Pro):\n\n* **Agent instantiation:** \\~3μs on average\n* **Memory footprint:** \\~6.6Kib on average\n\nWe'll show below that Agno Agents instantiate **529× faster than Langgraph**, **57× faster than PydanticAI**, and **70× faster than CrewAI**. Agno Agents also use **24× lower memory than Langgraph**, **4× lower than PydanticAI**, and **10× lower than CrewAI**.\n\n<Note>\n  Run time performance is bottlenecked by inference and hard to benchmark accurately, so we focus on minimizing overhead, reducing memory usage, and parallelizing tool calls.\n</Note>\n\n### Instantiation Time\n\nLet's measure instantiation time for an Agent with 1 tool. We'll run the evaluation 1000 times to get a baseline measurement. We'll compare Agno to LangGraph, CrewAI and Pydantic AI.\n\n<Note>\n  The code for this benchmark is available [here](https://github.com/agno-agi/agno/tree/main/cookbook/evals/performance). You should run the evaluation yourself on your own machine, please, do not take these results at face value.\n</Note>\n\n```shell  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Agent Performance",
+      "id": "agent-performance"
+    },
+    {
+      "level": "h3",
+      "text": "Instantiation Time",
+      "id": "instantiation-time"
+    }
+  ],
+  "url": "llms-txt#performance",
+  "links": []
+}

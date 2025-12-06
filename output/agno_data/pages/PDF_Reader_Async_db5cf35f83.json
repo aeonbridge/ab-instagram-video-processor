@@ -1,0 +1,14 @@
+{
+  "title": "PDF Reader Async",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/pdf-reader-async\n\nThe **PDF Reader** with asynchronous processing allows you to handle PDF files efficiently and integrate them with knowledge bases.\n\n```python examples/basics/knowledge/readers/pdf_reader_async.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#pdf-reader-async",
+  "links": []
+}

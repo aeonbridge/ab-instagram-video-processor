@@ -1,0 +1,44 @@
+{
+  "title": "AgentOS Connection Issues",
+  "content": "Source: https://docs.agno.com/faq/agentos-connection\n\nIf you're experiencing connection issues with AgentOS, particularly when trying to connect to **local instances**, this guide will help you resolve them.\n\n## Browser Compatibility\n\nSome browsers have security restrictions that prevent connections to localhost domains due to mixed content security issues. Here's what you need to know about different browsers:\n\n### Recommended Browsers\n\n* **Chrome & Edge**: These browsers work well with local connections by default and are our recommended choices\n* **Firefox**: Generally works well with local connections\n\n### Browsers with Known Issues\n\n* **Safari**: May block local connections due to its strict security policies\n* **Brave**: Blocks local connections by default due to its shield feature\n\nIf you're using Brave browser, you can try these steps:\n\n1. Click on the Brave shield icon in the address bar\n2. Turn off the shield for the current site\n3. Refresh the endpoint and try connecting again\n\n<video autoPlay muted controls className=\"w-full aspect-video\" src=\"https://mintcdn.com/agno-v2/Xj0hQoiFt0n7bXOq/videos/agentos-brave-issue.mp4?fit=max&auto=format&n=Xj0hQoiFt0n7bXOq&q=85&s=80ec713d1ca11cc06366c5460388fdd8\" data-path=\"videos/agentos-brave-issue.mp4\" />\n\n### For Other Browsers\n\nIf you're using Safari or experiencing issues with other browsers, you can use one of these solutions:\n\n#### 1. Use Chrome or Edge\n\nThe simplest solution is to use Chrome or Edge browsers which have better support for local connections.\n\n#### 2. Use Tunneling Services\n\nYou can use tunneling services to expose your local endpoint to the internet:\n\n1. Install ngrok from [ngrok.com](https://ngrok.com)\n2. Run your local server\n3. Create a tunnel with ngrok:\n\n4. Use the provided ngrok URL on [AgentOS](https://os.agno.com).\n\n##### Using Cloudflare Tunnel\n\n1. Install Cloudflare Tunnel (cloudflared) from [Cloudflare's website](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/)\n2. Authenticate with Cloudflare\n3. Create a tunnel:\n\n4. Use the provided Cloudflare URL on [AgentOS](https://os.agno.com).",
+  "code_samples": [
+    {
+      "code": "4. Use the provided ngrok URL on [AgentOS](https://os.agno.com).\n\n##### Using Cloudflare Tunnel\n\n1. Install Cloudflare Tunnel (cloudflared) from [Cloudflare's website](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/)\n2. Authenticate with Cloudflare\n3. Create a tunnel:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Browser Compatibility",
+      "id": "browser-compatibility"
+    },
+    {
+      "level": "h3",
+      "text": "Recommended Browsers",
+      "id": "recommended-browsers"
+    },
+    {
+      "level": "h3",
+      "text": "Browsers with Known Issues",
+      "id": "browsers-with-known-issues"
+    },
+    {
+      "level": "h2",
+      "text": "Solutions",
+      "id": "solutions"
+    },
+    {
+      "level": "h3",
+      "text": "For Brave Users",
+      "id": "for-brave-users"
+    },
+    {
+      "level": "h3",
+      "text": "For Other Browsers",
+      "id": "for-other-browsers"
+    }
+  ],
+  "url": "llms-txt#agentos-connection-issues",
+  "links": []
+}

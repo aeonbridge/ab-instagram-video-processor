@@ -1,0 +1,14 @@
+{
+  "title": "Selecting Custom Table Names",
+  "content": "Source: https://docs.agno.com/integrations/database/selecting-tables\n\nAgno allows you to customize table names when using databases, providing flexibility in organizing your data storage.\n\nSpecify custom table names when initializing your database connection.\n\n```python selecting_tables.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#selecting-custom-table-names",
+  "links": []
+}

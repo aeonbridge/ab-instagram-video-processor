@@ -1,0 +1,8 @@
+{
+  "title": "Use FileHandler to write to file",
+  "content": "handler = logging.FileHandler(log_file_path)\nformatter = logging.Formatter(\"%(levelname)s: %(message)s\")\nhandler.setFormatter(formatter)\ncustom_logger.addHandler(handler)\ncustom_logger.setLevel(logging.INFO)\ncustom_logger.propagate = False",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#use-filehandler-to-write-to-file",
+  "links": []
+}

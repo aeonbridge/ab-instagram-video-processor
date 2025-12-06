@@ -1,0 +1,28 @@
+{
+  "title": "Todoist",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/todoist\n\n**TodoistTools** enables an Agent to interact with [Todoist](https://www.todoist.com/).\n\nThe following example requires the `todoist-api-python` library. and a Todoist API token which can be obtained from the [Todoist Developer Portal](https://app.todoist.com/app/settings/integrations/developer).\n\nThe following agent will create a new task in Todoist.\n\n```python cookbook/tools/todoist.py theme={null}\n\"\"\"\nExample showing how to use the Todoist Tools with Agno\n\nRequirements:\n- Sign up/login to Todoist and get a Todoist API Token (get from https://app.todoist.com/app/settings/integrations/developer)\n- pip install todoist-api-python\n\nUsage:\n- Set the following environment variables:\n    export TODOIST_API_TOKEN=\"your_api_token\"\n\n- Or provide them when creating the TodoistTools instance\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.todoist import TodoistTools\n\ntodoist_agent = Agent(\n    name=\"Todoist Agent\",\n    role=\"Manage your todoist tasks\",\n    instructions=[\n        \"When given a task, create a todoist task for it.\",\n        \"When given a list of tasks, create a todoist task for each one.\",\n        \"When given a task to update, update the todoist task.\",\n        \"When given a task to delete, delete the todoist task.\",\n        \"When given a task to get, get the todoist task.\",\n    ],\n    id=\"todoist-agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[TodoistTools()],\n    markdown=True,\n    debug_mode=True,\n    )",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will create a new task in Todoist.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#todoist",
+  "links": []
+}

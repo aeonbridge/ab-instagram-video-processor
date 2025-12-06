@@ -1,0 +1,14 @@
+{
+  "title": "Image Editing Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/image-editing\n\n```python cookbook/models/google/gemini/image_editing.py theme={null}\nfrom io import BytesIO\n\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.media import Image\nfrom agno.models.google import Gemini\nfrom PIL import Image as PILImage",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#image-editing-agent",
+  "links": []
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Input & Output",
+  "content": "Source: https://docs.agno.com/basics/input-output/overview\n\nLearn how to control inputs and outputs with type-safe Pydantic models for reliable, production-ready systems.\n\nAgno Agents, Teams and Workflows support various forms of input and output, from simple string-based interactions to structured data validation using Pydantic models.\n\nGenerate validated, type-safe outputs using Pydantic models for reliable production systems. Structured outputs provide consistent, predictable response formats instead of unstructured text.\n\nCommon use cases include data extraction, classification, content generation, and validation.\n\n<Info>\n  Structured outputs work seamlessly with tools, knowledge bases, and most other Agno features.\n</Info>\n\n<Tip>\n  For models that don't support structured output, Agno provides JSON mode, which instructs the model to respond in JSON format. While less accurate than native structured output, JSON mode offers a fallback option for compatible models. Set `use_json_mode=True` on your Agent, Team, or Workflow.\n</Tip>\n\nAgents, Teams, and Workflows support structured input using Pydantic models or `TypedDict`. Pass them to the `input` parameter in `run()` or `print_response()`.\n\nWhen you combine both `input_schema` and `output_schema`, you create a **typesafe** component with end-to-end type safety—a fully validated data pipeline from input to output.\n\n* **[Parser Model](/basics/input-output/agent/usage/parser-model)**: Use a different model to parse and structure output from your primary model\n* **[Output Model](/basics/input-output/agent/usage/output-model)**: Use a different model to produce the final output\n* **[Input Validation](/basics/input-output/agent/usage/input-schema-on-agent)**: Set `input_schema` to automatically validate dictionary inputs\n* **[Streaming](/basics/input-output/team/usage/structured-output-streaming)**: Structured outputs work seamlessly with streaming\n\n<CardGroup cols={3}>\n  <Card title=\"Agent Usage Examples\" icon=\"robot\" iconType=\"duotone\" href=\"/basics/input-output/agent/usage\">\n    Explore detailed examples for structured input and output with Agents.\n  </Card>\n\n<Card title=\"Team Usage Examples\" icon=\"users\" iconType=\"duotone\" href=\"/basics/input-output/team/usage\">\n    Explore detailed examples for structured input and output with Teams.\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "### Team Example",
+      "language": "unknown"
+    },
+    {
+      "code": "### Workflow Example",
+      "language": "unknown"
+    },
+    {
+      "code": "<Tip>\n  For models that don't support structured output, Agno provides JSON mode, which instructs the model to respond in JSON format. While less accurate than native structured output, JSON mode offers a fallback option for compatible models. Set `use_json_mode=True` on your Agent, Team, or Workflow.\n</Tip>\n\n## Structured Input\n\nAgents, Teams, and Workflows support structured input using Pydantic models or `TypedDict`. Pass them to the `input` parameter in `run()` or `print_response()`.\n\n### Agent Example",
+      "language": "unknown"
+    },
+    {
+      "code": "### Team Example",
+      "language": "unknown"
+    },
+    {
+      "code": "### Workflow Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Structured Output",
+      "id": "structured-output"
+    },
+    {
+      "level": "h3",
+      "text": "Agent Example",
+      "id": "agent-example"
+    },
+    {
+      "level": "h3",
+      "text": "Team Example",
+      "id": "team-example"
+    },
+    {
+      "level": "h3",
+      "text": "Workflow Example",
+      "id": "workflow-example"
+    },
+    {
+      "level": "h2",
+      "text": "Structured Input",
+      "id": "structured-input"
+    },
+    {
+      "level": "h3",
+      "text": "Agent Example",
+      "id": "agent-example"
+    },
+    {
+      "level": "h3",
+      "text": "Team Example",
+      "id": "team-example"
+    },
+    {
+      "level": "h3",
+      "text": "Workflow Example",
+      "id": "workflow-example"
+    },
+    {
+      "level": "h2",
+      "text": "Typesafe Patterns",
+      "id": "typesafe-patterns"
+    },
+    {
+      "level": "h2",
+      "text": "Advanced Features",
+      "id": "advanced-features"
+    },
+    {
+      "level": "h2",
+      "text": "Learn More",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#input-&-output",
+  "links": []
+}

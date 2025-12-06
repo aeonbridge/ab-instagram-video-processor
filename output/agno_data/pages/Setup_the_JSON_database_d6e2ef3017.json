@@ -1,0 +1,8 @@
+{
+  "title": "Setup the JSON database",
+  "content": "db = JsonDb(db_path=\"tmp/json_db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-json-database",
+  "links": []
+}

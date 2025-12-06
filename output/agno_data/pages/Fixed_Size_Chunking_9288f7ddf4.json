@@ -1,0 +1,8 @@
+{
+  "title": "Fixed Size Chunking",
+  "content": "Source: https://docs.agno.com/reference/knowledge/chunking/fixed-size\n\nFixed size chunking is a method of splitting documents into smaller chunks of a specified size, with optional overlap between chunks.\nThis is useful when you want to process large documents in smaller, manageable pieces.\n\n<Snippet file=\"chunking-fixed-size.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#fixed-size-chunking",
+  "links": []
+}

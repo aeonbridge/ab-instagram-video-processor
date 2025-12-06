@@ -1,0 +1,14 @@
+{
+  "title": "Print team member message metrics",
+  "content": "print(\"---\" * 5, \"Team Member Message Metrics\", \"---\" * 5)\nif run_response.member_responses:\n    for member_response in run_response.member_responses:\n        if member_response.messages:\n            for message in member_response.messages:\n                if message.role == \"assistant\":\n                    if message.content:\n                        print(f\"Member Message: {message.content}\")\n                    elif message.tool_calls:\n                        print(f\"Member Tool calls: {message.tool_calls}\")\n                    print(\"---\" * 5, \"Member Metrics\", \"---\" * 5)\n                    pprint(message.metrics)\n                    print(\"---\" * 20)\n```\n\nYou'll see the outputs with following information:\n\n* `input_tokens`: The number of tokens sent to the model.\n* `output_tokens`: The number of tokens received from the model.\n* `total_tokens`: The sum of `input_tokens` and `output_tokens`.\n* `audio_input_tokens`: The number of tokens sent to the model for audio input.\n* `audio_output_tokens`: The number of tokens received from the model for audio output.\n* `audio_total_tokens`: The sum of `audio_input_tokens` and `audio_output_tokens`.\n* `cache_read_tokens`: The number of tokens read from the cache.\n* `cache_write_tokens`: The number of tokens written to the cache.\n* `reasoning_tokens`: The number of tokens used for reasoning.\n* `duration`: The duration of the run in seconds.\n* `time_to_first_token`: The time taken until the first token was generated.\n* `provider_metrics`: Any provider-specific metrics.\n\n## Developer Resources\n\n* View the [TeamRunOutput schema](/reference/teams/team-response)\n* View the [Metrics schema](/reference/agents/metrics)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/teams/metrics/01_team_metrics.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#print-team-member-message-metrics",
+  "links": []
+}

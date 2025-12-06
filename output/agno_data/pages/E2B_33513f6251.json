@@ -1,0 +1,28 @@
+{
+  "title": "E2B",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/e2b\n\nEnable your Agents to run code in a remote, secure sandbox.\n\n**E2BTools** enable an Agent to execute code in a secure sandboxed environment with support for Python, file operations, and web server capabilities.\n\nThe E2B tools require the `e2b_code_interpreter` Python package and an E2B API key.\n\nThe following example demonstrates how to create an agent that can run Python code in a secure sandbox:\n\n```python cookbook/tools/e2b_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.e2b import E2BTools\n\ne2b_tools = E2BTools(\n    timeout=600,  # 10 minutes timeout (in seconds)\n)\n\nagent = Agent(\n    name=\"Code Execution Sandbox\",\n    id=\"e2b-sandbox\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[e2b_tools],\n    markdown=True,\n        instructions=[\n        \"You are an expert at writing and validating Python code using a secure E2B sandbox environment.\",\n        \"Your primary purpose is to:\",\n        \"1. Write clear, efficient Python code based on user requests\",\n        \"2. Execute and verify the code in the E2B sandbox\",\n        \"3. Share the complete code with the user, as this is the main use case\",\n        \"4. Provide thorough explanations of how the code works\",\n        \"\",\n        \"You can use these tools:\",\n        \"1. Run Python code (run_python_code)\",\n        \"2. Upload files to the sandbox (upload_file)\",\n        \"3. Download files from the sandbox (download_file_from_sandbox)\",\n        \"4. Generate and add visualizations as image artifacts (download_png_result)\",\n        \"5. List files in the sandbox (list_files)\",\n        \"6. Read and write file content (read_file_content, write_file_content)\",\n        \"7. Start web servers and get public URLs (run_server, get_public_url)\",\n        \"8. Manage the sandbox lifecycle (set_sandbox_timeout, get_sandbox_status, shutdown_sandbox)\",\n    ],\n)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following example demonstrates how to create an agent that can run Python code in a secure sandbox:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#e2b",
+  "links": []
+}

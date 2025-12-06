@@ -1,0 +1,8 @@
+{
+  "title": "Verify Webhook",
+  "content": "Source: https://docs.agno.com/reference-api/schema/whatsapp/verify-webhook\n\nget /whatsapp/webhook\nHandle WhatsApp webhook verification",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#verify-webhook",
+  "links": []
+}

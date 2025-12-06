@@ -1,0 +1,59 @@
+{
+  "title": "Docker",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/local/docker\n\n**DockerTools** enable an Agent to interact with Docker containers, images, volumes, and networks.\n\nThe Docker tools require the `docker` Python package. You'll also need Docker installed and running on your system.\n\nThe following example creates an agent that can manage Docker resources:\n\n| Parameter                     | Type   | Default | Description                                                      |\n| ----------------------------- | ------ | ------- | ---------------------------------------------------------------- |\n| `enable_container_management` | `bool` | `True`  | Enables container management functions (list, start, stop, etc.) |\n| `enable_image_management`     | `bool` | `True`  | Enables image management functions (pull, build, etc.)           |\n| `enable_volume_management`    | `bool` | `False` | Enables volume management functions                              |\n| `enable_network_management`   | `bool` | `False` | Enables network management functions                             |\n\n### Container Management\n\n| Function             | Description                                     |\n| -------------------- | ----------------------------------------------- |\n| `list_containers`    | Lists all containers or only running containers |\n| `start_container`    | Starts a stopped container                      |\n| `stop_container`     | Stops a running container                       |\n| `remove_container`   | Removes a container                             |\n| `get_container_logs` | Retrieves logs from a container                 |\n| `inspect_container`  | Gets detailed information about a container     |\n| `run_container`      | Creates and starts a new container              |\n| `exec_in_container`  | Executes a command inside a running container   |\n\n| Function        | Description                              |\n| --------------- | ---------------------------------------- |\n| `list_images`   | Lists all images on the system           |\n| `pull_image`    | Pulls an image from a registry           |\n| `remove_image`  | Removes an image                         |\n| `build_image`   | Builds an image from a Dockerfile        |\n| `tag_image`     | Tags an image                            |\n| `inspect_image` | Gets detailed information about an image |\n\n### Volume Management\n\n| Function         | Description                              |\n| ---------------- | ---------------------------------------- |\n| `list_volumes`   | Lists all volumes                        |\n| `create_volume`  | Creates a new volume                     |\n| `remove_volume`  | Removes a volume                         |\n| `inspect_volume` | Gets detailed information about a volume |\n\n### Network Management\n\n| Function                            | Description                               |\n| ----------------------------------- | ----------------------------------------- |\n| `list_networks`                     | Lists all networks                        |\n| `create_network`                    | Creates a new network                     |\n| `remove_network`                    | Removes a network                         |\n| `inspect_network`                   | Gets detailed information about a network |\n| `connect_container_to_network`      | Connects a container to a network         |\n| `disconnect_container_from_network` | Disconnects a container from a network    |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/docker.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/docker_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following example creates an agent that can manage Docker resources:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h3",
+      "text": "Container Management",
+      "id": "container-management"
+    },
+    {
+      "level": "h3",
+      "text": "Image Management",
+      "id": "image-management"
+    },
+    {
+      "level": "h3",
+      "text": "Volume Management",
+      "id": "volume-management"
+    },
+    {
+      "level": "h3",
+      "text": "Network Management",
+      "id": "network-management"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#docker",
+  "links": []
+}

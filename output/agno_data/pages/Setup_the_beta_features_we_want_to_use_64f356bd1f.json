@@ -1,0 +1,8 @@
+{
+  "title": "Setup the beta features we want to use",
+  "content": "betas = [\"context-1m-2025-08-07\"]\nmodel = Claude(betas=betas)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-beta-features-we-want-to-use",
+  "links": []
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Brave Search",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/bravesearch\n\n**BraveSearch** enables an Agent to search the web for information using the Brave search engine.\n\nThe following examples requires the `brave-search` library.\n\n| Parameter             | Type            | Default | Description                                                                    |\n| --------------------- | --------------- | ------- | ------------------------------------------------------------------------------ |\n| `api_key`             | `Optional[str]` | `None`  | Brave API key. If not provided, will use BRAVE\\_API\\_KEY environment variable. |\n| `fixed_max_results`   | `Optional[int]` | `None`  | A fixed number of maximum results.                                             |\n| `fixed_language`      | `Optional[str]` | `None`  | A fixed language for the search results.                                       |\n| `enable_brave_search` | `bool`          | `True`  | Enable or disable the brave\\_search function.                                  |\n| `all`                 | `bool`          | `False` | Enable all available functions in the toolkit.                                 |\n\n| Function       | Description                                                                                                                                                                                                                                                                                                                                                                       |\n| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `brave_search` | Searches Brave for a specified query. Parameters include `query` (str) for the search term, `max_results` (int, default=5) for the maximum number of results, `country` (str, default=\"US\") for the country code for search results, and `search_lang` (str, default=\"en\") for the language of the search results. Returns a JSON formatted string containing the search results. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/bravesearch.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/bravesearch_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#brave-search",
+  "links": []
+}

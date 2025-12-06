@@ -1,0 +1,8 @@
+{
+  "title": "Download all sample sales files and get their paths",
+  "content": "downloaded_csv_paths = download_knowledge_filters_sample_data(\n    num_files=4, file_extension=SampleDataFileExtension.CSV\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#download-all-sample-sales-files-and-get-their-paths",
+  "links": []
+}

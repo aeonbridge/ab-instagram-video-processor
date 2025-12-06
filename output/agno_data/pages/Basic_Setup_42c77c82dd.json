@@ -1,0 +1,29 @@
+{
+  "title": "Basic Setup",
+  "content": "Source: https://docs.agno.com/basics/tracing/basic-setup\n\nConfigure and enable tracing for your Agno agents\n\nThis guide walks you through setting up tracing for your Agno agents. Tracing is designed to be simple: install dependencies, enable tracing, and all your agents are automatically instrumented.\n\nInstall the required OpenTelemetry packages:\n\n<Note>\n  These packages provide the OpenTelemetry instrumentation infrastructure and the Agno-specific instrumentation logic.\n</Note>\n\n## Two Ways to Enable Tracing\n\nThere are two ways to enable tracing in Agno:\n\n1. **`setup_tracing()`** - Use this function for standalone scripts, notebooks, and custom applications. Provides full control over configuration options like batch processing, queue sizes, and export delays.\n\n2. **AgentOS `tracing=True`** - Use this parameter when deploying agents through AgentOS. Simpler setup for production deployments with sensible defaults.\n\n### Option 1: Using `setup_tracing()`\n\nFor standalone scripts, notebooks, or custom applications:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tracing import setup_tracing",
+  "code_samples": [
+    {
+      "code": "<Note>\n  These packages provide the OpenTelemetry instrumentation infrastructure and the Agno-specific instrumentation logic.\n</Note>\n\n## Two Ways to Enable Tracing\n\nThere are two ways to enable tracing in Agno:\n\n1. **`setup_tracing()`** - Use this function for standalone scripts, notebooks, and custom applications. Provides full control over configuration options like batch processing, queue sizes, and export delays.\n\n2. **AgentOS `tracing=True`** - Use this parameter when deploying agents through AgentOS. Simpler setup for production deployments with sensible defaults.\n\n### Option 1: Using `setup_tracing()`\n\nFor standalone scripts, notebooks, or custom applications:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Installation",
+      "id": "installation"
+    },
+    {
+      "level": "h2",
+      "text": "Two Ways to Enable Tracing",
+      "id": "two-ways-to-enable-tracing"
+    },
+    {
+      "level": "h3",
+      "text": "Option 1: Using `setup_tracing()`",
+      "id": "option-1:-using-`setup_tracing()`"
+    }
+  ],
+  "url": "llms-txt#basic-setup",
+  "links": []
+}

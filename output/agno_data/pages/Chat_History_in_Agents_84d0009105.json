@@ -1,0 +1,48 @@
+{
+  "title": "Chat History in Agents",
+  "content": "Source: https://docs.agno.com/basics/chat-history/agent/overview\n\nLearn about managing chat history in agents.\n\nAgents with storage enabled automatically have access to the run history of the session (also called the \"conversation history\" or \"chat history\").\n\n<Note>\n  For all forms of session history, you need to have a database assigned to the agent. See [Storage](/basics/database/overview) for more details.\n</Note>\n\nWe can give the Agent access to the chat history in the following ways:\n\n## Agent-Level History\n\n* You can set `add_history_to_context=True` and `num_history_runs=5` to add the inputs and responses from the last 5 runs automatically to every request sent to the agent.\n* You can be more granular about how many messages to add to include in the list sent to the model, by setting `num_history_messages`.\n* You can set `read_chat_history=True` to provide a `get_chat_history()` tool to your agent allowing it to read any message in the entire chat history.\n* You can set `read_tool_call_history=True` to provide a `get_tool_call_history()` tool to your agent allowing it to read tool calls in reverse chronological order.\n* You can enable `search_session_history` to allow searching through previous sessions.\n\n<Tip>\n  Working with agent history can be tricky. Experiment with the above settings to find the best fit for your use case.\n  See the [History Reference](#history-reference) for help on how to use the different history features.\n</Tip>\n\n<Tabs>\n  <Tab title=\"Simple History\">\n    Start with **Agent History in Context** for basic conversation continuity:\n\n<Tab title=\"Long Conversations\">\n    Add **Chat History Tool** when agents need to search history:\n\n<Tab title=\"Multi-Session Memory\">\n    Enable **Multi-Session Search** for cross-session continuity:\n\n<Note>\n  **Database Requirement**: All history features require a database configured on the agent. See [Storage](/basics/database/overview) for setup.\n</Note>\n\n<Tip>\n  **Performance Tip**: More history = larger context = slower and costlier requests. Start with `num_history_runs=3` and increase only if needed.\n</Tip>\n\n### Add history to the agent context\n\nTo add the history of the conversation to the context, you can set `add_history_to_context=True`.\nThis will add the inputs and responses from the last 3 runs (that is the default) to the context of the agent.\nYou can change the number of runs by setting `num_history_runs=n` where `n` is the number of runs to include.\n\nYou can either set `add_history_to_context=True` on the `Agent` or on the `run()` method directly.\nSee the [Persistent Session with History](/basics/chat-history/agent/usage/persistent-session-history) example for a complete implementation.\n\nLearn more in the [Context Engineering](/basics/context/overview) documentation.\n\n## Read the chat history\n\nTo read the chat history, you can set `read_chat_history=True`.\nThis will provide a `get_chat_history()` tool to your agent allowing it to read any message in the entire chat history.\n\nSee the [Chat History Management](/basics/chat-history/agent/usage/chat-history) page for a complete implementation.\n\n## Search the session history\n\nIn some scenarios, you might want to fetch messages from across multiple sessions to provide context or continuity in conversations.\n\nTo enable fetching messages from the last N sessions, you need to use the following flags:\n\n* `search_session_history`: Set this to `True` to allow searching through previous sessions.\n* `num_history_sessions`: Specify the number of past sessions to include in the search. In the example below, it is set to `2` to include only the last 2 sessions.\n* `num_history_sessions`: Specify the number of past sessions to include in the search.\n\n<Tip>\n  Keep `num_history_sessions` low (2 or 3) to avoid filling up the context length of the model, which can lead to performance issues.\n</Tip>\n\n## Developer Resources\n\n<CardGroup cols={2}>\n  <Card title=\"Chat History Example\" icon=\"message\" iconType=\"duotone\" href=\"/basics/chat-history/agent/usage/chat-history\">\n    Learn how to manage and retrieve chat history in agent conversations.\n  </Card>\n\n<Card title=\"Persistent Session with History\" icon=\"database\" iconType=\"duotone\" href=\"/basics/chat-history/agent/usage/persistent-session-history\">\n    Control how much conversation history is included using num\\_history\\_runs.\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Long Conversations\">\n    Add **Chat History Tool** when agents need to search history:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Multi-Session Memory\">\n    Enable **Multi-Session Search** for cross-session continuity:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Agent-Level History",
+      "id": "agent-level-history"
+    },
+    {
+      "level": "h2",
+      "text": "History Reference",
+      "id": "history-reference"
+    },
+    {
+      "level": "h3",
+      "text": "Add history to the agent context",
+      "id": "add-history-to-the-agent-context"
+    },
+    {
+      "level": "h2",
+      "text": "Read the chat history",
+      "id": "read-the-chat-history"
+    },
+    {
+      "level": "h2",
+      "text": "Search the session history",
+      "id": "search-the-session-history"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#chat-history-in-agents",
+  "links": []
+}

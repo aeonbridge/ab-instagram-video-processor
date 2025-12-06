@@ -1,0 +1,34 @@
+{
+  "title": "Infra Settings",
+  "content": "Source: https://docs.agno.com/templates/infra-management/infra-settings\n\nThe `InfraSettings` object in the `infra/settings.py` file defines common settings used by your apps and resources. Here are the settings we recommend updating:\n\n<Note>\n  `InfraSettings` can also be updated using environment variables or the `.env` file.\n\nCheckout the `example.env` file for an example.\n</Note>\n\nThe `infra_name` is used to name your apps and resources. Change it to your project or team name, for example:\n\n* `infra_name=\"booking-ai\"`\n* `infra_name=\"reddit-ai\"`\n* `infra_name=\"vantage-ai\"`\n\nThe `infra_name` is used to name:\n\n* The image for your application\n* Apps like db, streamlit app and FastAPI server\n* Resources like buckets, secrets and loadbalancers\n\nCheckout the `infra/dev_resources.py` and `infra/prd_resources.py` file to see how its used.\n\nThe `image_repo` defines the repo for your image.\n\n* If using dockerhub it would be something like `agno`.\n* If using ECR it would be something like `[ACCOUNT_ID].dkr.ecr.us-east-1.amazonaws.com`\n\nCheckout the `dev_image` in `infra/dev_resources.py` and `prd_image` in `infra/prd_resources.py` to see how its used.\n\nSetting `build_images=True` will build images locally when running `ag infra up dev:docker` or `ag infra up prd:docker`.\n\nCheckout the `dev_image` in `infra/dev_resources.py` and `prd_image` in `infra/prd_resources.py` to see how its used.\n\n* [Building your development image](/templates/infra-management/development-app#build-your-development-image)\n* [Building your production image](/templates/infra-management/production-app#build-your-production-image)\n\nSetting `push_images=True` will push images after building when running `ag infra up dev:docker` or `ag infra up prd:docker`.\n\nCheckout the `dev_image` in `infra/dev_resources.py` and `prd_image` in `infra/prd_resources.py` to see how its used.\n\n* [Building your development image](/templates/infra-management/development-app#build-your-development-image)\n* [Building your production image](/templates/infra-management/production-app#build-your-production-image)\n\nThe `aws_region` and `subnet_ids` provide values used for creating production resources. Checkout the `infra/prd_resources.py` file to see how its used.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Infra Name",
+      "id": "infra-name"
+    },
+    {
+      "level": "h2",
+      "text": "Image Repository",
+      "id": "image-repository"
+    },
+    {
+      "level": "h2",
+      "text": "Build Images",
+      "id": "build-images"
+    },
+    {
+      "level": "h2",
+      "text": "Push Images",
+      "id": "push-images"
+    },
+    {
+      "level": "h2",
+      "text": "AWS Settings",
+      "id": "aws-settings"
+    }
+  ],
+  "url": "llms-txt#infra-settings",
+  "links": []
+}

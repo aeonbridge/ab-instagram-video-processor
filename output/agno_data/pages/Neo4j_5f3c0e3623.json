@@ -1,0 +1,55 @@
+{
+  "title": "Neo4j",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/database/neo4j\n\nThe Neo4jTools toolkit enables agents to interact with Neo4j graph databases for querying and managing graph data.\n\n**Neo4jTools** enables agents to interact with Neo4j graph databases for querying and managing graph data.\n\nThe following example requires the `neo4j` library.\n\nYou will also need a Neo4j database. The following example uses a Neo4j database running in a Docker container.\n\nMake sure to set the `NEO4J_URI` environment variable to the URI of the Neo4j database.\n\nThe following agent can interact with Neo4j graph databases:\n\n| Parameter                   | Type            | Default | Description                                       |\n| --------------------------- | --------------- | ------- | ------------------------------------------------- |\n| `uri`                       | `Optional[str]` | `None`  | Neo4j connection URI. Uses NEO4J\\_URI if not set. |\n| `user`                      | `Optional[str]` | `None`  | Neo4j username. Uses NEO4J\\_USERNAME if not set.  |\n| `password`                  | `Optional[str]` | `None`  | Neo4j password. Uses NEO4J\\_PASSWORD if not set.  |\n| `database`                  | `Optional[str]` | `None`  | Specific database name to connect to.             |\n| `enable_list_labels`        | `bool`          | `True`  | Enable listing node labels.                       |\n| `enable_list_relationships` | `bool`          | `True`  | Enable listing relationship types.                |\n| `enable_get_schema`         | `bool`          | `True`  | Enable schema information retrieval.              |\n| `enable_run_cypher`         | `bool`          | `True`  | Enable Cypher query execution.                    |\n\n| Function             | Description                                           |\n| -------------------- | ----------------------------------------------------- |\n| `list_labels`        | List all node labels in the graph database.           |\n| `list_relationships` | List all relationship types in the graph database.    |\n| `get_schema`         | Get comprehensive schema information about the graph. |\n| `run_cypher`         | Execute Cypher queries on the graph database.         |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/neo4j.py)\n* [Neo4j Documentation](https://neo4j.com/docs/)\n* [Cypher Query Language](https://neo4j.com/docs/cypher-manual/current/)",
+  "code_samples": [
+    {
+      "code": "You will also need a Neo4j database. The following example uses a Neo4j database running in a Docker container.",
+      "language": "unknown"
+    },
+    {
+      "code": "Make sure to set the `NEO4J_URI` environment variable to the URI of the Neo4j database.",
+      "language": "unknown"
+    },
+    {
+      "code": "Install libraries",
+      "language": "unknown"
+    },
+    {
+      "code": "Run the agent",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent can interact with Neo4j graph databases:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#neo4j",
+  "links": []
+}

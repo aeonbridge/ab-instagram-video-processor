@@ -1,0 +1,14 @@
+{
+  "title": "Workflow with Input Schema Validation",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/workflow-with-input-schema\n\nThis example demonstrates **Workflows** support for input schema validation using Pydantic models to ensure type safety and data integrity at the workflow entry point.\n\nThis example shows how to use input schema validation in workflows to enforce type safety and data structure validation. By defining an `input_schema` with a Pydantic model, you can ensure that your workflow receives properly structured and validated data before execution begins.\n\n* **Type Safety**: Automatic validation of input data against Pydantic models\n* **Structure Validation**: Ensure all required fields are present and correctly typed\n* **Clear Contracts**: Define exactly what data your workflow expects\n* **Error Prevention**: Catch invalid inputs before workflow execution begins\n* **Multiple Input Formats**: Support for Pydantic models and matching dictionaries\n\n```python workflow_with_input_schema.py theme={null}\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel, Field\n\nclass DifferentModel(BaseModel):\n    name: str\n\nclass ResearchTopic(BaseModel):\n    \"\"\"Structured research topic with specific requirements\"\"\"\n\ntopic: str\n    focus_areas: List[str] = Field(description=\"Specific areas to focus on\")\n    target_audience: str = Field(description=\"Who this research is for\")\n    sources_required: int = Field(description=\"Number of sources needed\", default=5)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Features:",
+      "id": "key-features:"
+    }
+  ],
+  "url": "llms-txt#workflow-with-input-schema-validation",
+  "links": []
+}

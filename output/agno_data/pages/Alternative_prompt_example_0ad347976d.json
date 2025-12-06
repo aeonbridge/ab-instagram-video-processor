@@ -1,0 +1,8 @@
+{
+  "title": "Alternative prompt example",
+  "content": "crypto_prompt = \"\"\"\\\nAnalyze media trends for:\nKeywords: cryptocurrency, bitcoin, ethereum\nSources: coindesk.com, cointelegraph.com\n\"\"\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#alternative-prompt-example",
+  "links": []
+}

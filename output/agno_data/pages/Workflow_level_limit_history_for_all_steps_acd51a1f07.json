@@ -1,0 +1,8 @@
+{
+  "title": "Workflow-level: limit history for all steps",
+  "content": "workflow = Workflow(\n    add_workflow_history_to_steps=True,\n    num_history_runs=5  # Only last 5 runs\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#workflow-level:-limit-history-for-all-steps",
+  "links": []
+}

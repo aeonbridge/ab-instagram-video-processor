@@ -1,0 +1,24 @@
+{
+  "title": "Example 2: Sleep for a longer duration",
+  "content": "agent.print_response(\"Sleep for 5 seconds\")\n```\n\n| Parameter      | Type   | Default | Description                                |\n| -------------- | ------ | ------- | ------------------------------------------ |\n| `enable_sleep` | `bool` | `True`  | Enables sleep functionality                |\n| `all`          | `bool` | `False` | Enables all functionality when set to True |\n\n| Function | Description                                        |\n| -------- | -------------------------------------------------- |\n| `sleep`  | Pauses execution for a specified number of seconds |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/sleep.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/sleep_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example-2:-sleep-for-a-longer-duration",
+  "links": []
+}

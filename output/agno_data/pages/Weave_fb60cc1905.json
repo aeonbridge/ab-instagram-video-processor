@@ -1,0 +1,33 @@
+{
+  "title": "Weave",
+  "content": "Source: https://docs.agno.com/integrations/observability/weave\n\nIntegrate Agno with Weave by WandB to send traces and gain insights into your agent's performance.\n\n## Integrating Agno with Weave by WandB\n\n[Weave by Weights & Biases (WandB)](https://weave-docs.wandb.ai/) provides a powerful platform for logging and visualizing model calls. By integrating Agno with Weave, you can track and analyze your agent's performance and behavior.\n\nEnsure you have the Weave package installed:\n\n2. **Authentication**\n   Go to [WandB](https://wandb.ai) and copy your API key\n\n## Logging Model Calls with Weave\n\nThis example demonstrates how to use Weave to log model calls.\n\n```python  theme={null}\nimport weave\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "2. **Authentication**\n   Go to [WandB](https://wandb.ai) and copy your API key",
+      "language": "unknown"
+    },
+    {
+      "code": "## Logging Model Calls with Weave\n\nThis example demonstrates how to use Weave to log model calls.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with Weave by WandB",
+      "id": "integrating-agno-with-weave-by-wandb"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Logging Model Calls with Weave",
+      "id": "logging-model-calls-with-weave"
+    }
+  ],
+  "url": "llms-txt#weave",
+  "links": []
+}

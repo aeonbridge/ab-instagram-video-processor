@@ -1,0 +1,29 @@
+{
+  "title": "Blog Post Generator",
+  "content": "Source: https://docs.agno.com/examples/use-cases/workflows/blog-post-generator\n\nBuild a sophisticated blog post generator that combines web research with professional writing expertise. This workflow uses a multi-stage approach to create high-quality, well-researched blog content with proper citations.\n\nBy building this workflow, you'll understand:\n\n* How to structure multi-phase workflows with research, extraction, and writing stages\n* How to implement caching strategies for expensive operations like web scraping\n* How to coordinate multiple specialized agents for complex content creation\n* How to integrate web search and content extraction tools effectively\n\nBuild content creation platforms, automated journalism systems, SEO content generators, or research-based article writers.\n\nThe workflow follows a three-phase content creation process:\n\n1. **Research**: Research agent searches the web and evaluates 10-15 sources to find the 5-7 best articles\n2. **Extract**: Content scraper agent extracts and processes full article content in markdown format\n3. **Write**: Writer agent crafts an engaging blog post with proper citations and SEO optimization\n4. **Cache**: All intermediate results are cached in session state for efficiency\n\nThe workflow uses SQLite for session persistence and caches search results, scraped articles, and final blog posts.\n\n```python blog_post_generator.py theme={null}\n\"\"\"Blog Post Generator v2.0 - Your AI Content Creation Studio!\n\nThis advanced example demonstrates how to build a sophisticated blog post generator using\nthe new workflow v2.0 architecture. The workflow combines web research capabilities with\nprofessional writing expertise using a multi-stage approach:\n\n1. Intelligent web research and source gathering\n2. Content extraction and processing\n3. Professional blog post writing with proper citations\n\nKey capabilities:\n- Advanced web research and source evaluation\n- Content scraping and processing\n- Professional writing with SEO optimization\n- Automatic content caching for efficiency\n- Source attribution and fact verification\n\"\"\"\n\nimport asyncio\nimport json\nfrom textwrap import dedent\nfrom typing import Dict, Optional\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.newspaper4k import Newspaper4kTools\nfrom agno.utils.log import logger\nfrom agno.utils.pprint import pprint_run_response\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel, Field",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#blog-post-generator",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "LM Studio",
+  "content": "Source: https://docs.agno.com/integrations/models/local/lmstudio/overview\n\nLearn how to use LM Studio with Agno.\n\nRun Large Language Models locally with LM Studio\n\n[LM Studio](https://lmstudio.ai) is a fantastic tool for running models locally.\n\nLM Studio supports multiple open-source models. See the library [here](https://lmstudio.ai/models).\n\nWe recommend experimenting to find the best-suited model for your use-case. Here are some general recommendations:\n\n* `llama3.3` models are good for most basic use-cases.\n* `qwen` models perform specifically well with tool use.\n* `deepseek-r1` models have strong reasoning capabilities.\n* `phi4` models are powerful, while being really small in size.\n\nInstall [LM Studio](https://lmstudio.ai), download the model you want to use, and run it.\n\nAfter you have the model locally, use the `LM Studio` model class to access it\n\n<CodeGroup>\n  \n</CodeGroup>\n\n<Note> View more examples [here](/integrations/models/local/lmstudio/usage/basic-stream). </Note>\n\n| Parameter  | Type            | Default                                              | Description                                             |\n| ---------- | --------------- | ---------------------------------------------------- | ------------------------------------------------------- |\n| `id`       | `str`           | `\"lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF\"` | The id of the LMStudio model to use                     |\n| `name`     | `str`           | `\"LMStudio\"`                                         | The name of the model                                   |\n| `provider` | `str`           | `\"LMStudio\"`                                         | The provider of the model                               |\n| `api_key`  | `Optional[str]` | `None`                                               | The API key for LMStudio (usually not needed for local) |\n| `base_url` | `str`           | `\"http://localhost:1234/v1\"`                         | The base URL for the local LMStudio server              |\n\n`LM Studio` also supports the params of [OpenAI](/reference/models/openai).",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Set up a model",
+      "id": "set-up-a-model"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#lm-studio",
+  "links": []
+}

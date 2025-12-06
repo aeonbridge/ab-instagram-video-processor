@@ -1,0 +1,19 @@
+{
+  "title": "Create Knowledge with both databases",
+  "content": "knowledge = Knowledge(\n    name=\"My Knowledge Base\",\n    vector_db=vector_db,\n    contents_db=contents_db  # This enables content tracking!\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Alternative Database Examples",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Alternative Database Examples",
+      "id": "alternative-database-examples"
+    }
+  ],
+  "url": "llms-txt#create-knowledge-with-both-databases",
+  "links": []
+}

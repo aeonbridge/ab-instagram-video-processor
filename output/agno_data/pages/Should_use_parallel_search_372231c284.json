@@ -1,0 +1,8 @@
+{
+  "title": "Should use parallel_search",
+  "content": "agent.print_response(\n    \"Search for the latest information on 'AI agents and autonomous systems' and summarize the key findings\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#should-use-parallel_search",
+  "links": []
+}

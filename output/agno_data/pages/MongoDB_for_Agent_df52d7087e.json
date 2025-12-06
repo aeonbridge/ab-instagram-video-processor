@@ -1,0 +1,24 @@
+{
+  "title": "MongoDB for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/mongo/usage/mongodb-for-agent\n\nAgno supports using MongoDB as a storage backend for Agents using the `MongoDb` class.\n\nYou need to provide either `db_url` or `client`. The following example uses `db_url`.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **MongoDB** on port **27017** using:\n\n```python mongodb_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.mongo import MongoDb\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run MongoDB",
+      "id": "run-mongodb"
+    }
+  ],
+  "url": "llms-txt#mongodb-for-agent",
+  "links": []
+}

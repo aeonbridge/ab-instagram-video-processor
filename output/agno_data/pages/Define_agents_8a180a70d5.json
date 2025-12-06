@@ -1,0 +1,8 @@
+{
+  "title": "Define agents",
+  "content": "hackernews_agent = Agent(\n    name=\"Hackernews Agent\",\n    model=Claude(id=\"claude-sonnet-4-5-20250929\"),\n    tools=[HackerNewsTools()],\n    role=\"Extract key insights and content from Hackernews posts\",\n)\nweb_agent = Agent(\n    name=\"Web Agent\",\n    model=Claude(id=\"claude-sonnet-4-5-20250929\"),\n    tools=[DuckDuckGoTools()],\n    role=\"Search the web for the latest news and trends\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-agents",
+  "links": []
+}

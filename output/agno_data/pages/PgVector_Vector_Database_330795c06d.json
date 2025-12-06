@@ -1,0 +1,38 @@
+{
+  "title": "PgVector Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/pgvector/overview\n\nLearn how to use PgVector as a vector database for your Knowledge Base\n\n<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      PgVector also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>\n\n<Tip className=\"mt-4\">\n      Use <code>aload()</code> and <code>aprint\\_response()</code> methods with <code>asyncio.run()</code> for non-blocking operations in high-throughput applications.\n    </Tip>\n  </div>\n</Card>\n\n<Snippet file=\"vectordb_pgvector_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook (Sync)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/pgvector/pgvector_db.py)\n* View [Cookbook (Async)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/pgvector/async_pg_vector.py)",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    },
+    {
+      "code": "<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      PgVector also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "PgVector Params",
+      "id": "pgvector-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#pgvector-vector-database",
+  "links": []
+}

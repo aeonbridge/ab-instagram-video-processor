@@ -1,0 +1,8 @@
+{
+  "title": "Execute Workflow",
+  "content": "Source: https://docs.agno.com/reference-api/schema/workflows/execute-workflow\n\npost /workflows/{workflow_id}/runs\nExecute a workflow with the provided input data. Workflows can run in streaming or batch mode.\n\n**Execution Modes:**\n- **Streaming (`stream=true`)**: Real-time step-by-step execution updates via SSE\n- **Non-Streaming (`stream=false`)**: Complete workflow execution with final result\n\n**Workflow Execution Process:**\n1. Input validation against workflow schema\n2. Sequential or parallel step execution based on workflow design\n3. Data flow between steps with transformation\n4. Error handling and automatic retries where configured\n5. Final result compilation and response\n\n**Session Management:**\nWorkflows support session continuity for stateful execution across multiple runs.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#execute-workflow",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "YouTube Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/youtube\n\nYouTubeReader is a reader class that allows you to read transcript from YouTube videos.\n\n<Snippet file=\"youtube-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#youtube-reader",
+  "links": []
+}

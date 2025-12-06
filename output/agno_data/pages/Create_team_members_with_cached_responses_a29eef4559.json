@@ -1,0 +1,29 @@
+{
+  "title": "Create team members with cached responses",
+  "content": "researcher = Agent(\n    model=OpenAIChat(id=\"gpt-4o\", cache_response=True),\n    name=\"Researcher\",\n    role=\"Research information\"\n)\n\nwriter = Agent(\n    model=OpenAIChat(id=\"gpt-4o\", cache_response=True),\n    name=\"Writer\",\n    role=\"Write content\"\n)\n\nteam = Team(members=[researcher, writer], model=OpenAIChat(id=\"gpt-4o\", cache_response=True))\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\nagent = Agent(model=OpenAIChat(id=\"gpt-4o\", cache_response=True))\n\nfor i in range(1, 3):\n    print(f\"\\n{'=' * 60}\")\n    print(\n        f\"Run {i}\"\n    )\n    print(f\"{'=' * 60}\\n\")\n    agent.print_response(\"Write me a short story about a cat that can talk and solve problems.\", stream=True)\n```\n\nFor complete working examples, see:\n\n* [OpenAI Response Caching Example](/integrations/models/native/openai/completion/usage/cache-response)\n* [Anthropic Response Caching Example](/integrations/models/native/anthropic/usage/cache-response)\n\nFor detailed parameter documentation, see:\n\n* [Model Base Class Reference](/reference/models/model)",
+  "code_samples": [
+    {
+      "code": "Each team member maintains its own cache based on their specific queries.\n\n## Caching with Streaming\n\nResponses can also be cached when using streaming. On cache hits, the entire response is returned as one chunk.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Caching with Streaming",
+      "id": "caching-with-streaming"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h2",
+      "text": "API Reference",
+      "id": "api-reference"
+    }
+  ],
+  "url": "llms-txt#create-team-members-with-cached-responses",
+  "links": []
+}

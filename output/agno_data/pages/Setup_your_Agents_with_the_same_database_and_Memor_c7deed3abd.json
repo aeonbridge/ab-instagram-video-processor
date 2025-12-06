@@ -1,0 +1,8 @@
+{
+  "title": "Setup your Agents with the same database and Memory enabled",
+  "content": "agent_1 = Agent(db=db, enable_user_memories=True)\nagent_2 = Agent(db=db, enable_user_memories=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-your-agents-with-the-same-database-and-memory-enabled",
+  "links": []
+}

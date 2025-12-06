@@ -1,0 +1,8 @@
+{
+  "title": "Create an Creative AI Artist Agent",
+  "content": "image_agent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[DalleTools()],\n    description=dedent(\"\"\"\\\n        You are an experienced AI artist with expertise in various artistic styles,\n        from photorealism to abstract art. You have a deep understanding of composition,\n        color theory, and visual storytelling.\\\n    \"\"\"),\n    instructions=dedent(\"\"\"\\\n        As an AI artist, follow these guidelines:\n        1. Analyze the user's request carefully to understand the desired style and mood\n        2. Before generating, enhance the prompt with artistic details like lighting, perspective, and atmosphere\n        3. Use the `create_image` tool with detailed, well-crafted prompts\n        4. Provide a brief explanation of the artistic choices made\n        5. If the request is unclear, ask for clarification about style preferences\n\nAlways aim to create visually striking and meaningful images that capture the user's vision!\\\n    \"\"\"),\n    markdown=True,\n    db=SqliteDb(session_table=\"test_agent\", db_file=\"tmp/test.db\"),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-creative-ai-artist-agent",
+  "links": []
+}

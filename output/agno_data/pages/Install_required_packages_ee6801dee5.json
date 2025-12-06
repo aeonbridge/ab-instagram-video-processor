@@ -1,0 +1,28 @@
+{
+  "title": "Install required packages",
+  "content": "pip install agno litellm\nshell  theme={null}\nexport LITELLM_API_KEY=your_api_key_here\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.litellm import LiteLLM",
+  "code_samples": [
+    {
+      "code": "Set up your API key:\nRegardless of the model used(OpenAI, Hugging Face, or XAI) the API key is referenced as `LITELLM_API_KEY`.",
+      "language": "unknown"
+    },
+    {
+      "code": "## SDK Integration\n\nThe `LiteLLM` class provides direct integration with the LiteLLM Python SDK.\n\n### Basic Usage",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "SDK Integration",
+      "id": "sdk-integration"
+    },
+    {
+      "level": "h3",
+      "text": "Basic Usage",
+      "id": "basic-usage"
+    }
+  ],
+  "url": "llms-txt#install-required-packages",
+  "links": []
+}

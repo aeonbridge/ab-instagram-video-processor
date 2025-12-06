@@ -1,0 +1,8 @@
+{
+  "title": "Print workflow-level metrics",
+  "content": "print(\"Workflow Metrics\")\nif response.metrics:\n    pprint(response.metrics.to_dict())",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#print-workflow-level-metrics",
+  "links": []
+}

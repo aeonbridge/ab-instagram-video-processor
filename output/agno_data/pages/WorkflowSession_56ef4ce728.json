@@ -1,0 +1,59 @@
+{
+  "title": "WorkflowSession",
+  "content": "Source: https://docs.agno.com/reference/workflows/session\n\n## WorkflowSession Attributes\n\n| Parameter       | Type                                | Default  | Description                                                                    |\n| --------------- | ----------------------------------- | -------- | ------------------------------------------------------------------------------ |\n| `session_id`    | `str`                               | Required | Session UUID - this is the workflow\\_session\\_id that gets set on agents/teams |\n| `user_id`       | `Optional[str]`                     | `None`   | ID of the user interacting with this workflow                                  |\n| `workflow_id`   | `Optional[str]`                     | `None`   | ID of the workflow that this session is associated with                        |\n| `workflow_name` | `Optional[str]`                     | `None`   | Workflow name                                                                  |\n| `runs`          | `Optional[List[WorkflowRunOutput]]` | `None`   | List of all workflow runs in the session                                       |\n| `session_data`  | `Optional[Dict[str, Any]]`          | `None`   | Session Data: session\\_name, session\\_state, images, videos, audio             |\n| `workflow_data` | `Optional[Dict[str, Any]]`          | `None`   | Workflow configuration and metadata                                            |\n| `metadata`      | `Optional[Dict[str, Any]]`          | `None`   | Metadata stored with this workflow session                                     |\n| `created_at`    | `Optional[int]`                     | `None`   | The unix timestamp when this session was created                               |\n| `updated_at`    | `Optional[int]`                     | `None`   | The unix timestamp when this session was last updated                          |\n\n## WorkflowSession Methods\n\n### `upsert_run(run: WorkflowRunOutput)`\n\nAdds a WorkflowRunOutput to the runs list. If a run with the same `run_id` already exists, it updates the existing run.\n\n### `get_run(run_id: str) -> Optional[WorkflowRunOutput]`\n\nRetrieves a specific workflow run by its `run_id`.\n\n### `get_workflow_history(num_runs: Optional[int] = None) -> List[Tuple[str, str]]`\n\nGets workflow history as structured data (input, response pairs).\n\n* `num_runs`: Number of recent runs to include. If None, returns all available history.\n\nReturns a list of tuples containing (input, response) pairs from completed workflow runs only.\n\n### `get_workflow_history_context(num_runs: Optional[int] = None) -> Optional[str]`\n\nGets formatted workflow history context for steps.\n\n* `num_runs`: Number of recent runs to include. If None, returns all available history.\n\nReturns a formatted string containing the workflow history wrapped in `<workflow_history_context>` tags, suitable for providing context to workflow steps.\n\n### `get_messages(...) -> List[Message]`\n\nReturns the messages belonging to the session that fit the given criteria. Note: Either `agent_id` or `team_id` must be provided, but not both.\n\n* `agent_id` (Optional\\[str]): The ID of the agent to get the messages for\n* `team_id` (Optional\\[str]): The ID of the team to get the messages for\n* `last_n_runs` (Optional\\[int]): The number of runs to return messages from, counting from the latest. Defaults to all runs\n* `limit` (Optional\\[int]): The number of messages to return, counting from the latest. Defaults to all messages\n* `skip_roles` (Optional\\[List\\[str]]): Skip messages with these roles\n* `skip_statuses` (Optional\\[List\\[RunStatus]]): Skip messages with these statuses\n* `skip_history_messages` (bool): Skip messages that were tagged as history in previous runs. Defaults to True\n* `skip_member_messages` (bool): Skip messages created by members of the team. Defaults to True\n\n* `List[Message]`: The messages for the session\n\n### `get_chat_history(last_n_runs: Optional[int] = None) -> List[WorkflowChatInteraction]`\n\nReturn a list of WorkflowChatInteraction objects containing the input and output for each run in the session.\n\n* `last_n_runs` (Optional\\[int]): Number of recent runs to include. If None, all runs will be considered\n\n* `List[WorkflowChatInteraction]`: The chat history for the session as a list of input/output interactions\n\n### `to_dict() -> Dict[str, Any]`\n\nConverts the WorkflowSession to a dictionary for storage, serializing runs to dictionaries.\n\n### `from_dict(data: Mapping[str, Any]) -> Optional[WorkflowSession]`\n\nCreates a WorkflowSession from a dictionary, deserializing runs from dictionaries back to WorkflowRunOutput objects.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "WorkflowSession Attributes",
+      "id": "workflowsession-attributes"
+    },
+    {
+      "level": "h2",
+      "text": "WorkflowSession Methods",
+      "id": "workflowsession-methods"
+    },
+    {
+      "level": "h3",
+      "text": "`upsert_run(run: WorkflowRunOutput)`",
+      "id": "`upsert_run(run:-workflowrunoutput)`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_run(run_id: str) -> Optional[WorkflowRunOutput]`",
+      "id": "`get_run(run_id:-str)-->-optional[workflowrunoutput]`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_workflow_history(num_runs: Optional[int] = None) -> List[Tuple[str, str]]`",
+      "id": "`get_workflow_history(num_runs:-optional[int]-=-none)-->-list[tuple[str,-str]]`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_workflow_history_context(num_runs: Optional[int] = None) -> Optional[str]`",
+      "id": "`get_workflow_history_context(num_runs:-optional[int]-=-none)-->-optional[str]`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_messages(...) -> List[Message]`",
+      "id": "`get_messages(...)-->-list[message]`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_chat_history(last_n_runs: Optional[int] = None) -> List[WorkflowChatInteraction]`",
+      "id": "`get_chat_history(last_n_runs:-optional[int]-=-none)-->-list[workflowchatinteraction]`"
+    },
+    {
+      "level": "h3",
+      "text": "`to_dict() -> Dict[str, Any]`",
+      "id": "`to_dict()-->-dict[str,-any]`"
+    },
+    {
+      "level": "h3",
+      "text": "`from_dict(data: Mapping[str, Any]) -> Optional[WorkflowSession]`",
+      "id": "`from_dict(data:-mapping[str,-any])-->-optional[workflowsession]`"
+    }
+  ],
+  "url": "llms-txt#workflowsession",
+  "links": []
+}

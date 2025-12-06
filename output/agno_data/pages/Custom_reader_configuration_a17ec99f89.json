@@ -1,0 +1,8 @@
+{
+  "title": "Custom reader configuration",
+  "content": "reader = PDFReader(\n    chunk_size=1000,\n    chunking_strategy=SemanticChunking(),\n)\n\nknowledge_base = Knowledge(\n    vector_db=vector_db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#custom-reader-configuration",
+  "links": []
+}

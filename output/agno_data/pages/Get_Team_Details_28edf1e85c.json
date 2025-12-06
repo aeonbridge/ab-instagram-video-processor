@@ -1,0 +1,8 @@
+{
+  "title": "Get Team Details",
+  "content": "Source: https://docs.agno.com/reference-api/schema/teams/get-team-details\n\nget /teams/{team_id}\nRetrieve detailed configuration and member information for a specific team.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-team-details",
+  "links": []
+}

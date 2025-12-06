@@ -1,0 +1,8 @@
+{
+  "title": "Set up your tracing database",
+  "content": "tracing_db = SqliteDb(db_file=\"tmp/traces.db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-your-tracing-database",
+  "links": []
+}

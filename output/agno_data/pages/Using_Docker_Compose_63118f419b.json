@@ -1,0 +1,8 @@
+{
+  "title": "Using Docker Compose",
+  "content": "docker-compose exec db psql -U toolbox_user -d toolbox_db -c \"SELECT COUNT(*) FROM hotels;\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#using-docker-compose",
+  "links": []
+}

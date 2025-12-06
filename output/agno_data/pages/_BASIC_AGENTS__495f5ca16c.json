@@ -1,0 +1,8 @@
+{
+  "title": "=== BASIC AGENTS ===",
+  "content": "researcher = Agent(\n    name=\"Researcher\",\n    instructions=\"Research the given topic and provide detailed findings.\",\n    tools=[DuckDuckGoTools()],\n)\n\nsummarizer = Agent(\n    name=\"Summarizer\",\n    instructions=\"Create a clear summary of the research findings.\",\n)\n\nfact_checker = Agent(\n    name=\"Fact Checker\",\n    instructions=\"Verify facts and check for accuracy in the research.\",\n    tools=[DuckDuckGoTools()],\n)\n\nwriter = Agent(\n    name=\"Writer\",\n    instructions=\"Write a comprehensive article based on all available research and verification.\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#===-basic-agents-===",
+  "links": []
+}

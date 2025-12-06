@@ -1,0 +1,8 @@
+{
+  "title": "Get Agent Details",
+  "content": "Source: https://docs.agno.com/reference-api/schema/agents/get-agent-details\n\nget /agents/{agent_id}\nRetrieve detailed configuration and capabilities of a specific agent.\n\n**Returns comprehensive agent information including:**\n- Model configuration and provider details\n- Complete tool inventory and configurations\n- Session management settings\n- Knowledge base and memory configurations\n- Reasoning capabilities and settings\n- System prompts and response formatting options",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-agent-details",
+  "links": []
+}

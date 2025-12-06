@@ -1,0 +1,28 @@
+{
+  "title": "Financial Datasets API",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/financial-datasets\n\n**FinancialDatasetsTools** provide a comprehensive API for retrieving and analyzing diverse financial datasets, including stock prices, financial statements, company information, SEC filings, and cryptocurrency data from multiple providers.\n\nThe toolkit requires a Financial Datasets API key that can be obtained by creating an account at [financialdatasets.ai](https://financialdatasets.ai).\n\nSet your API key as an environment variable:\n\nBasic usage of the Financial Datasets toolkit:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.financial_datasets import FinancialDatasetsTools\n\nagent = Agent(\n    name=\"Financial Data Agent\",\n    tools=[FinancialDatasetsTools()],\n    description=\"You are a financial data specialist that helps analyze financial information for stocks and cryptocurrencies.\",\n    instructions=[\n        \"When given a financial query:\",\n        \"1. Use appropriate Financial Datasets methods based on the query type\",\n        \"2. Format financial data clearly and highlight key metrics\",\n        \"3. For financial statements, compare important metrics with previous periods when relevant\",\n        \"4. Calculate growth rates and trends when appropriate\",\n        \"5. Handle errors gracefully and provide meaningful feedback\",\n    ],\n    markdown=True,\n    )",
+  "code_samples": [
+    {
+      "code": "Set your API key as an environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nBasic usage of the Financial Datasets toolkit:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#financial-datasets-api",
+  "links": []
+}

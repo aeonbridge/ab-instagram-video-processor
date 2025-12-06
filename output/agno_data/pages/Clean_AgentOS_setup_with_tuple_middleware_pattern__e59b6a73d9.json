@@ -1,0 +1,8 @@
+{
+  "title": "Clean AgentOS setup with tuple middleware pattern! ✨",
+  "content": "agent_os = AgentOS(\n    description=\"JWT Protected AgentOS\",\n    agents=[research_agent],\n    base_app=app,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#clean-agentos-setup-with-tuple-middleware-pattern!-✨",
+  "links": []
+}

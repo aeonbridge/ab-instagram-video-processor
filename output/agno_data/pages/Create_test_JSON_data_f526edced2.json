@@ -1,0 +1,36 @@
+{
+  "title": "Create test JSON data",
+  "content": "json_path = Path(\"tmp/test.json\")\njson_path.parent.mkdir(exist_ok=True)\ntest_data = {\n    \"users\": [\n        {\"id\": 1, \"name\": \"John Doe\", \"role\": \"Developer\"},\n        {\"id\": 2, \"name\": \"Jane Smith\", \"role\": \"Designer\"}\n    ],\n    \"project\": \"Knowledge Base System\"\n}\njson_path.write_text(json.dumps(test_data, indent=2))\n\nknowledge = Knowledge(\n    vector_db=PgVector(\n        table_name=\"json_documents\",\n        db_url=db_url,\n    ),\n)\n\nagent = Agent(\n    knowledge=knowledge,\n    search_knowledge=True,\n)\n\nasync def main():\n    # Add JSON content to knowledge base\n    await knowledge.add_content_async(\n        path=json_path,\n        reader=JSONReader(),\n    )\n\n# Query the knowledge base\n    await agent.aprint_response(\n        \"What information is available about the users?\",\n        markdown=True\n    )\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\nbash  theme={null}\n    pip install -U sqlalchemy psycopg pgvector agno openai\n    bash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash Mac theme={null}\n      python examples/basics/knowledge/readers/json_reader_async.py\n      bash Windows theme={null}\n      python examples/basics/knowledge/readers/json_reader_async.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n<Snippet file=\"json-reader-reference.mdx\" />",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#create-test-json-data",
+  "links": []
+}

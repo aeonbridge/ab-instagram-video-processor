@@ -1,0 +1,96 @@
+{
+  "title": "Stream all events",
+  "content": "response_stream = team.run(\n    \"What is the weather in Tokyo?\",\n    stream=True,\n    stream_events=True\n)\npython  theme={null}\n...\n\nteam = Team(\n    name=\"News and Weather Team\",\n    members=[news_agent, weather_agent],\n    model=OpenAIChat(id=\"gpt-4o\"),\n    stream_member_events=False\n)\n\nresponse_stream = team.run(\n    \"What is the weather in Tokyo?\",\n    stream=True,\n    stream_events=True)\npython  theme={null}\nfrom agno.team import Team\nfrom agno.run.team import TeamRunEvent\nfrom agno.run.agent import RunEvent\nfrom agno.models.openai import OpenAIChat\nfrom agno.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nweather_agent = Agent(name=\"Weather Agent\", role=\"Get the weather for the next 7 days\", tools=[DuckDuckGoTools()])\nteam = Team(\n    name=\"Test Team\",\n    members=[weather_agent],\n    model=OpenAIChat(id=\"gpt-4o-mini\")\n)\n\nresponse_stream = team.run(\"What is the weather in Tokyo?\", stream=True, stream_events=True)\n\nfor event in response_stream:\n    if event.event == TeamRunEvent.run_content:\n        print(event.content, end=\"\", flush=True)\n    elif event.event == TeamRunEvent.tool_call_started:\n        print(f\"Team tool call started\")\n    elif event.event == TeamRunEvent.tool_call_completed:\n        print(f\"Team tool call completed\")\n    elif event.event == RunEvent.tool_call_started:\n        print(f\"Member tool call started\")\n    elif event.event == RunEvent.tool_call_completed:\n        print(f\"Member tool call completed\")\n    elif event.event == TeamRunEvent.run_started:\n        print(f\"Run started\")\n    elif event.event == TeamRunEvent.run_completed:\n        print(f\"Run completed\")\npython  theme={null}\n...\n\nteam = Team(\n    name=\"Story Team\",\n    members=[],\n    model=OpenAIChat(id=\"gpt-4o\"),\n    store_events=True\n)\npython  theme={null}\nteam = Team(\n    name=\"Story Team\",\n    members=[],\n    model=OpenAIChat(id=\"gpt-4o\"),\n    store_events=True,\n    events_to_skip=[]  # Include all events\n)\npython  theme={null}\nfrom dataclasses import dataclass\nfrom agno.run.team import CustomEvent\n\n@dataclass\nclass CustomerProfileEvent(CustomEvent):\n    \"\"\"CustomEvent for customer profile.\"\"\"\n\ncustomer_name: Optional[str] = None\n    customer_email: Optional[str] = None\n    customer_phone: Optional[str] = None\npython  theme={null}\nfrom agno.tools import tool\n\n@tool()\nasync def get_customer_profile():\n    \"\"\"Example custom tool that simply yields a custom event.\"\"\"\n\nyield CustomerProfileEvent(\n        customer_name=\"John Doe\",\n        customer_email=\"john.doe@example.com\",\n        customer_phone=\"1234567890\",\n    )\npython  theme={null}\nteam.run(\"Get me my monthly report\", user_id=\"john@example.com\", session_id=\"session_123\")\npython  theme={null}\nteam.run(\"Tell me a 5 second short story about this image\", images=[Image(url=\"https://example.com/image.jpg\")])\npython  theme={null}\nfrom pydantic import BaseModel\nfrom agno.agent import Agent\nfrom agno.team import Team\nfrom agno.models.openai import OpenAIChat\n\nclass DetailedReport(BaseModel):\n    overview: str\n    findings: list[str]\n\nagent = Agent(name=\"Analyst\", model=OpenAIChat(id=\"gpt-4o-mini\"))\nteam = Team(members=[agent], model=OpenAIChat(id=\"gpt-4o-mini\"))\nteam.run(\"Analyze the market\", output_schema=DetailedReport)\n```\n\nFor more information see the [Input & Output](/basics/input-output/overview) documentation.\n\nA run can be cancelled by calling the `Team.cancel_run()` method.\n\nSee more details in the [Cancelling a Run](/execution-control/run-cancellation/overview) documentation.\n\n## Developer Resources\n\n* View the [Team reference](/reference/teams/team)\n* View the [TeamRunOutput schema](/reference/teams/team-response)\n* View [Team Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/teams/README.md)",
+  "code_samples": [
+    {
+      "code": "### Streaming member events\n\nWhen streaming events with `stream_events=True`, the team leader also streams the events from team members to the caller.\n\nWhen your team is running asynchronously (using `arun`), the members will run concurrently if the team leader delegates to multiple members in one request.\n\nThis means you will receive member events concurrently and the order of the events is not guaranteed.\n\nYou can disable this by setting `stream_member_events=False`.",
+      "language": "unknown"
+    },
+    {
+      "code": "### Handling Events\n\nYou can process events as they arrive by iterating over the response stream:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Storing Events\n\nYou can store all the events that happened during a run on the `TeamRunOutput` object.",
+      "language": "unknown"
+    },
+    {
+      "code": "By default the `TeamRunContentEvent` and `RunContentEvent` events are not stored. You can modify which events are skipped by setting the `events_to_skip` parameter.\n\nFor example:",
+      "language": "unknown"
+    },
+    {
+      "code": "See the full [`TeamRunOutput` schema](/reference/teams/team-response) for more details.\n\n### Event Types\n\nThe following events are streamed when `stream_events=True` by the `Team.run()` and `Team.arun()` functions depending on team's configuration:\n\n#### Core Events\n\n| Event Type                   | Description                                                                                                    |\n| ---------------------------- | -------------------------------------------------------------------------------------------------------------- |\n| `TeamRunStarted`             | Indicates the start of a run                                                                                   |\n| `TeamRunContent`             | Contains the model's response text as individual chunks                                                        |\n| `TeamRunContentCompleted`    | Signals completion of content streaming                                                                        |\n| `TeamRunIntermediateContent` | Contains the model's intermediate response text as individual chunks. This is used when `output_model` is set. |\n| `TeamRunCompleted`           | Signals successful completion of the run                                                                       |\n| `TeamRunError`               | Indicates an error occurred during the run                                                                     |\n| `TeamRunCancelled`           | Signals that the run was cancelled                                                                             |\n\n#### Tool Events\n\n| Event Type              | Description                                                    |\n| ----------------------- | -------------------------------------------------------------- |\n| `TeamToolCallStarted`   | Indicates the start of a tool call                             |\n| `TeamToolCallCompleted` | Signals completion of a tool call, including tool call results |\n\n#### Reasoning Events\n\n| Event Type               | Description                                         |\n| ------------------------ | --------------------------------------------------- |\n| `TeamReasoningStarted`   | Indicates the start of the team's reasoning process |\n| `TeamReasoningStep`      | Contains a single step in the reasoning process     |\n| `TeamReasoningCompleted` | Signals completion of the reasoning process         |\n\n#### Memory Events\n\n| Event Type                  | Description                                    |\n| --------------------------- | ---------------------------------------------- |\n| `TeamMemoryUpdateStarted`   | Indicates that the team is updating its memory |\n| `TeamMemoryUpdateCompleted` | Signals completion of a memory update          |\n\n#### Session Summary Events\n\n| Event Type                    | Description                                       |\n| ----------------------------- | ------------------------------------------------- |\n| `TeamSessionSummaryStarted`   | Indicates the start of session summary generation |\n| `TeamSessionSummaryCompleted` | Signals completion of session summary generation  |\n\n#### Pre-Hook Events\n\n| Event Type             | Description                                    |\n| ---------------------- | ---------------------------------------------- |\n| `TeamPreHookStarted`   | Indicates the start of a pre-run hook          |\n| `TeamPreHookCompleted` | Signals completion of a pre-run hook execution |\n\n#### Post-Hook Events\n\n| Event Type              | Description                                     |\n| ----------------------- | ----------------------------------------------- |\n| `TeamPostHookStarted`   | Indicates the start of a post-run hook          |\n| `TeamPostHookCompleted` | Signals completion of a post-run hook execution |\n\n#### Parser Model events\n\n| Event Type                         | Description                                      |\n| ---------------------------------- | ------------------------------------------------ |\n| `TeamParserModelResponseStarted`   | Indicates the start of the parser model response |\n| `TeamParserModelResponseCompleted` | Signals completion of the parser model response  |\n\n#### Output Model events\n\n| Event Type                         | Description                                      |\n| ---------------------------------- | ------------------------------------------------ |\n| `TeamOutputModelResponseStarted`   | Indicates the start of the output model response |\n| `TeamOutputModelResponseCompleted` | Signals completion of the output model response  |\n\nSee detailed documentation in the [TeamRunOutput](/reference/teams/team-response) documentation.\n\n### Custom Events\n\nIf you are using your own custom tools, it will often be useful to be able to yield custom events. Your custom events will be yielded together with the rest of the expected Agno events.\n\nWe recommend creating your custom event class extending the built-in `CustomEvent` class:",
+      "language": "unknown"
+    },
+    {
+      "code": "You can then yield your custom event from your tool. The event will be handled internally as an Agno event, and you will be able to access it in the same way you would access any other Agno event.",
+      "language": "unknown"
+    },
+    {
+      "code": "See the [full example](/examples/basics/teams/events/custom_events) for more details.\n\n## Specify Run User and Session\n\nYou can specify which user and session to use when running the team by passing the `user_id` and `session_id` parameters.\nThis ensures the current run is associated with the correct user and session. For example:",
+      "language": "unknown"
+    },
+    {
+      "code": "For more information see the [Sessions](/basics/sessions/overview) documentation.\n\n## Passing Images / Audio / Video / Files\n\nYou can pass images, audio, video, or files to the team by passing the `images`, `audio`, `video`, or `files` parameters. For example:",
+      "language": "unknown"
+    },
+    {
+      "code": "For more information see the [Multimodal](/basics/multimodal) documentation.\n\n## Passing Output Schema\n\nYou can pass an output schema for a specific run by passing the `output_schema` parameter. For example:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Streaming member events",
+      "id": "streaming-member-events"
+    },
+    {
+      "level": "h3",
+      "text": "Handling Events",
+      "id": "handling-events"
+    },
+    {
+      "level": "h3",
+      "text": "Storing Events",
+      "id": "storing-events"
+    },
+    {
+      "level": "h3",
+      "text": "Event Types",
+      "id": "event-types"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Events",
+      "id": "custom-events"
+    },
+    {
+      "level": "h2",
+      "text": "Specify Run User and Session",
+      "id": "specify-run-user-and-session"
+    },
+    {
+      "level": "h2",
+      "text": "Passing Images / Audio / Video / Files",
+      "id": "passing-images-/-audio-/-video-/-files"
+    },
+    {
+      "level": "h2",
+      "text": "Passing Output Schema",
+      "id": "passing-output-schema"
+    },
+    {
+      "level": "h2",
+      "text": "Cancelling a Run",
+      "id": "cancelling-a-run"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#stream-all-events",
+  "links": []
+}

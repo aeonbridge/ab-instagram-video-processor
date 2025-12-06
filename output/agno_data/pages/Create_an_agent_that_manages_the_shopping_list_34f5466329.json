@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent that manages the shopping list",
+  "content": "shopping_agent = Agent(\n    name=\"Shopping List Agent\",\n    role=\"Manage the shopping list\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[add_item, remove_item],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-that-manages-the-shopping-list",
+  "links": []
+}

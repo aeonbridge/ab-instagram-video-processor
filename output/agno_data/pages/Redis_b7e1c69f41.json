@@ -1,0 +1,14 @@
+{
+  "title": "Redis",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/redis/usage/redis-db\n\n```python redis_db.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.redis import RedisVectorDB",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#redis",
+  "links": []
+}

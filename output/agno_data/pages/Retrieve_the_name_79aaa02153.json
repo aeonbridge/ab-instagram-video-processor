@@ -1,0 +1,29 @@
+{
+  "title": "Retrieve the name",
+  "content": "name = workflow.get_session_name(session_id=\"session_123\")\nprint(name)  # \"AI Trends Analysis Q4 2024\"\npython  theme={null}\nworkflow = Workflow(\n    name=\"Research Pipeline\",\n    description=\"Automated research and analysis pipeline\",\n    db=SqliteDb(db_file=\"workflows.db\"),\n    steps=[...],\n)\n\nworkflow.run(input=\"Research topic\", session_id=\"session_123\")\nworkflow.set_session_name(session_id=\"session_123\", autogenerate=True)\n\nname = workflow.get_session_name(session_id=\"session_123\")\nprint(name)  # \"Automated research and analysis pipel - 2024-11-19 14:30\"\n```\n\nNow that you understand workflow sessions, explore these features:\n\n<CardGroup cols={2}>\n  <Card title=\"Workflow History\" icon=\"clock-rotate-left\" href=\"/basics/chat-history/workflow/overview\">\n    Enable workflows to learn from previous runs\n  </Card>\n\n<Card title=\"Session State\" icon=\"database\" href=\"/basics/state/workflows/overview\">\n    Share data between workflow steps across runs\n  </Card>\n\n<Card title=\"Session Management\" icon=\"tag\" href=\"/basics/sessions/session-management\">\n    Manage session names, IDs, and organization\n  </Card>\n\n<Card title=\"Conversational Workflows\" icon=\"comments\" href=\"/basics/workflows/conversational-workflows\">\n    Make workflows interactive with WorkflowAgent\n  </Card>\n\n<Card title=\"Metrics\" icon=\"chart-line\" href=\"/basics/sessions/metrics/workflow\">\n    Track workflow performance and usage\n  </Card>\n\n<Card title=\"Database Setup\" icon=\"database\" href=\"/basics/database/overview\">\n    Configure databases for session storage\n  </Card>\n</CardGroup>\n\n## Developer Resources\n\n* View the [Workflow schema](/reference/workflows/workflow)\n* View the [WorkflowSession schema](/reference/workflows/session)\n* Browse [workflow session examples](https://github.com/agno-agi/agno/tree/main/cookbook/workflows)",
+  "code_samples": [
+    {
+      "code": "### Auto-Generation\n\nWorkflow sessions can auto-generate timestamp-based names:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Auto-Generation",
+      "id": "auto-generation"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#retrieve-the-name",
+  "links": []
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Yfinance",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/yfinance\n\n**YFinanceTools** enable an Agent to access stock data, financial information and more from Yahoo Finance.\n\nThe following example requires the `yfinance` library.\n\nThe following agent will provide information about the stock price and analyst recommendations for NVDA (Nvidia Corporation).\n\nThe YFinanceTools toolkit does not require any configuration parameters. All functions are enabled by default and do not have individual enable/disable flags. Simply instantiate the toolkit without any parameters.\n\n| Function                      | Description                                                      |\n| ----------------------------- | ---------------------------------------------------------------- |\n| `get_current_stock_price`     | This function retrieves the current stock price of a company.    |\n| `get_company_info`            | This function retrieves detailed information about a company.    |\n| `get_historical_stock_prices` | This function retrieves historical stock prices for a company.   |\n| `get_stock_fundamentals`      | This function retrieves fundamental data about a stock.          |\n| `get_income_statements`       | This function retrieves income statements of a company.          |\n| `get_key_financial_ratios`    | This function retrieves key financial ratios for a company.      |\n| `get_analyst_recommendations` | This function retrieves analyst recommendations for a stock.     |\n| `get_company_news`            | This function retrieves the latest news related to a company.    |\n| `get_technical_indicators`    | This function retrieves technical indicators for stock analysis. |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/yfinance.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/yfinance_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will provide information about the stock price and analyst recommendations for NVDA (Nvidia Corporation).",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#yfinance",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "SQLite for development",
+  "content": "from agno.db.sqlite import SqliteDb\ncontents_db = SqliteDb(db_file=\"my_knowledge.db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#sqlite-for-development",
+  "links": []
+}

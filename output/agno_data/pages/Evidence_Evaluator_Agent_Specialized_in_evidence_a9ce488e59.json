@@ -1,0 +1,8 @@
+{
+  "title": "Evidence Evaluator Agent - Specialized in evidence assessment",
+  "content": "evidence_evaluator = Agent(\n    name=\"Evidence Evaluator\",\n    model=Claude(id=\"claude-sonnet-4-20250514\"),\n    role=\"Evaluate evidence quality and identify information gaps\",\n    tools=[ReasoningTools(add_instructions=True)],\n    instructions=[\n        \"Evaluate the quality and reliability of gathered evidence.\",\n        \"Identify gaps in information or reasoning.\",\n        \"Assess the strength of logical connections.\",\n        \"Highlight areas needing additional clarification.\",\n        \"Use reasoning tools to structure your evaluation.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#evidence-evaluator-agent---specialized-in-evidence-assessment",
+  "links": []
+}

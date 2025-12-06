@@ -1,0 +1,8 @@
+{
+  "title": "Update Evaluation Run",
+  "content": "Source: https://docs.agno.com/reference-api/schema/evals/update-evaluation-run\n\npatch /eval-runs/{eval_run_id}\nUpdate the name or other properties of an existing evaluation run.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#update-evaluation-run",
+  "links": []
+}

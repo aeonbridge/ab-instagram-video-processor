@@ -1,0 +1,14 @@
+{
+  "title": "Debugging Teams",
+  "content": "Source: https://docs.agno.com/basics/teams/debugging-teams\n\nLearn how to debug Agno Teams.\n\nAgno comes with an debug mode that takes your team development experience to the next level. It helps you understand the flow of execution and the intermediate steps. For example:\n\n1. Inspect the messages sent to the model and the response it generates.\n2. Trace intermediate steps and monitor metrics like token usage, execution time, etc.\n3. Inspect tool calls, errors, and their results.\n4. Monitor team member interactions and delegation patterns.\n\nTo enable debug mode on a team, use one of the following methods:\n\n1. Set the `debug_mode` parameter on your team, to enable it for all runs, as well as for member runs.\n2. Set the `debug_mode` parameter on the `run` method, to enable it on a single run.\n3. Set the `AGNO_DEBUG` environment variable to `True`, to enable debug mode for all teams.\n\n```python  theme={null}\nfrom agno.team import Team\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\nnews_agent = Agent(name=\"News Agent\", role=\"Get the latest news\")\nweather_agent = Agent(name=\"Weather Agent\", role=\"Get the weather for the next 7 days\")\n\nteam = Team(\n    name=\"News and Weather Team\",\n    members=[news_agent, weather_agent],\n    model=OpenAIChat(id=\"gpt-4o\"),\n    debug_mode=True,\n    # debug_level=2, # Uncomment to get more detailed logs\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Debug Mode",
+      "id": "debug-mode"
+    }
+  ],
+  "url": "llms-txt#debugging-teams",
+  "links": []
+}

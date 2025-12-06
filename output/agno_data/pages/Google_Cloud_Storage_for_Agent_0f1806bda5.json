@@ -1,0 +1,14 @@
+{
+  "title": "Google Cloud Storage for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/gcs/usage/gcs-for-agent\n\nAgno supports using Google Cloud Storage (GCS) as a storage backend for Agents using the `GcsJsonDb` class. This storage backend stores session data as JSON blobs in a GCS bucket.\n\nConfigure your agent with GCS storage to enable cloud-based session persistence.\n\n```python gcs_for_agent.py theme={null}\nimport uuid\nimport google.auth\nfrom agno.agent import Agent\nfrom agno.db.base import SessionType\nfrom agno.db.gcs_json import GcsJsonDb\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#google-cloud-storage-for-agent",
+  "links": []
+}

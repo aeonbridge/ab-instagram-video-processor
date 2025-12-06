@@ -1,0 +1,8 @@
+{
+  "title": "Analyze session-level metrics",
+  "content": "print(\"=\" * 50)\nprint(\"SESSION METRICS\")\nprint(\"=\" * 50)\npprint(team.get_session_metrics(session_id=\"team_metrics_demo\"))",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#analyze-session-level-metrics",
+  "links": []
+}

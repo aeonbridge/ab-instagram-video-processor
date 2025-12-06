@@ -1,0 +1,19 @@
+{
+  "title": "Define the custom async retriever",
+  "content": "async def retriever(\n    query: str, agent: Optional[Agent] = None, num_documents: int = 5, **kwargs\n) -> Optional[list[dict]]:\n    \"\"\"\n    Custom async retriever function to search the vector database for relevant documents.\n    \"\"\"\n    try:\n        qdrant_client = AsyncQdrantClient(path=\"tmp/qdrant\")\n        query_embedding = embedder.get_embedding(query)\n        results = await qdrant_client.query_points(\n            collection_name=\"thai-recipes\",\n            query=query_embedding,\n            limit=num_documents,\n        )\n        results_dict = results.model_dump()\n        if \"points\" in results_dict:\n            return results_dict[\"points\"]\n        else:\n            return None\n    except Exception as e:\n        print(f\"Error during vector database search: {str(e)}\")\n        return None\n\nasync def main():\n    \"\"\"Async main function to demonstrate agent usage.\"\"\"\n    agent = Agent(\n        knowledge_retriever=retriever,\n        search_knowledge=True,\n        instructions=\"Search the knowledge base for information\",\n    )\n    # Example query\n    query = \"List down the ingredients to make Massaman Gai\"\n    await agent.aprint_response(query, markdown=True)\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\n1. **Embedder and Vector Database Setup**: We start by defining an embedder and initializing a connection to a vector database. This setup is crucial for converting queries into embeddings and storing them in the database.\n\n2. **Loading the Knowledge Base**: The knowledge base is loaded with PDF documents. This step involves converting the documents into embeddings and storing them in the vector database.\n\n3. **Custom Retriever Function**: The `retriever` function is defined to handle the retrieval of documents. It takes a query, converts it into an embedding, and searches the vector database for relevant documents.\n\n4. **Agent Initialization**: An agent is initialized with the custom retriever. The agent uses this retriever to search the knowledge base and retrieve information.\n\n5. **Example Query**: The `main` function demonstrates how to use the agent to perform a query and retrieve information from the knowledge base.\n\n## Developer Resources\n\n* View [Sync Retriever](https://github.com/agno-agi/agno/tree/main/cookbook/agent_basics/knowledge/custom/retriever.py)\n* View [Async Retriever](https://github.com/agno-agi/agno/tree/main/cookbook/agent_basics/knowledge/custom/async_retriever.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Explanation",
+      "id": "explanation"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#define-the-custom-async-retriever",
+  "links": []
+}

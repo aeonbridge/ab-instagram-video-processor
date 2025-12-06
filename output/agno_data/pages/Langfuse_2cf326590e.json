@@ -1,0 +1,33 @@
+{
+  "title": "Langfuse",
+  "content": "Source: https://docs.agno.com/integrations/observability/langfuse\n\nIntegrate Agno with Langfuse to send traces and gain insights into your agent's performance.\n\n## Integrating Agno with Langfuse\n\nLangfuse provides a robust platform for tracing and monitoring AI model calls. By integrating Agno with Langfuse, you can utilize OpenInference and OpenLIT to send traces and gain insights into your agent's performance.\n\n1. **Install Dependencies**\n\nEnsure you have the necessary packages installed:\n\n2. **Setup Langfuse Account**\n\n* Either self-host or sign up for an account at [Langfuse](https://us.cloud.langfuse.com).\n   * Obtain your public and secret API keys from the Langfuse dashboard.\n\n3. **Set Environment Variables**\n\nConfigure your environment with the Langfuse API keys:\n\n## Sending Traces to Langfuse\n\n* ### Example: Using Langfuse with OpenInference\n\nThis example demonstrates how to instrument your Agno agent with OpenInference and send traces to Langfuse.\n\n```python  theme={null}\nimport base64\nimport os\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.yfinance import YFinanceTools\nfrom openinference.instrumentation.agno import AgnoInstrumentor\nfrom opentelemetry import trace as trace_api\nfrom opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter\nfrom opentelemetry.sdk.trace import TracerProvider\nfrom opentelemetry.sdk.trace.export import SimpleSpanProcessor",
+  "code_samples": [
+    {
+      "code": "2. **Setup Langfuse Account**\n\n   * Either self-host or sign up for an account at [Langfuse](https://us.cloud.langfuse.com).\n   * Obtain your public and secret API keys from the Langfuse dashboard.\n\n3. **Set Environment Variables**\n\n   Configure your environment with the Langfuse API keys:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Sending Traces to Langfuse\n\n* ### Example: Using Langfuse with OpenInference\n\nThis example demonstrates how to instrument your Agno agent with OpenInference and send traces to Langfuse.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with Langfuse",
+      "id": "integrating-agno-with-langfuse"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Sending Traces to Langfuse",
+      "id": "sending-traces-to-langfuse"
+    }
+  ],
+  "url": "llms-txt#langfuse",
+  "links": []
+}

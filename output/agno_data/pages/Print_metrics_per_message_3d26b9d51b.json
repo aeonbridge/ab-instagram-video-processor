@@ -1,0 +1,8 @@
+{
+  "title": "Print metrics per message",
+  "content": "if run_output.messages:\n    for message in run_output.messages:  # type: ignore\n        if message.role == \"assistant\":\n            if message.content:\n                print(f\"Message: {message.content}\")\n            elif message.tool_calls:\n                print(f\"Tool calls: {message.tool_calls}\")\n            print(\"---\" * 5, \"Metrics\", \"---\" * 5)\n            pprint(message.metrics)\n            print(\"---\" * 20)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#print-metrics-per-message",
+  "links": []
+}

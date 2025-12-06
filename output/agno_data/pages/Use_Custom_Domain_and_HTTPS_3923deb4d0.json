@@ -1,0 +1,29 @@
+{
+  "title": "Use Custom Domain and HTTPS",
+  "content": "Source: https://docs.agno.com/templates/infra-management/domain-https\n\nTo add a live AgentOS instance to os.agno.com, the endpoint must be HTTPS. Here is how you can add a custom domain and HTTPS to your AWS loadbalancer.\n\n## Use a custom domain\n\n1. Register your domain with [Route 53](https://us-east-1.console.aws.amazon.com/route53/).\n2. Point the domain to the loadbalancer DNS.\n\n### Custom domain for your AgentOS App\n\nCreate a record in the Route53 console to point `app.[YOUR_DOMAIN]` to the AgentOS endpoint.\n\n<img src=\"https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-aidev-run.png?fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=2387492f4fa89cab98e2a603da83535b\" alt=\"llm-app-aidev-run\" data-og-width=\"1081\" width=\"1081\" data-og-height=\"569\" height=\"569\" data-path=\"images/llm-app-aidev-run.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-aidev-run.png?w=280&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=1d9004362958e21665a9deb78811a4dd 280w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-aidev-run.png?w=560&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=16e4a3f99f355b484c3bfc0ff98ec7c9 560w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-aidev-run.png?w=840&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=d2659746f0b009a8e84c7fe1528cac65 840w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-aidev-run.png?w=1100&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=1b3b6f7c9a098578bcc4cf88f5802588 1100w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-aidev-run.png?w=1650&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=d1e8a2a0a23ce16cbaf50ebe0fce0fba 1650w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-aidev-run.png?w=2500&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=4c1c3fbd924321ecfe7aabedc3d9ad1e 2500w\" />\n\nYou can visit the app at `[http://app.[YOUR_DOMAIN]`\n\n<Note>Note the `http` in the domain name.</Note>\n\n1. Create a certificate using [AWS ACM](https://us-east-1.console.aws.amazon.com/acm). Request a certificat for `*.[YOUR_DOMAIN]`\n\n<img src=\"https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-request-cert.png?fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=15b580029369ef5c8039bddfad4be52d\" alt=\"llm-app-request-cert\" data-og-width=\"1105\" width=\"1105\" data-og-height=\"581\" height=\"581\" data-path=\"images/llm-app-request-cert.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-request-cert.png?w=280&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=05442b5b3ac14b98d42e885488be4ede 280w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-request-cert.png?w=560&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=9ce2e4e86b46e10e984aa1b1ab9939a7 560w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-request-cert.png?w=840&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=85149f2d24287108d22bd604f7014dc3 840w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-request-cert.png?w=1100&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=dbb81c8a8e8df3c85eaed02a097a89b1 1100w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-request-cert.png?w=1650&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=6c804f2e99c3881f52cabd5566b54802 1650w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-request-cert.png?w=2500&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=b9534df74f2df9325cdeae0448e25bfd 2500w\" />\n\n2. Creating records in Route 53.\n\n<img src=\"https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-validate-cert.png?fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=4291826e3abd20126daf4e1bbd42c0a3\" alt=\"llm-app-validate-cert\" data-og-width=\"1322\" width=\"1322\" data-og-height=\"566\" height=\"566\" data-path=\"images/llm-app-validate-cert.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-validate-cert.png?w=280&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=c7813e664032c848f1b2c5a51953f8eb 280w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-validate-cert.png?w=560&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=b98c005abf74fc4a7b7c75678cf8b0f6 560w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-validate-cert.png?w=840&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=b25347bff02d1684a44906d860b51a98 840w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-validate-cert.png?w=1100&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=f7a1bafd43f582f40f13513ea64daa32 1100w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-validate-cert.png?w=1650&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=179c892f6141685a69e521865a7c4d28 1650w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/llm-app-validate-cert.png?w=2500&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=051a273f486a1f576ee0cedd97c24c69 2500w\" />\n\n3. Add the certificate ARN to Apps\n\n<Note>Make sure the certificate is `Issued` before adding it to your Apps</Note>\n\nUpdate the `infra/prd_resources.py` file and add the `load_balancer_certificate_arn` to the `FastAPI` app.\n\n```python infra/prd_resources.py theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Overview",
+      "id": "overview"
+    },
+    {
+      "level": "h2",
+      "text": "Use a custom domain",
+      "id": "use-a-custom-domain"
+    },
+    {
+      "level": "h3",
+      "text": "Custom domain for your AgentOS App",
+      "id": "custom-domain-for-your-agentos-app"
+    },
+    {
+      "level": "h2",
+      "text": "Add HTTPS",
+      "id": "add-https"
+    }
+  ],
+  "url": "llms-txt#use-custom-domain-and-https",
+  "links": []
+}

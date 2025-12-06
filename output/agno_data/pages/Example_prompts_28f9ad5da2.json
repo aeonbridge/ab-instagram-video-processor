@@ -1,0 +1,8 @@
+{
+  "title": "Example prompts:",
+  "content": "\"\"\"\nCustomer Management:\n- \"Create a customer. Name: ACME Corp, Email: billing@acme.example.com\"\n- \"List my customers.\"\n- \"Find customer by email 'jane.doe@example.com'\" # Note: Requires 'customers.retrieve' or search capability\n\nProduct and Price Management:\n- \"Create a new product called 'Basic Plan'.\"\n- \"Create a recurring monthly price of $10 USD for product 'Basic Plan'.\"\n- \"Create a product 'Ebook Download' and a one-time price of $19.95 USD.\"\n- \"List all products.\" # Note: Requires 'products.list' capability\n- \"List all prices.\" # Note: Requires 'prices.list' capability\n\nPayment Links:\n- \"Create a payment link for the $10 USD monthly 'Basic Plan' price.\"\n- \"Generate a payment link for the '$19.95 Ebook Download'.\"\n\nCombined Tasks:\n- \"Create a product 'Pro Service', add a price $150 USD (one-time), and give me the payment link.\"\n- \"Register a new customer 'support@example.com' named 'Support Team'.\"\n\"\"\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-prompts:",
+  "links": []
+}

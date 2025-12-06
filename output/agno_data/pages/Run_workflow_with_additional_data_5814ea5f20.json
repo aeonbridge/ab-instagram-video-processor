@@ -1,0 +1,14 @@
+{
+  "title": "Run workflow with additional_data",
+  "content": "workflow.print_response(\n    input=\"AI trends in 2024\",\n    additional_data={\n        \"user_email\": \"michael@dundermifflin.com\",\n        \"priority\": \"high\",\n        \"client_type\": \"enterprise\",\n        \"budget\": \"$50000\",\n        \"deadline\": \"2024-12-15\"\n    },\n    markdown=True,\n    stream=True\n)\n```\n\n## Developer Resources\n\n* [Step with Function and Additional Data](/basics/workflows/usage/step-with-function-additional-data)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#run-workflow-with-additional_data",
+  "links": []
+}

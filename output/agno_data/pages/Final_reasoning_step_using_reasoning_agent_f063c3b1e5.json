@@ -1,0 +1,8 @@
+{
+  "title": "Final reasoning step using reasoning agent",
+  "content": "reasoning_step = Step(\n    name=\"final_reasoning\",\n    agent=reasoning_agent,\n    description=\"Apply reasoning to create final insights and recommendations\",\n)\n\nworkflow = Workflow(\n    name=\"Enhanced Research Workflow\",\n    description=\"Multi-source research with custom data flow and reasoning\",\n    steps=[\n        research_hackernews,\n        research_web,\n        comprehensive_report_step,  # Has access to both previous steps\n        reasoning_step,  # Gets the last step output (comprehensive report)\n    ],\n)\n\nif __name__ == \"__main__\":\n    workflow.print_response(\n        \"Latest developments in artificial intelligence and machine learning\",\n        stream=True,\n    )\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#final-reasoning-step-using-reasoning-agent",
+  "links": []
+}

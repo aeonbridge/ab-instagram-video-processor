@@ -1,0 +1,8 @@
+{
+  "title": "-*- Only include tables that are in the target_metadata",
+  "content": "def include_name(name, type_, parent_names):\n    if type_ == \"table\":\n        return name in target_metadata.tables\n    else:\n        return True\n...\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#-*--only-include-tables-that-are-in-the-target_metadata",
+  "links": []
+}

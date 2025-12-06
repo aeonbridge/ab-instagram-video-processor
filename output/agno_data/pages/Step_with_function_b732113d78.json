@@ -1,0 +1,8 @@
+{
+  "title": "Step with function",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/step-with-function\n\nThis example demonstrates how to use named steps with custom function executors.\n\nThis example demonstrates **Workflows** using named Step objects with custom function\nexecutors. This pattern combines the benefits of named steps with the flexibility of\ncustom functions, allowing for sophisticated data processing within structured workflow steps.\n\n**When to use**: When you need named step organization but want custom logic that goes\nbeyond what agents/teams provide. Ideal for complex data processing, multi-step operations,\nor when you need to orchestrate multiple agents within a single step.\n\n```python step_with_function.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step, StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#step-with-function",
+  "links": []
+}

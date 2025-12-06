@@ -1,0 +1,8 @@
+{
+  "title": "Example 2: Using NOT operator",
+  "content": "print(\"Using NOT operator\")\nsales_agent.print_response(\n    \"Describe revenue performance for the region\",\n    knowledge_filters=[NOT(IN(\"region\", [\"north_america\"]))],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-2:-using-not-operator",
+  "links": []
+}

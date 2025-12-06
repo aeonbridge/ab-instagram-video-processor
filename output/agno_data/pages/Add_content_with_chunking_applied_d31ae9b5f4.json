@@ -1,0 +1,14 @@
+{
+  "title": "Add content with chunking applied",
+  "content": "knowledge.add_content(\n    path=\"documents/cookbook.pdf\",\n    reader=reader,\n)\n```\n\n## Choosing a Strategy\n\nThe choice of chunking strategy depends on your content type and use case:\n\n* **Text documents**: Semantic chunking maintains context and meaning\n* **Structured documents**: Document or Markdown chunking preserves hierarchy\n* **Tabular data**: CSV Row chunking treats each row as a separate entity\n* **Mixed content**: Recursive chunking provides flexibility with multiple separators\n* **Uniform processing**: Fixed Size chunking ensures consistent chunk dimensions\n\nEach reader has a default chunking strategy that works well for its content type, but you can override it by specifying a `chunking_strategy` parameter when configuring the reader.\n\n<Note>\n  Consider your specific use case and performance requirements when choosing a chunking strategy, since different strategies vary in processing time and memory usage.\n</Note>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Choosing a Strategy",
+      "id": "choosing-a-strategy"
+    }
+  ],
+  "url": "llms-txt#add-content-with-chunking-applied",
+  "links": []
+}

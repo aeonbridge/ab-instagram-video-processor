@@ -1,0 +1,19 @@
+{
+  "title": "Use custom strategy",
+  "content": "custom_strategy = CustomOptimizationStrategy()\noptimized = memory_manager.optimize_memories(\n    user_id=\"user_123\",\n    strategy=custom_strategy,\n    apply=True,\n)\npython  theme={null}\nfrom agno.memory.strategies.summarize import SummarizeStrategy",
+  "code_samples": [
+    {
+      "code": "## Measuring Token Savings\n\nYou can measure token savings by comparing the number of tokens before and after optimization (using the `count_tokens` method):",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Measuring Token Savings",
+      "id": "measuring-token-savings"
+    }
+  ],
+  "url": "llms-txt#use-custom-strategy",
+  "links": []
+}

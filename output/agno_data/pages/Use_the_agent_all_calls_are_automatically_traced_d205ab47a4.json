@@ -1,0 +1,19 @@
+{
+  "title": "Use the agent - all calls are automatically traced",
+  "content": "agent.print_response(\"What is the current price of Tesla and what do analysts recommend?\")\npython  theme={null}\nimport openlit\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [
+    {
+      "code": "### Example: Development Mode (Console Output)\n\nFor local development without a collector, OpenLIT can output traces directly to the console:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Example: Development Mode (Console Output)",
+      "id": "example:-development-mode-(console-output)"
+    }
+  ],
+  "url": "llms-txt#use-the-agent---all-calls-are-automatically-traced",
+  "links": []
+}

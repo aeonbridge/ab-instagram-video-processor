@@ -1,0 +1,8 @@
+{
+  "title": "Define tools that work with shared team state",
+  "content": "def add_item(run_context: RunContext, item: str) -> str:\n    \"\"\"Add an item to the shopping list.\"\"\"\n    if not run_context.session_state:\n        run_context.session_state = {}\n\nif item.lower() not in [\n        i.lower() for i in run_context.session_state[\"shopping_list\"]\n    ]:\n        run_context.session_state[\"shopping_list\"].append(item)\n        return f\"Added '{item}' to the shopping list\"\n    else:\n        return f\"'{item}' is already in the shopping list\"\n\ndef remove_item(run_context: RunContext, item: str) -> str:\n    \"\"\"Remove an item from the shopping list.\"\"\"\n    if not run_context.session_state:\n        run_context.session_state = {}\n\nfor i, list_item in enumerate(run_context.session_state[\"shopping_list\"]):\n        if list_item.lower() == item.lower():\n            run_context.session_state[\"shopping_list\"].pop(i)\n            return f\"Removed '{list_item}' from the shopping list\"\n\nreturn f\"'{item}' was not found in the shopping list\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-tools-that-work-with-shared-team-state",
+  "links": []
+}

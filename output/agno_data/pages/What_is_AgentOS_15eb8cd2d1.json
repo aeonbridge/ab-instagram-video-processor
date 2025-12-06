@@ -1,0 +1,29 @@
+{
+  "title": "What is AgentOS?",
+  "content": "Source: https://docs.agno.com/agent-os/introduction\n\nThe production runtime and control plane for your agentic systems\n\nAgentOS is Agno's production-ready runtime that runs entirely within your own infrastructure, ensuring complete data privacy and control of your agentic system.\nAgno also provides a beautiful web interface for managing, monitoring, and interacting with your AgentOS, with no data ever being persisted outside of your environment.\n\n<Check>\n  Behind the scenes, AgentOS is a FastAPI app that you can run locally or in your cloud. It is designed to be easy to deploy and scale.\n</Check>\n\nReady to get started with AgentOS? Here's what you need to do:\n\n<CardGroup cols={2}>\n  <Card title=\"Create Your First OS\" icon=\"plus\" href=\"/agent-os/creating-your-first-os\">\n    Set up a new AgentOS instance from scratch using our templates\n  </Card>\n\n<Card title=\"Connect Your AgentOS\" icon=\"link\" href=\"/agent-os/connecting-your-os\">\n    Learn how to connect your local development environment to the platform\n  </Card>\n</CardGroup>\n\n## Security & Privacy First\n\nAgentOS is designed with enterprise security and data privacy as foundational principles, not afterthoughts.\n\n<Frame>\n  <img src=\"https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-secure-infra-illustration.png?fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=b13db5d4b3c25eb5508752f7d3474b51\" alt=\"AgentOS Security and Privacy Architecture\" style={{ borderRadius: \"0.5rem\" }} data-og-width=\"3258\" width=\"3258\" data-og-height=\"1938\" height=\"1938\" data-path=\"images/agentos-secure-infra-illustration.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-secure-infra-illustration.png?w=280&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=c548641b352030a8fee914cd49919417 280w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-secure-infra-illustration.png?w=560&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=9640bb14a9d22619973e7efb20ab1be5 560w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-secure-infra-illustration.png?w=840&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=82645dfaae8f0155bc3912cdfaf656cc 840w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-secure-infra-illustration.png?w=1100&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=ba5cf9921c1b389d58216ba71ef38515 1100w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-secure-infra-illustration.png?w=1650&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=d7ca28c6e75259c18b08783224c1a2e4 1650w, https://mintcdn.com/agno-v2/Is_2Bv3MNVYdZh1v/images/agentos-secure-infra-illustration.png?w=2500&fit=max&auto=format&n=Is_2Bv3MNVYdZh1v&q=85&s=122528a3dc3ecf7789fb1b076be48f08 2500w\" />\n</Frame>\n\n### Complete Data Ownership\n\n* **Your Infrastructure, Your Data**: AgentOS runs entirely within your cloud environment\n* **Zero Data Transmission**: No conversations, logs, or metrics are sent to external services\n* **Private by Default**: All processing, storage, and analytics happen locally\n\nTo learn more about AgentOS Security, check out the [AgentOS Security](/agent-os/security) page.\n\n<CardGroup cols={2}>\n  <Card title=\"Control Plane\" icon=\"desktop\" href=\"/agent-os/control-plane\">\n    Learn how to use the AgentOS control plane to manage and monitor your OSs\n  </Card>\n\n<Card title=\"Create Your First OS\" icon=\"rocket\" href=\"/agent-os/creating-your-first-os\">\n    Get started by creating your first AgentOS instance\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Getting Started",
+      "id": "getting-started"
+    },
+    {
+      "level": "h2",
+      "text": "Security & Privacy First",
+      "id": "security-&-privacy-first"
+    },
+    {
+      "level": "h3",
+      "text": "Complete Data Ownership",
+      "id": "complete-data-ownership"
+    },
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#what-is-agentos?",
+  "links": []
+}

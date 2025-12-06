@@ -1,0 +1,8 @@
+{
+  "title": "Business trends",
+  "content": "business_prompt = \"\"\"\\\nAnalyze media trends for:\nKeywords: remote work, digital transformation, sustainability\nSources: forbes.com, bloomberg.com, hbr.org\n\"\"\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#business-trends",
+  "links": []
+}

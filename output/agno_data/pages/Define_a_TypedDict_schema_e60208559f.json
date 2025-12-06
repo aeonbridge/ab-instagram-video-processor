@@ -1,0 +1,8 @@
+{
+  "title": "Define a TypedDict schema",
+  "content": "class ResearchTopicDict(TypedDict):\n    topic: str\n    focus_areas: List[str]\n    target_audience: str\n    sources_required: int",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-a-typeddict-schema",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Get all spans in a trace",
+  "content": "spans = db.get_spans(trace_id=trace.trace_id)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-all-spans-in-a-trace",
+  "links": []
+}

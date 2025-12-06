@@ -1,0 +1,14 @@
+{
+  "title": "Agent with PDF Input (Local file)",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/pdf-input-local\n\n```python cookbook/models/google/gemini/pdf_input_local.py theme={null}\nfrom pathlib import Path\nfrom agno.agent import Agent\nfrom agno.media import File\nfrom agno.models.google import Gemini\nfrom agno.utils.media import download_file\n\npdf_path = Path(__file__).parent.joinpath(\"ThaiRecipes.pdf\")",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-pdf-input-(local-file)",
+  "links": []
+}

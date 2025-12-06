@@ -1,0 +1,8 @@
+{
+  "title": "Create specialized Hacker News research agent",
+  "content": "hackernews_agent = Agent(\n    name=\"Hackernews Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[HackerNewsTools()],\n    role=\"Extract key insights and content from Hackernews posts\",\n    instructions=[\n        \"Search Hacker News for relevant articles and discussions\",\n        \"Extract key insights and summarize findings\",\n        \"Focus on high-quality, well-discussed posts\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-specialized-hacker-news-research-agent",
+  "links": []
+}

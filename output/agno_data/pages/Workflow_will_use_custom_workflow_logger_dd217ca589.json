@@ -1,0 +1,19 @@
+{
+  "title": "Workflow will use custom_workflow_logger",
+  "content": "workflow = Workflow(\n    debug_mode=True,\n    steps=[Step(name=\"step1\", agent=agent)]\n)\nworkflow.print_response(\"Tell me a fun fact\")\npython  theme={null}\nimport logging\nfrom agno.agent import Agent\nfrom agno.team import Team\nfrom agno.workflow import Workflow\nfrom agno.workflow.step import Step",
+  "code_samples": [
+    {
+      "code": "## Using Named Loggers\n\nAs it's conventional in Python, you can also provide custom loggers just by setting loggers with specific names. This is useful if you want to set them up using configuration files.\n\nAgno automatically recognizes and uses these logger names:\n\n* `agno` will be used for all Agent logs\n* `agno-team` will be used for all Team logs\n* `agno-workflow` will be used for all Workflow logs",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using Named Loggers",
+      "id": "using-named-loggers"
+    }
+  ],
+  "url": "llms-txt#workflow-will-use-custom_workflow_logger",
+  "links": []
+}

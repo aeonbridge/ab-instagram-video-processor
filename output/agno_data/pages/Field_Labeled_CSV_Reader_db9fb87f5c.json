@@ -1,0 +1,8 @@
+{
+  "title": "Field Labeled CSV Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/field-labeled-csv\n\nFieldLabeledCSVReader is a reader class that converts CSV rows into field-labeled text documents.\n\n<Snippet file=\"field-labeled-csv-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#field-labeled-csv-reader",
+  "links": []
+}

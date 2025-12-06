@@ -1,0 +1,32 @@
+{
+  "title": "Collaboration Team",
+  "content": "Source: https://docs.agno.com/examples/use-cases/teams/discussion_team\n\nThis example shows how to create a collaboration team that allows multiple agents to work together on research topics using the `collaborate` mode. In Collaborate Mode, all team members are given the same task and the team leader synthesizes their outputs into a cohesive response.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install required libraries\">\n    \n  </Step>\n\n<Step title=\"Set environment variables\">\n    \n  </Step>\n\n<Step title=\"Run the agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#collaboration-team",
+  "links": []
+}

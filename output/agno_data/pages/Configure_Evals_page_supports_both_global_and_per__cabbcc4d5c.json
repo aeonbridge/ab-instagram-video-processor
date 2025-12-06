@@ -1,0 +1,32 @@
+{
+  "title": "Configure Evals page (supports both global and per-database available models)",
+  "content": "evals:\n  display_name: \"Evaluations\"\n  available_models:\n    - \"openai:gpt-4\"\n    - \"anthropic:claude-sonnet-4\"\n  dbs:\n    - db_id: db-0001\n      domain_config:\n        display_name: Production evals\n        available_models:\n          - \"openai:gpt-4o-mini\"\npython  theme={null}\nfrom agno.os import AgentOS\n\nagent_os = AgentOS(\n    name=\"My AgentOS\",\n    ...,\n    config=\"path/to/configuration.yaml\"\n)\npython  theme={null}\nfrom agno.os import AgentOS\nfrom agno.os.config import (\n    AgentOSConfig,\n    ChatConfig,\n    DatabaseConfig,\n    EvalsConfig,\n    EvalsDomainConfig,\n    KnowledgeConfig,\n    KnowledgeDomainConfig,\n    MemoryConfig,\n    MemoryDomainConfig,\n    SessionConfig,\n    SessionDomainConfig,\n)\n\nagent_os = AgentOS(\n    ...,\n    config=AgentOSConfig(\n        chat=ChatConfig(\n            quick_prompts={\n                \"marketing-agent\": [\n                    \"What can you do?\",\n                    \"How is our latest post working?\",\n                    \"Tell me about our active marketing campaigns\",\n                ]\n            }\n        ),\n        memory=MemoryConfig(\n            display_name=\"User Memory Store\",\n            dbs=[\n                DatabaseConfig(\n                    db_id=marketing_db.id,\n                    domain_config=MemoryDomainConfig(\n                        display_name=\"Main app user memories\",\n                    ),\n                ),\n                DatabaseConfig(\n                    db_id=support_db.id,\n                    domain_config=MemoryDomainConfig(\n                        display_name=\"Support flow user memories\",\n                    ),\n                )\n            ],\n        ),\n    ),\n)\njson  theme={null}\n{\n\t\"os_id\": \"0001\",\n\t\"name\": \"My AgentOS\",\n\t\"description\": \"Your AgentOS\",\n\t\"available_models\": [\n\t\t\"openai:gpt-4\",\n\t],\n\t\"databases\": [\n\t\t\"db-0001\",\n\t\t\"db-0002\"\n\t],\n\t\"agents\": [],\n\t\"chat\": {\n\t\t\"quick_prompts\": {\n\t\t\t\"marketing-agent\": [\n\t\t\t\t\"What can you do?\",\n\t\t\t\t\"How is our latest post working?\",\n\t\t\t\t\"Tell me about our active marketing campaigns\"\n\t\t\t]\n\t\t}\n\t},\n\t\"memory\": {\n\t\t\"dbs\": [\n\t\t\t{\n\t\t\t\t\"db_id\": \"db-0001\",\n\t\t\t\t\"domain_config\": {\n\t\t\t\t\t\"display_name\": \"Main app user memories\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"db_id\": \"db-0002\",\n\t\t\t\t\"domain_config\": {\n\t\t\t\t\t\"display_name\": \"Support flow user memories\"\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t},\n\t...\n}\n```\n\n<Tip>\n  See the full schema for the `/config` endpoint [here](/reference-api/schema/core/get-os-configuration).\n</Tip>",
+  "code_samples": [
+    {
+      "code": "2. Pass the configuration to your AgentOS using the `config` parameter:",
+      "language": "unknown"
+    },
+    {
+      "code": "## `AgentOSConfig` Class\n\nYou can also provide your configuration using the `AgentOSConfig` class:",
+      "language": "unknown"
+    },
+    {
+      "code": "## The /config endpoint\n\nThe `/config` endpoint returns your complete AgentOS configuration as JSON. You could use this to inspect your AgentOS configuration that is served to the AgentOS Control Plane.\n\nThe response includes:\n\n* **OS ID**: The ID of your AgentOS (automatically generated if not set)\n* **Description**: The description of your AgentOS\n* **Databases**: The list of IDs of the databases present in your AgentOS\n* **Agents**: The list of Agents available in your AgentOS\n* **Teams**: The list of Teams available in your AgentOS\n* **Workflows**: The list of Workflows available in your AgentOS\n* **Interfaces**: The list of Interfaces available in your AgentOS. E.g. WhatsApp, Slack, etc.\n* **Chat**: The configuration for the Chat page, which includes the list of quick prompts for each Agent, Team and Workflow in your AgentOS\n* **Session**: The configuration for the Session page of your AgentOS\n* **Metrics**: The configuration for the Metrics page of your AgentOS\n* **Memory**: The configuration for the Memory page of your AgentOS\n* **Knowledge**: The configuration for the Knowledge page of your AgentOS\n* **Evals**: The configuration for the Evals page of your AgentOS\n\nYou will receive a JSON response with your configuration. Using the previous examples, you will receive:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "`AgentOSConfig` Class",
+      "id": "`agentosconfig`-class"
+    },
+    {
+      "level": "h2",
+      "text": "The /config endpoint",
+      "id": "the-/config-endpoint"
+    }
+  ],
+  "url": "llms-txt#configure-evals-page-(supports-both-global-and-per-database-available-models)",
+  "links": []
+}

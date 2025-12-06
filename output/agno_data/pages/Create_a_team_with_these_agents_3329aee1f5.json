@@ -1,0 +1,8 @@
+{
+  "title": "Create a team with these agents",
+  "content": "content_team = Team(\n    name=\"Content Team\",\n    members=[researcher, writer],\n    instructions=\"You are a team of researchers and writers that work together to create high-quality content.\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    show_members_responses=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-team-with-these-agents",
+  "links": []
+}

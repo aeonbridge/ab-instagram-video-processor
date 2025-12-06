@@ -1,0 +1,19 @@
+{
+  "title": "Create and use workflow",
+  "content": "if __name__ == \"__main__\":\n    content_creation_workflow = Workflow(\n        name=\"Content Creation Workflow\",\n        description=\"Automated content creation from blog posts to social media\",\n        db=db,\n        steps=[research_step, content_planning_step],\n    )\n    content_creation_workflow.print_response(\n        input=\"AI trends in 2024\",\n        markdown=True,\n    )\n```\n\n<Snippet file=\"db-surrealdb-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/db/surrealdb/surrealdb_for_workflow.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#create-and-use-workflow",
+  "links": []
+}

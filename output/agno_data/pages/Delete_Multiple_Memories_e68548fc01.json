@@ -1,0 +1,8 @@
+{
+  "title": "Delete Multiple Memories",
+  "content": "Source: https://docs.agno.com/reference-api/schema/memory/delete-multiple-memories\n\ndelete /memories\nDelete multiple user memories by their IDs in a single operation. This action cannot be undone and all specified memories will be permanently removed.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-multiple-memories",
+  "links": []
+}

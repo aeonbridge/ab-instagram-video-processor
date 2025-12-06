@@ -1,0 +1,8 @@
+{
+  "title": "Define a tool that adds an item to the shopping list",
+  "content": "def add_item(run_context: RunContext, item: str) -> str:\n    \"\"\"Add an item to the shopping list.\"\"\"\n\n# We access the session state via run_context.session_state\n    run_context.session_state[\"shopping_list\"].append(item)\n\nreturn f\"The shopping list is now {run_context.session_state['shopping_list']}\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-a-tool-that-adds-an-item-to-the-shopping-list",
+  "links": []
+}

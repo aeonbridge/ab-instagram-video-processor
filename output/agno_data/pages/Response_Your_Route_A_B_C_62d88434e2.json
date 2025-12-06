@@ -1,0 +1,24 @@
+{
+  "title": "Response: Your Route -> A -> B -> C",
+  "content": "**Best Practice:** Add middleware in logical order:\n\n1. **Security middleware first** (CORS, security headers)\n2. **Authentication middleware** (JWT, session validation)\n3. **Monitoring middleware** (logging, metrics)\n4. **Business logic middleware** (rate limiting, custom logic)\n\n## Developer Resources\n\n<CardGroup cols={2}>\n  <Card title=\"JWT with Headers\" icon=\"shield\" href=\"/agent-os/usage/middleware/jwt-middleware\">\n    JWT authentication using Authorization headers for API clients.\n  </Card>\n\n<Card title=\"JWT with Cookies\" icon=\"cookie\" href=\"/agent-os/usage/middleware/jwt-cookies\">\n    JWT authentication using HTTP-only cookies for web applications.\n  </Card>\n\n<Card title=\"Custom Middleware\" icon=\"gear\" href=\"/agent-os/usage/middleware/custom-middleware\">\n    Rate limiting and request logging middleware implementation.\n  </Card>\n\n<Card title=\"Custom FastAPI + JWT\" icon=\"code\" href=\"/agent-os/usage/middleware/custom-fastapi-jwt\">\n    Custom FastAPI app with JWT middleware and AgentOS integration.\n  </Card>\n</CardGroup>\n\n### External Resources\n\n<CardGroup cols={2}>\n  <Card title=\"FastAPI Middleware\" icon=\"book\" href=\"https://fastapi.tiangolo.com/tutorial/middleware/\">\n    Official FastAPI middleware documentation and examples.\n  </Card>\n\n<Card title=\"Starlette Middleware\" icon=\"book\" href=\"https://www.starlette.io/middleware/\">\n    Starlette middleware reference and implementation guides.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    },
+    {
+      "level": "h3",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h3",
+      "text": "External Resources",
+      "id": "external-resources"
+    }
+  ],
+  "url": "llms-txt#response:-your-route-->-a-->-b-->-c",
+  "links": []
+}

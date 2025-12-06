@@ -1,0 +1,8 @@
+{
+  "title": "Web search agent with tool hooks",
+  "content": "website_agent = Agent(\n    name=\"Website Agent\",\n    id=\"website-agent\",\n    role=\"Search the website for information\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[DuckDuckGoTools(cache_results=True)],\n    instructions=[\n        \"Search the website for information\",\n    ],\n    tool_hooks=[logger_hook],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#web-search-agent-with-tool-hooks",
+  "links": []
+}

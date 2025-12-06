@@ -1,0 +1,8 @@
+{
+  "title": "Create model using Portkey",
+  "content": "model = Portkey(\n    id=\"@first-integrati-707071/gpt-5-nano\",\n)\n\nagent = Agent(model=model, markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-model-using-portkey",
+  "links": []
+}

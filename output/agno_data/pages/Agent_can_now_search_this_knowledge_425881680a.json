@@ -1,0 +1,34 @@
+{
+  "title": "Agent can now search this knowledge",
+  "content": "agent = Agent(knowledge=knowledge, search_knowledge=True)\nagent.print_response(\"What color is the sky?\")\npython  theme={null}\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\n\nembedder=OpenAIEmbedder(\n    id=\"text-embedding-3-small\",\n    dimensions=1536,\n    enable_batch=True,\n    batch_size=100\n)\n```\n\nThe following embedders currently support batching:\n\n* [Azure OpenAI](/basics/knowledge/embedder/azure-openai)\n* [Cohere](/basics/knowledge/embedder/cohere)\n* [Fireworks](/basics/knowledge/embedder/fireworks)\n* [Gemini](/basics/knowledge/embedder/gemini)\n* [Jina](/basics/knowledge/embedder/jina)\n* [Mistral](/basics/knowledge/embedder/mistral)\n* [Nebius](/basics/knowledge/embedder/nebius)\n* [OpenAI](/basics/knowledge/embedder/openai)\n* [Together](/basics/knowledge/embedder/together)\n* [Voyage AI](/basics/knowledge/embedder/voyageai)",
+  "code_samples": [
+    {
+      "code": "### Choosing an embedder\n\nPick based on your constraints:\n\n* **Hosted vs local**: Prefer local (e.g., Ollama, FastEmbed) for offline or strict data residency; hosted (OpenAI, Gemini, Voyage) for best quality and convenience.\n* **Latency and cost**: Smaller models are cheaper/faster; larger models often retrieve better.\n* **Language support**: Ensure your embedder supports the languages you expect.\n* **Dimension compatibility**: Match your vector DB's expected embedding size if it's fixed.\n\n#### Quick Comparison\n\n| Embedder        | Type         | Best For                          | Cost    | Performance |\n| --------------- | ------------ | --------------------------------- | ------- | ----------- |\n| **OpenAI**      | Hosted       | General use, proven quality       | \\$\\$    | Excellent   |\n| **Ollama**      | Local        | Privacy, offline, no API costs    | Free    | Good        |\n| **Voyage AI**   | Hosted       | Specialized retrieval tasks       | \\$\\$\\$  | Excellent   |\n| **Gemini**      | Hosted       | Google ecosystem, multilingual    | \\$\\$    | Excellent   |\n| **FastEmbed**   | Local        | Fast local embeddings             | Free    | Good        |\n| **HuggingFace** | Local/Hosted | Open source models, customization | Free/\\$ | Variable    |\n\n### Supported embedders\n\nThe following embedders are supported:\n\n* [OpenAI](/basics/knowledge/embedder/openai)\n* [Cohere](/basics/knowledge/embedder/cohere)\n* [Gemini](/basics/knowledge/embedder/gemini)\n* [AWS Bedrock](/basics/knowledge/embedder/aws-bedrock)\n* [Azure OpenAI](/basics/knowledge/embedder/azure-openai)\n* [Fireworks](/basics/knowledge/embedder/fireworks)\n* [HuggingFace](/basics/knowledge/embedder/huggingface)\n* [Jina](/basics/knowledge/embedder/jina)\n* [Mistral](/basics/knowledge/embedder/mistral)\n* [Nebius](/basics/knowledge/embedder/nebius)\n* [Ollama](/basics/knowledge/embedder/ollama)\n* [Qdrant FastEmbed](/basics/knowledge/embedder/qdrant-fastembed)\n* [Together](/basics/knowledge/embedder/together)\n* [Voyage AI](/basics/knowledge/embedder/voyageai)\n\n### Best Practices\n\n<Tip>\n  **Chunk your content wisely**: Split long docs into 300–1,000 token chunks with 10-20% overlap. This balances context preservation with retrieval precision.\n</Tip>\n\n<Tip>\n  **Store rich metadata**: Include titles, source URLs, timestamps, and permissions with each chunk. This enables filtering and better context in responses.\n</Tip>\n\n<Tip>\n  **Test your retrieval quality**: Use a small set of test queries to evaluate if you're finding the right chunks. Adjust chunking strategy and embedder if needed.\n</Tip>\n\n<Warning>\n  **Re-embed when you change models**: If you switch embedders, you must re-embed all your content. Vectors from different models aren't compatible.\n</Warning>\n\n### Batch Embeddings\n\nMany embedding providers support processing multiple texts in a single API call, known as batch embedding. This approach offers several advantages: it reduces the number of API requests,\nhelps avoid rate limits, and significantly improves performance when processing large amounts of text.\n\nTo enable batch processing, set the `enable_batch` flag to `True` when configuring your embedder.\nThe `batch_size` paramater can be used to control the amount of texts sent per batch.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Choosing an embedder",
+      "id": "choosing-an-embedder"
+    },
+    {
+      "level": "h3",
+      "text": "Supported embedders",
+      "id": "supported-embedders"
+    },
+    {
+      "level": "h3",
+      "text": "Best Practices",
+      "id": "best-practices"
+    },
+    {
+      "level": "h3",
+      "text": "Batch Embeddings",
+      "id": "batch-embeddings"
+    }
+  ],
+  "url": "llms-txt#agent-can-now-search-this-knowledge",
+  "links": []
+}

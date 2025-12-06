@@ -1,0 +1,24 @@
+{
+  "title": "Build a Social Media Intelligence Agent with Agno, X Tools, and Exa",
+  "content": "Source: https://docs.agno.com/tutorials/social-media-agent\n\nCreate a professional-grade social media intelligence system using Agno.\n\nIn this tutorial, we will build a multi-agent intelligence system. It will monitor X (Twitter), perform sentiment analysis, and generate reports using Agno framework.\n\nWe will be using the following components:\n\n* **Agno** - The fastest framework for building agents.\n* **X Tools** - Provides real-time, structured data directly from Twitter/X API with engagement metrics\n* **Exa Tools** - Deliver semantic web search for broader context discovery across blogs, forums, and news\n* **GPT-5 Mini** - OpenAI's new model. Well suited for contextually-aware sentiment analysis and strategic pattern detection\n\nThis system will combine direct social media data with broader web intelligence, to provide comprehensive brand monitoring that captures both immediate social sentiment and emerging discussions before they reach mainstream attention.\n\nYour social media intelligence system will:\n\n* Track brand and competitor mentions across X and the broader web\n* Perform weighted sentiment analysis that accounts for influence and engagement\n* Detect viral content, controversy signals, and high-influence discussions\n* Generate executive-ready reports with strategic recommendations\n* Serve insights via [AgentOS](/agent-os/introduction) API for integration with your applications\n\n## Prerequisites and Setup\n\nBefore we get started, we need to setup our environment:\n\n1. Install Python, Git and get your API keys:\n\n* Install **Python >= 3.9** and **Git**\n* Get API keys for:\n  * **X (Twitter) Developer Account** ([Apply here](https://developer.twitter.com/en/apply-for-access))\n  * **OpenAI API** ([Get key](https://platform.openai.com/api-keys))\n  * **Exa API** ([Sign up](https://exa.ai))\n\n2. Setup your Python environment:\n\n3. Install our Python dependencies:\n\n````bash  theme={null}",
+  "code_samples": [
+    {
+      "code": "3. Install our Python dependencies:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Build",
+      "id": "what-you'll-build"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites and Setup",
+      "id": "prerequisites-and-setup"
+    }
+  ],
+  "url": "llms-txt#build-a-social-media-intelligence-agent-with-agno,-x-tools,-and-exa",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Setup your Agent with Agentic Memory",
+  "content": "agent = Agent(\n    db=db,\n    enable_agentic_memory=True, # This enables Agentic Memory for the Agent\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb",
+  "code_samples": [
+    {
+      "code": "With agentic memory, the agent is equipped with tools to manage memories when it deems relevant. This gives more flexibility but requires the agent to make intelligent decisions about what to remember.\n\n**Best for:** Complex workflows, multi-turn interactions where the agent needs to decide what's worth remembering based on context.\n\n<Note>\n  **Important:** Don't enable both `enable_user_memories` and `enable_agentic_memory` at the same time, as they're mutually exclusive. While nothing will break if you set both, `enable_agentic_memory` will always take precedence and `enable_user_memories` will be ignored.\n</Note>\n\n## Storage: Where Memories Live\n\nMemories are stored in the database you connect to your agent. Agno supports all major database systems: Postgres, SQLite, MongoDB, and more. Check the [Storage documentation](/basics/database/overview) for the full list of supported databases and setup instructions.\n\nBy default, memories are stored in the `agno_memories` table (or collection, for document databases). If this table doesn't exist when your agent first tries to store a memory, Agno creates it automatically with no manual schema setup required.\n\n### Custom Table Names\n\nYou can specify a custom table name for storing memories:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Storage: Where Memories Live",
+      "id": "storage:-where-memories-live"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Table Names",
+      "id": "custom-table-names"
+    }
+  ],
+  "url": "llms-txt#setup-your-agent-with-agentic-memory",
+  "links": []
+}

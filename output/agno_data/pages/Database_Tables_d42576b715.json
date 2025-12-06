@@ -1,0 +1,64 @@
+{
+  "title": "Database Tables",
+  "content": "Source: https://docs.agno.com/templates/infra-management/database-tables\n\nAgno templates come pre-configured with [SqlAlchemy](https://www.sqlalchemy.org/) and [Alembic](https://alembic.sqlalchemy.org/en/latest/) to manage databases. You can use these tables to store data for your Agents, Teams and Workflows. The general way to add a table is:\n\n1. Add table definition to the `db/tables` directory.\n2. Import the table class in the `db/tables/__init__.py` file.\n3. Create a database migration.\n4. Run database migration.\n\nLet's create a `UsersTable`, copy the following code to `db/tables/user.py`\n\nUpdate the `db/tables/__init__.py` file:\n\n## Create a database revision\n\nRun the alembic command to create a database migration in the dev container:\n\n## Migrate dev database\n\nRun the alembic command to migrate the dev database:\n\n### Optional: Add test user\n\nNow lets's add a test user. Copy the following code to `db/tables/test_add_user.py`\n\nRun the script to add a test adding a user:\n\n## Migrate production database\n\nWe recommended migrating the production database by setting the environment variable `MIGRATE_DB = True` and restarting the production service. This runs `alembic -c db/alembic.ini upgrade head` from the entrypoint script at container startup.\n\n### Update the `workspace/prd_resources.py` file\n\n```python workspace/prd_resources.py theme={null}\n...",
+  "code_samples": [
+    {
+      "code": "Update the `db/tables/__init__.py` file:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Create a database revision\n\nRun the alembic command to create a database migration in the dev container:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Migrate dev database\n\nRun the alembic command to migrate the dev database:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Optional: Add test user\n\nNow lets's add a test user. Copy the following code to `db/tables/test_add_user.py`",
+      "language": "unknown"
+    },
+    {
+      "code": "Run the script to add a test adding a user:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Migrate production database\n\nWe recommended migrating the production database by setting the environment variable `MIGRATE_DB = True` and restarting the production service. This runs `alembic -c db/alembic.ini upgrade head` from the entrypoint script at container startup.\n\n### Update the `workspace/prd_resources.py` file",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Table Definition",
+      "id": "table-definition"
+    },
+    {
+      "level": "h2",
+      "text": "Create a database revision",
+      "id": "create-a-database-revision"
+    },
+    {
+      "level": "h2",
+      "text": "Migrate dev database",
+      "id": "migrate-dev-database"
+    },
+    {
+      "level": "h3",
+      "text": "Optional: Add test user",
+      "id": "optional:-add-test-user"
+    },
+    {
+      "level": "h2",
+      "text": "Migrate production database",
+      "id": "migrate-production-database"
+    },
+    {
+      "level": "h3",
+      "text": "Update the `workspace/prd_resources.py` file",
+      "id": "update-the-`workspace/prd_resources.py`-file"
+    }
+  ],
+  "url": "llms-txt#database-tables",
+  "links": []
+}

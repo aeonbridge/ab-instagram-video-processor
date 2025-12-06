@@ -1,0 +1,8 @@
+{
+  "title": "Response Coordinator Agent - Specialized in synthesis and coordination",
+  "content": "response_coordinator = Agent(\n    name=\"Response Coordinator\",\n    model=Claude(id=\"claude-sonnet-4-20250514\"),\n    role=\"Coordinate team findings into comprehensive reasoned response\",\n    tools=[ReasoningTools(add_instructions=True)],\n    instructions=[\n        \"Synthesize all team member contributions into a coherent response.\",\n        \"Ensure logical flow and consistency across the response.\",\n        \"Include proper citations and evidence references.\",\n        \"Present reasoning chains clearly and transparently.\",\n        \"Use reasoning tools to structure the final response.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#response-coordinator-agent---specialized-in-synthesis-and-coordination",
+  "links": []
+}

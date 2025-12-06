@@ -1,0 +1,45 @@
+{
+  "title": "agent.print_response(crypto_prompt, stream=True)",
+  "content": "bash  theme={null}\n    export OPENAI_API_KEY=xxx\n    export EXA_API_KEY=xxx\n    export FIRECRAWL_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai exa-py agno firecrawl\n    bash Mac theme={null}\n      python cookbook/examples/agents/media_trend_analysis_agent.py\n      bash Windows theme={null}\n      python cookbook/examples/agents/media_trend_analysis_agent.py\n      python  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n</Steps>\n\n## Customization Options\n\nYou can customize the agent's behavior by:\n\n* **Adjusting Time Windows**: Modify the `calculate_start_date()` function to analyze different time periods\n* **Adding Sources**: Include additional websites or platforms in your analysis prompts\n* **Modifying Keywords**: Change search terms to focus on specific topics or industries\n* **Customizing Output**: Modify the `expected_output` template to match your reporting needs\n\n## Example Prompts\n\nHere are some additional prompt examples you can try:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Customization Options",
+      "id": "customization-options"
+    },
+    {
+      "level": "h2",
+      "text": "Example Prompts",
+      "id": "example-prompts"
+    }
+  ],
+  "url": "llms-txt#agent.print_response(crypto_prompt,-stream=true)",
+  "links": []
+}

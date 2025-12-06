@@ -1,0 +1,24 @@
+{
+  "title": "Exceptions & Retries",
+  "content": "Source: https://docs.agno.com/basics/tools/exceptions\n\nLearn how to use exceptions and retries to control the behavior of your tools.\n\nIf after a tool call you need to provide feedback to the model to change its behavior or exit the tool call loop, you can raise one of the following exceptions:\n\n* `RetryAgentRun`: Use this exception when you want to provide instructions to the model for how to change its behavior and have the model retry the tool call. The exception message will be passed to the model as a tool call error, allowing the model to retry or adjust its approach in the next iteration of the LLM loop.\n\n<Note>This does not retry the full agent run—it only provides feedback to the model within the current run.</Note>\n\n* `StopAgentRun`: Use this exception when you want to exit the model execution loop and end the agent run. When raised from a tool function, the agent exits the tool call loop, and the run status is set to `COMPLETED`. All session state, messages, tool calls, and tool results up to that point are stored in the database.\n\n<Note>This does not cancel the agent run. It completes the run after exiting the tool call loop.</Note>\n\n## Using RetryAgentRun\n\nThis example shows how to use the `RetryAgentRun` exception to provide feedback to the model, allowing it to adjust its behavior:\n\nIn this example, when `add_item` is called with fewer than 3 items, it raises `RetryAgentRun` with instructions. The model receives this as a tool call error and can call `add_item` again with additional items to meet the requirement.\n\n## Using StopAgentRun\n\nThis example shows how to use the `StopAgentRun` exception to exit the tool call loop:\n\n```python stop_in_tool_call.py theme={null}\nfrom agno.agent import Agent\nfrom agno.exceptions import StopAgentRun\nfrom agno.models.openai import OpenAIChat\nfrom agno.run import RunContext\n\ndef check_condition(run_context: RunContext, value: int) -> str:\n    \"\"\"Check a condition and stop tool calls if met.\"\"\"\n    if value > 100:\n        raise StopAgentRun(\n            f\"Value {value} exceeds threshold. Stopping tool call execution.\"\n        )\n    return f\"Value {value} is acceptable.\"\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[check_condition],\n    markdown=True,\n)",
+  "code_samples": [
+    {
+      "code": "In this example, when `add_item` is called with fewer than 3 items, it raises `RetryAgentRun` with instructions. The model receives this as a tool call error and can call `add_item` again with additional items to meet the requirement.\n\n## Using StopAgentRun\n\nThis example shows how to use the `StopAgentRun` exception to exit the tool call loop:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using RetryAgentRun",
+      "id": "using-retryagentrun"
+    },
+    {
+      "level": "h2",
+      "text": "Using StopAgentRun",
+      "id": "using-stopagentrun"
+    }
+  ],
+  "url": "llms-txt#exceptions-&-retries",
+  "links": []
+}

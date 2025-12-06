@@ -1,0 +1,8 @@
+{
+  "title": "Download sample documents",
+  "content": "downloaded_csv_paths = download_knowledge_filters_sample_data(\n    num_files=4, file_extension=SampleDataFileExtension.CSV\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#download-sample-documents",
+  "links": []
+}

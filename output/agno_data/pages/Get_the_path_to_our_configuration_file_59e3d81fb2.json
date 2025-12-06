@@ -1,0 +1,8 @@
+{
+  "title": "Get the path to our configuration file",
+  "content": "cwd = Path(__file__).parent\nconfig_file_path = str(cwd.joinpath(\"configuration.yaml\"))",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-the-path-to-our-configuration-file",
+  "links": []
+}

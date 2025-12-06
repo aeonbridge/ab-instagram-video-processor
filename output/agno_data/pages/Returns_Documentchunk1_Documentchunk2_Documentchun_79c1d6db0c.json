@@ -1,0 +1,28 @@
+{
+  "title": "Returns: [Document(chunk1), Document(chunk2), Document(chunk3), ...]",
+  "content": "python  theme={null}\n@classmethod\ndef get_supported_chunking_strategies(cls) -> List[ChunkingStrategyType]:\n    return [\n        ChunkingStrategyType.DOCUMENT_CHUNKING,  # Respect document structure\n        ChunkingStrategyType.FIXED_SIZE_CHUNKING, # Fixed character/token limits\n        ChunkingStrategyType.SEMANTIC_CHUNKING,   # Semantic boundaries\n        ChunkingStrategyType.AGENTIC_CHUNKING,    # AI-powered chunking\n    ]\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Chunking Strategy Support\n\nDifferent readers support different chunking strategies based on their content type:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Reader Factory and Auto-Selection\n\nAgno provides intelligent reader selection through the `ReaderFactory`:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Chunking Strategy Support",
+      "id": "chunking-strategy-support"
+    },
+    {
+      "level": "h2",
+      "text": "Reader Factory and Auto-Selection",
+      "id": "reader-factory-and-auto-selection"
+    }
+  ],
+  "url": "llms-txt#returns:-[document(chunk1),-document(chunk2),-document(chunk3),-...]",
+  "links": []
+}

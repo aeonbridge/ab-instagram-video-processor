@@ -1,0 +1,29 @@
+{
+  "title": "Session Tracking",
+  "content": "Source: https://docs.agno.com/agent-os/features/session-tracking\n\nMonitor, analyze, and manage agent sessions through the AgentOS interface\n\nSessions are durable conversation timelines that bind inputs, model outputs, tools, files, metrics, and summaries under a single `session_id`. AgentOS persists sessions for Agents, Teams, and Workflows so you can resume work, audit behavior, and analyze quality over time.\n\n* A session collects ordered runs (each run contains messages, tool calls, and metrics).\n* Summaries and metadata help you search, group, and reason about long histories.\n* Token usage can be monitored per session via the metrics tab.\n* Inspect details about the agent and models tied to each session.\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/xm93WWN8gg4nzCGE/videos/agentos-session-management.mp4?fit=max&auto=format&n=xm93WWN8gg4nzCGE&q=85&s=70dda8ee349f38e48272eff8cdd4719a\" type=\"video/mp4\" data-path=\"videos/agentos-session-management.mp4\" />\n  </video>\n</Frame>\n\n## Accessing Sessions\n\n* Open the `Sessions` section in the sidebar.\n* If multiple session databases are configured, pick one from the database selector in the header.\n* Switch between `Agents` and `Teams` using the header tabs.\n* Click `Reload page` (Refresh) to sync the list and statuses.\n\n* Sessions not loading: Ensure your OS is connected and active, select a session database, then click `Reload page`.\n* No sessions yet: Start a conversation to generate sessions.\n* Wrong list: Check the `Agents` vs `Teams` tab and sorting.\n* Configuration errors: If you see endpoint or database errors, verify your OS endpoint and database settings.\n\n<CardGroup cols={2}>\n  <Card title=\"Sessions\" icon=\"user\" href=\"/basics/sessions/overview\">\n    Learn about sessions and multi-turn conversations\n  </Card>\n\n<Card title=\"Chat History\" icon=\"users\" href=\"/basics/chat-history/overview\">\n    Understand chat history and multi-turn conversations\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Overview",
+      "id": "overview"
+    },
+    {
+      "level": "h2",
+      "text": "Accessing Sessions",
+      "id": "accessing-sessions"
+    },
+    {
+      "level": "h2",
+      "text": "Troubleshooting",
+      "id": "troubleshooting"
+    },
+    {
+      "level": "h2",
+      "text": "Useful Links",
+      "id": "useful-links"
+    }
+  ],
+  "url": "llms-txt#session-tracking",
+  "links": []
+}

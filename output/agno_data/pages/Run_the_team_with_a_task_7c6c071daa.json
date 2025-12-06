@@ -1,0 +1,41 @@
+{
+  "title": "Run the team with a task",
+  "content": "content_team.print_response(\"Create a short article about quantum computing\")\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai ddgs\n    bash Mac theme={null}\n      python content_team.py\n      bash Windows theme={null}\n      python content_team.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n* Modify the task in `print_response()` to create different types of content\n* Add more specialized agents like editors or fact-checkers to the team\n* Adjust `show_members_responses` to control visibility of individual agent outputs\n* Explore [Teams](/basics/teams/overview) for advanced collaboration patterns",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe team will create an article by first researching the topic through web search, then writing content based on the findings. The researcher finds relevant information and sources, while the writer transforms this into engaging prose.\n\nThe output shows responses from both team members so you can see how they collaborate. The final article combines accurate research with clear, professional writing.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Team\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#run-the-team-with-a-task",
+  "links": []
+}

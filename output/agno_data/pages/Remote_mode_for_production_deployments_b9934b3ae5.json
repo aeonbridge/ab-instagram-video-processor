@@ -1,0 +1,19 @@
+{
+  "title": "Remote mode (for production deployments)",
+  "content": "knowledge_remote = Knowledge(\n    vector_db=PgVector(\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n        table_name=\"vllm_embeddings_remote\",\n        embedder=VLLMEmbedder(\n            id=\"intfloat/e5-mistral-7b-instruct\",\n            dimensions=4096,\n            base_url=\"http://localhost:8000/v1\",  # Example endpoint for local development\n            api_key=\"your-api-key\",  # Optional\n        ),\n    ),\n    max_results=2,\n)\n```\n\n| Parameter        | Type                       | Default                             | Description                                    |\n| ---------------- | -------------------------- | ----------------------------------- | ---------------------------------------------- |\n| `id`             | `str`                      | `\"intfloat/e5-mistral-7b-instruct\"` | Model identifier (HuggingFace model name)      |\n| `dimensions`     | `int`                      | `4096`                              | Embedding vector dimensions                    |\n| `base_url`       | `Optional[str]`            | `None`                              | Remote vLLM server URL (enables remote mode)   |\n| `api_key`        | `Optional[str]`            | `getenv(\"VLLM_API_KEY\")`            | API key for remote server authentication       |\n| `enable_batch`   | `bool`                     | `False`                             | Enable batch processing for multiple texts     |\n| `batch_size`     | `int`                      | `10`                                | Number of texts to process per batch           |\n| `enforce_eager`  | `bool`                     | `True`                              | Use eager execution mode (local mode)          |\n| `vllm_kwargs`    | `Optional[Dict[str, Any]]` | `None`                              | Additional vLLM engine parameters (local mode) |\n| `request_params` | `Optional[Dict[str, Any]]` | `None`                              | Additional request parameters (remote mode)    |\n| `client_params`  | `Optional[Dict[str, Any]]` | `None`                              | OpenAI client configuration (remote mode)      |\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/knowledge/embedders/vllm_embedder.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#remote-mode-(for-production-deployments)",
+  "links": []
+}

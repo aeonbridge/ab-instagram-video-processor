@@ -1,0 +1,8 @@
+{
+  "title": "Build a Knowledge base backed by Redis",
+  "content": "knowledge = Knowledge(\n    name=\"My Redis Vector Knowledge Base\",\n    description=\"This knowledge base uses Redis + RedisVL as the vector store\",\n    vector_db=vector_db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#build-a-knowledge-base-backed-by-redis",
+  "links": []
+}

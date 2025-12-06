@@ -1,0 +1,8 @@
+{
+  "title": "Create an Agent with the AWSLambdaTool",
+  "content": "agent = Agent(\n    tools=[AWSLambdaTools(region_name=\"us-east-1\")],\n    name=\"AWS Lambda Agent\",\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-the-awslambdatool",
+  "links": []
+}

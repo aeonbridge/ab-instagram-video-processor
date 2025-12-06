@@ -1,0 +1,14 @@
+{
+  "title": "Async Custom Retriever",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/usage/async-custom-retriever\n\n```python async_retriever.py theme={null}\nimport asyncio\nfrom typing import Optional\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.qdrant import Qdrant\nfrom qdrant_client import AsyncQdrantClient",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#async-custom-retriever",
+  "links": []
+}

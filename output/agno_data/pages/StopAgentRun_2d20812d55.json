@@ -1,0 +1,34 @@
+{
+  "title": "StopAgentRun",
+  "content": "Source: https://docs.agno.com/reference/tools/stop-agent-run\n\nAPI reference for the StopAgentRun exception used to exit the tool call loop and complete the agent run.\n\nThe `StopAgentRun` exception allows you to exit the model execution loop and end the agent run. When raised from a tool function, the agent immediately exits the tool call loop, and the run status is set to `COMPLETED`. All session state, messages, tool calls, and tool results up to that point are stored in the database.\n\n<Note>\n  This does **not** cancel the agent run. It completes the run gracefully after exiting the tool call loop.\n</Note>\n\n<ResponseField name=\"exc\" type=\"str\" required>\n  The reason for stopping execution. This message is logged and can be used for debugging or user feedback.\n</ResponseField>\n\n<ResponseField name=\"user_message\" type=\"Union[str, Message]\" optional>\n  An optional message to display to the user about why execution stopped.\n</ResponseField>\n\n<ResponseField name=\"agent_message\" type=\"Union[str, Message]\" optional>\n  An optional message from the agent's perspective about the stop.\n</ResponseField>\n\n<ResponseField name=\"messages\" type=\"List[Union[dict, Message]]\" optional>\n  An optional list of messages to add to the conversation history before stopping.\n</ResponseField>\n\nUse `StopAgentRun` when:\n\n* **Critical errors**: An error occurs that cannot be recovered from\n* **Security triggers**: A security threshold or policy is violated\n* **Task completion**: The task is fully completed and no further tool calls are needed\n* **Resource limits**: A resource limit (time, cost, API calls) is reached\n* **Manual intervention needed**: The situation requires human review or approval\n* **Early termination**: You want to exit the tool call loop based on business logic\n\nWhen `StopAgentRun` is raised:\n\n1. The tool call loop exits immediately\n2. No further tool calls are executed\n3. The run status is set to `COMPLETED`\n4. All session state is saved to the database\n5. All messages and tool calls up to that point are preserved\n6. The optional `user_message` or `agent_message` can be displayed to the user\n\n* [RetryAgentRun Exception](/reference/tools/retry-agent-run)\n* [Exceptions & Retries Guide](/basics/tools/exceptions)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Constructor",
+      "id": "constructor"
+    },
+    {
+      "level": "h3",
+      "text": "Parameters",
+      "id": "parameters"
+    },
+    {
+      "level": "h2",
+      "text": "When to Use",
+      "id": "when-to-use"
+    },
+    {
+      "level": "h2",
+      "text": "Behavior",
+      "id": "behavior"
+    },
+    {
+      "level": "h2",
+      "text": "See Also",
+      "id": "see-also"
+    }
+  ],
+  "url": "llms-txt#stopagentrun",
+  "links": []
+}

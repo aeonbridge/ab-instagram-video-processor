@@ -1,0 +1,64 @@
+{
+  "title": "Workflow History & Continuous Execution",
+  "content": "Source: https://docs.agno.com/basics/chat-history/workflow/overview\n\nBuild conversational workflows that maintain context across multiple executions, creating truly intelligent and natural interactions.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.1.4\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.1.4\">v2.1.4</Tooltip>\n</Badge>\n\nWorkflow History enables your Agno workflows to remember and reference previous conversations, transforming isolated executions into continuous, context-aware interactions.\n\nInstead of starting fresh each time, with Workflow History you can:\n\n* **Build on previous interactions** - Reference the context of past interactions\n* **Avoid repetitive questions** - Avoid requesting previously provided information\n* **Maintain context continuity** - Create a conversational experience\n* **Learn from patterns** - Analyze historical data to make better decisions\n\n<Tip>\n  Note that this feature is different from `add_history_to_context`.\n  This does not add the history of a particular agent or team, but the full workflow history to either all or some steps.\n</Tip>\n\nWhen workflow history is enabled, previous messages are automatically injected into agent/team inputs as structured context:\n\nAlong with this, in using Steps with custom functions, you can access this history in the following ways:\n\n1. As a formatted context string as shown above\n2. In a structured format as well for more control\n\n<Note>\n  A database is required to use Workflow history. Runs across different executions will be persisted there.\n</Note>\n\n<Note>\n  You can use these helper functions to access the history:\n\n* `step_input.get_workflow_history(num_runs=3)`\n  * `step_input.get_workflow_history_context(num_runs=3)`\n</Note>\n\nRefer to [StepInput](/reference/workflows/step_input) reference for more details.\n\nYou can be specific about which Steps to add the history to:\n\n### Workflow-Level History\n\nAdd workflow history to **all steps** in the workflow:\n\n### Step-Level History\n\nAdd workflow history to **specific steps** only:\n\n<Note>\n  You can also put `add_workflow_history=False` to disable history for a specific step.\n</Note>\n\n**Step-level settings always take precedence over workflow-level settings**:\n\n### History Length Control\n\n**By default, all available history is included** (no limit). It is recommended to use a fixed history run limit to avoid bloating the LLM context window.\n\nYou can control this at both levels:\n\n```python  theme={null}",
+  "code_samples": [
+    {
+      "code": "Along with this, in using Steps with custom functions, you can access this history in the following ways:\n\n1. As a formatted context string as shown above\n2. In a structured format as well for more control",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>\n  A database is required to use Workflow history. Runs across different executions will be persisted there.\n</Note>\n\nExample-",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>\n  You can use these helper functions to access the history:\n\n  * `step_input.get_workflow_history(num_runs=3)`\n  * `step_input.get_workflow_history_context(num_runs=3)`\n</Note>\n\nRefer to [StepInput](/reference/workflows/step_input) reference for more details.\n\n## Control Levels\n\nYou can be specific about which Steps to add the history to:\n\n### Workflow-Level History\n\nAdd workflow history to **all steps** in the workflow:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Step-Level History\n\nAdd workflow history to **specific steps** only:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>\n  You can also put `add_workflow_history=False` to disable history for a specific step.\n</Note>\n\n## Precedence Logic\n\n**Step-level settings always take precedence over workflow-level settings**:",
+      "language": "unknown"
+    },
+    {
+      "code": "### History Length Control\n\n**By default, all available history is included** (no limit). It is recommended to use a fixed history run limit to avoid bloating the LLM context window.\n\nYou can control this at both levels:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Control Levels",
+      "id": "control-levels"
+    },
+    {
+      "level": "h3",
+      "text": "Workflow-Level History",
+      "id": "workflow-level-history"
+    },
+    {
+      "level": "h3",
+      "text": "Step-Level History",
+      "id": "step-level-history"
+    },
+    {
+      "level": "h2",
+      "text": "Precedence Logic",
+      "id": "precedence-logic"
+    },
+    {
+      "level": "h3",
+      "text": "History Length Control",
+      "id": "history-length-control"
+    }
+  ],
+  "url": "llms-txt#workflow-history-&-continuous-execution",
+  "links": []
+}

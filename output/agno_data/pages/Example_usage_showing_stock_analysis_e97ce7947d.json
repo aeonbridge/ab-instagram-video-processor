@@ -1,0 +1,8 @@
+{
+  "title": "Example usage showing stock analysis",
+  "content": "agent.print_response(\n    \"Get me the current stock price and key information for Apple (AAPL)\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage-showing-stock-analysis",
+  "links": []
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Custom Functions in Workflows",
+  "content": "Source: https://docs.agno.com/basics/workflows/workflow-patterns/custom-function-step-workflow\n\nHow to use custom functions in workflows\n\nCustom functions provide maximum flexibility by allowing you to define specific logic for step execution. Use them to preprocess inputs, orchestrate agents and teams, and postprocess outputs with complete programmatic control.\n\n* **Custom Logic**: Implement complex business rules and data transformations\n* **Agent Integration**: Call agents and teams within your custom processing logic\n* **Data Flow Control**: Transform outputs between steps for optimal data handling\n\n**Implementation Pattern**\nDefine a `Step` with a custom function as the `executor`. The function must accept a `StepInput` object and return a `StepOutput` object, ensuring seamless integration with the workflow system.\n\n<img className=\"block dark:hidden\" src=\"https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-light.png?fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=d9c94fbc2094b100df2fde1e4767f358\" alt=\"Custom function step workflow diagram\" data-og-width=\"2001\" width=\"2001\" data-og-height=\"756\" height=\"756\" data-path=\"images/custom-function-steps-light.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-light.png?w=280&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=cc6fdbdbcd274ffd8eeaf936653e9487 280w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-light.png?w=560&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=7135a981cbf2afbbfc9e8a772843ca90 560w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-light.png?w=840&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=084fd07440b87980f0899dea2b0b5ba1 840w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-light.png?w=1100&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=9d57ad4d5f051dc65185bf29ad759118 1100w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-light.png?w=1650&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=b1ba9db7305207a7867efa4ef47912dc 1650w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-light.png?w=2500&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=a4e94cf04d1a1bb212f971ce60cefe5b 2500w\" />\n\n<img className=\"hidden dark:block\" src=\"https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-dark.png?fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=537393db1d76a7d4c38d43e40c622300\" alt=\"Custom function step workflow diagram\" data-og-width=\"2001\" width=\"2001\" data-og-height=\"756\" height=\"756\" data-path=\"images/custom-function-steps-dark.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-dark.png?w=280&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=40450040ca47de4fa286b95de2e285ed 280w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-dark.png?w=560&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=ef0a1060f07688a21b866766dc10526b 560w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-dark.png?w=840&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=9c5572c23d25046db363ecaeeb65e3d6 840w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-dark.png?w=1100&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=991e880aee26c31a9484d8603e0be424 1100w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-dark.png?w=1650&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=0a8c70a163f2ba4a5cd5dfdc487ff14d 1650w, https://mintcdn.com/agno-v2/jBP_3mGLN1rT3Ezh/images/custom-function-steps-dark.png?w=2500&fit=max&auto=format&n=jBP_3mGLN1rT3Ezh&q=85&s=aec1041004efd198455fcb6a740f008d 2500w\" />\n\n**Standard Pattern**\nAll custom functions follow this consistent structure:\n\n## Class-based executor\n\nYou can also use a class-based executor by defining a class that implements the `__call__` method.\n\n**When is this useful?:**\n\n* **Configuration at initialization**: Pass in settings, API keys, or behavior flags when creating the executor\n* **Stateful execution**: Maintain counters, caches, or track information across multiple workflow runs\n* **Reusable components**: Create configured executor instances that can be shared across multiple workflows\n\n```python  theme={null}\nclass CustomExecutor:\n    def __init__(self, max_retries: int = 3, use_cache: bool = True):\n        # Configuration passed during instantiation\n        self.max_retries = max_retries\n        self.use_cache = use_cache\n        self.call_count = 0  # Stateful tracking\n\ndef __call__(self, step_input: StepInput) -> StepOutput:\n        self.call_count += 1\n\n# Access instance configuration and state\n        if self.use_cache and self.call_count > 1:\n            return StepOutput(content=\"Using cached result\")\n\n# Your custom logic with access to self.max_retries, etc.\n        return StepOutput(content=enhanced_content)",
+  "code_samples": [
+    {
+      "code": "**Standard Pattern**\nAll custom functions follow this consistent structure:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Class-based executor\n\nYou can also use a class-based executor by defining a class that implements the `__call__` method.",
+      "language": "unknown"
+    },
+    {
+      "code": "**When is this useful?:**\n\n* **Configuration at initialization**: Pass in settings, API keys, or behavior flags when creating the executor\n* **Stateful execution**: Maintain counters, caches, or track information across multiple workflow runs\n* **Reusable components**: Create configured executor instances that can be shared across multiple workflows",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Class-based executor",
+      "id": "class-based-executor"
+    }
+  ],
+  "url": "llms-txt#custom-functions-in-workflows",
+  "links": []
+}

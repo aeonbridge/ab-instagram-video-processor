@@ -1,0 +1,8 @@
+{
+  "title": "Create a knowledge base with the ArXiv documents",
+  "content": "knowledge = Knowledge(\n    # Table name: ai.arxiv_documents\n    vector_db=PgVector(\n        table_name=\"arxiv_documents\",\n        db_url=db_url,\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-knowledge-base-with-the-arxiv-documents",
+  "links": []
+}

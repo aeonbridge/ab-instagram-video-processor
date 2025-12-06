@@ -1,0 +1,27 @@
+{
+  "title": "Few-shot examples showing good support patterns",
+  "content": "support_examples = [\n    # Example 1: Simple issue resolution\n    Message(role=\"user\", content=\"I forgot my password and can't log in\"),\n    Message(\n        role=\"assistant\",\n        content=\"\"\"\n    I'll help you reset your password right away.\n    \n    **Transferring to Support Specialist**: Please assist this customer with password reset:\n    - Guide them through the password reset process\n    - Verify their identity if needed  \n    - Ensure they can successfully log in\n    - Provide tips for creating a secure password\n    \n    Expected outcome: Customer successfully logs in with new password.\n    \"\"\".strip(),\n    ),\n    # Example 2: Escalation pattern\n    Message(\n        role=\"user\",\n        content=\"I've been charged twice for the same order and your chat bot couldn't help!\",\n    ),\n    Message(\n        role=\"assistant\",\n        content=\"\"\"\n        I sincerely apologize for the billing issue and the frustration with our chat system.\n\n**Transferring to Escalation Manager**: Priority billing issue requiring immediate attention:\n        - Customer charged twice for same order\n        - Previous automated support was unsuccessful\n        - Customer is understandably frustrated\n        - Needs immediate resolution and possible compensation\n\nExpected outcome: Billing corrected, customer satisfaction restored, and follow-up to prevent recurrence.\n        \"\"\".strip(),\n    ),\n    # Example 3: Proactive support\n    Message(role=\"user\", content=\"Your app keeps crashing when I try to upload photos\"),\n    Message(\n        role=\"assistant\",\n        content=\"\"\"\n    I'm sorry you're experiencing crashes with photo uploads. Let me get this resolved for you.\n\n**Transferring to Support Specialist**: Technical issue with photo upload feature:\n    - App crashes during photo upload process\n    - Need to troubleshoot device compatibility and app version\n    - Provide workaround solutions if available\n    - Escalate to technical team if it's a known bug\n\nExpected outcome: Upload feature working properly or clear timeline for fix provided.\n        \"\"\".strip(),\n    ),\n]\n\nif __name__ == \"__main__\":\n    # Support Agent\n    support_agent = Agent(\n        name=\"Support Specialist\",\n        role=\"Handle customer inquiries\",\n        model=OpenAIChat(id=\"gpt-5-mini\"),\n        instructions=[\n            \"You are a helpful customer support specialist.\",\n            \"Always be polite, professional, and solution-oriented.\",\n        ],\n    )\n\n# Escalation Agent\n    escalation_agent = Agent(\n        name=\"Escalation Manager\",\n        role=\"Handle complex issues\",\n        model=OpenAIChat(id=\"gpt-5-mini\"),\n        instructions=[\n            \"You handle escalated customer issues that require management attention.\",\n            \"Focus on customer satisfaction and finding solutions.\",\n        ],\n    )\n\n# Create team with few-shot learning\n    team = Team(\n        name=\"Customer Support Team\",\n        members=[support_agent, escalation_agent],\n        model=OpenAIChat(id=\"gpt-5-mini\"),\n        add_name_to_context=True,\n        additional_input=support_examples,  # 🆕 Teaching examples\n        instructions=[\n            \"You coordinate customer support with excellence and empathy.\",\n            \"Follow established patterns for proper issue resolution.\",\n            \"Always prioritize customer satisfaction and clear communication.\",\n        ],\n        debug_mode=True,\n        markdown=True,\n    )\n\nscenarios = [\n        \"I can't find my order confirmation email\",\n        \"The product I received is damaged\",\n        \"I want to cancel my subscription but the website won't let me\",\n    ]\n\nfor i, scenario in enumerate(scenarios, 1):\n        print(f\"📞 Scenario {i}: {scenario}\")\n        print(\"-\" * 50)\n        team.print_response(scenario)\nbash  theme={null}\n    pip install agno openai\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/basic/few_shot_learning.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#few-shot-examples-showing-good-support-patterns",
+  "links": []
+}

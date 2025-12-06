@@ -1,0 +1,14 @@
+{
+  "title": "ag infra create",
+  "content": "Source: https://docs.agno.com/reference/agno-infra/cli/ws/create\n\nCreate a new infra in the current directory.\n\n<ResponseField name=\"name\" type=\"str\">\n  Name of the new infra. `--name` `-n`\n</ResponseField>\n\n<ResponseField name=\"template\" type=\"str\">\n  Starter template for the infra. `--template` `-t`\n</ResponseField>\n\n<ResponseField name=\"url\" type=\"str\">\n  URL of the starter template. `--url` `-u`\n</ResponseField>\n\n<ResponseField name=\"print_debug_log\" type=\"bool\">\n  Print debug logs. `--debug` `-d`\n</ResponseField>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#ag-infra-create",
+  "links": []
+}

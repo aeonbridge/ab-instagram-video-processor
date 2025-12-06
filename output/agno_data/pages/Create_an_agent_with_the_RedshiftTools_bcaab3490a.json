@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent with the RedshiftTools",
+  "content": "agent = Agent(tools=[redshift_tools])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-the-redshifttools",
+  "links": []
+}

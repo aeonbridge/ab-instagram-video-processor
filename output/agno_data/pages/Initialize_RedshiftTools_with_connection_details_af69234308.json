@@ -1,0 +1,8 @@
+{
+  "title": "Initialize RedshiftTools with connection details",
+  "content": "redshift_tools = RedshiftTools(\n    host=\"your-cluster.abc123.us-east-1.redshift.amazonaws.com\",\n    database=\"dev\",\n    user=\"your-username\",\n    password=\"your-password\",\n    table_schema=\"public\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-redshifttools-with-connection-details",
+  "links": []
+}

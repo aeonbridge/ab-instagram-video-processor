@@ -1,0 +1,93 @@
+{
+  "title": "Production Application",
+  "content": "Source: https://docs.agno.com/templates/infra-management/production-app\n\nYour production application runs on AWS and its resources are defined in the `infra/prd_resources.py` file. This guide shows how to:\n\n1. [Build a production image](#build-your-production-image)\n2. [Update ECS Task Definitions](#ecs-task-definition)\n3. [Update ECS Services](#ecs-service)\n\n## Workspace Settings\n\nThe `InfraSettings` object in the `infra/settings.py` file defines common settings used by your workspace apps and resources.\n\n## Build your production image\n\nYour application uses the `agno` images by default. To use your own image:\n\n* Create a Repository in `ECR` and authenticate or use `Dockerhub`.\n* Open `infra/settings.py` file\n* Update the `image_repo` to your image repository\n* Set `build_images=True` and `push_images=True`\n* Optional - Set `build_images=False` and `push_images=False` to use an existing image in the repository\n\n### Create an ECR Repository\n\nTo use ECR, **create the image repo and authenticate with ECR** before pushing images.\n\n**1. Create the image repository in ECR**\n\nThe repo name should match the `infra_name`. Meaning if you're using the default infra name, the repo name would be `ai`.\n\n<img src=\"https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/create-ecr-image.png?fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=c68ceb3a9b6784fd519cc04b0e38caf1\" alt=\"create-ecr-image\" data-og-width=\"1389\" width=\"1389\" data-og-height=\"408\" height=\"408\" data-path=\"images/create-ecr-image.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/create-ecr-image.png?w=280&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=2ce02d48da7e53a6c335736a17ebec6e 280w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/create-ecr-image.png?w=560&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=f0b4d1687849a637c0a595c4a8d0690a 560w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/create-ecr-image.png?w=840&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=26b1f13eb8b6f9b09a06b9e6bb1eeb27 840w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/create-ecr-image.png?w=1100&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=e53f084201341a7c92738fa62efdb64c 1100w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/create-ecr-image.png?w=1650&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=c9e2477e1befaf12f81d4d345dac5a26 1650w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/create-ecr-image.png?w=2500&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=a22af7830053ba9139cfb6d0d4017d4a 2500w\" />\n\n**2. Authenticate with ECR**\n\nYou can also use a helper script to avoid running the full command\n\n<Note>\n  Update the script with your ECR repo before running.\n</Note>\n\n<CodeGroup>\n  \n</CodeGroup>\n\n### Update the `InfraSettings`\n\n<Note>\n  The `image_repo` defines the repo for your image.\n\n* If using dockerhub it would be something like `agno`.\n  * If using ECR it would be something like `[ACCOUNT_ID].dkr.ecr.us-east-1.amazonaws.com`\n</Note>\n\n### Build a new image\n\nBuild the production image using:\n\nTo `force` rebuild images, use the `--force` or `-f` flag\n\nBecause the only docker resources in the production env are docker images, you can also use:\n\n## ECS Task Definition\n\nIf you updated the Image, CPU, Memory or Environment Variables, update the Task Definition using:\n\nTo redeploy the production application, update the ECS Service using:\n\n<Note>\n  If you **ONLY** rebuilt the image, you do not need to update the task definition and can just patch the service to pickup the new image.\n</Note>",
+  "code_samples": [
+    {
+      "code": "You can also use a helper script to avoid running the full command\n\n<Note>\n  Update the script with your ECR repo before running.\n</Note>\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Update the `InfraSettings`",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>\n  The `image_repo` defines the repo for your image.\n\n  * If using dockerhub it would be something like `agno`.\n  * If using ECR it would be something like `[ACCOUNT_ID].dkr.ecr.us-east-1.amazonaws.com`\n</Note>\n\n### Build a new image\n\nBuild the production image using:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\nTo `force` rebuild images, use the `--force` or `-f` flag\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\nBecause the only docker resources in the production env are docker images, you can also use:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## ECS Task Definition\n\nIf you updated the Image, CPU, Memory or Environment Variables, update the Task Definition using:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## ECS Service\n\nTo redeploy the production application, update the ECS Service using:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Workspace Settings",
+      "id": "workspace-settings"
+    },
+    {
+      "level": "h2",
+      "text": "Build your production image",
+      "id": "build-your-production-image"
+    },
+    {
+      "level": "h3",
+      "text": "Create an ECR Repository",
+      "id": "create-an-ecr-repository"
+    },
+    {
+      "level": "h3",
+      "text": "Update the `InfraSettings`",
+      "id": "update-the-`infrasettings`"
+    },
+    {
+      "level": "h3",
+      "text": "Build a new image",
+      "id": "build-a-new-image"
+    },
+    {
+      "level": "h2",
+      "text": "ECS Task Definition",
+      "id": "ecs-task-definition"
+    },
+    {
+      "level": "h2",
+      "text": "ECS Service",
+      "id": "ecs-service"
+    }
+  ],
+  "url": "llms-txt#production-application",
+  "links": []
+}

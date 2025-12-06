@@ -1,0 +1,63 @@
+{
+  "title": "Span",
+  "content": "Source: https://docs.agno.com/reference/tracing/span\n\nA `Span` represents a single operation within an agent execution. Spans form a parent-child hierarchy within a trace, allowing you to understand the execution flow.\n\n| Attribute        | Type             | Default  | Description                                               |\n| ---------------- | ---------------- | -------- | --------------------------------------------------------- |\n| `span_id`        | `str`            | Required | Unique span identifier                                    |\n| `trace_id`       | `str`            | Required | Parent trace ID (groups related spans)                    |\n| `parent_span_id` | `Optional[str]`  | `None`   | Parent span ID (`None` for root spans)                    |\n| `name`           | `str`            | Required | Operation name (e.g., `OpenAIChat.invoke`, `get_weather`) |\n| `status_code`    | `str`            | Required | Status: `OK`, `ERROR`, or `UNSET`                         |\n| `status_message` | `Optional[str]`  | `None`   | Status message (typically error details)                  |\n| `duration_ms`    | `int`            | Required | Execution time in milliseconds                            |\n| `start_time`     | `datetime`       | Required | When the span started                                     |\n| `end_time`       | `datetime`       | Required | When the span completed                                   |\n| `attributes`     | `Optional[dict]` | `None`   | OpenTelemetry attributes (tokens, params, etc.)           |\n| `events`         | `Optional[list]` | `None`   | Span events                                               |\n| `kind`           | `Optional[str]`  | `None`   | Span kind (e.g., `INTERNAL`, `CLIENT`)                    |\n\nSpans are automatically created for various operations:\n\n| Span Name Pattern    | Description     |\n| -------------------- | --------------- |\n| `{AgentName}.run`    | Agent execution |\n| `{TeamName}.run`     | Team execution  |\n| `{ModelName}.invoke` | LLM model call  |\n| `{tool_name}`        | Tool execution  |\n\n## Attributes by Operation Type\n\nThe `attributes` field contains OpenTelemetry semantic attributes that vary by operation:\n\n| Attribute                    | Description         |\n| ---------------------------- | ------------------- |\n| `llm.token_count.prompt`     | Input token count   |\n| `llm.token_count.completion` | Output token count  |\n| `llm.model_name`             | Model identifier    |\n| `llm.provider`               | Model provider name |\n\n| Attribute         | Description                  |\n| ----------------- | ---------------------------- |\n| `tool.name`       | Tool function name           |\n| `tool.parameters` | Tool input parameters (JSON) |\n\nConvert the span to a dictionary.\n\nCreate a span from a dictionary.\n\n* `data` (`dict`): Dictionary containing span data\n\n```python  theme={null}\nfrom agno.db.sqlite import SqliteDb\n\ndb = SqliteDb(db_file=\"tmp/traces.db\")",
+  "code_samples": [
+    {
+      "code": "**Returns:** `dict`\n\n### `from_dict()`\n\nCreate a span from a dictionary.",
+      "language": "unknown"
+    },
+    {
+      "code": "**Parameters:**\n\n* `data` (`dict`): Dictionary containing span data\n\n**Returns:** `Span`\n\n## Usage",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Span Attributes",
+      "id": "span-attributes"
+    },
+    {
+      "level": "h2",
+      "text": "Common Span Names",
+      "id": "common-span-names"
+    },
+    {
+      "level": "h2",
+      "text": "Attributes by Operation Type",
+      "id": "attributes-by-operation-type"
+    },
+    {
+      "level": "h3",
+      "text": "LLM Spans",
+      "id": "llm-spans"
+    },
+    {
+      "level": "h3",
+      "text": "Tool Spans",
+      "id": "tool-spans"
+    },
+    {
+      "level": "h2",
+      "text": "Methods",
+      "id": "methods"
+    },
+    {
+      "level": "h3",
+      "text": "`to_dict()`",
+      "id": "`to_dict()`"
+    },
+    {
+      "level": "h3",
+      "text": "`from_dict()`",
+      "id": "`from_dict()`"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#span",
+  "links": []
+}

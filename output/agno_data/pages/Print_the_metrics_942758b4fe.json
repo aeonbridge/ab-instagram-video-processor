@@ -1,0 +1,31 @@
+{
+  "title": "Print the metrics",
+  "content": "print(\"---\" * 5, \"Collected Metrics\", \"---\" * 5)\npprint(run_output.metrics)  # type: ignore\nbash  theme={null}\n    export GROQ_API_KEY=xxx\n    bash  theme={null}\n    pip install -U groq yfinance agno\n    bash Mac theme={null}\n      python cookbook/models/groq/metrics.py\n      bash Windows theme={null}\n      python cookbook/models/groq/metrics.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#print-the-metrics",
+  "links": []
+}

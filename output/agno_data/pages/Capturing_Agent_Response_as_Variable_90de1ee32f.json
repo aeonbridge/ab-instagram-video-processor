@@ -1,0 +1,14 @@
+{
+  "title": "Capturing Agent Response as Variable",
+  "content": "Source: https://docs.agno.com/basics/input-output/agent/usage/response-as-variable\n\nThis example demonstrates how to capture and work with agent responses as variables, enabling programmatic access to response data and metadata.\n\n```python response_as_variable.py theme={null}\nfrom typing import Iterator  # noqa\nfrom rich.pretty import pprint\nfrom agno.agent import Agent, RunOutput\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[\n        DuckDuckGoTools(\n            stock_price=True,\n            analyst_recommendations=True,\n            company_info=True,\n            company_news=True,\n        )\n    ],\n    instructions=[\"Use tables where possible\"],\n    markdown=True,\n)\n\nrun_response: RunOutput = agent.run(\"What is the stock price of NVDA\")\npprint(run_response)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#capturing-agent-response-as-variable",
+  "links": []
+}

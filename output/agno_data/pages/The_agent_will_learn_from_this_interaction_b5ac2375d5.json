@@ -1,0 +1,28 @@
+{
+  "title": "The agent will learn from this interaction",
+  "content": "agent.print_response(\n    \"How do I set up a FastAPI service using Docker?\",\n    stream=True,\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\n\ndb = SqliteDb(db_file=\"agno.db\")\n\nagent = Agent(\n    db=db,\n    add_culture_to_context=True,  # Read culture\n    enable_agentic_culture=True,  # Agent-controlled culture tools\n)\npython  theme={null}\nfrom agno.culture.manager import CultureManager\nfrom agno.db.schemas.culture import CulturalKnowledge\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.anthropic import Claude\n\ndb = SqliteDb(db_file=\"agno.db\")",
+  "code_samples": [
+    {
+      "code": "**Best for:** Production systems where you want agents to continuously improve their approach based on what works.\n\n### 2. Agentic Culture (`enable_agentic_culture=True`)\n\nThe agent gets full control over culture management through built-in tools. It decides when and what to add to the cultural knowledge base.",
+      "language": "unknown"
+    },
+    {
+      "code": "With agentic culture, the agent is equipped with tools to manage cultural knowledge when it deems relevant during the conversation itself, not just after completion.\n\n**Best for:** Complex workflows where the agent should actively decide what principles to establish or update during the task.\n\n### 3. Manual Culture Management\n\nCreate cultural knowledge explicitly using the `CultureManager` or by directly instantiating `CulturalKnowledge` objects. Perfect for seeding organizational standards.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "2. Agentic Culture (`enable_agentic_culture=True`)",
+      "id": "2.-agentic-culture-(`enable_agentic_culture=true`)"
+    },
+    {
+      "level": "h3",
+      "text": "3. Manual Culture Management",
+      "id": "3.-manual-culture-management"
+    }
+  ],
+  "url": "llms-txt#the-agent-will-learn-from-this-interaction",
+  "links": []
+}

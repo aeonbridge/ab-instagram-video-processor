@@ -1,0 +1,8 @@
+{
+  "title": "Pass a dict that matches the input schema",
+  "content": "hackernews_agent.print_response(\n    input={\n        \"topic\": \"AI\",\n        \"focus_areas\": [\"AI\", \"Machine Learning\"],\n        \"target_audience\": \"Developers\",\n        \"sources_required\": \"5\",\n    }\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#pass-a-dict-that-matches-the-input-schema",
+  "links": []
+}

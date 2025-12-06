@@ -1,0 +1,61 @@
+{
+  "title": "Competitor Analysis Agent",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/competitor-analysis-agent\n\nBuild an AI agent that performs comprehensive competitive intelligence by combining web search, content scraping, and reasoning tools to analyze competitors and generate strategic reports with actionable insights.\n\nBy building this agent, you'll understand:\n\n* How to integrate multiple tools (Firecrawl and ReasoningTools) for complex workflows\n* How to structure multi-phase research processes with clear instructions\n* How reasoning tools make the agent's analytical thinking transparent\n* How to define structured output templates for consistent reports\n\nBuild market research tools, competitive intelligence systems, strategic planning assistants, or due diligence platforms for investment decisions.\n\nThe agent follows a systematic five-phase research process:\n\n1. **Discovery**: Finds competitors and industry information using web search\n2. **Analysis**: Scrapes websites and extracts detailed information\n3. **Comparison**: Analyzes features and competitive positioning\n4. **Synthesis**: Conducts SWOT analysis with reasoning tools\n5. **Reporting**: Compiles findings into actionable recommendations\n\nReasoning tools provide transparency into the agent's analytical thinking throughout the process.\n\nThe agent will conduct a comprehensive competitive analysis in five phases. It uses Firecrawl to search for competitors and scrape their websites, then applies reasoning tools to analyze findings. The analysis streams in real-time so you can follow the agent's research and thinking process.\n\nThe final output is a detailed strategic report with competitor profiles, SWOT analyses, comparative tables, and actionable recommendations organized by timeline (immediate, short-term, long-term).\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API key\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* Modify the target company in the example query to analyze different markets\n* Adjust `search_params` and `limit` in FirecrawlTools for deeper or broader research\n* Customize the `expected_output` template to focus on specific competitive aspects\n* Explore [Reasoning Tools](/basics/tools/reasoning_tools/reasoning-tools) for advanced analytical capabilities",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe agent will conduct a comprehensive competitive analysis in five phases. It uses Firecrawl to search for competitors and scrape their websites, then applies reasoning tools to analyze findings. The analysis streams in real-time so you can follow the agent's research and thinking process.\n\nThe final output is a detailed strategic report with competitor profiles, SWOT analyses, comparative tables, and actionable recommendations organized by timeline (immediate, short-term, long-term).\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#competitor-analysis-agent",
+  "links": []
+}

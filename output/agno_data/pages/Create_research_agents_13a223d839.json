@@ -1,0 +1,8 @@
+{
+  "title": "Create research agents",
+  "content": "hackernews_agent = Agent(\n    name=\"HackerNews Researcher\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[HackerNewsTools()],\n    role=\"Research trending topics and discussions on HackerNews\",\n    instructions=[\n        \"Search for relevant discussions and articles\",\n        \"Focus on high-quality posts with good engagement\",\n        \"Extract key insights and technical details\",\n    ],\n)\n\nweb_researcher = Agent(\n    name=\"Web Researcher\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[DuckDuckGoTools()],\n    role=\"Conduct comprehensive web research\",\n    instructions=[\n        \"Search for authoritative sources and documentation\",\n        \"Find recent articles and blog posts\",\n        \"Gather diverse perspectives on the topics\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-research-agents",
+  "links": []
+}

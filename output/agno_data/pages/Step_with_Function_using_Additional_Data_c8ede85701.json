@@ -1,0 +1,14 @@
+{
+  "title": "Step with Function using Additional Data",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/step-with-function-additional-data\n\nThis example demonstrates **Workflows 2.0** support for passing metadata and contextual information to steps via `additional_data`.\n\nThis example shows how to pass metadata and contextual information to steps via `additional_data`. This allows separation of workflow logic from configuration, enabling dynamic behavior based on external context.\n\n* **Context-Aware Steps**: Access `step_input.additional_data` in custom functions\n* **Flexible Metadata**: Pass user info, priorities, settings, etc.\n* **Clean Separation**: Keep workflow logic focused while enriching steps with context\n\n```python step_with_function_additional_data.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step, StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Features:",
+      "id": "key-features:"
+    }
+  ],
+  "url": "llms-txt#step-with-function-using-additional-data",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create cluster options with authentication",
+  "content": "auth = PasswordAuthenticator(username, password)\ncluster_options = ClusterOptions(auth)\ncluster_options.apply_profile(KnownConfigProfiles.WanDevelopment)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-cluster-options-with-authentication",
+  "links": []
+}

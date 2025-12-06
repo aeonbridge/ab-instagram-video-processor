@@ -1,0 +1,19 @@
+{
+  "title": "Because we are evaluating an async function, we use the arun method.",
+  "content": "asyncio.run(performance_eval.arun(print_summary=True, print_results=True))\npython memory_performance.py theme={null}\n\"\"\"Run `pip install openai agno memory_profiler` to install dependencies.\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.eval.performance import PerformanceEval\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "## Agent Performace with Memory Updates\n\nTest agent performance with memory updates:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Agent Performace with Memory Updates",
+      "id": "agent-performace-with-memory-updates"
+    }
+  ],
+  "url": "llms-txt#because-we-are-evaluating-an-async-function,-we-use-the-arun-method.",
+  "links": []
+}

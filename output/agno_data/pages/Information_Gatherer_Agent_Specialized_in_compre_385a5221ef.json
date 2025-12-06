@@ -1,0 +1,8 @@
+{
+  "title": "Information Gatherer Agent - Specialized in comprehensive information retrieval",
+  "content": "information_gatherer = Agent(\n    name=\"Information Gatherer\",\n    model=Claude(id=\"claude-sonnet-4-20250514\"),\n    role=\"Gather comprehensive information from knowledge sources\",\n    knowledge=knowledge,\n    search_knowledge=True,\n    tools=[ReasoningTools(add_instructions=True)],\n    instructions=[\n        \"Search the knowledge base thoroughly for all relevant information.\",\n        \"Use reasoning tools to plan your search strategy.\",\n        \"Gather comprehensive context and supporting details.\",\n        \"Document all sources and evidence found.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#information-gatherer-agent---specialized-in-comprehensive-information-retrieval",
+  "links": []
+}

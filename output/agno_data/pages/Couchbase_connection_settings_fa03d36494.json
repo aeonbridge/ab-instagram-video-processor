@@ -1,0 +1,8 @@
+{
+  "title": "Couchbase connection settings",
+  "content": "username = os.getenv(\"COUCHBASE_USER\")\npassword = os.getenv(\"COUCHBASE_PASSWORD\")\nconnection_string = os.getenv(\"COUCHBASE_CONNECTION_STRING\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#couchbase-connection-settings",
+  "links": []
+}

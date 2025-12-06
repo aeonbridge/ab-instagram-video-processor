@@ -1,0 +1,8 @@
+{
+  "title": "Update Session",
+  "content": "Source: https://docs.agno.com/reference-api/schema/sessions/update-session\n\npatch /sessions/{session_id}\nUpdate session properties such as session_name, session_state, metadata, or summary. Use this endpoint to modify the session name, update state, add metadata, or update the session summary.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#update-session",
+  "links": []
+}

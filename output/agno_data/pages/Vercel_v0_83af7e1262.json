@@ -1,0 +1,14 @@
+{
+  "title": "Vercel v0",
+  "content": "Source: https://docs.agno.com/reference/models/vercel\n\nThe Vercel v0 model provides access to Vercel's language models.\n\n| Parameter               | Type            | Default                       | Description                                                      |\n| ----------------------- | --------------- | ----------------------------- | ---------------------------------------------------------------- |\n| `id`                    | `str`           | `\"v0\"`                        | The id of the Vercel model to use                                |\n| `name`                  | `str`           | `\"VercelV0\"`                  | The name of the model                                            |\n| `provider`              | `str`           | `\"Vercel\"`                    | The provider of the model                                        |\n| `api_key`               | `Optional[str]` | `None`                        | The API key for Vercel (defaults to VERCEL\\_API\\_KEY env var)    |\n| `base_url`              | `str`           | `\"https://api.vercel.com/v1\"` | The base URL for the Vercel API                                  |\n| `retries`               | `int`           | `0`                           | Number of retries to attempt before raising a ModelProviderError |\n| `delay_between_retries` | `int`           | `1`                           | Delay between retries, in seconds                                |\n| `exponential_backoff`   | `bool`          | `False`                       | If True, the delay between retries is doubled each time          |\n\nVercel extends the OpenAI-compatible interface and supports most parameters from OpenAI.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#vercel-v0",
+  "links": []
+}

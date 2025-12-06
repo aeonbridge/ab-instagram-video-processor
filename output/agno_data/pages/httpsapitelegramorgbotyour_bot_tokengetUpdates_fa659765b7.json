@@ -1,0 +1,24 @@
+{
+  "title": "https://api.telegram.org/bot/<your-bot-token>/getUpdates",
+  "content": "telegram_token = \"<enter-your-bot-token>\"\nchat_id = \"<enter-your-chat-id>\"\n\nagent = Agent(\n    name=\"telegram\",\n    tools=[TelegramTools(token=telegram_token, chat_id=chat_id)],\n)\n\nagent.print_response(\"Send message to telegram chat a paragraph about the moon\")\n```\n\n| Parameter             | Type              | Default | Description                                                                               |\n| --------------------- | ----------------- | ------- | ----------------------------------------------------------------------------------------- |\n| `token`               | `Optional[str]`   | `None`  | Telegram Bot API token. If not provided, will check TELEGRAM\\_TOKEN environment variable. |\n| `chat_id`             | `Union[str, int]` | -       | The ID of the chat to send messages to.                                                   |\n| `enable_send_message` | `bool`            | `True`  | Enable the send\\_message functionality.                                                   |\n| `all`                 | `bool`            | `False` | Enable all functionality.                                                                 |\n\n| Function       | Description                                                                                                                                                         |\n| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `send_message` | Sends a message to the specified Telegram chat. Takes a message string as input and returns the API response as text. If an error occurs, returns an error message. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/telegram.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/telegram_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#https://api.telegram.org/bot/<your-bot-token>/getupdates",
+  "links": []
+}

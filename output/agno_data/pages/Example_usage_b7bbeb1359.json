@@ -1,0 +1,8 @@
+{
+  "title": "Example usage:",
+  "content": "analysis_prompt = \"\"\"\\\nAnalyze media trends for:\nKeywords: ai agents\nSources: verge.com ,linkedin.com, x.com\n\"\"\"\n\nagent.print_response(analysis_prompt, stream=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage:",
+  "links": []
+}

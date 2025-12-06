@@ -1,0 +1,8 @@
+{
+  "title": "Load all documents into the vector database",
+  "content": "knowledge.add_contents(\n    [\n        {\n            \"path\": downloaded_cv_paths[0],\n            \"metadata\": {\n                \"user_id\": \"jordan_mitchell\",\n                \"document_type\": \"cv\",\n                \"year\": 2025,\n            },\n        },\n        {\n            \"path\": downloaded_cv_paths[1],\n            \"metadata\": {\n                \"user_id\": \"taylor_brooks\",\n                \"document_type\": \"cv\",\n                \"year\": 2025,\n            },\n        },\n        {\n            \"path\": downloaded_cv_paths[2],\n            \"metadata\": {\n                \"user_id\": \"morgan_lee\",\n                \"document_type\": \"cv\",\n                \"year\": 2025,\n            },\n        },\n        {\n            \"path\": downloaded_cv_paths[3],\n            \"metadata\": {\n                \"user_id\": \"casey_jordan\",\n                \"document_type\": \"cv\",\n                \"year\": 2025,\n            },\n        },\n        {\n            \"path\": downloaded_cv_paths[4],\n            \"metadata\": {\n                \"user_id\": \"alex_rivera\",\n                \"document_type\": \"cv\",\n                \"year\": 2025,\n            },\n        },\n    ]\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#load-all-documents-into-the-vector-database",
+  "links": []
+}

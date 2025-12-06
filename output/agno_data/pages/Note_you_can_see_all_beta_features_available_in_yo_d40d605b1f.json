@@ -1,0 +1,8 @@
+{
+  "title": "Note: you can see all beta features available in your Anthropic version like this:",
+  "content": "all_betas = anthropic.types.AnthropicBetaParam\nprint(\"\\n=== All available Anthropic beta features ===\")\nprint(f\"- {'\\n- '.join(all_betas.__args__[1].__args__)}\")\nprint(\"=============================================\\n\")\n\nagent = Agent(model=model, debug_mode=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#note:-you-can-see-all-beta-features-available-in-your-anthropic-version-like-this:",
+  "links": []
+}

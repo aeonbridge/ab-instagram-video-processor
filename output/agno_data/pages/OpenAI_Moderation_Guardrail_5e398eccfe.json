@@ -1,0 +1,33 @@
+{
+  "title": "OpenAI Moderation Guardrail",
+  "content": "Source: https://docs.agno.com/basics/guardrails/usage/agent/openai-moderation\n\nThis example demonstrates how to use Agno's built-in OpenAI moderation guardrail to detect and block content that violates OpenAI's content policy.\n\nThis example demonstrates how to use Agno's built-in OpenAI moderation guardrail with an Agent.\n\nThis example shows how to:\n\n1. Detect and block content that violates OpenAI's content policy\n2. Handle both text and image content moderation\n3. Configure moderation for specific categories\n4. Use both sync and async moderation checks\n5. Customize moderation models and sensitivity settings\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    Create a Python file for the example.\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/agents/guardrails\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#openai-moderation-guardrail",
+  "links": []
+}

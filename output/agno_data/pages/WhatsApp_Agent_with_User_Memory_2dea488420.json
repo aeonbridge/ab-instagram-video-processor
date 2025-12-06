@@ -1,0 +1,41 @@
+{
+  "title": "WhatsApp Agent with User Memory",
+  "content": "Source: https://docs.agno.com/agent-os/usage/interfaces/whatsapp/agent-with-user-memory\n\nPersonalized WhatsApp agent that remembers user information and preferences\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set Environment Variables\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Example\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* **Memory Management**: Remembers user names, hobbies, preferences, and activities\n* **DuckDuckGo Search**: Access to current information during conversations\n* **Personalized Responses**: Uses stored memories for contextualized replies\n* **Friendly AI**: Acts as personal AI friend with engaging conversation\n* **Gemini Powered**: Fast, intelligent responses with multimodal capabilities",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    }
+  ],
+  "url": "llms-txt#whatsapp-agent-with-user-memory",
+  "links": []
+}

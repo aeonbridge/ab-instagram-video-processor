@@ -1,0 +1,8 @@
+{
+  "title": "Initialize the Agent with various configurations including the knowledge base and storage",
+  "content": "agent = Agent(\n    session_id=\"session_id\",  # use any unique identifier to identify the run\n    user_id=\"user\",  # user identifier to identify the user\n    model=model,\n    knowledge=knowledge,\n    db=db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-the-agent-with-various-configurations-including-the-knowledge-base-and-storage",
+  "links": []
+}

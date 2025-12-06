@@ -1,0 +1,14 @@
+{
+  "title": "LightRAG Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/lightrag/overview\n\nLearn how to use LightRAG as a vector database for your Knowledge Base\n\n## Developer Resources\n\n* View [Cookbook (Sync)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/lance_db/lance_db.py)\n* View [Cookbook (Hybrid Search)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/lance_db/lance_db_hybrid_search.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#lightrag-vector-database",
+  "links": []
+}

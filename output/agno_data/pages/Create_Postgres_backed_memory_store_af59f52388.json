@@ -1,0 +1,8 @@
+{
+  "title": "Create Postgres-backed memory store",
+  "content": "db = PostgresDb(db_url=db_url)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-postgres-backed-memory-store",
+  "links": []
+}

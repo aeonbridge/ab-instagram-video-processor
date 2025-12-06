@@ -1,0 +1,19 @@
+{
+  "title": "Set your API key and run the basic agent",
+  "content": "export OPENAI_API_KEY=\"your_openai_api_key\"\nuv run agent.py\nbash  theme={null}",
+  "code_samples": [
+    {
+      "code": "This starts a PostgreSQL database with sample hotel data and an MCP Toolbox server that exposes database operations as filtered tools.\n\n## Verification\n\nTo verify that your docker/podman setup is working correctly, you can check the database connection:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Verification",
+      "id": "verification"
+    }
+  ],
+  "url": "llms-txt#set-your-api-key-and-run-the-basic-agent",
+  "links": []
+}

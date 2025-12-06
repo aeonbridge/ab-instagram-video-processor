@@ -1,0 +1,19 @@
+{
+  "title": "Seed documentation standards",
+  "content": "doc_standard = CulturalKnowledge(\n    name=\"Documentation Standard\",\n    summary=\"All docs follow structure: Example → Explanation → Validation\",\n    categories=[\"documentation\", \"engineering\"],\n    content=(\n        \"1. Start with a minimal working example\\n\"\n        \"2. Explain key concepts and decisions\\n\"\n        \"3. Provide validation steps\\n\"\n        \"4. Link to related resources\"\n    ),\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Customer Communication Tone",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Customer Communication Tone",
+      "id": "customer-communication-tone"
+    }
+  ],
+  "url": "llms-txt#seed-documentation-standards",
+  "links": []
+}

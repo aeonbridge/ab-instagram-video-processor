@@ -1,0 +1,13 @@
+{
+  "title": "Find content from a specific year",
+  "content": "EQ(\"year\", 2024)\npython  theme={null}\nfrom agno.filters import IN",
+  "code_samples": [
+    {
+      "code": "#### IN (Contains Any)\n\nMatch content where a metadata field contains any of the specified values.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#find-content-from-a-specific-year",
+  "links": []
+}

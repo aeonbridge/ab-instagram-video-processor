@@ -1,0 +1,8 @@
+{
+  "title": "Loop with Parallel Steps Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/loop-with-parallel-steps-stream\n\nThis example demonstrates **Workflows 2.0** most sophisticated pattern combining loop execution with parallel processing and real-time streaming.\n\nThis example shows how to create iterative\nworkflows that execute multiple independent tasks simultaneously within each iteration,\noptimizing both quality and performance.\n\n**When to use**: When you need iterative quality improvement with parallel task execution\nin each iteration. Ideal for comprehensive research workflows where multiple independent\ntasks contribute to overall quality, and you need to repeat until quality thresholds are met.\n\n```python loop_with_parallel_steps_stream.py theme={null}\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow import Loop, Parallel, Step, Workflow\nfrom agno.workflow.types import StepOutput",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#loop-with-parallel-steps-workflow",
+  "links": []
+}

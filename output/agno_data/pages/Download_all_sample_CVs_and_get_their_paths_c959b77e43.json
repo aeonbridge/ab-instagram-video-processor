@@ -1,0 +1,8 @@
+{
+  "title": "Download all sample CVs and get their paths",
+  "content": "downloaded_cv_paths = download_knowledge_filters_sample_data(\n    num_files=5, file_extension=SampleDataFileExtension.PDF\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#download-all-sample-cvs-and-get-their-paths",
+  "links": []
+}

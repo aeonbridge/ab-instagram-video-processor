@@ -1,0 +1,8 @@
+{
+  "title": "Data Validator Agent - Specialized in data quality validation",
+  "content": "data_validator = Agent(\n    name=\"Data Validator\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Validate retrieved data quality and relevance\",\n    instructions=[\n        \"Assess the quality and relevance of retrieved information.\",\n        \"Check for consistency across different search results.\",\n        \"Identify the most reliable and accurate information.\",\n        \"Filter out any irrelevant or low-quality content.\",\n        \"Ensure data integrity and relevance to the user's query.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#data-validator-agent---specialized-in-data-quality-validation",
+  "links": []
+}

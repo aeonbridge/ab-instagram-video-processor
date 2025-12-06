@@ -1,0 +1,8 @@
+{
+  "title": "1. Configure vector database with embedder",
+  "content": "vector_db = PgVector(\n    table_name=\"company_knowledge\",\n    db_url=\"postgresql+psycopg://user:pass@localhost:5432/db\",\n    embedder=OpenAIEmbedder(id=\"text-embedding-3-small\")  # Optional: defaults to OpenAIEmbedder\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#1.-configure-vector-database-with-embedder",
+  "links": []
+}

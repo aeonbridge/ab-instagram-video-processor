@@ -1,0 +1,14 @@
+{
+  "title": "OpenAI Key Request While Using Other Models",
+  "content": "Source: https://docs.agno.com/faq/openai-key-request-for-other-models\n\nIf you see a request for an OpenAI API key but haven't explicitly configured OpenAI, it's because Agno uses OpenAI models by default in several places, including:\n\n* The default model when unspecified in `Agent`\n* The default embedder is OpenAIEmbedder with VectorDBs, unless specified\n\n## Quick fix: Configure a Different Model\n\nIt is best to specify the model for the agent explicitly, otherwise it would default to `OpenAIChat`.\n\nFor example, to use Google's Gemini instead of OpenAI:\n\n```python  theme={null}\nfrom agno.agent import Agent, RunOutput\nfrom agno.models.google import Gemini\n\nagent = Agent(\n    model=Gemini(id=\"gemini-1.5-flash\"),\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Quick fix: Configure a Different Model",
+      "id": "quick-fix:-configure-a-different-model"
+    }
+  ],
+  "url": "llms-txt#openai-key-request-while-using-other-models",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Initialize knowledge base with vector database",
+  "content": "agno_docs_knowledge = Knowledge(\n    vector_db=LanceDb(\n        uri=str(tmp_dir.joinpath(\"lancedb\")),\n        table_name=\"agno_docs\",\n        search_type=SearchType.hybrid,\n        embedder=OpenAIEmbedder(id=\"text-embedding-3-small\"),\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-knowledge-base-with-vector-database",
+  "links": []
+}

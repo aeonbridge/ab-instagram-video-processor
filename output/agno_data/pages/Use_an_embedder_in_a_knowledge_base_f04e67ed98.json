@@ -1,0 +1,8 @@
+{
+  "title": "Use an embedder in a knowledge base",
+  "content": "knowledge = Knowledge(\n    vector_db=PgVector(\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n        table_name=\"gemini_embeddings\",\n        embedder=GeminiEmbedder(),\n    ),\n    max_results=2,\n)\n```\n\nFor more details on configuring different model providers, check our [Embeddings documentation](/basics/knowledge/embedder/)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#use-an-embedder-in-a-knowledge-base",
+  "links": []
+}

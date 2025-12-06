@@ -1,0 +1,8 @@
+{
+  "title": "Custom routes that use JWT",
+  "content": "@app.post(\"/auth/login\")\nasync def login(username: str = Form(...), password: str = Form(...)):\n    \"\"\"Login endpoint that returns JWT token\"\"\"\n    if username == \"demo\" and password == \"password\":\n        payload = {\n            \"sub\": \"user_123\",\n            \"username\": username,\n            \"exp\": datetime.now(UTC) + timedelta(hours=24),\n            \"iat\": datetime.now(UTC),\n        }\n        token = jwt.encode(payload, JWT_SECRET, algorithm=\"HS256\")\n        return {\"access_token\": token, \"token_type\": \"bearer\"}\n\nraise HTTPException(status_code=401, detail=\"Invalid credentials\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#custom-routes-that-use-jwt",
+  "links": []
+}

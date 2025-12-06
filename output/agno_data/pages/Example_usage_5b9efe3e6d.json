@@ -1,0 +1,8 @@
+{
+  "title": "Example usage",
+  "content": "if __name__ == \"__main__\":\n    # Generate a research report on a cutting-edge topic\n    agent.print_response(\n        \"Research the latest developments in brain-computer interfaces\", stream=True\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage",
+  "links": []
+}

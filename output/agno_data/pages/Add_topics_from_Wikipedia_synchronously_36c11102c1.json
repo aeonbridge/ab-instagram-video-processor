@@ -1,0 +1,8 @@
+{
+  "title": "Add topics from Wikipedia synchronously",
+  "content": "knowledge.add_content(\n    metadata={\"source\": \"wikipedia\", \"type\": \"encyclopedia\"},\n    topics=[\"Manchester United\", \"Artificial Intelligence\"],\n    reader=WikipediaReader(),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-topics-from-wikipedia-synchronously",
+  "links": []
+}

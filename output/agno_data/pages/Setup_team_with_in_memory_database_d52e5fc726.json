@@ -1,0 +1,14 @@
+{
+  "title": "Setup team with in-memory database",
+  "content": "db = InMemoryDb()\nteam = Team(\n    name=\"Research Team\",\n    members=[hn_researcher, web_searcher],\n    db=db,\n)\n\nteam.print_response(\"Find top AI news\")\n```\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/in_memory/in_memory_storage_for_team.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#setup-team-with-in-memory-database",
+  "links": []
+}

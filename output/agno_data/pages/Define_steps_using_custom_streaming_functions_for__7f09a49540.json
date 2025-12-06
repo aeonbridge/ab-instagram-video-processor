@@ -1,0 +1,8 @@
+{
+  "title": "Define steps using custom streaming functions for parallel execution",
+  "content": "hackernews_step = Step(\n    name=\"HackerNews Research\",\n    executor=hackernews_research_function,\n)\n\nweb_search_step = Step(\n    name=\"Web Search Research\",\n    executor=web_search_research_function,\n)\n\ncontent_planning_step = Step(\n    name=\"Content Planning Step\",\n    executor=custom_content_planning_function,\n)\n\nstreaming_content_workflow = Workflow(\n    name=\"Streaming Content Creation Workflow\",\n    description=\"Automated content creation with parallel custom streaming functions\",\n    db=SqliteDb(\n        session_table=\"streaming_workflow_session\",\n        db_file=\"tmp/workflow.db\",\n    ),\n    # Define the sequence with parallel research steps followed by planning\n    steps=[\n        Parallel(hackernews_step, web_search_step, name=\"Parallel Research Phase\"),\n        content_planning_step,\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-steps-using-custom-streaming-functions-for-parallel-execution",
+  "links": []
+}

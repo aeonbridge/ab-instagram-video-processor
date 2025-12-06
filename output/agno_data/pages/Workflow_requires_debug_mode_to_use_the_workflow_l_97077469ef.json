@@ -1,0 +1,14 @@
+{
+  "title": "Workflow requires debug mode to use the workflow logger",
+  "content": "workflow = Workflow(\n    debug_mode=True,\n    steps=[Step(name=\"step1\", agent=agent)]\n)\nworkflow.run(\"Hello from workflow!\")  # Workflow logs will go to workflow.log\n```\n\n<CardGroup cols={2}>\n  <Card title=\"Telemetry\" icon=\"chart-line\" href=\"/basics/telemetry\">\n    Learn about Agno telemetry\n  </Card>\n\n<Card title=\"Debugging Agents\" icon=\"bug\" href=\"/basics/agents/debugging-agents\">\n    Debug your agents effectively\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#workflow-requires-debug-mode-to-use-the-workflow-logger",
+  "links": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "EVM (Ethereum Virtual Machine)",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/evm\n\nEvmTools enables agents to interact with Ethereum and EVM-compatible blockchains for transactions and smart contract operations.\n\nThe following agent can interact with Ethereum blockchain:\n\n| Parameter                 | Type            | Default | Description                                                   |\n| ------------------------- | --------------- | ------- | ------------------------------------------------------------- |\n| `private_key`             | `Optional[str]` | `None`  | Private key for signing transactions. Uses EVM\\_PRIVATE\\_KEY. |\n| `rpc_url`                 | `Optional[str]` | `None`  | RPC URL for blockchain connection. Uses EVM\\_RPC\\_URL.        |\n| `enable_send_transaction` | `bool`          | `True`  | Enable transaction sending functionality.                     |\n\n| Function           | Description                                                  |\n| ------------------ | ------------------------------------------------------------ |\n| `send_transaction` | Send ETH or interact with smart contracts on the blockchain. |\n| `get_balance`      | Get ETH balance for an address.                              |\n| `get_transaction`  | Get transaction details by hash.                             |\n| `estimate_gas`     | Estimate gas cost for a transaction.                         |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/evm.py)\n* [Web3.py Documentation](https://web3py.readthedocs.io/)\n* [Ethereum Documentation](https://ethereum.org/developers/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#evm-(ethereum-virtual-machine)",
+  "links": []
+}

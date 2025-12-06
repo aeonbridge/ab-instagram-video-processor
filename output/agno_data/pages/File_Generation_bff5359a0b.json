@@ -1,0 +1,43 @@
+{
+  "title": "File Generation",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/file-generation/file-generation\n\nThe `FileGenerationTools` toolkit enables Agents and Teams to generate files in multiple formats.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.0.6\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.0.6\">v2.0.6</Tooltip>\n</Badge>\n\n<Tip>\n  Supported file types:\n\n* JSON\n  * CSV\n  * PDF\n  * TXT\n</Tip>\n\n1. **Install the libraries:**\n\n2. **Set your credentials:**\n   For OpenAI API:\n\nThe following agent will generate files in different formats based on user requests.\n\n<Note>\n  You can use the `output_directory` parameter to specify a custom output directory for the generated files.\n  If not specified, the files will be available in the `RunOutput` object.\n</Note>\n\n| Parameter                | Type   | Default | Description                                      |\n| ------------------------ | ------ | ------- | ------------------------------------------------ |\n| `enable_json_generation` | `bool` | `True`  | Enables JSON file generation                     |\n| `enable_csv_generation`  | `bool` | `True`  | Enables CSV file generation                      |\n| `enable_pdf_generation`  | `bool` | `True`  | Enables PDF file generation (requires reportlab) |\n| `enable_txt_generation`  | `bool` | `True`  | Enables text file generation                     |\n| `output_directory`       | `str`  | `None`  | Custom output directory path                     |\n| `all`                    | `bool` | `False` | Enables all file generation types when True      |\n\n| Name                 | Description                                                  |\n| -------------------- | ------------------------------------------------------------ |\n| `generate_json_file` | Generates a JSON file from data (dict, list, or JSON string) |\n| `generate_csv_file`  | Generates a CSV file from tabular data                       |\n| `generate_pdf_file`  | Generates a PDF document from text content                   |\n| `generate_text_file` | Generates a plain text file from string content              |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/file_generation.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/file_generation_tools.py)",
+  "code_samples": [
+    {
+      "code": "2. **Set your credentials:**\n   For OpenAI API:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will generate files in different formats based on user requests.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#file-generation",
+  "links": []
+}

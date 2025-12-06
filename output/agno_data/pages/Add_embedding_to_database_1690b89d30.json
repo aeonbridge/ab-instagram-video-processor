@@ -1,0 +1,8 @@
+{
+  "title": "Add embedding to database",
+  "content": "embeddings = JinaEmbedder(id=\"jina-embeddings-v3\").get_embedding(\"The quick brown fox jumps over the lazy dog.\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-embedding-to-database",
+  "links": []
+}

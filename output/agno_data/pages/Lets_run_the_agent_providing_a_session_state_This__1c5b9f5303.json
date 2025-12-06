@@ -1,0 +1,8 @@
+{
+  "title": "Let's run the agent providing a session_state. This session_state will be stored in the database.",
+  "content": "agent.print_response(\n    \"Can you tell me what's in your session_state?\",\n    session_state={\"shopping_list\": [\"Potatoes\"]},\n    stream=True,\n)\nprint(f\"Stored session state: {agent.get_session_state()}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#let's-run-the-agent-providing-a-session_state.-this-session_state-will-be-stored-in-the-database.",
+  "links": []
+}

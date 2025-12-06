@@ -1,0 +1,8 @@
+{
+  "title": "PDF Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/pdf\n\nPDFReader is a reader class that allows you to read data from PDF files.\n\n<Snippet file=\"pdf-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#pdf-reader",
+  "links": []
+}

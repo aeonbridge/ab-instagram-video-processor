@@ -1,0 +1,8 @@
+{
+  "title": "Airbnb MCP agent",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/usage/airbnb\n\nUsing the [Airbnb MCP server](https://github.com/openbnb-org/mcp-server-airbnb) to create an Agent that can search for Airbnb listings:",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#airbnb-mcp-agent",
+  "links": []
+}

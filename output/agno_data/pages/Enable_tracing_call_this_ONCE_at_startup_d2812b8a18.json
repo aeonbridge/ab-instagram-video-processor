@@ -1,0 +1,8 @@
+{
+  "title": "Enable tracing (call this ONCE at startup)",
+  "content": "setup_tracing(db=tracing_db)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#enable-tracing-(call-this-once-at-startup)",
+  "links": []
+}

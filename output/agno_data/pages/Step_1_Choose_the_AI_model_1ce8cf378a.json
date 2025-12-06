@@ -1,0 +1,8 @@
+{
+  "title": "Step 1: Choose the AI model",
+  "content": "model = OpenAIChat(id=\"gpt-5-mini\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#step-1:-choose-the-ai-model",
+  "links": []
+}

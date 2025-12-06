@@ -1,0 +1,14 @@
+{
+  "title": "Sync Operations",
+  "content": "Source: https://docs.agno.com/basics/knowledge/getting-started/usage/sync-operations\n\nThis example shows how to add content to your knowledge base synchronously. While async operations are recommended for better performance, sync operations can be useful in certain scenarios.\n\n```python 13_sync.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\n\ncontents_db = PostgresDb(\n    db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n    knowledge_table=\"knowledge_contents\",\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#sync-operations",
+  "links": []
+}

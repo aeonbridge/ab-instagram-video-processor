@@ -1,0 +1,28 @@
+{
+  "title": "Team Run Cancellation",
+  "content": "Source: https://docs.agno.com/execution-control/run-cancellation/team-cancel-run\n\nLearn how to cancel a running team execution by starting a team run in a separate thread and cancelling it from another thread.\n\nThis example demonstrates how to cancel a running team execution by starting a team run in a separate thread and cancelling it from another thread. It shows proper handling of cancelled responses and thread management.\n\nTeam runs can be cancelled via the AgentOS API:\n\n**Reference:** [Cancel Team Run API](/reference-api/schema/teams/cancel-team-run)",
+  "code_samples": [
+    {
+      "code": "## API Endpoint\n\nTeam runs can be cancelled via the AgentOS API:",
+      "language": "unknown"
+    },
+    {
+      "code": "**Example:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "API Endpoint",
+      "id": "api-endpoint"
+    }
+  ],
+  "url": "llms-txt#team-run-cancellation",
+  "links": []
+}

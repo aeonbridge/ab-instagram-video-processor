@@ -1,0 +1,8 @@
+{
+  "title": "Create team with agentic knowledge filters enabled",
+  "content": "team_with_knowledge = Team(\n    name=\"Team with Knowledge\",\n    members=[\n        web_agent\n    ],  # If you omit the member, the leader will search the knowledge base itself.\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    knowledge=knowledge,\n    show_members_responses=True,\n    markdown=True,\n    enable_agentic_knowledge_filters=True,  # Allow AI to determine filters\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-team-with-agentic-knowledge-filters-enabled",
+  "links": []
+}

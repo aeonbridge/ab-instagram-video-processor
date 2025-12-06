@@ -1,0 +1,8 @@
+{
+  "title": "Now switch to Google Gemini using same session",
+  "content": "gemini_agent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    instructions=\"You are a helpful assistant.\",\n    db=db,\n    add_history_to_context=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#now-switch-to-google-gemini-using-same-session",
+  "links": []
+}

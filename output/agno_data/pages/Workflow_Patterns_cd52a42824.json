@@ -1,0 +1,19 @@
+{
+  "title": "Workflow Patterns",
+  "content": "Source: https://docs.agno.com/basics/workflows/workflow-patterns/overview\n\nMaster deterministic workflow patterns including sequential, parallel, conditional, and looping execution for reliable multi-agent automation.\n\nBuild deterministic, production-ready workflows that orchestrate agents, teams, and functions with predictable execution patterns. This comprehensive guide covers all workflow types, from simple sequential processes to complex branching logic with parallel execution and dynamic routing.\n\nUnlike free-form agent interactions, these patterns provide structured automation with consistent, repeatable results ideal for production systems.\n\nThe core building blocks of Agno Workflows are:\n\n| Component     | Purpose                         |\n| ------------- | ------------------------------- |\n| **Step**      | Basic execution unit            |\n| **Agent**     | AI assistant with specific role |\n| **Team**      | Coordinated group of agents     |\n| **Function**  | Custom Python logic             |\n| **Parallel**  | Concurrent execution            |\n| **Condition** | Conditional execution           |\n| **Loop**      | Iterative execution             |\n| **Router**    | Dynamic routing                 |\n\nAgno Workflows support multiple execution patterns that can be combined to build sophisticated automation systems.\nEach pattern serves specific use cases and can be composed together for complex workflows.\n\n<CardGroup cols={3}>\n  <Card title=\"Sequential Workflows\" icon=\"arrow-right\" href=\"/basics/workflows/workflow-patterns/sequential\">\n    Linear execution with step-by-step processing\n  </Card>\n\n<Card title=\"Parallel Workflows\" icon=\"arrows-split-up-and-left\" href=\"/basics/workflows/workflow-patterns/parallel-workflow\">\n    Concurrent execution for independent tasks\n  </Card>\n\n<Card title=\"Conditional Workflows\" icon=\"code-branch\" href=\"/basics/workflows/workflow-patterns/conditional-workflow\">\n    Branching logic based on conditions\n  </Card>\n\n<Card title=\"Iterative Workflows\" icon=\"rotate\" href=\"/basics/workflows/workflow-patterns/iterative-workflow\">\n    Loop-based execution with quality controls\n  </Card>\n\n<Card title=\"Branching Workflows\" icon=\"sitemap\" href=\"/basics/workflows/workflow-patterns/branching-workflow\">\n    Dynamic routing and path selection\n  </Card>\n\n<Card title=\"Grouped Steps\" icon=\"layer-group\" href=\"/basics/workflows/workflow-patterns/grouped-steps-workflow\">\n    Reusable step sequences and modular design\n  </Card>\n</CardGroup>\n\n<CardGroup cols={3}>\n  <Card title=\"Function-Based Workflows\" icon=\"function\" href=\"/basics/workflows/workflow-patterns/custom-function-step-workflow\">\n    Pure Python workflows with complete control\n  </Card>\n\n<Card title=\"Multi-Pattern Combinations\" icon=\"puzzle-piece\" href=\"/basics/workflows/workflow-patterns/advanced-workflow-patterns\">\n    Complex workflows combining multiple patterns\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Building Blocks",
+      "id": "building-blocks"
+    },
+    {
+      "level": "h2",
+      "text": "Advanced Patterns",
+      "id": "advanced-patterns"
+    }
+  ],
+  "url": "llms-txt#workflow-patterns",
+  "links": []
+}

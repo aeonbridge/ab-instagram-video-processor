@@ -1,0 +1,8 @@
+{
+  "title": "Get OS Configuration",
+  "content": "Source: https://docs.agno.com/reference-api/schema/core/get-os-configuration\n\nget /config\nRetrieve the complete configuration of the AgentOS instance, including:\n\n- Available models and databases\n- Registered agents, teams, and workflows\n- Chat, session, memory, knowledge, and evaluation configurations\n- Available interfaces and their routes",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-os-configuration",
+  "links": []
+}

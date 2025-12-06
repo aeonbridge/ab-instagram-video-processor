@@ -1,0 +1,19 @@
+{
+  "title": "Advanced Filtering",
+  "content": "Source: https://docs.agno.com/basics/knowledge/filters/advanced-filtering\n\nUse filter expressions (EQ, AND, OR, NOT) for complex logical filtering of knowledge base searches.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.2.12\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.2.12\">v2.2.12</Tooltip>\n</Badge>\n\nWhen basic dictionary filters aren't enough, filter expressions give you powerful logical control over knowledge searches. Use them to combine multiple conditions with AND/OR logic, exclude content with NOT, or perform comparisons like \"greater than\" and \"less than\".\n\nFor basic filtering with dictionary format, see [Search & Retrieval](/basics/knowledge/search-and-retrieval/overview).\n\n## Filter Expression Operators\n\nAgno provides a rich set of filter expressions that can be combined to create sophisticated search criteria:\n\n### Comparison Operators\n\nThese operators let you match against specific values:\n\nMatch content where a metadata field equals a specific value.\n\n```python  theme={null}\nfrom agno.filters import EQ",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Filter Expression Operators",
+      "id": "filter-expression-operators"
+    },
+    {
+      "level": "h3",
+      "text": "Comparison Operators",
+      "id": "comparison-operators"
+    }
+  ],
+  "url": "llms-txt#advanced-filtering",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "JSON for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/json/usage/json-for-agent\n\nAgno supports using local JSON files as a storage backend for Agents using the `JsonDb` class.\n\n```python json_for_agent.py theme={null}\n\"\"\"Run `pip install ddgs openai` to install dependencies.\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.json import JsonDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#json-for-agent",
+  "links": []
+}

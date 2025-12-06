@@ -1,0 +1,14 @@
+{
+  "title": "Get spans and print tree",
+  "content": "spans = db.get_spans(trace_id=trace.trace_id)\nprint_span_tree(spans)\n```\n\n* [Trace Reference](/reference/tracing/trace) - Complete execution trace\n* [DB Functions](/basics/tracing/db-functions) - Query functions for traces and spans",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "See Also",
+      "id": "see-also"
+    }
+  ],
+  "url": "llms-txt#get-spans-and-print-tree",
+  "links": []
+}

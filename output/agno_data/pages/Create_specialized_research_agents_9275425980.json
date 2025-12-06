@@ -1,0 +1,8 @@
+{
+  "title": "Create specialized research agents",
+  "content": "tech_researcher = Agent(\n    name=\"Alex\",\n    role=\"Technology Researcher\",\n    instructions=dedent(\"\"\"\n        You specialize in technology and AI research.\n        - Focus on latest developments, trends, and breakthroughs\n        - Provide concise, data-driven insights\n        - Cite your sources\n    \"\"\").strip(),\n)\n\nbusiness_analyst = Agent(\n    name=\"Sarah\",\n    role=\"Business Analyst\",\n    instructions=dedent(\"\"\"\n        You specialize in business and market analysis.\n        - Focus on companies, markets, and economic trends\n        - Provide actionable business insights\n        - Include relevant data and statistics\n    \"\"\").strip(),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-specialized-research-agents",
+  "links": []
+}

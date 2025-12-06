@@ -1,0 +1,8 @@
+{
+  "title": "Define and use examples",
+  "content": "if __name__ == \"__main__\":\n    content_creation_workflow = Workflow(\n        name=\"Content Creation Workflow\",\n        description=\"Automated content creation with custom execution options\",\n        db=SqliteDb(\n            session_table=\"workflow_session\",\n            db_file=\"tmp/workflow.db\",\n        ),\n        steps=[research_step, content_planning_step],\n    )\n\n# Run workflow with additional_data\n    content_creation_workflow.print_response(\n        input=\"AI trends in 2024\",\n        additional_data={\n            \"user_email\": \"michael@dundermifflin.com\",\n            \"priority\": \"high\",\n            \"client_type\": \"enterprise\",\n        },\n        markdown=True,\n        stream=True,\n    )\n\nprint(\"\\n\" + \"=\" * 60 + \"\\n\")\n```\n\nTo checkout async version, see the cookbook-\n\n* [Step with Function using Additional Data (async)](https://github.com/agno-agi/agno/blob/main/cookbook/workflows/_01_basic_workflows/_02_step_with_function/async/step_with_function_additional_data.py)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-and-use-examples",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Time your searches",
+  "content": "start = time.time()\nresults = knowledge.search(\"test query\", max_results=5)\nelapsed = time.time() - start\nprint(f\"Search took {elapsed:.2f} seconds\")\n```\n\n<CardGroup cols={3}>\n  <Card title=\"Chunking Strategies\" icon=\"scissors\" href=\"/basics/knowledge/chunking/overview\">\n    Learn how different chunking strategies affect performance\n  </Card>\n\n<Card title=\"Vector Databases\" icon=\"database\" href=\"/basics/vectordb/overview\">\n    Compare vector database options for your scale\n  </Card>\n\n<Card title=\"Embedders\" icon=\"vector-square\" href=\"/basics/knowledge/embedder/overview\">\n    Choose the right embedder for your use case\n  </Card>\n\n<Card title=\"Hybrid Search\" icon=\"magnifying-glass\" href=\"/basics/knowledge/search-and-retrieval/hybrid-search\">\n    Combine vector and keyword search for better results\n  </Card>\n</CardGroup>\n\n<Tip>\n  **Start simple, optimize when needed.** Agno's defaults work well for most use cases. Profile your application to find actual bottlenecks before spending time on optimization.\n</Tip>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#time-your-searches",
+  "links": []
+}

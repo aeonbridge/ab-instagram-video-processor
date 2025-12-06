@@ -1,0 +1,8 @@
+{
+  "title": "Fetch the audio file and convert it to a base64 encoded string",
+  "content": "url = \"https://openaiassets.blob.core.windows.net/$web/API/docs/audio/alloy.wav\"\nresponse = requests.get(url)\nresponse.raise_for_status()\nwav_data = response.content",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#fetch-the-audio-file-and-convert-it-to-a-base64-encoded-string",
+  "links": []
+}

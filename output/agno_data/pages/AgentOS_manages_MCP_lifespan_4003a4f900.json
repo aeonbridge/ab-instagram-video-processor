@@ -1,0 +1,8 @@
+{
+  "title": "AgentOS manages MCP lifespan",
+  "content": "agent_os = AgentOS(\n    description=\"AgentOS with MCP Tools\",\n    agents=[agent],\n)\n\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    # Don't use reload=True with MCP tools to avoid lifespan issues\n    agent_os.serve(app=\"mcp_tools_example:app\")\n```\n\n<Note>\n  Refreshing the connection to MCP servers is **not** automatically handled. You can use [`refresh_connection`](/basics/tools/mcp/overview#connection-refresh) to manually refresh a connection.\n</Note>\n\nSee here for a [full example](/agent-os/usage/mcp/mcp-tools-example).",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agentos-manages-mcp-lifespan",
+  "links": []
+}

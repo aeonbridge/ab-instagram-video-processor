@@ -1,0 +1,29 @@
+{
+  "title": "Bitbucket",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/bitbucket\n\nBitbucketTools enables agents to interact with Bitbucket repositories for managing code, pull requests, and issues.\n\nThe following agent can manage Bitbucket repositories:\n\n| Parameter     | Type            | Default               | Description                                                  |\n| ------------- | --------------- | --------------------- | ------------------------------------------------------------ |\n| `server_url`  | `str`           | `\"api.bitbucket.org\"` | Bitbucket server URL (for Bitbucket Server instances).       |\n| `username`    | `Optional[str]` | `None`                | Bitbucket username. Uses BITBUCKET\\_USERNAME if not set.     |\n| `password`    | `Optional[str]` | `None`                | Bitbucket app password. Uses BITBUCKET\\_PASSWORD if not set. |\n| `token`       | `Optional[str]` | `None`                | Access token. Uses BITBUCKET\\_TOKEN if not set.              |\n| `workspace`   | `Optional[str]` | `None`                | Bitbucket workspace name (required).                         |\n| `repo_slug`   | `Optional[str]` | `None`                | Repository slug name (required).                             |\n| `api_version` | `str`           | `\"2.0\"`               | Bitbucket API version to use.                                |\n\n| Function                   | Description                                             |\n| -------------------------- | ------------------------------------------------------- |\n| `get_issue`                | Get details of a specific issue by ID.                  |\n| `get_issues`               | List all issues in the repository.                      |\n| `create_issue`             | Create a new issue in the repository.                   |\n| `update_issue`             | Update an existing issue.                               |\n| `get_pull_request`         | Get details of a specific pull request.                 |\n| `get_pull_requests`        | List all pull requests in the repository.               |\n| `create_pull_request`      | Create a new pull request.                              |\n| `update_pull_request`      | Update an existing pull request.                        |\n| `get_pull_request_diff`    | Get the diff/changes of a pull request.                 |\n| `get_pull_request_commits` | Get commits associated with a pull request.             |\n| `get_repository_info`      | Get detailed information about the repository.          |\n| `get_branches`             | List all branches in the repository.                    |\n| `get_commits`              | List commits in the repository.                         |\n| `get_file_content`         | Get the content of a specific file from the repository. |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/bitbucket.py)\n* [Bitbucket API Documentation](https://developer.atlassian.com/bitbucket/api/2/reference/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#bitbucket",
+  "links": []
+}

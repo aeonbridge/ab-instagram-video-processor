@@ -1,0 +1,264 @@
+{
+  "title": "Agno Infra",
+  "content": "Source: https://docs.agno.com/deploy/agno-infra\n\nThe Agno Infra SDK applies best practices to take your AgentOS to production. It lets you define, deploy, and manage your entire Agentic System as Python code. This library is used by the [AWS template](https://github.com/agno-agi/agent-infra-aws) to manage your infrastructure with support for more cloud providers coming soon.\n\n## Create a new Agno Infra project\n\nRun `ag infra create` to create a new infra project, the command will ask your for a starter template and infra project name.\n\n<CodeGroup>\n  \n</CodeGroup>\n\nAnd select a template from the list of available templates.\n\n## Start infra resources\n\nRun `ag infra up` to start i.e. create infra resources. This will start your AgentOS instance and PostgreSQL database locally using docker.\n\n## Stop infra resources\n\nRun `ag infra down` to stop i.e. delete infra resources\n\n## Patch infra resources\n\nRun `ag infra patch` to patch i.e. update infra resources\n\n<Note>\n  The `patch` command in under development for some resources. Use `restart` if needed\n</Note>\n\nRun `ag infra restart` to stop resources and start them again\n\n<Note>Run `ag infra up --help` to view all options</Note>\n\n### Environment (`--env`)\n\nUse the `--env` or `-e` flag to filter the environment (dev/prd)\n\n### Infra (`--infra`)\n\nUse the `--infra` or `-i` flag to filter the infra (docker/aws/k8s)\n\n### Group (`--group`)\n\nUse the `--group` or `-g` flag to filter by resource group.\n\nUse the `--name` or `-n` flag to filter by resource name\n\nUse the `--type` or `-t` flag to filter by resource type.\n\n### Dry Run (`--dry-run`)\n\nThe `--dry-run` or `-dr` flag can be used to **dry-run** the command. `ag infra up -dr` will only print resources, not create them.\n\n### Show Debug logs (`--debug`)\n\nUse the `--debug` or `-d` flag to show debug logs.\n\n### Force recreate images & containers (`-f`)\n\nUse the `--force` or `-f` flag to force recreate images & containers",
+  "code_samples": [
+    {
+      "code": "</CodeGroup>\n\nAnd select a template from the list of available templates.\n\n## Start infra resources\n\nRun `ag infra up` to start i.e. create infra resources. This will start your AgentOS instance and PostgreSQL database locally using docker.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Stop infra resources\n\nRun `ag infra down` to stop i.e. delete infra resources\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Patch infra resources\n\nRun `ag infra patch` to patch i.e. update infra resources\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n<br />\n\n<Note>\n  The `patch` command in under development for some resources. Use `restart` if needed\n</Note>\n\n## Restart infra\n\nRun `ag infra restart` to stop resources and start them again\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Command Options\n\n<Note>Run `ag infra up --help` to view all options</Note>\n\n### Environment (`--env`)\n\nUse the `--env` or `-e` flag to filter the environment (dev/prd)\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Infra (`--infra`)\n\nUse the `--infra` or `-i` flag to filter the infra (docker/aws/k8s)\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Group (`--group`)\n\nUse the `--group` or `-g` flag to filter by resource group.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Name (`--name`)\n\nUse the `--name` or `-n` flag to filter by resource name\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Type (`--type`)\n\nUse the `--type` or `-t` flag to filter by resource type.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Dry Run (`--dry-run`)\n\nThe `--dry-run` or `-dr` flag can be used to **dry-run** the command. `ag infra up -dr` will only print resources, not create them.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Show Debug logs (`--debug`)\n\nUse the `--debug` or `-d` flag to show debug logs.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Force recreate images & containers (`-f`)\n\nUse the `--force` or `-f` flag to force recreate images & containers\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Create a new Agno Infra project",
+      "id": "create-a-new-agno-infra-project"
+    },
+    {
+      "level": "h2",
+      "text": "Start infra resources",
+      "id": "start-infra-resources"
+    },
+    {
+      "level": "h2",
+      "text": "Stop infra resources",
+      "id": "stop-infra-resources"
+    },
+    {
+      "level": "h2",
+      "text": "Patch infra resources",
+      "id": "patch-infra-resources"
+    },
+    {
+      "level": "h2",
+      "text": "Restart infra",
+      "id": "restart-infra"
+    },
+    {
+      "level": "h2",
+      "text": "Command Options",
+      "id": "command-options"
+    },
+    {
+      "level": "h3",
+      "text": "Environment (`--env`)",
+      "id": "environment-(`--env`)"
+    },
+    {
+      "level": "h3",
+      "text": "Infra (`--infra`)",
+      "id": "infra-(`--infra`)"
+    },
+    {
+      "level": "h3",
+      "text": "Group (`--group`)",
+      "id": "group-(`--group`)"
+    },
+    {
+      "level": "h3",
+      "text": "Name (`--name`)",
+      "id": "name-(`--name`)"
+    },
+    {
+      "level": "h3",
+      "text": "Type (`--type`)",
+      "id": "type-(`--type`)"
+    },
+    {
+      "level": "h3",
+      "text": "Dry Run (`--dry-run`)",
+      "id": "dry-run-(`--dry-run`)"
+    },
+    {
+      "level": "h3",
+      "text": "Show Debug logs (`--debug`)",
+      "id": "show-debug-logs-(`--debug`)"
+    },
+    {
+      "level": "h3",
+      "text": "Force recreate images & containers (`-f`)",
+      "id": "force-recreate-images-&-containers-(`-f`)"
+    }
+  ],
+  "url": "llms-txt#agno-infra",
+  "links": []
+}

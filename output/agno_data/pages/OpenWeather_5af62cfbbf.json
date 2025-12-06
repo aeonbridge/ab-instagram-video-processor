@@ -1,0 +1,24 @@
+{
+  "title": "OpenWeather",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/openweather\n\n**OpenWeatherTools** enable an Agent to access weather data from the OpenWeatherMap API.\n\nThe following example requires the `requests` library and an API key which can be obtained from [OpenWeatherMap](https://openweathermap.org/api). Once you sign up the mentioned api key will be activated in a few hours so please be patient.\n\nThe following agent will use OpenWeatherMap to get current weather information for Tokyo.\n\n```python cookbook/tools/openweather_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.openweather import OpenWeatherTools",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will use OpenWeatherMap to get current weather information for Tokyo.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#openweather",
+  "links": []
+}

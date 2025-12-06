@@ -1,0 +1,8 @@
+{
+  "title": "null",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/structured-io-at-each-step-level\n\nDemonstrates **Workflows 2.0** type-safe data flow between agents/teams/custom python functions. Each step:\n\n1. Receives structured (pydantic model, list, dict or raw string) input\n2. Produces structured output (e.g., `ResearchFindings`, `ContentStrategy`)\n\nYou can also use this pattern to create a custom function that can be used in any step and you can-\n\n1. Inspect incoming data types (raw strings or Pydantic models).\n2. Analyze structured outputs from previous steps.\n3. Generate reports while preserving type safety.\n\n```python structured_io_at_each_step_level_agent.py theme={null}\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel, Field",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#null",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Run Agent Infra AWS Locally",
+  "content": "Source: https://docs.agno.com/templates/agent-infra-aws/run-local\n\n<Snippet file=\"run-agent-infra-aws-local.mdx\" />\n\nWhen you are happy with your AgentOS, its time to deploy it to AWS!",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-agent-infra-aws-locally",
+  "links": []
+}

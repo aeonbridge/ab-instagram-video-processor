@@ -1,0 +1,28 @@
+{
+  "title": "Expensive model for main conversations",
+  "content": "agent = Agent(\n    db=db,\n    model=OpenAIChat(id=\"gpt-4o\"),\n    memory_manager=memory_manager,\n    enable_agentic_memory=True\n)\npython  theme={null}\nagent = Agent(\n    db=db,\n    enable_agentic_memory=True,\n    instructions=[\n        \"Only update memories when users share significant new information.\",\n        \"Don't create memories for casual conversation or temporary states.\",\n        \"Batch multiple memory updates together when possible.\"\n    ]\n)\npython  theme={null}\nfrom datetime import datetime, timedelta\n\ndef prune_old_memories(db, user_id, days=90):\n    \"\"\"Remove memories older than 90 days\"\"\"\n    cutoff_timestamp = int((datetime.now() - timedelta(days=days)).timestamp())\n    \n    memories = db.get_user_memories(user_id=user_id)\n    for memory in memories:\n        if memory.updated_at and memory.updated_at < cutoff_timestamp:\n            db.delete_user_memory(memory_id=memory.memory_id)",
+  "code_samples": [
+    {
+      "code": "This approach can reduce memory-related costs by 98% while maintaining conversation quality.\n\n## Mitigation Strategy #3: Guide Memory Behavior with Instructions\n\nAdd explicit instructions to prevent frivolous memory updates:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Mitigation Strategy #4: Implement Memory Pruning\n\nPrevent memory bloat by periodically cleaning up old or irrelevant memories:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Mitigation Strategy #3: Guide Memory Behavior with Instructions",
+      "id": "mitigation-strategy-#3:-guide-memory-behavior-with-instructions"
+    },
+    {
+      "level": "h2",
+      "text": "Mitigation Strategy #4: Implement Memory Pruning",
+      "id": "mitigation-strategy-#4:-implement-memory-pruning"
+    }
+  ],
+  "url": "llms-txt#expensive-model-for-main-conversations",
+  "links": []
+}

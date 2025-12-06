@@ -1,0 +1,8 @@
+{
+  "title": "Step 2: Create your Agno agent",
+  "content": "agent = Agent(\n    name=\"Market Analysis Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[DuckDuckGoTools()],\n    instructions=\"Provide professional market analysis with data-driven insights.\",\n    debug_mode=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#step-2:-create-your-agno-agent",
+  "links": []
+}

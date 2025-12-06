@@ -1,0 +1,8 @@
+{
+  "title": "ContentsDB is required for AgentOS Knowledge page",
+  "content": "contents_db = PostgresDb(\n    db_url=\"postgresql+psycopg://user:pass@localhost:5432/db\"\n)\n\nvector_db = PgVector(table_name=\"vectors\", db_url=\"http://my-postgress:5432\")\n\nknowledge = Knowledge(\n    vector_db=vector_db,\n    contents_db=contents_db  # Must be provided for AgentOS\n)\n\nknowledge_agent = Agent(\n    name=\"Knowledge Agent\",\n    knowledge=knowledge\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#contentsdb-is-required-for-agentos-knowledge-page",
+  "links": []
+}

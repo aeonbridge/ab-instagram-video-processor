@@ -1,0 +1,14 @@
+{
+  "title": "the tool call loop will exit and the run will complete",
+  "content": "agent.print_response(\"Use the check_condition tool to check if 150 is acceptable\", stream=True)\n```\n\nIn this example, when `check_condition` is called with a value greater than 100, it raises `StopAgentRun`. The tool call loop exits immediately, and the run completes with status `COMPLETED`. All session state, messages, and tool calls up to that point are stored in the database.\n\n<Tip>\n  Make sure to set `AGNO_DEBUG=True` if you want to see the debug logs.\n</Tip>\n\n## Developer Resources\n\n* View the [RetryAgentRun schema](/reference/tools/retry-agent-run)\n* View the [StopAgentRun schema](/reference/tools/stop-agent-run)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/exceptions)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#the-tool-call-loop-will-exit-and-the-run-will-complete",
+  "links": []
+}

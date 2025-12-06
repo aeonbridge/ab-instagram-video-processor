@@ -1,0 +1,8 @@
+{
+  "title": "Memories are automatically created from this conversation",
+  "content": "agent.print_response(\"My name is Sarah and I prefer email over phone calls.\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#memories-are-automatically-created-from-this-conversation",
+  "links": []
+}

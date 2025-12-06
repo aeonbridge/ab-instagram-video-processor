@@ -1,0 +1,14 @@
+{
+  "title": "Async Basic Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/xai/usage/basic-async\n\n```python cookbook/models/xai/basic_async.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent, RunOutput\nfrom agno.models.xai import xAI\n\nagent = Agent(model=xAI(id=\"grok-3\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#async-basic-agent",
+  "links": []
+}

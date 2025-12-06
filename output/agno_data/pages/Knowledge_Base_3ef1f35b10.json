@@ -1,0 +1,24 @@
+{
+  "title": "Knowledge Base",
+  "content": "knowledge_base = Knowledge(\n    vector_db=vector_db,\n)\n\ndef lancedb_agent(user: str = \"user\"):\n    agent = Agent(\n        knowledge=knowledge_base,\n        debug_mode=True,\n    )\n\nwhile True:\n        message = Prompt.ask(f\"[bold] :sunglasses: {user} [/bold]\")\n        if message in (\"exit\", \"bye\"):\n            break\n        agent.print_response(message, session_id=f\"{user}_session\")\n\nif __name__ == \"__main__\":\n    # Comment out after first run\n    knowledge_base.add_content(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n\ntyper.run(lancedb_agent)\npython async_lance_db.py theme={null}\n    # install lancedb - `pip install lancedb`\n    import asyncio\n\nfrom agno.agent import Agent\n    from agno.knowledge.knowledge import Knowledge\n    from agno.vectordb.lancedb import LanceDb\n\n# Initialize LanceDB\n    vector_db = LanceDb(\n        table_name=\"recipes\",\n        uri=\"tmp/lancedb\",  # You can change this path to store data elsewhere\n    )\n\n# Create knowledge base\n    knowledge_base = Knowledge(\n        vector_db=vector_db,\n    )\n    agent = Agent(knowledge=knowledge_base, debug_mode=True)\n\nif __name__ == \"__main__\":\n        # Load knowledge base asynchronously\n        asyncio.run(knowledge_base.add_content_async(\n                url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n            )\n        )\n\n# Create and use the agent asynchronously\n        asyncio.run(agent.aprint_response(\"How to make Tom Kha Gai\", markdown=True))\n    ```\n\n<Tip className=\"mt-4\">\n      Use <code>aload()</code> and <code>aprint\\_response()</code> methods with <code>asyncio.run()</code> for non-blocking operations in high-throughput applications.\n    </Tip>\n  </div>\n</Card>\n\n<Snippet file=\"vectordb_lancedb_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook (Sync)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/lance_db/lance_db.py)",
+  "code_samples": [
+    {
+      "code": "<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      LanceDB also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "LanceDb Params",
+      "id": "lancedb-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#knowledge-base",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Human-in-the-Loop Example",
+  "content": "Source: https://docs.agno.com/agent-os/usage/hitl\n\nAgentOS with tools requiring user confirmation\n\nThis example shows how to implement Human-in-the-Loop (HITL) flows in AgentOS. When an agent needs to execute a tool that requires confirmation, the run pauses and waits for user approval before proceeding.\n\n* Python 3.10 or higher\n* PostgreSQL with pgvector (setup instructions below)\n* OpenAI API key\n\n```python hitl_confirmation.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.tools import tool",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#human-in-the-loop-example",
+  "links": []
+}

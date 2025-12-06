@@ -1,0 +1,19 @@
+{
+  "title": "Use the agent - traces will be printed to console",
+  "content": "agent.print_response(\"What are the latest developments in AI agents?\")\npython  theme={null}\nimport openlit\nfrom agno.agent import Agent\nfrom agno.team import Team\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.yfinance import YFinanceTools",
+  "code_samples": [
+    {
+      "code": "### Example: Multi-Agent Team Tracing\n\nOpenLIT automatically traces complex multi-agent workflows:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Example: Multi-Agent Team Tracing",
+      "id": "example:-multi-agent-team-tracing"
+    }
+  ],
+  "url": "llms-txt#use-the-agent---traces-will-be-printed-to-console",
+  "links": []
+}

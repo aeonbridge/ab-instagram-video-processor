@@ -1,0 +1,8 @@
+{
+  "title": "Define the research agents",
+  "content": "hackernews_agent = Agent(\n    name=\"HackerNews Researcher\",\n    instructions=\"You are a researcher specializing in finding the latest tech news and discussions from Hacker News. Focus on startup trends, programming topics, and tech industry insights.\",\n    tools=[HackerNewsTools()],\n)\n\nweb_agent = Agent(\n    name=\"Web Researcher\",\n    instructions=\"You are a comprehensive web researcher. Search across multiple sources including news sites, blogs, and official documentation to gather detailed information.\",\n    tools=[DuckDuckGoTools()],\n)\n\ncontent_agent = Agent(\n    name=\"Content Publisher\",\n    instructions=\"You are a content creator who takes research data and creates engaging, well-structured articles. Format the content with proper headings, bullet points, and clear conclusions.\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-the-research-agents",
+  "links": []
+}

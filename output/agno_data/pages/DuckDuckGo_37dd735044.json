@@ -1,0 +1,39 @@
+{
+  "title": "DuckDuckGo",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/duckduckgo\n\n**DuckDuckGo** enables an Agent to search the web for information.\n\nThe following example requires the `ddgs` library. To install DuckDuckGo, run the following command:\n\n| Parameter           | Type            | Default | Description                                           |\n| ------------------- | --------------- | ------- | ----------------------------------------------------- |\n| `enable_search`     | `bool`          | `True`  | Enable DuckDuckGo search function.                    |\n| `enable_news`       | `bool`          | `True`  | Enable DuckDuckGo news function.                      |\n| `all`               | `bool`          | `False` | Enable all available functions in the toolkit.        |\n| `modifier`          | `Optional[str]` | `None`  | A modifier to be used in the search request.          |\n| `fixed_max_results` | `Optional[int]` | `None`  | A fixed number of maximum results.                    |\n| `proxy`             | `Optional[str]` | `None`  | Proxy to be used in the search request.               |\n| `timeout`           | `Optional[int]` | `10`    | The maximum number of seconds to wait for a response. |\n| `verify_ssl`        | `bool`          | `True`  | Whether to verify SSL certificates.                   |\n\n| Function            | Description                                                                                                                                                                             |\n| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `duckduckgo_search` | Search DuckDuckGo for a query. Parameters include `query` (str) for the search query and `max_results` (int, default=5) for maximum results. Returns JSON formatted search results.     |\n| `duckduckgo_news`   | Get the latest news from DuckDuckGo. Parameters include `query` (str) for the search query and `max_results` (int, default=5) for maximum results. Returns JSON formatted news results. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/duckduckgo.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/duckduckgo_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#duckduckgo",
+  "links": []
+}

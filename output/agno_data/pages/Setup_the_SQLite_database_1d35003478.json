@@ -1,0 +1,8 @@
+{
+  "title": "Setup the SQLite database",
+  "content": "db = SqliteDb(db_file=\"tmp/data.db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-sqlite-database",
+  "links": []
+}

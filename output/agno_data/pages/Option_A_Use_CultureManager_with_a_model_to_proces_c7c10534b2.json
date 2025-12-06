@@ -1,0 +1,8 @@
+{
+  "title": "Option A: Use CultureManager with a model to process principles",
+  "content": "culture_manager = CultureManager(\n    db=db,\n    model=Claude(id=\"claude-sonnet-4-5\"),\n)\n\nmessage = \"\"\"\nAll technical guidance should follow 'Operational Thinking':\n1. State the Objective — What outcome and why\n2. Show the Procedure — Clear, reproducible steps\n3. Surface Pitfalls — What usually fails\n4. Define Validation — How to confirm it works\n5. Close the Loop — Suggest next iterations\n\"\"\"\n\nculture_manager.create_cultural_knowledge(message=message)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#option-a:-use-culturemanager-with-a-model-to-process-principles",
+  "links": []
+}

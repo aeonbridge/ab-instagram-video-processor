@@ -1,0 +1,8 @@
+{
+  "title": "Agent 1 with its own database",
+  "content": "hackernews_agent = Agent(\n    name=\"HackerNews Agent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[HackerNewsTools()],\n    db=agent1_db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-1-with-its-own-database",
+  "links": []
+}

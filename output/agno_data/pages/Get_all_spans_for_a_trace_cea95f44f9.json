@@ -1,0 +1,19 @@
+{
+  "title": "Get all spans for a trace",
+  "content": "spans = db.get_spans(trace_id=trace.trace_id)\n\nfor span in spans:\n    print(f\"Span: {span.name}\")\n    print(f\"  Duration: {span.duration_ms}ms\")\n    print(f\"  Status: {span.status_code}\")\n    \n    # Check for token usage (LLM spans)\n    if span.attributes:\n        tokens = span.attributes.get(\"llm.token_count.completion\")\n        if tokens:\n            print(f\"  Tokens: {tokens}\")\npython  theme={null}\ndef print_span_tree(spans, parent_id=None, indent=0):\n    \"\"\"Recursively print spans as a tree.\"\"\"\n    for span in spans:\n        if span.parent_span_id == parent_id:\n            prefix = \"  \" * indent + (\"└─ \" if indent > 0 else \"\")\n            print(f\"{prefix}{span.name} ({span.duration_ms}ms)\")\n            print_span_tree(spans, span.span_id, indent + 1)",
+  "code_samples": [
+    {
+      "code": "## Building a Span Tree",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Building a Span Tree",
+      "id": "building-a-span-tree"
+    }
+  ],
+  "url": "llms-txt#get-all-spans-for-a-trace",
+  "links": []
+}

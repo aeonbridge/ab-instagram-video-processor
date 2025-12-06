@@ -1,0 +1,29 @@
+{
+  "title": "Reasoning",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/reasoning\n\nReasoningTools provides step-by-step reasoning capabilities for agents to think through complex problems systematically.\n\nThe following agent can use structured reasoning to solve complex problems:\n\n| Parameter           | Type            | Default | Description                                 |\n| ------------------- | --------------- | ------- | ------------------------------------------- |\n| `enable_think`      | `bool`          | `True`  | Enable the think reasoning function.        |\n| `enable_analyze`    | `bool`          | `True`  | Enable the analyze reasoning function.      |\n| `instructions`      | `Optional[str]` | `None`  | Custom instructions for reasoning behavior. |\n| `add_instructions`  | `bool`          | `False` | Whether to add instructions to the agent.   |\n| `add_few_shot`      | `bool`          | `False` | Whether to include few-shot examples.       |\n| `few_shot_examples` | `Optional[str]` | `None`  | Custom few-shot examples for reasoning.     |\n\n| Function  | Description                                                  |\n| --------- | ------------------------------------------------------------ |\n| `think`   | Perform step-by-step reasoning about a problem or situation. |\n| `analyze` | Conduct detailed analysis with structured reasoning steps.   |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/reasoning.py)\n* [Agno Reasoning Framework](https://docs.agno.com/reasoning)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#reasoning",
+  "links": []
+}

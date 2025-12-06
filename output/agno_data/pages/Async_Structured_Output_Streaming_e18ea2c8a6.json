@@ -1,0 +1,14 @@
+{
+  "title": "Async Structured Output Streaming",
+  "content": "Source: https://docs.agno.com/basics/input-output/team/usage/async-structured-output-streaming\n\nThis example demonstrates async structured output streaming from a team using Pydantic models to ensure structured responses while streaming, providing both real-time output and validated data structures asynchronously.\n\n```python cookbook/examples/teams/structured_input_output/05_async_structured_output_streaming.py theme={null}\n\"\"\"\nThis example demonstrates async structured output streaming from a team.\n\nThe team uses Pydantic models to ensure structured responses while streaming,\nproviding both real-time output and validated data structures asynchronously.\n\"\"\"\n\nimport asyncio\nfrom typing import Iterator  # noqa\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.tools.exa import ExaTools\nfrom agno.utils.pprint import apprint_run_response\nfrom pydantic import BaseModel\n\nclass StockAnalysis(BaseModel):\n    \"\"\"Stock analysis data structure.\"\"\"\n\nsymbol: str\n    company_name: str\n    analysis: str\n\nclass CompanyAnalysis(BaseModel):\n    \"\"\"Company analysis data structure.\"\"\"\n\ncompany_name: str\n    analysis: str\n\nclass StockReport(BaseModel):\n    \"\"\"Final stock report data structure.\"\"\"\n\nsymbol: str\n    company_name: str\n    analysis: str",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#async-structured-output-streaming",
+  "links": []
+}

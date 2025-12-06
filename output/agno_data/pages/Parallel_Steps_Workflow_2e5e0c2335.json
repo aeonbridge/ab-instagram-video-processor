@@ -1,0 +1,8 @@
+{
+  "title": "Parallel Steps Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/parallel-steps-workflow\n\nThis example demonstrates **Workflows 2.0** parallel execution for independent tasks that can run simultaneously. Shows how to optimize workflow performance by executing non-dependent steps in parallel, significantly reducing total execution time.\n\nThis example demonstrates **Workflows 2.0** parallel execution for independent tasks that\ncan run simultaneously. Shows how to optimize workflow performance by executing\nnon-dependent steps in parallel, significantly reducing total execution time.\n\n**When to use**: When you have independent tasks that don't depend on each other's output\nbut can contribute to the same final goal. Ideal for research from multiple sources,\nparallel data processing, or any scenario where tasks can run simultaneously.\n\n```python parallel_steps_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow import Step, Workflow\nfrom agno.workflow.parallel import Parallel",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#parallel-steps-workflow",
+  "links": []
+}

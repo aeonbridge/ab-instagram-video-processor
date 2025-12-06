@@ -1,0 +1,8 @@
+{
+  "title": "Knowledge Searcher Agent - Specialized in finding relevant information",
+  "content": "knowledge_searcher = Agent(\n    name=\"Knowledge Searcher\",\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    role=\"Search and retrieve relevant information from the knowledge base\",\n    knowledge=knowledge,\n    search_knowledge=True,\n    instructions=[\n        \"You are responsible for searching the knowledge base thoroughly.\",\n        \"Find all relevant information for the user's query.\",\n        \"Provide detailed search results with context and sources.\",\n        \"Focus on comprehensive information retrieval.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#knowledge-searcher-agent---specialized-in-finding-relevant-information",
+  "links": []
+}

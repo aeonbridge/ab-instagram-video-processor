@@ -1,0 +1,8 @@
+{
+  "title": "Works with agentic filtering (agent decides filters dynamically)",
+  "content": "knowledge_filters = [{\"department\": \"hr\", \"document_type\": \"policy\"}]",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#works-with-agentic-filtering-(agent-decides-filters-dynamically)",
+  "links": []
+}

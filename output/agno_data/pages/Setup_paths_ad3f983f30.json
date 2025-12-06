@@ -1,0 +1,8 @@
+{
+  "title": "Setup paths",
+  "content": "cwd = Path(__file__).parent\ntmp_dir = cwd.joinpath(\"tmp\")\ntmp_dir.mkdir(parents=True, exist_ok=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-paths",
+  "links": []
+}

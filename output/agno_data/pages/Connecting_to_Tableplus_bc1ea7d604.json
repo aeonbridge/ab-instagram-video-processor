@@ -1,0 +1,19 @@
+{
+  "title": "Connecting to Tableplus",
+  "content": "Source: https://docs.agno.com/faq/connecting-to-tableplus\n\nIf you want to inspect your pgvector container to explore your storage or knowledge base, you can use TablePlus. Follow these steps:\n\n## Step 1: Start Your `pgvector` Container\n\nRun the following command to start a `pgvector` container locally:\n\n* `POSTGRES_DB=ai` sets the default database name.\n* `POSTGRES_USER=ai` and `POSTGRES_PASSWORD=ai` define the database credentials.\n* The container exposes port `5432` (mapped to `5532` on your local machine).\n\n## Step 2: Configure TablePlus\n\n1. **Open TablePlus**: Launch the TablePlus application.\n2. **Create a New Connection**: Click on the `+` icon to add a new connection.\n3. **Select `PostgreSQL`**: Choose PostgreSQL as the database type.\n\nFill in the following connection details:\n\n* **Host**: `localhost`\n* **Port**: `5532`\n* **Database**: `ai`\n* **User**: `ai`\n* **Password**: `ai`\n\n<img src=\"https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/tableplus.png?fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=65f0ec170fdef92080bdc0e72feaacc4\" data-og-width=\"492\" width=\"492\" data-og-height=\"386\" height=\"386\" data-path=\"images/tableplus.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/tableplus.png?w=280&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=4c693a789381ec09ee8112a29a19a23f 280w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/tableplus.png?w=560&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=83b7b78de5bb7e3e04337380be4a846a 560w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/tableplus.png?w=840&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=a933eddefc5117323116e34eba956055 840w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/tableplus.png?w=1100&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=84a19124e98f325caa51ff1ee0032652 1100w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/tableplus.png?w=1650&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=0a60723cf13d5771fcc8d9f89bb921f2 1650w, https://mintcdn.com/agno-v2/yeT29TzCG5roT0hQ/images/tableplus.png?w=2500&fit=max&auto=format&n=yeT29TzCG5roT0hQ&q=85&s=24d6892323098fdd654dcf4fcf579419 2500w\" />",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Step 1: Start Your `pgvector` Container",
+      "id": "step-1:-start-your-`pgvector`-container"
+    },
+    {
+      "level": "h2",
+      "text": "Step 2: Configure TablePlus",
+      "id": "step-2:-configure-tableplus"
+    }
+  ],
+  "url": "llms-txt#connecting-to-tableplus",
+  "links": []
+}

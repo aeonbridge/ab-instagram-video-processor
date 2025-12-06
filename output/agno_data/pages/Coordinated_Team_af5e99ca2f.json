@@ -1,0 +1,8 @@
+{
+  "title": "Coordinated Team",
+  "content": "finance_team = Team(\n    name=\"Finance Research Team\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    members=[research_agent, finance_agent],\n    instructions=[\n        \"Collaborate to provide comprehensive financial insights\",\n        \"Consider both fundamental analysis and market sentiment\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#coordinated-team",
+  "links": []
+}

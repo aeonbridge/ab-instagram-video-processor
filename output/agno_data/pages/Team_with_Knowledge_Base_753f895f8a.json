@@ -1,0 +1,14 @@
+{
+  "title": "Team with Knowledge Base",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/usage/team-with-knowledge\n\nThis example demonstrates how to create a team with knowledge base integration. The team has access to a knowledge base with Agno documentation and can combine this knowledge with web search capabilities.\n\n```python cookbook/examples/teams/knowledge/01_team_with_knowledge.py theme={null}\n\"\"\"\nThis example demonstrates how to create a team with knowledge base integration.\n\nThe team has access to a knowledge base with Agno documentation and can combine\nthis knowledge with web search capabilities.\n\"\"\"\n\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.vectordb.lancedb import LanceDb, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-with-knowledge-base",
+  "links": []
+}

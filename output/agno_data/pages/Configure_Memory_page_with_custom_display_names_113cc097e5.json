@@ -1,0 +1,8 @@
+{
+  "title": "Configure Memory page with custom display names",
+  "content": "memory:\n  display_name: \"User Memory Store\"\n  dbs:\n    - db_id: db-0001\n      tables: [\"custom_memory_table\"]  # Optional: specify custom table names\n      domain_config:\n        display_name: Main app user memories\n    - db_id: db-0002\n      domain_config:\n        display_name: Support flow user memories",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-memory-page-with-custom-display-names",
+  "links": []
+}

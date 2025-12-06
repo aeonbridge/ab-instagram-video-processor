@@ -1,0 +1,14 @@
+{
+  "title": "Async Events Streaming",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/async-events-streaming\n\nThis example demonstrates how to stream events from a workflow.\n\n```python async_events_streaming.py theme={null}\nimport asyncio\nfrom textwrap import dedent\nfrom typing import AsyncIterator\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.run.workflow import WorkflowRunOutputEvent, WorkflowRunEvent\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.types import StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#async-events-streaming",
+  "links": []
+}

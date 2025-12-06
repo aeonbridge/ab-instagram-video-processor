@@ -1,0 +1,24 @@
+{
+  "title": "MongoDB for Workflow",
+  "content": "Source: https://docs.agno.com/integrations/database/mongo/usage/mongodb-for-workflow\n\nAgno supports using MongoDB as a storage backend for Workflows using the `MongoDBDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **MongoDB** on port **27017** using:\n\n```python mongodb_for_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.mongodb import MongoDBDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\n\ndb_url = \"mongodb://localhost:27017\"\n\ndb = MongoDb(db_url=db_url)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run MongoDB",
+      "id": "run-mongodb"
+    }
+  ],
+  "url": "llms-txt#mongodb-for-workflow",
+  "links": []
+}

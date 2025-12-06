@@ -1,0 +1,8 @@
+{
+  "title": "Create team members",
+  "content": "hn_researcher = Agent(\n    name=\"HackerNews Researcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    tools=[HackerNewsTools()],\n)\n\nweb_searcher = Agent(\n    name=\"Web Searcher\", \n    model=OpenAIChat(\"gpt-5-mini\"),\n    tools=[DuckDuckGoTools()],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-team-members",
+  "links": []
+}

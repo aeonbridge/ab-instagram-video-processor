@@ -1,0 +1,39 @@
+{
+  "title": "Memori",
+  "content": "Source: https://docs.agno.com/integrations/memory/memori\n\nMemori is an open-source memory layer for AI. It automatically captures conversations, extracts meaningful facts, and makes them searchable across entities, processes, and sessions.\n\nThe following example requires the `memori` library.\n\nThe following agent uses Memori to maintain persistent memory across conversations with SQLite:\n\n* **LLM Agnostic**: OpenAI, Anthropic, Bedrock, Gemini, Grok (xAI) - all modes (streamed, unstreamed, sync, async)\n* **Smart Attribution**: Track memories by entity (e.g., customer) and process (e.g., support agent)\n* **Advanced Augmentation**: AI-powered memory augmentation with no latency impact\n* **Database Flexibility**: Supports PostgreSQL, MySQL/MariaDB, SQLite, MongoDB, CockroachDB, Neon, Supabase, Oracle, and more\n\n1. **Create Database Engine**: Use SQLAlchemy to create a database connection\n2. **Initialize Memori**: Create a Memori instance with the database session\n3. **Register with Model**: Register Memori with your Agno agent using `.agno.register()`\n4. **Set Attribution**: Define entity and process IDs for memory tracking\n5. **Build Storage**: Initialize the database schema with `.config.storage.build()`\n\n## Developer Resources\n\n* [Memori SDK Documentation](https://memorilabs.ai/docs/)\n* [Memori GitHub Repository](https://github.com/MemoriLabs/Memori)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent uses Memori to maintain persistent memory across conversations with SQLite:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    },
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#memori",
+  "links": []
+}

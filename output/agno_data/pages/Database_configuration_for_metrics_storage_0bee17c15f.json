@@ -1,0 +1,8 @@
+{
+  "title": "Database configuration for metrics storage",
+  "content": "db_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\ndb = PostgresDb(db_url=db_url, session_table=\"team_metrics_sessions\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#database-configuration-for-metrics-storage",
+  "links": []
+}

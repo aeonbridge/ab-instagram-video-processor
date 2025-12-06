@@ -1,0 +1,8 @@
+{
+  "title": "Knowledge",
+  "content": "Source: https://docs.agno.com/reference/knowledge/knowledge\n\nKnowledge is a class that manages knowledge bases for AI agents. It provides comprehensive knowledge management capabilities including adding new content to the knowledge base, searching the knowledge base and deleting content from the knowledge base.\n\n<Snippet file=\"knowledge-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#knowledge",
+  "links": []
+}

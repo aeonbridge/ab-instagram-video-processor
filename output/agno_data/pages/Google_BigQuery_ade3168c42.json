@@ -1,0 +1,29 @@
+{
+  "title": "Google BigQuery",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/database/google-bigquery\n\nGoogleBigQueryTools enables agents to interact with Google BigQuery for large-scale data analysis and SQL queries.\n\nThe following agent can query and analyze BigQuery datasets:\n\n| Parameter               | Type            | Default | Description                                           |\n| ----------------------- | --------------- | ------- | ----------------------------------------------------- |\n| `dataset`               | `str`           | `None`  | BigQuery dataset name (required).                     |\n| `project`               | `Optional[str]` | `None`  | Google Cloud project ID. Uses GOOGLE\\_CLOUD\\_PROJECT. |\n| `location`              | `Optional[str]` | `None`  | BigQuery location. Uses GOOGLE\\_CLOUD\\_LOCATION.      |\n| `credentials`           | `Optional[Any]` | `None`  | Google Cloud credentials object.                      |\n| `enable_list_tables`    | `bool`          | `True`  | Enable table listing functionality.                   |\n| `enable_describe_table` | `bool`          | `True`  | Enable table description functionality.               |\n| `enable_run_sql_query`  | `bool`          | `True`  | Enable SQL query execution functionality.             |\n\n| Function         | Description                                             |\n| ---------------- | ------------------------------------------------------- |\n| `list_tables`    | List all tables in the specified BigQuery dataset.      |\n| `describe_table` | Get detailed schema information about a specific table. |\n| `run_sql_query`  | Execute SQL queries on BigQuery datasets.               |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/google_bigquery.py)\n* [BigQuery Documentation](https://cloud.google.com/bigquery/docs)\n* [BigQuery SQL Reference](https://cloud.google.com/bigquery/docs/reference/standard-sql/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#google-bigquery",
+  "links": []
+}

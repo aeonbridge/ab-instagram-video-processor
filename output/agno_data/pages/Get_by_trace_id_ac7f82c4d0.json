@@ -1,0 +1,8 @@
+{
+  "title": "Get by trace_id",
+  "content": "trace = db.get_trace(trace_id=\"abc123...\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-by-trace_id",
+  "links": []
+}

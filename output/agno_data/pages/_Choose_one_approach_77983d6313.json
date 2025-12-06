@@ -1,0 +1,8 @@
+{
+  "title": "✅ Choose one approach",
+  "content": "agent = Agent(db=db, enable_user_memories=True)  # Automatic",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#✅-choose-one-approach",
+  "links": []
+}

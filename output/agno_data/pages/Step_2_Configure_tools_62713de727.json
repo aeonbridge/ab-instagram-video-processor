@@ -1,0 +1,8 @@
+{
+  "title": "Step 2: Configure tools",
+  "content": "tools = [\n    XTools(\n        include_post_metrics=True,\n        wait_on_rate_limit=True,\n    ),\n    ExaTools(\n        num_results=10,\n        include_domains=[\"reddit.com\", \"news.ycombinator.com\", \"medium.com\"],\n        exclude_domains=[\"spam-site.com\"],\n    )\n]",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#step-2:-configure-tools",
+  "links": []
+}

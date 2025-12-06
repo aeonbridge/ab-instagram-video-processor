@@ -1,0 +1,14 @@
+{
+  "title": "Enable AgentOS MCP",
+  "content": "Source: https://docs.agno.com/agent-os/usage/mcp/enable-mcp-example\n\nComplete AgentOS setup with MCP support enabled\n\n```python cookbook/agent_os/mcp/enable_mcp_example.py theme={null}\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.anthropic import Claude\nfrom agno.os import AgentOS\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#enable-agentos-mcp",
+  "links": []
+}

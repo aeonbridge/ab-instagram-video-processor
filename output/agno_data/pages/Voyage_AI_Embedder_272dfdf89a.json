@@ -1,0 +1,14 @@
+{
+  "title": "Voyage AI Embedder",
+  "content": "Source: https://docs.agno.com/basics/knowledge/embedder/voyageai/overview\n\nThe `VoyageAIEmbedder` class is used to embed text data into vectors using the Voyage AI API. Get your key from [here](https://dash.voyageai.com/api-keys).\n\n```python voyageai_embedder.py theme={null}\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\nfrom agno.knowledge.embedder.voyageai import VoyageAIEmbedder",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#voyage-ai-embedder",
+  "links": []
+}

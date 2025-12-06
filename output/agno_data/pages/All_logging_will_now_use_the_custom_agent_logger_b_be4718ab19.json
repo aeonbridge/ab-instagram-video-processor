@@ -1,0 +1,8 @@
+{
+  "title": "All logging will now use the custom agent logger by default",
+  "content": "log_info(\"Using custom loggers!\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#all-logging-will-now-use-the-custom-agent-logger-by-default",
+  "links": []
+}

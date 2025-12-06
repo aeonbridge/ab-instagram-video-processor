@@ -1,0 +1,8 @@
+{
+  "title": "Initialize Upstash DB",
+  "content": "knowledge = Knowledge(\n    name=\"Basic SDK Knowledge Base\",\n    description=\"Agno 2.0 Knowledge Implementation with Upstash Vector DB\",\n    vector_db=vector_db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-upstash-db",
+  "links": []
+}

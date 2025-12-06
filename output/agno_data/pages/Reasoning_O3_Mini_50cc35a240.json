@@ -1,0 +1,14 @@
+{
+  "title": "Reasoning O3 Mini",
+  "content": "Source: https://docs.agno.com/integrations/models/native/openai/responses/usage/reasoning-o3-mini\n\n```python cookbook/models/openai/responses/reasoning_o3_mini.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIResponses\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nagent = Agent(\n    model=OpenAIResponses(id=\"gpt-5-mini\"),\n    tools=[DuckDuckGoTools()],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#reasoning-o3-mini",
+  "links": []
+}

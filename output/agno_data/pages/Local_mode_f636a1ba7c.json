@@ -1,0 +1,8 @@
+{
+  "title": "Local mode",
+  "content": "embedder = VLLMEmbedder(\n    id=\"intfloat/e5-mistral-7b-instruct\",\n    dimensions=4096,\n    enforce_eager=True,\n    vllm_kwargs={\n        \"disable_sliding_window\": True,\n        \"max_model_len\": 4096,\n    },\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#local-mode",
+  "links": []
+}

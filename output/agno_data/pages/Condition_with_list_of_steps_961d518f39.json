@@ -1,0 +1,8 @@
+{
+  "title": "Condition with list of steps",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/condition-with-list-of-steps\n\nThis example demonstrates how to use conditional step to execute multiple steps in parallel.\n\nThis example demonstrates **Workflows 2.0** advanced conditional execution where conditions\ncan trigger multiple steps and run in parallel. Shows how to create sophisticated branching\nlogic with complex multi-step sequences based on content analysis.\n\n**When to use**: When different topics or content types require completely different\nprocessing pipelines. Ideal for adaptive workflows where the research methodology\nshould change based on the subject matter or complexity requirements.\n\n```python condition_with_list_of_steps.py theme={null}\nfrom agno.agent.agent import Agent\nfrom agno.tools.exa import ExaTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.condition import Condition\nfrom agno.workflow.parallel import Parallel\nfrom agno.workflow.step import Step\nfrom agno.workflow.types import StepInput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#condition-with-list-of-steps",
+  "links": []
+}

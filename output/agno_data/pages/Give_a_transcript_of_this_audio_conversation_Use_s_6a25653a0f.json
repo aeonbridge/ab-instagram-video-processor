@@ -1,0 +1,19 @@
+{
+  "title": "Give a transcript of this audio conversation. Use speaker A, speaker B to identify speakers.",
+  "content": "agent.print_response(\n    \"Give a transcript of this audio conversation. Use speaker A, speaker B to identify speakers.\",\n    audio=[Audio(content=audio_content)],\n    stream=True,\n)\npython cookbook/teams/multimodal/audio_to_text.py theme={null}\nimport requests\nfrom agno.agent import Agent\nfrom agno.media import Audio\nfrom agno.models.google import Gemini\nfrom agno.team import Team\n\ntranscription_specialist = Agent(\n    name=\"Transcription Specialist\",\n    role=\"Convert audio to accurate text transcriptions\",\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    instructions=[\n        \"Transcribe audio with high accuracy\",\n        \"Identify speakers clearly as Speaker A, Speaker B, etc.\",\n        \"Maintain conversation flow and context\",\n    ],\n)\n\ncontent_analyzer = Agent(\n    name=\"Content Analyzer\",\n    role=\"Analyze transcribed content for insights\",\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    instructions=[\n        \"Analyze transcription for key themes and insights\",\n        \"Provide summaries and extract important information\",\n    ],\n)",
+  "code_samples": [
+    {
+      "code": "**Best for**: Direct model integration, conversation understanding\n\n## Team-Based Transcription\n\nTeams can handle complex audio processing workflows with multiple specialized agents.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Team-Based Transcription",
+      "id": "team-based-transcription"
+    }
+  ],
+  "url": "llms-txt#give-a-transcript-of-this-audio-conversation.-use-speaker-a,-speaker-b-to-identify-speakers.",
+  "links": []
+}

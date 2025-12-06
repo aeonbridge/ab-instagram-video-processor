@@ -1,0 +1,49 @@
+{
+  "title": "Knowledge Contents DB",
+  "content": "Source: https://docs.agno.com/basics/knowledge/content-db\n\nLearn how to add a Content DB to your Knowledge.\n\nThe Contents Database (Contents DB) is an optional component that enhances Knowledge with content tracking and management features. It acts as a control layer that maintains detailed records of all content added to your `Knowledge`.\n\n## What is Contents DB?\n\nContents DB is a table in your database that keeps track of what content you've added to your Knowledge base.\nWhile your vector database stores the actual content for search, this table tracks what you've added, when you added it, and its processing status.\n\n* **Vector Database**: Stores embeddings and chunks for semantic search\n* **Contents Database**: Tracks content metadata, status, and when coupled with [AgentOS Knowledge](/agent-os/features/knowledge-management), provides management of your knowledge via API.\n\n<Note>\n  You need a contents database with your Knowledge base to use [agentic filtering](/basics/knowledge/filters/agentic-filters).\n</Note>\n\n## Why Use ContentsDB?\n\n### Content Visibility and Control\n\nWithout ContentsDB, managing your knowledge and vectors is difficult - you can search it, but you can't manage individual pieces of content or alter all the vectors created from a single piece of content.\n\nWith ContentsDB, you gain full visibility:\n\n* See all content that has been added\n* Track processing status of each item\n* View metadata and file information\n* Monitor access patterns and usage\n\n### Powerful Management Capabilities\n\n* **Edit names, descriptions and metadata** for existing content\n* **Delete specific content** and automatically clean up associated vectors\n* **Update content** without rebuilding the entire knowledge base\n* **Batch operations** for managing multiple content items\n* **Status tracking** to monitor processing success/failure\n\n### Required for AgentOS\n\nIf you're using AgentOS, ContentsDB is **mandatory** for the Knowledge page functionality. The AgentOS web interface relies on ContentsDB to display and manage your knowledge content.\n\n## Setting Up ContentsDB\n\n### Choose Your Database\n\nAgno supports multiple database backends for ContentsDB:\n\n* **[PostgreSQL](/integrations/database/postgres/overview)** - Recommended for production\n* **[SQLite](/integrations/database/sqlite/overview)** - Great for development and single-user applications\n* **[MySQL](/integrations/database/mysql/overview)** - Enterprise-ready relational database\n* **[MongoDB](/integrations/database/mongo/overview)** - Document-based NoSQL option\n* **[Redis](/integrations/database/redis/overview)** - In-memory option for high performance\n* **[In-Memory](/integrations/database/in-memory/overview)** - Temporary storage for testing\n* **Cloud Options** - [DynamoDB](/integrations/database/dynamodb/overview), [Firestore](/integrations/database/firestore/overview), [GCS](/integrations/database/gcs/overview)\n\n### Basic Setup Example\n\n```python  theme={null}\nfrom agno.knowledge import Knowledge\nfrom agno.db.postgres import PostgresDb\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What is Contents DB?",
+      "id": "what-is-contents-db?"
+    },
+    {
+      "level": "h2",
+      "text": "Why Use ContentsDB?",
+      "id": "why-use-contentsdb?"
+    },
+    {
+      "level": "h3",
+      "text": "Content Visibility and Control",
+      "id": "content-visibility-and-control"
+    },
+    {
+      "level": "h3",
+      "text": "Powerful Management Capabilities",
+      "id": "powerful-management-capabilities"
+    },
+    {
+      "level": "h3",
+      "text": "Required for AgentOS",
+      "id": "required-for-agentos"
+    },
+    {
+      "level": "h2",
+      "text": "Setting Up ContentsDB",
+      "id": "setting-up-contentsdb"
+    },
+    {
+      "level": "h3",
+      "text": "Choose Your Database",
+      "id": "choose-your-database"
+    },
+    {
+      "level": "h3",
+      "text": "Basic Setup Example",
+      "id": "basic-setup-example"
+    }
+  ],
+  "url": "llms-txt#knowledge-contents-db",
+  "links": []
+}

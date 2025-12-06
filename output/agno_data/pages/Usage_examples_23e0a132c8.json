@@ -1,0 +1,19 @@
+{
+  "title": "Usage examples",
+  "content": "media_workflow.print_response(\"Create an image of a magical forest\", markdown=True)\nmedia_workflow.print_response(\"Create a cinematic video of city timelapse\", markdown=True)\n```\n\n## Developer Resources\n\n* [`workflow_using_steps.py`](/basics/workflows/usage/workflow-using-steps)\n* [`workflow_using_steps_nested.py`](/basics/workflows/usage/workflow-using-steps-nested)\n* [`selector_for_image_video_generation_pipelines.py`](/basics/workflows/usage/selector-for-image-video-generation-pipelines)\n\nFor complete API documentation, see [Steps Reference](/reference/workflows/steps-step).",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    },
+    {
+      "level": "h2",
+      "text": "Reference",
+      "id": "reference"
+    }
+  ],
+  "url": "llms-txt#usage-examples",
+  "links": []
+}

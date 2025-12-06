@@ -1,0 +1,23 @@
+{
+  "title": "- \"Get the top 5 stories (you can try accepting and declining the confirmation)\"",
+  "content": "response = agent.run(\"What are the top 2 hackernews stories?\")\n\nfor requirement in run_response.active_requirements:\n    if requirement.needs_confirmation:\n        # Ask for confirmation\n        console.print(\n            f\"Tool name [bold blue]{requirement.tool.tool_name}({requirement.tool.tool_args})[/] requires confirmation.\"\n        )\n        message = (\n            Prompt.ask(\"Do you want to continue?\", choices=[\"y\", \"n\"], default=\"y\")\n            .strip()\n            .lower()\n        )\n\n# Confirm or reject the requirement\n        if message == \"n\":\n            requirement.reject()\n        else:\n            requirement.confirm()\n\nrun_response = agent.continue_run(\n    run_id=run_response.run_id,\n    requirements=run_response.requirements,\n)\npprint.pprint_run_response(run_response)\nbash  theme={null}\n    pip install openai agno\n    bash  theme={null}\n    python human_in_the_loop.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#--\"get-the-top-5-stories-(you-can-try-accepting-and-declining-the-confirmation)\"",
+  "links": []
+}

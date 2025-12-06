@@ -1,0 +1,14 @@
+{
+  "title": "ArXiv Reader Async",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/arxiv-reader-async\n\nThe **ArXiv Reader** with asynchronous processing allows you to search and read academic papers from the ArXiv preprint repository with better performance for concurrent operations.\n\n```python examples/basics/knowledge/readers/arxiv_reader_async.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.arxiv_reader import ArxivReader\nfrom agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\nknowledge = Knowledge(\n    # Table name: ai.arxiv_documents\n    vector_db=PgVector(\n        table_name=\"arxiv_documents\",\n        db_url=db_url,\n    ),\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#arxiv-reader-async",
+  "links": []
+}

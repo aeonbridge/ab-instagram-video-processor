@@ -1,0 +1,8 @@
+{
+  "title": "Create custom loggers for different components",
+  "content": "custom_agent_logger = logging.getLogger(\"agent_logger\")\ncustom_team_logger = logging.getLogger(\"team_logger\")\ncustom_workflow_logger = logging.getLogger(\"workflow_logger\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-custom-loggers-for-different-components",
+  "links": []
+}

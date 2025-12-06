@@ -1,0 +1,8 @@
+{
+  "title": "Setup database",
+  "content": "db = PostgresDb(db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-database",
+  "links": []
+}

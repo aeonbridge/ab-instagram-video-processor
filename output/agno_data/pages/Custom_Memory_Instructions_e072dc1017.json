@@ -1,0 +1,14 @@
+{
+  "title": "Custom Memory Instructions",
+  "content": "Source: https://docs.agno.com/basics/memory/working-with-memories/usage/custom-memory-instructions\n\nCreate user memories with an Agent by providing a either text or a list of messages.\n\n```python custom-memory-instructions.py theme={null}\nfrom agno.db.postgres import PostgresDb\nfrom agno.memory import MemoryManager\nfrom agno.models.anthropic.claude import Claude\nfrom agno.models.message import Message\nfrom agno.models.openai import OpenAIChat\nfrom rich.pretty import pprint\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\nmemory_db = PostgresDb(db_url=db_url)\n\nmemory = MemoryManager(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    memory_capture_instructions=\"\"\"\\\n                    Memories should only include details about the user's academic interests.\n                    Only include which subjects they are interested in.\n                    Ignore names, hobbies, and personal interests.\n                    \"\"\",\n    db=memory_db,\n)\n\njohn_doe_id = \"john_doe@example.com\"\n\nmemory.create_user_memories(\n    input=\"\"\"\\\nMy name is John Doe.\n\nI enjoy hiking in the mountains on weekends,\nreading science fiction novels before bed,\ncooking new recipes from different cultures,\nplaying chess with friends.\n\nI am interested to learn about the history of the universe and other astronomical topics.\n\"\"\",\n    user_id=john_doe_id,\n)\n\nmemories = memory.get_user_memories(user_id=john_doe_id)\nprint(\"John Doe's memories:\")\npprint(memories)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#custom-memory-instructions",
+  "links": []
+}

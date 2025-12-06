@@ -1,0 +1,14 @@
+{
+  "title": "Sqlite for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/sqlite/usage/sqlite-for-agent\n\nAgno supports using Sqlite as a storage backend for Agents using the `SqliteDb` class.\n\nYou need to provide either `db_url`, `db_file` or `db_engine`. The following example uses `db_file`.\n\n```python sqlite_for_agent.py theme={null}\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#sqlite-for-agent",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Agentic RAG with Infinity Reranker",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/usage/agentic-rag-infinity-reranker\n\nThis example demonstrates how to implement Agentic RAG using Infinity Reranker, which provides high-performance, local reranking capabilities for improved document retrieval without external API calls.\n\n```python agentic_rag_infinity_reranker.py theme={null}\n\"\"\"This cookbook shows how to implement Agentic RAG using Infinity Reranker.\n\nInfinity is a high-performance inference server for text-embeddings, reranking, and classification models.\nIt provides fast and efficient reranking capabilities for RAG applications.\n\n1. Install Dependencies\nRun: pip install agno anthropic infinity-client lancedb\n\n2. Set up Infinity Server\nYou have several options to deploy Infinity:",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agentic-rag-with-infinity-reranker",
+  "links": []
+}

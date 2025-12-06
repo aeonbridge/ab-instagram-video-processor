@@ -1,0 +1,8 @@
+{
+  "title": "More examples to try:",
+  "content": "\"\"\"\nSample prompts to explore:\n1. \"What's the historical significance of this location?\"\n2. \"How has this place changed over time?\"\n3. \"What cultural events happen here?\"\n4. \"What's the architectural style and influence?\"\n5. \"What recent developments affect this area?\"\n\nSample image URLs to analyze:\n1. Eiffel Tower: \"https://upload.wikimedia.org/wikipedia/commons/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg\"\n2. Taj Mahal: \"https://upload.wikimedia.org/wikipedia/commons/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg\"\n3. Golden Gate Bridge: \"https://upload.wikimedia.org/wikipedia/commons/0/0c/GoldenGateBridge-001.jpg\"\n\"\"\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#more-examples-to-try:",
+  "links": []
+}

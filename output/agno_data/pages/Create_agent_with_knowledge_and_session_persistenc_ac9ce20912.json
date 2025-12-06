@@ -1,0 +1,41 @@
+{
+  "title": "Create agent with knowledge and session persistence",
+  "content": "agno_assist = Agent(\n    name=\"Agno Assist\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    description=\"You help answer questions about the Agno framework.\",\n    instructions=\"Search your knowledge before answering the question.\",  # Forces knowledge search\n    knowledge=knowledge,\n    db=SqliteDb(  # Stores conversation history\n        session_table=\"agno_assist_sessions\", \n        db_file=\"tmp/agents.db\"\n    ),\n    add_history_to_context=True,\n    add_datetime_to_context=True,\n    markdown=True,\n)\n\nif __name__ == \"__main__\":\n    agno_assist.print_response(\"What is Agno?\")\n    agno_assist.print_response(\"How do I create an agent with tools?\")\n    agno_assist.print_response(\"What vector databases does Agno support?\")\n\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai lancedb tantivy sqlalchemy pandas\n    bash Mac theme={null}\n      python agno_assist.py\n      bash Windows theme={null}\n      python agno_assist.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n* Replace the URL in `add_content_async()` with your own documentation\n* Delete the `tmp/` directory to reload with new content\n* Modify `instructions` to customize the agent's behavior\n* Explore [Knowledge Bases](/basics/knowledge/knowledge-bases) for advanced configuration",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe agent will answer questions by searching the Agno documentation. On the first run, it indexes the documentation into a local vector database (stored in `tmp/` directory). Subsequent runs reuse the existing database for faster responses.\n\nEach answer is grounded in the actual documentation content, and the agent maintains conversation history so you can ask follow-up questions.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#create-agent-with-knowledge-and-session-persistence",
+  "links": []
+}

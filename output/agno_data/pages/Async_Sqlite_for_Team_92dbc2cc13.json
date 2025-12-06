@@ -1,0 +1,14 @@
+{
+  "title": "Async Sqlite for Team",
+  "content": "Source: https://docs.agno.com/integrations/database/async-sqlite/usage/async-sqlite-for-team\n\nAgno supports using Sqlite asynchronously as a storage backend for Teams, with the `AsyncSqliteDb` class.\n\nYou need to provide either `db_url`, `db_file` or `db_engine`. The following example uses `db_file`.\n\n```python async_sqlite_for_team.py theme={null}\n\"\"\"\nRun: `pip install openai ddgs newspaper4k lxml_html_clean agno sqlalchemy aiosqlite` to install the dependencies\n\"\"\"\nimport asyncio\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import AsyncSqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom pydantic import BaseModel",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#async-sqlite-for-team",
+  "links": []
+}

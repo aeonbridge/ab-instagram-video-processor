@@ -1,0 +1,8 @@
+{
+  "title": "Define a tool that uses dependencies claims",
+  "content": "def get_user_details(dependencies: dict):\n    \"\"\"\n    Get the current user's details.\n    \"\"\"\n    return {\n        \"name\": dependencies.get(\"name\"),\n        \"email\": dependencies.get(\"email\"),\n        \"roles\": dependencies.get(\"roles\"),\n    }",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-a-tool-that-uses-dependencies-claims",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "--- Response Models ---",
+  "content": "class NewsArticle(BaseModel):\n    title: str = Field(..., description=\"Title of the article.\")\n    url: str = Field(..., description=\"Link to the article.\")\n    summary: Optional[str] = Field(\n        ..., description=\"Summary of the article if available.\"\n    )\n\nclass SearchResults(BaseModel):\n    articles: list[NewsArticle]\n\nclass ScrapedArticle(BaseModel):\n    title: str = Field(..., description=\"Title of the article.\")\n    url: str = Field(..., description=\"Link to the article.\")\n    summary: Optional[str] = Field(\n        ..., description=\"Summary of the article if available.\"\n    )\n    content: Optional[str] = Field(\n        ...,\n        description=\"Full article content in markdown format. None if content is unavailable.\",\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#----response-models----",
+  "links": []
+}

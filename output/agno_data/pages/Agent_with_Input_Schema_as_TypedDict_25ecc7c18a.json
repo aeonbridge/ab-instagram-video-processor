@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Input Schema as TypedDict",
+  "content": "Source: https://docs.agno.com/basics/input-output/agent/usage/input-schema-on-agent-as-typed-dict\n\nThis example demonstrates how to define an input schema for an agent using `TypedDict`, ensuring structured input validation.\n\n```python input_schema_on_agent_as_typed_dict.py theme={null}\nfrom typing import List, Optional, TypedDict\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.hackernews import HackerNewsTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-input-schema-as-typeddict",
+  "links": []
+}

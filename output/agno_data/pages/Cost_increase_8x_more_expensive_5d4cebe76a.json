@@ -1,0 +1,19 @@
+{
+  "title": "Cost increase: 8x more expensive!",
+  "content": "",
+  "code_samples": [
+    {
+      "code": "As memories accumulate, each memory operation gets more expensive. With 200 memories, a single memory update could consume 10,000+ tokens just loading context.\n\n## Mitigation Strategy #1: Use Automatic Memory\n\nFor most use cases, automatic memory is your best bet—it's significantly more efficient:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Mitigation Strategy #1: Use Automatic Memory",
+      "id": "mitigation-strategy-#1:-use-automatic-memory"
+    }
+  ],
+  "url": "llms-txt#cost-increase:-8x-more-expensive!",
+  "links": []
+}

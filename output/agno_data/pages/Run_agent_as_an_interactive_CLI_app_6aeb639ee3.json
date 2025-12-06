@@ -1,0 +1,8 @@
+{
+  "title": "Run agent as an interactive CLI app",
+  "content": "agent.cli_app(stream=True)\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-agent-as-an-interactive-cli-app",
+  "links": []
+}

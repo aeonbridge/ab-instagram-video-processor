@@ -1,0 +1,24 @@
+{
+  "title": "What are Models?",
+  "content": "Source: https://docs.agno.com/basics/models/overview\n\nLanguage Models are machine-learning programs that are trained to understand natural language and code.\n\nWhen we discuss Models, we are normally referring to Large Language Models (LLMs).\n\nThese models act as the **brain** of your Agents - enabling them to reason, act, and respond to the user. The better the model, the smarter the Agent.\n\n<Tip>\n  Use [model strings](/basics/models/model-as-string) (`\"provider:model_id\"`) for simpler configuration. For advanced use cases requiring custom parameters like `temperature` or `max_tokens`, use the full model class syntax.\n</Tip>\n\nYou can configure your Model to retry requests if they fail. This is useful to handle temporary failures or rate limiting errors from the model provider.\n\n<Note>\n  You can also configure `retries`, `delay_between_retries`, and `exponential_backoff` directly on your Agent or Team, to retry the full runs instead of just the Model requests.\n</Note>\n\n<CardGroup cols={2}>\n  <Card title=\"Supported Model Providers\" icon=\"layer-group\" href=\"/integrations/models/model-index\">\n    See the full list of supported model providers.\n  </Card>\n\n<Card title=\"Model-as-string\" icon=\"code\" href=\"/basics/models/model-as-string\">\n    Use the convenient provider:model\\_id string format to specify models without importing model classes.\n  </Card>\n\n<Card title=\"Compatibility\" icon=\"code-compare\" href=\"/basics/models/compatibility\">\n    See what features are supported by each model provider.\n  </Card>\n\n<Card title=\"Cache Response\" icon=\"database\" href=\"/basics/models/cache-response\">\n    Cache the response from the model provider to avoid duplicate API calls.\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  Use [model strings](/basics/models/model-as-string) (`\"provider:model_id\"`) for simpler configuration. For advanced use cases requiring custom parameters like `temperature` or `max_tokens`, use the full model class syntax.\n</Tip>\n\n## Error handling\n\nYou can configure your Model to retry requests if they fail. This is useful to handle temporary failures or rate limiting errors from the model provider.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Error handling",
+      "id": "error-handling"
+    },
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#what-are-models?",
+  "links": []
+}

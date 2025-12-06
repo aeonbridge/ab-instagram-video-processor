@@ -1,0 +1,24 @@
+{
+  "title": "Async MongoDB for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/async-mongo/usage/async-mongodb-for-agent\n\nAgno supports using MongoDB asynchronously as a storage backend for Agents, with the `AsyncMongoDb` class.\n\nYou need to provide either `db_url` or `client`. The following example uses `db_url`.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **MongoDB** on port **27017** using:\n\n```python async_mongodb_for_agent.py theme={null}\n\"\"\"\nRun `pip install agno openai motor pymongo` to install dependencies.\n\"\"\"\nfrom agno.agent import Agent\nfrom agno.db.mongo import AsyncMongoDb\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run MongoDB",
+      "id": "run-mongodb"
+    }
+  ],
+  "url": "llms-txt#async-mongodb-for-agent",
+  "links": []
+}

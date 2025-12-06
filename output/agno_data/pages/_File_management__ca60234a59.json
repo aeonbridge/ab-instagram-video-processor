@@ -1,0 +1,8 @@
+{
+  "title": "--- File management ---",
+  "content": "reports_dir = Path(__file__).parent.joinpath(\"reports\", \"investment\")\nif reports_dir.is_dir():\n    rmtree(path=reports_dir, ignore_errors=True)\nreports_dir.mkdir(parents=True, exist_ok=True)\n\nstock_analyst_report = str(reports_dir.joinpath(\"stock_analyst_report.md\"))\nresearch_analyst_report = str(reports_dir.joinpath(\"research_analyst_report.md\"))\ninvestment_report = str(reports_dir.joinpath(\"investment_report.md\"))",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#----file-management----",
+  "links": []
+}

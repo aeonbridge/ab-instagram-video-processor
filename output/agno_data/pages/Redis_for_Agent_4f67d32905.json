@@ -1,0 +1,24 @@
+{
+  "title": "Redis for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/redis/usage/redis-for-agent\n\nAgno supports using Redis as a storage backend for Agents using the `RedisDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **Redis** on port **6379** using:\n\n```python redis_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.base import SessionType\nfrom agno.db.redis import RedisDb\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run Redis",
+      "id": "run-redis"
+    }
+  ],
+  "url": "llms-txt#redis-for-agent",
+  "links": []
+}

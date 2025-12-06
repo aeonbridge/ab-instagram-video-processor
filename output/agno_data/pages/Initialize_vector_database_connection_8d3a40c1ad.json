@@ -1,0 +1,8 @@
+{
+  "title": "Initialize vector database connection",
+  "content": "vector_db = Qdrant(\n    collection=\"thai-recipes\", url=\"http://localhost:6333\", embedder=embedder\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-vector-database-connection",
+  "links": []
+}

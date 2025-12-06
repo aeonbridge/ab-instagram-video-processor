@@ -1,0 +1,14 @@
+{
+  "title": "Working with Memories",
+  "content": "Source: https://docs.agno.com/basics/memory/working-with-memories/overview\n\nCustomize how memories are created, control context inclusion, share memories across agents, and use memory tools for advanced workflows.\n\nThe basic memory setup covers most use cases, but sometimes you need more control. This guide covers advanced patterns for customizing memory behavior, controlling what gets stored, and building complex multi-agent systems with shared memory.\n\n## Customizing the Memory Manager\n\nThe `MemoryManager` controls which LLM creates and updates memories, plus how those memories are generated. You can customize it to use a specific model, add privacy rules, or change how memories are extracted:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.memory import MemoryManager\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Customizing the Memory Manager",
+      "id": "customizing-the-memory-manager"
+    }
+  ],
+  "url": "llms-txt#working-with-memories",
+  "links": []
+}

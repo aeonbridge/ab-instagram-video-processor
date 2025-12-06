@@ -1,0 +1,8 @@
+{
+  "title": "Basic usage - automatically loads from JINA_API_KEY environment variable",
+  "content": "embeddings = JinaEmbedder().get_embedding(\n    \"The quick brown fox jumps over the lazy dog.\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#basic-usage---automatically-loads-from-jina_api_key-environment-variable",
+  "links": []
+}

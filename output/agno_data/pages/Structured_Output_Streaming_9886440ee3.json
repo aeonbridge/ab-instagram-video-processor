@@ -1,0 +1,14 @@
+{
+  "title": "Structured Output Streaming",
+  "content": "Source: https://docs.agno.com/basics/input-output/team/usage/structured-output-streaming\n\nThis example demonstrates streaming structured output from a team, using Pydantic models to ensure validated data structures while providing real-time streaming responses.\n\n```python cookbook/examples/teams/structured_input_output/04_structured_output_streaming.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.exa import ExaTools\nfrom pydantic import BaseModel\n\nclass StockAnalysis(BaseModel):\n    symbol: str\n    company_name: str\n    analysis: str\n\nstock_searcher = Agent(\n    name=\"Stock Searcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    output_schema=StockAnalysis,\n    role=\"Searches the web for information on a stock.\",\n    tools=[\n        ExaTools(\n            include_domains=[\"cnbc.com\", \"reuters.com\", \"bloomberg.com\", \"wsj.com\"],\n            text=False,\n            highlights=False,\n            show_results=True,\n        )\n    ],\n)\n\nclass CompanyAnalysis(BaseModel):\n    company_name: str\n    analysis: str\n\ncompany_info_agent = Agent(\n    name=\"Company Info Searcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    role=\"Searches the web for information on a stock.\",\n    output_schema=CompanyAnalysis,\n    tools=[\n        ExaTools(\n            include_domains=[\"cnbc.com\", \"reuters.com\", \"bloomberg.com\", \"wsj.com\"],\n            text=False,\n            highlights=False,\n            show_results=True,\n        )\n    ],\n)\n\nclass StockReport(BaseModel):\n    symbol: str\n    company_name: str\n    analysis: str\n\nteam = Team(\n    name=\"Stock Research Team\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    members=[stock_searcher, company_info_agent],\n    output_schema=StockReport,\n    markdown=True,\n    show_members_responses=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#structured-output-streaming",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create a Context-Aware Agent that can access real-time HackerNews data",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    # Each function in the context is evaluated when the agent is run,\n    # think of it as dependency injection for Agents\n    dependencies={\"top_hackernews_stories\": get_top_hackernews_stories},\n    # Alternatively, you can manually add the context to the instructions. This gets resolved automatically\n    instructions=dedent(\"\"\"\\\n        You are an insightful tech trend observer! 📰\n\nHere are the top stories on HackerNews:\n        {top_hackernews_stories}\\\n    \"\"\"),\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-context-aware-agent-that-can-access-real-time-hackernews-data",
+  "links": []
+}

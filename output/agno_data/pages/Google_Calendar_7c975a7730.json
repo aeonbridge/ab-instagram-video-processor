@@ -1,0 +1,49 @@
+{
+  "title": "Google Calendar",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/googlecalendar\n\nEnable an Agent to work with Google Calendar to view and schedule meetings.\n\n### Install dependencies\n\n### Setup Google Project and OAuth\n\nReference: [https://developers.google.com/calendar/api/quickstart/python](https://developers.google.com/calendar/api/quickstart/python)\n\n1. Enable Google Calender API\n\n* Go to [Google Cloud Console](https://console.cloud.google.com/apis/enableflow?apiid=calendar-json.googleapis.com).\n   * Select Project and Enable.\n\n2. Go To API & Service -> OAuth Consent Screen\n\n* If you are a Google Workspace user, select Internal.\n   * Otherwise, select External.\n\n4. Fill in the app details (App name, logo, support email, etc).\n\n* Click on Add or Remove Scope.\n   * Search for Google Calender API (Make sure you've enabled Google calender API otherwise scopes wont be visible).\n   * Select scopes accordingly\n     * From the dropdown check on `/auth/calendar` scope\n   * Save and continue.\n\n* Click Add Users and enter the email addresses of the users you want to allow during testing.\n   * NOTE : Only these users can access the app's OAuth functionality when the app is in \"Testing\" mode.\n     Any other users will receive access denied errors.\n   * To make the app available to all users, you'll need to move the app's status to \"In Production\".\n     Before doing so, ensure the app is fully verified by Google if it uses sensitive or restricted scopes.\n   * Click on Go back to Dashboard.\n\n7. Generate OAuth 2.0 Client ID\n\n* Go to Credentials.\n   * Click on Create Credentials -> OAuth Client ID\n   * Select Application Type as Desktop app.\n   * Download JSON.\n\n8. Using Google Calender Tool\n   * Pass the path of downloaded credentials as credentials\\_path to Google Calender tool.\n   * Optional: Set the `token_path` parameter to specify where the tool should create the `token.json` file.\n   * The `token.json` file is used to store the user's access and refresh tokens and is automatically created during the authorization flow if it doesn't already exist.\n   * If `token_path` is not explicitly provided, the file will be created in the default location which is your current working directory.\n   * If you choose to specify `token_path`, please ensure that the directory you provide has write access, as the application needs to create or update this file during the authentication process.\n\nThe following agent will use GoogleCalendarTools to find today's events.\n\n| Parameter          | Type        | Default      | Description                                                                   |\n| ------------------ | ----------- | ------------ | ----------------------------------------------------------------------------- |\n| `scopes`           | `List[str]` | `None`       | List of OAuth scopes for Google Calendar API access                           |\n| `credentials_path` | `str`       | `None`       | Path of the file credentials.json file which contains OAuth 2.0 Client ID     |\n| `token_path`       | `str`       | `token.json` | Path of the file token.json which stores the user's access and refresh tokens |\n| `access_token`     | `str`       | `None`       | Direct access token for authentication (alternative to OAuth flow)            |\n| `calendar_id`      | `str`       | `primary`    | The calendar ID to use for operations                                         |\n| `oauth_port`       | `int`       | `8080`       | Port number for OAuth callback server                                         |\n| `allow_update`     | `bool`      | `False`      | Whether to allow write operations (create/update/delete events)               |\n\n| Function       | Description                                        |\n| -------------- | -------------------------------------------------- |\n| `list_events`  | List events from the user's primary calendar.      |\n| `create_event` | Create a new event in the user's primary calendar. |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/googlecalendar.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/googlecalendar_tools.py)",
+  "code_samples": [
+    {
+      "code": "### Setup Google Project and OAuth\n\nReference: [https://developers.google.com/calendar/api/quickstart/python](https://developers.google.com/calendar/api/quickstart/python)\n\n1. Enable Google Calender API\n\n   * Go to [Google Cloud Console](https://console.cloud.google.com/apis/enableflow?apiid=calendar-json.googleapis.com).\n   * Select Project and Enable.\n\n2. Go To API & Service -> OAuth Consent Screen\n\n3. Select User Type\n\n   * If you are a Google Workspace user, select Internal.\n   * Otherwise, select External.\n\n4. Fill in the app details (App name, logo, support email, etc).\n\n5. Select Scope\n\n   * Click on Add or Remove Scope.\n   * Search for Google Calender API (Make sure you've enabled Google calender API otherwise scopes wont be visible).\n   * Select scopes accordingly\n     * From the dropdown check on `/auth/calendar` scope\n   * Save and continue.\n\n6. Adding Test User\n\n   * Click Add Users and enter the email addresses of the users you want to allow during testing.\n   * NOTE : Only these users can access the app's OAuth functionality when the app is in \"Testing\" mode.\n     Any other users will receive access denied errors.\n   * To make the app available to all users, you'll need to move the app's status to \"In Production\".\n     Before doing so, ensure the app is fully verified by Google if it uses sensitive or restricted scopes.\n   * Click on Go back to Dashboard.\n\n7. Generate OAuth 2.0 Client ID\n\n   * Go to Credentials.\n   * Click on Create Credentials -> OAuth Client ID\n   * Select Application Type as Desktop app.\n   * Download JSON.\n\n8. Using Google Calender Tool\n   * Pass the path of downloaded credentials as credentials\\_path to Google Calender tool.\n   * Optional: Set the `token_path` parameter to specify where the tool should create the `token.json` file.\n   * The `token.json` file is used to store the user's access and refresh tokens and is automatically created during the authorization flow if it doesn't already exist.\n   * If `token_path` is not explicitly provided, the file will be created in the default location which is your current working directory.\n   * If you choose to specify `token_path`, please ensure that the directory you provide has write access, as the application needs to create or update this file during the authentication process.\n\n## Example\n\nThe following agent will use GoogleCalendarTools to find today's events.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h3",
+      "text": "Install dependencies",
+      "id": "install-dependencies"
+    },
+    {
+      "level": "h3",
+      "text": "Setup Google Project and OAuth",
+      "id": "setup-google-project-and-oauth"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#google-calendar",
+  "links": []
+}

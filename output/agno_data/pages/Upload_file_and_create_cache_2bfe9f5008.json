@@ -1,0 +1,8 @@
+{
+  "title": "Upload file and create cache",
+  "content": "txt_file = client.files.upload(file=\"large_document.txt\")\ncache = client.caches.create(\n    model=\"gemini-2.0-flash-001\",\n    config={\n        \"system_instruction\": \"You are an expert at analyzing transcripts.\",\n        \"contents\": [txt_file],\n        \"ttl\": \"300s\",\n    },\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#upload-file-and-create-cache",
+  "links": []
+}

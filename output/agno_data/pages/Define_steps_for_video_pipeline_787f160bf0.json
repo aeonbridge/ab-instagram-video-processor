@@ -1,0 +1,8 @@
+{
+  "title": "Define steps for video pipeline",
+  "content": "generate_video_step = Step(\n    name=\"generate_video\",\n    agent=video_generator,\n    description=\"Create a comprehensive video production plan and storyboard\",\n)\n\ndescribe_video_step = Step(\n    name=\"describe_video\",\n    agent=video_describer,\n    description=\"Analyze and critique the video production plan with professional insights\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-steps-for-video-pipeline",
+  "links": []
+}

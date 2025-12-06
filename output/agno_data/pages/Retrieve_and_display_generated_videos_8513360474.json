@@ -1,0 +1,8 @@
+{
+  "title": "Retrieve and display generated videos",
+  "content": "run_response = video_agent.get_last_run_output()\nif run_response and run_response.videos:\n    for video in run_response.videos:\n        print(f\"Generated video URL: {video.url}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#retrieve-and-display-generated-videos",
+  "links": []
+}

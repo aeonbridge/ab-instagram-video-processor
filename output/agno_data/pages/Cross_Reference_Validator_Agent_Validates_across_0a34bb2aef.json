@@ -1,0 +1,8 @@
+{
+  "title": "Cross-Reference Validator Agent - Validates across sources",
+  "content": "cross_reference_validator = Agent(\n    name=\"Cross-Reference Validator\",\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    role=\"Validate information consistency across different search results\",\n    instructions=[\n        \"Compare and validate information from both searchers.\",\n        \"Identify consistencies and discrepancies in the results.\",\n        \"Highlight areas where information aligns or conflicts.\",\n        \"Assess the reliability of different information sources.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#cross-reference-validator-agent---validates-across-sources",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Video to Shorts Agent",
+  "content": "Source: https://docs.agno.com/basics/multimodal/video/usage/video-to-shorts\n\n```python  theme={null}\nimport subprocess\nimport time\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import Video\nfrom agno.models.google import Gemini\nfrom agno.utils.log import logger\nfrom google.generativeai import get_file, upload_file\n\nvideo_path = Path(__file__).parent.joinpath(\"sample.mp4\")\noutput_dir = Path(\"tmp/shorts\")\n\nagent = Agent(\n    name=\"Video2Shorts\",\n    description=\"Process videos and generate engaging shorts.\",\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    markdown=True,\n    debug_mode=True,\n    instructions=[\n        \"Analyze the provided video directly—do NOT reference or analyze any external sources or YouTube videos.\",\n        \"Identify engaging moments that meet the specified criteria for short-form content.\",\n        \"\"\"Provide your analysis in a **table format** with these columns:\n   - Start Time | End Time | Description | Importance Score\"\"\",\n        \"Ensure all timestamps use MM:SS format and importance scores range from 1-10. \",\n        \"Focus only on segments between 15 and 60 seconds long.\",\n        \"Base your analysis solely on the provided video content.\",\n        \"Deliver actionable insights to improve the identified segments for short-form optimization.\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#video-to-shorts-agent",
+  "links": []
+}

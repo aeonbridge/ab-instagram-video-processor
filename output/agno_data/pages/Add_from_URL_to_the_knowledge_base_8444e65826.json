@@ -1,0 +1,77 @@
+{
+  "title": "Add from URL to the knowledge base",
+  "content": "asyncio.run(\n    knowledge.add_content_async(\n        name=\"Recipes\",\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n        metadata={\"user_tag\": \"Recipes from website\"},\n    )\n)\n\nagent = Agent(\n    name=\"My Agent\",\n    description=\"Agno 2.0 Agent Implementation\",\n    knowledge=knowledge,\n    search_knowledge=True,\n)\n\nagent.print_response(\n    \"How do I make chicken and galangal in coconut milk soup?\",\n    markdown=True,\n)\npython  theme={null}\ndef knowledge_retriever(agent: Agent, query: str, num_documents: Optional[int], **kwargs) -> Optional[list[dict]]:\n  ...\npython  theme={null}\ndef knowledge_retriever(agent: Agent, query: str, num_documents: Optional[int], **kwargs) -> Optional[list[dict]]:\n  ...\n\nagent = Agent(\n    knowledge_retriever=knowledge_retriever,\n    search_knowledge=True,\n)\npython  theme={null}\n...\nknowledge = Knowledge(\n    name=\"Basic SDK Knowledge Base\",\n    description=\"Agno 2.0 Knowledge Implementation\",\n    vector_db=vector_db,\n    contents_db=contents_db,\n)\n\nasyncio.run(\n    knowledge.add_content_async(\n        name=\"CV\",\n        path=\"cookbook/knowledge/testing_resources/cv_1.pdf\",\n        metadata={\"user_tag\": \"Engineering Candidates\"},\n    )\n)\nbash  theme={null}\n    docker run -d \\\n      -e POSTGRES_DB=ai \\\n      -e POSTGRES_USER=ai \\\n      -e POSTGRES_PASSWORD=ai \\\n      -e PGDATA=/var/lib/postgresql/data/pgdata \\\n      -v pgvolume:/var/lib/postgresql/data \\\n      -p 5532:5432 \\\n      --name pgvector \\\n      agnohq/pgvector:16\n    bash Mac theme={null}\n      pip install -U pgvector pypdf psycopg sqlalchemy\n      bash Windows theme={null}\n      pip install -U pgvector pypdf psycopg sqlalchemy\n      python agentic_rag.py theme={null}\n    import asyncio\n    from agno.agent import Agent\n    from agno.models.openai import OpenAIChat\n    from agno.knowledge.knowledge import Knowledge\n    from agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\ndb = PostgresDb(\n        db_url=db_url,\n        knowledge_table=\"knowledge_contents\",\n    )\n\nknowledge = Knowledge(\n        contents_db=db,\n        vector_db=PgVector(\n            table_name=\"recipes\",\n            db_url=db_url,\n        )\n    )\n\nagent = Agent(\n        model=OpenAIChat(id=\"gpt-5-mini\"),\n        db=db,\n        knowledge=knowledge,\n        markdown=True,\n    )\n    if __name__ == \"__main__\":\n        asyncio.run(\n            knowledge.add_content_async(\n                name=\"Recipes\",\n                url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n                metadata={\"user_tag\": \"Recipes from website\"}\n            )\n        )\n        # Create and use the agent\n        asyncio.run(\n            agent.aprint_response(\n                \"How do I make chicken and galangal in coconut milk soup?\",\n                markdown=True,\n            )\n        )\n    python  theme={null}\n    python agentic_rag.py\n    ```\n  </Step>\n</Steps>\n\n## Developer Resources\n\n* View the [Agent schema](/reference/agents/agent)\n* View the [Knowledge schema](/reference/knowledge/knowledge)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/knowledge/)",
+  "code_samples": [
+    {
+      "code": "We can give our agent access to the knowledge base in the following ways:\n\n* We can set `search_knowledge=True` to add a `search_knowledge_base()` tool to the Agent. `search_knowledge` is `True` **by default** if you add `knowledge` to an Agent.\n* We can set `add_knowledge_to_context=True` to automatically add references from the knowledge base to the Agent's context, based in your user message. This is the traditional RAG approach.\n\n## Custom knowledge retrieval\n\nIf you need complete control over the knowledge base search, you can pass your own `knowledge_retriever` function with the following signature:",
+      "language": "unknown"
+    },
+    {
+      "code": "Example of how to configure an agent with a custom retriever:",
+      "language": "unknown"
+    },
+    {
+      "code": "This function is called during `search_knowledge_base()` and is used by the Agent to retrieve references from the knowledge base.\n\n<Tip>\n  Async retrievers are supported. Simply create an async function and pass it to\n  the `knowledge_retriever` parameter.\n</Tip>\n\n## Knowledge storage\n\nKnowledge content is tracked in a \"Contents DB\" and vectorized and stored in a \"Vector DB\".\n\n### Contents database\n\nThe Contents DB is a database that stores the name, description, metadata and other information for any content you add to the knowledge base.\n\nBelow is the schema for the Contents DB:\n\n| Field            | Type   | Description                                                                                         |\n| ---------------- | ------ | --------------------------------------------------------------------------------------------------- |\n| `id`             | `str`  | The unique identifier for the knowledge content.                                                    |\n| `name`           | `str`  | The name of the knowledge content.                                                                  |\n| `description`    | `str`  | The description of the knowledge content.                                                           |\n| `metadata`       | `dict` | The metadata for the knowledge content.                                                             |\n| `type`           | `str`  | The type of the knowledge content.                                                                  |\n| `size`           | `int`  | The size of the knowledge content. Applicable only to files.                                        |\n| `linked_to`      | `str`  | The ID of the knowledge content that this content is linked to.                                     |\n| `access_count`   | `int`  | The number of times this content has been accessed.                                                 |\n| `status`         | `str`  | The status of the knowledge content.                                                                |\n| `status_message` | `str`  | The message associated with the status of the knowledge content.                                    |\n| `created_at`     | `int`  | The timestamp when the knowledge content was created.                                               |\n| `updated_at`     | `int`  | The timestamp when the knowledge content was last updated.                                          |\n| `external_id`    | `str`  | The external ID of the knowledge content. Used when external vector stores are used, like LightRAG. |\n\nThis data is best displayed on the [knowledge page of the AgentOS UI](https://os.agno.com/knowledge).\n\n### Vector databases\n\nVector databases offer the best solution for retrieving relevant results from dense information quickly.\n\n### Adding contents\n\nThe typical way content is processed when being added to the knowledge base is:\n\n<Steps>\n  <Step title=\"Parse the content\">\n    A reader is used to parse the content based on the type of content that is\n    being inserted\n  </Step>\n\n  <Step title=\"Chunk the information\">\n    The content is broken down into smaller chunks to ensure our search query\n    returns only relevant results.\n  </Step>\n\n  <Step title=\"Embed each chunk\">\n    The chunks are converted into embedding vectors and stored in a vector\n    database.\n  </Step>\n</Steps>\n\nFor example, to add a PDF to the knowledge base:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Tip>\n  See more details on [Loading the Knowledge\n  Base](/basics/knowledge/overview#loading-the-knowledge).\n</Tip>\n\n<Note>\n  Knowledge filters are currently supported on the following knowledge base\n  types: <b>PDF</b>, <b>PDF\\_URL</b>, <b>Text</b>, <b>JSON</b>, and <b>DOCX</b>.\n  For more details, see the [Knowledge Filters\n  documentation](/basics/knowledge/filters/overview).\n</Note>\n\n## Example: Agentic RAG Agent\n\nLet's build a **RAG Agent** that answers questions from a PDF.\n\n<Steps>\n  <Step title=\"Set up the database\">\n    Let's use `Postgres` as both our contents and vector databases.\n\n    Install [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **Postgres** on port **5532** using:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>\n      This docker container contains a general purpose Postgres database with the `pgvector` extension installed.\n    </Note>\n\n    Install required packages:\n\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Do agentic RAG\">\n    Create a file `agentic_rag.py` with the following contents",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">\n    Run the agent",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Custom knowledge retrieval",
+      "id": "custom-knowledge-retrieval"
+    },
+    {
+      "level": "h2",
+      "text": "Knowledge storage",
+      "id": "knowledge-storage"
+    },
+    {
+      "level": "h3",
+      "text": "Contents database",
+      "id": "contents-database"
+    },
+    {
+      "level": "h3",
+      "text": "Vector databases",
+      "id": "vector-databases"
+    },
+    {
+      "level": "h3",
+      "text": "Adding contents",
+      "id": "adding-contents"
+    },
+    {
+      "level": "h2",
+      "text": "Example: Agentic RAG Agent",
+      "id": "example:-agentic-rag-agent"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#add-from-url-to-the-knowledge-base",
+  "links": []
+}

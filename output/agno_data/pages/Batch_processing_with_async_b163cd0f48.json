@@ -1,0 +1,19 @@
+{
+  "title": "Batch processing with async",
+  "content": "tasks = [reader.async_read(file) for file in file_list]\nall_documents = await asyncio.gather(*tasks)\npython  theme={null}\nfrom agno.knowledge.reader.pdf_reader import PDFReader",
+  "code_samples": [
+    {
+      "code": "## Usage in Knowledge\n\nReaders integrate seamlessly with Agno Knowledge:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage in Knowledge",
+      "id": "usage-in-knowledge"
+    }
+  ],
+  "url": "llms-txt#batch-processing-with-async",
+  "links": []
+}

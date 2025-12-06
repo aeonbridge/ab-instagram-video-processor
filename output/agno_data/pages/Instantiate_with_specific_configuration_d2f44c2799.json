@@ -1,0 +1,28 @@
+{
+  "title": "Instantiate with specific configuration",
+  "content": "content_planning_step = Step(\n    name=\"Content Planning Step\",\n    executor=CustomExecutor(max_retries=5, use_cache=False),\n)\npython  theme={null}\nclass CustomExecutor:\n    async def __call__(self, step_input: StepInput) -> StepOutput:\n        # 1. Custom preprocessing\n        # 2. Call agents/teams as needed\n        # 3. Custom postprocessing\n        return StepOutput(content=enhanced_content)\n\ncontent_planning_step = Step(\n    name=\"Content Planning Step\",\n    executor=CustomExecutor(),\n)\npython custom_function_step_async_stream.py theme={null}\ncontent_planner = Agent(\n    name=\"Content Planner\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=[\n        \"Plan a content schedule over 4 weeks for the provided topic and research content\",\n        \"Ensure that I have posts for 3 posts per week\",\n    ],\n    db=InMemoryDb(),\n)\n\nasync def custom_content_planning_function(\n    step_input: StepInput,\n) -> AsyncIterator[Union[WorkflowRunOutputEvent, StepOutput]]:\n    \"\"\"\n    Custom function that does intelligent content planning with context awareness.\n\nNote: This function calls content_planner.arun() internally, and all events\n    from that agent call will automatically get workflow context injected by\n    the workflow execution system - no manual intervention required!\n    \"\"\"\n    message = step_input.input\n    previous_step_content = step_input.previous_step_content\n\n# Create intelligent planning prompt\n    planning_prompt = f\"\"\"\n        STRATEGIC CONTENT PLANNING REQUEST:\n\nCore Topic: {message}\n\nResearch Results: {previous_step_content[:500] if previous_step_content else \"No research results\"}\n\nPlanning Requirements:\n        1. Create a comprehensive content strategy based on the research\n        2. Leverage the research findings effectively\n        3. Identify content formats and channels\n        4. Provide timeline and priority recommendations\n        5. Include engagement and distribution strategies\n\nPlease create a detailed, actionable content plan.\n    \"\"\"\n\ntry:\n        response_iterator = content_planner.arun(\n            planning_prompt, stream=True, stream_events=True\n        )\n        async for event in response_iterator:\n            yield event\n\nresponse = content_planner.get_last_run_output()\n\nenhanced_content = f\"\"\"\n            ## Strategic Content Plan\n\n**Planning Topic:** {message}\n\n**Research Integration:** {\"✓ Research-based\" if previous_step_content else \"✗ No research foundation\"}\n\n**Content Strategy:**\n            {response.content}\n\n**Custom Planning Enhancements:**\n            - Research Integration: {\"High\" if previous_step_content else \"Baseline\"}\n            - Strategic Alignment: Optimized for multi-channel distribution\n            - Execution Ready: Detailed action items included\n        \"\"\".strip()\n\nyield StepOutput(content=enhanced_content)\n\nexcept Exception as e:\n        yield StepOutput(\n            content=f\"Custom content planning failed: {str(e)}\",\n            success=False,\n        )\n```\n\n<Note>\n  Streaming in case of a class-based executor also works the same way by defining the `__call__` method to yield the events.\n</Note>\n\n## Developer Resources\n\n* [Step with a Custom Function](/basics/workflows/usage/step-with-function)\n* [Step with a Custom Function with Streaming on AgentOS](/basics/workflows/usage/step-with-function-streaming-agentos)\n* [Parallel and custom function step streaming on AgentOS](/basics/workflows/usage/parallel-steps-workflow)",
+  "code_samples": [
+    {
+      "code": "Also supports async execution by defining the `__call__` method to be an async function.",
+      "language": "unknown"
+    },
+    {
+      "code": "For a detailed example see [Class-based Executor](/basics/workflows/usage/class-based-executor).\n\n## Streaming execution with custom function step on AgentOS:\n\nIf you are running an agent or team within the custom function step, you can enable streaming on the [AgentOS chat page](/agent-os/introduction#chat-page) by setting `stream=True` and `stream_events=True` when calling `run()` or `arun()` and yielding the events.\n\n<Note>\n  Using the AgentOS, runs will be asynchronous and responses will be streamed.\n  This means you must keep the custom function step asynchronous, by using `.arun()` instead of `.run()` to run your Agents or Teams.\n</Note>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Streaming execution with custom function step on AgentOS:",
+      "id": "streaming-execution-with-custom-function-step-on-agentos:"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#instantiate-with-specific-configuration",
+  "links": []
+}

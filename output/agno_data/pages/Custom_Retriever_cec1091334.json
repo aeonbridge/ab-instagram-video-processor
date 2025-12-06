@@ -1,0 +1,14 @@
+{
+  "title": "Custom Retriever",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/usage/custom-retriever\n\n```python retriever.py theme={null}\nfrom typing import Optional\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.qdrant import Qdrant\nfrom qdrant_client import QdrantClient",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#custom-retriever",
+  "links": []
+}

@@ -1,0 +1,33 @@
+{
+  "title": "SiliconFlow",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/siliconflow/overview\n\nLearn how to use Siliconflow models in Agno.\n\nSiliconflow is a platform for providing endpoints for Large Language models.\n\nExplore Siliconflow’s models [here](https://siliconflow.ai/models).\n\nSet your `SILICONFLOW_API_KEY` environment variable. Get your key [from Siliconflow here](https://siliconflow.ai).\n\nUse `Siliconflow` with your `Agent`:\n\n<CodeGroup>\n  \n</CodeGroup>\n\n<Note> View more examples [here](/integrations/models/gateways/siliconflow/usage/basic-stream). </Note>\n\n| Parameter  | Type            | Default                                   | Description                                                             |\n| ---------- | --------------- | ----------------------------------------- | ----------------------------------------------------------------------- |\n| `id`       | `str`           | `\"meta-llama/Meta-Llama-3.1-8B-Instruct\"` | The id of the SiliconFlow model to use                                  |\n| `name`     | `str`           | `\"SiliconFlow\"`                           | The name of the model                                                   |\n| `provider` | `str`           | `\"SiliconFlow\"`                           | The provider of the model                                               |\n| `api_key`  | `Optional[str]` | `None`                                    | The API key for SiliconFlow (defaults to SILICONFLOW\\_API\\_KEY env var) |\n| `base_url` | `str`           | `\"https://api.siliconflow.cn/v1\"`         | The base URL for the SiliconFlow API                                    |\n\n`Siliconflow` also supports the params of [OpenAI](/reference/models/openai).",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Example\n\nUse `Siliconflow` with your `Agent`:\n\n<CodeGroup>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication",
+      "id": "authentication"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#siliconflow",
+  "links": []
+}

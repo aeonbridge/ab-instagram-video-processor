@@ -1,0 +1,8 @@
+{
+  "title": "Primary knowledge base for main retrieval",
+  "content": "primary_knowledge = Knowledge(\n    vector_db=LanceDb(\n        table_name=\"recipes_primary\",\n        uri=\"tmp/lancedb\",\n        search_type=SearchType.vector,\n        embedder=OpenAIEmbedder(id=\"text-embedding-3-small\"),\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#primary-knowledge-base-for-main-retrieval",
+  "links": []
+}

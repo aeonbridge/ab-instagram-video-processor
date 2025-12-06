@@ -1,0 +1,8 @@
+{
+  "title": "Initialize LangDB tracing - must be called before creating agents",
+  "content": "from agno.agent import Agent\nfrom agno.models.langdb import LangDB\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-langdb-tracing---must-be-called-before-creating-agents",
+  "links": []
+}

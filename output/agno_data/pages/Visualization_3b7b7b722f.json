@@ -1,0 +1,29 @@
+{
+  "title": "Visualization",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/visualization\n\nVisualizationTools enables agents to create various types of charts and plots using matplotlib.\n\nThe following agent can create various types of data visualizations:\n\n| Parameter                    | Type   | Default    | Description                         |\n| ---------------------------- | ------ | ---------- | ----------------------------------- |\n| `output_dir`                 | `str`  | `\"charts\"` | Directory to save generated charts. |\n| `enable_create_bar_chart`    | `bool` | `True`     | Enable bar chart creation.          |\n| `enable_create_line_chart`   | `bool` | `True`     | Enable line chart creation.         |\n| `enable_create_pie_chart`    | `bool` | `True`     | Enable pie chart creation.          |\n| `enable_create_scatter_plot` | `bool` | `True`     | Enable scatter plot creation.       |\n| `enable_create_histogram`    | `bool` | `True`     | Enable histogram creation.          |\n\n| Function              | Description                                                 |\n| --------------------- | ----------------------------------------------------------- |\n| `create_bar_chart`    | Create bar charts for categorical data comparison.          |\n| `create_line_chart`   | Create line charts for time series and trend visualization. |\n| `create_pie_chart`    | Create pie charts for proportional data representation.     |\n| `create_scatter_plot` | Create scatter plots for correlation analysis.              |\n| `create_histogram`    | Create histograms for data distribution visualization.      |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/visualization.py)\n* [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#visualization",
+  "links": []
+}

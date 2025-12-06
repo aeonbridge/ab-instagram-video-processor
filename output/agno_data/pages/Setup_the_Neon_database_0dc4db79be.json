@@ -1,0 +1,8 @@
+{
+  "title": "Setup the Neon database",
+  "content": "db = PostgresDb(db_url=NEON_DB_URL)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-neon-database",
+  "links": []
+}

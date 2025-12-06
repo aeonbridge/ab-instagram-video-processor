@@ -1,0 +1,14 @@
+{
+  "title": "Coordinated Agentic RAG Team",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/usage/coordinated-agentic-rag\n\nThis example demonstrates how multiple specialized agents can coordinate to provide comprehensive RAG (Retrieval-Augmented Generation) responses by dividing search and analysis tasks across team members.\n\n```python cookbook/examples/teams/search_coordination/01_coordinated_agentic_rag.py theme={null}\n\"\"\"\nThis example demonstrates how multiple specialized agents can coordinate to provide\ncomprehensive RAG (Retrieval-Augmented Generation) responses by dividing search\nand analysis tasks across team members.\n\nTeam Composition:\n- Knowledge Searcher: Searches knowledge base for relevant information\n- Content Analyzer: Analyzes and synthesizes retrieved content\n- Response Synthesizer: Creates final comprehensive response with sources\n\nSetup:\n1. Run: `pip install agno anthropic cohere lancedb tantivy sqlalchemy`\n2. Export your ANTHROPIC_API_KEY and CO_API_KEY\n3. Run this script to see coordinated RAG in action\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.cohere import CohereEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reranker.cohere import CohereReranker\nfrom agno.models.anthropic import Claude\nfrom agno.team.team import Team\nfrom agno.vectordb.lancedb import LanceDb, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#coordinated-agentic-rag-team",
+  "links": []
+}

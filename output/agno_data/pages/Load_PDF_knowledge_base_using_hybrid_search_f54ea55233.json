@@ -1,0 +1,8 @@
+{
+  "title": "Load PDF knowledge base using hybrid search",
+  "content": "knowledge_base = Knowledge(\n    vector_db=hybrid_db,\n)\n\nknowledge_base.add_content(\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#load-pdf-knowledge-base-using-hybrid-search",
+  "links": []
+}

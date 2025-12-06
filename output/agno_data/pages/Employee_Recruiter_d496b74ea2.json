@@ -1,0 +1,29 @@
+{
+  "title": "Employee Recruiter",
+  "content": "Source: https://docs.agno.com/examples/use-cases/workflows/employee-recruiter\n\nBuild an automated employee recruitment workflow that handles resume screening, interview scheduling, and email communication. This multi-agent system processes PDF resumes, evaluates candidates, and coordinates the hiring pipeline.\n\nBy building this workflow, you'll understand:\n\n* How to create multi-agent systems for complex business processes\n* How to process PDF resumes and extract candidate information\n* How to implement conditional logic based on screening scores\n* How to coordinate asynchronous streaming for real-time feedback\n\nBuild automated recruitment systems, candidate screening platforms, interview scheduling tools, or HR automation workflows.\n\nThe workflow automates the complete hiring pipeline through specialized agents:\n\n1. **Screen**: Screening agent analyzes resumes against job requirements and assigns scores\n2. **Schedule**: If candidate scores >= 5.0, scheduler agent creates interview appointments\n3. **Notify**: Email writer crafts professional invitation and sender delivers it\n4. **Cache**: Resume content is cached in session state to avoid re-processing\n\nThe workflow uses simulated Zoom scheduling and email tools for demonstration (replace with real tools in production).\n\n```python employee_recruiter.py theme={null}\n\nimport asyncio\nimport io\nimport random\nfrom datetime import datetime, timedelta\nfrom typing import Any, List\n\nimport requests\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.workflow.types import WorkflowExecutionInput\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel\nfrom pypdf import PdfReader",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#employee-recruiter",
+  "links": []
+}

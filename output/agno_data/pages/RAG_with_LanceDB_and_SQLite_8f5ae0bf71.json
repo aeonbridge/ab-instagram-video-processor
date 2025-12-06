@@ -1,0 +1,14 @@
+{
+  "title": "RAG with LanceDB and SQLite",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/usage/rag-with-lance-db-and-sqlite\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.knowledge.embedder.ollama import OllamaEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.ollama import Ollama\nfrom agno.vectordb.lancedb import LanceDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#rag-with-lancedb-and-sqlite",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Media Trend Analysis Agent",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/media_trend_analysis_agent\n\nThe Media Trend Analysis Agent Example demonstrates a sophisticated AI-powered tool designed to analyze media trends, track digital conversations, and provide actionable insights across various online platforms. This agent combines web search capabilities with content scraping to deliver comprehensive trend analysis reports.\n\nThis agent specializes in:\n\n* **Trend Identification**: Detects emerging patterns and shifts in media coverage\n* **Source Analysis**: Identifies key influencers and authoritative sources\n* **Data Extraction**: Gathers information from news sites, social platforms, and digital media\n* **Insight Generation**: Provides actionable recommendations based on trend analysis\n* **Future Forecasting**: Predicts potential developments based on current patterns\n\n* **Multi-Source Analysis**: Combines Exa search tools with Firecrawl scraping capabilities\n* **Intelligent Filtering**: Uses keyword-based searches with date filtering for relevant results\n* **Smart Scraping**: Only scrapes content when search results are insufficient\n* **Structured Reporting**: Generates comprehensive markdown reports with executive summaries\n* **Real-time Data**: Analyzes current trends with configurable time windows\n\n```python cookbook/examples/agents/media_trend_analysis_agent.py theme={null}\n\"\"\"Please install dependencies using:\npip install openai exa-py agno firecrawl\n\"\"\"\n\nfrom datetime import datetime, timedelta\nfrom textwrap import dedent\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.exa import ExaTools\nfrom agno.tools.firecrawl import FirecrawlTools\n\ndef calculate_start_date(days: int) -> str:\n    \"\"\"Calculate start date based on number of days.\"\"\"\n    start_date = datetime.now() - timedelta(days=days)\n    return start_date.strftime(\"%Y-%m-%d\")\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[\n        ExaTools(start_published_date=calculate_start_date(30), type=\"keyword\"),\n        FirecrawlTools(scrape=True),\n    ],\n    description=dedent(\"\"\"\\\n        You are an expert media trend analyst specializing in:\n        1. Identifying emerging trends across news and digital platforms\n        2. Recognizing pattern changes in media coverage\n        3. Providing actionable insights based on data\n        4. Forecasting potential future developments\n    \"\"\"),\n    instructions=[\n        \"Analyze the provided topic according to the user's specifications:\",\n        \"1. Use keywords to perform targeted searches\",\n        \"2. Identify key influencers and authoritative sources\",\n        \"3. Extract main themes and recurring patterns\",\n        \"4. Provide actionable recommendations\",\n        \"5. if got sources less then 2, only then scrape them using firecrawl tool, dont crawl it  and use them to generate the report\",\n        \"6. growth rate should be in percentage , and if not possible dont give growth rate\",\n    ],\n    expected_output=dedent(\"\"\"\\\n    # Media Trend Analysis Report\n\n## Executive Summary\n    {High-level overview of findings and key metrics}\n\n## Trend Analysis\n    ### Volume Metrics\n    - Peak discussion periods: {dates}\n    - Growth rate: {percentage or dont show this}\n\n## Source Analysis\n    ### Top Sources\n    1. {Source 1}\n\n## Actionable Insights\n    1. {Insight 1}\n       - Evidence: {data points}\n       - Recommended action: {action}\n\n## Future Predictions\n    1. {Prediction 1}\n       - Supporting evidence: {evidence}\n\n## References\n    {Detailed source list with links}\n    \"\"\"),\n    markdown=True,\n    add_datetime_to_context=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "What It Does",
+      "id": "what-it-does"
+    },
+    {
+      "level": "h3",
+      "text": "Key Features",
+      "id": "key-features"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#media-trend-analysis-agent",
+  "links": []
+}

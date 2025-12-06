@@ -1,0 +1,8 @@
+{
+  "title": "Retrieve and display generated images",
+  "content": "run_response = image_agent.get_last_run_output()\nif run_response and isinstance(run_response, RunOutput):\n    for image_response in run_response.images:\n        image_url = image_response.url\n        print(\"image_url: \", image_url)\nelse:\n    print(\"No images found or images is not a list\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#retrieve-and-display-generated-images",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Delete Multiple Sessions",
+  "content": "Source: https://docs.agno.com/reference-api/schema/sessions/delete-multiple-sessions\n\ndelete /sessions\nDelete multiple sessions by their IDs in a single operation. This action cannot be undone and will permanently remove all specified sessions and their runs.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-multiple-sessions",
+  "links": []
+}

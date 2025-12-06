@@ -1,0 +1,43 @@
+{
+  "title": "Use the agent",
+  "content": "agent.print_response(\"What is currently trending on Twitter?\")\npython  theme={null}\nopenlit.init(\n    otlp_endpoint=\"http://127.0.0.1:4318\",  # OTLP collector endpoint\n    tracer=None,  # Custom OpenTelemetry tracer\n    disable_batch=False,  # Disable batch span processing\n    environment=\"production\",  # Environment name for filtering\n    application_name=\"my-agent\",  # Application identifier\n)\nbash  theme={null}\nopenlit-instrument \\\n  --service-name my-ai-app \\\n  --environment production \\\n  --otlp-endpoint http://127.0.0.1:4318 \\\n  python your_app.py\n```\n\nThis approach is particularly useful for:\n\n* Adding observability to existing applications without code changes\n* CI/CD pipelines where you want to instrument automatically\n* Testing observability before committing to code modifications\n\n* **Automatic Instrumentation**: OpenLIT automatically instruments supported LLM providers (OpenAI, Anthropic, etc.) and frameworks\n* **Zero Code Changes**: Use either `openlit.init()` in your code or the `openlit-instrument` CLI to trace all LLM calls without modifications\n* **OpenTelemetry Native**: OpenLIT uses standard OpenTelemetry protocols, ensuring compatibility with other observability tools\n* **Open-Source & Self-Hosted**: OpenLIT is fully open-source and runs on your own infrastructure for complete data privacy and control\n\n## Integration with Other Platforms\n\n[OpenLIT](https://openlit.io/) can export traces to other observability platforms like Grafana Cloud, New Relic and more. See the [Langfuse integration guide](/integrations/observability/langfuse) for an example of using OpenLIT with Langfuse.",
+  "code_samples": [
+    {
+      "code": "## OpenLIT Dashboard Features\n\nOnce your agents are instrumented, you can access the OpenLIT dashboard to:\n\n* **View Traces**: Visualize complete execution flows including agent runs, tool calls, and LLM requests\n* **Monitor Performance**: Track latency, token usage, and throughput metrics\n* **Analyze Costs**: Monitor API costs across different models and providers\n* **Track Errors**: Identify and debug exceptions with detailed stack traces\n* **Compare Models**: Evaluate different LLM providers based on performance and cost\n\n<Frame caption=\"OpenLIT Trace Details\">\n  <video autoPlay muted loop controls className=\"w-full aspect-video\" src=\"https://mintcdn.com/openlit/oP6rqLGiwYvXWG_M/images/trace-details.mp4?fit=max&auto=format&n=oP6rqLGiwYvXWG_M&q=85&s=80a9b4bf54862dd386284f175c71f714\" />\n</Frame>\n\n## Configuration Options\n\nThe `openlit.init()` function accepts several parameters:",
+      "language": "unknown"
+    },
+    {
+      "code": "## CLI-Based Instrumentation\n\nFor true zero-code instrumentation, you can use the `openlit-instrument` CLI command to run your application without modifying any code:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "OpenLIT Dashboard Features",
+      "id": "openlit-dashboard-features"
+    },
+    {
+      "level": "h2",
+      "text": "Configuration Options",
+      "id": "configuration-options"
+    },
+    {
+      "level": "h2",
+      "text": "CLI-Based Instrumentation",
+      "id": "cli-based-instrumentation"
+    },
+    {
+      "level": "h2",
+      "text": "Notes",
+      "id": "notes"
+    },
+    {
+      "level": "h2",
+      "text": "Integration with Other Platforms",
+      "id": "integration-with-other-platforms"
+    }
+  ],
+  "url": "llms-txt#use-the-agent",
+  "links": []
+}

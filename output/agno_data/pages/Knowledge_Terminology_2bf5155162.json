@@ -1,0 +1,89 @@
+{
+  "title": "Knowledge Terminology",
+  "content": "Source: https://docs.agno.com/basics/knowledge/terminology\n\nEssential concepts and terminology for understanding how Knowledge works in Agno agents.\n\nThis reference guide defines the key concepts and terminology commonly encountered when working with Knowledge in Agno.\n\nA structured repository of information that agents can search and retrieve from at runtime. Contains processed content optimized for AI understanding and retrieval.\n\n**Retrieval Augmented Generation** where the agent actively decides when to search, what to search for, and how to use the retrieved information. Unlike traditional RAG systems, the agent has full control over the search process.\n\n### Vector Embeddings\n\nMathematical representations of text that capture semantic meaning. Words and phrases with similar meanings have similar embeddings, enabling intelligent search beyond keyword matching.\n\nThe process of breaking large documents into smaller, manageable pieces that are optimal for search and retrieval while preserving context.\n\n### Dynamic Few-Shot Learning\n\nThe pattern where agents retrieve specific examples or context at runtime to improve their performance on tasks, rather than having all information provided upfront.\n\n<Accordion title=\"Example: Dynamic Few-Shot Learning in Action\" icon=\"database\">\n  **Scenario:** Building a Text-to-SQL Agent\n\nInstead of cramming all table schemas, column names, and example queries into the system prompt, you store this information in a knowledge base.\n\nWhen a user asks for data, the agent:\n\n1. Analyzes the request\n  2. Searches for relevant schema information and example queries\n  3. Uses the retrieved context to generate the best possible SQL query\n\nThis is \"dynamic\" because the agent gets exactly the information it needs for each specific query, and \"few-shot\" because it learns from examples retrieved at runtime.\n</Accordion>\n\n## Core Knowledge Components\n\nThe raw information agents need access to:\n\n* **Documents**: PDFs, Word files, text files\n* **Websites**: URLs, web pages, documentation sites\n* **Databases**: SQL databases, APIs, structured data\n* **Text**: Direct text content, notes, policies\n\nSpecialized components that parse different content types and extract meaningful text:\n\n* **PDFReader**: Extracts text from PDF files, handles encryption\n* **WebsiteReader**: Crawls web pages and extracts content\n* **CSVReader**: Processes tabular data from CSV files\n* **Custom Readers**: Build your own for specialized data sources\n\n### Chunking Strategies\n\nMethods for breaking content into optimal pieces:\n\n* **Semantic Chunking**: Respects natural content boundaries\n* **Fixed Size**: Uniform chunk sizes with overlap\n* **Document Chunking**: Preserves document structure\n* **Recursive Chunking**: Hierarchical splitting with multiple separators\n\nStorage systems optimized for similarity search:\n\n* **PgVector**: PostgreSQL extension for vector storage\n* **LanceDB**: Fast, embedded vector database\n* **Pinecone**: Managed vector database service\n* **Qdrant**: High-performance vector search engine\n\n## Component Relationships\n\nThe Knowledge system combines these components in a coordinated pipeline: **Readers** → **Chunking** → **Embedders** → **Vector Databases** → **Agent Retrieval**.\n\n## Advanced Knowledge Features\n\n### Custom Knowledge Retrievers\n\nFor complete control over how agents search your knowledge:\n\n### Asynchronous Operations\n\nOptimize performance with async knowledge operations:\n\n```python  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Asynchronous Operations\n\nOptimize performance with async knowledge operations:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Terminology",
+      "id": "key-terminology"
+    },
+    {
+      "level": "h3",
+      "text": "Knowledge Base",
+      "id": "knowledge-base"
+    },
+    {
+      "level": "h3",
+      "text": "Agentic RAG",
+      "id": "agentic-rag"
+    },
+    {
+      "level": "h3",
+      "text": "Vector Embeddings",
+      "id": "vector-embeddings"
+    },
+    {
+      "level": "h3",
+      "text": "Chunking",
+      "id": "chunking"
+    },
+    {
+      "level": "h3",
+      "text": "Dynamic Few-Shot Learning",
+      "id": "dynamic-few-shot-learning"
+    },
+    {
+      "level": "h2",
+      "text": "Core Knowledge Components",
+      "id": "core-knowledge-components"
+    },
+    {
+      "level": "h3",
+      "text": "Content Sources",
+      "id": "content-sources"
+    },
+    {
+      "level": "h3",
+      "text": "Readers",
+      "id": "readers"
+    },
+    {
+      "level": "h3",
+      "text": "Chunking Strategies",
+      "id": "chunking-strategies"
+    },
+    {
+      "level": "h3",
+      "text": "Vector Databases",
+      "id": "vector-databases"
+    },
+    {
+      "level": "h2",
+      "text": "Component Relationships",
+      "id": "component-relationships"
+    },
+    {
+      "level": "h2",
+      "text": "Advanced Knowledge Features",
+      "id": "advanced-knowledge-features"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Knowledge Retrievers",
+      "id": "custom-knowledge-retrievers"
+    },
+    {
+      "level": "h3",
+      "text": "Asynchronous Operations",
+      "id": "asynchronous-operations"
+    }
+  ],
+  "url": "llms-txt#knowledge-terminology",
+  "links": []
+}

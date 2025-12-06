@@ -1,0 +1,8 @@
+{
+  "title": "Create agents for research",
+  "content": "research_agent = Agent(\n    name=\"Research Agent\",\n    role=\"Research specialist\",\n    tools=[HackerNewsTools(), DuckDuckGoTools()],\n    instructions=\"You are a research specialist. Research the given topic thoroughly.\",\n    markdown=True,\n)\n\nanalysis_agent = Agent(\n    name=\"Analysis Agent\",\n    role=\"Data analyst\",\n    instructions=\"You are a data analyst. Analyze and summarize research findings.\",\n    markdown=True,\n)\n\ncontent_agent = Agent(\n    name=\"Content Agent\",\n    role=\"Content creator\",\n    instructions=\"You are a content creator. Create engaging content based on research.\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agents-for-research",
+  "links": []
+}

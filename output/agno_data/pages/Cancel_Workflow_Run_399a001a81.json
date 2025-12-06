@@ -1,0 +1,8 @@
+{
+  "title": "Cancel Workflow Run",
+  "content": "Source: https://docs.agno.com/reference-api/schema/workflows/cancel-workflow-run\n\npost /workflows/{workflow_id}/runs/{run_id}/cancel\nCancel a currently executing workflow run, stopping all active steps and cleanup.\n**Note:** Complex workflows with multiple parallel steps may take time to fully cancel.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#cancel-workflow-run",
+  "links": []
+}

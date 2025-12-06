@@ -1,0 +1,14 @@
+{
+  "title": "Get a trace",
+  "content": "trace = db.get_trace(run_id=response.run_id)\n\nif trace:\n    print(f\"Trace ID: {trace.trace_id}\")\n    print(f\"Name: {trace.name}\")\n    print(f\"Duration: {trace.duration_ms}ms\")\n    print(f\"Status: {trace.status}\")\n    print(f\"Total Spans: {trace.total_spans}\")\n    print(f\"Errors: {trace.error_count}\")\n```\n\n* [Span Reference](/reference/tracing/span) - Individual operations within a trace\n* [DB Functions](/basics/tracing/db-functions) - Query functions for traces and spans",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "See Also",
+      "id": "see-also"
+    }
+  ],
+  "url": "llms-txt#get-a-trace",
+  "links": []
+}

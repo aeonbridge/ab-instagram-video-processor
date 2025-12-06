@@ -1,0 +1,8 @@
+{
+  "title": "Run the team",
+  "content": "run_response: TeamRunOutput = team.run(\n    \"What is going on in the world?\"\n)\npprint_run_response(run_response, markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-the-team",
+  "links": []
+}

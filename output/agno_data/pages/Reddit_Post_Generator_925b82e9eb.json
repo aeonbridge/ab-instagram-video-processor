@@ -1,0 +1,27 @@
+{
+  "title": "Reddit Post Generator",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/reddit-post-generator\n\n**Reddit Post Generator** is a team of agents that can research topics on the web and make posts for a subreddit on Reddit.\n\nCreate a file `reddit_post_generator_team.py` with the following code:\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Set environment variables\">\n    \n  </Step>\n\n<Step title=\"Run the agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#reddit-post-generator",
+  "links": []
+}

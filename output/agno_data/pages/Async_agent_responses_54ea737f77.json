@@ -1,0 +1,19 @@
+{
+  "title": "Async agent responses",
+  "content": "response = await agent.arun(\"What's in the dataset?\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Knowledge Filtering\n\nControl what information agents can access:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Knowledge Filtering",
+      "id": "knowledge-filtering"
+    }
+  ],
+  "url": "llms-txt#async-agent-responses",
+  "links": []
+}

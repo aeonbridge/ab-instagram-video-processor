@@ -1,0 +1,14 @@
+{
+  "title": "CSV URL Reader",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/csv-url-reader\n\nThe **CSV URL Reader** processes CSV files directly from URLs, allowing you to create knowledge bases from remote CSV data sources.\n\n```python examples/basics/knowledge/readers/csv_reader_url_async.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\nknowledge = Knowledge(\n    # Table name: ai.csv_documents\n    vector_db=PgVector(\n        table_name=\"csv_documents\",\n        db_url=db_url,\n    ),\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#csv-url-reader",
+  "links": []
+}

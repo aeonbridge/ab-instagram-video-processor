@@ -1,0 +1,19 @@
+{
+  "title": "Initialize AsyncSqliteDb with a database file",
+  "content": "db = AsyncSqliteDb(db_file=\"workflow_storage.db\")\n\nhackernews_agent = Agent(\n    name=\"Hackernews Agent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[HackerNewsTools()],\n    role=\"Extract key insights and content from Hackernews posts\",\n)\nweb_agent = Agent(\n    name=\"Web Agent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[DuckDuckGoTools()],\n    role=\"Search the web for the latest news and trends\",\n)\ncontent_planner = Agent(\n    name=\"Content Planner\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=[\n        \"Plan a content schedule over 4 weeks for the provided topic and research content\",\n        \"Ensure that I have posts for 3 posts per week\",\n    ],\n)\n\nresearch_team = Team(\n    name=\"Research Team\",\n    members=[hackernews_agent, web_agent],\n    instructions=\"Research tech topics from Hackernews and the web\",\n)\n\nresearch_step = Step(\n    name=\"Research Step\",\n    team=research_team,\n)\ncontent_planning_step = Step(\n    name=\"Content Planning Step\",\n    agent=content_planner,\n)\ncontent_creation_workflow = Workflow(\n    name=\"Content Creation Workflow\",\n    description=\"Automated content creation from blog posts to social media\",\n    db=db,\n    steps=[research_step, content_planning_step],\n)\n\nif __name__ == \"__main__\":\n    asyncio.run(\n        content_creation_workflow.aprint_response(\n            input=\"AI trends in 2024\",\n            markdown=True,\n        )\n    )\n\n<Snippet file=\"db-async-sqlite-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/sqlite/async_sqlite/async_sqlite_for_workflow.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#initialize-asyncsqlitedb-with-a-database-file",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Conditional Steps",
+  "content": "Source: https://docs.agno.com/reference/workflows/conditional-steps\n\n| Parameter     | Type                                                                               | Default  | Description                                   |\n| ------------- | ---------------------------------------------------------------------------------- | -------- | --------------------------------------------- |\n| `evaluator`   | `Union[Callable[[StepInput], bool], Callable[[StepInput], Awaitable[bool]], bool]` | Required | Function or boolean to evaluate the condition |\n| `steps`       | `WorkflowSteps`                                                                    | Required | Steps to execute if the condition is met      |\n| `name`        | `Optional[str]`                                                                    | `None`   | Name of the condition step                    |\n| `description` | `Optional[str]`                                                                    | `None`   | Description of the condition step             |",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#conditional-steps",
+  "links": []
+}

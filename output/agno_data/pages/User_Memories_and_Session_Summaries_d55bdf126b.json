@@ -1,0 +1,28 @@
+{
+  "title": "User Memories and Session Summaries",
+  "content": "Source: https://docs.agno.com/examples/getting-started/10-user-memories-and-summaries\n\nThis example shows how to create an agent with persistent memory that stores:\n\n1. Personalized user memories - facts and preferences learned about specific users\n2. Session summaries - key points and context from conversations\n3. Chat history - stored in SQLite for persistence\n\n* Stores user-specific memories in SQLite database\n* Maintains session summaries for context\n* Continues conversations across sessions with memory\n* References previous context and user information in responses\n\nExamples:\nUser: \"My name is John and I live in NYC\"\nAgent: *Creates memory about John's location*\n\nUser: \"What do you remember about me?\"\nAgent: *Recalls previous memories about John*\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run the agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#user-memories-and-session-summaries",
+  "links": []
+}

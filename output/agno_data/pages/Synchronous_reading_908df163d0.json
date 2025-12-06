@@ -1,0 +1,8 @@
+{
+  "title": "Synchronous reading",
+  "content": "documents = reader.read(\"file.pdf\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#synchronous-reading",
+  "links": []
+}

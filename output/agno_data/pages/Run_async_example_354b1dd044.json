@@ -1,0 +1,24 @@
+{
+  "title": "Run async example",
+  "content": "asyncio.run(embed_texts())\n```\n\n| Parameter        | Type                                 | Default                               | Description                                                       |\n| ---------------- | ------------------------------------ | ------------------------------------- | ----------------------------------------------------------------- |\n| `id`             | `str`                                | `\"jina-embeddings-v3\"`                | The model ID to use for generating embeddings.                    |\n| `dimensions`     | `int`                                | `1024`                                | The number of dimensions for the embedding vectors.               |\n| `embedding_type` | `Literal[\"float\", \"base64\", \"int8\"]` | `\"float\"`                             | The format type of the returned embeddings.                       |\n| `late_chunking`  | `bool`                               | `False`                               | Whether to enable late chunking optimization.                     |\n| `user`           | `Optional[str]`                      | `None`                                | User identifier for tracking purposes. Optional.                  |\n| `api_key`        | `Optional[str]`                      | `JINA_API_KEY` env var                | The Jina AI API key. Can be set via environment variable.         |\n| `base_url`       | `str`                                | `\"https://api.jina.ai/v1/embeddings\"` | The base URL for the Jina API.                                    |\n| `headers`        | `Optional[Dict[str, str]]`           | `None`                                | Additional headers to include in API requests. Optional.          |\n| `request_params` | `Optional[Dict[str, Any]]`           | `None`                                | Additional parameters to include in the API request. Optional.    |\n| `timeout`        | `Optional[float]`                    | `None`                                | Timeout in seconds for API requests. Optional.                    |\n| `enable_batch`   | `bool`                               | `False`                               | Enable batch processing to reduce API calls and avoid rate limits |\n| `batch_size`     | `int`                                | `100`                                 | Number of texts to process in each API call for batch operations. |\n\n* **Async Support**: Full async/await support for better performance in concurrent applications\n* **Batch Processing**: Efficient batch processing of multiple texts with configurable batch size\n* **Late Chunking**: Support for Jina's late chunking optimization technique\n* **Flexible Output**: Multiple embedding formats (float, base64, int8)\n* **Usage Tracking**: Get detailed usage information for API calls\n* **Error Handling**: Robust error handling with fallback mechanisms\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/knowledge/embedders/jina_embedder.py)\n* [Jina AI Documentation](https://jina.ai/embeddings/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Features",
+      "id": "features"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#run-async-example",
+  "links": []
+}

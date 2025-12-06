@@ -1,0 +1,33 @@
+{
+  "title": "Run periodically or before high-cost operations",
+  "content": "prune_old_memories(db, user_id=\"john_doe@example.com\")\npython  theme={null}\nagent = Agent(\n    db=db,\n    enable_agentic_memory=True,\n    tool_call_limit=5  # Prevents excessive memory operations\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Mitigation Strategy #5: Set Tool Call Limits\n\nPrevent runaway memory operations by limiting tool calls per conversation:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Common Pitfalls\n\n### The user\\_id Pitfall\n\n**The Problem:** Forgetting to set `user_id` causes all memories to default to `user_id=\"default\"`, mixing different users' memories together.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Mitigation Strategy #5: Set Tool Call Limits",
+      "id": "mitigation-strategy-#5:-set-tool-call-limits"
+    },
+    {
+      "level": "h2",
+      "text": "Common Pitfalls",
+      "id": "common-pitfalls"
+    },
+    {
+      "level": "h3",
+      "text": "The user\\_id Pitfall",
+      "id": "the-user\\_id-pitfall"
+    }
+  ],
+  "url": "llms-txt#run-periodically-or-before-high-cost-operations",
+  "links": []
+}

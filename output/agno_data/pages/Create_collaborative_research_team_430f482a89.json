@@ -1,0 +1,8 @@
+{
+  "title": "Create collaborative research team",
+  "content": "team = Team(\n    name=\"Hackernews Research Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[hackernews_agent],\n    determine_input_for_members=False,  # The member gets the input directly, without the team leader synthesizing it\n    instructions=[\n        \"Conduct thorough research based on the structured input\",\n        \"Address all focus areas mentioned in the research topic\",\n        \"Tailor the research to the specified target audience\",\n        \"Provide the requested number of sources\",\n    ],\n    show_members_responses=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-collaborative-research-team",
+  "links": []
+}

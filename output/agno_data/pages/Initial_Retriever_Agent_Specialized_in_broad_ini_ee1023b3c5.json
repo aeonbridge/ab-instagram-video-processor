@@ -1,0 +1,8 @@
+{
+  "title": "Initial Retriever Agent - Specialized in broad initial retrieval",
+  "content": "initial_retriever = Agent(\n    name=\"Initial Retriever\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Perform broad initial retrieval to gather candidate information\",\n    knowledge=reranked_knowledge,\n    search_knowledge=True,\n    instructions=[\n        \"Perform comprehensive initial retrieval from the knowledge base.\",\n        \"Cast a wide net to gather all potentially relevant information.\",\n        \"Focus on recall rather than precision in this initial phase.\",\n        \"Retrieve diverse content that might be relevant to the query.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initial-retriever-agent---specialized-in-broad-initial-retrieval",
+  "links": []
+}

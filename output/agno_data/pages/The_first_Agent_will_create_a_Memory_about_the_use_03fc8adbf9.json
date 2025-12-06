@@ -1,0 +1,8 @@
+{
+  "title": "The first Agent will create a Memory about the user name here:",
+  "content": "agent_1.print_response(\"Hi! My name is John Doe\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#the-first-agent-will-create-a-memory-about-the-user-name-here:",
+  "links": []
+}

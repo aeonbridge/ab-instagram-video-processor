@@ -1,0 +1,8 @@
+{
+  "title": "Create presentation",
+  "content": "prompt = (\n    \"Create a Q4 business review presentation with 5 slides:\\n\"\n    \"1. Title slide: 'Q4 2025 Business Review'\\n\"\n    \"2. Key metrics: Revenue $2.5M (↑25% YoY), 850 customers\\n\"\n    \"3. Major achievements: Product launch, new markets, team growth\\n\"\n    \"4. Challenges: Market competition, customer retention\\n\"\n    \"5. Q1 2026 goals: $3M revenue, 1000 customers, new features\\n\"\n    \"Save as 'q4_review.pptx'\"\n)\n\nresponse = powerpoint_agent.run(prompt)\nprint(response.content)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-presentation",
+  "links": []
+}

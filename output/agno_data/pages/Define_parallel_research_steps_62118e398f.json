@@ -1,0 +1,8 @@
+{
+  "title": "Define parallel research steps",
+  "content": "tech_research_step = Step(\n    name=\"TechResearch\",\n    agent=tech_researcher,\n    description=\"Research tech developments from Hacker News\",\n)\n\nnews_research_step = Step(\n    name=\"NewsResearch\",\n    agent=news_researcher,\n    description=\"Research current news and trends\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-parallel-research-steps",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Example usage with detailed research request",
+  "content": "if __name__ == \"__main__\":\n    research_agent.print_response(\n        \"Analyze the current state and future implications of artificial intelligence regulation worldwide\",\n        stream=True,\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage-with-detailed-research-request",
+  "links": []
+}

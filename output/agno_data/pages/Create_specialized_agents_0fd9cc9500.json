@@ -1,0 +1,8 @@
+{
+  "title": "Create specialized agents",
+  "content": "news_agent = Agent(\n    id=\"news-agent\",\n    name=\"News Agent\",\n    role=\"Get the latest news and provide summaries\",\n    tools=[DuckDuckGoTools()]\n)\n\nweather_agent = Agent(\n    id=\"weather-agent\",\n    name=\"Weather Agent\",\n    role=\"Get weather information and forecasts\",\n    tools=[DuckDuckGoTools()]\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-specialized-agents",
+  "links": []
+}

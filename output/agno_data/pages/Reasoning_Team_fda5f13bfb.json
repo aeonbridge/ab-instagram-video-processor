@@ -1,0 +1,61 @@
+{
+  "title": "Reasoning Team",
+  "content": "Source: https://docs.agno.com/examples/use-cases/teams/reasoning_team\n\nBuild a reasoning team that handles complex queries by combining web search, financial data, and transparent analytical thinking. This example demonstrates how reasoning tools make the team's decision-making process visible.\n\nBy building this team, you'll understand:\n\n* How to integrate reasoning tools for transparent analytical thinking\n* How to combine multiple specialized agents with different data sources\n* How to use domain-specific search with Exa for financial information\n* How to stream reasoning events to see the team's thought process in real-time\n\nBuild financial research platforms, investment analysis tools, market intelligence systems, or decision support applications.\n\nThe team coordinates specialized agents with transparent reasoning:\n\n1. **Analyze**: Team leader uses reasoning tools to plan the approach\n2. **Search**: Web agent finds general information using DuckDuckGo\n3. **Research**: Finance agent retrieves financial data from trusted sources\n4. **Synthesize**: Team combines findings with visible reasoning process\n5. **Present**: Outputs structured data with supporting logic\n\nReasoning tools provide transparency into how the team thinks through complex queries.\n\nThe team will research companies and stock prices by coordinating between web search and financial data agents. You'll see the reasoning process as the team plans its approach, delegates tasks, and synthesizes information.\n\nThe output includes visible thinking through reasoning tools, showing how the team decides which agent to use and how to combine their findings. Financial data is presented in tables with sources from trusted financial news outlets.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API keys\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Team\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* Modify the query to research different types of companies or markets\n* Adjust `include_domains` in ExaTools to focus on specific financial sources\n* Toggle `show_full_reasoning` to control visibility of the thinking process\n* Explore [Reasoning Tools](/basics/tools/reasoning_tools/reasoning-tools) for advanced analytical capabilities",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe team will research companies and stock prices by coordinating between web search and financial data agents. You'll see the reasoning process as the team plans its approach, delegates tasks, and synthesizes information.\n\nThe output includes visible thinking through reasoning tools, showing how the team decides which agent to use and how to combine their findings. Financial data is presented in tables with sources from trusted financial news outlets.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API keys\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Team\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#reasoning-team",
+  "links": []
+}

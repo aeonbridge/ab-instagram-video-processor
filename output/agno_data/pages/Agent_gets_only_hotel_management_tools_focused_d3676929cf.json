@@ -1,0 +1,62 @@
+{
+  "title": "Agent gets only hotel management tools - focused!",
+  "content": "tools = MCPToolbox(url=\"http://127.0.0.1:5001\", toolsets=[\"hotel-management\"])  # 3 tools\npython cookbook/tools/mcp/mcp_toolbox_for_db.py theme={null}\nimport asyncio\nfrom textwrap import dedent\nfrom agno.agent import Agent\nfrom agno.tools.mcp_toolbox import MCPToolbox\n\nurl = \"http://127.0.0.1:5001\"\n\nasync def run_agent(message: str = None) -> None:\n    \"\"\"Run an interactive CLI for the Hotel agent with the given message.\"\"\"\n\nasync with MCPToolbox(\n        url=url, toolsets=[\"hotel-management\", \"booking-system\"]\n    ) as db_tools:\n        print(db_tools.functions)  # Print available tools for debugging\n        agent = Agent(\n            tools=[db_tools],\n            instructions=dedent(\n                \"\"\" \\\n                You're a helpful hotel assistant. You handle hotel searching, booking and\n                cancellations. When the user searches for a hotel, mention it's name, id,\n                location and price tier. Always mention hotel ids while performing any\n                searches. This is very important for any operations. For any bookings or\n                cancellations, please provide the appropriate confirmation. Be sure to\n                update checkin or checkout dates if mentioned by the user.\n                Don't ask for confirmations from the user.\n            \"\"\"\n            ),\n            markdown=True,\n            show_tool_calls=True,\n            add_history_to_messages=True,\n            debug_mode=True,\n        )\n\nawait agent.acli_app(message=message, stream=True)\n\nif __name__ == \"__main__\":\n    asyncio.run(run_agent(message=None))\npython  theme={null}\nasync def production_example():\n    async with MCPToolbox(url=url) as toolbox:\n        # Load with authentication and bound parameters\n        hotel_tools = await toolbox.load_toolset(\n            \"hotel-management\",\n            auth_token_getters={\"hotel_api\": lambda: \"your-hotel-api-key\"},\n            bound_params={\"region\": \"us-east-1\"},\n        )\n\nbooking_tools = await toolbox.load_toolset(\n            \"booking-system\",\n            auth_token_getters={\"booking_api\": lambda: \"your-booking-api-key\"},\n            bound_params={\"environment\": \"production\"},\n        )\n\n# Use individual tools instead of the toolbox\n        all_tools = hotel_tools + booking_tools[:2]  # First 2 booking tools only\n        \n        agent = Agent(tools=all_tools, instructions=\"Hotel management with auth.\")\n        await agent.aprint_response(\"Book a hotel for tonight\")\npython  theme={null}\nasync def manual_connection_example():\n    # Initialize without auto-connection\n    toolbox = MCPToolbox(url=url, toolsets=[\"hotel-management\"])\n    \n    try:\n        await toolbox.connect()\n        agent = Agent(\n            tools=[toolbox],\n            instructions=\"Hotel search assistant.\",\n            markdown=True\n        )\n        await agent.aprint_response(\"Show me hotels in Basel\")\n    finally:\n        await toolbox.close()  # Always clean up\n```\n\n| Parameter   | Type                       | Default             | Description                                                                |\n| ----------- | -------------------------- | ------------------- | -------------------------------------------------------------------------- |\n| `url`       | `str`                      | -                   | Base URL for the toolbox service (automatically appends \"/mcp\" if missing) |\n| `toolsets`  | `Optional[List[str]]`      | `None`              | List of toolset names to filter tools by. Cannot be used with `tool_name`. |\n| `tool_name` | `Optional[str]`            | `None`              | Single tool name to load. Cannot be used with `toolsets`.                  |\n| `headers`   | `Optional[Dict[str, Any]]` | `None`              | HTTP headers for toolbox client requests                                   |\n| `transport` | `str`                      | `\"streamable-http\"` | MCP transport protocol. Options: `\"stdio\"`, `\"sse\"`, `\"streamable-http\"`   |\n\n<Note>\n  Only one of `toolsets` or `tool_name` can be specified. The implementation validates this and raises a `ValueError` if both are provided.\n</Note>\n\n| Function                                                                                            | Description                                                    |\n| --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |\n| `async connect()`                                                                                   | Initialize and connect to both MCP server and toolbox client   |\n| `async load_tool(tool_name, auth_token_getters={}, bound_params={})`                                | Load a single tool by name with optional authentication        |\n| `async load_toolset(toolset_name, auth_token_getters={}, bound_params={}, strict=False)`            | Load all tools from a specific toolset                         |\n| `async load_multiple_toolsets(toolset_names, auth_token_getters={}, bound_params={}, strict=False)` | Load tools from multiple toolsets                              |\n| `async load_toolset_safe(toolset_name)`                                                             | Safely load a toolset and return tool names for error handling |\n| `get_client()`                                                                                      | Get the underlying ToolboxClient instance                      |\n| `async close()`                                                                                     | Close both toolbox client and MCP client connections           |\n\nThe complete demo includes multiple working patterns:\n\n* **[Basic Agent](https://github.com/agno-agi/agno/blob/main/cookbook/tools/mcp/mcp_toolbox_demo/agent.py)**: Simple hotel assistant with toolset filtering\n* **[AgentOS Integration](https://github.com/agno-agi/agno/blob/main/cookbook/tools/mcp/mcp_toolbox_demo/agent_os.py)**: Integration with AgentOS control plane\n* **[Workflow Integration](https://github.com/agno-agi/agno/blob/main/cookbook/tools/mcp/mcp_toolbox_demo/hotel_management_workflows.py)**: Using MCPToolbox in Agno workflows\n* **[Type-Safe Agent](https://github.com/agno-agi/agno/blob/main/cookbook/tools/mcp/mcp_toolbox_demo/hotel_management_typesafe.py)**: Implementation with Pydantic models\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/mcp_toolbox.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/mcp/mcp_toolbox_demo)\n\nFor more information about MCP Toolbox for Databases, visit the [official documentation](https://googleapis.github.io/genai-toolbox/getting-started/introduction/).",
+  "code_samples": [
+    {
+      "code": "**The flow:**\n\n1. MCP Toolbox Server exposes 50+ database tools\n2. MCPToolbox connects and loads ALL tools internally\n3. Filters to only the `hotel-management` toolset (3 tools)\n4. Agent sees only the 3 relevant tools and stays focused\n\n## Advanced Usage\n\n### Multiple Toolsets\n\nLoad tools from multiple related toolsets:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Custom Authentication and Parameters\n\nFor production scenarios with authentication:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Manual Connection Management\n\nFor explicit control over connections:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Advanced Usage",
+      "id": "advanced-usage"
+    },
+    {
+      "level": "h3",
+      "text": "Multiple Toolsets",
+      "id": "multiple-toolsets"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Authentication and Parameters",
+      "id": "custom-authentication-and-parameters"
+    },
+    {
+      "level": "h3",
+      "text": "Manual Connection Management",
+      "id": "manual-connection-management"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Demo Examples",
+      "id": "demo-examples"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#agent-gets-only-hotel-management-tools---focused!",
+  "links": []
+}

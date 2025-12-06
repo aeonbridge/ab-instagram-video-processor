@@ -1,0 +1,69 @@
+{
+  "title": "Setup AgentOS with MCP enabled",
+  "content": "agent_os = AgentOS(\n    description=\"Example app with MCP enabled\",\n    agents=[web_research_agent],\n    enable_mcp_server=True,  # This enables a LLM-friendly MCP server at /mcp\n)\n\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    # Your MCP server will be available at http://localhost:7777/mcp\n    agent_os.serve(app=\"enable_mcp_example:app\", reload=True)\n\nOnce enabled, your AgentOS will expose an MCP server via the `/mcp` endpoint.\n\nYou can see a complete example [here](/agent-os/usage/mcp/enable-mcp-example).\n\n## Available MCP Tools\n\nWhen you expose your AgentOS as an MCP server, the following MCP tools will be available:\n\n### `get_agentos_config`\n\nGet the configuration of the AgentOS\n\nRun the desired Agent\n\n* `agent_id` (str): The ID of the agent to run\n* `message` (str): The message to send to the agent\n\n* `team_id` (str): The ID of the team to run\n* `message` (str): The message to send to the team\n\nRun the desired Workflow\n\n* `workflow_id` (str): The ID of the workflow to run\n* `message` (str): The message to send to the workflow\n\n### `get_sessions_for_agent`\n\nGet the list of sessions for the desired Agent\n\n* `agent_id` (str): The ID of the agent to get the sessions for\n* `db_id` (str): The ID of the database to use\n* `user_id` (Optional\\[str]): The ID of the user to get the sessions for\n* `sort_by` (Optional\\[str]): The field to sort the sessions by. Defaults to `created_at`\n* `sort_order` (Optional\\[str]): The order to sort the sessions by. Defaults to `desc`\n\n### `get_sessions_for_team`\n\nGet the list of sessions for the desired Team\n\n* `team_id` (str): The ID of the team to get the sessions for\n* `db_id` (str): The ID of the database to use\n* `user_id` (Optional\\[str]): The ID of the user to get the sessions for\n* `sort_by` (Optional\\[str]): The field to sort the sessions by. Defaults to `created_at`\n* `sort_order` (Optional\\[str]): The order to sort the sessions by. Defaults to `desc`\n\n### `get_sessions_for_workflow`\n\nGet the list of sessions for the desired Workflow\n\n* `workflow_id` (str): The ID of the workflow to get the sessions for\n* `db_id` (str): The ID of the database to use\n* `user_id` (Optional\\[str]): The ID of the user to get the sessions for\n* `sort_by` (Optional\\[str]): The field to sort the sessions by. Defaults to `created_at`\n* `sort_order` (Optional\\[str]): The order to sort the sessions by. Defaults to `desc`\n\nCreate a new user memory\n\n* `db_id` (str): The ID of the database to use\n* `memory` (str): The memory content to store\n* `user_id` (str): The user this memory is about\n* `topics` (Optional\\[list\\[str]]): The topics of the memory\n\n### `get_memories_for_user`\n\nGet the list of memories for the given user\n\n* `user_id` (str): The ID of the user to get the memories for\n* `db_id` (Optional\\[str]): The ID of the database to use\n* `sort_by` (Optional\\[str]): The field to sort the memories by. Defaults to `created_at`\n* `sort_order` (Optional\\[str]): The order to sort the memories by. Defaults to `desc`\n\nUpdate the desired memory\n\n* `db_id` (str): The ID of the database to use\n* `memory_id` (str): The ID of the memory to update\n* `memory` (str): The memory content to store\n* `user_id` (str): The ID of the user to update the memory for\n\nDelete the desired memory\n\n* `db_id` (str): The ID of the database to use\n* `memory_id` (str): The ID of the memory to delete\n\nSee a full example [here](/agent-os/usage/mcp/enable-mcp-example).",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Available MCP Tools",
+      "id": "available-mcp-tools"
+    },
+    {
+      "level": "h3",
+      "text": "`get_agentos_config`",
+      "id": "`get_agentos_config`"
+    },
+    {
+      "level": "h3",
+      "text": "`run_agent`",
+      "id": "`run_agent`"
+    },
+    {
+      "level": "h3",
+      "text": "`run_team`",
+      "id": "`run_team`"
+    },
+    {
+      "level": "h3",
+      "text": "`run_workflow`",
+      "id": "`run_workflow`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_sessions_for_agent`",
+      "id": "`get_sessions_for_agent`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_sessions_for_team`",
+      "id": "`get_sessions_for_team`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_sessions_for_workflow`",
+      "id": "`get_sessions_for_workflow`"
+    },
+    {
+      "level": "h3",
+      "text": "`create_memory`",
+      "id": "`create_memory`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_memories_for_user`",
+      "id": "`get_memories_for_user`"
+    },
+    {
+      "level": "h3",
+      "text": "`update_memory`",
+      "id": "`update_memory`"
+    },
+    {
+      "level": "h3",
+      "text": "`delete_memory`",
+      "id": "`delete_memory`"
+    }
+  ],
+  "url": "llms-txt#setup-agentos-with-mcp-enabled",
+  "links": []
+}

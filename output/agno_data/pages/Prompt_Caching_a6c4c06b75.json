@@ -1,0 +1,33 @@
+{
+  "title": "Prompt Caching",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/prompt-caching\n\nLearn how to use prompt caching with Anthropic models and Agno.\n\nPrompt caching can help reducing processing time and costs. Consider it if you are using the same prompt multiple times in any flow.\n\nYou can read more about prompt caching with Anthropic models [here](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching).\n\nTo use prompt caching in your Agno setup, pass the `cache_system_prompt` argument when initializing the `Claude` model:\n\nNotice that for prompt caching to work, the prompt needs to be of a certain length. You can read more about this on Anthropic's [docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching#cache-limitations).\n\nYou can also use Anthropic's extended cache beta feature. This updates the cache duration from 5 minutes to 1 hour. To activate it, pass the `extended_cache_time` argument and the following beta header:\n\n```python cookbook/models/anthropic/prompt_caching_extended.py theme={null}\nfrom pathlib import Path\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.utils.media import download_file",
+  "code_samples": [
+    {
+      "code": "Notice that for prompt caching to work, the prompt needs to be of a certain length. You can read more about this on Anthropic's [docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching#cache-limitations).\n\n## Extended cache\n\nYou can also use Anthropic's extended cache beta feature. This updates the cache duration from 5 minutes to 1 hour. To activate it, pass the `extended_cache_time` argument and the following beta header:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Working example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Extended cache",
+      "id": "extended-cache"
+    },
+    {
+      "level": "h2",
+      "text": "Working example",
+      "id": "working-example"
+    }
+  ],
+  "url": "llms-txt#prompt-caching",
+  "links": []
+}

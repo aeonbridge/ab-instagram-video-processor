@@ -1,0 +1,14 @@
+{
+  "title": "Managing Tool Calls",
+  "content": "Source: https://docs.agno.com/basics/context/team/usage/filter-tool-calls-from-history\n\nThis example demonstrates how to use `max_tool_calls_from_history` to limit tool calls in team context across multiple research queries.\n\n```python filter_tool_calls_from_history.py theme={null}\nfrom textwrap import dedent\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#managing-tool-calls",
+  "links": []
+}

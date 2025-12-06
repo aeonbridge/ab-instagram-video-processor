@@ -1,0 +1,8 @@
+{
+  "title": "End condition function",
+  "content": "def research_evaluator(outputs: List[StepOutput]) -> bool:\n    \"\"\"\n    Evaluate if research results are sufficient\n    Returns True to break the loop, False to continue\n    \"\"\"\n    # Check if we have good research results\n    if not outputs:\n        return False\n\n# Calculate total content length from all outputs\n    total_content_length = sum(len(output.content or \"\") for output in outputs)\n\n# Check if we have substantial content (more than 500 chars total)\n    if total_content_length > 500:\n        print(\n            f\"✅ Research evaluation passed - found substantial content ({total_content_length} chars total)\"\n        )\n        return True\n\nprint(\n        f\"❌ Research evaluation failed - need more substantial research (current: {total_content_length} chars)\"\n    )\n    return False",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#end-condition-function",
+  "links": []
+}

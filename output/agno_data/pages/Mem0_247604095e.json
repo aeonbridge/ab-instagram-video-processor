@@ -1,0 +1,29 @@
+{
+  "title": "Mem0",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/mem0\n\nMem0Tools provides intelligent memory management capabilities for agents using the Mem0 memory platform.\n\nThe following agent can store and retrieve memories using Mem0:\n\n| Parameter                    | Type             | Default | Description                                     |\n| ---------------------------- | ---------------- | ------- | ----------------------------------------------- |\n| `config`                     | `Optional[Dict]` | `None`  | Mem0 configuration dictionary.                  |\n| `api_key`                    | `Optional[str]`  | `None`  | Mem0 API key. Uses MEM0\\_API\\_KEY if not set.   |\n| `user_id`                    | `Optional[str]`  | `None`  | User ID for memory operations.                  |\n| `org_id`                     | `Optional[str]`  | `None`  | Organization ID. Uses MEM0\\_ORG\\_ID if not set. |\n| `project_id`                 | `Optional[str]`  | `None`  | Project ID. Uses MEM0\\_PROJECT\\_ID if not set.  |\n| `infer`                      | `bool`           | `True`  | Enable automatic memory inference.              |\n| `enable_add_memory`          | `bool`           | `True`  | Enable memory addition functionality.           |\n| `enable_search_memory`       | `bool`           | `True`  | Enable memory search functionality.             |\n| `enable_get_all_memories`    | `bool`           | `True`  | Enable retrieving all memories functionality.   |\n| `enable_delete_all_memories` | `bool`           | `True`  | Enable memory deletion functionality.           |\n\n| Function              | Description                                   |\n| --------------------- | --------------------------------------------- |\n| `add_memory`          | Store new memories or information.            |\n| `search_memory`       | Search through stored memories using queries. |\n| `get_all_memories`    | Retrieve all stored memories for the user.    |\n| `delete_all_memories` | Delete all stored memories for the user.      |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/mem0.py)\n* [Mem0 Documentation](https://docs.mem0.ai/)\n* [Mem0 Platform](https://mem0.ai/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#mem0",
+  "links": []
+}

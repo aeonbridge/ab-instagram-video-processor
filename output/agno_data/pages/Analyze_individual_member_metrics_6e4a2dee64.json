@@ -1,0 +1,31 @@
+{
+  "title": "Analyze individual member metrics",
+  "content": "print(\"=\" * 50)\nprint(\"TEAM MEMBER MESSAGE METRICS\")\nprint(\"=\" * 50)\n\nif run_output.member_responses:\n    for member_response in run_output.member_responses:\n        if member_response.messages:\n            for message in member_response.messages:\n                if message.role == \"assistant\":\n                    if message.content:\n                        print(f\"📝 Member Message: {message.content[:100]}...\")\n                    elif message.tool_calls:\n                        print(f\"🔧 Member Tool calls: {message.tool_calls}\")\n\nprint(\"-\" * 20, \"Member Metrics\", \"-\" * 20)\n                    pprint(message.metrics)\n                    print(\"-\" * 60)\nbash  theme={null}\n    pip install agno exa_py rich\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    export EXA_API_KEY=****\n    bash  theme={null}\n    cookbook/run_pgvector.sh\n    bash  theme={null}\n    python cookbook/examples/teams/metrics/01_team_metrics.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Start PostgreSQL database\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#analyze-individual-member-metrics",
+  "links": []
+}

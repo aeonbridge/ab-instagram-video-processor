@@ -1,0 +1,8 @@
+{
+  "title": "Delete operations",
+  "content": "vector_db.delete_by_name(\"Recipes\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-operations",
+  "links": []
+}

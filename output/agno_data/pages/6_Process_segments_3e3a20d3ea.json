@@ -1,0 +1,8 @@
+{
+  "title": "6. Process segments",
+  "content": "shorts = extract_segments(response.content)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#6.-process-segments",
+  "links": []
+}

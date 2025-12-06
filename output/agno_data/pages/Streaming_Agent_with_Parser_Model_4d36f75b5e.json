@@ -1,0 +1,14 @@
+{
+  "title": "Streaming Agent with Parser Model",
+  "content": "Source: https://docs.agno.com/basics/input-output/agent/usage/parser-model-stream\n\nThis example demonstrates how to use a parser model with streaming output, combining Claude for parsing and OpenAI for generation.\n\n```python parser_model_stream.py theme={null}\nimport random\nfrom typing import Iterator, List\n\nfrom agno.agent import Agent, RunOutputEvent\nfrom agno.models.anthropic import Claude\nfrom agno.models.openai import OpenAIChat\nfrom pydantic import BaseModel, Field\nfrom rich.pretty import pprint  # noqa\n\nclass NationalParkAdventure(BaseModel):\n    park_name: str = Field(..., description=\"Name of the national park\")\n    best_season: str = Field(\n        ...,\n        description=\"Optimal time of year to visit this park (e.g., 'Late spring to early fall')\",\n    )\n    signature_attractions: List[str] = Field(\n        ...,\n        description=\"Must-see landmarks, viewpoints, or natural features in the park\",\n    )\n    recommended_trails: List[str] = Field(\n        ...,\n        description=\"Top hiking trails with difficulty levels (e.g., 'Angel's Landing - Strenuous')\",\n    )\n    wildlife_encounters: List[str] = Field(\n        ..., description=\"Animals visitors are likely to spot, with viewing tips\"\n    )\n    photography_spots: List[str] = Field(\n        ...,\n        description=\"Best locations for capturing stunning photos, including sunrise/sunset spots\",\n    )\n    camping_options: List[str] = Field(\n        ..., description=\"Available camping areas, from primitive to RV-friendly sites\"\n    )\n    safety_warnings: List[str] = Field(\n        ..., description=\"Important safety considerations specific to this park\"\n    )\n    hidden_gems: List[str] = Field(\n        ..., description=\"Lesser-known spots or experiences that most visitors miss\"\n    )\n    difficulty_rating: int = Field(\n        ...,\n        ge=1,\n        le=5,\n        description=\"Overall park difficulty for average visitor (1=easy, 5=very challenging)\",\n    )\n    estimated_days: int = Field(\n        ...,\n        ge=1,\n        le=14,\n        description=\"Recommended number of days to properly explore the park\",\n    )\n    special_permits_needed: List[str] = Field(\n        default=[],\n        description=\"Any special permits or reservations required for certain activities\",\n    )\n\nagent = Agent(\n    parser_model=Claude(id=\"claude-sonnet-4-20250514\"),\n    description=\"You help people plan amazing national park adventures and provide detailed park guides.\",\n    output_schema=NationalParkAdventure,\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#streaming-agent-with-parser-model",
+  "links": []
+}

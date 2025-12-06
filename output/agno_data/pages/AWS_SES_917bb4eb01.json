@@ -1,0 +1,19 @@
+{
+  "title": "AWS SES",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/aws-ses\n\n**AWSSESTool** enables an Agent to send emails using Amazon Simple Email Service (SES).\n\nThe following example requires the `boto3` library and valid AWS credentials. You can install `boto3` via pip:\n\nYou must also configure your AWS credentials so that the SDK can authenticate to SES. The easiest way is via the AWS CLI:\n\n```shell  theme={null}\naws configure",
+  "code_samples": [
+    {
+      "code": "You must also configure your AWS credentials so that the SDK can authenticate to SES. The easiest way is via the AWS CLI:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    }
+  ],
+  "url": "llms-txt#aws-ses",
+  "links": []
+}

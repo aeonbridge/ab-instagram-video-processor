@@ -1,0 +1,19 @@
+{
+  "title": "For batch loading",
+  "content": "knowledge.add_contents(\n    paths=[\"docs/\", \"policies/\"],\n    skip_if_exists=True,\n    include=[\"*.pdf\", \"*.md\"],\n    exclude=[\"*temp*\", \"*draft*\"]\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### 3. Use Metadata Filters\n\nNarrow searches before vector comparison for faster, more accurate results:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3. Use Metadata Filters",
+      "id": "3.-use-metadata-filters"
+    }
+  ],
+  "url": "llms-txt#for-batch-loading",
+  "links": []
+}

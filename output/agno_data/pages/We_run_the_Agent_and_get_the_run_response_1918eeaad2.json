@@ -1,0 +1,8 @@
+{
+  "title": "We run the Agent and get the run response",
+  "content": "run_response = agent.run(\"Perform sensitive operation\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#we-run-the-agent-and-get-the-run-response",
+  "links": []
+}

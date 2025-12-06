@@ -1,0 +1,8 @@
+{
+  "title": "Run agent and return the response as a variable",
+  "content": "response: RunOutput = agent.run(\"Trending startups and products.\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-agent-and-return-the-response-as-a-variable",
+  "links": []
+}

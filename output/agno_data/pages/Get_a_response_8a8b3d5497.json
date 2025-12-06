@@ -1,0 +1,29 @@
+{
+  "title": "Get a response",
+  "content": "agent.print_response(\"Share a 2 sentence horror story\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.litellm import LiteLLM\n\nagent = Agent(\n    model=LiteLLM(\n        id=\"huggingface/mistralai/Mistral-7B-Instruct-v0.2\",\n        top_p=0.95,\n    ),\n    markdown=True,\n)\n\nagent.print_response(\"What's happening in France?\")\n```\n\n### Configuration Options\n\nThe `LiteLLM` class accepts the following parameters:\n\n| Parameter        | Type                       | Description                                                                               | Default      |\n| ---------------- | -------------------------- | ----------------------------------------------------------------------------------------- | ------------ |\n| `id`             | str                        | Model identifier (e.g., \"gpt-5-mini\" or \"huggingface/mistralai/Mistral-7B-Instruct-v0.2\") | \"gpt-5-mini\" |\n| `name`           | str                        | Display name for the model                                                                | \"LiteLLM\"    |\n| `provider`       | str                        | Provider name                                                                             | \"LiteLLM\"    |\n| `api_key`        | Optional\\[str]             | API key (falls back to LITELLM\\_API\\_KEY environment variable)                            | None         |\n| `api_base`       | Optional\\[str]             | Base URL for API requests                                                                 | None         |\n| `max_tokens`     | Optional\\[int]             | Maximum tokens in the response                                                            | None         |\n| `temperature`    | float                      | Sampling temperature                                                                      | 0.7          |\n| `top_p`          | float                      | Top-p sampling value                                                                      | 1.0          |\n| `request_params` | Optional\\[Dict\\[str, Any]] | Additional request parameters                                                             | None         |\n\n<Note> View more examples [here](/integrations/models/gateways/litellm/usage/basic-stream). </Note>",
+  "code_samples": [
+    {
+      "code": "### Using Hugging Face Models\n\nLiteLLM can also work with Hugging Face models:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Using Hugging Face Models",
+      "id": "using-hugging-face-models"
+    },
+    {
+      "level": "h3",
+      "text": "Configuration Options",
+      "id": "configuration-options"
+    },
+    {
+      "level": "h3",
+      "text": "Examples",
+      "id": "examples"
+    }
+  ],
+  "url": "llms-txt#get-a-response",
+  "links": []
+}

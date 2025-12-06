@@ -1,0 +1,27 @@
+{
+  "title": "Create a team for collaborative image generation",
+  "content": "image_team = Team(\n    name=\"Image Generation Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[prompt_engineer, image_generator],\n    instructions=[\n        \"Generate high-quality images from user prompts.\",\n        \"Prompt Engineer: First enhance and optimize the user's prompt.\",\n        \"Image Creator: Generate images using the enhanced prompt with DALL-E.\",\n    ],\n    markdown=True,\n)\n\nrun_stream: Iterator[RunOutputEvent] = image_team.run(\n    \"Create an image of a yellow siamese cat\",\n    stream=True,\n    stream_events=True,\n)\nfor chunk in run_stream:\n    pprint(dataclass_to_dict(chunk, exclude={\"messages\"}))\n    print(\"---\" * 20)\nbash  theme={null}\n    pip install agno rich\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/multimodal/generate_image_with_team.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-a-team-for-collaborative-image-generation",
+  "links": []
+}

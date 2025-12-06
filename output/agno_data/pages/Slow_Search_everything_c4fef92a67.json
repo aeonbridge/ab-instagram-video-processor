@@ -1,0 +1,8 @@
+{
+  "title": "Slow: Search everything",
+  "content": "results = knowledge.search(\"deployment process\", max_results=10)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#slow:-search-everything",
+  "links": []
+}

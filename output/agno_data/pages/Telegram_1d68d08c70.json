@@ -1,0 +1,28 @@
+{
+  "title": "Telegram",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/telegram\n\n**TelegramTools** enable an Agent to send messages to a Telegram chat using the Telegram Bot API.\n\nThe following agent will send a message to a Telegram chat.\n\n```python cookbook/tools/telegram_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.telegram import TelegramTools",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will send a message to a Telegram chat.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#telegram",
+  "links": []
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Replace a memory",
+  "content": "print(\"\\nReplacing memory\")\nassert memory_id_1 is not None\nmemory.replace_user_memory(\n    memory_id=memory_id_1,\n    memory=UserMemory(memory=\"The user's name is Jane Mary Doe\", topics=[\"name\"]),\n    user_id=jane_doe_id,\n)\nprint(\"Memory replaced\")\nmemories = memory.get_user_memories(user_id=jane_doe_id)\nprint(\"Memories:\")\npprint(memories)\nbash  theme={null}\n    pip install -U agno\n    bash Mac theme={null}\n      python standalone-memory.py\n      bash Windows theme={null}\n      python standalone-memory.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#replace-a-memory",
+  "links": []
+}

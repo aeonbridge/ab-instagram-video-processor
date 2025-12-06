@@ -1,0 +1,8 @@
+{
+  "title": "Set up tracing with custom configuration",
+  "content": "setup_tracing(\n    db=tracing_db,\n    batch_processing=True,\n    max_queue_size=2048,\n    schedule_delay_millis=3000,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-tracing-with-custom-configuration",
+  "links": []
+}

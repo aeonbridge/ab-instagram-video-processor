@@ -1,0 +1,8 @@
+{
+  "title": "Initialize Pinecone",
+  "content": "api_key = getenv(\"PINECONE_API_KEY\")\nindex_name = \"filtering-index\"\n\nvector_db = PineconeDb(\n    name=index_name,\n    dimension=1536,\n    metric=\"cosine\",\n    spec={\"serverless\": {\"cloud\": \"aws\", \"region\": \"us-east-1\"}},\n    api_key=api_key,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-pinecone",
+  "links": []
+}

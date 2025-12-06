@@ -1,0 +1,8 @@
+{
+  "title": "Asynchronous reading - better for I/O intensive operations",
+  "content": "documents = await reader.async_read(\"file.pdf\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#asynchronous-reading---better-for-i/o-intensive-operations",
+  "links": []
+}

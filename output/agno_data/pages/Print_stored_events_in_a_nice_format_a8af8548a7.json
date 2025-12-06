@@ -1,0 +1,8 @@
+{
+  "title": "Print stored events in a nice format",
+  "content": "print_stored_events(run_response, \"Simple Step Workflow\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#print-stored-events-in-a-nice-format",
+  "links": []
+}

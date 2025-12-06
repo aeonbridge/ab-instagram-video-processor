@@ -1,0 +1,75 @@
+{
+  "title": "Company Description Workflow",
+  "content": "Source: https://docs.agno.com/examples/use-cases/workflows/company-description\n\nBuild a comprehensive supplier profile generator that combines web crawling, search engines, Wikipedia, and competitor analysis. This workflow processes company information through specialized agents and delivers detailed markdown reports via email.\n\nBy building this workflow, you'll understand:\n\n* How to coordinate multiple agents running in parallel for data gathering\n* How to integrate diverse data sources (web crawling, search, Wikipedia)\n* How to implement workflow session state caching for expensive operations\n* How to automate report generation and email delivery with Resend\n\nBuild supplier research platforms, company intelligence systems, vendor evaluation tools, or automated due diligence reports.\n\nThe workflow coordinates four specialized agents running in parallel:\n\n1. **Crawl**: Crawler agent uses Firecrawl to extract information from the company website\n2. **Search**: Search agent uses DuckDuckGo to find recent news and articles\n3. **Research**: Wikipedia agent gathers background and historical information\n4. **Analyze**: Competitor agent identifies and analyzes market competitors\n5. **Synthesize**: Profile agent combines all findings into a structured markdown report\n6. **Deliver**: Report is automatically sent via email using Resend\n\nThe workflow caches analysis results in session state - subsequent requests for the same supplier return cached data.\n\nThis company description workflow consists of three main files:\n\n### 1. Agents (`agents.py`)\n\nSpecialized agents for gathering information from multiple sources:\n\n### 2. Prompts (`prompts.py`)\n\nDetailed instructions for each specialized agent:\n\n### 3. Workflow Implementation (`run_workflow.py`)\n\nComplete workflow with parallel information gathering and email delivery:\n\n* **Parallel Processing**: Four agents gather information simultaneously for maximum efficiency\n* **Multi-Source Data**: Combines web crawling, search engines, Wikipedia, and competitor analysis\n* **Email Integration**: Automatically sends formatted reports via email using Resend\n* **Markdown Formatting**: Generates structured, readable reports in HTML format\n* **Modular Design**: Clean separation of agents, prompts, and workflow logic\n* **Efficient Execution**: Uses parallel steps to minimize execution time\n* **Type Safety**: Pydantic models for structured data validation\n\n```python  theme={null}",
+  "code_samples": [
+    {
+      "code": "export OPENAI_API_KEY=\"your-openai-key\"\nexport RESEND_API_KEY=\"your-resend-key\"\nexport FIRECRAWL_API_KEY=\"your-firecrawl-key\"",
+      "language": "unknown"
+    },
+    {
+      "code": "pip install agno openai firecrawl-py resend",
+      "language": "unknown"
+    },
+    {
+      "code": "### 2. Prompts (`prompts.py`)\n\nDetailed instructions for each specialized agent:",
+      "language": "unknown"
+    },
+    {
+      "code": "### 3. Workflow Implementation (`run_workflow.py`)\n\nComplete workflow with parallel information gathering and email delivery:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Key Features\n\n* **Parallel Processing**: Four agents gather information simultaneously for maximum efficiency\n* **Multi-Source Data**: Combines web crawling, search engines, Wikipedia, and competitor analysis\n* **Email Integration**: Automatically sends formatted reports via email using Resend\n* **Markdown Formatting**: Generates structured, readable reports in HTML format\n* **Modular Design**: Clean separation of agents, prompts, and workflow logic\n* **Efficient Execution**: Uses parallel steps to minimize execution time\n* **Type Safety**: Pydantic models for structured data validation\n\n## Usage Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code Structure",
+      "id": "code-structure"
+    },
+    {
+      "level": "h3",
+      "text": "1. Agents (`agents.py`)",
+      "id": "1.-agents-(`agents.py`)"
+    },
+    {
+      "level": "h3",
+      "text": "2. Prompts (`prompts.py`)",
+      "id": "2.-prompts-(`prompts.py`)"
+    },
+    {
+      "level": "h3",
+      "text": "3. Workflow Implementation (`run_workflow.py`)",
+      "id": "3.-workflow-implementation-(`run_workflow.py`)"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    },
+    {
+      "level": "h2",
+      "text": "Usage Example",
+      "id": "usage-example"
+    }
+  ],
+  "url": "llms-txt#company-description-workflow",
+  "links": []
+}

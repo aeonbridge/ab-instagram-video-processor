@@ -1,0 +1,14 @@
+{
+  "title": "Video Input (Bytes Content)",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/video-input-bytes-content\n\n```python cookbook/models/google/gemini/video_input_bytes_content.py theme={null}\nimport requests\nfrom agno.agent import Agent\nfrom agno.media import Video\nfrom agno.models.google import Gemini\n\nagent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    markdown=True,\n)\n\nurl = \"https://videos.pexels.com/video-files/5752729/5752729-uhd_2560_1440_30fps.mp4\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#video-input-(bytes-content)",
+  "links": []
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Website Tools",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/website\n\n**WebsiteTools** enable an Agent to parse a website and add its contents to the knowledge base.\n\nThe following example requires the `beautifulsoup4` library.\n\nThe following agent will read the contents of a website and add it to the knowledge base.\n\n| Parameter   | Type        | Default | Description                                                                                                            |\n| ----------- | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------- |\n| `knowledge` | `Knowledge` | -       | The knowledge base associated with the website, containing various data and resources linked to the website's content. |\n\n| Function                        | Description                                                                                                                                                                                                          |\n| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `add_website_to_knowledge_base` | This function adds a website's content to the knowledge base. **NOTE:** The website must start with `https://` and should be a valid website. Use this function to get information about products from the internet. |\n| `read_url`                      | This function reads a URL and returns the contents.                                                                                                                                                                  |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/website.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/website_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will read the contents of a website and add it to the knowledge base.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#website-tools",
+  "links": []
+}

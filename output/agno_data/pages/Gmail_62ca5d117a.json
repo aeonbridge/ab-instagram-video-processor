@@ -1,0 +1,43 @@
+{
+  "title": "Gmail",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/gmail\n\n**Gmail** enables an Agent to interact with Gmail, allowing it to read, search, send, manage emails, and organize them with labels.\n\nThe Gmail toolkit requires Google API client libraries and proper authentication setup. Install the required dependencies:\n\nYou'll also need to set up Google Cloud credentials:\n\n1. Go to [Google Cloud Console](https://console.cloud.google.com)\n2. Create a project or select an existing one\n3. Enable the Gmail API\n4. Create OAuth 2.0 credentials\n5. Set up environment variables:\n\n| Parameter          | Type          | Default | Description                          |\n| ------------------ | ------------- | ------- | ------------------------------------ |\n| `creds`            | `Credentials` | `None`  | Pre-fetched OAuth credentials        |\n| `credentials_path` | `str`         | `None`  | Path to credentials file             |\n| `token_path`       | `str`         | `None`  | Path to token file                   |\n| `scopes`           | `List[str]`   | `None`  | Custom OAuth scopes                  |\n| `port`             | `int`         | `None`  | Port to use for OAuth authentication |\n\n| Function                | Description                                                                                                                                                                                                            |\n| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `get_latest_emails`     | Get the latest X emails from the user's inbox. Parameters include `count` (int) for number of emails to retrieve.                                                                                                      |\n| `get_emails_from_user`  | Get X number of emails from a specific sender. Parameters include `user` (str) for sender name or email, and `count` (int) for maximum number of emails.                                                               |\n| `get_unread_emails`     | Get the latest X unread emails. Parameters include `count` (int) for maximum number of unread emails.                                                                                                                  |\n| `get_starred_emails`    | Get X number of starred emails. Parameters include `count` (int) for maximum number of starred emails.                                                                                                                 |\n| `get_emails_by_context` | Get X number of emails matching a specific context. Parameters include `context` (str) for search term, and `count` (int) for maximum number of emails.                                                                |\n| `get_emails_by_date`    | Get emails within a specific date range. Parameters include `start_date` (int) for unix timestamp, `range_in_days` (Optional\\[int]) for date range, and `num_emails` (Optional\\[int], default=10).                     |\n| `get_emails_by_thread`  | Retrieve all emails from a specific thread. Parameters include `thread_id` (str) for the thread ID.                                                                                                                    |\n| `search_emails`         | Search emails using natural language queries. Parameters include `query` (str) for search query, and `count` (int) for number of emails to retrieve.                                                                   |\n| `create_draft_email`    | Create and save an email draft with attachments. Parameters include `to` (str), `subject` (str), `body` (str), `cc` (Optional\\[str]), and `attachments` (Optional\\[Union\\[str, List\\[str]]]).                          |\n| `send_email`            | Send an email with attachments. Parameters include `to` (str), `subject` (str), `body` (str), `cc` (Optional\\[str]), and `attachments` (Optional\\[Union\\[str, List\\[str]]]).                                           |\n| `send_email_reply`      | Reply to an existing email thread. Parameters include `thread_id` (str), `message_id` (str), `to` (str), `subject` (str), `body` (str), `cc` (Optional\\[str]), and `attachments` (Optional\\[Union\\[str, List\\[str]]]). |\n| `mark_email_as_read`    | Mark a specific email as read. Parameters include `message_id` (str) for the message ID.                                                                                                                               |\n| `mark_email_as_unread`  | Mark a specific email as unread. Parameters include `message_id` (str) for the message ID.                                                                                                                             |\n| `list_custom_labels`    | List all user-created custom labels. No parameters required.                                                                                                                                                           |\n| `apply_label`           | Apply labels to emails (creates if needed). Parameters include `context` (str) for search query, `label_name` (str) for label name, and `count` (int, default=10).                                                     |\n| `remove_label`          | Remove labels from emails. Parameters include `context` (str) for search query, `label_name` (str) for label name, and `count` (int, default=10).                                                                      |\n| `delete_custom_label`   | Delete a custom label with confirmation. Parameters include `label_name` (str) and `confirm` (bool, default=False) for safety confirmation.                                                                            |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Example](/examples/basics/tools/others/gmail)",
+  "code_samples": [
+    {
+      "code": "You'll also need to set up Google Cloud credentials:\n\n1. Go to [Google Cloud Console](https://console.cloud.google.com)\n2. Create a project or select an existing one\n3. Enable the Gmail API\n4. Create OAuth 2.0 credentials\n5. Set up environment variables:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#gmail",
+  "links": []
+}

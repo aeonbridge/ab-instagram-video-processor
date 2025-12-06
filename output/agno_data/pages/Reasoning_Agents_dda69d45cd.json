@@ -1,0 +1,34 @@
+{
+  "title": "Reasoning Agents",
+  "content": "Source: https://docs.agno.com/basics/reasoning/reasoning-agents\n\nTransform any model into a reasoning system through structured chain-of-thought processing, perfect for complex problems that require multiple steps, tool use, and self-validation.\n\n**The problem:** Regular models often rush to answers on complex problems, missing steps or making logical errors.\n\n**The solution:** Enable `reasoning=True` and watch your model break down the problem, explore multiple approaches, validate results, and deliver thoroughly vetted solutions.\n\n**The beauty?** It works with any model, from GPT-4o to Claude to local models via Ollama. You're not limited to specialized reasoning models.\n\nEnable reasoning on any agent by setting `reasoning=True`:\n\nBehind the scenes, Agno creates a **separate reasoning agent instance** that uses your same model but with specialized prompting that guides it through a rigorous 6-step reasoning framework:\n\n### The Reasoning Framework\n\n1. **Problem Analysis**\n\n* Restate the task to ensure full comprehension\n   * Identify required information and necessary tools\n\n2. **Decompose and Strategize**\n\n* Break down the problem into subtasks\n   * Develop multiple distinct approaches\n\n3. **Intent Clarification and Planning**\n\n* Articulate the user's intent\n   * Select the best strategy with clear justification\n   * Create a detailed action plan\n\n4. **Execute the Action Plan**\n\n* For each step: document title, action, result, reasoning, next action, and confidence score\n   * Call tools as needed to gather information\n   * Self-correct if errors are detected\n\n5. **Validation (Mandatory)**\n\n* Cross-verify with alternative approaches\n   * Use additional tools to confirm accuracy\n   * Reset and revise if validation fails\n\n6. **Final Answer**\n   * Deliver the thoroughly validated solution\n   * Explain how it addresses the original task\n\nThe reasoning agent works through these steps iteratively (up to 10 by default), building on previous results, calling tools, and self-correcting until it reaches a confident solution. Once complete, it hands the full reasoning back to your main agent for the final response.\n\n### How It Differs by Model Type\n\n**With regular models** (gpt-4o, Claude Sonnet, Gemini):\n\n* Forces structured chain-of-thought through the 6-step framework\n* Creates detailed reasoning steps with confidence scores\n* **This is where reasoning agents shine**: transforming any model into a reasoning system\n\n**With native reasoning models** (gpt-5-mini, DeepSeek-R1, o3-mini):\n\n* Uses the model's built-in reasoning capabilities\n* Adds a validation pass from your main agent\n* Useful for critical tasks but often unnecessary overhead for simpler problems\n\nLet's transform a regular GPT-4o model into a reasoning system:\n\n```python reasoning_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "Behind the scenes, Agno creates a **separate reasoning agent instance** that uses your same model but with specialized prompting that guides it through a rigorous 6-step reasoning framework:\n\n### The Reasoning Framework\n\n1. **Problem Analysis**\n\n   * Restate the task to ensure full comprehension\n   * Identify required information and necessary tools\n\n2. **Decompose and Strategize**\n\n   * Break down the problem into subtasks\n   * Develop multiple distinct approaches\n\n3. **Intent Clarification and Planning**\n\n   * Articulate the user's intent\n   * Select the best strategy with clear justification\n   * Create a detailed action plan\n\n4. **Execute the Action Plan**\n\n   * For each step: document title, action, result, reasoning, next action, and confidence score\n   * Call tools as needed to gather information\n   * Self-correct if errors are detected\n\n5. **Validation (Mandatory)**\n\n   * Cross-verify with alternative approaches\n   * Use additional tools to confirm accuracy\n   * Reset and revise if validation fails\n\n6. **Final Answer**\n   * Deliver the thoroughly validated solution\n   * Explain how it addresses the original task\n\nThe reasoning agent works through these steps iteratively (up to 10 by default), building on previous results, calling tools, and self-correcting until it reaches a confident solution. Once complete, it hands the full reasoning back to your main agent for the final response.\n\n### How It Differs by Model Type\n\n**With regular models** (gpt-4o, Claude Sonnet, Gemini):\n\n* Forces structured chain-of-thought through the 6-step framework\n* Creates detailed reasoning steps with confidence scores\n* **This is where reasoning agents shine**: transforming any model into a reasoning system\n\n**With native reasoning models** (gpt-5-mini, DeepSeek-R1, o3-mini):\n\n* Uses the model's built-in reasoning capabilities\n* Adds a validation pass from your main agent\n* Useful for critical tasks but often unnecessary overhead for simpler problems\n\n## Basic Example\n\nLet's transform a regular GPT-4o model into a reasoning system:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h3",
+      "text": "The Reasoning Framework",
+      "id": "the-reasoning-framework"
+    },
+    {
+      "level": "h3",
+      "text": "How It Differs by Model Type",
+      "id": "how-it-differs-by-model-type"
+    },
+    {
+      "level": "h2",
+      "text": "Basic Example",
+      "id": "basic-example"
+    }
+  ],
+  "url": "llms-txt#reasoning-agents",
+  "links": []
+}

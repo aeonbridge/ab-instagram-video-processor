@@ -1,0 +1,29 @@
+{
+  "title": "Startup Idea Validator",
+  "content": "Source: https://docs.agno.com/examples/use-cases/workflows/startup-idea-validator\n\nBuild a startup validation workflow that helps entrepreneurs evaluate their business ideas through clarification, originality assessment, mission definition, and comprehensive market research. This multi-agent system provides objective feedback before resource investment.\n\nBy building this workflow, you'll understand:\n\n* How to structure multi-phase validation workflows for complex analysis\n* How to coordinate specialized agents for different evaluation aspects\n* How to integrate market research with competitive analysis\n* How to generate comprehensive validation reports with actionable insights\n\nBuild startup validation platforms, business idea analyzers, market opportunity assessment tools, or entrepreneurship advisory systems.\n\nThe workflow validates startup ideas through four specialized phases:\n\n1. **Clarify**: Idea clarifier agent refines and structures the core business concept\n2. **Evaluate**: Originality evaluator assesses uniqueness compared to existing solutions\n3. **Define**: Mission definer establishes clear objectives and vision\n4. **Research**: Market researcher conducts comprehensive analysis using Google Search\n5. **Synthesize**: Combines all insights into a validation report with recommendations\n\nEach agent specializes in a specific validation aspect, ensuring thorough analysis.\n\n```python startup_idea_validator.py theme={null}\n\"\"\"\nStartup Idea Validator - Your Personal Business Validation Assistant!\n\nThis workflow helps entrepreneurs validate their startup ideas by:\n1. Clarifying and refining the core business concept\n2. Evaluating originality compared to existing solutions\n3. Defining clear mission and objectives\n4. Conducting comprehensive market research and analysis\n\nWhy is this helpful?\n--------------------------------------------------------------------------------\n• Get objective feedback on your startup idea before investing resources\n• Understand your total addressable market and target segments\n• Validate assumptions about market opportunity and competition\n• Define clear mission and objectives to guide execution\n\nWho should use this?\n--------------------------------------------------------------------------------\n• Entrepreneurs and Startup Founders\n• Product Managers and Business Strategists\n• Innovation Teams\n• Angel Investors and VCs doing initial screening\n\nExample use cases:\n--------------------------------------------------------------------------------\n• New product/service validation\n• Market opportunity assessment\n• Competitive analysis\n• Business model validation\n• Target customer segmentation\n• Mission/vision refinement\n\nQuick Start:\n--------------------------------------------------------------------------------\n1. Install dependencies:\n   pip install openai agno\n\n2. Set environment variables:\n   - OPENAI_API_KEY\n\n3. Run:\n   python startup_idea_validator.py\n\nThe workflow will guide you through validating your startup idea with AI-powered\nanalysis and research. Use the insights to refine your concept and business plan!\n\"\"\"\n\nimport asyncio\nfrom typing import Any\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.utils.pprint import pprint_run_response\nfrom agno.workflow.types import WorkflowExecutionInput\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel, Field",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#startup-idea-validator",
+  "links": []
+}

@@ -1,0 +1,39 @@
+{
+  "title": "MoviePy Video Tools",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/moviepy\n\nAgno MoviePyVideoTools enable an Agent to process videos, extract audio, generate SRT caption files, and embed rich, word-highlighted captions.\n\nTo use `MoviePyVideoTools`, you need to install `moviepy` and its dependency `ffmpeg`:\n\n**Important for Captioning Workflow:**\nThe `create_srt` and `embed_captions` tools require a transcription of the video's audio. `MoviePyVideoTools` itself does not perform speech-to-text. You'll typically use another tool, such as `OpenAITools` with its `transcribe_audio` function, to generate the transcription (often in SRT format) which is then used by these tools.\n\nThe following example demonstrates a complete workflow where an agent uses `MoviePyVideoTools` in conjunction with `OpenAITools` to:\n\n1. Extract audio from a video file\n2. Transcribe the audio using OpenAI's speech-to-text\n3. Generate an SRT caption file from the transcription\n4. Embed the captions into the video with word-level highlighting\n\nThese are the functions exposed by `MoviePyVideoTools`:\n\n| Function                | Description                                                                                            |\n| ----------------------- | ------------------------------------------------------------------------------------------------------ |\n| `enable_extract_audio`  | Extracts the audio track from a video file and saves it to a specified output path.                    |\n| `enable_create_srt`     | Saves a given transcription (expected in SRT format) to a `.srt` file at the specified output path.    |\n| `enable_embed_captions` | Embeds captions from an SRT file into a video, creating a new video file with word-level highlighting. |\n\nThese parameters are passed to the `MoviePyVideoTools` constructor:\n\n| Parameter           | Type   | Default | Description                        |\n| ------------------- | ------ | ------- | ---------------------------------- |\n| `process_video`     | `bool` | `True`  | Enables the `extract_audio` tool.  |\n| `generate_captions` | `bool` | `True`  | Enables the `create_srt` tool.     |\n| `embed_captions`    | `bool` | `True`  | Enables the `embed_captions` tool. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/moviepy_video.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/moviepy_video_tools.py)",
+  "code_samples": [
+    {
+      "code": "**Important for Captioning Workflow:**\nThe `create_srt` and `embed_captions` tools require a transcription of the video's audio. `MoviePyVideoTools` itself does not perform speech-to-text. You'll typically use another tool, such as `OpenAITools` with its `transcribe_audio` function, to generate the transcription (often in SRT format) which is then used by these tools.\n\n## Example\n\nThe following example demonstrates a complete workflow where an agent uses `MoviePyVideoTools` in conjunction with `OpenAITools` to:\n\n1. Extract audio from a video file\n2. Transcribe the audio using OpenAI's speech-to-text\n3. Generate an SRT caption file from the transcription\n4. Embed the captions into the video with word-level highlighting",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#moviepy-video-tools",
+  "links": []
+}

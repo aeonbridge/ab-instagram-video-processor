@@ -1,0 +1,14 @@
+{
+  "title": "JSON Reader Async",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/json-reader-async\n\nThe **JSON Reader** with asynchronous processing allows you to handle JSON files efficiently and integrate them with knowledge bases.\n\n```python examples/basics/knowledge/readers/json_reader_async.py theme={null}\nimport json\nimport asyncio\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.json_reader import JSONReader\nfrom agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#json-reader-async",
+  "links": []
+}

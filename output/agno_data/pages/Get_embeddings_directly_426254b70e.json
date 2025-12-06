@@ -1,0 +1,8 @@
+{
+  "title": "Get embeddings directly",
+  "content": "embeddings = VLLMEmbedder(\n    id=\"intfloat/e5-mistral-7b-instruct\",\n    dimensions=4096,\n    enforce_eager=True,\n    vllm_kwargs={\n        \"disable_sliding_window\": True,\n        \"max_model_len\": 4096,\n    },\n).get_embedding(\"The quick brown fox jumps over the lazy dog.\")\n\nprint(f\"Embeddings: {embeddings[:5]}\")\nprint(f\"Dimensions: {len(embeddings)}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-embeddings-directly",
+  "links": []
+}

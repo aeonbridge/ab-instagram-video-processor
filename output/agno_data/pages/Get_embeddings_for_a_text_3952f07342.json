@@ -1,0 +1,8 @@
+{
+  "title": "Get embeddings for a text",
+  "content": "embeddings = LangDBEmbedder().get_embedding(\"Embed me\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-embeddings-for-a-text",
+  "links": []
+}

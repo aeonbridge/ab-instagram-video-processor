@@ -1,0 +1,14 @@
+{
+  "title": "Agents with Knowledge",
+  "content": "Source: https://docs.agno.com/basics/knowledge/agents/overview\n\nUnderstanding knowledge and how to use it with Agno agents\n\n**Knowledge** stores domain-specific content that can be added to the context of the agent to enable better decision making.\n\n<Note>\n  Agno has a generic knowledge solution that supports many forms of content.\n\nSee more details in the [knowledge](/basics/knowledge/overview) documentation.\n</Note>\n\nThe Agent can **search** this knowledge at runtime to make better decisions and provide more accurate responses. This **searching on demand** pattern is called Agentic RAG.\n\n<Tip>\n  Example: Say we are building a Text2Sql Agent, we'll need to give the table schemas, column names, data types, example queries, etc to the agent to help it generate the best-possible SQL query.\n\nIt is not viable to put this all in the system message, instead we store this information as knowledge and let the Agent query it at runtime.\n\nUsing this information, the Agent can then generate the best-possible SQL query. This is called **dynamic few-shot learning**.\n</Tip>\n\n## Knowledge for Agents\n\nAgno Agents use **Agentic RAG** by default, meaning when we provide `knowledge` to an Agent, it will search this knowledge base, at runtime, for the specific information it needs to achieve its task.\n\n```python  theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.db.postgres.postgres import PostgresDb\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\n\ndb = PostgresDb(\n    db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n    knowledge_table=\"knowledge_contents\",\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Knowledge for Agents",
+      "id": "knowledge-for-agents"
+    }
+  ],
+  "url": "llms-txt#agents-with-knowledge",
+  "links": []
+}

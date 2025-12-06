@@ -1,0 +1,19 @@
+{
+  "title": "Pydantic AI",
+  "content": "python cookbook/evals/performance/comparison/pydantic_ai_instantiation.py\n```\n\nLangGraph is on the right, **let's start it first and give it a head start**. Then CrewAI and Pydantic AI follow, and finally Agno. Agno obviously finishes first, but let's see by how much.\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/Xc0-_OHxxYe_vtGw/videos/performance_benchmark.mp4?fit=max&auto=format&n=Xc0-_OHxxYe_vtGw&q=85&s=89288701c4cb61d9d2a551fd0b5630a6\" type=\"video/mp4\" data-path=\"videos/performance_benchmark.mp4\" />\n  </video>\n</Frame>\n\nTo measure memory usage, we use the `tracemalloc` library. We first calculate a baseline memory usage by running an empty function, then run the Agent 1000x times and calculate the difference. This gives a (reasonably) isolated measurement of the memory usage of the Agent.\n\nWe recommend running the evaluation yourself on your own machine, and digging into the code to see how it works. If we've made a mistake, please let us know.\n\nTaking Agno as the baseline, we can see that:\n\n| Metric             | Agno | Langgraph   | PydanticAI | CrewAI     |\n| ------------------ | ---- | ----------- | ---------- | ---------- |\n| **Time (seconds)** | 1×   | 529× slower | 57× slower | 70× slower |\n| **Memory (MiB)**   | 1×   | 24× higher  | 4× higher  | 10× higher |\n\nExact numbers from the benchmark:\n\n| Metric             | Agno     | Langgraph | PydanticAI | CrewAI   |\n| ------------------ | -------- | --------- | ---------- | -------- |\n| **Time (seconds)** | 0.000003 | 0.001587  | 0.000170   | 0.000210 |\n| **Memory (MiB)**   | 0.006642 | 0.161435  | 0.028712   | 0.065652 |\n\n<Note>\n  Agno agents are designed for performance and while we share benchmarks against other frameworks, we should be mindful that accuracy and reliability are more important than speed.\n</Note>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Memory Usage",
+      "id": "memory-usage"
+    },
+    {
+      "level": "h3",
+      "text": "Results",
+      "id": "results"
+    }
+  ],
+  "url": "llms-txt#pydantic-ai",
+  "links": []
+}

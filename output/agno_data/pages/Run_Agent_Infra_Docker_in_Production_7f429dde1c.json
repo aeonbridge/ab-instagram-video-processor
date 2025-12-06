@@ -1,0 +1,14 @@
+{
+  "title": "Run Agent Infra Docker in Production",
+  "content": "Source: https://docs.agno.com/templates/agent-infra-railway/run-prd\n\n<Snippet file=\"run-agent-infra-railway-prd.mdx\" />\n\nCongratulations on running your Agent Infra Railway in production!",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Next",
+      "id": "next"
+    }
+  ],
+  "url": "llms-txt#run-agent-infra-docker-in-production",
+  "links": []
+}

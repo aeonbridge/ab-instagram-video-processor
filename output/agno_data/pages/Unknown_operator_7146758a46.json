@@ -1,0 +1,8 @@
+{
+  "title": "Unknown operator",
+  "content": "curl ... -F 'knowledge_filters={\"op\": \"UNKNOWN\", \"key\": \"status\", \"value\": \"x\"}'",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#unknown-operator",
+  "links": []
+}

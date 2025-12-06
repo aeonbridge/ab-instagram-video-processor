@@ -1,0 +1,8 @@
+{
+  "title": "Workflow Cancellation",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/workflow-cancellation\n\nThis example demonstrates **Workflows 2.0** support for cancelling running workflow executions, including thread-based cancellation and handling cancelled responses.\n\nThis example shows how to cancel a running workflow execution in real-time. It demonstrates:\n\n1. **Thread-based Execution**: Running workflows in separate threads for non-blocking operation\n2. **Dynamic Cancellation**: Cancelling workflows while they're actively running\n3. **Cancellation Events**: Handling and responding to cancellation events\n4. **Status Tracking**: Monitoring workflow status throughout execution and cancellation",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#workflow-cancellation",
+  "links": []
+}

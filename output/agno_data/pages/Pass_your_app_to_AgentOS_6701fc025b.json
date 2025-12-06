@@ -1,0 +1,8 @@
+{
+  "title": "Pass your app to AgentOS",
+  "content": "agent_os = AgentOS(\n    agents=[Agent(id=\"basic-agent\", model=OpenAIChat(id=\"gpt-5-mini\"))],\n    base_app=app  # Your custom FastAPI app\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#pass-your-app-to-agentos",
+  "links": []
+}

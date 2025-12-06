@@ -1,0 +1,43 @@
+{
+  "title": "Trace",
+  "content": "Source: https://docs.agno.com/reference/tracing/trace\n\nA `Trace` represents one complete agent execution from start to finish. Each trace has a unique `trace_id` that groups all related spans together.\n\n| Attribute     | Type            | Default  | Description                                                  |\n| ------------- | --------------- | -------- | ------------------------------------------------------------ |\n| `trace_id`    | `str`           | Required | Unique trace identifier                                      |\n| `name`        | `str`           | Required | Trace name (typically the root span name, e.g., `Agent.run`) |\n| `status`      | `str`           | Required | Overall status: `OK`, `ERROR`, or `UNSET`                    |\n| `duration_ms` | `int`           | Required | Total execution time in milliseconds                         |\n| `start_time`  | `datetime`      | Required | When the trace started                                       |\n| `end_time`    | `datetime`      | Required | When the trace completed                                     |\n| `total_spans` | `int`           | `0`      | Total number of spans in this trace                          |\n| `error_count` | `int`           | `0`      | Number of spans that errored                                 |\n| `run_id`      | `Optional[str]` | `None`   | Associated agent/team/workflow run ID                        |\n| `session_id`  | `Optional[str]` | `None`   | Associated session ID                                        |\n| `user_id`     | `Optional[str]` | `None`   | Associated user ID                                           |\n| `agent_id`    | `Optional[str]` | `None`   | Associated agent ID                                          |\n| `team_id`     | `Optional[str]` | `None`   | Associated team ID                                           |\n| `workflow_id` | `Optional[str]` | `None`   | Associated workflow ID                                       |\n| `created_at`  | `datetime`      | Required | When the trace record was created                            |\n\nConvert the trace to a dictionary.\n\nCreate a trace from a dictionary.\n\n* `data` (`dict`): Dictionary containing trace data\n\n```python  theme={null}\nfrom agno.db.sqlite import SqliteDb\n\ndb = SqliteDb(db_file=\"tmp/traces.db\")",
+  "code_samples": [
+    {
+      "code": "**Returns:** `dict`\n\n### `from_dict()`\n\nCreate a trace from a dictionary.",
+      "language": "unknown"
+    },
+    {
+      "code": "**Parameters:**\n\n* `data` (`dict`): Dictionary containing trace data\n\n**Returns:** `Trace`\n\n## Usage",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Trace Attributes",
+      "id": "trace-attributes"
+    },
+    {
+      "level": "h2",
+      "text": "Methods",
+      "id": "methods"
+    },
+    {
+      "level": "h3",
+      "text": "`to_dict()`",
+      "id": "`to_dict()`"
+    },
+    {
+      "level": "h3",
+      "text": "`from_dict()`",
+      "id": "`from_dict()`"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#trace",
+  "links": []
+}

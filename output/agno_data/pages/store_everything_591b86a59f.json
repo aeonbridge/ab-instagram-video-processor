@@ -1,0 +1,8 @@
+{
+  "title": "store everything",
+  "content": "debug_workflow = Workflow(\n    name=\"Debug Workflow\",\n    store_events=True,\n    steps=[...]\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#store-everything",
+  "links": []
+}

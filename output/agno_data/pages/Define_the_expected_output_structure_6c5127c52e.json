@@ -1,0 +1,19 @@
+{
+  "title": "Define the expected output structure",
+  "content": "report_format = dedent(\"\"\"\n    REPORT FORMAT:\n\n### Executive Dashboard\n    - **Brand Health Score**: [1-10] with supporting evidence\n    - **Net Sentiment**: [%positive - %negative] with trend analysis\n    - **Key Drivers**: Top 3 positive and negative factors\n    - **Alert Level**: Normal/Monitor/Crisis with threshold reasoning\n\n### Quantitative Metrics\n    | Sentiment | Posts | % | Avg Engagement | Influence Score |\n    |-----------|-------|---|----------------|-----------------|\n    [Detailed breakdown with engagement weighting]\n\n### Strategic Recommendations\n    **IMMEDIATE (≤48h)**: Crisis response, high-impact replies\n    **SHORT-TERM (1-2 weeks)**: Content strategy, community engagement\n    **LONG-TERM (1-3 months)**: Product positioning, market strategy\n\"\"\")\n\nprint(\"Report format defined\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### 3e. Define Analysis Principles",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3e. Define Analysis Principles",
+      "id": "3e.-define-analysis-principles"
+    }
+  ],
+  "url": "llms-txt#define-the-expected-output-structure",
+  "links": []
+}

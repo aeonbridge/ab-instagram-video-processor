@@ -1,0 +1,24 @@
+{
+  "title": "Interfaces",
+  "content": "Source: https://docs.agno.com/agent-os/interfaces/overview\n\nExpose Agno agents through various communication protocols and platforms\n\nInterfaces enable exposing Agno agents, teams, and workflows through various communication protocols and platforms. Each interface provides a standardized way to connect Agno agents to external systems, messaging platforms, and frontend applications.\n\n## Available Interfaces\n\n<CardGroup cols={2}>\n  <Card title=\"AG-UI\" icon=\"desktop\" href=\"/agent-os/interfaces/ag-ui/introduction\">\n    Connect agents to frontend applications using the Agent-User Interaction Protocol\n  </Card>\n\n<Card title=\"Slack\" icon=\"slack\" href=\"/agent-os/interfaces/slack/introduction\">\n    Deploy agents as Slack applications for team collaboration\n  </Card>\n\n<Card title=\"WhatsApp\" icon=\"whatsapp\" href=\"/agent-os/interfaces/whatsapp/introduction\">\n    Serve agents via WhatsApp for direct messaging interactions\n  </Card>\n\n<Card title=\"A2A\" icon=\"code\" href=\"/agent-os/interfaces/a2a/introduction\">\n    Expose agents via the Agent-to-Agent Protocol for inter-agent communication\n  </Card>\n</CardGroup>\n\n## How Interfaces Work\n\nInterfaces are FastAPI routers that mount protocol-specific endpoints on an AgentOS instance. Each interface:\n\n* Wraps Agno agents, teams, or workflows into protocol-compatible endpoints\n* Handles authentication and request validation for the target platform\n* Manages session tracking and context preservation\n* Streams responses back to clients in the appropriate format\n\nInterfaces are added to an AgentOS instance through the `interfaces` parameter:\n\nMultiple interfaces can be added to a single AgentOS instance, allowing the same agents to be exposed through different protocols simultaneously.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Available Interfaces",
+      "id": "available-interfaces"
+    },
+    {
+      "level": "h2",
+      "text": "How Interfaces Work",
+      "id": "how-interfaces-work"
+    },
+    {
+      "level": "h2",
+      "text": "Using Interfaces",
+      "id": "using-interfaces"
+    }
+  ],
+  "url": "llms-txt#interfaces",
+  "links": []
+}

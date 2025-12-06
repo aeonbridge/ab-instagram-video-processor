@@ -1,0 +1,8 @@
+{
+  "title": "Single shared database for everything",
+  "content": "db = SqliteDb(db_file=\"tmp/agno.db\")\n\nagent = Agent(\n    name=\"Research Agent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    db=db,  # Uses shared db\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#single-shared-database-for-everything",
+  "links": []
+}

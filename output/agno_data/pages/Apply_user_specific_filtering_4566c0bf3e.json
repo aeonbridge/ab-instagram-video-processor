@@ -1,0 +1,19 @@
+{
+  "title": "Apply user-specific filtering",
+  "content": "user_filter = get_user_filter(\"john_doe\", \"engineering\")\nagent.print_response(\n    \"Show me the latest project updates\",\n    knowledge_filters=[user_filter]  # ← List wrapper required\n)\npython  theme={null}\nfrom datetime import datetime\nfrom agno.filters import AND, NOT, EQ, GT\n\ncurrent_year = datetime.now().year",
+  "code_samples": [
+    {
+      "code": "### Time-Based Filtering\n\nFilter by recency or date ranges:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Time-Based Filtering",
+      "id": "time-based-filtering"
+    }
+  ],
+  "url": "llms-txt#apply-user-specific-filtering",
+  "links": []
+}

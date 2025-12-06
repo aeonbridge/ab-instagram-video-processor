@@ -1,0 +1,8 @@
+{
+  "title": "Configure custom tracer provider",
+  "content": "trace_provider = TracerProvider()\ntrace_provider.add_span_processor(\n    SimpleSpanProcessor(\n        OTLPSpanExporter(endpoint=\"http://127.0.0.1:4318/v1/traces\")\n    )\n)\ntrace.set_tracer_provider(trace_provider)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-custom-tracer-provider",
+  "links": []
+}

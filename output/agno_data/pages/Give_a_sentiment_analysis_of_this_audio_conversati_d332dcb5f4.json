@@ -1,0 +1,19 @@
+{
+  "title": "Give a sentiment analysis of this audio conversation. Use speaker A, speaker B to identify speakers.",
+  "content": "agent.print_response(\n    \"Give a sentiment analysis of this audio conversation. Use speaker A, speaker B to identify speakers.\",\n    audio=[Audio(content=audio_content)],\n    stream=True,\n)\n\nagent.print_response(\n    \"What else can you tell me about this audio conversation?\",\n    stream=True,\n)\n```\n\n* **Audio Processing**: Downloads and processes audio files from remote URLs\n* **Sentiment Analysis**: Analyzes emotional tone and sentiment in conversations\n* **Speaker Identification**: Distinguishes between different speakers in the conversation\n* **Persistent Sessions**: Maintains conversation history using SQLite database\n* **Streaming Response**: Real-time response generation for better user experience\n\n* Customer service call analysis\n* Meeting sentiment tracking\n* Interview evaluation\n* Call center quality monitoring",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    }
+  ],
+  "url": "llms-txt#give-a-sentiment-analysis-of-this-audio-conversation.-use-speaker-a,-speaker-b-to-identify-speakers.",
+  "links": []
+}

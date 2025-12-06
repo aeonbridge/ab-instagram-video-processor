@@ -1,0 +1,19 @@
+{
+  "title": "All logs will be written to tmp/log.txt",
+  "content": "log_info(\"This is using our file logger!\")\n\nagent = Agent()\nagent.print_response(\"Tell me a fun fact\")\npython  theme={null}\nimport logging\n\nfrom agno.agent import Agent\nfrom agno.team import Team\nfrom agno.workflow import Workflow\nfrom agno.workflow.step import Step\nfrom agno.utils.log import configure_agno_logging, log_info",
+  "code_samples": [
+    {
+      "code": "## Multiple Loggers\n\nYou can configure different loggers for your Agents, Teams and Workflows:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Multiple Loggers",
+      "id": "multiple-loggers"
+    }
+  ],
+  "url": "llms-txt#all-logs-will-be-written-to-tmp/log.txt",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Team Metrics",
+  "content": "Source: https://docs.agno.com/basics/sessions/metrics/team\n\nLearn about team run and session metrics.\n\nWhen you run a team in Agno, the response you get (**TeamRunOutput**) includes detailed metrics about the run. These metrics help you understand resource usage (like **token usage** and **time**), performance, and other aspects of the model and tool calls across both the team leader and team members.\n\nMetrics are available at multiple levels:\n\n* **Per-message**: Each message (assistant, tool, etc.) has its own metrics.\n* **Per-member run**: Each team member run has its own metrics. You can make member runs available on the `TeamRunOutput` by setting `store_member_responses=True`,\n* **Team-level**: The `TeamRunOutput` aggregates metrics across all team leader and team member messages.\n* **Session-level**: Aggregated metrics across all runs in the session, for both the team leader and all team members.\n\nSuppose you have a team that performs some tasks and you want to analyze the metrics after running it. Here's how you can access and print the metrics:\n\n```python  theme={null}\nfrom typing import Iterator\n\nfrom agno.agent import Agent, RunOutput\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.utils.pprint import pprint_run_response\nfrom rich.pretty import pprint",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example Usage",
+      "id": "example-usage"
+    }
+  ],
+  "url": "llms-txt#team-metrics",
+  "links": []
+}

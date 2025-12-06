@@ -1,0 +1,37 @@
+{
+  "title": "Run async optimization",
+  "content": "optimized = asyncio.run(optimize_user_memories())\n\nMemory 1: \"The user's name is John Doe\"\nMemory 2: \"The user likes to play basketball\"\nMemory 3: \"The user's favorite color is blue\"\nMemory 4: \"The user works as a software engineer\"\nMemory 5: \"The user lives in San Francisco\"\n\nMemory 1: \"John Doe is a software engineer who lives in San Francisco. \n          He enjoys playing basketball and his favorite color is blue.\"\npython  theme={null}\nfrom agno.memory.strategies import MemoryOptimizationStrategy\nfrom agno.db.schemas import UserMemory\nfrom agno.models.base import Model\nfrom typing import List\n\nclass CustomOptimizationStrategy(MemoryOptimizationStrategy):\n    def optimize(\n        self,\n        memories: List[UserMemory],\n        model: Model,\n    ) -> List[UserMemory]:\n        # Your custom optimization logic\n        # Return optimized list of UserMemory objects\n        pass\n    \n    async def aoptimize(\n        self,\n        memories: List[UserMemory],\n        model: Model,\n    ) -> List[UserMemory]:\n        # Async version\n        pass",
+  "code_samples": [
+    {
+      "code": "## Optimization Strategies\n\n### Summarize Strategy (Default)\n\nThe `SUMMARIZE` strategy combines all memories into a single comprehensive summary:\n\n* **Best for:** Most use cases, maximum token reduction\n* **Result:** All memories combined into 1 memory\n* **Preserves:** All factual information, topics, metadata\n\n**Before Optimization:**",
+      "language": "unknown"
+    },
+    {
+      "code": "**After Optimization:**",
+      "language": "unknown"
+    },
+    {
+      "code": "**Token Savings:**\n\n* Before: \\~50 tokens × 5 memories = 250 tokens\n* After: \\~40 tokens × 1 memory = 40 tokens\n* **Savings: 84% reduction**\n\n### Custom Strategies\n\nYou can create custom optimization strategies by implementing the `MemoryOptimizationStrategy` interface:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Optimization Strategies",
+      "id": "optimization-strategies"
+    },
+    {
+      "level": "h3",
+      "text": "Summarize Strategy (Default)",
+      "id": "summarize-strategy-(default)"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Strategies",
+      "id": "custom-strategies"
+    }
+  ],
+  "url": "llms-txt#run-async-optimization",
+  "links": []
+}

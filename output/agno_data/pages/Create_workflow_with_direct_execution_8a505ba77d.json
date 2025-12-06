@@ -1,0 +1,8 @@
+{
+  "title": "Create workflow with direct execution",
+  "content": "workflow = Workflow(\n    name=\"Content Creation Pipeline\",\n    steps=[\n        Parallel(research_hn_step, research_web_step, name=\"Research Phase\"),\n        write_step,\n        review_step,\n    ],\n)\n\nworkflow.print_response(\"Write about the latest AI developments\")\n```\n\nThis was a synchronous non-streaming example of this pattern. To checkout async and streaming versions, see the cookbooks-\n\n* [Parallel Steps Workflow (sync streaming)](https://github.com/agno-agi/agno/blob/main/cookbook/workflows/_04_workflows_parallel_execution/sync/parallel_steps_workflow_stream.py)\n* [Parallel Steps Workflow (async non-streaming)](https://github.com/agno-agi/agno/blob/main/cookbook/workflows/_04_workflows_parallel_execution/sync/parallel_steps_workflow.py)\n* [Parallel Steps Workflow (async streaming)](https://github.com/agno-agi/agno/tree/main/cookbook/workflows/_04_workflows_parallel_execution/async/parallel_steps_workflow_stream.py)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-workflow-with-direct-execution",
+  "links": []
+}

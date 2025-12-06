@@ -1,0 +1,19 @@
+{
+  "title": "SurrealDB for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/surrealdb/usage/surrealdb-for-agent\n\nAgno supports using SurrealDB as a storage backend for Agents using the `SurrealDb` class.\n\nRun SurreabDB locally with the following command:\n\n```python surrealdb_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.surrealdb import SurrealDb\nfrom agno.models.anthropic import Claude\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#surrealdb-for-agent",
+  "links": []
+}

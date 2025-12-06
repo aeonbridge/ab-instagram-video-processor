@@ -1,0 +1,8 @@
+{
+  "title": "Serialize to JSON",
+  "content": "filter_json = json.dumps(filter_expr.to_dict())",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#serialize-to-json",
+  "links": []
+}

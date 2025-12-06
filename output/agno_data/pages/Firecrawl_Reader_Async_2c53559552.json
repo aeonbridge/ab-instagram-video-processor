@@ -1,0 +1,41 @@
+{
+  "title": "Firecrawl Reader Async",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/firecrawl-reader-async\n\nThe **Firecrawl Reader** with asynchronous processing uses the Firecrawl API to scrape and crawl web content efficiently, converting it into documents for your knowledge base.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Set API Key\">\n    \n  </Step>\n\n<Snippet file=\"run-pgvector-step.mdx\" />\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n<Snippet file=\"firecrawl-reader-reference.mdx\" />",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set API Key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#firecrawl-reader-async",
+  "links": []
+}

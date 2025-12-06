@@ -1,0 +1,8 @@
+{
+  "title": "Condition steps workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/condition-steps-workflow-stream\n\nThis example demonstrates how to use conditional steps in a workflow.\n\nThis example demonstrates **Workflows 2.0** conditional execution pattern. Shows how to conditionally execute steps based on content analysis,\nproviding intelligent selection of steps based on the actual data being processed.\n\n**When to use**: When you need intelligent selection of steps based on content analysis rather than\nsimple input parameters or some other business logic. Ideal for quality gates, content-specific processing, or\nadaptive workflows that respond to intermediate results.\n\n```python condition_steps_workflow_stream.py theme={null}\nfrom agno.agent.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.workflow.condition import Condition\nfrom agno.workflow.step import Step\nfrom agno.workflow.types import StepInput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#condition-steps-workflow",
+  "links": []
+}

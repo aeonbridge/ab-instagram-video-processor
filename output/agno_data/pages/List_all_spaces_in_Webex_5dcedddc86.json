@@ -1,0 +1,8 @@
+{
+  "title": "List all spaces in Webex",
+  "content": "agent.print_response(\"List all space on our Webex\", markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#list-all-spaces-in-webex",
+  "links": []
+}

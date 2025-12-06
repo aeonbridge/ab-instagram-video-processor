@@ -1,0 +1,24 @@
+{
+  "title": "ChromaDB Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/chroma/overview\n\nLearn how to use ChromaDB as a vector database for your Knowledge Base\n\n```python agent_with_knowledge.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.chroma import ChromaDb",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#chromadb-vector-database",
+  "links": []
+}

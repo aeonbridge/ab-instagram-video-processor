@@ -1,0 +1,31 @@
+{
+  "title": "Add storage to the Agent",
+  "content": "agent = Agent(\n    model=LiteLLM(id=\"gpt-5-mini\"),\n    db=db,\n    tools=[DuckDuckGoTools()],\n    add_history_to_context=True,\n)\n\nagent.print_response(\"How many people live in Canada?\")\nagent.print_response(\"What is their national anthem called?\")\nbash  theme={null}\n    export LITELLM_API_KEY=xxx\n    bash  theme={null}\n    pip install -U litellm ddgs openai agno\n    bash Mac theme={null}\n      python cookbook/models/litellm/db.py\n      bash Windows theme={null}\n      python cookbook\\models\\litellm\\db.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#add-storage-to-the-agent",
+  "links": []
+}

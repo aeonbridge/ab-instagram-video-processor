@@ -1,0 +1,29 @@
+{
+  "title": "Persisting Sessions",
+  "content": "Source: https://docs.agno.com/basics/sessions/persisting-sessions/overview\n\nStore session data in a database for multi-turn conversations\n\nTo enable sessions across multiple runs, you need to configure a database. Once configured, Agno automatically stores conversation history, session state, and run metadata.\n\n<Note>\n  Database selection, connection strings, credentials management, and operational guidance live in the [Database overview](/basics/database/overview). Reuse that setup here—this page only adds the session-specific considerations.\n</Note>\n\nOnce you have a `db` object (Postgres, SQLite, DynamoDB, …) configured per the storage docs, persistence is enabled simply by passing it to your Agent, Team, or Workflow:\n\n## Supported Databases\n\nNothing new lives here—simply reuse the database drivers and guidance from `/basics/storage`:\n\n* **PostgreSQL** (recommended) – Production-grade, supports custom `session_table` names for isolating workloads.\n* **SQLite** – Great for local development; swap the file path just as you would elsewhere.\n* **InMemoryDb** – Useful for tests or demos only. Data disappears when the process exits.\n\nIf you need to tune indexing, retention, or connection pools, do that in the shared storage layer so every feature (sessions, memories, knowledge, etc.) benefits from the same configuration.\n\nSessions are identified by `session_id`. Use the same ID to continue a conversation:\n\n```python  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Supported Databases\n\nNothing new lives here—simply reuse the database drivers and guidance from `/basics/storage`:\n\n* **PostgreSQL** (recommended) – Production-grade, supports custom `session_table` names for isolating workloads.\n* **SQLite** – Great for local development; swap the file path just as you would elsewhere.\n* **InMemoryDb** – Useful for tests or demos only. Data disappears when the process exits.\n\nIf you need to tune indexing, retention, or connection pools, do that in the shared storage layer so every feature (sessions, memories, knowledge, etc.) benefits from the same configuration.\n\n## Session IDs\n\nSessions are identified by `session_id`. Use the same ID to continue a conversation:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Quick Start",
+      "id": "quick-start"
+    },
+    {
+      "level": "h2",
+      "text": "Supported Databases",
+      "id": "supported-databases"
+    },
+    {
+      "level": "h2",
+      "text": "Session IDs",
+      "id": "session-ids"
+    }
+  ],
+  "url": "llms-txt#persisting-sessions",
+  "links": []
+}

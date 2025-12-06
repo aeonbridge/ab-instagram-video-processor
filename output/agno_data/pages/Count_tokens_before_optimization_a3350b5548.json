@@ -1,0 +1,8 @@
+{
+  "title": "Count tokens before optimization",
+  "content": "strategy = SummarizeStrategy()\ntokens_before = strategy.count_tokens(memories_before)\nprint(f\"  Token count: {tokens_before} tokens\")\n\nprint(\"\\nIndividual memories:\")\nfor i, memory in enumerate(memories_before, 1):\n    print(f\"  {i}. {memory.memory}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#count-tokens-before-optimization",
+  "links": []
+}

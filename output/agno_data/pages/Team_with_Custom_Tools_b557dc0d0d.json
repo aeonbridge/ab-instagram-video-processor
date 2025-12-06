@@ -1,0 +1,14 @@
+{
+  "title": "Team with Custom Tools",
+  "content": "Source: https://docs.agno.com/basics/tools/usage/team-with-custom-tools\n\nThis example demonstrates how to create a team with custom tools, using custom tools alongside agent tools to answer questions from a knowledge base and fall back to web search when needed.\n\n```python cookbook/examples/teams/tools/01_team_with_custom_tools.py theme={null}\n\"\"\"\nThis example demonstrates how to create a team with custom tools.\n\nThe team uses custom tools alongside agent tools to answer questions from a knowledge base\nand fall back to web search when needed.\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.team.team import Team\nfrom agno.tools import tool\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\n@tool()\ndef answer_from_known_questions(question: str) -> str:\n    \"\"\"Answer a question from a list of known questions\n\nArgs:\n        question: The question to answer\n\nReturns:\n        The answer to the question\n    \"\"\"\n\n# FAQ knowledge base\n    faq = {\n        \"What is the capital of France?\": \"Paris\",\n        \"What is the capital of Germany?\": \"Berlin\",\n        \"What is the capital of Italy?\": \"Rome\",\n        \"What is the capital of Spain?\": \"Madrid\",\n        \"What is the capital of Portugal?\": \"Lisbon\",\n        \"What is the capital of Greece?\": \"Athens\",\n        \"What is the capital of Turkey?\": \"Ankara\",\n    }\n\n# Check if question is in FAQ\n    if question in faq:\n        return f\"From my knowledge base: {faq[question]}\"\n    else:\n        return \"I don't have that information in my knowledge base. Try asking the web search agent.\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-with-custom-tools",
+  "links": []
+}

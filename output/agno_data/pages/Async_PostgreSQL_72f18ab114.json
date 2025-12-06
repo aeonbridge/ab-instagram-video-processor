@@ -1,0 +1,14 @@
+{
+  "title": "Async PostgreSQL",
+  "content": "Source: https://docs.agno.com/integrations/database/async-postgres/overview\n\nLearn to use PostgreSQL asynchronously as a database for your Agents\n\nAgno supports using [PostgreSQL](https://www.postgresql.org/) asynchronously, with the `AsyncPostgresDb` class.\n\n```python postgres_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import AsyncPostgresDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#async-postgresql",
+  "links": []
+}

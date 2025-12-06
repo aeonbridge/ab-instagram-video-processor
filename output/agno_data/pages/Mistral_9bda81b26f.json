@@ -1,0 +1,14 @@
+{
+  "title": "Mistral",
+  "content": "Source: https://docs.agno.com/reference/models/mistral\n\nThe Mistral model provides access to Mistral's language models.\n\n| Parameter               | Type            | Default                       | Description                                                      |\n| ----------------------- | --------------- | ----------------------------- | ---------------------------------------------------------------- |\n| `id`                    | `str`           | `\"mistral-large-latest\"`      | The id of the Mistral model to use                               |\n| `name`                  | `str`           | `\"Mistral\"`                   | The name of the model                                            |\n| `provider`              | `str`           | `\"Mistral\"`                   | The provider of the model                                        |\n| `api_key`               | `Optional[str]` | `None`                        | The API key for Mistral (defaults to MISTRAL\\_API\\_KEY env var)  |\n| `base_url`              | `str`           | `\"https://api.mistral.ai/v1\"` | The base URL for the Mistral API                                 |\n| `retries`               | `int`           | `0`                           | Number of retries to attempt before raising a ModelProviderError |\n| `delay_between_retries` | `int`           | `1`                           | Delay between retries, in seconds                                |\n| `exponential_backoff`   | `bool`          | `False`                       | If True, the delay between retries is doubled each time          |\n\nMistral extends the OpenAI-compatible interface and supports most parameters from OpenAI.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#mistral",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "SSH Access",
+  "content": "Source: https://docs.agno.com/templates/infra-management/ssh-access\n\nSSH Access is an important part of the developer workflow.\n\nSSH into the dev containers using the `docker exec` command\n\n## Production SSH Access\n\nYour ECS tasks are already enabled with SSH access. SSH into the production containers using:",
+  "code_samples": [
+    {
+      "code": "## Production SSH Access\n\nYour ECS tasks are already enabled with SSH access. SSH into the production containers using:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Dev SSH Access",
+      "id": "dev-ssh-access"
+    },
+    {
+      "level": "h2",
+      "text": "Production SSH Access",
+      "id": "production-ssh-access"
+    }
+  ],
+  "url": "llms-txt#ssh-access",
+  "links": []
+}

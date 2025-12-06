@@ -1,0 +1,8 @@
+{
+  "title": "Example 1: Send a message to a Slack channel",
+  "content": "agent.print_response(\"Send a message 'Hello from Agno!' to the channel #general\", markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-1:-send-a-message-to-a-slack-channel",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Post-hooks",
+  "content": "Source: https://docs.agno.com/reference/hooks/post-hooks\n\nRunning a post-hook is handled automatically during the Agent or Team run. These are the parameters that will be injected:\n\n| Parameter       | Type                           | Default  | Description                                                                  |\n| --------------- | ------------------------------ | -------- | ---------------------------------------------------------------------------- |\n| `agent`         | `Agent`                        | Required | The Agent that is running the post-hook. Only present in Agent runs.         |\n| `team`          | `Team`                         | Required | The Team that is running the post-hook. Only present in Team runs.           |\n| `run_output`    | `RunOutput` or `TeamRunOutput` | Required | The output of the current Agent or Team run.                                 |\n| `session`       | `AgentSession`                 | Required | The `AgentSession` or `TeamSession` object representing the current session. |\n| `session_state` | `Optional[Dict[str, Any]]`     | `None`   | The session state of the current session.                                    |\n| `dependencies`  | `Optional[Dict[str, Any]]`     | `None`   | The dependencies of the current run.                                         |\n| `metadata`      | `Optional[Dict[str, Any]]`     | `None`   | The metadata of the current run.                                             |\n| `user_id`       | `Optional[str]`                | `None`   | The contextual user ID, if any.                                              |\n| `debug_mode`    | `Optional[bool]`               | `None`   | Whether the debug mode is enabled.                                           |",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#post-hooks",
+  "links": []
+}

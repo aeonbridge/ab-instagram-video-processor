@@ -1,0 +1,8 @@
+{
+  "title": "Set up a custom logger",
+  "content": "custom_logger = logging.getLogger(\"custom_logger\")\nhandler = logging.StreamHandler()\nformatter = logging.Formatter(\"[CUSTOM_LOGGER] %(levelname)s: %(message)s\")\nhandler.setFormatter(formatter)\ncustom_logger.addHandler(handler)\ncustom_logger.setLevel(logging.INFO)\ncustom_logger.propagate = False",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-a-custom-logger",
+  "links": []
+}

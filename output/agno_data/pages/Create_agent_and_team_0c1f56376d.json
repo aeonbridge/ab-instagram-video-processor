@@ -1,0 +1,8 @@
+{
+  "title": "Create agent and team",
+  "content": "agent = Agent()\nteam = Team(members=[agent])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-and-team",
+  "links": []
+}

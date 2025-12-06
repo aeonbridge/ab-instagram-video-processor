@@ -1,0 +1,8 @@
+{
+  "title": "Wikipedia Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/wikipedia\n\nWikipediaReader is a reader class that allows you to read Wikipedia articles.\n\n<Snippet file=\"wikipedia-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#wikipedia-reader",
+  "links": []
+}

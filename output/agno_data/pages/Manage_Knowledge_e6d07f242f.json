@@ -1,0 +1,19 @@
+{
+  "title": "Manage Knowledge",
+  "content": "Source: https://docs.agno.com/agent-os/knowledge/manage-knowledge\n\nAttach Knowledge to your AgentOS instance\n\nThe AgentOS control plane provides a simple way to [manage](/agent-os/features/knowledge-management#adding-content) your Knowledge bases.\nYou can add, edit, and delete content from your Knowledge bases directly through the control plane.\n\nYou can specify multiple Knowledge bases and reuse the same Knowledge instance\nacross different Agents or Teams as needed.\n\nBefore setting up Knowledge management in AgentOS, ensure you have:\n\n* PostgreSQL database running and accessible - used for this example\n* Required dependencies installed: `pip install agno`\n* OpenAI API key configured (for embeddings)\n* Basic understanding of [Knowledge concepts](/basics/knowledge/getting-started)\n\nThis example demonstrates how to attach multiple Knowledge bases to AgentOS\nand populate them with content from different sources.\n\n```python agentos_knowledge.py theme={null}\nfrom textwrap import dedent\n\nfrom agno.db.postgres import PostgresDb\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.os import AgentOS\nfrom agno.vectordb.pgvector import PgVector, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#manage-knowledge",
+  "links": []
+}

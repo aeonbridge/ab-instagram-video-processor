@@ -1,0 +1,8 @@
+{
+  "title": "Content Analyzer Agent - Specialized in analyzing retrieved content",
+  "content": "content_analyzer = Agent(\n    name=\"Content Analyzer\",\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    role=\"Analyze and extract key insights from retrieved content\",\n    instructions=[\n        \"Analyze the content provided by the Knowledge Searcher.\",\n        \"Extract key concepts, relationships, and important details.\",\n        \"Identify gaps or areas needing additional clarification.\",\n        \"Organize information logically for synthesis.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#content-analyzer-agent---specialized-in-analyzing-retrieved-content",
+  "links": []
+}

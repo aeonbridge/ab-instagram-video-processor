@@ -1,0 +1,39 @@
+{
+  "title": "Basic Agent Tracing",
+  "content": "Source: https://docs.agno.com/basics/tracing/usage/basic-agent-tracing\n\nLearn how to trace your agents with Agno\n\nThis example shows how to enable tracing for an agent. Once tracing is enabled, all agent runs, model calls, and tool executions are automatically captured and stored in your database.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run the agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n## Developer Resources\n\n* View the [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/integrations/observability/trace_to_database.py) for a full example that visualizes the trace tree in CLI.",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run the agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#basic-agent-tracing",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Agent Context",
+  "content": "Source: https://docs.agno.com/examples/getting-started/08-agent-context\n\nThis example shows how to inject external dependencies into an agent. The context is evaluated when the agent is run, acting like dependency injection for Agents.\n\nExample prompts to try:\n\n* \"Summarize the top stories on HackerNews\"\n* \"What are the trending tech discussions right now?\"\n* \"Analyze the current top stories and identify trends\"\n* \"What's the most upvoted story today?\"\n\n```python agent_context.py theme={null}\nimport json\nfrom textwrap import dedent\n\nimport httpx\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\ndef get_top_hackernews_stories(num_stories: int = 5) -> str:\n    \"\"\"Fetch and return the top stories from HackerNews.\n\nArgs:\n        num_stories: Number of top stories to retrieve (default: 5)\n    Returns:\n        JSON string containing story details (title, url, score, etc.)\n    \"\"\"\n    # Get top stories\n    stories = [\n        {\n            k: v\n            for k, v in httpx.get(\n                f\"https://hacker-news.firebaseio.com/v0/item/{id}.json\"\n            )\n            .json()\n            .items()\n            if k != \"kids\"  # Exclude discussion threads\n        }\n        for id in httpx.get(\n            \"https://hacker-news.firebaseio.com/v0/topstories.json\"\n        ).json()[:num_stories]\n    ]\n    return json.dumps(stories, indent=4)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-context",
+  "links": []
+}

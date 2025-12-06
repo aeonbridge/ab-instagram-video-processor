@@ -1,0 +1,8 @@
+{
+  "title": "Setup virtual environment",
+  "content": "./scripts/perf_setup.sh\nsource .venvs/perfenv/bin/activate",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-virtual-environment",
+  "links": []
+}

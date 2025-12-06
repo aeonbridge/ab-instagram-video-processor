@@ -1,0 +1,8 @@
+{
+  "title": "Conditional fact-checking step",
+  "content": "fact_check_step = Step(\n    name=\"fact_check\",\n    description=\"Verify facts and claims\",\n    agent=fact_checker,\n)\n\nwrite_article = Step(\n    name=\"write_article\",\n    description=\"Write final article\",\n    agent=writer,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#conditional-fact-checking-step",
+  "links": []
+}

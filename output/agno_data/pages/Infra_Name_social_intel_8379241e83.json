@@ -1,0 +1,13 @@
+{
+  "title": "Infra Name: social-intel",
+  "content": "env  theme={null}\nexport OPENAI_API_KEY=sk-your-openai-api-key-here\nexport X_API_KEY=your-x-api-key\nexport X_API_SECRET=your-x-api-secret\nexport X_ACCESS_TOKEN=your-access-token\nexport X_ACCESS_TOKEN_SECRET=your-access-token-secret\nexport X_BEARER_TOKEN=your-bearer-token\nexport EXA_API_KEY=your-exa-api-key\n```\n\nOur environment is now ready. Let's start building!",
+  "code_samples": [
+    {
+      "code": "5. Set your environment variables:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#infra-name:-social-intel",
+  "links": []
+}

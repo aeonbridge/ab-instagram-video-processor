@@ -1,0 +1,14 @@
+{
+  "title": "MongoDB Database",
+  "content": "Source: https://docs.agno.com/integrations/database/mongo/overview\n\nLearn to use MongoDB as a database for your Agents\n\nAgno supports using [MongoDB](https://www.mongodb.com/) as a database with the `MongoDb` class.\n\n<Tip>\n  **v2 Migration Support**: If you're upgrading from Agno v1, MongoDB is fully supported in the v2 migration script. See the [migration guide](/how-to/v2-migration) for details.\n</Tip>\n\n```python mongodb_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.mongo import MongoDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#mongodb-database",
+  "links": []
+}

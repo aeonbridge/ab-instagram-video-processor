@@ -1,0 +1,8 @@
+{
+  "title": "The knowledge base tracks valid filter keys",
+  "content": "valid_filters = knowledge.get_filters()",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#the-knowledge-base-tracks-valid-filter-keys",
+  "links": []
+}

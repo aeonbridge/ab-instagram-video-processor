@@ -1,0 +1,8 @@
+{
+  "title": "Create agents",
+  "content": "researcher = Agent(name=\"Researcher\", tools=[HackerNewsTools(), DuckDuckGoTools()])\nwriter = Agent(name=\"Writer\")\nreviewer = Agent(name=\"Reviewer\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agents",
+  "links": []
+}

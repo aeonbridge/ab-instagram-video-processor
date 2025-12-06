@@ -1,0 +1,14 @@
+{
+  "title": "Asynchronous Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/meta/usage/async-basic\n\n```python cookbook/models/meta/llama/async_basic.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.meta import Llama\n\nagent = Agent(\n    model=Llama(id=\"Llama-4-Maverick-17B-128E-Instruct-FP8\"),\n    markdown=True\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#asynchronous-agent",
+  "links": []
+}

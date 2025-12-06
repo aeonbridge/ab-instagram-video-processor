@@ -1,0 +1,23 @@
+{
+  "title": "Use in workflow",
+  "content": "workflow = Workflow(\n    name=\"Enhanced Research Workflow\",\n    steps=[\n        Step(name=\"research_hackernews\", agent=hackernews_agent),\n        Step(name=\"research_web\", agent=web_agent),\n        Step(name=\"comprehensive_report\", executor=create_comprehensive_report),  # Accesses both previous steps\n        Step(name=\"final_reasoning\", agent=reasoning_agent),\n    ],\n)\npython  theme={null}\n  parallel_step_output = step_input.get_step_content(\"parallel_step_name\")\n  python  theme={null}\n  {\n      \"individual_step_name_1\": \"output_from_individual_step_1\",\n      \"individual_step_name_2\": \"output_from_individual_step_2\",\n  }\n  ```\n</Note>\n\n## Developer Resources\n\n* [Access Multiple Previous Steps Output](/basics/workflows/usage/access-multiple-previous-steps-output)",
+  "code_samples": [
+    {
+      "code": "**Available Methods**\n\n* `step_input.get_step_content(\"step_name\")` - Get content from specific step by name\n* `step_input.get_all_previous_content()` - Get all previous step content combined\n* `step_input.workflow_message` - Access the original workflow input message\n* `step_input.previous_step_content` - Get content from immediate previous step\n\n<Note>\n  In case of `Parallel` step, when you do `step_input.get_step_content(\"parallel_step_name\")`, it will return a dict with each key as `individual_step_name` for all the outputs from the steps defined in parallel.\n  Example:",
+      "language": "unknown"
+    },
+    {
+      "code": "`parallel_step_output` will be a dict with each key as `individual_step_name` for all the outputs from the steps defined in parallel.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#use-in-workflow",
+  "links": []
+}

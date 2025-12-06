@@ -1,0 +1,14 @@
+{
+  "title": "Distributed RAG with Advanced Reranking",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/usage/distributed-rag-with-reranking\n\nThis example demonstrates how multiple specialized agents coordinate to provide comprehensive RAG responses using advanced reranking strategies for optimal information retrieval and synthesis. The team includes initial retrieval, reranking optimization, context analysis, and final synthesis.\n\n```python cookbook/examples/teams/distributed_rag/03_distributed_rag_with_reranking.py theme={null}\n\"\"\"\nThis example demonstrates how multiple specialized agents coordinate to provide\ncomprehensive RAG responses using advanced reranking strategies for optimal\ninformation retrieval and synthesis.\n\nTeam Composition:\n- Initial Retriever: Performs broad initial retrieval from knowledge base\n- Reranking Specialist: Applies advanced reranking for result optimization\n- Context Analyzer: Analyzes context and relevance of reranked results\n- Final Synthesizer: Synthesizes reranked results into optimal responses\n\nSetup:\n1. Run: `pip install openai lancedb tantivy pypdf sqlalchemy agno`\n2. Run this script to see advanced reranking RAG in action\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reranker import CohereReranker\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.utils.print_response.team import aprint_response, print_response\nfrom agno.vectordb.lancedb import LanceDb, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#distributed-rag-with-advanced-reranking",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent with ApifyTools",
+  "content": "agent = Agent(\n    tools=[\n        ApifyTools(\n            actors=[\"apify/rag-web-browser\"],  # Specify which Apify Actors to use, use multiple ones if needed\n            apify_api_token=\"your_apify_api_key\"  # Or set the APIFY_API_TOKEN environment variable \n        )\n    ],\n        markdown=True\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-apifytools",
+  "links": []
+}

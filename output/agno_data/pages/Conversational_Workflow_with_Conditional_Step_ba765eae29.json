@@ -1,0 +1,8 @@
+{
+  "title": "Conversational Workflow with Conditional Step",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/conversational-workflow-with-conditional-step\n\nThis example demonstrates a conversational workflow with a conditional step.\n\nThis example shows how to use the `WorkflowAgent` to create a conversational workflow with a conditional step.\n\n```python conversational_workflow_with_conditional_step.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.workflow import WorkflowAgent\nfrom agno.workflow.condition import Condition\nfrom agno.workflow.step import Step\nfrom agno.workflow.types import StepInput\nfrom agno.workflow.workflow import Workflow\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#conversational-workflow-with-conditional-step",
+  "links": []
+}

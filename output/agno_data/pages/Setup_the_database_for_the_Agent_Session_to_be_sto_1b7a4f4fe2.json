@@ -1,0 +1,8 @@
+{
+  "title": "Setup the database for the Agent Session to be stored",
+  "content": "db_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\ndb = PostgresDb(db_url=db_url)\n\nagent = Agent(\n    model=OpenAIResponses(id=\"gpt-5-mini\"),\n    db=db,\n    tools=[{\"type\": \"file_search\"}, {\"type\": \"web_search_preview\"}],\n    markdown=True,\n)\n\nagent.print_response(\n    \"Summarize the contents of the attached file and search the web for more information.\",\n    files=[File(url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\")],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-database-for-the-agent-session-to-be-stored",
+  "links": []
+}

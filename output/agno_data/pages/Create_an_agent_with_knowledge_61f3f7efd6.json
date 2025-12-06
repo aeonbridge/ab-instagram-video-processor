@@ -1,0 +1,40 @@
+{
+  "title": "Create an agent with knowledge",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    knowledge=knowledge,\n    # Enable automatic knowledge search\n    search_knowledge=True,\n    instructions=[\n        \"Always search your knowledge base before answering questions\",\n        \"Include source references in your responses when possible\"\n    ]\n)\npython  theme={null}\n  from agno.vectordb.pgvector import PgVector\n\n# Local vector storage - no database setup required\n  knowledge = Knowledge(\n      vector_db=PgVector(db_url=\"postgresql+psycopg://ai:ai@localhost:5432/ai\"),\n  )\n  python  theme={null}\n    # Add a specific file\n    knowledge.add_content(\n        path=\"path/to/your/document.pdf\"\n    )\n\n# Add an entire directory\n    knowledge.add_content(\n        path=\"path/to/documents/\"\n    )\n    python  theme={null}\n    # Add content from a website\n    knowledge.add_content(\n        url=\"https://docs.agno.com/introduction\"\n    )\n\n# Add a PDF from the web\n    knowledge.add_content(\n        url=\"https://example.com/document.pdf\"\n    )\n    python  theme={null}\n    # Add text content directly\n    knowledge.add_content(\n        text_content=\"\"\"\n        Company Policy: Remote Work Guidelines\n\n1. Remote work is available to all full-time employees\n        2. Employees must maintain regular communication with their team\n        3. Home office equipment is provided up to $1000 annually\n        \"\"\"\n    )\n    python  theme={null}",
+  "code_samples": [
+    {
+      "code": "<Accordion title=\"Don't have PostgreSQL? Use LanceDB instead\">\n  For a quick start without setting up PostgreSQL, use LanceDB which stores data locally:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Accordion>\n\n## Step 2: Add Your Content\n\nNow let's add some knowledge to your agent. You can add content from various sources:\n\n<Tabs>\n  <Tab title=\"From Local Files\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"From URLs\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"From Text\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n</Tabs>\n\n## Step 3: Chat with Your Agent\n\nThat's it! Your agent is now ready to answer questions based on your content:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Step 2: Add Your Content",
+      "id": "step-2:-add-your-content"
+    },
+    {
+      "level": "h2",
+      "text": "Step 3: Chat with Your Agent",
+      "id": "step-3:-chat-with-your-agent"
+    }
+  ],
+  "url": "llms-txt#create-an-agent-with-knowledge",
+  "links": []
+}

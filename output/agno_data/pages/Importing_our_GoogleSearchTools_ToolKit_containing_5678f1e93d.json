@@ -1,0 +1,24 @@
+{
+  "title": "Importing our GoogleSearchTools ToolKit, containing multiple web search tools",
+  "content": "from agno.tools.googlesearch import GoogleSearchTools\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[\n        GoogleSearchTools(),\n    ],\n)\n\nagent.print_response(\"What's the latest about OpenAIs GPT-5?\", markdown=True)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.run import RunContext\n\ndef add_item(run_context: RunContext, item: str) -> str:\n    \"\"\"Add an item to the shopping list.\"\"\"\n    if not run_context.session_state:\n        run_context.session_state = {}\n\nrun_context.session_state[\"shopping_list\"].append(item)  # type: ignore\n    return f\"The shopping list is now {run_context.session_state['shopping_list']}\"  # type: ignore",
+  "code_samples": [
+    {
+      "code": "In this example, the `GoogleSearchTools` toolkit is added to the agent. This ToolKit comes pre-configured with the `google_search` function.\n\n## Tool Built-in Parameters\n\nAgno automatically provides special parameters to your tools that give access to the agent's parameters, state and other variables. These parameters are injected automatically - the agent doesn't need to know about them.\n\n### Using the Run Context\n\nYou can access values from the current run via the `run_context` parameter: `run_context.session_state`, `run_context.dependencies`, `run_context.knowledge_filters`, `run_context.metadata`. See the [RunContext schema](/reference/run/run-context) for more information.\n\nThis allows tools to access and modify persistent data across conversations.\n\nThis is useful in cases where a tool result is relevant for the next steps of the conversation.\n\nAdd `run_context` as a parameter in your tool function to access the agent's persistent state:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Tool Built-in Parameters",
+      "id": "tool-built-in-parameters"
+    },
+    {
+      "level": "h3",
+      "text": "Using the Run Context",
+      "id": "using-the-run-context"
+    }
+  ],
+  "url": "llms-txt#importing-our-googlesearchtools-toolkit,-containing-multiple-web-search-tools",
+  "links": []
+}

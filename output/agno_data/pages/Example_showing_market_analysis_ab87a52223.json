@@ -1,0 +1,8 @@
+{
+  "title": "Example showing market analysis",
+  "content": "agent.print_response(\n    \"What are the top gainers in the market today?\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-showing-market-analysis",
+  "links": []
+}

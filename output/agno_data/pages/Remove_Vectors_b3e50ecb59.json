@@ -1,0 +1,14 @@
+{
+  "title": "Remove Vectors",
+  "content": "Source: https://docs.agno.com/basics/knowledge/getting-started/usage/remove-vectors\n\n```python 10_remove_vectors.py theme={null}\nimport asyncio\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#remove-vectors",
+  "links": []
+}

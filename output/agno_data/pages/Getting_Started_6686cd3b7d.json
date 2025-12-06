@@ -1,0 +1,33 @@
+{
+  "title": "Getting Started",
+  "content": "Source: https://docs.agno.com/basics/knowledge/getting-started\n\nBuild your first knowledge-powered agent in three simple steps with this hands-on tutorial.\n\nReady to build your first intelligent agent? This guide will walk you through creating a knowledge-powered agent that can answer questions about your documents in just a few minutes.\n\nBy the end of this tutorial, you'll have an agent that can:\n\n* Read and understand your documents or website content\n* Answer specific questions based on that information\n* Provide sources for its responses\n* Search intelligently without you having to specify what to look for\n\n<Steps>\n  <Step title=\"Install Agno\">\n    \n  </Step>\n\n<Step title=\"Set up your API key\">\n\n<Note>This tutorial uses OpenAI, but Agno supports [many other models](/basics/models/overview).</Note>\n  </Step>\n</Steps>\n\n## Step 1: Set Up Your Knowledge Base\n\nFirst, let's create a knowledge base with a vector database to store your information:\n\n```python knowledge_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Set up your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>This tutorial uses OpenAI, but Agno supports [many other models](/basics/models/overview).</Note>\n  </Step>\n</Steps>\n\n## Step 1: Set Up Your Knowledge Base\n\nFirst, let's create a knowledge base with a vector database to store your information:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Build",
+      "id": "what-you'll-build"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Step 1: Set Up Your Knowledge Base",
+      "id": "step-1:-set-up-your-knowledge-base"
+    }
+  ],
+  "url": "llms-txt#getting-started",
+  "links": []
+}

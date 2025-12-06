@@ -1,0 +1,8 @@
+{
+  "title": "Create and use the agent",
+  "content": "agent = Agent(knowledge=knowledge)\nagent.print_response(\"List down the ingredients to make Massaman Gai\", markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-and-use-the-agent",
+  "links": []
+}

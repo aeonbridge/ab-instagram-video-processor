@@ -1,0 +1,23 @@
+{
+  "title": "More example prompts to try:",
+  "content": "\"\"\"\nTry these research topics:\n1. \"Analyze the current state of solid-state batteries\"\n2. \"Research recent breakthroughs in CRISPR gene editing\"\n3. \"Investigate the development of autonomous vehicles\"\n4. \"Explore advances in quantum machine learning\"\n5. \"Study the impact of artificial intelligence on healthcare\"\n\"\"\"\nbash  theme={null}\n    pip install openai exa-py agno\n    bash  theme={null}\n    python research_agent.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#more-example-prompts-to-try:",
+  "links": []
+}

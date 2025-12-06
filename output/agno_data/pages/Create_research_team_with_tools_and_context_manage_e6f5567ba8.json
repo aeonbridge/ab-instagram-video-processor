@@ -1,0 +1,39 @@
+{
+  "title": "Create research team with tools and context management",
+  "content": "research_team = Team(\n    name=\"Research Team\",\n    model=OpenAIChat(\"gpt-4o\"),\n    members=[tech_researcher, business_analyst],\n    tools=[DuckDuckGoTools()],  # Team uses DuckDuckGo for research\n    description=\"Research team that investigates topics and provides analysis.\",\n    instructions=dedent(\"\"\"\n        You are a research coordinator that investigates topics comprehensively.\n        \n        Your Process:\n        1. Use DuckDuckGo to search for information on the topic\n        2. Delegate detailed analysis to the appropriate specialist\n        3. Synthesize research findings with specialist insights\n        \n        Guidelines:\n        - Always start with web research using your DuckDuckGo tools\n        - Choose the right specialist based on the topic (tech vs business)\n        - Combine your research with specialist analysis\n        - Provide comprehensive, well-sourced responses\n    \"\"\").strip(),\n    db=SqliteDb(db_file=\"tmp/research_team.db\"),\n    session_id=\"research_session\",\n    add_history_to_context=True,\n    num_history_runs=6,  # Load last 6 research queries\n    max_tool_calls_from_history=3,  # Keep only last 3 research results\n    markdown=True,\n)\n\nresearch_team.print_response(\"What are the latest developments in AI agents?\", stream=True)\nresearch_team.print_response(\"How is the tech market performing this quarter?\", stream=True)\nresearch_team.print_response(\"What are the trends in LLM applications?\", stream=True)\nresearch_team.print_response(\"What companies are leading in AI infrastructure?\", stream=True)\nbash  theme={null}\n    pip install -U agno openai ddgs sqlalchemy\n    bash Mac/Linux theme={null}\n        export OPENAI_API_KEY=\"your_openai_api_key_here\"\n      bash Windows theme={null}\n        $Env:OPENAI_API_KEY=\"your_openai_api_key_here\"\n      bash  theme={null}\n    touch filter_tool_calls_from_history.py\n    bash Mac/Linux theme={null}\n      python filter_tool_calls_from_history.py\n      bash Windows theme={null}\n      python filter_tool_calls_from_history.py\n      ```\n    </CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/teams/context_management\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Create a Python file\">\n    Create a Python file and add the above code.",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Team\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-research-team-with-tools-and-context-management",
+  "links": []
+}

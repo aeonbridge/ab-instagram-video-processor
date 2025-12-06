@@ -1,0 +1,14 @@
+{
+  "title": "Workflow Metrics",
+  "content": "Source: https://docs.agno.com/basics/sessions/metrics/workflow\n\nLearn about Workflow run and session metrics.\n\nWhen you run a workflow in Agno, the response you get (**WorkflowRunOutput**) includes detailed metrics about the workflow execution.\n\nThese metrics help you understand token usage, execution time, performance, and step-level details across all agents, teams, and custom functions in your workflow.\n\nMetrics are available at multiple levels:\n\n* **Per workflow**: Each `WorkflowRunOutput` includes a metrics object containing the workflow duration.\n* **Per step**: Each step has its own metrics including duration, token usage, and model information.\n* **Per session**: Session metrics aggregate all step-level metrics across all runs in the session.\n\nHere's how you can access and use workflow metrics:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow import Step, Workflow\nfrom rich.pretty import pprint",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example Usage",
+      "id": "example-usage"
+    }
+  ],
+  "url": "llms-txt#workflow-metrics",
+  "links": []
+}

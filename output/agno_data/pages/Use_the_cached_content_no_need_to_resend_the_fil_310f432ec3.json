@@ -1,0 +1,46 @@
+{
+  "title": "Use the cached content - no need to resend the file",
+  "content": "agent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-001\", cached_content=cache.name),\n)\nrun_output = agent.run(\"Find a lighthearted moment from this transcript\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.google import Gemini\n\nagent = Agent(\n    model=Gemini(id=\"gemini-2.5-pro\", thinking_budget=1280, include_thoughts=True),\n    markdown=True,\n)\n\nagent.print_response(\"Solve this logic puzzle...\")\npython  theme={null}\nagent = Agent(\n    model=Gemini(id=\"gemini-3-pro-preview\", thinking_level=\"low\"),  # \"low\" or \"high\"\n    markdown=True,\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.google import Gemini\nfrom pydantic import BaseModel\n\nclass MovieScript(BaseModel):\n    name: str\n    genre: str\n    storyline: str\n\nagent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-001\"),\n    output_schema=MovieScript,\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.google import Gemini\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nagent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-001\"),\n    tools=[DuckDuckGoTools()],\n    markdown=True,\n)\n\nagent.print_response(\"Whats happening in France?\")\n```\n\nRead more about tool use [here](/integrations/models/native/google/usage/tool-use).\n\n| Parameter                     | Type                       | Default                  | Description                                                          |\n| ----------------------------- | -------------------------- | ------------------------ | -------------------------------------------------------------------- |\n| `id`                          | `str`                      | `\"gemini-2.0-flash-001\"` | The id of the Gemini model to use                                    |\n| `name`                        | `str`                      | `\"Gemini\"`               | The name of the model                                                |\n| `provider`                    | `str`                      | `\"Google\"`               | The provider of the model                                            |\n| `api_key`                     | `Optional[str]`            | `None`                   | Google API key (defaults to `GOOGLE_API_KEY` env var)                |\n| `vertexai`                    | `bool`                     | `False`                  | Use Vertex AI instead of AI Studio                                   |\n| `project_id`                  | `Optional[str]`            | `None`                   | Google Cloud project ID for Vertex AI                                |\n| `location`                    | `Optional[str]`            | `None`                   | Google Cloud region for Vertex AI                                    |\n| `temperature`                 | `Optional[float]`          | `None`                   | Controls randomness in the model's output                            |\n| `top_p`                       | `Optional[float]`          | `None`                   | Controls diversity via nucleus sampling                              |\n| `top_k`                       | `Optional[int]`            | `None`                   | Controls diversity via top-k sampling                                |\n| `max_output_tokens`           | `Optional[int]`            | `None`                   | Maximum number of tokens to generate                                 |\n| `stop_sequences`              | `Optional[list[str]]`      | `None`                   | Sequences where the model should stop generating                     |\n| `seed`                        | `Optional[int]`            | `None`                   | Random seed for reproducibility                                      |\n| `logprobs`                    | `Optional[bool]`           | `None`                   | Whether to return log probabilities of output tokens                 |\n| `presence_penalty`            | `Optional[float]`          | `None`                   | Penalizes new tokens based on whether they appear in the text so far |\n| `frequency_penalty`           | `Optional[float]`          | `None`                   | Penalizes new tokens based on their frequency in the text so far     |\n| `search`                      | `bool`                     | `False`                  | Enable Google Search grounding                                       |\n| `grounding`                   | `bool`                     | `False`                  | Enable legacy grounding (use `search` for 2.0+)                      |\n| `grounding_dynamic_threshold` | `Optional[float]`          | `None`                   | Dynamic threshold for grounding                                      |\n| `url_context`                 | `bool`                     | `False`                  | Enable URL context extraction                                        |\n| `vertexai_search`             | `bool`                     | `False`                  | Enable Vertex AI Search                                              |\n| `vertexai_search_datastore`   | `Optional[str]`            | `None`                   | Vertex AI Search datastore path                                      |\n| `file_search_store_names`     | `Optional[list[str]]`      | `None`                   | File Search store names for RAG                                      |\n| `file_search_metadata_filter` | `Optional[str]`            | `None`                   | Metadata filter for File Search                                      |\n| `response_modalities`         | `Optional[list[str]]`      | `None`                   | Output types: `\"TEXT\"`, `\"IMAGE\"`, `\"AUDIO\"`                         |\n| `speech_config`               | `Optional[dict]`           | `None`                   | TTS voice configuration                                              |\n| `thinking_budget`             | `Optional[int]`            | `None`                   | Token budget for reasoning (Gemini 2.5+)                             |\n| `include_thoughts`            | `Optional[bool]`           | `None`                   | Include thought summaries in response                                |\n| `thinking_level`              | `Optional[str]`            | `None`                   | Thinking intensity: `\"low\"` or `\"high\"`                              |\n| `cached_content`              | `Optional[Any]`            | `None`                   | Reference to cached context                                          |\n| `safety_settings`             | `Optional[list]`           | `None`                   | Content safety configuration                                         |\n| `function_declarations`       | `Optional[List[Any]]`      | `None`                   | List of function declarations for the model                          |\n| `generation_config`           | `Optional[Any]`            | `None`                   | Custom generation configuration                                      |\n| `generative_model_kwargs`     | `Optional[Dict[str, Any]]` | `None`                   | Additional keyword arguments for the generative model                |\n| `request_params`              | `Optional[Dict[str, Any]]` | `None`                   | Additional parameters for the request                                |\n| `client_params`               | `Optional[Dict[str, Any]]` | `None`                   | Additional parameters for client configuration                       |\n\n`Gemini` is a subclass of the [Model](/reference/models/model) class and has access to the same params.",
+  "code_samples": [
+    {
+      "code": "## Thinking Models\n\nGemini 2.5+ models support extended thinking for complex reasoning tasks. See [Google's thinking documentation](https://ai.google.dev/gemini-api/docs/thinking) for more details.",
+      "language": "unknown"
+    },
+    {
+      "code": "You can also use `thinking_level` for simpler control:",
+      "language": "unknown"
+    },
+    {
+      "code": "Read more about thinking models [here](/integrations/models/native/google/usage/flash-thinking).\n\n## Structured Outputs\n\nGemini supports native structured outputs using Pydantic models:",
+      "language": "unknown"
+    },
+    {
+      "code": "Read more about structured outputs [here](/integrations/models/native/google/usage/structured-output).\n\n## Tool Use\n\nGemini supports function calling to interact with external tools and APIs:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Thinking Models",
+      "id": "thinking-models"
+    },
+    {
+      "level": "h2",
+      "text": "Structured Outputs",
+      "id": "structured-outputs"
+    },
+    {
+      "level": "h2",
+      "text": "Tool Use",
+      "id": "tool-use"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#use-the-cached-content---no-need-to-resend-the-file",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "This is the URL of the MCP server we want to use.",
+  "content": "server_url = \"http://localhost:7777/mcp\"\n\nasync def run_agent(message: str) -> None:\n    async with MCPTools(transport=\"streamable-http\", url=server_url) as mcp_tools:\n        agent = Agent(\n            model=Claude(id=\"claude-sonnet-4-0\"),\n            tools=[mcp_tools],\n            markdown=True,\n        )\n        await agent.aprint_response(input=message, stream=True, markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#this-is-the-url-of-the-mcp-server-we-want-to-use.",
+  "links": []
+}

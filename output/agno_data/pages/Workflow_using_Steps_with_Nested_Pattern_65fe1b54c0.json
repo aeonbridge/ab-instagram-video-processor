@@ -1,0 +1,8 @@
+{
+  "title": "Workflow using Steps with Nested Pattern",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/workflow-using-steps-nested\n\nThis example demonstrates **Workflows 2.0** nested patterns using `Steps` to encapsulate a complex workflow with conditional parallel execution.\n\nThis example demonstrates **Workflows** nested patterns using `Steps` to encapsulate\na complex workflow with conditional parallel execution. It combines `Condition`, `Parallel`,\nand `Steps` for modular and adaptive content creation.\n\n```python workflow_using_steps_nested.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.exa import ExaTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.condition import Condition\nfrom agno.workflow.parallel import Parallel\nfrom agno.workflow.step import Step\nfrom agno.workflow.steps import Steps\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#workflow-using-steps-with-nested-pattern",
+  "links": []
+}

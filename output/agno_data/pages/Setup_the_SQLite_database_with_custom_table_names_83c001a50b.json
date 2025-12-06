@@ -1,0 +1,8 @@
+{
+  "title": "Setup the SQLite database with custom table names",
+  "content": "db = SqliteDb(\n    db_file=\"tmp/data.db\",\n    # Selecting which tables to use\n    session_table=\"agent_sessions\",\n    memory_table=\"agent_memories\",\n    metrics_table=\"agent_metrics\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-sqlite-database-with-custom-table-names",
+  "links": []
+}

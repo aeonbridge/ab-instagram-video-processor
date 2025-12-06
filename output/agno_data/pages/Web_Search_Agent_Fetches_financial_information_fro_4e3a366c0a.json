@@ -1,0 +1,8 @@
+{
+  "title": "Web Search Agent: Fetches financial information from the web",
+  "content": "web_search_agent = Agent(\n    name=\"Web Agent\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    tools=[DuckDuckGoTools()],\n    instructions=\"Always include sources\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#web-search-agent:-fetches-financial-information-from-the-web",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "What is Culture?",
+  "content": "Source: https://docs.agno.com/basics/culture/overview\n\nEnable your agents to share universal knowledge, principles, and best practices that compound across all interactions.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.1.10\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.1.10\">v2.1.10</Tooltip>\n</Badge>\n\nImagine agents that learn from every interaction and share those learnings with each other.\nA support agent discovers that customers prefer step-by-step solutions with code examples.\nA technical writer agent learns that \"Operational Thinking\" produces better documentation.\nThese insights shouldn't be lost—they should become part of a shared culture that benefits all agents, forever. Culture turns these patterns into reusable rules your agents can follow from day one.\n\nCulture provides a shared knowledge layer where agents store universal principles, best practices, and reusable insights that apply across all interactions. Unlike Memory, which stores user-specific facts (\"Sarah prefers email\"), Culture stores universal knowledge that benefits everyone (\"Always provide actionable solutions with clear next steps\").\n\nWhen an agent completes a task, it can reflect on what worked well and distill that into cultural knowledge. Later, when any agent faces a similar situation, it automatically accesses this shared culture and applies those learnings.\n\n<Tip>\n  **Culture ≠ Memory:** Culture stores universal principles and best practices that apply to all interactions. [Memory](/basics/memory/overview) stores user-specific facts and preferences. Think of Culture as \"how we do things here\" and Memory as \"what I know about you.\"\n</Tip>\n\n<Note>\n  **Notice:** Culture is an experimental feature and is subject to change. The current goal is helping agents stay consistent in tone, reasoning, and behavior. The eventual goal is to transform isolated agents into a living, evolving system of collective intelligence.\n</Note>\n\nCulture enables intelligence to compound. Instead of each agent starting from scratch, they build on collective experience:\n\n* **Consistency:** All agents follow the same communication standards, formatting rules, and best practices\n* **Evolution:** Your agent system improves over time as agents learn what works\n* **Efficiency:** Agents don't re-learn the same lessons repeatedly\n\n**Example Use Cases:**\n\n* Technical documentation agents that maintain consistent style and structure\n* Customer support teams that apply proven problem-solving patterns\n* Development assistants that follow your organization's coding standards\n* Content generation that adheres to brand voice and formatting guidelines\n\n## Getting Started with Culture\n\nSetting up culture is straightforward: connect a database and enable the culture feature. Here's a basic setup:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How Culture Works",
+      "id": "how-culture-works"
+    },
+    {
+      "level": "h2",
+      "text": "Why Use Culture?",
+      "id": "why-use-culture?"
+    },
+    {
+      "level": "h2",
+      "text": "Getting Started with Culture",
+      "id": "getting-started-with-culture"
+    }
+  ],
+  "url": "llms-txt#what-is-culture?",
+  "links": []
+}

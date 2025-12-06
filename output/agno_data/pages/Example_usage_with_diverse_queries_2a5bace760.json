@@ -1,0 +1,8 @@
+{
+  "title": "Example usage with diverse queries",
+  "content": "agent_team.print_response(\n    input=\"Summarize analyst recommendations and share the latest news for NVDA\",\n    stream=True,\n)\nagent_team.print_response(\n    input=\"What's the market outlook and financial performance of AI semiconductor companies?\",\n    stream=True,\n)\nagent_team.print_response(\n    input=\"Analyze recent developments and financial performance of TSLA\",\n    stream=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage-with-diverse-queries",
+  "links": []
+}

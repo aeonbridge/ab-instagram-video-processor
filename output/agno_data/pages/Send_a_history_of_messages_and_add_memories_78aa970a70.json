@@ -1,0 +1,27 @@
+{
+  "title": "Send a history of messages and add memories",
+  "content": "memory.create_user_memories(\n    messages=[\n        Message(role=\"user\", content=\"My name is Jane Doe\"),\n        Message(role=\"assistant\", content=\"That is great!\"),\n        Message(role=\"user\", content=\"I like to play chess\"),\n        Message(role=\"assistant\", content=\"That is great!\"),\n    ],\n    user_id=jane_doe_id,\n)\n\nmemories = memory.get_user_memories(user_id=jane_doe_id)\nprint(\"Jane Doe's memories:\")\npprint(memories)\n\nbash  theme={null}\n    pip install -U agno\n    bash Mac theme={null}\n      python memory-creation.py\n      bash Windows theme={null}\n      python memory-creation.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#send-a-history-of-messages-and-add-memories",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Vertex AI",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/vertexai\n\n```python cookbook/models/google/gemini/vertexai.py theme={null}\n\"\"\"\nTo use Vertex AI, with the Gemini Model class, you need to set the following environment variables:\n\nexport GOOGLE_GENAI_USE_VERTEXAI=\"true\"\nexport GOOGLE_CLOUD_PROJECT=\"your-project-id\"\nexport GOOGLE_CLOUD_LOCATION=\"your-location\"\n\nOr you can set the following parameters in the `Gemini` class:\n\ngemini = Gemini(\n    vertexai=True,\n    project_id=\"your-google-cloud-project-id\",\n    location=\"your-google-cloud-location\",\n)\n\"\"\"\n\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.google import Gemini\n\nagent = Agent(model=Gemini(id=\"gemini-2.0-flash-001\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-vertex-ai",
+  "links": []
+}

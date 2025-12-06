@@ -1,0 +1,24 @@
+{
+  "title": "AgentOS Configuration",
+  "content": "Source: https://docs.agno.com/agent-os/usage/extra-configuration\n\nPassing extra configuration to your AgentOS\n\n## Configuration file\n\nWe will first create a YAML file with the extra configuration we want to pass to our AgentOS:\n\n```python cookbook/agent_os/os_config/yaml_config.py theme={null}\n\"\"\"Example showing how to pass extra configuration to your AgentOS.\"\"\"\n\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.team import Team\nfrom agno.vectordb.pgvector import PgVector\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [
+    {
+      "code": "## Code",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Configuration file",
+      "id": "configuration-file"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agentos-configuration",
+  "links": []
+}

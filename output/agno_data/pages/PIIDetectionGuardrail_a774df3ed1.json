@@ -1,0 +1,14 @@
+{
+  "title": "PIIDetectionGuardrail",
+  "content": "Source: https://docs.agno.com/reference/hooks/pii-guardrail\n\n| Parameter                  | Type   | Default | Description                                                                           |\n| -------------------------- | ------ | ------- | ------------------------------------------------------------------------------------- |\n| `mask_pii`                 | `bool` | `False` | Whether to mask the PII in the input, rather than raising an error.                   |\n| `enable_ssn_check`         | `bool` | `True`  | Whether to check for Social Security Numbers.                                         |\n| `enable_credit_card_check` | `bool` | `True`  | Whether to check for credit cards.                                                    |\n| `enable_email_check`       | `bool` | `True`  | Whether to check for emails.                                                          |\n| `enable_phone_check`       | `bool` | `True`  | Whether to check for phone numbers.                                                   |\n| `custom_patterns`          | `dict` | `{}`    | A dictionary of custom PII patterns to detect. This is added to the default patterns. |",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#piidetectionguardrail",
+  "links": []
+}

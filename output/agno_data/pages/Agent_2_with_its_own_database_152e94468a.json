@@ -1,0 +1,8 @@
+{
+  "title": "Agent 2 with its own database",
+  "content": "search_agent = Agent(\n    name=\"Search Agent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[DuckDuckGoTools()],\n    db=agent2_db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-2-with-its-own-database",
+  "links": []
+}

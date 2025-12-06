@@ -1,0 +1,8 @@
+{
+  "title": "Delete specific content",
+  "content": "knowledge.remove_content_by_id(content_id)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-specific-content",
+  "links": []
+}

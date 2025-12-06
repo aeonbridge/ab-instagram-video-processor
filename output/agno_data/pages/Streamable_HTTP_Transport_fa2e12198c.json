@@ -1,0 +1,8 @@
+{
+  "title": "Streamable HTTP Transport",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/transports/streamable_http\n\nThe new [Streamable HTTP transport](https://modelcontextprotocol.io/specification/draft/basic/transports#streamable-http) replaces the HTTP+SSE transport from protocol version `2024-11-05`.\n\nThis transport enables the MCP server to handle multiple client connections, and can also use SSE for server-to-client streaming.\n\nTo use it, initialize the `MCPTools` passing the URL of the MCP server and setting the transport to `streamable-http`:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.mcp import MCPTools",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#streamable-http-transport",
+  "links": []
+}

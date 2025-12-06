@@ -1,0 +1,34 @@
+{
+  "title": "MySQL for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/mysql/usage/mysql-for-agent\n\nAgno supports using MySQL as a storage backend for Agents using the `MySQLDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **MySQL** on port **3306** using:\n\n<Snippet file=\"db-mysql-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/mysql/mysql_storage_for_agent.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run MySQL",
+      "id": "run-mysql"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#mysql-for-agent",
+  "links": []
+}

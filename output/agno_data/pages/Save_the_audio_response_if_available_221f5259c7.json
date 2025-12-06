@@ -1,0 +1,8 @@
+{
+  "title": "Save the audio response if available",
+  "content": "if run_response.response_audio is not None:\n    write_audio_to_file(\n        audio=run_response.response_audio.content, filename=\"tmp/response.wav\"\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#save-the-audio-response-if-available",
+  "links": []
+}

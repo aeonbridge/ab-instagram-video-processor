@@ -1,0 +1,24 @@
+{
+  "title": "Example 2: Invoke a specific Lambda function",
+  "content": "agent.print_response(\"Invoke the 'hello-world' Lambda function with an empty payload\", markdown=True)\n```\n\n| Parameter                | Type   | Default       | Description                                         |\n| ------------------------ | ------ | ------------- | --------------------------------------------------- |\n| `region_name`            | `str`  | `\"us-east-1\"` | AWS region name where Lambda functions are located. |\n| `enable_list_functions`  | `bool` | `True`        | Enable the list\\_functions functionality.           |\n| `enable_invoke_function` | `bool` | `True`        | Enable the invoke\\_function functionality.          |\n| `all`                    | `bool` | `False`       | Enable all functionality.                           |\n\n| Function          | Description                                                                                                           |\n| ----------------- | --------------------------------------------------------------------------------------------------------------------- |\n| `list_functions`  | Lists all Lambda functions available in the AWS account.                                                              |\n| `invoke_function` | Invokes a specific Lambda function with an optional payload. Takes `function_name` and optional `payload` parameters. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/aws_lambda.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/aws_lambda_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example-2:-invoke-a-specific-lambda-function",
+  "links": []
+}

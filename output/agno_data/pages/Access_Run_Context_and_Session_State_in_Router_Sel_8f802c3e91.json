@@ -1,0 +1,21 @@
+{
+  "title": "Access Run Context and Session State in Router Selector Function",
+  "content": "Source: https://docs.agno.com/basics/state/workflows/usage/access-session-state-in-router-selector-function\n\nThis example demonstrates how to access the run context in the selector function of a router step\n\n1. Using `run_context.session_state` in a Router selector function\n2. Making routing decisions based on session state data\n3. Accessing user preferences and history from `run_context.session_state`\n4. Dynamically selecting different agents based on user context\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    Create a file named `access_session_state_in_router_selector_function.py`\n  </Step>\n\n<Step title=\"Add code to file\">\n    \n  </Step>\n\n<Step title=\"Setup venv\">\n    <Snippet file=\"create-venv-step.mdx\" />\n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Set OpenAI Key\">\n    <Snippet file=\"set-openai-key.mdx\" />\n  </Step>\n\n<Step title=\"Run the workflow\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Setup venv\">\n    <Snippet file=\"create-venv-step.mdx\" />\n  </Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set OpenAI Key\">\n    <Snippet file=\"set-openai-key.mdx\" />\n  </Step>\n\n  <Step title=\"Run the workflow\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#access-run-context-and-session-state-in-router-selector-function",
+  "links": []
+}

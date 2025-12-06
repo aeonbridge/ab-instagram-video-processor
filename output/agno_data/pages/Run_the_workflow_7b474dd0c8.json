@@ -1,0 +1,41 @@
+{
+  "title": "Run the workflow",
+  "content": "company_description_workflow.print_response(\n    input=supplier_request,\n)\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    export RESEND_API_KEY=xxx\n    export FIRECRAWL_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai fastapi firecrawl-py resend markdown ddgs\n    bash Mac theme={null}\n      python cookbook/examples/workflows/company_description/run_workflow.py\n      bash Windows theme={null}\n      python cookbook/examples/workflows/company_description/run_workflow.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n* Modify `supplier_request` to analyze different companies\n* Customize agent instructions in `prompts.py` to focus on specific analysis areas\n* Adjust the profile template in `SUPPLIER_PROFILE_INSTRUCTIONS_GENERAL` for different report formats\n* Explore [Workflows](/basics/workflows/overview) for advanced workflow patterns",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe workflow will simultaneously gather information from multiple sources (website crawling, web search, Wikipedia, competitor analysis) then generate a comprehensive supplier profile. You'll see progress indicators for each agent's data collection.\n\nThe final output is a structured markdown report delivered via email. The workflow caches all analysis results - if you request the same supplier again, it returns the cached profile instantly instead of re-running the expensive analysis pipeline.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API keys\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Workflow\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#run-the-workflow",
+  "links": []
+}

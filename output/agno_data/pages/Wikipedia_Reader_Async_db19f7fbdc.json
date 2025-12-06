@@ -1,0 +1,14 @@
+{
+  "title": "Wikipedia Reader Async",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/wikipedia-reader-async\n\nThe **Wikipedia Reader** with asynchronous processing allows you to search and read Wikipedia articles efficiently, converting them into vector embeddings for your knowledge base.\n\n```python examples/basics/knowledge/readers/wikipedia_reader_async.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.arxiv_reader import ArxivReader\nfrom agno.knowledge.reader.wikipedia_reader import WikipediaReader\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#wikipedia-reader-async",
+  "links": []
+}

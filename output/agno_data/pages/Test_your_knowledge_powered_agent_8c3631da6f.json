@@ -1,0 +1,19 @@
+{
+  "title": "Test your knowledge-powered agent",
+  "content": "if __name__ == \"__main__\":\n    # Your agent will automatically search its knowledge to answer\n    agent.print_response(\n        \"What is the company policy on remote work?\",\n        stream=True\n    )\npython knowledge_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "### Complete Example\n\nHere's the full working example:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Complete Example",
+      "id": "complete-example"
+    }
+  ],
+  "url": "llms-txt#test-your-knowledge-powered-agent",
+  "links": []
+}

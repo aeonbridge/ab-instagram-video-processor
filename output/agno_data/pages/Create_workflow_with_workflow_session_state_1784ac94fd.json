@@ -1,0 +1,37 @@
+{
+  "title": "Create workflow with workflow_session_state",
+  "content": "shopping_workflow = Workflow(\n    name=\"Shopping List Workflow\",\n    db=db,\n    steps=[manage_items_step, view_list_step],\n    session_state={\"shopping_list\": []},\n)\n\nif __name__ == \"__main__\":\n    # Example 1: Add items to the shopping list\n    print(\"=== Example 1: Adding Items ===\")\n    shopping_workflow.print_response(\n        input=\"Please add milk, bread, and eggs to my shopping list.\"\n    )\n    print(\"Workflow session state:\", shopping_workflow.get_session_state())\n\n# Example 2: Add more items and view list\n    print(\"\\n=== Example 2: Adding More Items ===\")\n    shopping_workflow.print_response(\n        input=\"Add apples and bananas to the list, then show me the complete list.\"\n    )\n    print(\"Workflow session state:\", shopping_workflow.get_session_state())\n\n# Example 3: Remove items\n    print(\"\\n=== Example 3: Removing Items ===\")\n    shopping_workflow.print_response(\n        input=\"Remove bread from the list and show me what's left.\"\n    )\n    print(\"Workflow session state:\", shopping_workflow.get_session_state())\n\n# Example 4: Clear the entire list\n    print(\"\\n=== Example 4: Clearing List ===\")\n    shopping_workflow.print_response(\n        input=\"Clear the entire shopping list and confirm it's empty.\"\n    )\n    print(\"Final workflow session state:\", shopping_workflow.get_session_state())\npython  theme={null}\n  from agno.run import RunContext\n\ndef custom_function_step(step_input: StepInput, run_context: RunContext):\n      \"\"\"Update the workflow session state\"\"\"\n      run_context.session_state[\"test\"] = test_1\n  python  theme={null}\nfrom agno.run import RunContext\n\ndef evaluator_function(step_input: StepInput, run_context: RunContext):\n    return run_context.session_state[\"test\"] == \"test_1\"\n\ncondition_step = Condition(\n    name=\"condition_step\",\n    evaluator=evaluator_function,\n    steps=[step_1, step_2],\n)\npython  theme={null}\nfrom agno.run import RunContext\n\ndef selector_function(step_input: StepInput, run_context: RunContext):\n    return run_context.session_state[\"test\"] == \"test_1\"\n\nrouter_step = Router(\n    name=\"router_step\",\n    selector=selector_function,\n    choices=[step_1, step_2],\n)\n```\n\nSee example of [Session State in Condition Evaluator Function](/basics/state/workflows/usage/access-session-state-in-condition-evaluator-function)\nand [Session State in Router Selector Function](/basics/state/workflows/usage/access-session-state-in-router-selector-function) for more details.\n\n**Persistent State Management**\n\n* Data persists across all workflow steps and components\n* Enables complex, stateful workflows with memory\n* Supports deterministic execution with consistent state\n\n**Cross-Component Coordination**\n\n* Agents, teams, and functions share the same state object\n* Enables sophisticated collaboration patterns\n* Maintains data consistency across workflow execution\n\n**Flexible Data Structure**\n\n* Use any Python data structure (dictionaries, lists, objects)\n* Structure data to match your workflow requirements\n* Access and modify state through standard Python operations\n\n<Note>\n  The `run_context` object, containing the session state, is automatically passed to all agents and teams within a\n  workflow, enabling seamless collaboration and data sharing between different\n  components without manual state management.\n</Note>\n\n<CardGroup cols={3}>\n  <Card title=\"Agent Examples\" icon=\"user\" href=\"https://github.com/agno-agi/agno/tree/main/cookbook/workflows/_06_advanced_basics/_04_shared_session_state/shared_session_state_with_agent.py\">\n    See how agents interact with shared session state\n  </Card>\n\n<Card title=\"Team Examples\" icon=\"users\" href=\"https://github.com/agno-agi/agno/tree/main/cookbook/workflows/_06_advanced_basics/_04_shared_session_state/shared_session_state_with_team.py\">\n    Learn how teams coordinate using shared state\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "See the [RunContext schema](/reference/run/run-context) for more information.\n\n### 3. `run_context` as a parameter for custom python functions step in workflow\n\nYou can add the `run_context` parameter to the Python functions you use as custom steps.\n\nThe `run_context` object will be automatically injected when running the function.\n\nYou can use it to read and modify the session state, via `run_context.session_state`.\n\n<Note>\n  On the function of the custom python function step for a workflow",
+      "language": "unknown"
+    },
+    {
+      "code": "</Note>\n\nSee [examples](/basics/state/workflows/usage/access-session-state-in-custom-python-function-step) for more details.\n\nThe `run_context` is also available as a parameter in the evaluator and selector functions of the `Condition` and `Router` steps:",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "3. `run_context` as a parameter for custom python functions step in workflow",
+      "id": "3.-`run_context`-as-a-parameter-for-custom-python-functions-step-in-workflow"
+    },
+    {
+      "level": "h2",
+      "text": "Key Benefits",
+      "id": "key-benefits"
+    },
+    {
+      "level": "h2",
+      "text": "Useful Links",
+      "id": "useful-links"
+    }
+  ],
+  "url": "llms-txt#create-workflow-with-workflow_session_state",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent with Searxng",
+  "content": "agent = Agent(tools=[searxng])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-searxng",
+  "links": []
+}

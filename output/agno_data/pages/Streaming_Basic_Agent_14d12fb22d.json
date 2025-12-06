@@ -1,0 +1,14 @@
+{
+  "title": "Streaming Basic Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/cloud/ibm-watsonx/usage/basic-stream\n\n```python cookbook/models/ibm/watsonx/basic_stream.py theme={null}\nfrom typing import Iterator\nfrom agno.agent import Agent, RunOutput\nfrom agno.models.ibm import WatsonX\n\nagent = Agent(model=WatsonX(id=\"ibm/granite-20b-code-instruct\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#streaming-basic-agent",
+  "links": []
+}

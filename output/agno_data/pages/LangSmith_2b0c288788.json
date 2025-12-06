@@ -1,0 +1,33 @@
+{
+  "title": "LangSmith",
+  "content": "Source: https://docs.agno.com/integrations/observability/langsmith\n\nIntegrate Agno with LangSmith to send traces and gain insights into your agent's performance.\n\n## Integrating Agno with LangSmith\n\nLangSmith offers a comprehensive platform for tracing and monitoring AI model calls. By integrating Agno with LangSmith, you can utilize OpenInference to send traces and gain insights into your agent's performance.\n\n1. **Create a LangSmith Account**\n\n* Sign up for an account at [LangSmith](https://smith.langchain.com).\n   * Obtain your API key from the LangSmith dashboard.\n\n2. **Set Environment Variables**\n\nConfigure your environment with the LangSmith API key and other necessary settings:\n\n3. **Install Dependencies**\n\nEnsure you have the necessary packages installed:\n\n## Sending Traces to LangSmith\n\nThis example demonstrates how to instrument your Agno agent with OpenInference and send traces to LangSmith.\n\n```python  theme={null}\nimport os\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom openinference.instrumentation.agno import AgnoInstrumentor\nfrom opentelemetry import trace as trace_api\nfrom opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter\nfrom opentelemetry.sdk.trace import TracerProvider\nfrom opentelemetry.sdk.trace.export import SimpleSpanProcessor",
+  "code_samples": [
+    {
+      "code": "3. **Install Dependencies**\n\n   Ensure you have the necessary packages installed:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Sending Traces to LangSmith\n\nThis example demonstrates how to instrument your Agno agent with OpenInference and send traces to LangSmith.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with LangSmith",
+      "id": "integrating-agno-with-langsmith"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Sending Traces to LangSmith",
+      "id": "sending-traces-to-langsmith"
+    }
+  ],
+  "url": "llms-txt#langsmith",
+  "links": []
+}

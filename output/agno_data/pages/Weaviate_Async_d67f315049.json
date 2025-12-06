@@ -1,0 +1,14 @@
+{
+  "title": "Weaviate Async",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/weaviate/usage/async-weaviate-db\n\n```python cookbook/knowledge/vector_db/weaviate_db/async_weaviate_db.py theme={null}\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.search import SearchType\nfrom agno.vectordb.weaviate import Distance, VectorIndex, Weaviate\n\nvector_db = Weaviate(\n    collection=\"recipes_async\",\n    search_type=SearchType.hybrid,\n    vector_index=VectorIndex.HNSW,\n    distance=Distance.COSINE,\n    local=True,  # Set to False if using Weaviate Cloud and True if using local instance\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#weaviate-async",
+  "links": []
+}

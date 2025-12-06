@@ -1,0 +1,8 @@
+{
+  "title": "Setup knowledge with metadata",
+  "content": "knowledge = Knowledge(\n    contents_db=PostgresDb(\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n        knowledge_table=\"knowledge_contents\",\n    ),\n    vector_db=PgVector(\n        table_name=\"filtered_knowledge\",\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n    )\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-knowledge-with-metadata",
+  "links": []
+}

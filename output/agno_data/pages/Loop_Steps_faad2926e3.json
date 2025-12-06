@@ -1,0 +1,8 @@
+{
+  "title": "Loop Steps",
+  "content": "Source: https://docs.agno.com/reference/workflows/loop-steps\n\n| Parameter        | Type                                                                                                 | Default  | Description                                 |\n| ---------------- | ---------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------- |\n| `steps`          | `WorkflowSteps`                                                                                      | Required | Steps to execute in each loop iteration     |\n| `name`           | `Optional[str]`                                                                                      | `None`   | Name of the loop step                       |\n| `description`    | `Optional[str]`                                                                                      | `None`   | Description of the loop step                |\n| `max_iterations` | `int`                                                                                                | `3`      | Maximum number of iterations for the loop   |\n| `end_condition`  | `Optional[Union[Callable[[List[StepOutput]], bool], Callable[[List[StepOutput]], Awaitable[bool]]]]` | `None`   | Function to evaluate if the loop should end |",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#loop-steps",
+  "links": []
+}

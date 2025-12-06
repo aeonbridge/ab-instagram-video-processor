@@ -1,0 +1,14 @@
+{
+  "title": "Streaming Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/vercel/usage/basic-stream\n\n```python cookbook/models/vercel/basic_stream.py theme={null}\nfrom typing import Iterator  # noqa\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.vercel import V0\n\nagent = Agent(model=V0(id=\"v0-1.0-md\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#streaming-agent",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Setup a team with two members",
+  "content": "english_agent = Agent(\n    name=\"English Agent\",\n    role=\"You only answer in English\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n)\nspanish_agent = Agent(\n    name=\"Spanish Agent\",\n    role=\"You can only answer in Spanish\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n)\n\nmulti_language_team = Team(\n    name=\"Multi Language Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[english_agent, spanish_agent],\n    respond_directly=True,\n    markdown=True,\n    instructions=[\n        \"You are a language router that directs questions to the appropriate language agent.\",\n        \"If the user asks in a language whose agent is not a team member, respond in English with:\",\n        \"'I can only answer in the following languages: English and Spanish.\",\n        \"Always check the language of the user's input before routing to an agent.\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-a-team-with-two-members",
+  "links": []
+}

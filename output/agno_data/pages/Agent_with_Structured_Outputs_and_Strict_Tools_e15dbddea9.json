@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Structured Outputs and Strict Tools",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/structured-output-strict-tools\n\nThis example demonstrates how to use strict tool validation with structured outputs. Strict tool use ensures that tool parameters strictly follow the input schema, providing additional validation when using tools alongside structured outputs.\n\n```python structured_output_strict_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.tools import Function\nfrom pydantic import BaseModel\n\nclass WeatherInfo(BaseModel):\n    \"\"\"Structured output schema for weather information.\"\"\"\n\nlocation: str\n    temperature: float\n    unit: str\n    condition: str\n\ndef get_weather(location: str, unit: str = \"celsius\") -> str:\n    temp = 72 if unit == \"fahrenheit\" else 22\n    return f\"Weather in {location}: {temp}°{unit}, Sunny\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-structured-outputs-and-strict-tools",
+  "links": []
+}

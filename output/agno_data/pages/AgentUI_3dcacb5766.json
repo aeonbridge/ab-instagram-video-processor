@@ -1,0 +1,74 @@
+{
+  "title": "AgentUI",
+  "content": "Source: https://docs.agno.com/basics/agent-ui/overview\n\nAn Open Source AgentUI for your AgentOS\n\n<Frame>\n  <img height=\"200\" src=\"https://mintcdn.com/agno-v2/QfHdyhk-tu-JEw8s/images/agent-ui.png?fit=max&auto=format&n=QfHdyhk-tu-JEw8s&q=85&s=72cd1f0888dea4f1ec60a67bff5664c4\" style={{ borderRadius: '8px' }} data-og-width=\"5364\" data-og-height=\"2808\" data-path=\"images/agent-ui.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/QfHdyhk-tu-JEw8s/images/agent-ui.png?w=280&fit=max&auto=format&n=QfHdyhk-tu-JEw8s&q=85&s=8a962c7d75c6fd40d37b696f258b69fc 280w, https://mintcdn.com/agno-v2/QfHdyhk-tu-JEw8s/images/agent-ui.png?w=560&fit=max&auto=format&n=QfHdyhk-tu-JEw8s&q=85&s=729e6c42c46d47f9c56c66451576c53a 560w, https://mintcdn.com/agno-v2/QfHdyhk-tu-JEw8s/images/agent-ui.png?w=840&fit=max&auto=format&n=QfHdyhk-tu-JEw8s&q=85&s=cabb3ed5cb4c1934bd3a5a1cba70a2d1 840w, https://mintcdn.com/agno-v2/QfHdyhk-tu-JEw8s/images/agent-ui.png?w=1100&fit=max&auto=format&n=QfHdyhk-tu-JEw8s&q=85&s=d880656a6c120ed2ef06879bb522b840 1100w, https://mintcdn.com/agno-v2/QfHdyhk-tu-JEw8s/images/agent-ui.png?w=1650&fit=max&auto=format&n=QfHdyhk-tu-JEw8s&q=85&s=55b22efc72db2bbb9e26079d46aea5b5 1650w, https://mintcdn.com/agno-v2/QfHdyhk-tu-JEw8s/images/agent-ui.png?w=2500&fit=max&auto=format&n=QfHdyhk-tu-JEw8s&q=85&s=5331541ccf7abdb289f0e213f65c9649 2500w\" />\n</Frame>\n\nAgno provides a beautiful UI for interacting with your agents, completely open source, free to use and build on top of. It's a simple interface that allows you to chat with your agents, view their memory, knowledge, and more.\n\n<Note>\n  The AgentOS only uses data in your database. No data is sent to Agno.\n</Note>\n\nBuilt with Next.js and TypeScript, the Open Source Agent UI was developed in response to community requests for a self-hosted alternative following the success of [AgentOS](https://github.com/agent-os/introduction).\n\n## Get Started with Agent UI\n\nTo clone the Agent UI, run the following command in your terminal:\n\nEnter `y` to create a new project, install dependencies, then run the agent-ui using:\n\nOpen [http://localhost:3000](http://localhost:3000) to view the Agent UI, but remember to connect to your local agents.\n\n<Frame>\n  <img height=\"200\" src=\"https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=02ec5ad7d40581f565548d64fd228fcc\" style={{ borderRadius: '8px' }} data-og-width=\"3452\" data-og-height=\"1910\" data-path=\"images/agent-ui-homepage.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=280&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=09872fba3043aac4475f9d695e485f4d 280w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=560&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=71e8e367452dc8a47c043a3f23237711 560w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=840&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=bb3309860689377a150fae0c90b4837a 840w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=1100&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=68709e16d4ee79f7a0b91df6aab06612 1100w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=1650&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=7c8a19d650dea910381443f87f1f2e24 1650w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=2500&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=14b29401ceb62992fed4584ecef540af 2500w\" />\n</Frame>\n\n<Accordion title=\"Clone the repository manually\" icon=\"github\">\n  You can also clone the repository manually\n\nAnd run the agent-ui using\n\n## Connect your AgentOS\n\nThe Agent UI needs to connect to a AgentOS server, which you can run locally or on any cloud provider.\n\nLet's start with a local AgentOS server. Create a file `agentos.py`\n\nIn another terminal, run the AgentOS server:\n\n<Steps>\n  <Step title=\"Setup your virtual environment\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Install dependencies\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Export your OpenAI key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run the AgentOS\">\n    \n  </Step>\n</Steps>\n\n<Tip>Make sure the module path in `agent_os.serve()` matches your filename (e.g., `\"agentos:app\"` for `agentos.py`).</Tip>\n\n* Open [http://localhost:3000](http://localhost:3000) to view the Agent UI\n* Enter the `localhost:7777` endpoint on the left sidebar and start chatting with your agents and teams!\n\n<video autoPlay muted controls className=\"w-full aspect-video\" src=\"https://mintcdn.com/agno-v2/ZS8LtGag_F9zcKU4/videos/agent-ui-demo.mp4?fit=max&auto=format&n=ZS8LtGag_F9zcKU4&q=85&s=e4d7d59efdd156a677a403baeaa1d1a1\" data-path=\"videos/agent-ui-demo.mp4\" />\n\n<CardGroup cols={2}>\n  <Card title=\"AgentOS Introduction\" icon=\"server\" href=\"/agent-os/introduction\">\n    Learn about AgentOS\n  </Card>\n\n<Card title=\"Building Agents\" icon=\"robot\" href=\"/basics/agents/building-agents\">\n    Build your own agents\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "Enter `y` to create a new project, install dependencies, then run the agent-ui using:",
+      "language": "unknown"
+    },
+    {
+      "code": "Open [http://localhost:3000](http://localhost:3000) to view the Agent UI, but remember to connect to your local agents.\n\n<Frame>\n  <img height=\"200\" src=\"https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=02ec5ad7d40581f565548d64fd228fcc\" style={{ borderRadius: '8px' }} data-og-width=\"3452\" data-og-height=\"1910\" data-path=\"images/agent-ui-homepage.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=280&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=09872fba3043aac4475f9d695e485f4d 280w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=560&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=71e8e367452dc8a47c043a3f23237711 560w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=840&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=bb3309860689377a150fae0c90b4837a 840w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=1100&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=68709e16d4ee79f7a0b91df6aab06612 1100w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=1650&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=7c8a19d650dea910381443f87f1f2e24 1650w, https://mintcdn.com/agno-v2/JcEPRFr_oNRDYYcC/images/agent-ui-homepage.png?w=2500&fit=max&auto=format&n=JcEPRFr_oNRDYYcC&q=85&s=14b29401ceb62992fed4584ecef540af 2500w\" />\n</Frame>\n\n<br />\n\n<Accordion title=\"Clone the repository manually\" icon=\"github\">\n  You can also clone the repository manually",
+      "language": "unknown"
+    },
+    {
+      "code": "And run the agent-ui using",
+      "language": "unknown"
+    },
+    {
+      "code": "</Accordion>\n\n## Connect your AgentOS\n\nThe Agent UI needs to connect to a AgentOS server, which you can run locally or on any cloud provider.\n\nLet's start with a local AgentOS server. Create a file `agentos.py`",
+      "language": "unknown"
+    },
+    {
+      "code": "In another terminal, run the AgentOS server:\n\n<Steps>\n  <Step title=\"Setup your virtual environment\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Install dependencies\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Export your OpenAI key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run the AgentOS\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Get Started with Agent UI",
+      "id": "get-started-with-agent-ui"
+    },
+    {
+      "level": "h2",
+      "text": "Connect your AgentOS",
+      "id": "connect-your-agentos"
+    },
+    {
+      "level": "h2",
+      "text": "View the AgentUI",
+      "id": "view-the-agentui"
+    },
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#agentui",
+  "links": []
+}

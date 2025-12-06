@@ -1,0 +1,14 @@
+{
+  "title": "Speech-to-Text",
+  "content": "Source: https://docs.agno.com/basics/multimodal/audio/speech-to-text\n\nLearn how to transcribe audio with Agno agents.\n\nAgno agents can transcribe audio files using different tools and models. You can use native capabilities of OpenAI or fully multimodal Gemini models.\n\n<Tip>\n  Examples of ways to do Audio to Text (Transcribe) are:\n\n* [Using Gemini model](/basics/multimodal/audio/usage/audio-to-text)\n  * [Using OpenAI Model](/basics/multimodal/agent/usage/audio-input-output)\n  * [Using `OpenAI Tool`](/integrations/toolkits/models/openai#1-transcribing-audio)\n  * [Using `Groq Tool`](/integrations/toolkits/models/groq#1-transcribing-audio)\n</Tip>\n\n## Using OpenAI Whisper (Cloud)\n\nThe following agent uses OpenAI Whisper API for audio transcription.\n\n```python cookbook/tools/models/openai_tools.py theme={null}\nimport base64\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.run.agent import RunOutput\nfrom agno.tools.openai import OpenAITools\nfrom agno.utils.media import download_file, save_base64_data",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using OpenAI Whisper (Cloud)",
+      "id": "using-openai-whisper-(cloud)"
+    }
+  ],
+  "url": "llms-txt#speech-to-text",
+  "links": []
+}

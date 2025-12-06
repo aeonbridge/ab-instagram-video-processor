@@ -1,0 +1,29 @@
+{
+  "title": "ClickUp",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/clickup\n\nClickUpTools enables agents to interact with ClickUp workspaces for project management and task organization.\n\nThe following agent can manage ClickUp tasks and projects:\n\n| Parameter         | Type            | Default | Description                                                 |\n| ----------------- | --------------- | ------- | ----------------------------------------------------------- |\n| `api_key`         | `Optional[str]` | `None`  | ClickUp API key. Uses CLICKUP\\_API\\_KEY if not set.         |\n| `master_space_id` | `Optional[str]` | `None`  | Default space ID to use. Uses MASTER\\_SPACE\\_ID if not set. |\n\n| Function      | Description                                                  |\n| ------------- | ------------------------------------------------------------ |\n| `list_tasks`  | List tasks with optional filtering by status, assignee, etc. |\n| `create_task` | Create a new task in a specified list.                       |\n| `get_task`    | Get detailed information about a specific task.              |\n| `update_task` | Update an existing task's properties.                        |\n| `delete_task` | Delete a task from ClickUp.                                  |\n| `list_spaces` | List all spaces accessible to the user.                      |\n| `list_lists`  | List all lists within a space or folder.                     |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/clickup.py)\n* [ClickUp API Documentation](https://clickup.com/api/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#clickup",
+  "links": []
+}

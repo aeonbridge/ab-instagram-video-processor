@@ -1,0 +1,47 @@
+{
+  "title": "Upgrade Your Audio Setup for Under $50!",
+  "description": "Want to improve your audio quality on a budget? In this video, I reveal my simple yet effective mic setup using the Deity D4 Mini. Check out the links in the description for more details! #AudioSetup #BudgetFriendly #DeityD4Mini",
+  "tags": [
+    "audio setup",
+    "Deity D4 Mini",
+    "budget mic",
+    "improve audio quality",
+    "video production"
+  ],
+  "category": "Howto & Style",
+  "thumbnail_ideas": [
+    {
+      "concept": "Close-up of Deity D4 Mini mic on table",
+      "text_overlay": "Upgrade Your Audio Setup!",
+      "color_scheme": "Blue and white"
+    },
+    {
+      "concept": "Comparison of audio quality with and without mic",
+      "text_overlay": "Hear the Difference!",
+      "color_scheme": "Black and yellow"
+    },
+    {
+      "concept": "Before and after audio setup transformation",
+      "text_overlay": "Transform Your Sound!",
+      "color_scheme": "Green and black"
+    }
+  ],
+  "target_audience": "Aspiring content creators looking to enhance their video production quality on a budget.",
+  "video_hook": "Struggling with poor audio quality in your videos? Watch how I upgraded my setup for under $50!",
+  "call_to_action": "Upgrade Your Audio Now! Click the links in the description to get started.",
+  "_generated_at": "2025-12-05T22:25:18.419451",
+  "_model": "gpt-3.5-turbo",
+  "_source_file": "processed_videos/RusBe_8arLQ/RusBe_8arLQ_0000_40s_score_095_original_en.md",
+  "_platform": "youtube",
+  "_usage": {
+    "input_tokens": 672,
+    "output_tokens": 316,
+    "total_tokens": 988,
+    "cost_usd": 0.00081,
+    "cost_breakdown": {
+      "input_cost_usd": 0.000336,
+      "output_cost_usd": 0.000474
+    },
+    "duration_seconds": 3.35
+  }
+}

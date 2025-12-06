@@ -1,0 +1,14 @@
+{
+  "title": "Set Temperature",
+  "content": "Source: https://docs.agno.com/integrations/models/local/ollama/usage/set-temperature\n\n```python cookbook/models/ollama/set_temperature.py theme={null}\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.ollama import Ollama\n\nagent = Agent(model=Ollama(id=\"llama3.2\", options={\"temperature\": 0.5}), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#set-temperature",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Batch processing for large datasets",
+  "content": "def load_content_in_batches(knowledge, content_dir, batch_size=10):\n    files = [f for f in os.listdir(content_dir) if f.endswith('.pdf')]\n    \n    for i in range(0, len(files), batch_size):\n        batch_files = files[i:i+batch_size]\n        print(f\"Processing batch {i//batch_size + 1}\")\n        \n        for file in batch_files:\n            knowledge.add_content(\n                path=os.path.join(content_dir, file),\n                skip_if_exists=True\n            )\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Issue: Running Out of Memory\n\n**What's happening:** Loading too many large files at once, or chunk sizes are too large.\n\n**Quick fixes:**\n\n1. Process content in smaller batches (see code above)\n2. Reduce chunk size in your chunking strategy\n3. Use `include` and `exclude` patterns to limit what gets processed\n4. Clear old/outdated content regularly with `knowledge.remove_content_by_id()`",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Issue: Running Out of Memory",
+      "id": "issue:-running-out-of-memory"
+    }
+  ],
+  "url": "llms-txt#batch-processing-for-large-datasets",
+  "links": []
+}

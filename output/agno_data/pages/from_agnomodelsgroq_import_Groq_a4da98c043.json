@@ -1,0 +1,31 @@
+{
+  "title": "from agno.models.groq import Groq",
+  "content": "from agno.tools.openai import OpenAITools\nfrom agno.utils.media import download_image\nfrom agno.vectordb.pgvector import PgVector\n\nknowledge = Knowledge(\n    vector_db=PgVector(\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\",\n        table_name=\"embed_vision_documents\",\n        embedder=CohereEmbedder(\n            id=\"embed-v4.0\",\n        ),\n    ),\n)\n\nasyncio.run(\n    knowledge.add_content_async(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n    )\n)\n\nagent = Agent(\n    name=\"EmbedVisionRAGAgent\",\n    model=Groq(id=\"meta-llama/llama-4-scout-17b-16e-instruct\"),\n    tools=[OpenAITools()],\n    knowledge=knowledge,\n    instructions=[\n        \"You are a specialized recipe assistant.\",\n        \"When asked for a recipe:\",\n        \"1. Search the knowledge base to retrieve the relevant recipe details.\",\n        \"2. Analyze the retrieved recipe steps carefully.\",\n        \"3. Use the `generate_image` tool to create a visual, step-by-step image manual for the recipe.\",\n        \"4. Present the recipe text clearly and mention that you have generated an accompanying image manual. Add instructions while generating the image.\",\n    ],\n    markdown=True,\n)\n\nagent.print_response(\n    \"What is the recipe for a Thai curry?\",\n)\nresponse = agent.get_last_run_output()\n\nif response.images:\n    download_image(response.images[0].url, Path(\"tmp/recipe_image.png\"))\n\nbash  theme={null}\n    export GROQ_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai groq cohere\n    bash Mac theme={null}\n      python cookbook/examples/agents/recipe_rag_image.py\n      bash Windows theme={null}\n      python cookbook/examples/agents/recipe_rag_image.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#from-agno.models.groq-import-groq",
+  "links": []
+}

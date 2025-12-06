@@ -1,0 +1,14 @@
+{
+  "title": "DynamoDB for Team",
+  "content": "Source: https://docs.agno.com/integrations/database/dynamodb/usage/dynamodb-for-team\n\nAgno supports using DynamoDB as a storage backend for Teams using the `DynamoDb` class.\n\nYou need to provide `aws_access_key_id` and `aws_secret_access_key` parameters to the `DynamoDb` class.\n\n```python dynamo_for_team.py theme={null}\n\"\"\"\nRun: `pip install openai ddgs newspaper4k lxml_html_clean agno` to install the dependencies\n\"\"\"\n\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.db.dynamo import DynamoDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom pydantic import BaseModel",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#dynamodb-for-team",
+  "links": []
+}

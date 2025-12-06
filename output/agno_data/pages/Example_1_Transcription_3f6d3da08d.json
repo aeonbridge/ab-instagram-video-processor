@@ -1,0 +1,19 @@
+{
+  "title": "Example 1: Transcription",
+  "content": "url = \"https://agno-public.s3.amazonaws.com/demo_data/sample_conversation.wav\"\n\nlocal_audio_path = Path(\"tmp/sample_conversation.wav\")\nprint(f\"Downloading file to local path: {local_audio_path}\")\ndownload_file(url, local_audio_path)\n\ntranscription_agent = Agent(\n    tools=[OpenAITools(transcription_model=\"gpt-4o-transcribe\")],\n    markdown=True,\n)\ntranscription_agent.print_response(\n    f\"Transcribe the audio file for this file: {local_audio_path}\"\n)\npython cookbook/agents/multimodal/audio_to_text.py theme={null}\nimport requests\nfrom agno.agent import Agent\nfrom agno.media import Audio\nfrom agno.models.google import Gemini\n\nagent = Agent(\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    markdown=True,\n)\n\nurl = \"https://agno-public.s3.us-east-1.amazonaws.com/demo_data/QA-01.mp3\"\n\nresponse = requests.get(url)\naudio_content = response.content",
+  "code_samples": [
+    {
+      "code": "**Best for**: High accuracy, cloud processing\n\n## Using Multimodal Models\n\nMultimodal models like Gemini can transcribe audio directly without additional tools.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using Multimodal Models",
+      "id": "using-multimodal-models"
+    }
+  ],
+  "url": "llms-txt#example-1:-transcription",
+  "links": []
+}

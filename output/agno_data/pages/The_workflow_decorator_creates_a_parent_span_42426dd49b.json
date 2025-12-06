@@ -1,0 +1,19 @@
+{
+  "title": "The workflow decorator creates a parent span",
+  "content": "result = analyze_data(\"Analyze the benefits of observability in AI systems\")\nprint(result)\npython  theme={null}\nimport asyncio\nfrom traceloop.sdk import Traceloop\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\nTraceloop.init(app_name=\"agno_async\")\n\ndef get_weather(city: str) -> str:\n    \"\"\"Get the weather for a city.\"\"\"\n    return f\"The weather in {city} is sunny, 72°F\"\n\nagent = Agent(\n    name=\"WeatherAgent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[get_weather],\n    debug_mode=True,\n)\n\nasync def main():\n    # Async execution is automatically traced\n    response = await agent.arun(\"What's the weather in San Francisco?\")\n    print(response.content)\n\nasyncio.run(main())\n```\n\n* **Initialization**: Call `Traceloop.init()` before creating any agents to ensure proper instrumentation.\n* **Development Mode**: Use `disable_batch=True` during development for immediate trace visibility.\n* **Async Support**: Both sync (`run()`) and async (`arun()`) methods are fully instrumented.\n* **Privacy Control**: Set `TRACELOOP_TRACE_CONTENT=false` to disable logging of prompts and completions.",
+  "code_samples": [
+    {
+      "code": "* ### Example: Async Agent with Tools\n\nAsync agent execution is fully supported with automatic tool call tracing:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Notes",
+      "id": "notes"
+    }
+  ],
+  "url": "llms-txt#the-workflow-decorator-creates-a-parent-span",
+  "links": []
+}

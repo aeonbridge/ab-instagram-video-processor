@@ -1,0 +1,49 @@
+{
+  "title": "This middleware will automatically inject JWT values into request.state and is used in the relevant endpoints.",
+  "content": "app.add_middleware(\n    JWTMiddleware,\n    secret_key=JWT_SECRET, # or use JWT_SECRET_KEY environment variable\n    algorithm=\"HS256\",\n    user_id_claim=\"sub\",  # Extract user_id from 'sub' claim\n    session_id_claim=\"session_id\",  # Extract session_id from 'session_id' claim\n    dependencies_claims=[\"name\", \"email\", \"roles\"],\n    # In this example, we want this middleware to demonstrate parameter injection, not token validation.\n    # In production scenarios, you will probably also want token validation. Be careful setting this to False.\n    validate=False,\n)\n\nif __name__ == \"__main__\":\n    \"\"\"\n    Run your AgentOS with JWT parameter injection.\n    \n    Test by calling /agents/user-agent/runs with a message: \"What do you know about me?\"\n    \"\"\"\n    # Test token with user_id and session_id:\n    payload = {\n        \"sub\": \"user_123\",  # This will be injected as user_id parameter\n        \"session_id\": \"demo_session_456\",  # This will be injected as session_id parameter\n        \"exp\": datetime.now(UTC) + timedelta(hours=24),\n        \"iat\": datetime.now(UTC),\n        # Dependency claims\n        \"name\": \"John Doe\",\n        \"email\": \"john.doe@example.com\",\n        \"roles\": [\"admin\", \"user\"],\n    }\n    token = jwt.encode(payload, JWT_SECRET, algorithm=\"HS256\")\n    print(\"Test token:\")\n    print(token)\n    agent_os.serve(app=\"jwt_middleware:app\", port=7777, reload=True)\nbash  theme={null}\n    export OPENAI_API_KEY=your_openai_api_key\n    bash  theme={null}\n    pip install -U agno openai pyjwt \"fastapi[standard]\" uvicorn sqlalchemy pgvector psycopg\n    bash  theme={null}\n    # Using Docker\n    docker run -d \\\n      --name agno-postgres \\\n      -e POSTGRES_DB=ai \\\n      -e POSTGRES_USER=ai \\\n      -e POSTGRES_PASSWORD=ai \\\n      -p 5532:5432 \\\n      pgvector/pgvector:pg17\n    bash  theme={null}\n    python jwt_middleware.py\n    bash  theme={null}\n    # Use the token printed in the console\n    export TOKEN=\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...\"\n\ncurl --location 'http://localhost:7777/agents/user-agent/runs' \\\n        --header 'Content-Type: application/x-www-form-urlencoded' \\\n        --header 'Authorization: Bearer $TOKEN' \\\n        --data-urlencode 'message=What do you know about me?'\n    bash  theme={null}\n    curl --location 'http://localhost:7777/agents/user-agent/runs' \\\n        --header 'Content-Type: application/x-www-form-urlencoded' \\\n        --data-urlencode 'message=What do you know about me?'\n    ```\n\n**Check the AgentOS API docs:**\n    Visit [http://localhost:7777/docs](http://localhost:7777/docs) to see all available endpoints.\n  </Step>\n</Steps>\n\n1. **JWT Generation**: The example creates a test JWT token with user claims\n2. **Middleware Setup**: JWT middleware extracts claims from the `Authorization: Bearer <token>` header\n3. **Parameter Injection**: The middleware automatically injects:\n   * `user_id` from the `sub` claim\n   * `session_id` from the `session_id` claim\n   * `dependencies` dict with name, email, and roles\n4. **Agent Tools**: The agent can access user details through the injected dependencies\n\n* [JWT Middleware with Cookies](/agent-os/usage/middleware/jwt-cookies)\n* [Custom FastAPI with JWT](/agent-os/usage/middleware/custom-fastapi-jwt)\n* [JWT Middleware Documentation](/agent-os/middleware/jwt)",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Setup PostgreSQL Database\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">",
+      "language": "unknown"
+    },
+    {
+      "code": "The server will start and print a test JWT token to the console.\n  </Step>\n\n  <Step title=\"Test JWT Authentication\">\n    **Test with the generated token:**",
+      "language": "unknown"
+    },
+    {
+      "code": "**Test without token (should still work validate=False):**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#this-middleware-will-automatically-inject-jwt-values-into-request.state-and-is-used-in-the-relevant-endpoints.",
+  "links": []
+}

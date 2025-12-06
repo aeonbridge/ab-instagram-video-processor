@@ -1,0 +1,14 @@
+{
+  "title": "Custom Middleware",
+  "content": "Source: https://docs.agno.com/agent-os/usage/middleware/custom-middleware\n\nAgentOS with custom middleware for rate limiting, logging, and monitoring\n\nThis example demonstrates how to create and add custom middleware to your AgentOS application. We implement two common middleware types: rate limiting and request/response logging.\n\n```python custom_middleware.py theme={null}\nimport time\nfrom collections import defaultdict, deque\nfrom typing import Dict\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom fastapi import Request, Response\nfrom fastapi.responses import JSONResponse\nfrom starlette.middleware.base import BaseHTTPMiddleware",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#custom-middleware",
+  "links": []
+}

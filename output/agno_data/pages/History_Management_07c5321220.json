@@ -1,0 +1,42 @@
+{
+  "title": "History Management",
+  "content": "Source: https://docs.agno.com/basics/sessions/history-management\n\nControl how conversation history is accessed and used\n\nAgents and Teams with a database configured automatically track message and run history. You have multiple ways to access and use this history to give your agents and teams \"memory\" of past conversations.\n\n### Automatic History (Most Common)\n\nEnable `add_history_to_context=True` to automatically include recent messages in every run:\n\n**When to use:** Chat-style products, quick prototypes, any scenario where responses need context from previous turns.\n\n### On-Demand History Access\n\nEnable `read_chat_history=True` to let the model decide when to look up history:\n\n**When to use:** Analytics, auditing, or when you want the model to selectively access history rather than always including it.\n\n### Programmatic Access\n\nRetrieve history directly in your code:\n\n```python  theme={null}",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n**When to use:** Chat-style products, quick prototypes, any scenario where responses need context from previous turns.\n\n### On-Demand History Access\n\nEnable `read_chat_history=True` to let the model decide when to look up history:",
+      "language": "unknown"
+    },
+    {
+      "code": "**When to use:** Analytics, auditing, or when you want the model to selectively access history rather than always including it.\n\n### Programmatic Access\n\nRetrieve history directly in your code:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Common Patterns",
+      "id": "common-patterns"
+    },
+    {
+      "level": "h3",
+      "text": "Automatic History (Most Common)",
+      "id": "automatic-history-(most-common)"
+    },
+    {
+      "level": "h3",
+      "text": "On-Demand History Access",
+      "id": "on-demand-history-access"
+    },
+    {
+      "level": "h3",
+      "text": "Programmatic Access",
+      "id": "programmatic-access"
+    }
+  ],
+  "url": "llms-txt#history-management",
+  "links": []
+}

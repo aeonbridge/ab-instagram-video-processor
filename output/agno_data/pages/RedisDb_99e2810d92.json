@@ -1,0 +1,8 @@
+{
+  "title": "RedisDb",
+  "content": "Source: https://docs.agno.com/reference/storage/redis\n\n`RedisDb` is a class that implements the Db interface using Redis as the backend storage system. It provides high-performance, distributed storage for agent sessions with support for JSON data types and schema versioning.\n\n<Snippet file=\"db-redis-params.mdx\" />\n\n<Snippet file=\"db-new-bulk-methods.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#redisdb",
+  "links": []
+}

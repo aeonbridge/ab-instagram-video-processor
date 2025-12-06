@@ -1,0 +1,8 @@
+{
+  "title": "Create an Agent with the DALL-E tool",
+  "content": "agent = Agent(tools=[DalleTools()], name=\"DALL-E Image Generator\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-the-dall-e-tool",
+  "links": []
+}

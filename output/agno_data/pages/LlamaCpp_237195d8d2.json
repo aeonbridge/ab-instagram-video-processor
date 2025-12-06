@@ -1,0 +1,39 @@
+{
+  "title": "LlamaCpp",
+  "content": "Source: https://docs.agno.com/integrations/models/local/llama-cpp/overview\n\nLearn how to use LlamaCpp with Agno.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.0.7\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.0.7\">v2.0.7</Tooltip>\n</Badge>\n\nRun Large Language Models locally with LLaMA CPP\n\n[LlamaCpp](https://github.com/ggerganov/llama.cpp) is a powerful tool for running large language models locally with efficient inference. LlamaCpp supports multiple open-source models and provides an OpenAI-compatible API server.\n\nLlamaCpp supports a wide variety of models in GGML format. You can find models on HuggingFace, including the default `ggml-org/gpt-oss-20b-GGUF` used in the examples below.\n\nWe recommend experimenting to find the best model for your use case. Here are some popular model recommendations:\n\n### Google Gemma Models\n\n* `google/gemma-2b-it-GGUF` - Lightweight 2B parameter model, great for resource-constrained environments\n* `google/gemma-7b-it-GGUF` - Balanced 7B model with strong performance for general tasks\n* `ggml-org/gemma-3-1b-it-GGUF` - Latest Gemma 3 series, efficient for everyday use\n\n### Meta Llama Models\n\n* `Meta-Llama-3-8B-Instruct` - Popular 8B parameter model with excellent instruction following\n* `Meta-Llama-3.1-8B-Instruct` - Enhanced version with improved capabilities and 128K context\n* `Meta-Llama-3.2-3B-Instruct` - Compact 3B model for faster inference\n\n* `ggml-org/gpt-oss-20b-GGUF` - Default model for general use cases\n* Models with different quantizations (Q4\\_K\\_M, Q8\\_0, etc.) for different speed/quality tradeoffs\n* Choose models based on your hardware constraints and performance requirements\n\nFirst, install LlamaCpp following the [official installation guide](https://github.com/ggerganov/llama.cpp):\n\nOr using package managers:\n\n```bash brew install theme={null}",
+  "code_samples": [
+    {
+      "code": "Or using package managers:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Google Gemma Models",
+      "id": "google-gemma-models"
+    },
+    {
+      "level": "h3",
+      "text": "Meta Llama Models",
+      "id": "meta-llama-models"
+    },
+    {
+      "level": "h3",
+      "text": "Default Options",
+      "id": "default-options"
+    },
+    {
+      "level": "h2",
+      "text": "Set up LlamaCpp",
+      "id": "set-up-llamacpp"
+    },
+    {
+      "level": "h3",
+      "text": "Install LlamaCpp",
+      "id": "install-llamacpp"
+    }
+  ],
+  "url": "llms-txt#llamacpp",
+  "links": []
+}

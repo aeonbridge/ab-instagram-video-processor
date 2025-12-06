@@ -1,0 +1,39 @@
+{
+  "title": "Introduction to Knowledge",
+  "content": "Source: https://docs.agno.com/basics/knowledge/overview\n\nUnderstand why Knowledge is essential for building intelligent, context-aware AI agents that provide accurate, relevant responses.\n\nImagine an AI agent being asked about a company's HR policies and, instead of generic advice, returning precise answers based on the actual employee handbook. Or consider a customer support agent that knows specific product details, pricing, and troubleshooting guides. This is the power of Knowledge in Agno.\n\n## The Problem with Knowledge-Free Agents\n\nWithout access to specific information, AI agents can only rely on their general training data. This leads to:\n\n* **Generic responses** that don't match your specific context\n* **Outdated information** from training data that's months or years old\n* **Hallucinations** when the agent guesses at facts it doesn't actually know\n* **Limited usefulness** for domain-specific tasks or company-specific workflows\n\n### Intelligent Text-to-SQL Agents\n\nBuild agents that know your exact database schema, column names, and common query patterns. Instead of guessing at table structures, they retrieve the specific schema information needed for each query, ensuring accurate SQL generation.\n\n### Customer Support Excellence\n\nCreate a support agent with access to your complete product documentation, FAQ database, and troubleshooting guides. Customers get accurate answers instantly, without waiting for human agents to look up information.\n\n### Internal Knowledge Assistant\n\nDeploy an agent that knows your company's processes, policies, and institutional knowledge. New employees can get onboarding help, and existing team members can quickly find answers to complex procedural questions.\n\n## Ready to Get Started?\n\nTransform agents from generic assistants to domain experts:\n\n<CardGroup cols={3}>\n  <Card title=\"Learn How It Works\" icon=\"book-open\" href=\"/basics/knowledge/how-it-works\">\n    Understand the simple RAG pipeline behind intelligent knowledge retrieval\n  </Card>\n\n<Card title=\"Build Your First Agent\" icon=\"rocket\" href=\"/basics/knowledge/getting-started\">\n    Follow our quick tutorial to create a knowledge-powered agent in minutes\n  </Card>\n\n<Card title=\"Knowledge with Agents\" icon=\"robot\" href=\"/basics/knowledge/agents/overview\">\n    Learn how to use knowledge with agents.\n  </Card>\n\n<Card title=\"Knowledge with Teams\" icon=\"users\" href=\"/basics/knowledge/teams/overview\">\n    Learn how to use knowledge with teams.\n  </Card>\n\n<Card title=\"Further Knowledge Concepts\" icon=\"book-open\" href=\"/basics/knowledge/terminology\">\n    Learn how to use knowledge with teams.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "The Problem with Knowledge-Free Agents",
+      "id": "the-problem-with-knowledge-free-agents"
+    },
+    {
+      "level": "h2",
+      "text": "Real-World Impact",
+      "id": "real-world-impact"
+    },
+    {
+      "level": "h3",
+      "text": "Intelligent Text-to-SQL Agents",
+      "id": "intelligent-text-to-sql-agents"
+    },
+    {
+      "level": "h3",
+      "text": "Customer Support Excellence",
+      "id": "customer-support-excellence"
+    },
+    {
+      "level": "h3",
+      "text": "Internal Knowledge Assistant",
+      "id": "internal-knowledge-assistant"
+    },
+    {
+      "level": "h2",
+      "text": "Ready to Get Started?",
+      "id": "ready-to-get-started?"
+    }
+  ],
+  "url": "llms-txt#introduction-to-knowledge",
+  "links": []
+}

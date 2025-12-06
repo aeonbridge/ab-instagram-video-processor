@@ -1,0 +1,8 @@
+{
+  "title": "Create team with knowledge",
+  "content": "team_with_knowledge = Team(\n    name=\"Team with Knowledge\",\n    instructions=[\"Always search the knowledge base for the most relevant information\"],\n    description=\"A team that provides information about candidates\",\n    members=[web_agent],\n    model=OpenAIChat(id=\"o3-mini\"),\n    knowledge=knowledge_base,\n    show_members_responses=True,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-team-with-knowledge",
+  "links": []
+}

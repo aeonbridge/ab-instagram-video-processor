@@ -1,0 +1,35 @@
+{
+  "title": "Add content to the knowledge",
+  "content": "knowledge.add_content(\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n)\n\nagent = Agent(model=V0(id=\"v0-1.0-md\"), knowledge=knowledge)\nagent.print_response(\"How to make Thai curry?\", markdown=True)\nbash  theme={null}\n    export V0_API_KEY=xxx\n    bash  theme={null}\n    pip install -U ddgs sqlalchemy pgvector pypdf openai agno\n    bash  theme={null}\n    docker run -d \\\n      -e POSTGRES_DB=ai \\\n      -e POSTGRES_USER=ai \\\n      -e POSTGRES_PASSWORD=ai \\\n      -e PGDATA=/var/lib/postgresql/data/pgdata \\\n      -v pgvolume:/var/lib/postgresql/data \\\n      -p 5532:5432 \\\n      --name pgvector \\\n      agnohq/pgvector:16\n    bash Mac theme={null}\n      python cookbook/models/vercel/knowledge.py\n      bash Windows theme={null}\n      python cookbook/models/vercel/knowledge.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run PgVector\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#add-content-to-the-knowledge",
+  "links": []
+}

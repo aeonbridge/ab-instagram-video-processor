@@ -1,0 +1,8 @@
+{
+  "title": "Upload the file to Anthropic",
+  "content": "uploaded_file = client.beta.files.upload(\n    file=Path(pdf_path),\n)\n\nif uploaded_file is not None:\n    agent = Agent(\n        model=Claude(\n            id=\"claude-opus-4-20250514\",\n            betas=[\"files-api-2025-04-14\"],\n        ),\n        markdown=True,\n    )\n\nagent.print_response(\n        \"Summarize the contents of the attached file.\",\n        files=[File(external=uploaded_file)],\n    )\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#upload-the-file-to-anthropic",
+  "links": []
+}

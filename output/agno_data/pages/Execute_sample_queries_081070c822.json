@@ -1,0 +1,8 @@
+{
+  "title": "Execute sample queries.",
+  "content": "agent1.print_response(\"How many people live in Canada?\")\nagent1.print_response(\"What is their national anthem called?\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#execute-sample-queries.",
+  "links": []
+}

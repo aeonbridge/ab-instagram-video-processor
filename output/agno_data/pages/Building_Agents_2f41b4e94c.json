@@ -1,0 +1,19 @@
+{
+  "title": "Building Agents",
+  "content": "Source: https://docs.agno.com/basics/agents/building-agents\n\nLearn how to build Agents with Agno.\n\nTo build effective agents, start simple -- just a model, tools, and instructions. Once that works, layer in more functionality as needed.\n\nThe key is to start with well-defined tasks like report generation, data extraction, classification, summarization, knowledge search, and document processing. These early wins help you identify what works, validate user needs, and set the stage for advanced systems.\n\nFor example, here's the simplest possible report generation agent (that uses the Hackernews toolkit):\n\nWhen developing your agent, run it using the `Agent.print_response()` method. This will print the agent's response in your terminal, in a friendly format.\n\nThis is only for development purposes and not recommended for production use. In production, use the `Agent.run()` or `Agent.arun()` methods. For example:\n\n```python  theme={null}\nfrom typing import Iterator\nfrom agno.agent import Agent, RunOutput, RunOutputEvent, RunEvent\nfrom agno.models.anthropic import Claude\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.utils.pprint import pprint_run_response\n\nagent = Agent(\n    model=Claude(id=\"claude-sonnet-4-5\"),\n    tools=[HackerNewsTools()],\n    instructions=\"Write a report on the topic. Output only the report.\",\n    markdown=True,\n)",
+  "code_samples": [
+    {
+      "code": "## Run your Agent\n\nWhen developing your agent, run it using the `Agent.print_response()` method. This will print the agent's response in your terminal, in a friendly format.\n\nThis is only for development purposes and not recommended for production use. In production, use the `Agent.run()` or `Agent.arun()` methods. For example:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Run your Agent",
+      "id": "run-your-agent"
+    }
+  ],
+  "url": "llms-txt#building-agents",
+  "links": []
+}

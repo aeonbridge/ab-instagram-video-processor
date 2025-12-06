@@ -1,0 +1,8 @@
+{
+  "title": "Set up knowledge base",
+  "content": "knowledge = Knowledge(\n    contents_db=PostgresDb(\n        db_url=\"postgresql+psycopg://ai:ai@localhost:5432/db\",\n        knowledge_table=\"knowledge_contents\",\n    ),\n    vector_db=PgVector(db_url=\"postgresql+psycopg://ai:ai@localhost:5432/ai\"),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-knowledge-base",
+  "links": []
+}

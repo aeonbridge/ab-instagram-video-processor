@@ -1,0 +1,48 @@
+{
+  "title": "Toolkit",
+  "content": "Source: https://docs.agno.com/reference/tools/toolkit\n\nReference for the Toolkit class.\n\nThe `Toolkit` class provides a way to group and manage multiple tools (functions) together. It handles tool registration, filtering, caching, and execution control.\n\n| Parameter                           | Type             | Description                                                                                        |\n| ----------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------- |\n| `name`                              | `str`            | A descriptive name for the toolkit.                                                                |\n| `tools`                             | `List[Callable]` | List of callable functions to include in the toolkit.                                              |\n| `instructions`                      | `str`            | Instructions for using the toolkit. Can be added to agent context.                                 |\n| `add_instructions`                  | `bool`           | Whether to add toolkit instructions to the agent's context.                                        |\n| `include_tools`                     | `list[str]`      | List of tool names to include from the toolkit. If specified, only these tools will be registered. |\n| `exclude_tools`                     | `list[str]`      | List of tool names to exclude from the toolkit. These tools will not be registered.                |\n| `requires_confirmation_tools`       | `list[str]`      | List of tool names that require user confirmation before execution.                                |\n| `external_execution_required_tools` | `list[str]`      | List of tool names that will be executed outside of the agent loop.                                |\n| `stop_after_tool_call_tools`        | `List[str]`      | List of tool names that should stop the agent after execution.                                     |\n| `show_result_tools`                 | `List[str]`      | List of tool names whose results should be shown to the user.                                      |\n| `cache_results`                     | `bool`           | Enable in-memory caching of function results.                                                      |\n| `cache_ttl`                         | `int`            | Time-to-live for cached results in seconds (default: 1 hour).                                      |\n| `cache_dir`                         | `str`            | Directory to store cache files. Defaults to system temp directory.                                 |\n| `auto_register`                     | `bool`           | Whether to automatically register all tools in the toolkit upon initialization.                    |\n\n### Toolkit with Instructions",
+  "code_samples": [
+    {
+      "code": "## Constructor\n\n### Parameters\n\n| Parameter                           | Type             | Description                                                                                        |\n| ----------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------- |\n| `name`                              | `str`            | A descriptive name for the toolkit.                                                                |\n| `tools`                             | `List[Callable]` | List of callable functions to include in the toolkit.                                              |\n| `instructions`                      | `str`            | Instructions for using the toolkit. Can be added to agent context.                                 |\n| `add_instructions`                  | `bool`           | Whether to add toolkit instructions to the agent's context.                                        |\n| `include_tools`                     | `list[str]`      | List of tool names to include from the toolkit. If specified, only these tools will be registered. |\n| `exclude_tools`                     | `list[str]`      | List of tool names to exclude from the toolkit. These tools will not be registered.                |\n| `requires_confirmation_tools`       | `list[str]`      | List of tool names that require user confirmation before execution.                                |\n| `external_execution_required_tools` | `list[str]`      | List of tool names that will be executed outside of the agent loop.                                |\n| `stop_after_tool_call_tools`        | `List[str]`      | List of tool names that should stop the agent after execution.                                     |\n| `show_result_tools`                 | `List[str]`      | List of tool names whose results should be shown to the user.                                      |\n| `cache_results`                     | `bool`           | Enable in-memory caching of function results.                                                      |\n| `cache_ttl`                         | `int`            | Time-to-live for cached results in seconds (default: 1 hour).                                      |\n| `cache_dir`                         | `str`            | Directory to store cache files. Defaults to system temp directory.                                 |\n| `auto_register`                     | `bool`           | Whether to automatically register all tools in the toolkit upon initialization.                    |\n\n## Usage Examples\n\n### Basic Toolkit",
+      "language": "unknown"
+    },
+    {
+      "code": "### Toolkit with Instructions",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Import",
+      "id": "import"
+    },
+    {
+      "level": "h2",
+      "text": "Constructor",
+      "id": "constructor"
+    },
+    {
+      "level": "h3",
+      "text": "Parameters",
+      "id": "parameters"
+    },
+    {
+      "level": "h2",
+      "text": "Usage Examples",
+      "id": "usage-examples"
+    },
+    {
+      "level": "h3",
+      "text": "Basic Toolkit",
+      "id": "basic-toolkit"
+    },
+    {
+      "level": "h3",
+      "text": "Toolkit with Instructions",
+      "id": "toolkit-with-instructions"
+    }
+  ],
+  "url": "llms-txt#toolkit",
+  "links": []
+}

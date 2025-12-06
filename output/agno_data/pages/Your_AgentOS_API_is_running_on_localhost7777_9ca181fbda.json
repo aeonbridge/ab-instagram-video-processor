@@ -1,0 +1,28 @@
+{
+  "title": "Your AgentOS API is running on localhost:7777",
+  "content": "curl http://localhost:7777/v1/agents\nbash  theme={null}\ncurl -X POST http://localhost:7777/v1/agents/social_media_agent/runs \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"message\": \"Analyze social media sentiment for: Tesla OR @elonmusk\",\n    \"stream\": false\n  }'\njson  theme={null}\n{\n  \"run_id\": \"run_123\",\n  \"content\": \"### Executive Dashboard\\n- **Brand Health Score**: 7.2/10...\",\n  \"metrics\": {\n    \"tokens_used\": 1250,\n    \"tools_called\": [\"x_tools\", \"exa_tools\"],\n    \"analysis_time\": \"23.4s\"\n  }\n}\n```\n\nYour social media intelligence system is now live with a production-ready API! Consider these as possible next steps to extend this system:\n\n* **Specialized Agents**: Create focused agents for crisis detection, competitive analysis, or influencer identification\n* **Alert Integration**: Connect webhooks to Slack, email, or your existing monitoring systems\n* **Visual Analytics**: Build dashboards that consume the API for executive reporting\n* **Multi-Brand Monitoring**: Scale to monitor multiple brands or competitors simultaneously\n\nYou've built a comprehensive social media intelligence system that:\n\n* Combines direct social data with broader web intelligence\n* Provides weighted sentiment analysis with strategic recommendations\n* Serves insights via production-ready AgentOS API\n* Scales from development through enterprise deployment\n\nThis demonstrates Agno's infrastructure-first approach, where your AI agents become immediately deployable services with proper monitoring, scaling, and integration capabilities built-in.",
+  "code_samples": [
+    {
+      "code": "**Test with Postman or curl:**",
+      "language": "unknown"
+    },
+    {
+      "code": "**Expected response structure:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    },
+    {
+      "level": "h2",
+      "text": "Conclusion",
+      "id": "conclusion"
+    }
+  ],
+  "url": "llms-txt#your-agentos-api-is-running-on-localhost:7777",
+  "links": []
+}

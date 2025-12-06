@@ -1,0 +1,53 @@
+{
+  "title": "Response includes source information",
+  "content": "\"Based on section 3.2 of our Return Policy document,\nitems can be returned within 30 days of purchase...\"\npython Basic Setup theme={null}\n  from agno.knowledge.knowledge import Knowledge\n  from agno.vectordb.pgvector import PgVector\n  from agno.db.postgres import PostgresDb\n\n# Create a knowledge base\n  knowledge = Knowledge(\n      contents_db=PostgresDb(db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\"),\n      vector_db=PgVector(db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\")\n  )\n\n# Add your content\n  knowledge.add_content(path=\"documents/\")\n  python With Custom Configuration theme={null}\n  from agno.knowledge.knowledge import Knowledge\n  from agno.vectordb.pgvector import PgVector\n  from agno.embedder.openai import OpenAIEmbedder\n\n# Customized knowledge base\n  knowledge = Knowledge(\n      vector_db=PgVector(\n          table_name=\"company_knowledge\",\n          embedder=OpenAIEmbedder(model=\"text-embedding-3-large\")\n      )\n  )\n  ```\n</CodeGroup>\n\n<CardGroup cols={3}>\n  <Card title=\"Content Types\" icon=\"file-lines\" href=\"/basics/knowledge/content-types\">\n    Explore different ways to add information to your knowledge base\n  </Card>\n\n<Card title=\"Search & Retrieval\" icon=\"magnifying-glass\" href=\"/basics/knowledge/search-and-retrieval/overview\">\n    Learn how agents search and find relevant information\n  </Card>\n\n<Card title=\"Vector Databases\" icon=\"database\" href=\"/basics/vectordb/overview\">\n    Choose the right storage solution for your knowledge base\n  </Card>\n\n<Card title=\"Performance Tips\" icon=\"gauge\" href=\"/basics/knowledge/performance-tips\">\n    Optimize your knowledge base for speed and accuracy\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "## Knowledge Base Architecture\n\nHere's how the different pieces work together:\n\n<Steps>\n  <Step title=\"Content Ingestion\">\n    Raw content is processed through **readers** that understand different file formats (PDF, websites, databases, etc.) and extract meaningful text.\n  </Step>\n\n  <Step title=\"Intelligent Chunking\">\n    Large documents are broken down into smaller, meaningful pieces using **chunking strategies** that preserve context while enabling precise retrieval.\n  </Step>\n\n  <Step title=\"Embedding Generation\">\n    Each chunk is converted into a vector embedding that captures its semantic meaning using **embedders** powered by language models.\n  </Step>\n\n  <Step title=\"Vector Storage\">\n    Embeddings are stored in **vector databases** optimized for similarity search, often with support for hybrid search combining semantic and keyword matching.\n  </Step>\n\n  <Step title=\"Intelligent Retrieval\">\n    When agents need information, they generate search queries, find similar embeddings, and retrieve the most relevant content chunks.\n  </Step>\n</Steps>\n\n## Benefits of Knowledge-Powered Agents\n\n### Accuracy and Reliability\n\n* Responses are grounded in your specific information, not generic training data\n* Reduced hallucinations because agents reference actual sources\n* Up-to-date information that reflects your current state\n\n### Scalability and Maintenance\n\n* Add new information without retraining or modifying code\n* Handle unlimited amounts of information without performance degradation\n* Easy updates by simply adding new content to the knowledge base\n\n### Context Awareness\n\n* Agents understand your specific domain, terminology, and processes\n* Responses are tailored to your organization's context and needs\n* Consistent information across all agent interactions\n\n## Getting Started with Knowledge Bases\n\nReady to build your own knowledge base? The process is straightforward:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Knowledge Base Architecture",
+      "id": "knowledge-base-architecture"
+    },
+    {
+      "level": "h2",
+      "text": "Benefits of Knowledge-Powered Agents",
+      "id": "benefits-of-knowledge-powered-agents"
+    },
+    {
+      "level": "h3",
+      "text": "Accuracy and Reliability",
+      "id": "accuracy-and-reliability"
+    },
+    {
+      "level": "h3",
+      "text": "Scalability and Maintenance",
+      "id": "scalability-and-maintenance"
+    },
+    {
+      "level": "h3",
+      "text": "Context Awareness",
+      "id": "context-awareness"
+    },
+    {
+      "level": "h2",
+      "text": "Getting Started with Knowledge Bases",
+      "id": "getting-started-with-knowledge-bases"
+    },
+    {
+      "level": "h2",
+      "text": "Learn More",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#response-includes-source-information",
+  "links": []
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Save the generated audio",
+  "content": "if response.audio:\n    write_audio_to_file(audio=response.audio[0].content, filename=\"tmp/greeting.mp3\")\n\npython  theme={null}\nfrom textwrap import dedent\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.cartesia import CartesiaTools\nfrom agno.utils.audio import write_audio_to_file\n\nagent_instructions = dedent(\n    \"\"\"Follow these steps SEQUENTIALLY to translate text and generate a localized voice note:\n    1. Identify the text to translate and the target language from the user request.\n    2. Translate the text accurately to the target language.\n    3. Analyze the emotion conveyed by the translated text.\n    4. Call `list_voices` to retrieve available voices.\n    5. Select a base voice matching the language and emotion.\n    6. Call `localize_voice` to create a new localized voice.\n    7. Call `text_to_speech` to generate the final audio.\n    \"\"\"\n)\n\nagent = Agent(\n    name=\"Emotion-Aware Translator Agent\",\n    description=\"Translates text, analyzes emotion, selects a suitable voice, creates a localized voice, and generates a voice note (audio file) using Cartesia TTS tools.\",\n    instructions=agent_instructions,\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[CartesiaTools(enable_localize_voice=True)],  \n    )\n\nagent.print_response(\n    \"Translate 'Hello! How are you? Tell me more about the weather in Paris?' to French and create a voice note.\"\n)\nresponse = agent.run_response\n\nif response.audio:\n    write_audio_to_file(\n        response.audio[0].base64_audio,\n        filename=\"french_weather.mp3\",\n    )\n```\n\n| Parameter               | Type   | Default                                | Description                                                                                         |\n| ----------------------- | ------ | -------------------------------------- | --------------------------------------------------------------------------------------------------- |\n| `api_key`               | `str`  | `None`                                 | The Cartesia API key for authentication. If not provided, uses the `CARTESIA_API_KEY` env variable. |\n| `model_id`              | `str`  | `sonic-2`                              | The model ID to use for text-to-speech.                                                             |\n| `default_voice_id`      | `str`  | `78ab82d5-25be-4f7d-82b3-7ad64e5b85b2` | The default voice ID to use for text-to-speech and localization.                                    |\n| `enable_text_to_speech` | `bool` | `True`                                 | Enable text-to-speech functionality.                                                                |\n| `enable_list_voices`    | `bool` | `True`                                 | Enable listing available voices functionality.                                                      |\n| `enable_localize_voice` | `bool` | `False`                                | Enable voice localization functionality.                                                            |\n\n| Function         | Description                          |\n| ---------------- | ------------------------------------ |\n| `list_voices`    | List available voices from Cartesia. |\n| `text_to_speech` | Converts text to speech.             |\n| `localize_voice` | Create a new localized voice.        |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/cartesia.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/cartesia_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Advanced Example: Translation and Voice Localization\n\nThis example demonstrates how to translate text, analyze emotion, localize a new voice, and generate a voice note using CartesiaTools.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Advanced Example: Translation and Voice Localization",
+      "id": "advanced-example:-translation-and-voice-localization"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#save-the-generated-audio",
+  "links": []
+}

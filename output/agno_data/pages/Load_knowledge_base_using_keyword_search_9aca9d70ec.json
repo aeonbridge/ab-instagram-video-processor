@@ -1,0 +1,8 @@
+{
+  "title": "Load knowledge base using keyword search",
+  "content": "keyword_db = PgVector(\n    table_name=\"recipes\", db_url=db_url, search_type=SearchType.keyword\n)\nknowledge = Knowledge(\n    name=\"Keyword Search Knowledge Base\",\n    vector_db=keyword_db,\n)\n\nknowledge.add_content(\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#load-knowledge-base-using-keyword-search",
+  "links": []
+}

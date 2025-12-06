@@ -1,0 +1,38 @@
+{
+  "title": "Pinecone Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/pinecone/overview\n\nLearn how to use Pinecone as a vector database for your Knowledge Base\n\nFollow the instructions in the [Pinecone Setup Guide](https://docs.pinecone.io/guides/get-started/quickstart) to get started quickly with Pinecone.\n\n<Info>\n  We do not yet support Pinecone v6.x.x. We are actively working to achieve\n  compatibility. In the meantime, we recommend using **Pinecone v5.4.2** for the\n  best experience.\n</Info>\n\n<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      Pinecone also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>\n\n<Tip className=\"mt-4\">\n      Use <code>aload()</code> and <code>aprint\\_response()</code> methods with <code>asyncio.run()</code> for non-blocking operations in high-throughput applications.\n    </Tip>\n  </div>\n</Card>\n\n<Snippet file=\"vectordb_pineconedb_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook (Sync)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/pinecone_db/pinecone_db.py)",
+  "code_samples": [
+    {
+      "code": "<Info>\n  We do not yet support Pinecone v6.x.x. We are actively working to achieve\n  compatibility. In the meantime, we recommend using **Pinecone v5.4.2** for the\n  best experience.\n</Info>\n\n## Example",
+      "language": "unknown"
+    },
+    {
+      "code": "<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      Pinecone also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "PineconeDb Params",
+      "id": "pineconedb-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#pinecone-vector-database",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Get audio files from storage/audio directory",
+  "content": "agno_root_dir = Path(__file__).parent.parent.parent.resolve()\naudio_storage_dir = agno_root_dir.joinpath(\"storage/audio\")\nif not audio_storage_dir.exists():\n    audio_storage_dir.mkdir(exist_ok=True, parents=True)\n\nagent = Agent(\n    name=\"Transcription Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[MLXTranscribeTools(base_dir=audio_storage_dir)],\n    instructions=[\n        \"To transcribe an audio file, use the `transcribe` tool with the name of the audio file as the argument.\",\n        \"You can find all available audio files using the `read_files` tool.\",\n    ],\n    markdown=True,\n)\n\nagent.print_response(\"Summarize the reid hoffman ted talk, split into sections\", stream=True)\n```\n\n| Parameter                         | Type                           | Default                                  | Description                                  |\n| --------------------------------- | ------------------------------ | ---------------------------------------- | -------------------------------------------- |\n| `base_dir`                        | `Path`                         | `Path.cwd()`                             | Base directory for audio files               |\n| `enable_read_files_in_base_dir`   | `bool`                         | `True`                                   | Whether to register the read\\_files function |\n| `path_or_hf_repo`                 | `str`                          | `\"mlx-community/whisper-large-v3-turbo\"` | Path or HuggingFace repo for the model       |\n| `verbose`                         | `bool`                         | `None`                                   | Enable verbose output                        |\n| `temperature`                     | `float` or `Tuple[float, ...]` | `None`                                   | Temperature for sampling                     |\n| `compression_ratio_threshold`     | `float`                        | `None`                                   | Compression ratio threshold                  |\n| `logprob_threshold`               | `float`                        | `None`                                   | Log probability threshold                    |\n| `no_speech_threshold`             | `float`                        | `None`                                   | No speech threshold                          |\n| `condition_on_previous_text`      | `bool`                         | `None`                                   | Whether to condition on previous text        |\n| `initial_prompt`                  | `str`                          | `None`                                   | Initial prompt for transcription             |\n| `word_timestamps`                 | `bool`                         | `None`                                   | Enable word-level timestamps                 |\n| `prepend_punctuations`            | `str`                          | `None`                                   | Punctuations to prepend                      |\n| `append_punctuations`             | `str`                          | `None`                                   | Punctuations to append                       |\n| `clip_timestamps`                 | `str` or `List[float]`         | `None`                                   | Clip timestamps                              |\n| `hallucination_silence_threshold` | `float`                        | `None`                                   | Hallucination silence threshold              |\n| `decode_options`                  | `dict`                         | `None`                                   | Additional decoding options                  |\n\n| Function     | Description                                 |\n| ------------ | ------------------------------------------- |\n| `transcribe` | Transcribes an audio file using MLX Whisper |\n| `read_files` | Lists all audio files in the base directory |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/mlx_transcribe.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/mlx_transcribe_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#get-audio-files-from-storage/audio-directory",
+  "links": []
+}

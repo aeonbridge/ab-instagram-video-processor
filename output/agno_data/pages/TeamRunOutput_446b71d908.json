@@ -1,0 +1,189 @@
+{
+  "title": "TeamRunOutput",
+  "content": "Source: https://docs.agno.com/reference/teams/team-response\n\nThe `TeamRunOutput` class represents the response from a team run, containing both the team's overall response and individual member responses. It supports streaming and provides real-time events throughout the execution of a team.\n\n## TeamRunOutput Attributes\n\n| Attribute             | Type                                              | Default             | Description                                 |\n| --------------------- | ------------------------------------------------- | ------------------- | ------------------------------------------- |\n| `content`             | `Any`                                             | `None`              | Content of the response                     |\n| `content_type`        | `str`                                             | `\"str\"`             | Specifies the data type of the content      |\n| `messages`            | `List[Message]`                                   | `None`              | A list of messages included in the response |\n| `metrics`             | `Metrics`                                         | `None`              | Usage metrics of the run                    |\n| `model`               | `str`                                             | `None`              | The model used in the run                   |\n| `model_provider`      | `str`                                             | `None`              | The model provider used in the run          |\n| `member_responses`    | `List[Union[TeamRunOutput, RunOutput]]`           | `[]`                | Responses from individual team members      |\n| `run_id`              | `str`                                             | `None`              | Run Id                                      |\n| `team_id`             | `str`                                             | `None`              | Team Id for the run                         |\n| `team_name`           | `str`                                             | `None`              | Name of the team                            |\n| `session_id`          | `str`                                             | `None`              | Session Id for the run                      |\n| `parent_run_id`       | `str`                                             | `None`              | Parent run ID if this is a nested run       |\n| `tools`               | `List[ToolExecution]`                             | `None`              | List of tools provided to the model         |\n| `images`              | `List[Image]`                                     | `None`              | List of images from member runs             |\n| `videos`              | `List[Video]`                                     | `None`              | List of videos from member runs             |\n| `audio`               | `List[Audio]`                                     | `None`              | List of audio snippets from member runs     |\n| `files`               | `List[File]`                                      | `None`              | List of files from member runs              |\n| `response_audio`      | `Audio`                                           | `None`              | The model's raw response in audio           |\n| `input`               | `TeamRunInput`                                    | `None`              | Input media and messages from user          |\n| `reasoning_content`   | `str`                                             | `None`              | Any reasoning content the model produced    |\n| `citations`           | `Citations`                                       | `None`              | Any citations used in the response          |\n| `model_provider_data` | `Any`                                             | `None`              | Model provider specific metadata            |\n| `metadata`            | `Dict[str, Any]`                                  | `None`              | Additional metadata for the run             |\n| `references`          | `List[MessageReferences]`                         | `None`              | Message references                          |\n| `additional_input`    | `List[Message]`                                   | `None`              | Additional input messages                   |\n| `reasoning_steps`     | `List[ReasoningStep]`                             | `None`              | Reasoning steps taken during execution      |\n| `reasoning_messages`  | `List[Message]`                                   | `None`              | Messages related to reasoning               |\n| `created_at`          | `int`                                             | Current timestamp   | Unix timestamp of the response creation     |\n| `events`              | `List[Union[RunOutputEvent, TeamRunOutputEvent]]` | `None`              | List of events that occurred during the run |\n| `status`              | `RunStatus`                                       | `RunStatus.running` | Current status of the run                   |\n| `workflow_step_id`    | `str`                                             | `None`              | FK: Points to StepOutput.step\\_id           |\n\n## TeamRunOutputEvent Types\n\nThe following events are sent by the `Team.run()` function depending on the team's configuration:\n\n| Event Type                   | Description                                             |\n| ---------------------------- | ------------------------------------------------------- |\n| `TeamRunStarted`             | Indicates the start of a team run                       |\n| `TeamRunContent`             | Contains the model's response text as individual chunks |\n| `TeamRunContentCompleted`    | Signals completion of content streaming                 |\n| `TeamRunIntermediateContent` | Contains intermediate content during the run            |\n| `TeamRunCompleted`           | Signals successful completion of the team run           |\n| `TeamRunError`               | Indicates an error occurred during the team run         |\n| `TeamRunCancelled`           | Signals that the team run was cancelled                 |\n\n| Event Type             | Description                                    |\n| ---------------------- | ---------------------------------------------- |\n| `TeamPreHookStarted`   | Indicates the start of a pre-run hook          |\n| `TeamPreHookCompleted` | Signals completion of a pre-run hook execution |\n\n| Event Type              | Description                                     |\n| ----------------------- | ----------------------------------------------- |\n| `TeamPostHookStarted`   | Indicates the start of a post-run hook          |\n| `TeamPostHookCompleted` | Signals completion of a post-run hook execution |\n\n| Event Type              | Description                                                    |\n| ----------------------- | -------------------------------------------------------------- |\n| `TeamToolCallStarted`   | Indicates the start of a tool call                             |\n| `TeamToolCallCompleted` | Signals completion of a tool call, including tool call results |\n\n| Event Type               | Description                                         |\n| ------------------------ | --------------------------------------------------- |\n| `TeamReasoningStarted`   | Indicates the start of the team's reasoning process |\n| `TeamReasoningStep`      | Contains a single step in the reasoning process     |\n| `TeamReasoningCompleted` | Signals completion of the reasoning process         |\n\n| Event Type                  | Description                                    |\n| --------------------------- | ---------------------------------------------- |\n| `TeamMemoryUpdateStarted`   | Indicates that the team is updating its memory |\n| `TeamMemoryUpdateCompleted` | Signals completion of a memory update          |\n\n### Session Summary Events\n\n| Event Type                    | Description                                       |\n| ----------------------------- | ------------------------------------------------- |\n| `TeamSessionSummaryStarted`   | Indicates the start of session summary generation |\n| `TeamSessionSummaryCompleted` | Signals completion of session summary generation  |\n\n### Base TeamRunOutputEvent\n\nAll events inherit from `BaseTeamRunEvent` which provides these common attributes:\n\n| Attribute         | Type            | Default           | Description                           |\n| ----------------- | --------------- | ----------------- | ------------------------------------- |\n| `created_at`      | `int`           | Current timestamp | Unix timestamp of the event creation  |\n| `event`           | `str`           | `\"\"`              | The type of event                     |\n| `team_id`         | `str`           | `\"\"`              | ID of the team generating the event   |\n| `team_name`       | `str`           | `\"\"`              | Name of the team generating the event |\n| `run_id`          | `Optional[str]` | `None`            | ID of the current run                 |\n| `session_id`      | `Optional[str]` | `None`            | ID of the current session             |\n| `workflow_id`     | `Optional[str]` | `None`            | ID of the workflow                    |\n| `workflow_run_id` | `Optional[str]` | `None`            | ID of the workflow's run              |\n| `step_id`         | `Optional[str]` | `None`            | ID of the workflow step               |\n| `step_name`       | `Optional[str]` | `None`            | Name of the workflow step             |\n| `step_index`      | `Optional[int]` | `None`            | Index of the workflow step            |\n| `content`         | `Optional[Any]` | `None`            | For backwards compatibility           |\n\n| Attribute        | Type  | Default            | Description               |\n| ---------------- | ----- | ------------------ | ------------------------- |\n| `event`          | `str` | `\"TeamRunStarted\"` | Event type                |\n| `model`          | `str` | `\"\"`               | The model being used      |\n| `model_provider` | `str` | `\"\"`               | The provider of the model |\n\n### IntermediateRunContentEvent\n\n| Attribute      | Type            | Default                        | Description                          |\n| -------------- | --------------- | ------------------------------ | ------------------------------------ |\n| `event`        | `str`           | `\"TeamRunIntermediateContent\"` | Event type                           |\n| `content`      | `Optional[Any]` | `None`                         | Intermediate content of the response |\n| `content_type` | `str`           | `\"str\"`                        | Type of the content                  |\n\n### RunContentCompletedEvent\n\n| Attribute | Type  | Default                     | Description |\n| --------- | ----- | --------------------------- | ----------- |\n| `event`   | `str` | `\"TeamRunContentCompleted\"` | Event type  |\n\n| Attribute             | Type                                | Default            | Description                      |\n| --------------------- | ----------------------------------- | ------------------ | -------------------------------- |\n| `event`               | `str`                               | `\"TeamRunContent\"` | Event type                       |\n| `content`             | `Optional[Any]`                     | `None`             | The content of the response      |\n| `content_type`        | `str`                               | `\"str\"`            | Type of the content              |\n| `reasoning_content`   | `Optional[str]`                     | `None`             | Reasoning content produced       |\n| `citations`           | `Optional[Citations]`               | `None`             | Citations used in the response   |\n| `model_provider_data` | `Optional[Any]`                     | `None`             | Model provider specific metadata |\n| `response_audio`      | `Optional[Audio]`                   | `None`             | Model's audio response           |\n| `image`               | `Optional[Image]`                   | `None`             | Image attached to the response   |\n| `references`          | `Optional[List[MessageReferences]]` | `None`             | Message references               |\n| `additional_input`    | `Optional[List[Message]]`           | `None`             | Additional input messages        |\n| `reasoning_steps`     | `Optional[List[ReasoningStep]]`     | `None`             | Reasoning steps                  |\n| `reasoning_messages`  | `Optional[List[Message]]`           | `None`             | Reasoning messages               |\n\n### RunCompletedEvent\n\n| Attribute             | Type                                    | Default              | Description                             |\n| --------------------- | --------------------------------------- | -------------------- | --------------------------------------- |\n| `event`               | `str`                                   | `\"TeamRunCompleted\"` | Event type                              |\n| `content`             | `Optional[Any]`                         | `None`               | Final content of the response           |\n| `content_type`        | `str`                                   | `\"str\"`              | Type of the content                     |\n| `reasoning_content`   | `Optional[str]`                         | `None`               | Reasoning content produced              |\n| `citations`           | `Optional[Citations]`                   | `None`               | Citations used in the response          |\n| `model_provider_data` | `Optional[Any]`                         | `None`               | Model provider specific metadata        |\n| `images`              | `Optional[List[Image]]`                 | `None`               | Images attached to the response         |\n| `videos`              | `Optional[List[Video]]`                 | `None`               | Videos attached to the response         |\n| `audio`               | `Optional[List[Audio]]`                 | `None`               | Audio snippets attached to the response |\n| `response_audio`      | `Optional[Audio]`                       | `None`               | Model's audio response                  |\n| `references`          | `Optional[List[MessageReferences]]`     | `None`               | Message references                      |\n| `additional_input`    | `Optional[List[Message]]`               | `None`               | Additional input messages               |\n| `reasoning_steps`     | `Optional[List[ReasoningStep]]`         | `None`               | Reasoning steps                         |\n| `reasoning_messages`  | `Optional[List[Message]]`               | `None`               | Reasoning messages                      |\n| `member_responses`    | `List[Union[TeamRunOutput, RunOutput]]` | `[]`                 | Responses from individual team members  |\n| `metadata`            | `Optional[Dict[str, Any]]`              | `None`               | Additional metadata                     |\n| `metrics`             | `Optional[Metrics]`                     | `None`               | Usage metrics                           |\n\n| Attribute | Type            | Default          | Description   |\n| --------- | --------------- | ---------------- | ------------- |\n| `event`   | `str`           | `\"TeamRunError\"` | Event type    |\n| `content` | `Optional[str]` | `None`           | Error message |\n\n### RunCancelledEvent\n\n| Attribute | Type            | Default              | Description             |\n| --------- | --------------- | -------------------- | ----------------------- |\n| `event`   | `str`           | `\"TeamRunCancelled\"` | Event type              |\n| `reason`  | `Optional[str]` | `None`               | Reason for cancellation |\n\n### PreHookStartedEvent\n\n| Attribute       | Type                     | Default                | Description                         |\n| --------------- | ------------------------ | ---------------------- | ----------------------------------- |\n| `event`         | `str`                    | `\"TeamPreHookStarted\"` | Event type                          |\n| `pre_hook_name` | `Optional[str]`          | `None`                 | Name of the pre-hook being executed |\n| `run_input`     | `Optional[TeamRunInput]` | `None`                 | The run input passed to the hook    |\n\n### PreHookCompletedEvent\n\n| Attribute       | Type                     | Default                  | Description                         |\n| --------------- | ------------------------ | ------------------------ | ----------------------------------- |\n| `event`         | `str`                    | `\"TeamPreHookCompleted\"` | Event type                          |\n| `pre_hook_name` | `Optional[str]`          | `None`                   | Name of the pre-hook that completed |\n| `run_input`     | `Optional[TeamRunInput]` | `None`                   | The run input passed to the hook    |\n\n### PostHookStartedEvent\n\n| Attribute        | Type            | Default                 | Description                          |\n| ---------------- | --------------- | ----------------------- | ------------------------------------ |\n| `event`          | `str`           | `\"TeamPostHookStarted\"` | Event type                           |\n| `post_hook_name` | `Optional[str]` | `None`                  | Name of the post-hook being executed |\n\n### PostHookCompletedEvent\n\n| Attribute        | Type            | Default                   | Description                          |\n| ---------------- | --------------- | ------------------------- | ------------------------------------ |\n| `event`          | `str`           | `\"TeamPostHookCompleted\"` | Event type                           |\n| `post_hook_name` | `Optional[str]` | `None`                    | Name of the post-hook that completed |\n\n### ToolCallStartedEvent\n\n| Attribute | Type                      | Default                 | Description           |\n| --------- | ------------------------- | ----------------------- | --------------------- |\n| `event`   | `str`                     | `\"TeamToolCallStarted\"` | Event type            |\n| `tool`    | `Optional[ToolExecution]` | `None`                  | The tool being called |\n\n### ToolCallCompletedEvent\n\n| Attribute | Type                      | Default                   | Description                 |\n| --------- | ------------------------- | ------------------------- | --------------------------- |\n| `event`   | `str`                     | `\"TeamToolCallCompleted\"` | Event type                  |\n| `tool`    | `Optional[ToolExecution]` | `None`                    | The tool that was called    |\n| `content` | `Optional[Any]`           | `None`                    | Result of the tool call     |\n| `images`  | `Optional[List[Image]]`   | `None`                    | Images produced by the tool |\n| `videos`  | `Optional[List[Video]]`   | `None`                    | Videos produced by the tool |\n| `audio`   | `Optional[List[Audio]]`   | `None`                    | Audio produced by the tool  |\n\n### ReasoningStartedEvent\n\n| Attribute | Type  | Default                  | Description |\n| --------- | ----- | ------------------------ | ----------- |\n| `event`   | `str` | `\"TeamReasoningStarted\"` | Event type  |\n\n### ReasoningStepEvent\n\n| Attribute           | Type            | Default               | Description                   |\n| ------------------- | --------------- | --------------------- | ----------------------------- |\n| `event`             | `str`           | `\"TeamReasoningStep\"` | Event type                    |\n| `content`           | `Optional[Any]` | `None`                | Content of the reasoning step |\n| `content_type`      | `str`           | `\"str\"`               | Type of the content           |\n| `reasoning_content` | `str`           | `\"\"`                  | Detailed reasoning content    |\n\n### ReasoningCompletedEvent\n\n| Attribute      | Type            | Default                    | Description                   |\n| -------------- | --------------- | -------------------------- | ----------------------------- |\n| `event`        | `str`           | `\"TeamReasoningCompleted\"` | Event type                    |\n| `content`      | `Optional[Any]` | `None`                     | Content of the reasoning step |\n| `content_type` | `str`           | `\"str\"`                    | Type of the content           |\n\n### MemoryUpdateStartedEvent\n\n| Attribute | Type  | Default                     | Description |\n| --------- | ----- | --------------------------- | ----------- |\n| `event`   | `str` | `\"TeamMemoryUpdateStarted\"` | Event type  |\n\n### MemoryUpdateCompletedEvent\n\n| Attribute | Type  | Default                       | Description |\n| --------- | ----- | ----------------------------- | ----------- |\n| `event`   | `str` | `\"TeamMemoryUpdateCompleted\"` | Event type  |\n\n### SessionSummaryStartedEvent\n\n| Attribute | Type  | Default                       | Description |\n| --------- | ----- | ----------------------------- | ----------- |\n| `event`   | `str` | `\"TeamSessionSummaryStarted\"` | Event type  |\n\n### SessionSummaryCompletedEvent\n\n| Attribute         | Type            | Default                         | Description                   |\n| ----------------- | --------------- | ------------------------------- | ----------------------------- |\n| `event`           | `str`           | `\"TeamSessionSummaryCompleted\"` | Event type                    |\n| `session_summary` | `Optional[Any]` | `None`                          | The generated session summary |\n\n### ParserModelResponseStartedEvent\n\n| Attribute | Type  | Default                            | Description |\n| --------- | ----- | ---------------------------------- | ----------- |\n| `event`   | `str` | `\"TeamParserModelResponseStarted\"` | Event type  |\n\n### ParserModelResponseCompletedEvent\n\n| Attribute | Type  | Default                              | Description |\n| --------- | ----- | ------------------------------------ | ----------- |\n| `event`   | `str` | `\"TeamParserModelResponseCompleted\"` | Event type  |\n\n### OutputModelResponseStartedEvent\n\n| Attribute | Type  | Default                            | Description |\n| --------- | ----- | ---------------------------------- | ----------- |\n| `event`   | `str` | `\"TeamOutputModelResponseStarted\"` | Event type  |\n\n### OutputModelResponseCompletedEvent\n\n| Attribute | Type  | Default                              | Description |\n| --------- | ----- | ------------------------------------ | ----------- |\n| `event`   | `str` | `\"TeamOutputModelResponseCompleted\"` | Event type  |\n\n| Attribute | Type  | Default         | Description |\n| --------- | ----- | --------------- | ----------- |\n| `event`   | `str` | `\"CustomEvent\"` | Event type  |",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "TeamRunOutput Attributes",
+      "id": "teamrunoutput-attributes"
+    },
+    {
+      "level": "h2",
+      "text": "TeamRunOutputEvent Types",
+      "id": "teamrunoutputevent-types"
+    },
+    {
+      "level": "h3",
+      "text": "Core Events",
+      "id": "core-events"
+    },
+    {
+      "level": "h3",
+      "text": "Pre-Hook Events",
+      "id": "pre-hook-events"
+    },
+    {
+      "level": "h3",
+      "text": "Post-Hook Events",
+      "id": "post-hook-events"
+    },
+    {
+      "level": "h3",
+      "text": "Tool Events",
+      "id": "tool-events"
+    },
+    {
+      "level": "h3",
+      "text": "Reasoning Events",
+      "id": "reasoning-events"
+    },
+    {
+      "level": "h3",
+      "text": "Memory Events",
+      "id": "memory-events"
+    },
+    {
+      "level": "h3",
+      "text": "Session Summary Events",
+      "id": "session-summary-events"
+    },
+    {
+      "level": "h2",
+      "text": "Event Attributes",
+      "id": "event-attributes"
+    },
+    {
+      "level": "h3",
+      "text": "Base TeamRunOutputEvent",
+      "id": "base-teamrunoutputevent"
+    },
+    {
+      "level": "h3",
+      "text": "RunStartedEvent",
+      "id": "runstartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "IntermediateRunContentEvent",
+      "id": "intermediateruncontentevent"
+    },
+    {
+      "level": "h3",
+      "text": "RunContentCompletedEvent",
+      "id": "runcontentcompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "RunContentEvent",
+      "id": "runcontentevent"
+    },
+    {
+      "level": "h3",
+      "text": "RunCompletedEvent",
+      "id": "runcompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "RunErrorEvent",
+      "id": "runerrorevent"
+    },
+    {
+      "level": "h3",
+      "text": "RunCancelledEvent",
+      "id": "runcancelledevent"
+    },
+    {
+      "level": "h3",
+      "text": "PreHookStartedEvent",
+      "id": "prehookstartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "PreHookCompletedEvent",
+      "id": "prehookcompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "PostHookStartedEvent",
+      "id": "posthookstartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "PostHookCompletedEvent",
+      "id": "posthookcompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "ToolCallStartedEvent",
+      "id": "toolcallstartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "ToolCallCompletedEvent",
+      "id": "toolcallcompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "ReasoningStartedEvent",
+      "id": "reasoningstartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "ReasoningStepEvent",
+      "id": "reasoningstepevent"
+    },
+    {
+      "level": "h3",
+      "text": "ReasoningCompletedEvent",
+      "id": "reasoningcompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "MemoryUpdateStartedEvent",
+      "id": "memoryupdatestartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "MemoryUpdateCompletedEvent",
+      "id": "memoryupdatecompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "SessionSummaryStartedEvent",
+      "id": "sessionsummarystartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "SessionSummaryCompletedEvent",
+      "id": "sessionsummarycompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "ParserModelResponseStartedEvent",
+      "id": "parsermodelresponsestartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "ParserModelResponseCompletedEvent",
+      "id": "parsermodelresponsecompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "OutputModelResponseStartedEvent",
+      "id": "outputmodelresponsestartedevent"
+    },
+    {
+      "level": "h3",
+      "text": "OutputModelResponseCompletedEvent",
+      "id": "outputmodelresponsecompletedevent"
+    },
+    {
+      "level": "h3",
+      "text": "CustomEvent",
+      "id": "customevent"
+    }
+  ],
+  "url": "llms-txt#teamrunoutput",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "This may work but with unpredictable results due to message format differences",
+  "content": "gemini_agent.print_response(\n    \"Continue our discussion about machine learning\", session_id=session_id, user_id=user_id\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#this-may-work-but-with-unpredictable-results-due-to-message-format-differences",
+  "links": []
+}

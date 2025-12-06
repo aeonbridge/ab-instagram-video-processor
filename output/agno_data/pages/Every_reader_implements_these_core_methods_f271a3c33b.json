@@ -1,0 +1,88 @@
+{
+  "title": "Every reader implements these core methods",
+  "content": "class Reader:\n    def read(self, obj, name=None) -> List[Document]:\n        \"\"\"Synchronously read and process content\"\"\"\n        pass\n\nasync def async_read(self, obj, name=None) -> List[Document]:\n        \"\"\"Asynchronously read and process content\"\"\"\n        pass\npython  theme={null}\n@classmethod\ndef get_supported_content_types(cls) -> List[ContentType]:\n    \"\"\"Returns the content types this reader can handle\"\"\"\n    return [ContentType.PDF]  # Example for PDFReader\npython  theme={null}\nreader = PDFReader(\n    chunk=True,                    # Enable/disable chunking\n    chunk_size=1000,              # Size of each chunk\n    chunking_strategy=MyStrategy() # Custom chunking logic\n)\npython  theme={null}\nreader = PDFReader(\n    split_on_pages=True,          # Create separate documents per page\n    password=\"secret123\",         # Handle encrypted PDFs\n    read_images=True             # Extract text from images via OCR\n)\npython  theme={null}\nreader = TextReader(\n    encoding=\"utf-8\"              # Override default encoding\n)\n\nreader = CSVReader(\n    encoding=\"latin-1\"            # Handle files with specific encodings\n)\n\nreader = MarkdownReader(\n    encoding=\"cp1252\"             # Windows-specific encoding\n)\npython  theme={null}\ndocuments = reader.read(\n    file_path,\n    name=\"custom_document_name\",  # Override default naming\n    password=\"file_password\"      # Runtime password override\n)\npython  theme={null}\nDocument(\n    content=\"The extracted text content...\",\n    id=\"unique_document_identifier\",\n    name=\"document_name\",\n    meta_data={\n        \"page\": 1,                # Page number for PDFs\n        \"url\": \"https://...\",     # Source URL for web content\n        \"author\": \"...\",          # Document metadata\n    },\n    size=len(content)             # Content size in characters\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### The Reading Process\n\nWhen a reader processes content, it follows these steps:\n\n1. **Content Ingestion**: The reader receives raw content (file, URL, text, etc.)\n2. **Parsing**: Extract text and metadata using format-specific logic\n3. **Document Creation**: Convert parsed content into `Document` objects\n4. **Chunking**: Apply chunking strategies to break content into smaller pieces\n5. **Return**: Provide a list of processed documents ready for embedding\n\n### Content Types and Specialization\n\nEach reader specializes in handling specific content types:",
+      "language": "unknown"
+    },
+    {
+      "code": "This specialization allows each reader to:\n\n* Use format-specific parsing libraries\n* Extract relevant metadata\n* Handle format-specific challenges (encryption, encoding, etc.)\n* Optimize processing for that content type\n\n## Reader Configuration\n\nReaders are highly configurable to meet different processing needs:\n\n### Chunking Control",
+      "language": "unknown"
+    },
+    {
+      "code": "### Content Processing Options",
+      "language": "unknown"
+    },
+    {
+      "code": "### Encoding Control\n\nFor text-based readers, the file encoding can be overridden:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Metadata and Naming",
+      "language": "unknown"
+    },
+    {
+      "code": "## The Document Output\n\nReaders convert raw content into `Document` objects with this structure:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Chunking Integration\n\nOne of the most important features of readers is their integration with chunking strategies:\n\n### Automatic Chunking\n\nWhen `chunk=True`, readers automatically apply chunking strategies to break large documents into smaller, more manageable pieces:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "The Reading Process",
+      "id": "the-reading-process"
+    },
+    {
+      "level": "h3",
+      "text": "Content Types and Specialization",
+      "id": "content-types-and-specialization"
+    },
+    {
+      "level": "h2",
+      "text": "Reader Configuration",
+      "id": "reader-configuration"
+    },
+    {
+      "level": "h3",
+      "text": "Chunking Control",
+      "id": "chunking-control"
+    },
+    {
+      "level": "h3",
+      "text": "Content Processing Options",
+      "id": "content-processing-options"
+    },
+    {
+      "level": "h3",
+      "text": "Encoding Control",
+      "id": "encoding-control"
+    },
+    {
+      "level": "h3",
+      "text": "Metadata and Naming",
+      "id": "metadata-and-naming"
+    },
+    {
+      "level": "h2",
+      "text": "The Document Output",
+      "id": "the-document-output"
+    },
+    {
+      "level": "h2",
+      "text": "Chunking Integration",
+      "id": "chunking-integration"
+    },
+    {
+      "level": "h3",
+      "text": "Automatic Chunking",
+      "id": "automatic-chunking"
+    }
+  ],
+  "url": "llms-txt#every-reader-implements-these-core-methods",
+  "links": []
+}

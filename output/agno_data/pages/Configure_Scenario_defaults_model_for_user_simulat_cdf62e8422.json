@@ -1,0 +1,27 @@
+{
+  "title": "Configure Scenario defaults (model for user simulator and judge)",
+  "content": "scenario.configure(default_model=\"openai/gpt-4.1-mini\")\n\n@pytest.mark.agent_test\n@pytest.mark.asyncio\nasync def test_vegetarian_recipe_agent() -> None:\n    # 1. Define an AgentAdapter to wrap your agent\n    class VegetarianRecipeAgentAdapter(scenario.AgentAdapter):\n        agent: Agent\n\ndef __init__(self) -> None:\n            self.agent = Agent(\n                model=OpenAIChat(id=\"gpt-4.1-mini\"),\n                markdown=True,\n                debug_mode=True,\n                instructions=\"You are a vegetarian recipe agent.\",\n            )\n\nasync def call(self, input: scenario.AgentInput) -> scenario.AgentReturnTypes:\n            response = self.agent.run(\n                input=input.last_new_user_message_str(), # Pass only the last user message\n                session_id=input.thread_id, # Pass the thread id, this allows the agent to track history\n            )\n            return response.content\n\n# 2. Run the scenario simulation\n    result = await scenario.run(\n        name=\"dinner recipe request\",\n        description=\"User is looking for a vegetarian dinner idea.\",\n        agents=[\n            VegetarianRecipeAgentAdapter(),\n            scenario.UserSimulatorAgent(),\n            scenario.JudgeAgent(\n                criteria=[\n                    \"Agent should not ask more than two follow-up questions\",\n                    \"Agent should generate a recipe\",\n                    \"Recipe should include a list of ingredients\",\n                    \"Recipe should include step-by-step cooking instructions\",\n                    \"Recipe should be vegetarian and not include any sort of meat\",\n                ]\n            ),\n        ],\n    )\n\n# 3. Assert and inspect the result\n    assert result.success\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    export LANGWATCH_API_KEY=xxx # Optional, required for Simulation monitoring\n    bash  theme={null}\n    pip install -U openai agno langwatch-scenario pytest pytest-asyncio\n    # or\n    uv add agno langwatch-scenario openai pytest\n    bash  theme={null}\n    pytest cookbook/agent_basics/other/scenario_testing.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#configure-scenario-defaults-(model-for-user-simulator-and-judge)",
+  "links": []
+}

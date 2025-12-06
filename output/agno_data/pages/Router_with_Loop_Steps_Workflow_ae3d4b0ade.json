@@ -1,0 +1,8 @@
+{
+  "title": "Router with Loop Steps Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/router-with-loop-steps\n\nThis example demonstrates **Workflows 2.0** advanced pattern combining Router-based intelligent path selection with Loop execution for iterative quality improvement.\n\nThis example shows how to create adaptive workflows that select optimal research strategies and execution patterns based on topic complexity.\n\n**When to use**: When different topic types require fundamentally different research\nmethodologies - some needing simple single-pass research, others requiring iterative\ndeep-dive analysis. Ideal for content-adaptive workflows where processing complexity\nshould match content complexity.\n\n```python router_with_loop_steps.py theme={null}\nfrom typing import List\n\nfrom agno.agent.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.loop import Loop\nfrom agno.workflow.router import Router\nfrom agno.workflow.step import Step\nfrom agno.workflow.types import StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#router-with-loop-steps-workflow",
+  "links": []
+}

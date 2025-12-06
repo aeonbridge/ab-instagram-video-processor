@@ -1,0 +1,8 @@
+{
+  "title": "Initialize Traceloop - must be called before creating agents",
+  "content": "Traceloop.init(app_name=\"agno_agent\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-traceloop---must-be-called-before-creating-agents",
+  "links": []
+}

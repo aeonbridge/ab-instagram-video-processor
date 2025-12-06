@@ -1,0 +1,28 @@
+{
+  "title": "Audio Generation Tools",
+  "content": "Source: https://docs.agno.com/basics/multimodal/audio/audio_generation\n\nLearn how to use audio generation tools with Agno agents.\n\nThe following example demonstrates how to generate an audio using the ElevenLabs tool with an agent. See [Eleven Labs](https://elevenlabs.io/) for more details.\n\nYou need to install the `elevenlabs` library and an API key which can be obtained from [Eleven Labs](https://elevenlabs.io/)\n\nSet the `ELEVEN_LABS_API_KEY` environment variable.\n\n## Developer Resources\n\n* See the [Music Generation](/basics/multimodal/audio/usage/generate-music-agent) example.",
+  "code_samples": [
+    {
+      "code": "Set the `ELEVEN_LABS_API_KEY` environment variable.",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#audio-generation-tools",
+  "links": []
+}

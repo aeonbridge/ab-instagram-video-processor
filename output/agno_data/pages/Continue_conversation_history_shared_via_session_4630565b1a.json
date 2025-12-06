@@ -1,0 +1,19 @@
+{
+  "title": "Continue conversation - history shared via session_id",
+  "content": "budget_agent.print_response(\n    \"Can you summarize our discussion so far?\", session_id=session_id, user_id=user_id\n)\npython  theme={null}\nfrom uuid import uuid4\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai.chat import OpenAIChat\nfrom agno.models.google import Gemini\n\ndb = SqliteDb(db_file=\"tmp/cross_provider_demo.db\")\n\nsession_id = str(uuid4())\nuser_id = \"user@example.com\"",
+  "code_samples": [
+    {
+      "code": "## Cross-Provider Switching\n\nSwitching between providers can cause compatibility issues and is not recommended for production use without thorough testing:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Cross-Provider Switching",
+      "id": "cross-provider-switching"
+    }
+  ],
+  "url": "llms-txt#continue-conversation---history-shared-via-session_id",
+  "links": []
+}

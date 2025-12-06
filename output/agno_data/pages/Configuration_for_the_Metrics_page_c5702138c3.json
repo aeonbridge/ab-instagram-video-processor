@@ -1,0 +1,8 @@
+{
+  "title": "Configuration for the Metrics page",
+  "content": "metrics:\n  display_name: <DISPLAY_NAME>\n  dbs:\n    - <DB_ID>\n      domain_config:\n        display_name: <DISPLAY_NAME>\n    ...\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configuration-for-the-metrics-page",
+  "links": []
+}

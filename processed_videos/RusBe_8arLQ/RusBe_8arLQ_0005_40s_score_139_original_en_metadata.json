@@ -1,0 +1,47 @@
+{
+  "title": "Transform Your Room with Creative Lighting!",
+  "description": "Discover how to elevate your videos with just two lights! In this quick guide, we explore the magic of COB lights and a simple accessory that can drastically improve your video quality. #VideoLighting #COBLights #FilmmakingTips Don't forget to like, share, and subscribe for more quick tips!",
+  "tags": [
+    "Video Lighting",
+    "COB Light",
+    "Filmmaking Gear",
+    "GVM Lighting",
+    "Lighting Effects"
+  ],
+  "category": "Howto & Style",
+  "thumbnail_ideas": [
+    {
+      "concept": "Before and after lighting effect",
+      "text_overlay": "Light Magic!",
+      "color_scheme": "Dark background with bright light effect"
+    },
+    {
+      "concept": "Close-up of the GVM light and remote",
+      "text_overlay": "Control Light with a Click!",
+      "color_scheme": "Black and green"
+    },
+    {
+      "concept": "Shadow and light play to mimic a window",
+      "text_overlay": "Fake a Window!",
+      "color_scheme": "Blue and white"
+    }
+  ],
+  "target_audience": "Aspiring videographers, YouTube content creators, photography enthusiasts",
+  "video_hook": "Ever wanted to control light in your videos like magic?",
+  "call_to_action": "Hit the subscribe button for more lighting tricks!",
+  "_generated_at": "2025-12-05T22:58:36.027151",
+  "_model": "gpt-4-turbo-preview",
+  "_source_file": "processed_videos/RusBe_8arLQ/RusBe_8arLQ_0005_40s_score_139_original_en.md",
+  "_platform": "youtube",
+  "_usage": {
+    "input_tokens": 657,
+    "output_tokens": 304,
+    "total_tokens": 961,
+    "cost_usd": 0.01569,
+    "cost_breakdown": {
+      "input_cost_usd": 0.00657,
+      "output_cost_usd": 0.00912
+    },
+    "duration_seconds": 9.36
+  }
+}

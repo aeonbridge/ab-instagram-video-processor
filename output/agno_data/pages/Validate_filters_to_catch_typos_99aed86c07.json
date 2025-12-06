@@ -1,0 +1,19 @@
+{
+  "title": "Validate filters to catch typos",
+  "content": "valid_filters, invalid_keys = knowledge.validate_filters({\n    \"department\": \"engineering\",\n    \"invalid_key\": \"value\"  # This gets flagged\n})\npython  theme={null}\nfrom agno.knowledge.chunking.fixed import FixedSizeChunking\nfrom agno.knowledge.chunking.semantic import SemanticChunking",
+  "code_samples": [
+    {
+      "code": "### 4. Match Chunking Strategy to Your Content\n\nDifferent strategies have different performance characteristics:\n\n| Strategy       | Speed  | Quality | Best For                            |\n| -------------- | ------ | ------- | ----------------------------------- |\n| **Fixed Size** | Fast   | Good    | Uniform content, when speed matters |\n| **Semantic**   | Slower | Best    | Complex docs, when quality matters  |\n| **Recursive**  | Fast   | Good    | Structured docs, good balance       |",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "4. Match Chunking Strategy to Your Content",
+      "id": "4.-match-chunking-strategy-to-your-content"
+    }
+  ],
+  "url": "llms-txt#validate-filters-to-catch-typos",
+  "links": []
+}

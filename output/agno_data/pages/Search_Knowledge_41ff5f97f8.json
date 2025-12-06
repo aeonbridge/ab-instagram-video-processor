@@ -1,0 +1,8 @@
+{
+  "title": "Search Knowledge",
+  "content": "Source: https://docs.agno.com/reference-api/schema/knowledge/search-knowledge\n\npost /knowledge/search\nSearch the knowledge base for relevant documents using query, filters and search type.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#search-knowledge",
+  "links": []
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Find sales documents from North America in 2024",
+  "content": "AND(\n    EQ(\"data_type\", \"sales\"),\n    EQ(\"region\", \"north_america\"),\n    EQ(\"year\", 2024)\n)\npython  theme={null}\nfrom agno.filters import OR, EQ",
+  "code_samples": [
+    {
+      "code": "#### OR\n\nAt least one condition must be true.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#find-sales-documents-from-north-america-in-2024",
+  "links": []
+}

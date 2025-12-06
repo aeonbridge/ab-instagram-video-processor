@@ -1,0 +1,14 @@
+{
+  "title": "Files Generation Tools",
+  "content": "Source: https://docs.agno.com/basics/multimodal/files/file_generation\n\nLearn how to use files generation tools with Agno agents.\n\nAgno provides the [`FileGenerationTools`](/integrations/toolkits/file-generation/file-generation) to generate files in different formats.\n\n## Developer Resources\n\n* See the [File Generation Tools](/integrations/toolkits/file-generation/file-generation) documentation.\n* See the [File Generation Tools](/examples/basics/tools/file-generation) example.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#files-generation-tools",
+  "links": []
+}

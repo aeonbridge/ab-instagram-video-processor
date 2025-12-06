@@ -1,0 +1,8 @@
+{
+  "title": "Configuration for the Session page",
+  "content": "session:\n  display_name: <DISPLAY_NAME>\n  dbs:\n    - <DB_ID>\n      domain_config:\n        display_name: <DISPLAY_NAME>\n    ...",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configuration-for-the-session-page",
+  "links": []
+}

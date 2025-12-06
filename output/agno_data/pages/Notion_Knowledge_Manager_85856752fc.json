@@ -1,0 +1,29 @@
+{
+  "title": "Notion Knowledge Manager",
+  "content": "Source: https://docs.agno.com/examples/use-cases/workflows/notion-knowledge-manager\n\nBuild a knowledge management workflow that automatically creates, updates, and searches Notion pages based on content classification. This workflow uses AI to categorize information and organize it in your Notion database.\n\nBy building this workflow, you'll understand:\n\n* How to integrate Notion API for automated knowledge management\n* How to use agents for content classification and tagging\n* How to implement conditional logic based on classification results\n* How to coordinate multiple Notion operations (create, update, search)\n\nBuild knowledge base managers, automated documentation systems, content organization tools, or research note-taking applications.\n\nThe workflow manages Notion pages through a multi-step classification and organization process:\n\n1. **Classify**: Classification agent analyzes content and determines tags/categories\n2. **Route**: Based on classification, decides whether to create, update, or search\n3. **Execute**: Notion agent performs the appropriate operation (create page, update tags, or search)\n4. **Organize**: Content is automatically organized in your Notion database with proper tags\n\nThe workflow uses NotionTools to interact with your Notion database programmatically.\n\n```python notion_knowledge_manager.py theme={null}\nimport os\n\nfrom agno.agent.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai.chat import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.tools.notion import NotionTools\nfrom agno.workflow.step import Step, StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#notion-knowledge-manager",
+  "links": []
+}

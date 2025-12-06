@@ -1,0 +1,36 @@
+{
+  "title": "Install & Setup",
+  "content": "Source: https://docs.agno.com/templates/infra-management/install\n\n* Installing `agno` using `pip` in a python virtual environment.\n* Creating an `ai` directory for your ai infra\n\n<Steps>\n  <Step title=\"Create a virtual environment\">\n    Open the `Terminal` and create an `ai` directory with a python virtual environment.\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Install Agno\">\n    Install `agno` using pip\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Install Docker\">\n    Install [docker desktop](https://docs.docker.com/desktop/install/mac-install/) to run apps locally\n  </Step>\n</Steps>\n\n<Note>\n  If you encounter errors, try updating pip using `python -m pip install --upgrade pip`\n</Note>\n\nTo upgrade `agno`, run this in your virtual environment",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Install Agno\">\n    Install `agno` using pip\n\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Install Docker\">\n    Install [docker desktop](https://docs.docker.com/desktop/install/mac-install/) to run apps locally\n  </Step>\n</Steps>\n\n<br />\n\n<Note>\n  If you encounter errors, try updating pip using `python -m pip install --upgrade pip`\n</Note>\n\n***\n\n## Upgrade Agno\n\nTo upgrade `agno`, run this in your virtual environment",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Install Agno",
+      "id": "install-agno"
+    },
+    {
+      "level": "h2",
+      "text": "Upgrade Agno",
+      "id": "upgrade-agno"
+    }
+  ],
+  "url": "llms-txt#install-&-setup",
+  "links": []
+}

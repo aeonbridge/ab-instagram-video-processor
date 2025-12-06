@@ -1,0 +1,29 @@
+{
+  "title": "Pubmed",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/pubmed\n\n**PubmedTools** enable an Agent to search for Pubmed for articles.\n\nThe following agent will search Pubmed for articles related to \"ulcerative colitis\".\n\n| Parameter              | Type   | Default                    | Description                                                            |\n| ---------------------- | ------ | -------------------------- | ---------------------------------------------------------------------- |\n| `email`                | `str`  | `\"your_email@example.com\"` | Specifies the email address to use.                                    |\n| `max_results`          | `int`  | `None`                     | Optional parameter to specify the maximum number of results to return. |\n| `enable_search_pubmed` | `bool` | `True`                     | Enable the search\\_pubmed functionality.                               |\n| `all`                  | `bool` | `False`                    | Enable all functionality.                                              |\n\n| Function        | Description                                                                                                                                                                                                                                                                                 |\n| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `search_pubmed` | Searches PubMed for articles based on a specified query. Parameters include `query` for the search term and `max_results` for the maximum number of results to return (default is 10). Returns a JSON string containing the search results, including publication date, title, and summary. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/pubmed.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/pubmed_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#pubmed",
+  "links": []
+}

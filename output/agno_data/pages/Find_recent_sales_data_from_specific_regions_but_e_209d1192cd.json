@@ -1,0 +1,8 @@
+{
+  "title": "Find recent sales data from specific regions, but exclude drafts",
+  "content": "complex_filter = AND(\n    EQ(\"data_type\", \"sales\"),\n    IN(\"region\", [\"north_america\", \"europe\"]),\n    GT(\"year\", 2022),\n    NOT(EQ(\"status\", \"draft\"))\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#find-recent-sales-data-from-specific-regions,-but-exclude-drafts",
+  "links": []
+}

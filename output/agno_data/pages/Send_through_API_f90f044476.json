@@ -1,0 +1,14 @@
+{
+  "title": "Send through API",
+  "content": "response = requests.post(\n    \"http://localhost:7777/agents/my-agent/runs\",\n    data={\n        \"message\": \"Find popular published articles\",\n        \"stream\": \"false\",\n        \"knowledge_filters\": filter_json,\n    }\n)\n```\n\n<Note>\n  FilterExpressions use a dictionary format with an `\"op\"` key (e.g., `{\"op\": \"EQ\", \"key\": \"status\", \"value\": \"published\"}`) which tells the API to deserialize them as FilterExpr objects. Regular dict filters without the `\"op\"` key continue to work for backward compatibility.\n</Note>\n\nFor detailed examples, API-specific patterns, and troubleshooting, see the [API Filtering Guide](/agent-os/knowledge/filter-knowledge).\n\n<CardGroup cols={2}>\n  <Card title=\"API Filtering Guide\" icon=\"code\" href=\"/agent-os/knowledge/filter-knowledge\">\n    Use filter expressions through the Agent OS API\n  </Card>\n\n<Card title=\"Search & Retrieval\" icon=\"magnifying-glass\" href=\"/basics/knowledge/search-and-retrieval/overview\">\n    Learn about different search strategies and optimization\n  </Card>\n\n<Card title=\"Content Database\" icon=\"database\" href=\"/basics/knowledge/content-db\">\n    Understand how content and metadata are stored and managed\n  </Card>\n\n<Card title=\"Knowledge Bases\" icon=\"book-open\" href=\"/basics/knowledge/knowledge-bases\">\n    Deep dive into knowledge base architecture and design\n  </Card>\n\n<Card title=\"Performance Tips\" icon=\"gauge\" href=\"/basics/knowledge/performance-tips\">\n    Optimize your filtered searches for speed and accuracy\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#send-through-api",
+  "links": []
+}

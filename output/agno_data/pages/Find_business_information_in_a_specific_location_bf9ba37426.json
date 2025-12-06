@@ -1,0 +1,24 @@
+{
+  "title": "Find business information in a specific location",
+  "content": "agent.print_response(\"What are the top-rated restaurants in San Francisco?\", markdown=True)\nagent.print_response(\"Find coffee shops in Prague\", markdown=True)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.apify import ApifyTools\n\nagent = Agent(\n    tools=[\n        ApifyTools(actors=[\n            \"apify/rag-web-browser\",\n            \"compass/crawler-google-places\"\n        ])\n    ]\n)",
+  "code_samples": [
+    {
+      "code": "## Example Scenarios\n\n### RAG Web Browser + Google Places Crawler\n\nThis example combines web search with local business data to provide comprehensive information about a topic:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example Scenarios",
+      "id": "example-scenarios"
+    },
+    {
+      "level": "h3",
+      "text": "RAG Web Browser + Google Places Crawler",
+      "id": "rag-web-browser-+-google-places-crawler"
+    }
+  ],
+  "url": "llms-txt#find-business-information-in-a-specific-location",
+  "links": []
+}

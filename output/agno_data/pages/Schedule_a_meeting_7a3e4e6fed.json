@@ -1,0 +1,29 @@
+{
+  "title": "Schedule a meeting",
+  "content": "response = agent.print_response(\"\"\"\nSchedule a team meeting with the following details:\n- Topic: Weekly Team Sync\n- Time: Tomorrow at 2 PM UTC\n- Duration: 45 minutes\n\"\"\", markdown=True)\n```\n\n| Parameter       | Type            | Default | Description                                                                          |\n| --------------- | --------------- | ------- | ------------------------------------------------------------------------------------ |\n| `account_id`    | `Optional[str]` | `None`  | Zoom account ID. If not provided, uses ZOOM\\_ACCOUNT\\_ID environment variable.       |\n| `client_id`     | `Optional[str]` | `None`  | Zoom client ID. If not provided, uses ZOOM\\_CLIENT\\_ID environment variable.         |\n| `client_secret` | `Optional[str]` | `None`  | Zoom client secret. If not provided, uses ZOOM\\_CLIENT\\_SECRET environment variable. |\n\n| Function                 | Description                                       |\n| ------------------------ | ------------------------------------------------- |\n| `schedule_meeting`       | Schedule a new Zoom meeting                       |\n| `get_upcoming_meetings`  | Get a list of upcoming meetings                   |\n| `list_meetings`          | List all meetings based on type                   |\n| `get_meeting_recordings` | Get recordings for a specific meeting             |\n| `delete_meeting`         | Delete a scheduled meeting                        |\n| `get_meeting`            | Get detailed information about a specific meeting |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\nThe Zoom API has rate limits that vary by endpoint and account type:\n\n* Server-to-Server OAuth apps: 100 requests/second\n* Meeting endpoints: Specific limits apply based on account type\n* Recording endpoints: Lower rate limits, check Zoom documentation\n\nFor detailed rate limits, refer to [Zoom API Rate Limits](https://developers.zoom.us/docs/api/#rate-limits).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/zoom.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/zoom_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Rate Limits",
+      "id": "rate-limits"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#schedule-a-meeting",
+  "links": []
+}

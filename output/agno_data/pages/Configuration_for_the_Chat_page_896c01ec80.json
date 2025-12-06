@@ -1,0 +1,8 @@
+{
+  "title": "Configuration for the Chat page",
+  "content": "chat:\n  quick_prompts:\n    <AGENT_ID>:\n      - <PROMPT_1>\n      - <PROMPT_2>\n      - <PROMPT_3>\n      ...\n    ...",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configuration-for-the-chat-page",
+  "links": []
+}

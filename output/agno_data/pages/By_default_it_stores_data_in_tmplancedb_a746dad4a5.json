@@ -1,0 +1,8 @@
+{
+  "title": "By default, it stores data in /tmp/lancedb",
+  "content": "vector_db = LanceDb(\n    table_name=\"recipes\",\n    uri=\"tmp/lancedb\",  # You can change this path to store data elsewhere\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#by-default,-it-stores-data-in-/tmp/lancedb",
+  "links": []
+}

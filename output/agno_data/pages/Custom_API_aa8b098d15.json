@@ -1,0 +1,43 @@
+{
+  "title": "Custom API",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/custom-api\n\n**CustomApiTools** enable an Agent to make HTTP requests to any external API with customizable authentication and parameters.\n\nThe following example requires the `requests` library.\n\nThe following agent will use CustomApiTools to make API calls to the Dog CEO API.\n\n| Parameter             | Type             | Default | Description                                 |\n| --------------------- | ---------------- | ------- | ------------------------------------------- |\n| `base_url`            | `str`            | `None`  | Base URL for API calls                      |\n| `username`            | `str`            | `None`  | Username for basic authentication           |\n| `password`            | `str`            | `None`  | Password for basic authentication           |\n| `api_key`             | `str`            | `None`  | API key for bearer token authentication     |\n| `headers`             | `Dict[str, str]` | `None`  | Default headers to include in requests      |\n| `verify_ssl`          | `bool`           | `True`  | Whether to verify SSL certificates          |\n| `timeout`             | `int`            | `30`    | Request timeout in seconds                  |\n| `enable_make_request` | `bool`           | `True`  | Enables functionality to make HTTP requests |\n| `all`                 | `bool`           | `False` | Enables all functionality when set to True  |\n\n| Function       | Description                                                                                                                                |\n| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |\n| `make_request` | Makes an HTTP request to the API. Takes method (GET, POST, etc.), endpoint, and optional params, data, headers, and json\\_data parameters. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/api.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/custom_api_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will use CustomApiTools to make API calls to the Dog CEO API.",
+      "language": "unknown"
+    },
+    {
+      "code": "## Toolkit Params\n\n| Parameter             | Type             | Default | Description                                 |\n| --------------------- | ---------------- | ------- | ------------------------------------------- |\n| `base_url`            | `str`            | `None`  | Base URL for API calls                      |\n| `username`            | `str`            | `None`  | Username for basic authentication           |\n| `password`            | `str`            | `None`  | Password for basic authentication           |\n| `api_key`             | `str`            | `None`  | API key for bearer token authentication     |\n| `headers`             | `Dict[str, str]` | `None`  | Default headers to include in requests      |\n| `verify_ssl`          | `bool`           | `True`  | Whether to verify SSL certificates          |\n| `timeout`             | `int`            | `30`    | Request timeout in seconds                  |\n| `enable_make_request` | `bool`           | `True`  | Enables functionality to make HTTP requests |\n| `all`                 | `bool`           | `False` | Enables all functionality when set to True  |\n\n## Toolkit Functions\n\n| Function       | Description                                                                                                                                |\n| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |\n| `make_request` | Makes an HTTP request to the API. Takes method (GET, POST, etc.), endpoint, and optional params, data, headers, and json\\_data parameters. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/api.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/custom_api_tools.py)",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#custom-api",
+  "links": []
+}

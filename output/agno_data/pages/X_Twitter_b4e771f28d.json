@@ -1,0 +1,33 @@
+{
+  "title": "X (Twitter)",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/x\n\n**XTools** allows an Agent to interact with X, providing functionality for posting, messaging, and searching tweets.\n\nInstall the required library:\n\n<Info>Tweepy is a Python library for interacting with the X API.</Info>\n\n1. **Create X Developer Account**\n\n* Visit [developer.x.com](https://developer.x.com) and apply for developer access\n   * Create a new project and app in your developer portal\n\n2. **Generate API Credentials**\n\n* Navigate to your app's \"Keys and tokens\" section\n   * Generate and copy these credentials:\n     * API Key & Secret\n     * Bearer Token\n     * Access Token & Secret\n\n3. **Configure Environment**\n\n```python cookbook/tools/x_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.x import XTools",
+  "code_samples": [
+    {
+      "code": "<Info>Tweepy is a Python library for interacting with the X API.</Info>\n\n## Setup\n\n1. **Create X Developer Account**\n\n   * Visit [developer.x.com](https://developer.x.com) and apply for developer access\n   * Create a new project and app in your developer portal\n\n2. **Generate API Credentials**\n\n   * Navigate to your app's \"Keys and tokens\" section\n   * Generate and copy these credentials:\n     * API Key & Secret\n     * Bearer Token\n     * Access Token & Secret\n\n3. **Configure Environment**",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#x-(twitter)",
+  "links": []
+}

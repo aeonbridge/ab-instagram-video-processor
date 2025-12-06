@@ -1,0 +1,14 @@
+{
+  "title": "GCS for Team",
+  "content": "Source: https://docs.agno.com/integrations/database/gcs/usage/gcs-for-team\n\nAgno supports using Google Cloud Storage (GCS) as a storage backend for Teams using the `GcsJsonDb` class. This storage backend stores session data as JSON blobs in a GCS bucket.\n\nConfigure your team with GCS storage to enable cloud-based session persistence.\n\n```python gcs_for_team.py theme={null}\n\"\"\"\nRun: `pip install openai ddgs newspaper4k lxml_html_clean agno` to install the dependencies\n\"\"\"\n\nimport uuid\nimport google.auth\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.db.gcs_json import GcsJsonDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom pydantic import BaseModel",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#gcs-for-team",
+  "links": []
+}

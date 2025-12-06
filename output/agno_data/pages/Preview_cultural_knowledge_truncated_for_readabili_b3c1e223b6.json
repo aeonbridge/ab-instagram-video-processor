@@ -1,0 +1,34 @@
+{
+  "title": "Preview cultural knowledge (truncated for readability)",
+  "content": "for knowledge in all_knowledge:\n    print(knowledge.preview())\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Cultural Knowledge Data Model\n\nEach cultural knowledge entry in your database contains the following fields:\n\n| Field        | Type   | Description                                       |\n| ------------ | ------ | ------------------------------------------------- |\n| `id`         | `str`  | Unique identifier (auto-generated)                |\n| `name`       | `str`  | Name/title of the cultural knowledge              |\n| `content`    | `str`  | The main content of the principle/knowledge       |\n| `summary`    | `str`  | Brief summary of the knowledge                    |\n| `categories` | `list` | Categories (e.g., \"communication\", \"engineering\") |\n| `notes`      | `list` | Additional notes or context                       |\n| `metadata`   | `dict` | Arbitrary metadata (source, version, etc.)        |\n| `input`      | `str`  | Original input that generated this knowledge      |\n| `created_at` | `int`  | Timestamp when created (epoch seconds)            |\n| `updated_at` | `int`  | Timestamp when last updated (epoch seconds)       |\n| `agent_id`   | `str`  | ID of the agent that created it                   |\n| `team_id`    | `str`  | ID of the team associated with it                 |\n\n## Best Practices\n\n1. **Start with Manual Seeding:** Define core organizational principles, communication standards, and best practices upfront\n2. **Use Automatic Updates in Production:** Let `update_cultural_knowledge=True` handle the evolution naturally\n3. **Review Periodically:** Check what cultural knowledge has accumulated and refine as needed\n4. **Keep Culture Focused:** Culture should contain universal principles, not task-specific details\n5. **Combine with Memory:** Use Culture for \"how we do things\" and Memory for \"what I know about you\"\n\n## Common Use Cases\n\n### Technical Documentation Standards",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Cultural Knowledge Data Model",
+      "id": "cultural-knowledge-data-model"
+    },
+    {
+      "level": "h2",
+      "text": "Best Practices",
+      "id": "best-practices"
+    },
+    {
+      "level": "h2",
+      "text": "Common Use Cases",
+      "id": "common-use-cases"
+    },
+    {
+      "level": "h3",
+      "text": "Technical Documentation Standards",
+      "id": "technical-documentation-standards"
+    }
+  ],
+  "url": "llms-txt#preview-cultural-knowledge-(truncated-for-readability)",
+  "links": []
+}

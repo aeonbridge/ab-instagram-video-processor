@@ -1,0 +1,19 @@
+{
+  "title": "Debug search quality",
+  "content": "results = knowledge.search(\"your query\", max_results=10)\nif not results:\n    content_list, count = knowledge.get_content()\n    print(f\"Total content items: {count}\")\n    \n    # Check for failed content\n    for content in content_list[:5]:\n        status, message = knowledge.get_content_status(content.id)\n        print(f\"{content.name}: {status}\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Issue: Content Loading is Slow\n\n**What's happening:** Processing large files without batching, or using semantic chunking on huge datasets.\n\n**Quick fixes:**\n\n1. Use `skip_if_exists=True` to avoid reprocessing\n2. Switch to fixed-size chunking for faster processing\n3. Process in batches instead of all at once\n4. Use file filters to only process what you need",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Issue: Content Loading is Slow",
+      "id": "issue:-content-loading-is-slow"
+    }
+  ],
+  "url": "llms-txt#debug-search-quality",
+  "links": []
+}

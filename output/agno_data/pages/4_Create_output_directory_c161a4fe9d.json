@@ -1,0 +1,8 @@
+{
+  "title": "4. Create output directory",
+  "content": "output_dir = Path(output_dir)\noutput_dir.mkdir(parents=True, exist_ok=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#4.-create-output-directory",
+  "links": []
+}

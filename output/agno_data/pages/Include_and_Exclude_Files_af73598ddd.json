@@ -1,0 +1,14 @@
+{
+  "title": "Include and Exclude Files",
+  "content": "Source: https://docs.agno.com/basics/knowledge/getting-started/usage/include-exclude-files\n\n```python 08_include_exclude_files.py theme={null}\nimport asyncio\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#include-and-exclude-files",
+  "links": []
+}

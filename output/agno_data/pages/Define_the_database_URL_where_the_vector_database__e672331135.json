@@ -1,0 +1,8 @@
+{
+  "title": "Define the database URL where the vector database will be stored",
+  "content": "db_url = \"/tmp/lancedb\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-the-database-url-where-the-vector-database-will-be-stored",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Clean workflow with clear branching",
+  "content": "media_workflow = Workflow(\n    name=\"AI Media Generation Workflow\",\n    description=\"Generate and analyze images or videos using AI agents\",\n    steps=[\n        Router(\n            name=\"Media Type Router\",\n            description=\"Routes to appropriate media generation pipeline\",\n            selector=media_sequence_selector,\n            choices=[image_sequence, video_sequence],  # Clear choices\n        )\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#clean-workflow-with-clear-branching",
+  "links": []
+}

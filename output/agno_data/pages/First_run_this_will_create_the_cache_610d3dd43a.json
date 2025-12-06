@@ -1,0 +1,8 @@
+{
+  "title": "First run - this will create the cache",
+  "content": "response = agent.run(\n    \"Explain the difference between REST and GraphQL APIs with examples\"\n)\nif response and response.metrics:\n    print(f\"First run cache write tokens = {response.metrics.cache_write_tokens}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#first-run---this-will-create-the-cache",
+  "links": []
+}

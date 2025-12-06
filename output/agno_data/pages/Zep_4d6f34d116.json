@@ -1,0 +1,28 @@
+{
+  "title": "Zep",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/database/zep\n\nThe ZepTools toolkit enables an Agent to interact with a Zep memory system, providing capabilities to store, retrieve, and search memory data associated with user sessions.\n\n**ZepTools** enable an Agent to interact with a Zep memory system, providing capabilities to store, retrieve, and search memory data associated with user sessions.\n\nThe ZepTools require the `zep-cloud` Python package and a Zep API key.\n\nThe following example demonstrates how to create an agent with access to Zep memory:\n\n```python cookbook/tools/zep_tools.py theme={null}\nimport time\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.zep import ZepTools",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following example demonstrates how to create an agent with access to Zep memory:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#zep",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "- `llama-3.3-70b-versatile` to generate the final response",
+  "content": "reasoning_agent = Agent(\n    model=Groq(id=\"llama-3.3-70b-versatile\"),\n    reasoning_model=Groq(\n        id=\"deepseek-r1-distill-llama-70b\", temperature=0.6, max_tokens=1024, top_p=0.95\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#--`llama-3.3-70b-versatile`-to-generate-the-final-response",
+  "links": []
+}

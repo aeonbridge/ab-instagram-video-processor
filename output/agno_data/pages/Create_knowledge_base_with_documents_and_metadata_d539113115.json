@@ -1,0 +1,8 @@
+{
+  "title": "Create knowledge base with documents and metadata",
+  "content": "knowledge = Knowledge(\n    name=\"CSV Knowledge Base\",\n    description=\"A knowledge base for CSV files\",\n    vector_db=vector_db,\n)\n\nknowledge.add_contents(\n    [\n        {\n            \"path\": downloaded_csv_paths[0],\n            \"metadata\": {\n                \"data_type\": \"sales\",\n                \"quarter\": \"Q1\",\n                \"year\": 2024,\n                \"region\": \"north_america\",\n                \"currency\": \"USD\",\n            },\n        },\n        {\n            \"path\": downloaded_csv_paths[1],\n            \"metadata\": {\n                \"data_type\": \"sales\",\n                \"year\": 2024,\n                \"region\": \"europe\",\n                \"currency\": \"EUR\",\n            },\n        },\n        {\n            \"path\": downloaded_csv_paths[2],\n            \"metadata\": {\n                \"data_type\": \"survey\",\n                \"survey_type\": \"customer_satisfaction\",\n                \"year\": 2024,\n                \"target_demographic\": \"mixed\",\n            },\n        },\n        {\n            \"path\": downloaded_csv_paths[3],\n            \"metadata\": {\n                \"data_type\": \"financial\",\n                \"sector\": \"technology\",\n                \"year\": 2024,\n                \"report_type\": \"quarterly_earnings\",\n            },\n        },\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-knowledge-base-with-documents-and-metadata",
+  "links": []
+}

@@ -1,0 +1,38 @@
+{
+  "title": "LangDB",
+  "content": "Source: https://docs.agno.com/integrations/observability/langdb\n\nIntegrate Agno with LangDB to trace agent execution, tool calls, and gain comprehensive observability into your agent's performance.\n\n## Integrating Agno with LangDB\n\n[LangDB](https://langdb.ai/) provides an AI Gateway platform for comprehensive observability and tracing of AI agents and LLM interactions. By integrating Agno with LangDB, you can gain full visibility into your agent's operations, including agent runs, tool calls, team interactions, and performance metrics.\n\nFor detailed integration instructions, see the [LangDB Agno documentation](https://docs.langdb.ai/getting-started/working-with-agent-frameworks/working-with-agno).\n\n<Frame caption=\"LangDB Finance Team Trace\">\n  <img src=\"https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-trace.png?fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=12aaf8fd6e3e9ce0dcca4e7bd0da9c43\" style={{ borderRadius: '10px', width: '100%', maxWidth: '800px' }} alt=\"langdb-agno finance team observability\" data-og-width=\"1623\" width=\"1623\" data-og-height=\"900\" height=\"900\" data-path=\"images/langdb-finance-trace.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-trace.png?w=280&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=44bb9cf4c423a327b5459917cd3562cb 280w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-trace.png?w=560&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=a2589678cacdac15c3b5c8dc21903189 560w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-trace.png?w=840&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=b3aeeed6a9e129f4465d41d2e9e75929 840w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-trace.png?w=1100&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=d803a20ad4a20d1871212d0c23156624 1100w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-trace.png?w=1650&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=3f5eb5fa7780f3c740331550747b190b 1650w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-trace.png?w=2500&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=a397f1a8bb1d2e1ef366866ec6484a04 2500w\" />\n</Frame>\n\n1. **Install Dependencies**\n\nEnsure you have the necessary packages installed:\n\n2. **Setup LangDB Account**\n\n* Sign up for an account at [LangDB](https://app.langdb.ai/signup)\n   * Create a new project in the LangDB dashboard\n   * Obtain your API key and Project ID from the project settings\n\n3. **Set Environment Variables**\n\nConfigure your environment with the LangDB credentials:\n\n## Sending Traces to LangDB\n\n### Example: Basic Agent Setup\n\nThis example demonstrates how to instrument your Agno agent with LangDB tracing.\n\n```python  theme={null}\nfrom pylangdb.agno import init",
+  "code_samples": [
+    {
+      "code": "2. **Setup LangDB Account**\n\n   * Sign up for an account at [LangDB](https://app.langdb.ai/signup)\n   * Create a new project in the LangDB dashboard\n   * Obtain your API key and Project ID from the project settings\n\n3. **Set Environment Variables**\n\n   Configure your environment with the LangDB credentials:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Sending Traces to LangDB\n\n### Example: Basic Agent Setup\n\nThis example demonstrates how to instrument your Agno agent with LangDB tracing.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with LangDB",
+      "id": "integrating-agno-with-langdb"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Sending Traces to LangDB",
+      "id": "sending-traces-to-langdb"
+    },
+    {
+      "level": "h3",
+      "text": "Example: Basic Agent Setup",
+      "id": "example:-basic-agent-setup"
+    }
+  ],
+  "url": "llms-txt#langdb",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Set environment variables for Langfuse",
+  "content": "LANGFUSE_AUTH = base64.b64encode(\n    f\"{os.getenv('LANGFUSE_PUBLIC_KEY')}:{os.getenv('LANGFUSE_SECRET_KEY')}\".encode()\n).decode()\nos.environ[\"OTEL_EXPORTER_OTLP_ENDPOINT\"] = \"https://us.cloud.langfuse.com/api/public/otel\"\nos.environ[\"OTEL_EXPORTER_OTLP_HEADERS\"] = f\"Authorization=Basic {LANGFUSE_AUTH}\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-environment-variables-for-langfuse",
+  "links": []
+}

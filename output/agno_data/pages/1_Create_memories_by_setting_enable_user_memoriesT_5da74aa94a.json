@@ -1,0 +1,8 @@
+{
+  "title": "1. Create memories by setting `enable_user_memories=True` in the Agent",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n)\nteam = Team(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[agent],\n    db=db,\n    enable_user_memories=True,\n)\n\nteam.print_response(\n    \"My name is John Doe and I like to hike in the mountains on weekends.\",\n    stream=True,\n    user_id=john_doe_id,\n    session_id=session_id,\n)\n\nteam.print_response(\n    \"What are my hobbies?\", stream=True, user_id=john_doe_id, session_id=session_id\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#1.-create-memories-by-setting-`enable_user_memories=true`-in-the-agent",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Define agents with specific roles",
+  "content": "researcher = Agent(\n    name=\"Researcher\",\n    instructions=\"Find relevant information about the topic\",\n    tools=[DuckDuckGoTools()]\n)\n\nwriter = Agent(\n    name=\"Writer\",\n    instructions=\"Write a clear, engaging article based on the research\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-agents-with-specific-roles",
+  "links": []
+}

@@ -1,0 +1,36 @@
+{
+  "title": "2. Continue with approval (use the run_id and tool_call_id from response)",
+  "content": "curl -X POST http://localhost:7777/agents/data_manager/runs/{run_id}/continue \\\n  -F \"tools=[{\\\"tool_call_id\\\": \\\"{tool_call_id}\\\", \\\"confirmed\\\": true}]\" \\\n  -F \"session_id=test_session\" \\\n  -F \"stream=false\"\nbash  theme={null}\n    export OPENAI_API_KEY=your_openai_api_key\n    bash  theme={null}\n    pip install -U agno fastapi uvicorn sqlalchemy pgvector psycopg openai\n    bash  theme={null}\n    docker run -d \\\n      --name agno-postgres \\\n      -e POSTGRES_DB=ai \\\n      -e POSTGRES_USER=ai \\\n      -e POSTGRES_PASSWORD=ai \\\n      -p 5532:5432 \\\n      pgvector/pgvector:pg17\n    bash  theme={null}\n    python hitl_confirmation.py\n    ```\n  </Step>\n</Steps>\n\n<CardGroup cols={3}>\n  <Card title=\"HITL Getting Started\" icon=\"hand\" href=\"/examples/getting-started/12-human-in-the-loop\">\n    Learn HITL basics with a simple example\n  </Card>\n\n<Card title=\"HITL Concepts\" icon=\"book\" href=\"/basics/hitl/overview\">\n    Understand HITL patterns and best practices\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Setup PostgreSQL Database\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Learn More",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#2.-continue-with-approval-(use-the-run_id-and-tool_call_id-from-response)",
+  "links": []
+}

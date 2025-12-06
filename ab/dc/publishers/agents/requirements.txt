@@ -1,0 +1,13 @@
+# AI Metadata Generator Agent Dependencies
+
+# Agno framework for AI agents
+agno>=0.1.0
+
+# OpenAI API
+openai>=1.0.0
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# Optional: for better JSON parsing
+pydantic>=2.0.0

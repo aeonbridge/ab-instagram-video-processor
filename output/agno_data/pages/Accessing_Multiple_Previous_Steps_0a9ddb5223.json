@@ -1,0 +1,14 @@
+{
+  "title": "Accessing Multiple Previous Steps",
+  "content": "Source: https://docs.agno.com/basics/workflows/access-previous-steps\n\nHow to access multiple previous steps\n\nAdvanced workflows often require data from multiple previous steps beyond just the immediate predecessor. The `StepInput` object provides powerful methods to access any previous step's output by name or retrieve all accumulated content.\n\n```python  theme={null}\ndef create_comprehensive_report(step_input: StepInput) -> StepOutput:\n    \"\"\"\n    Custom function that creates a report using data from multiple previous steps.\n    This function has access to ALL previous step outputs and the original workflow message.\n    \"\"\"\n\n# Access original workflow input\n    original_topic = step_input.workflow_message or \"\"\n\n# Access specific step outputs by name\n    hackernews_data = step_input.get_step_content(\"research_hackernews\") or \"\"\n    web_data = step_input.get_step_content(\"research_web\") or \"\"\n\n# Or access ALL previous content\n    all_research = step_input.get_all_previous_content()\n\n# Create a comprehensive report combining all sources\n    report = f\"\"\"\n        # Comprehensive Research Report: {original_topic}\n\n## Executive Summary\n        Based on research from HackerNews and web sources, here's a comprehensive analysis of {original_topic}.\n\n## HackerNews Insights\n        {hackernews_data[:500]}...\n\n## Web Research Findings  \n        {web_data[:500]}...\n    \"\"\"\n\nreturn StepOutput(\n        step_name=\"comprehensive_report\", \n        content=report.strip(), \n        success=True\n    )",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#accessing-multiple-previous-steps",
+  "links": []
+}

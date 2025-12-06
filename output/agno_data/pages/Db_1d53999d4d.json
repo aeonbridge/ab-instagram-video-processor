@@ -1,0 +1,14 @@
+{
+  "title": "Db",
+  "content": "Source: https://docs.agno.com/integrations/models/native/openai/responses/usage/db\n\n```python cookbook/models/openai/responses/db.py theme={null}\n\"\"\"Run `pip install ddgs sqlalchemy openai` to install dependencies.\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIResponses\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#db",
+  "links": []
+}

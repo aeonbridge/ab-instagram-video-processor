@@ -1,0 +1,14 @@
+{
+  "title": "Updating an Agent's Tools",
+  "content": "Source: https://docs.agno.com/basics/tools/attaching-tools\n\nLearn how to add/update tools on Agents and Teams after they have been created.\n\nTools can be added to Agents and Teams post-creation. This gives you the flexibility to add tools to an existing Agent or Team instance after initialization, which is useful for dynamic tool management or when you need to conditionally add tools based on runtime requirements.\nThe whole collection of tools available to an Agent or Team can also be updated by using the `set_tools` call. Note that this will remove any other tools already assigned to your Agent or Team and override it with the list of tools provided to `set_tools`.\n\nCreate your own tool, for example `get_weather`. Then call `add_tool` to attach it to your Agent.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Agent Example",
+      "id": "agent-example"
+    }
+  ],
+  "url": "llms-txt#updating-an-agent's-tools",
+  "links": []
+}

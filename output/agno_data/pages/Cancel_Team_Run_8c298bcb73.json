@@ -1,0 +1,8 @@
+{
+  "title": "Cancel Team Run",
+  "content": "Source: https://docs.agno.com/reference-api/schema/teams/cancel-team-run\n\npost /teams/{team_id}/runs/{run_id}/cancel\nCancel a currently executing team run. This will attempt to stop the team's execution gracefully.\n\n**Note:** Cancellation may not be immediate for all operations.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#cancel-team-run",
+  "links": []
+}

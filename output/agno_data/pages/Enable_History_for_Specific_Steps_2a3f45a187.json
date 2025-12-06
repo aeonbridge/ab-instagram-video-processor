@@ -1,0 +1,8 @@
+{
+  "title": "Enable History for Specific Steps",
+  "content": "Source: https://docs.agno.com/basics/chat-history/workflow/usage/enable-history-for-step\n\nThis example demonstrates a workflow with history enabled for a specific step.\n\nThis example shows how to use the `add_workflow_history` flag to add workflow history to a specific step in the workflow.\nIn this case we have a workflow with three steps.\n\n* The first step is a research specialist that gathers information on topics.\n* The second step is a content creator that writes engaging content.\n* The third step is a content publisher that prepares the content for publication.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#enable-history-for-specific-steps",
+  "links": []
+}

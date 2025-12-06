@@ -1,0 +1,8 @@
+{
+  "title": "Example 1: Using IN operator with teams",
+  "content": "print(\"Using IN operator\")\nteam_with_knowledge.print_response(\n    \"Tell me about the candidate's work and experience\",\n    knowledge_filters=[\n        IN(\n            \"user_id\",\n            [\n                \"jordan_mitchell\",\n                \"taylor_brooks\",\n                \"morgan_lee\",\n                \"casey_jordan\",\n                \"alex_rivera\",\n            ],\n        )\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-1:-using-in-operator-with-teams",
+  "links": []
+}

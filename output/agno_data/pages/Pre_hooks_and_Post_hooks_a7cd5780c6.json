@@ -1,0 +1,29 @@
+{
+  "title": "Pre-hooks and Post-hooks",
+  "content": "Source: https://docs.agno.com/basics/hooks/overview\n\nLearn about using pre-hooks and post-hooks with your agents.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.1.0\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.1.0\">v2.1.0</Tooltip>\n</Badge>\n\nYou can use hooks on agents and teams to do work before or after the main execution of the run.\n\nUse cases for hooks include:\n\n* Security guardrails (e.g. PII detection, prompt injection defense)\n* Input validation\n* Output validation\n* Data preprocessing (e.g. normalizing input data)\n* Data postprocessing (e.g. adding additional context to the output)\n* Logging (e.g. logging the duration of the run)\n* Debugging (e.g. debugging the run)\n\n## When Hooks Are Triggered\n\nHooks execute at specific points in the Agent/Team run lifecycle:\n\n* **Pre-hooks**: Execute immediately after the current session is loaded, **before** any processing begins. They run before the model context is prepared and before any LLM execution begins, i.e. any modifications to the input, session state, or dependencies will be applied before LLM execution.\n\n* **Post-hooks**: Execute **after** the Agent/Team generates a response and the output is prepared, but **before** the response is returned to the user. In streaming responses, they run after each chunk of the response is generated.\n\nPre-hooks execute at the very beginning of your Agent run, giving you complete control over what reaches the LLM.\n\nThey're perfect for implementing input validation, security checks, or any data preprocessing against the input your Agent receives.\n\n**Security Guardrails**\n\n* Detect and prevent PII (Personally Identifiable Information) from reaching the LLM.\n* Defend against prompt injection and jailbreak attempts.\n* Filter NSFW or inappropriate content.\n* See the [Guardrails](/basics/guardrails/overview) documentation for more details.\n\n* Validate format, length, content or any other property of the input.\n* Remove or mask sensitive information.\n* Normalize input data.\n\n**Data Preprocessing**\n\n* Transform input format or structure.\n* Enrich input with additional context.\n* Apply any other business logic before sending the input to the LLM.\n\nLet's create a simple pre-hook that validates the input length and raises an error if it's too long:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.exceptions import CheckTrigger, InputCheckError\nfrom agno.run.agent import RunInput",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "When Hooks Are Triggered",
+      "id": "when-hooks-are-triggered"
+    },
+    {
+      "level": "h2",
+      "text": "Pre-hooks",
+      "id": "pre-hooks"
+    },
+    {
+      "level": "h3",
+      "text": "Common Use Cases",
+      "id": "common-use-cases"
+    },
+    {
+      "level": "h3",
+      "text": "Basic Example",
+      "id": "basic-example"
+    }
+  ],
+  "url": "llms-txt#pre-hooks-and-post-hooks",
+  "links": []
+}

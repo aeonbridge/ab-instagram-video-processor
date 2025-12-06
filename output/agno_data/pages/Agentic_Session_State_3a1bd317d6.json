@@ -1,0 +1,21 @@
+{
+  "title": "Agentic Session State",
+  "content": "Source: https://docs.agno.com/basics/state/team/usage/agentic-session-state\n\nThis example demonstrates how to enable agentic session state in teams and agents, allowing them to automatically manage and update their session state during interactions. The agents can modify the session state autonomously based on the conversation context.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    Create a file `agentic_session_state.py`\n  </Step>\n\n<Step title=\"Add code to file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Snippet file=\"set-openai-key.mdx\" />\n\n<Step title=\"Run the team\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"set-openai-key.mdx\" />\n\n  <Step title=\"Run the team\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#agentic-session-state",
+  "links": []
+}

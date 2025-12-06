@@ -1,0 +1,8 @@
+{
+  "title": "Setup team members",
+  "content": "research_agent = Agent(\n    name=\"Research Agent\",\n    role=\"Analyze candidate information\",\n    knowledge=knowledge_base\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-team-members",
+  "links": []
+}

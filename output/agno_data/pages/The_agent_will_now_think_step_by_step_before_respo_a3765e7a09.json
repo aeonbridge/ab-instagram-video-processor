@@ -1,0 +1,14 @@
+{
+  "title": "The agent will now think step-by-step before responding",
+  "content": "reasoning_agent.print_response(\n    \"Solve the trolley problem. Evaluate multiple ethical frameworks. Include an ASCII diagram of your solution.\",\n    stream=True,\n    show_full_reasoning=True,\n)\n```\n\n**Learn more:** [Reasoning Agents Guide](/basics/reasoning/reasoning-agents)\n\n## Choosing the Right Approach\n\nHere's how the three approaches compare:\n\n| Approach             | Transparency                       | Best Use Case                  | Model Requirements                |\n| -------------------- | ---------------------------------- | ------------------------------ | --------------------------------- |\n| **Reasoning Models** | Continuous (full reasoning trace)  | Single-shot complex problems   | Requires reasoning-capable models |\n| **Reasoning Tools**  | Structured (explicit step-by-step) | Structured research & analysis | Works with any model              |\n| **Reasoning Agents** | Iterative (agent interactions)     | Multi-step tool-based tasks    | Works with any model              |",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Choosing the Right Approach",
+      "id": "choosing-the-right-approach"
+    }
+  ],
+  "url": "llms-txt#the-agent-will-now-think-step-by-step-before-responding",
+  "links": []
+}

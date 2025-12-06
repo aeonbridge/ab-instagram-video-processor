@@ -1,0 +1,8 @@
+{
+  "title": "Check if team has session state and display information",
+  "content": "print(\"\\n📊 Team Session Info:\")\nsession = team.get_session()\nprint(f\"   Session ID: {session.session_id}\")\nprint(f\"   Session State: {session.session_data['session_state']}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#check-if-team-has-session-state-and-display-information",
+  "links": []
+}

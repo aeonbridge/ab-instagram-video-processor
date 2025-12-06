@@ -1,0 +1,14 @@
+{
+  "title": "Agent Memory",
+  "content": "Source: https://docs.agno.com/basics/memory/agent/overview\n\nMemory gives an Agent the ability to recall information about the user.\n\nMemory is a part of the Agent's context that helps it provide the best, most personalized response.\n\n<Tip>\n  If the user tells the Agent they like to ski, then future responses can reference this information to provide a more personalized experience.\n</Tip>\n\nHere's a simple example of using Memory in an Agent.\n\n```python memory_demo.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.db.postgres import PostgresDb\nfrom rich.pretty import pprint\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\ndb = PostgresDb(\n  db_url=db_url,\n  memory_table=\"user_memories\",  # Optionally specify a table name for the memories\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "User Memories",
+      "id": "user-memories"
+    }
+  ],
+  "url": "llms-txt#agent-memory",
+  "links": []
+}

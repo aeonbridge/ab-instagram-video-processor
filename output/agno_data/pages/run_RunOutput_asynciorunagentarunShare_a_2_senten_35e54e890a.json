@@ -1,0 +1,8 @@
+{
+  "title": "run: RunOutput = asyncio.run(agent.arun(\"Share a 2 sentence horror story\"))",
+  "content": "",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run:-runoutput-=-asyncio.run(agent.arun(\"share-a-2-sentence-horror-story\"))",
+  "links": []
+}

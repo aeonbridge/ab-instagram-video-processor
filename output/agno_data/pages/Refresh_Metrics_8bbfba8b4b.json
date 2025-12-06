@@ -1,0 +1,8 @@
+{
+  "title": "Refresh Metrics",
+  "content": "Source: https://docs.agno.com/reference-api/schema/metrics/refresh-metrics\n\npost /metrics/refresh\nManually trigger recalculation of system metrics from raw data. This operation analyzes system activity logs and regenerates aggregated metrics. Useful for ensuring metrics are up-to-date or after system maintenance.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#refresh-metrics",
+  "links": []
+}

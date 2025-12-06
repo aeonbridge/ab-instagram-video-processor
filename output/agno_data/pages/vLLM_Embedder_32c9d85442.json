@@ -1,0 +1,41 @@
+{
+  "title": "vLLM Embedder",
+  "content": "Source: https://docs.agno.com/basics/knowledge/embedder/vllm/usage/vllm-embedder\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run PgVector\">\n    \n  </Step>\n\n<Step title=\"Run the example\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* This example uses **local mode** where vLLM loads the model directly (no server needed)\n* For **remote mode**, the code includes `knowledge_remote` example with `base_url` parameter\n* GPU with \\~14GB VRAM required for e5-mistral-7b-instruct model\n* For CPU-only or lower memory, use smaller models like `BAAI/bge-small-en-v1.5`\n* Models are automatically downloaded from HuggingFace on first use",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run PgVector\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Notes",
+      "id": "notes"
+    }
+  ],
+  "url": "llms-txt#vllm-embedder",
+  "links": []
+}

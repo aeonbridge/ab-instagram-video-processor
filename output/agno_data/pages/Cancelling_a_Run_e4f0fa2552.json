@@ -1,0 +1,19 @@
+{
+  "title": "Cancelling a Run",
+  "content": "Source: https://docs.agno.com/execution-control/run-cancellation/overview\n\nLearn how to cancel an Agent, Team, or Workflow run.\n\nRun cancellation provides the ability to stop running agent, team, or workflow executions. This feature is useful for managing long-running operations, implementing timeouts, or allowing users to interrupt processes.\n\nThe `cancel_run()` function marks a run for cancellation. Execution stops gracefully once the current step completes, ensuring that operations finish cleanly without leaving resources in an inconsistent state.\n\n**Cancellation Behavior:**\n\n* **Non-Streaming Runs**: The `RunOutput` object is returned with status set to `RunStatus.cancelled`.\n* **Streaming Runs**: A `RunCancelledEvent` is emitted when cancellation occurs.\n\n## Cancellation Methods\n\n<CardGroup cols={3}>\n  <Card title=\"Agent Run Cancellation\" icon=\"user-astronaut\" iconType=\"duotone\" href=\"/execution-control/run-cancellation/agent-cancel-run\">\n    Cancel agent runs programmatically or via API endpoints.\n  </Card>\n\n<Card title=\"Team Run Cancellation\" icon=\"users\" iconType=\"duotone\" href=\"/execution-control/run-cancellation/team-cancel-run\">\n    Cancel team runs and handle member run cancellations.\n  </Card>\n\n<Card title=\"Workflow Run Cancellation\" icon=\"diagram-project\" iconType=\"duotone\" href=\"/execution-control/run-cancellation/workflow-cancel-run\">\n    Cancel workflow executions and manage step-level cancellation.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Cancellation Methods",
+      "id": "cancellation-methods"
+    }
+  ],
+  "url": "llms-txt#cancelling-a-run",
+  "links": []
+}

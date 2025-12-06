@@ -1,0 +1,39 @@
+{
+  "title": "OpenCL",
+  "content": "make LLAMA_CLBLAST=1\nbash check server theme={null}\ncurl http://127.0.0.1:8080/v1/models\n```\n\n### Model Loading Problems\n\n* Verify the model file exists and is in GGML format\n* Check available memory for large models\n* Ensure the model is compatible with your LlamaCpp version\n\n### Performance Issues\n\n* Adjust batch sizes (`-b`, `-ub`) based on your hardware\n* Use GPU acceleration if available\n* Consider using quantized models for faster inference",
+  "code_samples": [
+    {
+      "code": "### Model Quantization\n\nUse quantized models for better performance:\n\n* `Q4_K_M`: Balanced size and quality\n* `Q8_0`: Higher quality, larger size\n* `Q2_K`: Smallest size, lower quality\n\n## Troubleshooting\n\n### Server Connection Issues\n\nEnsure the LlamaCpp server is running and accessible:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Model Quantization",
+      "id": "model-quantization"
+    },
+    {
+      "level": "h2",
+      "text": "Troubleshooting",
+      "id": "troubleshooting"
+    },
+    {
+      "level": "h3",
+      "text": "Server Connection Issues",
+      "id": "server-connection-issues"
+    },
+    {
+      "level": "h3",
+      "text": "Model Loading Problems",
+      "id": "model-loading-problems"
+    },
+    {
+      "level": "h3",
+      "text": "Performance Issues",
+      "id": "performance-issues"
+    }
+  ],
+  "url": "llms-txt#opencl",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Create AgentOS",
+  "content": "agent_os = AgentOS(\n    id=\"agentos-hitl\",\n    agents=[agent],\n)\n\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    agent_os.serve(app=\"hitl_confirmation:app\", port=7777)\nbash  theme={null}",
+  "code_samples": [
+    {
+      "code": "## Testing the Example\n\nOnce the server is running, test the HITL flow:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Testing the Example",
+      "id": "testing-the-example"
+    }
+  ],
+  "url": "llms-txt#create-agentos",
+  "links": []
+}

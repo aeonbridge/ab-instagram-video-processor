@@ -1,0 +1,28 @@
+{
+  "title": "Zoom",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/zoom\n\n**Zoom** enables an Agent to interact with Zoom, allowing it to schedule meetings, manage recordings, and handle various meeting-related operations through the Zoom API. The toolkit uses Zoom's Server-to-Server OAuth authentication for secure API access.\n\nThe Zoom toolkit requires the following setup:\n\n1. Install required dependencies:\n\n2. Set up Server-to-Server OAuth app in Zoom Marketplace:\n\n* Go to [Zoom Marketplace](https://marketplace.zoom.us/)\n   * Click \"Develop\" → \"Build App\"\n   * Choose \"Server-to-Server OAuth\" app type\n   * Configure the app with required scopes:\n     * `/meeting:write:admin`\n     * `/meeting:read:admin`\n     * `/recording:read:admin`\n   * Note your Account ID, Client ID, and Client Secret\n\n3. Set up environment variables:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.zoom import ZoomTools",
+  "code_samples": [
+    {
+      "code": "2. Set up Server-to-Server OAuth app in Zoom Marketplace:\n\n   * Go to [Zoom Marketplace](https://marketplace.zoom.us/)\n   * Click \"Develop\" → \"Build App\"\n   * Choose \"Server-to-Server OAuth\" app type\n   * Configure the app with required scopes:\n     * `/meeting:write:admin`\n     * `/meeting:read:admin`\n     * `/recording:read:admin`\n   * Note your Account ID, Client ID, and Client Secret\n\n3. Set up environment variables:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example Usage",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example Usage",
+      "id": "example-usage"
+    }
+  ],
+  "url": "llms-txt#zoom",
+  "links": []
+}

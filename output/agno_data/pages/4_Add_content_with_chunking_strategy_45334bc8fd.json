@@ -1,0 +1,8 @@
+{
+  "title": "4. Add content with chunking strategy",
+  "content": "knowledge.add_content(\n    path=\"company_docs/employee_handbook.pdf\",\n    reader=PDFReader(\n        chunking_strategy=SemanticChunking(  # Optional: defaults to FixedSizeChunking\n            chunk_size=1000,\n            similarity_threshold=0.5\n        )\n    ),\n    metadata={\"type\": \"policy\", \"department\": \"hr\"}\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#4.-add-content-with-chunking-strategy",
+  "links": []
+}

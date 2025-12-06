@@ -1,0 +1,8 @@
+{
+  "title": "List All Workflows",
+  "content": "Source: https://docs.agno.com/reference-api/schema/workflows/list-all-workflows\n\nget /workflows\nRetrieve a comprehensive list of all workflows configured in this OS instance.\n\n**Return Information:**\n- Workflow metadata (ID, name, description)\n- Input schema requirements\n- Step sequence and execution flow\n- Associated agents and teams",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#list-all-workflows",
+  "links": []
+}

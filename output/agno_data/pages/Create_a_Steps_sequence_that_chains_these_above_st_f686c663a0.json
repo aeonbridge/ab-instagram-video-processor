@@ -1,0 +1,8 @@
+{
+  "title": "Create a Steps sequence that chains these above steps together",
+  "content": "article_creation_sequence = Steps(\n    name=\"article_creation\",\n    description=\"Complete article creation workflow from research to final edit\",\n    steps=[research_step, writing_step, editing_step],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-steps-sequence-that-chains-these-above-steps-together",
+  "links": []
+}

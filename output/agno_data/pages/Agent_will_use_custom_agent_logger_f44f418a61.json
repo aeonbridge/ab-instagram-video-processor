@@ -1,0 +1,8 @@
+{
+  "title": "Agent will use custom_agent_logger",
+  "content": "agent.print_response(\"What is 2+2?\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-will-use-custom_agent_logger",
+  "links": []
+}

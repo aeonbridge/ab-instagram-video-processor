@@ -1,0 +1,8 @@
+{
+  "title": "Create your workflows...",
+  "content": "workflow_tools = WorkflowTools(\n    workflow=blog_post_workflow,\n)\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[workflow_tools],\n)\n\nagent.print_response(\"Create a blog post on the topic: AI trends in 2024\", stream=True)\n```\n\nSee the [Workflow Tools](/basics/tools/reasoning_tools/workflow-tools) documentation for more details.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-your-workflows...",
+  "links": []
+}

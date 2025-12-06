@@ -1,0 +1,8 @@
+{
+  "title": "Create team with metrics tracking enabled",
+  "content": "team = Team(\n    name=\"Stock Research Team\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    members=[stock_searcher],\n    db=db,  # Database required for session metrics\n    session_id=\"team_metrics_demo\",\n    markdown=True,\n    show_members_responses=True,\n    store_member_responses=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-team-with-metrics-tracking-enabled",
+  "links": []
+}

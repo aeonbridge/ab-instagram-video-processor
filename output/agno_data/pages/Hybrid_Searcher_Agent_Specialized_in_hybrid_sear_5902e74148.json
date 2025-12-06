@@ -1,0 +1,8 @@
+{
+  "title": "Hybrid Searcher Agent - Specialized in hybrid search",
+  "content": "hybrid_searcher = Agent(\n    name=\"Hybrid Searcher\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Perform hybrid search combining vector and text search\",\n    knowledge=hybrid_knowledge,\n    search_knowledge=True,\n    instructions=[\n        \"Combine vector similarity and text search for comprehensive results.\",\n        \"Find information that matches both semantic and lexical criteria.\",\n        \"Use PostgreSQL's hybrid search capabilities for best coverage.\",\n        \"Ensure retrieval of both conceptually and textually relevant content.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#hybrid-searcher-agent---specialized-in-hybrid-search",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create team with custom tool and agent members",
+  "content": "team = Team(name=\"Q & A team\", members=[web_agent], tools=[answer_from_known_questions])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-team-with-custom-tool-and-agent-members",
+  "links": []
+}

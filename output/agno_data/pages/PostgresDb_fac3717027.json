@@ -1,0 +1,8 @@
+{
+  "title": "PostgresDb",
+  "content": "Source: https://docs.agno.com/reference/storage/postgres\n\n`PostgresDb` is a class that implements the Db interface using PostgreSQL as the backend storage system. It provides robust, relational storage for agent sessions with support for JSONB data types, schema versioning, and efficient querying.\n\n<Snippet file=\"db-postgres-params.mdx\" />\n\n<Snippet file=\"db-new-bulk-methods.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#postgresdb",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "SQLite for Workflow",
+  "content": "Source: https://docs.agno.com/integrations/database/sqlite/usage/sqlite-for-workflow\n\nAgno supports using SQLite as a storage backend for Workflows using the `SqliteDb` class.\n\n```python sqlite_for_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\n\ndb = SqliteDb(db_file=\"tmp/workflow.db\")",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#sqlite-for-workflow",
+  "links": []
+}

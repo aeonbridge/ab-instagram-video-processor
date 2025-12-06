@@ -1,0 +1,8 @@
+{
+  "title": "Parallel MCP agent",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/usage/parallel\n\nUsing the [Parallel MCP server](https://docs.parallel.ai/integrations/mcp/search-mcp) to create an Agent that can search the web using Parallel's AI-optimized search capabilities:",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#parallel-mcp-agent",
+  "links": []
+}

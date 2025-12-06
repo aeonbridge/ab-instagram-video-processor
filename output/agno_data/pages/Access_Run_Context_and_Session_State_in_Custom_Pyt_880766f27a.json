@@ -1,0 +1,21 @@
+{
+  "title": "Access Run Context and Session State in Custom Python Function Step",
+  "content": "Source: https://docs.agno.com/basics/state/workflows/usage/access-session-state-in-custom-python-function-step\n\nThis example demonstrates how to access the run context in a custom python function step\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    Create a file named `access_session_state_in_custom_python_function_step.py`\n  </Step>\n\n<Step title=\"Add code to file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Set OpenAI Key\">\n    <Snippet file=\"set-openai-key.mdx\" />\n  </Step>\n\n<Step title=\"Run the workflow\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set OpenAI Key\">\n    <Snippet file=\"set-openai-key.mdx\" />\n  </Step>\n\n  <Step title=\"Run the workflow\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#access-run-context-and-session-state-in-custom-python-function-step",
+  "links": []
+}

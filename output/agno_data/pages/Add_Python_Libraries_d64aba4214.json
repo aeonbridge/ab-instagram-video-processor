@@ -1,0 +1,94 @@
+{
+  "title": "Add Python Libraries",
+  "content": "Source: https://docs.agno.com/templates/infra-management/python-packages\n\nAgno templates are setup to manage dependencies using a [pyproject.toml](https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata) file, **which is used to generate the `requirements.txt` file using [uv](https://github.com/astral-sh/uv) or [pip-tools](https://pip-tools.readthedocs.io/en/latest/).**\n\nAdding or Updating a python library is a 2 step process:\n\n1. Add library to the `pyproject.toml` file\n2. Auto-Generate the `requirements.txt` file\n\n<Warning>\n  We highly recommend auto-generating the `requirements.txt` file using this process.\n</Warning>\n\n## Update pyproject.toml\n\n* Open the `pyproject.toml` file\n* Add new libraries to the dependencies section.\n\n## Generate requirements\n\nAfter updating the `dependencies` in the `pyproject.toml` file, auto-generate the `requirements.txt` file using a helper script or running `pip-compile` directly.\n\nIf you'd like to upgrade all python libraries to their latest version, run:\n\nAfter updating the `requirements.txt` file, rebuild your images.\n\n### Rebuild dev images\n\n### Rebuild production images\n\n<Note>\n  Remember to [authenticate with ECR](/templates/infra-management/production-app#ecr-images) if needed.\n</Note>\n\n## Recreate Resources\n\nAfter rebuilding images, recreate the resources.\n\n### Recreate dev containers\n\n### Update ECS services",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\nIf you'd like to upgrade all python libraries to their latest version, run:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Rebuild Images\n\nAfter updating the `requirements.txt` file, rebuild your images.\n\n### Rebuild dev images\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Rebuild production images\n\n<Note>\n  Remember to [authenticate with ECR](/templates/infra-management/production-app#ecr-images) if needed.\n</Note>\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Recreate Resources\n\nAfter rebuilding images, recreate the resources.\n\n### Recreate dev containers\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Update ECS services\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Update pyproject.toml",
+      "id": "update-pyproject.toml"
+    },
+    {
+      "level": "h2",
+      "text": "Generate requirements",
+      "id": "generate-requirements"
+    },
+    {
+      "level": "h2",
+      "text": "Rebuild Images",
+      "id": "rebuild-images"
+    },
+    {
+      "level": "h3",
+      "text": "Rebuild dev images",
+      "id": "rebuild-dev-images"
+    },
+    {
+      "level": "h3",
+      "text": "Rebuild production images",
+      "id": "rebuild-production-images"
+    },
+    {
+      "level": "h2",
+      "text": "Recreate Resources",
+      "id": "recreate-resources"
+    },
+    {
+      "level": "h3",
+      "text": "Recreate dev containers",
+      "id": "recreate-dev-containers"
+    },
+    {
+      "level": "h3",
+      "text": "Update ECS services",
+      "id": "update-ecs-services"
+    }
+  ],
+  "url": "llms-txt#add-python-libraries",
+  "links": []
+}

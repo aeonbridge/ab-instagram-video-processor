@@ -1,0 +1,8 @@
+{
+  "title": "Finance Agent: Gets financial data using YFinance tools",
+  "content": "finance_agent = Agent(\n    name=\"Finance Agent\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    tools=[YFinanceTools()],\n    instructions=\"Use tables to display data\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#finance-agent:-gets-financial-data-using-yfinance-tools",
+  "links": []
+}

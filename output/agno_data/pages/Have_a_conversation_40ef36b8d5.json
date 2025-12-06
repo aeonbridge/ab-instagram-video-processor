@@ -1,0 +1,8 @@
+{
+  "title": "Have a conversation",
+  "content": "expensive_agent.print_response(\n    \"Explain quantum computing basics\", session_id=session_id, user_id=user_id\n)\nexpensive_agent.print_response(\n    \"What are the main applications?\", session_id=session_id, user_id=user_id\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#have-a-conversation",
+  "links": []
+}

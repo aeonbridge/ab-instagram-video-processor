@@ -1,0 +1,43 @@
+{
+  "title": "Jira",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/jira\n\n**JiraTools** enable an Agent to perform Jira tasks.\n\nThe following example requires the `jira` library and auth credentials.\n\nThe following agent will use Jira API to search for issues in a project.\n\n| Parameter              | Type   | Default | Description                                                                                                                   |\n| ---------------------- | ------ | ------- | ----------------------------------------------------------------------------------------------------------------------------- |\n| `server_url`           | `str`  | `\"\"`    | The URL of the JIRA server, retrieved from the environment variable `JIRA_SERVER_URL`. Default is an empty string if not set. |\n| `username`             | `str`  | `None`  | The JIRA username for authentication, retrieved from the environment variable `JIRA_USERNAME`. Default is None if not set.    |\n| `password`             | `str`  | `None`  | The JIRA password for authentication, retrieved from the environment variable `JIRA_PASSWORD`. Default is None if not set.    |\n| `token`                | `str`  | `None`  | The JIRA API token for authentication, retrieved from the environment variable `JIRA_TOKEN`. Default is None if not set.      |\n| `enable_get_issue`     | `bool` | `True`  | Enable the get\\_issue functionality.                                                                                          |\n| `enable_create_issue`  | `bool` | `True`  | Enable the create\\_issue functionality.                                                                                       |\n| `enable_search_issues` | `bool` | `True`  | Enable the search\\_issues functionality.                                                                                      |\n| `enable_add_comment`   | `bool` | `True`  | Enable the add\\_comment functionality.                                                                                        |\n| `all`                  | `bool` | `False` | Enable all functionality.                                                                                                     |\n\n| Function        | Description                                                                                                                                                                                                                                                                                                                                |\n| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| `get_issue`     | Retrieves issue details from JIRA. Parameters include:<br />- `issue_key`: the key of the issue to retrieve<br />Returns a JSON string containing issue details or an error message.                                                                                                                                                       |\n| `create_issue`  | Creates a new issue in JIRA. Parameters include:<br />- `project_key`: the project in which to create the issue<br />- `summary`: the issue summary<br />- `description`: the issue description<br />- `issuetype`: the type of issue (default is \"Task\")<br />Returns a JSON string with the new issue's key and URL or an error message. |\n| `search_issues` | Searches for issues using a JQL query in JIRA. Parameters include:<br />- `jql_str`: the JQL query string<br />- `max_results`: the maximum number of results to return (default is 50)<br />Returns a JSON string containing a list of dictionaries with issue details or an error message.                                               |\n| `add_comment`   | Adds a comment to an issue in JIRA. Parameters include:<br />- `issue_key`: the key of the issue<br />- `comment`: the comment text<br />Returns a JSON string indicating success or an error message.                                                                                                                                     |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/jira.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/jira_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use Jira API to search for issues in a project.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#jira",
+  "links": []
+}

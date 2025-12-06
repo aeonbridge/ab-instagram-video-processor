@@ -1,0 +1,14 @@
+{
+  "title": "Image to Fiction Story Team",
+  "content": "Source: https://docs.agno.com/basics/multimodal/team/usage/image-to-text\n\nThis example demonstrates how a team can collaborate to analyze images and create engaging fiction stories using an image analyst and creative writer.\n\n```python cookbook/examples/teams/multimodal/image_to_text.py theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import Image\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\n\nimage_analyzer = Agent(\n    name=\"Image Analyst\",\n    role=\"Analyze and describe images in detail\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=[\n        \"Analyze images carefully and provide detailed descriptions\",\n        \"Focus on visual elements, composition, and key details\",\n    ],\n)\n\ncreative_writer = Agent(\n    name=\"Creative Writer\",\n    role=\"Create engaging stories and narratives\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=[\n        \"Transform image descriptions into compelling fiction stories\",\n        \"Use vivid language and creative storytelling techniques\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#image-to-fiction-story-team",
+  "links": []
+}

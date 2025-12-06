@@ -1,0 +1,19 @@
+{
+  "title": "Run agent and print response to the terminal",
+  "content": "agent.print_response(\"Trending startups and products.\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.anthropic import Claude\nfrom agno.tools.hackernews import HackerNewsTools\n\nagent = Agent(\n    model=Claude(id=\"claude-sonnet-4-5\"),\n    tools=[HackerNewsTools()],\n    db=SqliteDb(db_file=\"tmp/data.db\"),\n    add_history_to_context=True,\n    num_history_runs=3,\n    markdown=True,\n)",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  You can set `debug_level=2` to get even more detailed logs.\n</Tip>\n\nHere's how it looks:\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/Xc0-_OHxxYe_vtGw/videos/debug_mode.mp4?fit=max&auto=format&n=Xc0-_OHxxYe_vtGw&q=85&s=67b080deec475663e285c22130987541\" type=\"video/mp4\" data-path=\"videos/debug_mode.mp4\" />\n  </video>\n</Frame>\n\n## Interactive CLI\n\nAgno also comes with a pre-built interactive CLI that runs your Agent as a command-line application.\n\nYou can use this to test back-and-forth conversations with your agent:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Interactive CLI",
+      "id": "interactive-cli"
+    }
+  ],
+  "url": "llms-txt#run-agent-and-print-response-to-the-terminal",
+  "links": []
+}

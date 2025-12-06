@@ -1,0 +1,8 @@
+{
+  "title": "Create agent",
+  "content": "research_agent = Agent(\n    id=\"user-agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    db=db,\n    tools=[get_user_details],\n    instructions=\"You are a user agent that can get user details if the user asks for them.\",\n)\n\nagent_os = AgentOS(\n    description=\"JWT Protected AgentOS\",\n    agents=[research_agent],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent",
+  "links": []
+}

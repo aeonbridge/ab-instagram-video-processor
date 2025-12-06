@@ -1,0 +1,28 @@
+{
+  "title": "Slack",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/slack\n\nThe following example requires the `slack-sdk` library.\n\nGet a Slack token from [here](https://api.slack.com/tutorials/tracks/getting-a-token).\n\nThe following agent will use Slack to send a message to a channel, list all channels, and get the message history of a specific channel.\n\n```python cookbook/tools/slack_tools.py theme={null}\nimport os\n\nfrom agno.agent import Agent\nfrom agno.tools.slack import SlackTools\n\nslack_tools = SlackTools()\n\nagent = Agent(tools=[slack_tools])",
+  "code_samples": [
+    {
+      "code": "Get a Slack token from [here](https://api.slack.com/tutorials/tracks/getting-a-token).",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use Slack to send a message to a channel, list all channels, and get the message history of a specific channel.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#slack",
+  "links": []
+}

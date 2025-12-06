@@ -1,0 +1,8 @@
+{
+  "title": "FastEmbed",
+  "content": "Source: https://docs.agno.com/reference/knowledge/embedder/fastembed\n\nFastEmbed Embedder is a class that allows you to embed documents using FastEmbed's efficient embedding models, with BAAI/bge-small-en-v1.5 as the default model.\n\n<Snippet file=\"embedder-fastembed-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#fastembed",
+  "links": []
+}

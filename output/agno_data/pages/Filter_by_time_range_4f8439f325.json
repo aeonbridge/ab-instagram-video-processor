@@ -1,0 +1,33 @@
+{
+  "title": "Filter by time range",
+  "content": "from datetime import datetime, timedelta, timezone\n\nnow = datetime.now(timezone.utc)\ntraces, count = db.get_traces(\n    start_time=now - timedelta(hours=1),\n    end_time=now,\n    limit=100\n)\npython  theme={null}\nspan = db.get_span(span_id=\"xyz789...\")\nif span:\n    print(f\"{span.name}: {span.duration_ms}ms\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "**Parameters:**\n\n| Parameter     | Type                 | Default | Description                               |\n| ------------- | -------------------- | ------- | ----------------------------------------- |\n| `run_id`      | `Optional[str]`      | `None`  | Filter by run ID                          |\n| `session_id`  | `Optional[str]`      | `None`  | Filter by session ID                      |\n| `user_id`     | `Optional[str]`      | `None`  | Filter by user ID                         |\n| `agent_id`    | `Optional[str]`      | `None`  | Filter by agent ID                        |\n| `team_id`     | `Optional[str]`      | `None`  | Filter by team ID                         |\n| `workflow_id` | `Optional[str]`      | `None`  | Filter by workflow ID                     |\n| `status`      | `Optional[str]`      | `None`  | Filter by status (`OK`, `ERROR`, `UNSET`) |\n| `start_time`  | `Optional[datetime]` | `None`  | Filter traces after this time             |\n| `end_time`    | `Optional[datetime]` | `None`  | Filter traces before this time            |\n| `limit`       | `Optional[int]`      | `20`    | Max traces to return                      |\n| `page`        | `Optional[int]`      | `1`     | Page number for pagination                |\n\n**Returns:** `tuple[List[Trace], int]` - (traces, total\\_count)\n\n## Span Functions\n\n### `db.get_span()`\n\nGet a single span by ID.",
+      "language": "unknown"
+    },
+    {
+      "code": "**Parameters:**\n\n| Parameter | Type  | Description            |\n| --------- | ----- | ---------------------- |\n| `span_id` | `str` | Unique span identifier |\n\n**Returns:** `Span` or `None`\n\nSee the reference for [Span](/reference/tracing/span) for more information.\n\n### `db.get_spans()`\n\nGet multiple spans for a trace or parent.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Span Functions",
+      "id": "span-functions"
+    },
+    {
+      "level": "h3",
+      "text": "`db.get_span()`",
+      "id": "`db.get_span()`"
+    },
+    {
+      "level": "h3",
+      "text": "`db.get_spans()`",
+      "id": "`db.get_spans()`"
+    }
+  ],
+  "url": "llms-txt#filter-by-time-range",
+  "links": []
+}

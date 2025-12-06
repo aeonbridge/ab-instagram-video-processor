@@ -1,0 +1,31 @@
+{
+  "title": "Example 1: Basic research with simple string",
+  "content": "agent.print_response(\n    \"Perform a comprehensive research on the current flagship GPUs from NVIDIA, AMD and Intel. Return a table of model name, MSRP USD, TDP watts, and launch date. Include citations for each cell.\"\n)\n\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    export EXA_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai exa_py\n    bash Mac theme={null}\n      python cookbook/examples/agents/deep_research_agent_exa.py\n      bash Windows theme={null}\n      python cookbook/examples/agents/deep_research_agent_exa.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#example-1:-basic-research-with-simple-string",
+  "links": []
+}

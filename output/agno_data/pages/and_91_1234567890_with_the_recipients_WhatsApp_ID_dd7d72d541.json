@@ -1,0 +1,24 @@
+{
+  "title": "and +91 1234567890 with the recipient's WhatsApp ID",
+  "content": "agent.print_response(\n    \"Send a template message using the '''hello_world''' template in English to +91 1234567890\"\n)\n```\n\n| Parameter         | Type            | Default   | Description                                                                                                               |\n| ----------------- | --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------- |\n| `access_token`    | `Optional[str]` | `None`    | WhatsApp Business API access token. If not provided, uses `WHATSAPP_ACCESS_TOKEN` environment variable.                   |\n| `phone_number_id` | `Optional[str]` | `None`    | WhatsApp Business Account phone number ID. If not provided, uses `WHATSAPP_PHONE_NUMBER_ID` environment variable.         |\n| `version`         | `str`           | `\"v22.0\"` | API version to use. If not provided, uses `WHATSAPP_VERSION` environment variable or defaults to \"v22.0\".                 |\n| `recipient_waid`  | `Optional[str]` | `None`    | Default recipient WhatsApp ID (e.g., \"1234567890\"). If not provided, uses `WHATSAPP_RECIPIENT_WAID` environment variable. |\n| `async_mode`      | `bool`          | `False`   | Enable asynchronous methods for sending messages.                                                                         |\n\n| Function                      | Description                                                                                                                                                                                           |\n| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `send_text_message_sync`      | Sends a text message to a WhatsApp user (synchronous). Parameters: `text` (str), `recipient` (Optional\\[str]), `preview_url` (bool), `recipient_type` (str).                                          |\n| `send_template_message_sync`  | Sends a template message to a WhatsApp user (synchronous). Parameters: `recipient` (Optional\\[str]), `template_name` (str), `language_code` (str), `components` (Optional\\[List\\[Dict\\[str, Any]]]).  |\n| `send_text_message_async`     | Sends a text message to a WhatsApp user (asynchronous). Parameters: `text` (str), `recipient` (Optional\\[str]), `preview_url` (bool), `recipient_type` (str).                                         |\n| `send_template_message_async` | Sends a template message to a WhatsApp user (asynchronous). Parameters: `recipient` (Optional\\[str]), `template_name` (str), `language_code` (str), `components` (Optional\\[List\\[Dict\\[str, Any]]]). |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/whatsapp.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/whatsapp_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#and-+91-1234567890-with-the-recipient's-whatsapp-id",
+  "links": []
+}

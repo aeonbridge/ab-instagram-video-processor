@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Image Input",
+  "content": "Source: https://docs.agno.com/integrations/models/cloud/aws-bedrock/usage/image-agent\n\nAWS Bedrock supports image input with models like `amazon.nova-pro-v1:0`. You can use this to analyze images and get information about them.\n\n```python image_agent.py theme={null}\nfrom pathlib import Path\nfrom agno.agent import Agent\nfrom agno.media import Image\nfrom agno.models.aws import AwsBedrock\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nagent = Agent(\n    model=AwsBedrock(id=\"amazon.nova-pro-v1:0\"),\n    tools=[DuckDuckGoTools()],\n    markdown=True,\n)\n\nimage_path = Path(__file__).parent.joinpath(\"sample.jpg\")",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-image-input",
+  "links": []
+}

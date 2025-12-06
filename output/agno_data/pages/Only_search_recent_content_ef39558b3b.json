@@ -1,0 +1,8 @@
+{
+  "title": "Only search recent content",
+  "content": "recent_filter = GT(\"year\", current_year - 2)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#only-search-recent-content",
+  "links": []
+}

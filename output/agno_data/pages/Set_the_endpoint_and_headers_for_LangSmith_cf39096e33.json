@@ -1,0 +1,8 @@
+{
+  "title": "Set the endpoint and headers for LangSmith",
+  "content": "endpoint = \"https://eu.api.smith.langchain.com/otel/v1/traces\"\nheaders = {\n    \"x-api-key\": os.getenv(\"LANGSMITH_API_KEY\"),\n    \"Langsmith-Project\": os.getenv(\"LANGSMITH_PROJECT\"),\n}",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-the-endpoint-and-headers-for-langsmith",
+  "links": []
+}

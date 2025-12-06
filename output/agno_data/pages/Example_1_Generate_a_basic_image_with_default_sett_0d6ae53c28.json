@@ -1,0 +1,8 @@
+{
+  "title": "Example 1: Generate a basic image with default settings",
+  "content": "agent.print_response(\"Generate an image of a futuristic city with flying cars and tall skyscrapers\", markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-1:-generate-a-basic-image-with-default-settings",
+  "links": []
+}

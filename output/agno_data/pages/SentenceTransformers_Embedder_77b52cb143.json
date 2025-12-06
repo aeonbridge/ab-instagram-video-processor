@@ -1,0 +1,14 @@
+{
+  "title": "SentenceTransformers Embedder",
+  "content": "Source: https://docs.agno.com/basics/knowledge/embedder/sentencetransformers/overview\n\nThe `SentenceTransformerEmbedder` class is used to embed text data into vectors using the [SentenceTransformers](https://www.sbert.net/) library.\n\n```python sentence_transformer_embedder.py theme={null}\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\nfrom agno.knowledge.embedder.sentence_transformer import SentenceTransformerEmbedder",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#sentencetransformers-embedder",
+  "links": []
+}

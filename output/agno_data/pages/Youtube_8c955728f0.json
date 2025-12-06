@@ -1,0 +1,39 @@
+{
+  "title": "Youtube",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/youtube\n\n**YouTubeTools** enable an Agent to access captions and metadata of YouTube videos, when provided with a video URL.\n\nThe following example requires the `youtube_transcript_api` library.\n\nThe following agent will provide a summary of a YouTube video.\n\n| Param                         | Type        | Default | Description                                                                        |\n| ----------------------------- | ----------- | ------- | ---------------------------------------------------------------------------------- |\n| `get_video_captions`          | `bool`      | `True`  | Enables the functionality to retrieve video captions.                              |\n| `get_video_data`              | `bool`      | `True`  | Enables the functionality to retrieve video metadata and other related data.       |\n| `languages`                   | `List[str]` | -       | Specifies the list of languages for which data should be retrieved, if applicable. |\n| `enable_get_video_captions`   | `bool`      | `True`  | Enable the get\\_video\\_captions functionality.                                     |\n| `enable_get_video_data`       | `bool`      | `True`  | Enable the get\\_video\\_data functionality.                                         |\n| `enable_get_video_timestamps` | `bool`      | `True`  | Enable the get\\_video\\_timestamps functionality.                                   |\n| `all`                         | `bool`      | `False` | Enable all functionality.                                                          |\n\n| Function                       | Description                                                |\n| ------------------------------ | ---------------------------------------------------------- |\n| `get_youtube_video_captions`   | This function retrieves the captions of a YouTube video.   |\n| `get_youtube_video_data`       | This function retrieves the metadata of a YouTube video.   |\n| `get_youtube_video_timestamps` | This function retrieves the timestamps of a YouTube video. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/youtube.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/youtube_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will provide a summary of a YouTube video.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#youtube",
+  "links": []
+}

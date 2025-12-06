@@ -1,0 +1,19 @@
+{
+  "title": "Integrate with AgentOS",
+  "content": "agent_os = AgentOS(\n    agents=[Agent(id=\"basic-agent\", model=OpenAIChat(id=\"gpt-5-mini\"))],\n    base_app=app\n)\n\napp = agent_os.get_app()\npython  theme={null}\nagent_os = AgentOS(agents=[agent])\napp = agent_os.get_app()",
+  "code_samples": [
+    {
+      "code": "## Access AgentOS Routes\n\nYou can programmatically access and inspect the routes added by AgentOS:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Access AgentOS Routes",
+      "id": "access-agentos-routes"
+    }
+  ],
+  "url": "llms-txt#integrate-with-agentos",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "LanceDB Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/lancedb/overview\n\nLearn how to use LanceDB as a vector database for your Knowledge Base\n\n```python agent_with_knowledge.py theme={null}\nimport typer\nfrom typing import Optional\nfrom rich.prompt import Prompt\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.lancedb import LanceDb\nfrom agno.vectordb.search import SearchType",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#lancedb-vector-database",
+  "links": []
+}

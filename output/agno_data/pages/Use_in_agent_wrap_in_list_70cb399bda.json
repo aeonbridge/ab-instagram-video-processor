@@ -1,0 +1,82 @@
+{
+  "title": "Use in agent - wrap in list",
+  "content": "agent.print_response(\n    \"What's new?\",\n    knowledge_filters=[current_content]\n)\npython  theme={null}\nfrom agno.filters import AND, EQ, GT\n\nasync def progressive_search(agent, query, base_filters=None):\n    \"\"\"Try broad search first, then narrow if too many results.\"\"\"\n\n# First attempt: broad search\n    broad_results = await agent.aget_relevant_docs_from_knowledge(\n        query=query,\n        filters=base_filters,  # Already a list\n        num_documents=10\n    )\n\nif len(broad_results) > 8:\n        # Too many results, add more specific filters\n        specific_filter = AND(\n            base_filters[0] if base_filters else EQ(\"status\", \"active\"),\n            GT(\"relevance_score\", 0.8)\n        )\n\nreturn await agent.aget_relevant_docs_from_knowledge(\n            query=query,\n            filters=[specific_filter],  # ← Wrapped in list\n            num_documents=5\n        )\n\nreturn broad_results\npython  theme={null}\n    # Add content with explicit metadata\n    knowledge.add_content(\n        path=\"doc.pdf\",\n        metadata={\"status\": \"published\", \"category\": \"tech\"}\n    )\n\n# Now filter will work\n    filter_expr = EQ(\"status\", \"published\")\n    python  theme={null}\n    from agno.filters import EQ, GT, AND\n\nfilter_expr = AND(EQ(\"status\", \"published\"), GT(\"views\", 100))\n    print(filter_expr.to_dict())\n    python  theme={null}\n    # Test each part separately\n    filter1 = EQ(\"status\", \"published\")  # Test\n    filter2 = GT(\"date\", \"2024-01-01\")   # Test\n    filter3 = IN(\"region\", [\"US\", \"EU\"]) # Test\n\n# Then combine\n    combined = AND(filter1, filter2, filter3)\n    python  theme={null}\n    import json\n\ntry:\n        filter_dict = filter_expr.to_dict()\n        json_str = json.dumps(filter_dict)\n        json.loads(json_str)  # Verify it parses\n        print(\"Valid filter structure\")\n    except (TypeError, ValueError) as e:\n        print(f\"Invalid filter: {e}\")\n    python  theme={null}\n    # Clear nested structure\n    filter_expr = OR(\n        AND(EQ(\"a\", 1), EQ(\"b\", 2)),\n        EQ(\"c\", 3)\n    )\n\n# Break down complex filters for readability\n    condition1 = AND(EQ(\"a\", 1), EQ(\"b\", 2))\n    condition2 = EQ(\"c\", 3)\n    filter_expr = OR(condition1, condition2)\n    python  theme={null}\n  # Works with all vector databases\n  knowledge_filters=[{\"department\": \"hr\", \"year\": 2024}]\n\n# Only works with PgVector currently\n  knowledge_filters=[AND(EQ(\"department\", \"hr\"), EQ(\"year\", 2024))]\n  python  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Progressive Filtering\n\nStart broad, then narrow down based on results:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Best Practices for Filter Expressions\n\n### Filter Design\n\n* **Start Simple**: Begin with basic filters and add complexity as needed\n* **Test Combinations**: Verify that your logical combinations work as expected\n* **Document Your Schema**: Keep track of available metadata fields and their possible values\n* **Performance Considerations**: Some filter combinations may be slower than others\n\n## Troubleshooting\n\n### Filter Not Working\n\n<AccordionGroup>\n  <Accordion title=\"Verify metadata keys exist\">\n    Check that the keys you're filtering on actually exist in your knowledge base:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Accordion>\n\n  <Accordion title=\"Check filter structure\">\n    Print the filter to verify it's constructed correctly:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Accordion>\n</AccordionGroup>\n\n### Complex Filters Failing\n\n<AccordionGroup>\n  <Accordion title=\"Break down into smaller filters\">\n    Test each condition individually:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Accordion>\n\n  <Accordion title=\"Verify filter structure\">\n    Check that nested logic is correctly structured:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Accordion>\n\n  <Accordion title=\"Check operator precedence\">\n    Make sure nested logic is clear and well-structured:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Accordion>\n</AccordionGroup>\n\n### Vector Database Support\n\nAdvanced filter expressions (using `FilterExpr` like `EQ()`, `AND()`, etc.) is currently only supported in PGVector.\n\n<Note>\n  **What happens with unsupported FilterExpr:**\n\n  When using `FilterExpr` with unsupported vector databases:\n\n  * You'll see: `WARNING: Filter Expressions are not yet supported in [DatabaseName]. No filters will be applied.`\n  * Search proceeds without filters (unfiltered results)\n  * No errors thrown, but filtering is ignored\n\n  **Workaround:** Use dictionary format instead:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Note>\n\n### Agentic Filtering Compatibility\n\nAdvanced filter expressions (`FilterExpr`) are **not compatible with agentic filtering**, where agents dynamically construct filters based on conversation context.\n\n**For agentic filtering, use dictionary format:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Progressive Filtering",
+      "id": "progressive-filtering"
+    },
+    {
+      "level": "h2",
+      "text": "Best Practices for Filter Expressions",
+      "id": "best-practices-for-filter-expressions"
+    },
+    {
+      "level": "h3",
+      "text": "Filter Design",
+      "id": "filter-design"
+    },
+    {
+      "level": "h2",
+      "text": "Troubleshooting",
+      "id": "troubleshooting"
+    },
+    {
+      "level": "h3",
+      "text": "Filter Not Working",
+      "id": "filter-not-working"
+    },
+    {
+      "level": "h3",
+      "text": "Complex Filters Failing",
+      "id": "complex-filters-failing"
+    },
+    {
+      "level": "h3",
+      "text": "Vector Database Support",
+      "id": "vector-database-support"
+    },
+    {
+      "level": "h3",
+      "text": "Agentic Filtering Compatibility",
+      "id": "agentic-filtering-compatibility"
+    }
+  ],
+  "url": "llms-txt#use-in-agent---wrap-in-list",
+  "links": []
+}

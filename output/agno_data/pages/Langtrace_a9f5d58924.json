@@ -1,0 +1,33 @@
+{
+  "title": "Langtrace",
+  "content": "Source: https://docs.agno.com/integrations/observability/langtrace\n\nIntegrate Agno with Langtrace to send traces and gain insights into your agent's performance.\n\n## Integrating Agno with Langtrace\n\nLangtrace provides a powerful platform for tracing and monitoring AI model calls. By integrating Agno with Langtrace, you can gain insights into your agent's performance and behavior.\n\n1. **Install Dependencies**\n\nEnsure you have the necessary package installed:\n\n2. **Create a Langtrace Account**\n\n* Sign up for an account at [Langtrace](https://app.langtrace.ai/).\n   * Obtain your API key from the Langtrace dashboard.\n\n3. **Set Environment Variables**\n\nConfigure your environment with the Langtrace API key:\n\n## Sending Traces to Langtrace\n\nThis example demonstrates how to instrument your Agno agent with Langtrace.\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.yfinance import YFinanceTools\nfrom langtrace_python_sdk import langtrace\nfrom langtrace_python_sdk.utils.with_root_span import with_langtrace_root_span",
+  "code_samples": [
+    {
+      "code": "2. **Create a Langtrace Account**\n\n   * Sign up for an account at [Langtrace](https://app.langtrace.ai/).\n   * Obtain your API key from the Langtrace dashboard.\n\n3. **Set Environment Variables**\n\n   Configure your environment with the Langtrace API key:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Sending Traces to Langtrace\n\nThis example demonstrates how to instrument your Agno agent with Langtrace.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with Langtrace",
+      "id": "integrating-agno-with-langtrace"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Sending Traces to Langtrace",
+      "id": "sending-traces-to-langtrace"
+    }
+  ],
+  "url": "llms-txt#langtrace",
+  "links": []
+}

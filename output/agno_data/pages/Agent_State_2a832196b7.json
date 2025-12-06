@@ -1,0 +1,17 @@
+{
+  "title": "Agent State",
+  "content": "Source: https://docs.agno.com/examples/getting-started/07-agent-state\n\nThis example shows how to create an agent that maintains state across interactions. It demonstrates a simple counter mechanism, but this pattern can be extended to more complex state management like maintaining conversation context, user preferences, or tracking multi-step processes.\n\nExample prompts to try:\n\n* \"Increment the counter 3 times and tell me the final count\"\n* \"What's our current count? Add 2 more to it\"\n* \"Let's increment the counter 5 times, but tell me each step\"\n* \"Add 4 to our count and remind me where we started\"\n* \"Increase the counter twice and summarize our journey\"\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    Create a file `agent_state.py`\n  </Step>\n\n<Step title=\"Add code to file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Set OpenAI Key\">\n    <Snippet file=\"set-openai-key.mdx\" />\n  </Step>\n\n<Step title=\"Run the agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set OpenAI Key\">\n    <Snippet file=\"set-openai-key.mdx\" />\n  </Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#agent-state",
+  "links": []
+}

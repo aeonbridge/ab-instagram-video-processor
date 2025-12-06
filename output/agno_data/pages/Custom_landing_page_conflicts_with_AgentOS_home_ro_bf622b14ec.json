@@ -1,0 +1,8 @@
+{
+  "title": "Custom landing page (conflicts with AgentOS home route)",
+  "content": "@app.get(\"/\")\nasync def get_custom_home():\n    return {\n        \"message\": \"Custom FastAPI App\",\n        \"note\": \"Using on_route_conflict=\\\"preserve_base_app\\\" to preserve custom routes\",\n    }",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#custom-landing-page-(conflicts-with-agentos-home-route)",
+  "links": []
+}

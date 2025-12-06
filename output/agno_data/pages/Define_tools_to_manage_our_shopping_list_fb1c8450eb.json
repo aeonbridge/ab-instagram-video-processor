@@ -1,0 +1,8 @@
+{
+  "title": "Define tools to manage our shopping list",
+  "content": "def add_item(run_context: RunContext, item: str) -> str:\n    \"\"\"Add an item to the shopping list and return confirmation.\"\"\"\n    # Add the item if it's not already in the list\n    if item.lower() not in [i.lower() for i in run_context.session_state[\"shopping_list\"]]:\n        run_context.session_state[\"shopping_list\"].append(item)  # type: ignore\n        return f\"Added '{item}' to the shopping list\"\n    else:\n        return f\"'{item}' is already in the shopping list\"\n\ndef remove_item(run_context: RunContext, item: str) -> str:\n    \"\"\"Remove an item from the shopping list by name.\"\"\"\n    # Case-insensitive search\n    for i, list_item in enumerate(run_context.session_state[\"shopping_list\"]):\n        if list_item.lower() == item.lower():\n            run_context.session_state[\"shopping_list\"].pop(i)\n            return f\"Removed '{list_item}' from the shopping list\"\n\nreturn f\"'{item}' was not found in the shopping list\"\n\ndef list_items(run_context: RunContext) -> str:\n    \"\"\"List all items in the shopping list.\"\"\"\n    shopping_list = run_context.session_state[\"shopping_list\"]\n\nif not shopping_list:\n        return \"The shopping list is empty.\"\n\nitems_text = \"\\n\".join([f\"- {item}\" for item in shopping_list])\n    return f\"Current shopping list:\\n{items_text}\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-tools-to-manage-our-shopping-list",
+  "links": []
+}

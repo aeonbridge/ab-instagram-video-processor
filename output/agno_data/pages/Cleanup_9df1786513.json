@@ -1,0 +1,28 @@
+{
+  "title": "Cleanup",
+  "content": "model.delete_file_search_store(store.name)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.google import Gemini\nfrom agno.utils.audio import write_wav_audio_to_file\n\nagent = Agent(\n    model=Gemini(\n        id=\"gemini-2.5-flash-preview-tts\",\n        response_modalities=[\"AUDIO\"],\n        speech_config={\n            \"voice_config\": {\"prebuilt_voice_config\": {\"voice_name\": \"Kore\"}}\n        },\n    )\n)\n\nrun_output = agent.run(\"Say cheerfully: Have a wonderful day!\")\n\nif run_output.response_audio is not None:\n    audio_data = run_output.response_audio.content\n    write_wav_audio_to_file(\"tmp/cheerful_greeting.wav\", audio_data)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.google import Gemini\nfrom google import genai\n\nclient = genai.Client()",
+  "code_samples": [
+    {
+      "code": "## Speech Generation\n\nGenerate audio responses from the model. See [Google's speech generation documentation](https://ai.google.dev/gemini-api/docs/speech-generation) for available voices and options.",
+      "language": "unknown"
+    },
+    {
+      "code": "## Context Caching\n\nCache large contexts to reduce costs and latency. See [Google's context caching documentation](https://ai.google.dev/gemini-api/docs/caching) for more details.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Speech Generation",
+      "id": "speech-generation"
+    },
+    {
+      "level": "h2",
+      "text": "Context Caching",
+      "id": "context-caching"
+    }
+  ],
+  "url": "llms-txt#cleanup",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Configure Session tracking",
+  "content": "session:\n  display_name: \"User Sessions\"\n  dbs:\n    - db_id: db-0001\n      domain_config:\n        display_name: Production sessions",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-session-tracking",
+  "links": []
+}

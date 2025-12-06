@@ -1,0 +1,8 @@
+{
+  "title": "Add YouTube video content synchronously",
+  "content": "knowledge.add_content(\n    metadata={\"source\": \"youtube\", \"type\": \"educational\"},\n    urls=[\n        \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\",  # Replace with actual educational video\n        \"https://www.youtube.com/watch?v=example123\"   # Replace with actual video URL\n    ],\n    reader=YouTubeReader(),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-youtube-video-content-synchronously",
+  "links": []
+}

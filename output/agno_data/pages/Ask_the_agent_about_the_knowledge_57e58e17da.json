@@ -1,0 +1,36 @@
+{
+  "title": "Ask the agent about the knowledge",
+  "content": "agent.print_response(\n    \"What are the latest AI trends according to the search results?\", markdown=True\n)\nbash  theme={null}\n    pip install -U requests beautifulsoup4 agno openai\n    bash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash Mac theme={null}\n      python examples/basics/knowledge/readers/web_search_reader.py\n      bash Windows theme={null}\n      python examples/basics/knowledge/readers/web_search_reader.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n<Snippet file=\"web-search-reader-reference.mdx\" />",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#ask-the-agent-about-the-knowledge",
+  "links": []
+}

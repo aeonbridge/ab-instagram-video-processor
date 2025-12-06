@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent with OpenWeatherTools",
+  "content": "agent = Agent(\n    tools=[\n        OpenWeatherTools(\n            units=\"imperial\",  # Options: 'standard', 'metric', 'imperial'\n        )\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-openweathertools",
+  "links": []
+}

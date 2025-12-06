@@ -1,0 +1,8 @@
+{
+  "title": "Reranking Specialist Agent - Specialized in result optimization",
+  "content": "reranking_specialist = Agent(\n    name=\"Reranking Specialist\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Apply advanced reranking to optimize retrieval results\",\n    knowledge=reranked_knowledge,\n    search_knowledge=True,\n    instructions=[\n        \"Apply advanced reranking techniques to optimize result relevance.\",\n        \"Focus on precision and ranking quality over quantity.\",\n        \"Use the Cohere reranker to identify the most relevant content.\",\n        \"Prioritize results that best match the user's specific needs.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#reranking-specialist-agent---specialized-in-result-optimization",
+  "links": []
+}

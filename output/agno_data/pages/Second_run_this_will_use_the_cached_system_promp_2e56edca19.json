@@ -1,0 +1,8 @@
+{
+  "title": "Second run - this will use the cached system prompt",
+  "content": "response = agent.run(\n    \"What are the key principles of clean code and how do I apply them in Python?\"\n)\nif response and response.metrics:\n    print(f\"Second run cache read tokens = {response.metrics.cache_read_tokens}\")\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#second-run---this-will-use-the-cached-system-prompt",
+  "links": []
+}

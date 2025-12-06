@@ -1,0 +1,8 @@
+{
+  "title": "Response Synthesizer Agent - Specialized in creating comprehensive responses",
+  "content": "response_synthesizer = Agent(\n    name=\"Response Synthesizer\",\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    role=\"Create comprehensive final response with proper citations\",\n    instructions=[\n        \"Synthesize information from team members into a comprehensive response.\",\n        \"Include proper source citations and references.\",\n        \"Ensure accuracy and completeness of the final answer.\",\n        \"Structure the response clearly with appropriate formatting.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#response-synthesizer-agent---specialized-in-creating-comprehensive-responses",
+  "links": []
+}

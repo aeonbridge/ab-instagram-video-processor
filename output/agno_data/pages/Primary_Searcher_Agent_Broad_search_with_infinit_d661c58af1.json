@@ -1,0 +1,8 @@
+{
+  "title": "Primary Searcher Agent - Broad search with infinity reranking",
+  "content": "primary_searcher = Agent(\n    name=\"Primary Searcher\",\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    role=\"Perform comprehensive primary search with high-performance reranking\",\n    knowledge=knowledge_primary,\n    search_knowledge=True,\n    instructions=[\n        \"Conduct broad, comprehensive searches across the knowledge base.\",\n        \"Use the infinity reranker to ensure high-quality result ranking.\",\n        \"Focus on capturing the most relevant information first.\",\n        \"Provide detailed context and multiple perspectives on topics.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#primary-searcher-agent---broad-search-with-infinity-reranking",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Team with Agentic Knowledge Filters",
+  "content": "Source: https://docs.agno.com/basics/knowledge/teams/usage/team-with-agentic-knowledge-filters\n\nThis example demonstrates how to use agentic knowledge filters with teams. Unlike predefined filters, agentic knowledge filters allow the AI to dynamically determine which documents to search based on the query context, providing more intelligent and context-aware document retrieval.\n\n```python cookbook/examples/teams/knowledge/03_team_with_agentic_knowledge_filters.py theme={null}\n\"\"\"\nThis example demonstrates how to use agentic knowledge filters with teams.\n\nAgentic knowledge filters allow the AI to dynamically determine which documents\nto search based on the query context, rather than using predefined filters.\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.utils.media import (\n    SampleDataFileExtension,\n    download_knowledge_filters_sample_data,\n)\nfrom agno.vectordb.lancedb import LanceDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-with-agentic-knowledge-filters",
+  "links": []
+}

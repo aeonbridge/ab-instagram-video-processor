@@ -1,0 +1,14 @@
+{
+  "title": "Note: Gemini may not properly interpret OpenAI's message history format",
+  "content": "* [All supported models](/basics/models/overview)\n* [Environment variables setup](/faq/environment-variables)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Learn More",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#note:-gemini-may-not-properly-interpret-openai's-message-history-format",
+  "links": []
+}

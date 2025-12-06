@@ -1,0 +1,8 @@
+{
+  "title": "Create a custom logger that writes to a file",
+  "content": "custom_logger = logging.getLogger(\"file_logger\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-custom-logger-that-writes-to-a-file",
+  "links": []
+}

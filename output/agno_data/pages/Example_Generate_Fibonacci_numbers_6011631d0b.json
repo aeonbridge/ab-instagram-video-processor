@@ -1,0 +1,54 @@
+{
+  "title": "Example: Generate Fibonacci numbers",
+  "content": "agent.print_response(\n    \"Write Python code to generate the first 10 Fibonacci numbers and calculate their sum and average\"\n)\n\n| Parameter         | Type   | Default | Description                                               |\n| ----------------- | ------ | ------- | --------------------------------------------------------- |\n| `api_key`         | `str`  | `None`  | E2B API key. If not provided, uses E2B\\_API\\_KEY env var. |\n| `timeout`         | `int`  | `300`   | Timeout in seconds for the sandbox (default: 5 minutes)   |\n| `sandbox_options` | `dict` | `None`  | Additional options to pass to the Sandbox constructor     |\n\n| Function          | Description                                    |\n| ----------------- | ---------------------------------------------- |\n| `run_python_code` | Run Python code in the E2B sandbox environment |\n\n| Function                     | Description                                             |\n| ---------------------------- | ------------------------------------------------------- |\n| `upload_file`                | Upload a file to the sandbox                            |\n| `download_png_result`        | Add a PNG image result as an Image object to the agent  |\n| `download_chart_data`        | Extract chart data from an interactive chart in results |\n| `download_file_from_sandbox` | Download a file from the sandbox to the local system    |\n\n### Filesystem Operations\n\n| Function             | Description                                            |\n| -------------------- | ------------------------------------------------------ |\n| `list_files`         | List files and directories in a path in the sandbox    |\n| `read_file_content`  | Read the content of a file from the sandbox            |\n| `write_file_content` | Write text content to a file in the sandbox            |\n| `watch_directory`    | Watch a directory for changes for a specified duration |\n\n### Command Execution\n\n| Function                  | Description                                    |\n| ------------------------- | ---------------------------------------------- |\n| `run_command`             | Run a shell command in the sandbox environment |\n| `stream_command`          | Run a shell command and stream its output      |\n| `run_background_command`  | Run a shell command in the background          |\n| `kill_background_command` | Kill a background command                      |\n\n| Function         | Description                                             |\n| ---------------- | ------------------------------------------------------- |\n| `get_public_url` | Get a public URL for a service running in the sandbox   |\n| `run_server`     | Start a server in the sandbox and return its public URL |\n\n### Sandbox Management\n\n| Function                 | Description                           |\n| ------------------------ | ------------------------------------- |\n| `set_sandbox_timeout`    | Update the timeout for the sandbox    |\n| `get_sandbox_status`     | Get the current status of the sandbox |\n| `shutdown_sandbox`       | Shutdown the sandbox immediately      |\n| `list_running_sandboxes` | List all running sandboxes            |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/e2b.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/e2b_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h3",
+      "text": "Code Execution",
+      "id": "code-execution"
+    },
+    {
+      "level": "h3",
+      "text": "File Operations",
+      "id": "file-operations"
+    },
+    {
+      "level": "h3",
+      "text": "Filesystem Operations",
+      "id": "filesystem-operations"
+    },
+    {
+      "level": "h3",
+      "text": "Command Execution",
+      "id": "command-execution"
+    },
+    {
+      "level": "h3",
+      "text": "Internet Access",
+      "id": "internet-access"
+    },
+    {
+      "level": "h3",
+      "text": "Sandbox Management",
+      "id": "sandbox-management"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example:-generate-fibonacci-numbers",
+  "links": []
+}

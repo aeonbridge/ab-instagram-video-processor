@@ -1,0 +1,8 @@
+{
+  "title": "Run agent with input=\"Trending startups and products.\"",
+  "content": "response: RunOutput = agent.run(input=\"Trending startups and products.\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-agent-with-input=\"trending-startups-and-products.\"",
+  "links": []
+}

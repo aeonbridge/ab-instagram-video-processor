@@ -1,0 +1,8 @@
+{
+  "title": "Run with streaming and consume the generator to get the final response",
+  "content": "stream_generator = team.run(\n    \"Give me a stock report for NVDA\",\n    stream=True,\n    stream_events=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-with-streaming-and-consume-the-generator-to-get-the-final-response",
+  "links": []
+}

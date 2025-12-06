@@ -1,0 +1,14 @@
+{
+  "title": "Filter by metadata",
+  "content": "knowledge.add_content(\n    path=\"docs/\",\n    filters={\"department\": \"engineering\", \"clearance\": \"public\"}\n)\n```\n\n<CardGroup cols={3}>\n  <Card title=\"Content Types\" icon=\"file-lines\" href=\"/basics/knowledge/content-types\">\n    Learn about different ways to add information to your knowledge base\n  </Card>\n\n<Card title=\"Search & Retrieval\" icon=\"magnifying-glass\" href=\"/basics/knowledge/search-and-retrieval/overview\">\n    Understand how agents find and use information\n  </Card>\n\n<Card title=\"Readers\" icon=\"book-open\" href=\"/basics/knowledge/readers\">\n    Explore content parsing and ingestion options\n  </Card>\n\n<Card title=\"Chunking\" icon=\"scissors\" href=\"/basics/knowledge/chunking/overview\">\n    Optimize how content is broken down for search\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#filter-by-metadata",
+  "links": []
+}

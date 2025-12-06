@@ -1,0 +1,28 @@
+{
+  "title": "Agent Run Cancellation",
+  "content": "Source: https://docs.agno.com/execution-control/run-cancellation/agent-cancel-run\n\nLearn how to cancel a running agent execution by starting an agent run in a separate thread and cancelling it from another thread.\n\nThis example demonstrates how to cancel a running agent execution by starting an agent run in a separate thread and cancelling it from another thread. It shows proper handling of cancelled responses and thread management.\n\nAgent runs can be cancelled via the AgentOS API:\n\n**Reference:** [Cancel Agent Run API](/reference-api/schema/agents/cancel-agent-run)",
+  "code_samples": [
+    {
+      "code": "## API Endpoint\n\nAgent runs can be cancelled via the AgentOS API:",
+      "language": "unknown"
+    },
+    {
+      "code": "**Example:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "API Endpoint",
+      "id": "api-endpoint"
+    }
+  ],
+  "url": "llms-txt#agent-run-cancellation",
+  "links": []
+}

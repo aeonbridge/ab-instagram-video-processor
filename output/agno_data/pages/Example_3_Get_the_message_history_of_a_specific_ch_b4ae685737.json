@@ -1,0 +1,24 @@
+{
+  "title": "Example 3: Get the message history of a specific channel by channel ID",
+  "content": "agent.print_response(\"Get the last 10 messages from the channel 1231241\", markdown=True)\n\n| Parameter                    | Type   | Default | Description                                                     |\n| ---------------------------- | ------ | ------- | --------------------------------------------------------------- |\n| `token`                      | `str`  | `None`  | Slack API token for authentication                              |\n| `enable_send_message`        | `bool` | `True`  | Enables functionality to send messages to Slack channels        |\n| `enable_send_message_thread` | `bool` | `True`  | Enables functionality to send threaded messages                 |\n| `enable_list_channels`       | `bool` | `True`  | Enables functionality to list available Slack channels          |\n| `enable_get_channel_history` | `bool` | `True`  | Enables functionality to retrieve message history from channels |\n| `all`                        | `bool` | `False` | Enables all functionality when set to True                      |\n\n| Function              | Description                                         |\n| --------------------- | --------------------------------------------------- |\n| `send_message`        | Sends a message to a specified Slack channel        |\n| `list_channels`       | Lists all available channels in the Slack workspace |\n| `get_channel_history` | Retrieves message history from a specified channel  |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/slack.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/slack_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example-3:-get-the-message-history-of-a-specific-channel-by-channel-id",
+  "links": []
+}

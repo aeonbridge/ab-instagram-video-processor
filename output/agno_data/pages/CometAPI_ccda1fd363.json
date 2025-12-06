@@ -1,0 +1,42 @@
+{
+  "title": "CometAPI",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/cometapi/overview\n\nLearn how to use CometAPI models in Agno.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.0.8\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.0.8\">v2.0.8</Tooltip>\n</Badge>\n\nCometAPI is a platform for providing endpoints for Large Language models.\n\nSee all CometAPI supported models and pricing [here](https://api.cometapi.com/pricing).\n\nSet your `COMETAPI_KEY` environment variable. Get your API key from [here](https://api.cometapi.com/console/token).\n\nUse `CometAPI` with your `Agent`:\n\n<CodeGroup>\n  \n</CodeGroup>\n\n<Note> View more examples [here](/integrations/models/gateways/cometapi/usage/basic-stream). </Note>\n\n| Parameter  | Type            | Default                         | Description                                                  |\n| ---------- | --------------- | ------------------------------- | ------------------------------------------------------------ |\n| `id`       | `str`           | `\"gpt-5-mini\"`                  | The id of the model to use                                   |\n| `name`     | `str`           | `\"CometAPI\"`                    | The name of the model                                        |\n| `api_key`  | `Optional[str]` | `None`                          | The API key for CometAPI (defaults to COMETAPI\\_KEY env var) |\n| `base_url` | `str`           | `\"https://api.cometapi.com/v1\"` | The base URL for the CometAPI                                |\n\n`CometAPI` extends the OpenAI-compatible interface and supports most parameters from the [OpenAI model](/integrations/models/native/openai/completion/overview).\n\nCometAPI provides access to 300+ AI models. You can fetch the available models programmatically:",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Example\n\nUse `CometAPI` with your `Agent`:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n<Note> View more examples [here](/integrations/models/gateways/cometapi/usage/basic-stream). </Note>\n\n## Parameters\n\n| Parameter  | Type            | Default                         | Description                                                  |\n| ---------- | --------------- | ------------------------------- | ------------------------------------------------------------ |\n| `id`       | `str`           | `\"gpt-5-mini\"`                  | The id of the model to use                                   |\n| `name`     | `str`           | `\"CometAPI\"`                    | The name of the model                                        |\n| `api_key`  | `Optional[str]` | `None`                          | The API key for CometAPI (defaults to COMETAPI\\_KEY env var) |\n| `base_url` | `str`           | `\"https://api.cometapi.com/v1\"` | The base URL for the CometAPI                                |\n\n`CometAPI` extends the OpenAI-compatible interface and supports most parameters from the [OpenAI model](/integrations/models/native/openai/completion/overview).\n\n## Available Models\n\nCometAPI provides access to 300+ AI models. You can fetch the available models programmatically:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication",
+      "id": "authentication"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    },
+    {
+      "level": "h2",
+      "text": "Available Models",
+      "id": "available-models"
+    }
+  ],
+  "url": "llms-txt#cometapi",
+  "links": []
+}

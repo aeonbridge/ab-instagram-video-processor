@@ -1,0 +1,24 @@
+{
+  "title": "Use the agent to get website content",
+  "content": "agent.print_response(\"What information can you find on https://docs.agno.com/introduction ?\", markdown=True)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.apify import ApifyTools\n\nagent = Agent(\n    tools=[\n        ApifyTools(actors=[\"apify/rag-web-browser\"])\n    ],\n        markdown=True\n)",
+  "code_samples": [
+    {
+      "code": "## Available Apify Tools\n\nYou can easily integrate any Apify Actor as a tool. Here are some examples:\n\n### 1. RAG Web Browser\n\nThe [RAG Web Browser](https://apify.com/apify/rag-web-browser) Actor is specifically designed for AI and LLM applications. It searches the web for a query or processes a URL, then cleans and formats the content for your agent. This tool is enabled by default.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Available Apify Tools",
+      "id": "available-apify-tools"
+    },
+    {
+      "level": "h3",
+      "text": "1. RAG Web Browser",
+      "id": "1.-rag-web-browser"
+    }
+  ],
+  "url": "llms-txt#use-the-agent-to-get-website-content",
+  "links": []
+}

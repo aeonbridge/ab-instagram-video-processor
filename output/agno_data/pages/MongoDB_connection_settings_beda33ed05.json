@@ -1,0 +1,19 @@
+{
+  "title": "MongoDB connection settings",
+  "content": "db_url = \"mongodb://localhost:27017\"\ndb = MongoDb(db_url=db_url)\n\nclass Article(BaseModel):\n    title: str\n    summary: str\n    reference_links: List[str]\n\nhn_researcher = Agent(\n    name=\"HackerNews Researcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    role=\"Gets top stories from hackernews.\",\n    tools=[HackerNewsTools()],\n)\n\nweb_searcher = Agent(\n    name=\"Web Searcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    role=\"Searches the web for information on a topic\",\n    tools=[DuckDuckGoTools()],\n    add_datetime_to_context=True,\n)\n\nhn_team = Team(\n    name=\"HackerNews Team\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    members=[hn_researcher, web_searcher],\n    db=db,\n    instructions=[\n        \"First, search hackernews for what the user is asking about.\",\n        \"Then, ask the web searcher to search for each story to get more information.\",\n        \"Finally, provide a thoughtful and engaging summary.\",\n    ],\n    output_schema=Article,\n    markdown=True,\n    debug_mode=True,\n    show_members_responses=True,\n)\n\nhn_team.print_response(\"Write an article about the top 2 stories on hackernews\")\n\n<Snippet file=\"db-mongo-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/mongo/mongodb_storage_for_team.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#mongodb-connection-settings",
+  "links": []
+}

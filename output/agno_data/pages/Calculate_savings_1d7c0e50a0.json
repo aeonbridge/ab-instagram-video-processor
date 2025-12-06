@@ -1,0 +1,38 @@
+{
+  "title": "Calculate savings",
+  "content": "tokens_saved = tokens_before - tokens_after\nreduction_percentage = (tokens_saved / tokens_before * 100) if tokens_before > 0 else 0\n\nprint(f\"Tokens before: {tokens_before}\")\nprint(f\"Tokens after: {tokens_after}\")\nprint(f\"Tokens saved: {tokens_saved} ({reduction_percentage:.1f}% reduction)\")\nbash  theme={null}\ncurl -X POST \"https://os.agno.com/api/v1/memory/optimize-memories\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -d '{\n    \"user_id\": \"user_123\",\n    \"apply\": true,\n    \"model\": \"openai:gpt-4o-mini\"\n  }'\njson  theme={null}\n{\n  \"memories\": [...],\n  \"memories_before\": 50,\n  \"memories_after\": 1,\n  \"tokens_before\": 2500,\n  \"tokens_after\": 500,\n  \"tokens_saved\": 2000,\n  \"reduction_percentage\": 80.0\n}\n```\n\n* **Loss of granularity:** Multiple memories become one, making individual memory retrieval less precise\n* **LLM cost:** Optimization itself requires an LLM call (use cheaper models)\n* **One-way operation:** Once optimized, original memories are replaced (use `apply=False` to preview)\n\nSee the [Memory Optimization Example](/basics/memory/working-with-memories/usage/memory-optimization) for a complete working example that demonstrates:\n\n* Creating multiple memories for a user\n* Optimizing memories using the summarize strategy\n* Measuring token savings\n* Viewing optimized results\n\nYou can also explore the cookbook examples:\n\n* [Summarize Strategy](https://github.com/agno-agi/agno/tree/main/cookbook/memory/optimize_memories/01_memory_summarize_strategy.py) - Basic optimization example\n* [Custom Strategy](https://github.com/agno-agi/agno/tree/main/cookbook/memory/optimize_memories/02_custom_memory_strategy.py) - Creating custom optimization strategies\n\n## Related Documentation\n\n* [Memory Overview](/basics/memory/overview) - Learn about memory basics\n* [Production Best Practices](/basics/memory/best-practices) - Memory optimization strategies\n* [Working with Memories](/basics/memory/working-with-memories/overview) - Advanced memory patterns",
+  "code_samples": [
+    {
+      "code": "## API Usage (AgentOS)\n\nMemory optimization is also available through the AgentOS API:",
+      "language": "unknown"
+    },
+    {
+      "code": "The API returns detailed statistics:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "API Usage (AgentOS)",
+      "id": "api-usage-(agentos)"
+    },
+    {
+      "level": "h2",
+      "text": "Limitations",
+      "id": "limitations"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    },
+    {
+      "level": "h2",
+      "text": "Related Documentation",
+      "id": "related-documentation"
+    }
+  ],
+  "url": "llms-txt#calculate-savings",
+  "links": []
+}

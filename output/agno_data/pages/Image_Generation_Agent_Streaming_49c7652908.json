@@ -1,0 +1,14 @@
+{
+  "title": "Image Generation Agent (Streaming)",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/image-generation-stream\n\n```python cookbook/models/google/gemini/image_generation_stream.py theme={null}\nfrom io import BytesIO\n\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.google import Gemini\nfrom PIL import Image",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#image-generation-agent-(streaming)",
+  "links": []
+}

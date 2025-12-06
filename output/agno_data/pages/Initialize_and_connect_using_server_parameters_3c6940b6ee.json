@@ -1,0 +1,31 @@
+{
+  "title": "Initialize and connect using server parameters",
+  "content": "mcp_tools = MCPTools(server_params=server_params, transport=\"streamable-http\")\nawait mcp_tools.connect()\n\ntry:\n    # Use mcp_tools with your agent\n    pass\nfinally:\n    await mcp_tools.close()\npython streamable_http_server.py theme={null}\n    from mcp.server.fastmcp import FastMCP\n\nmcp = FastMCP(\"calendar_assistant\")\n\n@mcp.tool()\n    def get_events(day: str) -> str:\n        return f\"There are no events scheduled for {day}.\"\n\n@mcp.tool()\n    def get_birthdays_this_week() -> str:\n        return \"It is your mom's birthday tomorrow\"\n\nif __name__ == \"__main__\":\n        mcp.run(transport=\"streamable-http\")\n    python streamable_http_client.py theme={null}\n    import asyncio\n\nfrom agno.agent import Agent\n    from agno.models.openai import OpenAIChat\n    from agno.tools.mcp import MCPTools, MultiMCPTools\n\n# This is the URL of the MCP server we want to use.\n    server_url = \"http://localhost:8000/mcp\"\n\nasync def run_agent(message: str) -> None:\n        # Initialize and connect to the Streamable HTTP MCP server\n        mcp_tools = MCPTools(transport=\"streamable-http\", url=server_url)\n        await mcp_tools.connect()\n\ntry:\n            agent = Agent(\n                model=OpenAIChat(id=\"gpt-5-mini\"),\n                tools=[mcp_tools],\n                markdown=True,\n            )\n            await agent.aprint_response(message=message, stream=True, markdown=True)\n        finally:\n            await mcp_tools.close()\n\n# Using MultiMCPTools, we can connect to multiple MCP servers at once, even if they use different transports.\n    # In this example we connect to both our example server (Streamable HTTP transport), and a different server (stdio transport).\n    async def run_agent_with_multimcp(message: str) -> None:\n        # Initialize and connect to multiple MCP servers with different transports\n        mcp_tools = MultiMCPTools(\n            commands=[\"npx -y @openbnb/mcp-server-airbnb --ignore-robots-txt\"],\n            urls=[server_url],\n            urls_transports=[\"streamable-http\"],\n        )\n        await mcp_tools.connect()\n\ntry:\n            agent = Agent(\n                model=OpenAIChat(id=\"gpt-5-mini\"),\n                tools=[mcp_tools],\n                markdown=True,\n            )\n            await agent.aprint_response(message=message, stream=True, markdown=True)\n        finally:\n            await mcp_tools.close()\n\nif __name__ == \"__main__\":\n        asyncio.run(run_agent(\"Do I have any birthdays this week?\"))\n        asyncio.run(\n            run_agent_with_multimcp(\n                \"Can you check when is my mom's birthday, and if there are any AirBnb listings in SF for two people for that day?\"\n            )\n        )\n    bash  theme={null}\n    python streamable_http_server.py\n    bash  theme={null}\n    python streamable_http_client.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Complete example\n\nLet's set up a simple local server and connect to it using the Streamable HTTP transport:\n\n<Steps>\n  <Step title=\"Setup the server\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Setup the client\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the server\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the client\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Complete example",
+      "id": "complete-example"
+    }
+  ],
+  "url": "llms-txt#initialize-and-connect-using-server-parameters",
+  "links": []
+}

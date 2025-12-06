@@ -1,0 +1,29 @@
+{
+  "title": "Agno Assist Agent",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/agno-assist\n\nBuild an AI assistant that answers questions using your own documentation. This example uses retrieval-augmented generation (RAG) to ensure accurate, documentation-grounded responses instead of hallucinations.\n\nBy building this agent, you'll understand:\n\n* How to create a vector database to store and search documentation\n* Why hybrid search (combining semantic and keyword matching) improves retrieval accuracy\n* How to maintain conversation history across multiple interactions\n* How to ensure agents search knowledge bases instead of relying solely on training data\n\nBuild documentation assistants, customer support agents, help desk systems, or educational tutors that need to reference specific knowledge bases.\n\nThe agent uses retrieval-augmented generation (RAG) to answer questions:\n\n1. **Search**: Queries the vector database using hybrid search (semantic + keyword matching)\n2. **Retrieve**: Gets relevant documentation chunks from LanceDB\n3. **Context**: Combines retrieved docs with conversation history from SQLite\n4. **Generate**: LLM creates an answer grounded in the documentation\n\nThis ensures responses are based on your actual documentation, not just the model's training data.\n\n```python agno_assist.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.openai import OpenAIChat\nfrom agno.vectordb.lancedb import LanceDb, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agno-assist-agent",
+  "links": []
+}

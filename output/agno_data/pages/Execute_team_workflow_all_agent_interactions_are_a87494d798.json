@@ -1,0 +1,19 @@
+{
+  "title": "Execute team workflow - all agent interactions are traced",
+  "content": "finance_team.print_response(\"Analyze Apple (AAPL) investment potential\")\npython  theme={null}\nimport openlit\nfrom opentelemetry import trace\nfrom opentelemetry.sdk.trace import TracerProvider\nfrom opentelemetry.sdk.trace.export import SimpleSpanProcessor\nfrom opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [
+    {
+      "code": "### Example: Custom Tracer Configuration\n\nFor advanced use cases with custom OpenTelemetry configuration:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Example: Custom Tracer Configuration",
+      "id": "example:-custom-tracer-configuration"
+    }
+  ],
+  "url": "llms-txt#execute-team-workflow---all-agent-interactions-are-traced",
+  "links": []
+}

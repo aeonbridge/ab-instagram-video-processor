@@ -1,0 +1,8 @@
+{
+  "title": "Second call - will answer directly from history",
+  "content": "workflow.print_response(\n    \"What was Rocky's personality?\", stream=True\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#second-call---will-answer-directly-from-history",
+  "links": []
+}

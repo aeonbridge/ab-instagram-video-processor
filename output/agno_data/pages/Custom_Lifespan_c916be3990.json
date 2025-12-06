@@ -1,0 +1,53 @@
+{
+  "title": "Custom Lifespan",
+  "content": "Source: https://docs.agno.com/agent-os/lifespan\n\nCustomize the lifespan of your AgentOS app to handle startup and shutdown logic.\n\nYou will often want to run code before your AgentOS app starts or before it shuts down.\n\nThis can be done by providing a custom **lifespan function** via the `lifespan` parameter.\n\nThis is how a lifespan function looks like:\n\nThe custom lifespan function you provide will be used as the **lifespan context manager** for the FastAPI app used by your AgentOS. Remember to decorate it with `@asynccontextmanager` as shown in the examples.\n\n<Tip>\n  See the [FastAPI documentation](https://fastapi.tiangolo.com/advanced/events/#lifespan-events) for more information about the lifespan context manager.\n</Tip>\n\nIf you are using a custom FastAPI app, you don't need to worry about overwriting its lifespan.\n\nThe lifespan you provide will wrap the existing lifespan of the app, letting you combine all.\n\nLifespan control is useful to handle typical startup and shutdown tasks, such as:\n\n* **Resource Initialization**: databases, third party services, caches... or anything else needed by your app.\n* **Cleanup**: Close connections, store data or release resources before shut down.\n* **Health Checks**: Verify dependencies are available before serving requests\n* **Background Tasks**: Start/stop background processes\n\n<Steps>\n  <Step title=\"Code\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set Environment Variables\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Setup PostgreSQL Database\">\n    \n  </Step>\n\n<Step title=\"Run Example with Python\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## FastAPI Lifespan\n\nThe custom lifespan function you provide will be used as the **lifespan context manager** for the FastAPI app used by your AgentOS. Remember to decorate it with `@asynccontextmanager` as shown in the examples.\n\n<Tip>\n  See the [FastAPI documentation](https://fastapi.tiangolo.com/advanced/events/#lifespan-events) for more information about the lifespan context manager.\n</Tip>\n\nIf you are using a custom FastAPI app, you don't need to worry about overwriting its lifespan.\n\nThe lifespan you provide will wrap the existing lifespan of the app, letting you combine all.\n\n## Common Use Cases\n\nLifespan control is useful to handle typical startup and shutdown tasks, such as:\n\n* **Resource Initialization**: databases, third party services, caches... or anything else needed by your app.\n* **Cleanup**: Close connections, store data or release resources before shut down.\n* **Health Checks**: Verify dependencies are available before serving requests\n* **Background Tasks**: Start/stop background processes\n\n## Example\n\n<Steps>\n  <Step title=\"Code\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Setup PostgreSQL Database\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example with Python\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "FastAPI Lifespan",
+      "id": "fastapi-lifespan"
+    },
+    {
+      "level": "h2",
+      "text": "Common Use Cases",
+      "id": "common-use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#custom-lifespan",
+  "links": []
+}

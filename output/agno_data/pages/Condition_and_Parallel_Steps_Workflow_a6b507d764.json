@@ -1,0 +1,8 @@
+{
+  "title": "Condition and Parallel Steps Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/condition-and-parallel-steps-stream\n\nThis example demonstrates **Workflows 2.0** advanced pattern combining conditional execution with parallel processing.\n\nThis example shows how to create sophisticated workflows where multiple\nconditions evaluate simultaneously, each potentially triggering different research strategies\nbased on comprehensive content analysis.\n\n**When to use**: When you need comprehensive, multi-dimensional content analysis where\ndifferent aspects of the input may trigger different specialized research pipelines\nsimultaneously. Ideal for adaptive research workflows that can leverage multiple sources\nbased on various content characteristics.\n\n```python condition_and_parallel_steps_stream.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.exa import ExaTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.condition import Condition\nfrom agno.workflow.parallel import Parallel\nfrom agno.workflow.step import Step\nfrom agno.workflow.types import StepInput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#condition-and-parallel-steps-workflow",
+  "links": []
+}

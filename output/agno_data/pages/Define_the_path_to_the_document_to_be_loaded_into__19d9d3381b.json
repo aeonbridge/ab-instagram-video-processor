@@ -1,0 +1,8 @@
+{
+  "title": "Define the path to the document to be loaded into the knowledge base",
+  "content": "state_of_the_union = pathlib.Path(\n    \"cookbook/knowledge/testing_resources/state_of_the_union.txt\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-the-path-to-the-document-to-be-loaded-into-the-knowledge-base",
+  "links": []
+}

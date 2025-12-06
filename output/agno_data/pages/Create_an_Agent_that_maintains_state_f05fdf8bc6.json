@@ -1,0 +1,8 @@
+{
+  "title": "Create an Agent that maintains state",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    # Initialize the session state with a counter starting at 0 (this is the default session state for all users)\n    session_state={\"shopping_list\": []},\n    db=SqliteDb(db_file=\"tmp/agents.db\"),\n    tools=[add_item],\n    # You can use variables from the session state in the instructions\n    instructions=\"Current state (shopping list) is: {shopping_list}\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-that-maintains-state",
+  "links": []
+}

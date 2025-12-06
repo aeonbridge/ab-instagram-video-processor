@@ -1,0 +1,14 @@
+{
+  "title": "First give information to the team",
+  "content": "## Ask question in German\nmulti_lingual_q_and_a_team.print_response(\n    \"Hallo, wie heißt du? Meine Name ist John.\", stream=True, session_id=session_id\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Ask question in German",
+      "id": "ask-question-in-german"
+    }
+  ],
+  "url": "llms-txt#first-give-information-to-the-team",
+  "links": []
+}

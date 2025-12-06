@@ -1,0 +1,88 @@
+{
+  "title": "Storage Control",
+  "content": "Source: https://docs.agno.com/basics/sessions/persisting-sessions/storage-control\n\nControl what session data gets persisted to your database\n\nAs sessions accumulate data, your database can grow quickly. Agno gives you fine-grained control over what gets persisted with three storage flags:\n\n* **`store_media`** - Images, videos, audio, and file uploads\n* **`store_tool_messages`** - Tool calls and their results\n* **`store_history_messages`** - Historical messages from previous runs\n\n<Note>\n  Storage control works identically for Agents and Teams. This page shows examples for both.\n</Note>\n\n## How Storage Control Works\n\nThink of these flags as filters for your database, not your agent. During a run, your agent or team sees everything: media, tool results, history. Everything works normally. The filtering only happens when saving to the database after the run finishes.\n\nSo you can turn off storing media or tool messages without breaking anything. Your agent still processes images, tools still run, history still flows to the model. You're just choosing what gets written to disk. Token metrics still reflect the real usage, even if you didn't persist all the data.\n\n<Warning>\n  When you optimise what messages you store in the database, it might cause hallucinations on the LLM, if any of the messages are essential to the conversation history. If you don't rely too heavily on history, you can safely optimise storage.\n\nFor example, if you remove tool call messages, it won't be available in subsequent runs where history is enabled, which could cause the LLM to think that tool was never used.\n</Warning>\n\n<Note>\n  **Important: `store_tool_messages=False` removes tool-call and result pairs**\n\nWhen you disable tool message storage, Agno removes both the tool result *and* the strips the tool call from the corresponding assistant message (message from the LLM). This is required to maintain valid message sequences that model providers expect.\n\nYour metrics will still show the actual tokens used, including the removed tool messages.\n</Note>\n\n## Storage Flags Reference\n\n| Flag                     | Default | What It Controls                                                             | Impact When Disabled                                       |\n| ------------------------ | ------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------- |\n| `store_media`            | `True`  | Images, videos, audio, files uploaded by users                               | Media not persisted to database                            |\n| `store_tool_messages`    | `True`  | Tool calls and their results (also removes corresponding assistant messages) | Tool execution details not stored, saves significant space |\n| `store_history_messages` | `True`  | Historical messages from previous runs                                       | Old history not stored, only current run persisted         |\n\n## Disable Media Storage\n\nLarge media uploads (images, PDFs, audio) can dominate your session tables. Turn them off with `store_media=False` and store the original files elsewhere (S3, GCS, etc.).\n\nDuring a run the model still receives the media (and tools can still process it); the flag only affects what is written to the database afterward.\n\n### Recommended Workflow\n\n1. Upload the file to your preferred storage service and keep the URL/ID\n2. Pass that URL to the agent/team so it can fetch/process the file\n3. Skip persisting the raw media via `store_media=False`\n\n## Disable Tool Storage\n\nTool calls can easily bloat storage (think web-scraped pages or large API payloads). Toggle `store_tool_messages=False` to remove both the tool result and the tool-call from the corresponding assistant message that triggered it from the persisted run. Metrics still show the real token usage.\n\n* Removing tool messages keeps the provider-friendly message ordering intact (no stray tool roles)\n* When auditing tool behavior later, re-run the tool or log its output somewhere else before the run completes\n* Pair this with `store_media=False` when tools return binary payloads you don't need in the session record\n\n## Disable History Storage\n\n`store_history_messages=False` keeps the runtime behavior (history still reaches the LLM) but scrubs the historic messages before persistence. Only the non-history messages are written to the database.\n\n### When to Toggle It\n\n* **Cost / storage**: Reduce table size for high-volume deployments\n* **Privacy**: Avoid storing long-lived transcripts that contain sensitive data\n* **Debugging current runs only**: Keep just the latest interaction record\n\n## Combining Storage Flags\n\nYou can use multiple flags together to optimize your storage strategy:\n\nTurn a flag **off** when you want to reduce storage footprint (e.g., large tool payloads you can always re-run, media living in S3, old history you don't need). Leave it **on** when you need full transcripts for audit/compliance, analytics, or agent coaching.\n\n* [Sessions Overview](/basics/sessions/overview)\n* [Session Storage](/basics/database/overview)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\nDuring a run the model still receives the media (and tools can still process it); the flag only affects what is written to the database afterward.\n\n### Recommended Workflow\n\n1. Upload the file to your preferred storage service and keep the URL/ID\n2. Pass that URL to the agent/team so it can fetch/process the file\n3. Skip persisting the raw media via `store_media=False`\n\n## Disable Tool Storage\n\nTool calls can easily bloat storage (think web-scraped pages or large API payloads). Toggle `store_tool_messages=False` to remove both the tool result and the tool-call from the corresponding assistant message that triggered it from the persisted run. Metrics still show the real token usage.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Considerations\n\n* Removing tool messages keeps the provider-friendly message ordering intact (no stray tool roles)\n* When auditing tool behavior later, re-run the tool or log its output somewhere else before the run completes\n* Pair this with `store_media=False` when tools return binary payloads you don't need in the session record\n\n## Disable History Storage\n\n`store_history_messages=False` keeps the runtime behavior (history still reaches the LLM) but scrubs the historic messages before persistence. Only the non-history messages are written to the database.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### When to Toggle It\n\n* **Cost / storage**: Reduce table size for high-volume deployments\n* **Privacy**: Avoid storing long-lived transcripts that contain sensitive data\n* **Debugging current runs only**: Keep just the latest interaction record\n\n## Combining Storage Flags\n\nYou can use multiple flags together to optimize your storage strategy:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "How Storage Control Works",
+      "id": "how-storage-control-works"
+    },
+    {
+      "level": "h2",
+      "text": "Storage Flags Reference",
+      "id": "storage-flags-reference"
+    },
+    {
+      "level": "h2",
+      "text": "Disable Media Storage",
+      "id": "disable-media-storage"
+    },
+    {
+      "level": "h3",
+      "text": "Recommended Workflow",
+      "id": "recommended-workflow"
+    },
+    {
+      "level": "h2",
+      "text": "Disable Tool Storage",
+      "id": "disable-tool-storage"
+    },
+    {
+      "level": "h3",
+      "text": "Considerations",
+      "id": "considerations"
+    },
+    {
+      "level": "h2",
+      "text": "Disable History Storage",
+      "id": "disable-history-storage"
+    },
+    {
+      "level": "h3",
+      "text": "When to Toggle It",
+      "id": "when-to-toggle-it"
+    },
+    {
+      "level": "h2",
+      "text": "Combining Storage Flags",
+      "id": "combining-storage-flags"
+    },
+    {
+      "level": "h2",
+      "text": "Learn More",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#storage-control",
+  "links": []
+}

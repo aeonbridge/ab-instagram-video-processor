@@ -1,0 +1,8 @@
+{
+  "title": "List Memories",
+  "content": "Source: https://docs.agno.com/reference-api/schema/memory/list-memories\n\nget /memories\nRetrieve paginated list of user memories with filtering and search capabilities. Filter by user, agent, team, topics, or search within memory content.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#list-memories",
+  "links": []
+}

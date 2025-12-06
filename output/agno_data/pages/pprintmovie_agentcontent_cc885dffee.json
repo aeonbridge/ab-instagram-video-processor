@@ -1,0 +1,31 @@
+{
+  "title": "pprint(movie_agent.content)",
+  "content": "movie_agent.print_response(\"New York\")\nbash  theme={null}\n    export IBM_WATSONX_API_KEY=xxx\n    export IBM_WATSONX_PROJECT_ID=xxx\n    bash  theme={null}\n    pip install -U ibm-watsonx-ai pydantic rich agno\n    bash Mac theme={null}\n      python cookbook/models/ibm/watsonx/structured_output.py\n      bash Windows theme={null}\n      python cookbook\\models\\ibm\\watsonx\\structured_output.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\nThis example shows how to use structured output with IBM WatsonX. It defines a Pydantic model `MovieScript` with various fields and their descriptions, then creates an agent using this model as the `output_schema`. The model's output will be parsed into this structured format.",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#pprint(movie_agent.content)",
+  "links": []
+}

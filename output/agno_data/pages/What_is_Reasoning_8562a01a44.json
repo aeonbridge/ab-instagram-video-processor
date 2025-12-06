@@ -1,0 +1,34 @@
+{
+  "title": "What is Reasoning?",
+  "content": "Source: https://docs.agno.com/basics/reasoning/overview\n\nReasoning gives Agents the ability to \"think\" before responding and \"analyze\" the results of their actions (i.e. tool calls), greatly improving the Agents' ability to solve problems that require sequential tool calls.\n\nImagine asking a regular AI agent to solve a complex math problem, analyze a scientific paper, or plan a multi-step travel itinerary. Often, it rushes to an answer without fully thinking through the problem. The result? Wrong calculations, incomplete analysis, or illogical plans.\n\nNow imagine an agent that pauses, thinks through the problem step-by-step, validates its reasoning, catches its own mistakes, and only then provides an answer. This is reasoning in action, and it transforms agents from quick responders into careful problem-solvers.\n\n## Why Reasoning Matters\n\nWithout reasoning, agents struggle with tasks that require:\n\n* **Multi-step thinking** - Breaking complex problems into logical steps\n* **Self-validation** - Checking their own work before responding\n* **Error correction** - Catching and fixing mistakes mid-process\n* **Strategic planning** - Thinking ahead instead of reacting\n\n**Example:** Ask a normal agent \"Which is bigger: 9.11 or 9.9?\" and it might incorrectly say 9.11 (comparing digit by digit instead of decimal values). A reasoning agent thinks through the decimal comparison logic first and gets it right.\n\n## How Reasoning Works\n\n<Note>\n  The features of reasoning are available both on Agents and Teams.\n</Note>\n\n**Chain-of-Thought (CoT):** The model thinks through a problem step-by-step internally, breaking down complex reasoning into logical steps before producing an answer. This is used by reasoning models and reasoning agents.\n\n**ReAct (Reason and Act):** An iterative cycle where the agent alternates between reasoning and taking actions:\n\n1. **Reason** - Think through the problem, plan next steps\n2. **Act** - Take action (call a tool, perform calculation)\n3. **Observe** - Analyze the results\n4. **Repeat** - Continue reasoning based on new information until solved\n\nThis pattern is particularly useful with reasoning tools and when agents need to validate assumptions through real-world feedback.\n\n## Three Approaches to Reasoning\n\nAgno gives you three ways to add reasoning to your agents, each suited for different use cases:\n\n### 1. Reasoning Models\n\n**What:** Pre-trained models that natively think before answering (e.g. OpenAI gpt-5, Claude 4.5 Sonnet, Gemini 2.0 Flash Thinking, DeepSeek-R1).\n\n**How it works:** The model generates an internal chain of thought before producing its final response. This happens at the model layer: you simply use the model and reasoning happens automatically.\n\n* Single-shot complex problems (math, coding, physics)\n* Problems where you trust the model to handle reasoning internally\n* Use cases where you don't need to control the reasoning process\n\n```python o3_mini.py theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Why Reasoning Matters",
+      "id": "why-reasoning-matters"
+    },
+    {
+      "level": "h2",
+      "text": "How Reasoning Works",
+      "id": "how-reasoning-works"
+    },
+    {
+      "level": "h2",
+      "text": "Reasoning Models",
+      "id": "reasoning-models"
+    },
+    {
+      "level": "h2",
+      "text": "Three Approaches to Reasoning",
+      "id": "three-approaches-to-reasoning"
+    },
+    {
+      "level": "h3",
+      "text": "1. Reasoning Models",
+      "id": "1.-reasoning-models"
+    }
+  ],
+  "url": "llms-txt#what-is-reasoning?",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Define communication standards",
+  "content": "comm_standard = CulturalKnowledge(\n    name=\"Customer Communication Tone\",\n    summary=\"Professional, empathetic, solution-focused\",\n    categories=[\"communication\", \"support\"],\n    content=(\n        \"- Acknowledge the customer's situation first\\n\"\n        \"- Provide clear, actionable steps\\n\"\n        \"- Avoid jargon unless necessary\\n\"\n        \"- Always offer next steps or alternatives\"\n    ),\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Code Review Principles",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Code Review Principles",
+      "id": "code-review-principles"
+    }
+  ],
+  "url": "llms-txt#define-communication-standards",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Stream Message",
+  "content": "Source: https://docs.agno.com/reference-api/schema/a2a/stream-message\n\npost /a2a/message/stream\nStream a message to an Agno Agent, Team, or Workflow.The Agent, Team or Workflow is identified via the 'agentId' field in params.message or X-Agent-ID header. Optional: Pass user ID via X-User-ID header (recommended) or 'userId' in params.message.metadata. Returns real-time updates as newline-delimited JSON (NDJSON).",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#stream-message",
+  "links": []
+}

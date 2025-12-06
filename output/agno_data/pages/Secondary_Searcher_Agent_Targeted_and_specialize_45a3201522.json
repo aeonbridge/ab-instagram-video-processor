@@ -1,0 +1,8 @@
+{
+  "title": "Secondary Searcher Agent - Targeted and specialized search",
+  "content": "secondary_searcher = Agent(\n    name=\"Secondary Searcher\",\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    role=\"Perform targeted searches on specific topics and edge cases\",\n    knowledge=knowledge_secondary,\n    search_knowledge=True,\n    instructions=[\n        \"Perform targeted searches on specific aspects of the query.\",\n        \"Look for edge cases, technical details, and specialized information.\",\n        \"Use infinity reranking to find the most precise matches.\",\n        \"Focus on details that complement the primary search results.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#secondary-searcher-agent---targeted-and-specialized-search",
+  "links": []
+}

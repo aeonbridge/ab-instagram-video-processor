@@ -1,5 +1,8 @@
 .env
 credentials*
+client_secret*.json
+.ab_publisher_tokens.json
+*_tokens.json
 *.mp4
 # Downloaded and converted media files
 audio_downloads/

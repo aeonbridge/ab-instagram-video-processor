@@ -1,0 +1,24 @@
+{
+  "title": "MongoDB Atlas connection string",
+  "content": "\"\"\"\nExample connection strings:\n\"mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority\"\n\"mongodb://localhost/?directConnection=true\"\n\"\"\"\nmdb_connection_string = \"\"\n\nknowledge_base = Knowledge(\n    vector_db=MongoVectorDb(\n        collection_name=\"recipes\",\n        db_url=mdb_connection_string,\n        wait_until_index_ready_in_seconds=60,\n        wait_after_insert_in_seconds=300\n    ),\n)  # adjust wait_after_insert_in_seconds and wait_until_index_ready_in_seconds to your needs\n\nif __name__ == \"__main__\":\n    knowledge_base.add_content(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n\nagent = Agent(knowledge=knowledge_base)\n    agent.print_response(\"How to make Thai curry?\", markdown=True)\npython async_mongodb.py theme={null}\n    import asyncio\n\nfrom agno.agent import Agent\n    from agno.knowledge.knowledge import Knowledge\n    from agno.vectordb.mongodb import MongoVectorDb\n\n# MongoDB Atlas connection string\n    \"\"\"\n    Example connection strings:\n    \"mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority\"\n    \"mongodb://localhost:27017/agno?authSource=admin\"\n    \"\"\"\n    mdb_connection_string = \"mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority\"\n\nknowledge_base = Knowledge(\n        vector_db=MongoVectorDb(\n            collection_name=\"recipes\",\n            db_url=mdb_connection_string,\n        ),\n    )\n\n# Create and use the agent\n    agent = Agent(knowledge=knowledge_base)\n\nif __name__ == \"__main__\":\n        # Load knowledge base asynchronously\n        asyncio.run(knowledge_base.add_content_async(\n                url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n            )\n        )\n\n# Create and use the agent asynchronously\n        asyncio.run(agent.aprint_response(\"How to make Thai curry?\", markdown=True))\n    ```\n\n<Tip className=\"mt-4\">\n      Use <code>aload()</code> and <code>aprint\\_response()</code> methods with <code>asyncio.run()</code> for non-blocking operations in high-throughput applications.\n    </Tip>\n  </div>\n</Card>\n\n<Snippet file=\"vectordb_mongodb_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook (Sync)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/mongo_db/mongo_db.py)\n* View [Cookbook (Async)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/mongo_db/async_mongo_db.py)",
+  "code_samples": [
+    {
+      "code": "<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      MongoDB also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "MongoDB Params",
+      "id": "mongodb-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#mongodb-atlas-connection-string",
+  "links": []
+}

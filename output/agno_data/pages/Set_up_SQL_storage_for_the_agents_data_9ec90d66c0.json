@@ -1,0 +1,8 @@
+{
+  "title": "Set up SQL storage for the agent's data",
+  "content": "db = SqliteDb(db_file=\"data.db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-sql-storage-for-the-agent's-data",
+  "links": []
+}

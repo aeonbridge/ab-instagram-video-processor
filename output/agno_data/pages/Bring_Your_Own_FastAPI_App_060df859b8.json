@@ -1,0 +1,14 @@
+{
+  "title": "Bring Your Own FastAPI App",
+  "content": "Source: https://docs.agno.com/agent-os/custom-fastapi/overview\n\nLearn how to use your own FastAPI app in your AgentOS\n\nAgentOS is built on FastAPI, which means you can easily integrate your existing FastAPI applications or add custom routes and routers to extend your agent's capabilities.\n\nThe simplest way to bring your own FastAPI app is to pass it to the AgentOS constructor:\n\n```python  theme={null}\nfrom fastapi import FastAPI\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Quick Start",
+      "id": "quick-start"
+    }
+  ],
+  "url": "llms-txt#bring-your-own-fastapi-app",
+  "links": []
+}

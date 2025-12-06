@@ -1,0 +1,8 @@
+{
+  "title": "Additional agents for multi-step condition",
+  "content": "trend_analyzer_agent = Agent(\n    name=\"Trend Analyzer\",\n    instructions=\"Analyze trends and patterns from research data\",\n)\n\nfact_checker_agent = Agent(\n    name=\"Fact Checker\",\n    instructions=\"Verify facts and cross-reference information\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#additional-agents-for-multi-step-condition",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Sequence of functions and agents",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/sequence-of-functions-and-agents\n\nThis example demonstrates how to use a sequence of functions and agents in a workflow.\n\nThis example demonstrates **Workflows** combining custom functions with agents and teams\nin a sequential execution pattern. This shows how to mix different component types for\nmaximum flexibility in your workflow design.\n\n**When to use**: Linear processes where you need custom data preprocessing between AI agents,\nor when combining multiple component types (functions, agents, teams) in sequence.\n\n```python sequence_of_functions_and_agents.py theme={null}\nfrom textwrap import dedent\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.types import StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#sequence-of-functions-and-agents",
+  "links": []
+}

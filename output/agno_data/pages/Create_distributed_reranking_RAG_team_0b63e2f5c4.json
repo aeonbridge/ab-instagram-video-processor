@@ -1,0 +1,27 @@
+{
+  "title": "Create distributed reranking RAG team",
+  "content": "distributed_reranking_team = Team(\n    name=\"Distributed Reranking RAG Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[\n        initial_retriever,\n        reranking_specialist,\n        context_analyzer,\n        final_synthesizer,\n    ],\n    instructions=[\n        \"Work together to provide optimal RAG responses using advanced reranking.\",\n        \"Initial Retriever: First perform broad comprehensive retrieval.\",\n        \"Reranking Specialist: Apply advanced reranking for result optimization.\",\n        \"Context Analyzer: Analyze and validate the reranked results.\",\n        \"Final Synthesizer: Create optimal responses from reranked information.\",\n        \"Leverage advanced reranking for superior result quality.\",\n        \"Demonstrate the benefits of specialized reranking in team coordination.\",\n    ],\n    show_members_responses=True,\n    markdown=True,\n)\n\nasync def async_reranking_rag_demo():\n    \"\"\"Demonstrate async distributed reranking RAG processing.\"\"\"\n    print(\"🎯 Async Distributed Reranking RAG Demo\")\n    print(\"=\" * 45)\n\nquery = \"What's the best way to prepare authentic Tom Kha Gai? I want traditional methods and modern variations.\"\n\n# Add content to knowledge bases\n    await reranked_knowledge.add_contents_async(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n    await validation_knowledge.add_contents_async(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n\n# Run async distributed reranking RAG\n    await aprint_response(input=query, team=distributed_reranking_team)\n\ndef sync_reranking_rag_demo():\n    \"\"\"Demonstrate sync distributed reranking RAG processing.\"\"\"\n    print(\"🎯 Distributed Reranking RAG Demo\")\n    print(\"=\" * 35)\n\nquery = \"What's the best way to prepare authentic Tom Kha Gai? I want traditional methods and modern variations.\"\n\n# Add content to knowledge bases\n    reranked_knowledge.add_contents(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n    validation_knowledge.add_contents(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n\n# Run distributed reranking RAG\n    print_response(distributed_reranking_team, query)\n\ndef advanced_culinary_demo():\n    \"\"\"Demonstrate advanced reranking for complex culinary queries.\"\"\"\n    print(\"👨‍🍳 Advanced Culinary Analysis with Reranking RAG\")\n    print(\"=\" * 55)\n\nquery = \"\"\"I want to understand the science behind Thai curry pastes. Can you explain:\n    - Traditional preparation methods vs modern techniques\n    - How different ingredients affect flavor profiles\n    - Regional variations and their historical origins\n    - Best practices for storage and usage\n    - How to adapt recipes for different dietary needs\"\"\"\n\n# Add content to knowledge bases\n    reranked_knowledge.add_contents(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n    validation_knowledge.add_contents(\n        url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n    )\n\nprint_response(distributed_reranking_team, query)\n\nif __name__ == \"__main__\":\n    # Choose which demo to run\n    asyncio.run(async_reranking_rag_demo())\n\n# advanced_culinary_demo()\n\n# sync_reranking_rag_demo()\nbash  theme={null}\n    pip install agno openai lancedb tantivy pypdf sqlalchemy cohere\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    export COHERE_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/distributed_rag/03_distributed_rag_with_reranking.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-distributed-reranking-rag-team",
+  "links": []
+}

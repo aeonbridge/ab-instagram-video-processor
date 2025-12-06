@@ -1,0 +1,8 @@
+{
+  "title": "First call - will run the workflow (new topic)",
+  "content": "workflow.print_response(\n    \"Tell me a story about a dog named Rocky\", stream=True\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#first-call---will-run-the-workflow-(new-topic)",
+  "links": []
+}

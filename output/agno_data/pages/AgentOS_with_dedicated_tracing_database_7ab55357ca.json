@@ -1,0 +1,24 @@
+{
+  "title": "AgentOS with dedicated tracing database",
+  "content": "agent_os = AgentOS(\n    agents=[hackernews_agent, search_agent],\n    tracing=True,\n    tracing_db=tracing_db,  # All traces go here\n)\n\napp = agent_os.get_app()\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.tracing import setup_tracing",
+  "code_samples": [
+    {
+      "code": "### Why Use a Dedicated Tracing Database?\n\nWithout `tracing_db`, AgentOS will store traces in the **first database it finds** from your agents or teams. This leads to:\n\n* **Fragmented traces**: Traces scattered across different databases\n* **Incomplete observability**: Can't query all traces from one place\n* **Unpredictable behavior**: Which database gets traces depends on agent order\n\nWith a dedicated `tracing_db`:\n\n* **Unified observability**: All traces in one queryable location\n* **Cross-agent analysis**: Compare performance across agents\n* **Independent scaling**: Traces don't affect agent data storage\n* **Predictable behavior**: You control exactly where traces go\n\n## Using setup\\_tracing() with AgentOS\n\nYou can also use `setup_tracing()` for more control over tracing configuration. In this case, you still need to ensure the tracing database is available to AgentOS:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Why Use a Dedicated Tracing Database?",
+      "id": "why-use-a-dedicated-tracing-database?"
+    },
+    {
+      "level": "h2",
+      "text": "Using setup\\_tracing() with AgentOS",
+      "id": "using-setup\\_tracing()-with-agentos"
+    }
+  ],
+  "url": "llms-txt#agentos-with-dedicated-tracing-database",
+  "links": []
+}

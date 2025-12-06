@@ -1,0 +1,42 @@
+{
+  "title": "OpenLIT",
+  "content": "Source: https://docs.agno.com/integrations/observability/openlit\n\nIntegrate Agno with OpenLIT for OpenTelemetry-native observability, tracing, and monitoring of your AI agents.\n\n## Integrating Agno with OpenLIT\n\n[OpenLIT](https://github.com/openlit/openlit) is an open-source, self-hosted, OpenTelemetry-native platform for a continuous feedback loop for testing, tracing, and fixing AI agents. By integrating Agno with OpenLIT, you can automatically instrument your agents to gain full visibility into LLM calls, tool usage, costs, performance metrics, and errors.\n\n1. **Install Dependencies**\n\nEnsure you have the necessary packages installed:\n\n2. **Deploy OpenLIT**\n\nOpenLIT is open-source and self-hosted. Quick start with Docker:\n\nAccess the dashboard at `http://127.0.0.1:3000` with default credentials (username: `user@openlit.io`, password: `openlituser`).\n\n**Other Deployment Options:**\n\nFor production deployments, Kubernetes with Helm, or other infrastructure setups, see the [OpenLIT Installation Guide](https://docs.openlit.io/latest/openlit/installation) for detailed instructions on:\n\n* Kubernetes deployment with Helm charts\n   * Custom Docker configurations\n   * Reusing existing ClickHouse or OpenTelemetry Collector infrastructure\n   * OpenLIT Operator for zero-code instrumentation in Kubernetes\n\n3. **Set Environment Variables (Optional)**\n\nConfigure the OTLP endpoint based on your deployment:\n\n## Sending Traces to OpenLIT\n\n### Example: Basic Agent Setup\n\nThis example demonstrates how to instrument your Agno agent with OpenLIT for automatic tracing.\n\n```python  theme={null}\nimport openlit\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.yfinance import YFinanceTools",
+  "code_samples": [
+    {
+      "code": "2. **Deploy OpenLIT**\n\n   OpenLIT is open-source and self-hosted. Quick start with Docker:",
+      "language": "unknown"
+    },
+    {
+      "code": "Access the dashboard at `http://127.0.0.1:3000` with default credentials (username: `user@openlit.io`, password: `openlituser`).\n\n   **Other Deployment Options:**\n\n   For production deployments, Kubernetes with Helm, or other infrastructure setups, see the [OpenLIT Installation Guide](https://docs.openlit.io/latest/openlit/installation) for detailed instructions on:\n\n   * Kubernetes deployment with Helm charts\n   * Custom Docker configurations\n   * Reusing existing ClickHouse or OpenTelemetry Collector infrastructure\n   * OpenLIT Operator for zero-code instrumentation in Kubernetes\n\n3. **Set Environment Variables (Optional)**\n\n   Configure the OTLP endpoint based on your deployment:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Sending Traces to OpenLIT\n\n### Example: Basic Agent Setup\n\nThis example demonstrates how to instrument your Agno agent with OpenLIT for automatic tracing.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with OpenLIT",
+      "id": "integrating-agno-with-openlit"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Sending Traces to OpenLIT",
+      "id": "sending-traces-to-openlit"
+    },
+    {
+      "level": "h3",
+      "text": "Example: Basic Agent Setup",
+      "id": "example:-basic-agent-setup"
+    }
+  ],
+  "url": "llms-txt#openlit",
+  "links": []
+}

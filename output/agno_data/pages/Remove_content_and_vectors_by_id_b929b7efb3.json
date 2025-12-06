@@ -1,0 +1,8 @@
+{
+  "title": "Remove content and vectors by id",
+  "content": "contents, _ = knowledge.get_content()\nfor content in contents:\n    print(content.id)\n    print(\" \")\n    knowledge.remove_content_by_id(content.id)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#remove-content-and-vectors-by-id",
+  "links": []
+}

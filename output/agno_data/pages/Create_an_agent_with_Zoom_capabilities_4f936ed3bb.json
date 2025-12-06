@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent with Zoom capabilities",
+  "content": "agent = Agent(tools=[zoom_tools])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-zoom-capabilities",
+  "links": []
+}

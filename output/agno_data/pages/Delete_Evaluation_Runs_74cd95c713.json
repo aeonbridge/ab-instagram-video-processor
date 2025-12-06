@@ -1,0 +1,8 @@
+{
+  "title": "Delete Evaluation Runs",
+  "content": "Source: https://docs.agno.com/reference-api/schema/evals/delete-evaluation-runs\n\ndelete /eval-runs\nDelete multiple evaluation runs by their IDs. This action cannot be undone.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#delete-evaluation-runs",
+  "links": []
+}

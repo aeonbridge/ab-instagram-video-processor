@@ -1,0 +1,29 @@
+{
+  "title": "Hybrid Search- Combining Keyword and Vector Search",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/hybrid-search\n\nUnderstanding Hybrid Search and its benefits in combining keyword and vector search for better results.\n\nWith Hybrid search, get the precision of exact matching with the intelligence of semantic understanding. Combining both approaches will deliver more comprehensive and relevant results in many cases.\n\n## What exactly is Hybrid Search?\n\n**Hybrid search** is a retrieval technique that combines the strengths of both **vector search** (semantic search) and **keyword search** (lexical search) to find the most relevant results for a query.\n\n* Vector search uses embeddings (dense vectors) to capture the semantic meaning of text, enabling the system to find results that are similar in meaning, even if the exact words don't match.\n* Keyword search (BM25, TF-IDF, etc.) matches documents based on the presence and frequency of exact words or phrases in the query.\n\nHybrid search blends these approaches, typically by scoring and/or ranking results from both methods, to maximize both precision and recall.\n\n## Keyword Search vs Vector Search vs Hybrid Search\n\n| Feature       | Keyword Search                  | Vector Search                             | Hybrid Search                             |\n| ------------- | ------------------------------- | ----------------------------------------- | ----------------------------------------- |\n| Based On      | Lexical matching (BM25, TF-IDF) | Embedding similarity (cosine, dot)        | Both                                      |\n| Strength      | Exact matches, relevance        | Contextual meaning                        | Balanced relevance + meaning              |\n| Weakness      | No semantic understanding       | Misses exact keywords                     | Slightly heavier in compute               |\n| Example Match | \"chicken soup\" = *chicken soup* | \"chicken soup\" = *hot broth with chicken* | Both literal and related concepts         |\n| Best Use Case | Legal docs, structured data     | Chatbots, Q\\&A, semantic search           | Multimodal, real-world messy user queries |\n\n<Note>\n  Why Hybrid Search might be better for your application-\n\n* **Improved Recall**: Captures more relevant results missed by pure keyword or vector search.\n  * **Balanced Precision**: Exact matches get priority while also including semantically relevant results.\n  * **Robust to Ambiguity**: Handles spelling variations, synonyms, and fuzzy user intent.\n  * **Best of Both Worlds**: Keywords matter when they should, and meaning matters when needed.\n\n**Perfect for **real-world apps** like recipe search, customer support, legal discovery, etc.**\n</Note>\n\n## Vector DBs in Agno that Support Hybrid Search\n\nThe following vector databases support hybrid search natively or via configurations:\n\n| Database   | Hybrid Search Support       |\n| ---------- | --------------------------- |\n| `pgvector` | ✅ Yes                       |\n| `milvus`   | ✅ Yes                       |\n| `lancedb`  | ✅ Yes                       |\n| `qdrantdb` | ✅ Yes                       |\n| `weaviate` | ✅ Yes                       |\n| `mongodb`  | ✅ Yes (Atlas Vector Search) |\n\n## Example: Hybrid Search using `pgvector`\n\n```python  theme={null}\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector, SearchType",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What exactly is Hybrid Search?",
+      "id": "what-exactly-is-hybrid-search?"
+    },
+    {
+      "level": "h2",
+      "text": "Keyword Search vs Vector Search vs Hybrid Search",
+      "id": "keyword-search-vs-vector-search-vs-hybrid-search"
+    },
+    {
+      "level": "h2",
+      "text": "Vector DBs in Agno that Support Hybrid Search",
+      "id": "vector-dbs-in-agno-that-support-hybrid-search"
+    },
+    {
+      "level": "h2",
+      "text": "Example: Hybrid Search using `pgvector`",
+      "id": "example:-hybrid-search-using-`pgvector`"
+    }
+  ],
+  "url": "llms-txt#hybrid-search--combining-keyword-and-vector-search",
+  "links": []
+}

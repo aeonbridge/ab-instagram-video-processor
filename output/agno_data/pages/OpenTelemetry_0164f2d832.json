@@ -1,0 +1,24 @@
+{
+  "title": "OpenTelemetry",
+  "content": "Source: https://docs.agno.com/integrations/observability/overview\n\nAgno supports observability through OpenTelemetry, integrating seamlessly with popular tracing and monitoring platforms.\n\nObservability helps us understand, debug, and improve AI agents. Agno supports observability through [OpenTelemetry](https://opentelemetry.io/), integrating seamlessly with popular tracing and monitoring platforms.\n\n* **Trace**: Visualize and analyze agent execution flows.\n* **Monitor**: Track performance, errors, and usage.\n* **Debug**: Quickly identify and resolve issues.\n\n## OpenTelemetry Support\n\nAgno offers first-class support for OpenTelemetry, the industry standard for distributed tracing and observability.\n\n* **Auto-Instrumentation**: Automatically instrument your agents and tools.\n* **Flexible Export**: Send traces to any OpenTelemetry-compatible backend.\n* **Custom Tracing**: Extend or customize tracing as needed.\n\n<Note>\n  OpenTelemetry-compatible backends including Arize Phoenix, Langfuse, Langsmith, Langtrace, Logfire, Maxim, OpenLIT, Traceloop, and Weave are supported by Agno out of the box.\n</Note>\n\n## Developer Resources\n\n* [Cookbooks](https://github.com/agno-agi/agno/tree/main/cookbook/integrations/observability)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Benefits",
+      "id": "key-benefits"
+    },
+    {
+      "level": "h2",
+      "text": "OpenTelemetry Support",
+      "id": "opentelemetry-support"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#opentelemetry",
+  "links": []
+}

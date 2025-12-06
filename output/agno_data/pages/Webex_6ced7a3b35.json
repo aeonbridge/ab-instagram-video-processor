@@ -1,0 +1,28 @@
+{
+  "title": "Webex",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/webex\n\n**WebexTools** enable an Agent to interact with Cisco Webex, allowing it to send messages and list rooms.\n\nThe following example requires the `webexpythonsdk` library and a Webex access token which can be obtained from [Webex Developer Portal](https://developer.webex.com/docs/bots).\n\nTo get started with Webex:\n\n1. **Create a Webex Bot:**\n   * Go to the [Developer Portal](https://developer.webex.com/)\n   * Navigate to My Webex Apps → Create a Bot\n   * Fill in the bot details and click Add Bot\n\n2. **Get your access token:**\n   * Copy the token shown after bot creation\n   * Or regenerate via My Webex Apps → Edit Bot\n   * Set as WEBEX\\_ACCESS\\_TOKEN environment variable\n\n3. **Add the bot to Webex:**\n   * Launch Webex and add the bot to a space\n   * Use the bot's email (e.g. [test@webex.bot](mailto:test@webex.bot))\n\nThe following agent will list all spaces and send a message using Webex:\n\n```python cookbook/tools/webex_tool.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.webex import WebexTools\n\nagent = Agent(tools=[WebexTools()])",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will list all spaces and send a message using Webex:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#webex",
+  "links": []
+}

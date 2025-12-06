@@ -1,0 +1,14 @@
+{
+  "title": "Research Workflow",
+  "content": "Source: https://docs.agno.com/examples/getting-started/19-blog-generator-workflow\n\nThis advanced example demonstrates how to build a sophisticated blog post generator using\nthe new workflow v2.0 architecture. The workflow combines web research capabilities with\nprofessional writing expertise using a multi-stage approach:\n\n1. Intelligent web research and source gathering\n2. Content extraction and processing\n3. Professional blog post writing with proper citations\n\n* Advanced web research and source evaluation\n* Content scraping and processing\n* Professional writing with SEO optimization\n* Automatic content caching for efficiency\n* Source attribution and fact verification\n\n```python blog-generator-workflow.py theme={null}\nimport asyncio\nimport json\nfrom textwrap import dedent\nfrom typing import Dict, Optional\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.newspaper4k import Newspaper4kTools\nfrom agno.utils.log import logger\nfrom agno.utils.pprint import pprint_run_response\nfrom agno.workflow.workflow import Workflow\nfrom pydantic import BaseModel, Field",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#research-workflow",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "When you add content",
+  "content": "knowledge.add_content(\n    name=\"Product Manual\",\n    path=\"docs/manual.pdf\",\n    metadata={\"department\": \"engineering\", \"version\": \"2.1\"}\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#when-you-add-content",
+  "links": []
+}

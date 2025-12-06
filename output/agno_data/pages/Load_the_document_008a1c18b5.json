@@ -1,0 +1,8 @@
+{
+  "title": "Load the document",
+  "content": "raw_documents = TextLoader(str(state_of_the_union), encoding=\"utf-8\").load()",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#load-the-document",
+  "links": []
+}

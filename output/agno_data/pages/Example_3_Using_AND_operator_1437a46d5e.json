@@ -1,0 +1,13 @@
+{
+  "title": "Example 3: Using AND operator",
+  "content": "print(\"Using AND operator\")\nsales_agent.print_response(\n    \"Describe revenue performance for the region\",\n    knowledge_filters=[\n        AND(EQ(\"data_type\", \"sales\"), NOT(EQ(\"region\", \"north_america\")))\n    ],\n    markdown=True,\n)\npython filter_expressions_teams.py theme={null}\nfrom agno.agent import Agent\nfrom agno.filters import AND, IN, NOT\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.pdf_reader import PDFReader\nfrom agno.models.openai import OpenAIChat\nfrom agno.team.team import Team\nfrom agno.utils.media import (\n    SampleDataFileExtension,\n    download_knowledge_filters_sample_data,\n)\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#example-3:-using-and-operator",
+  "links": []
+}

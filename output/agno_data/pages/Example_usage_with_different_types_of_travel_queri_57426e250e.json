@@ -1,0 +1,8 @@
+{
+  "title": "Example usage with different types of travel queries",
+  "content": "if __name__ == \"__main__\":\n    travel_agent.print_response(\n        \"I want to plan an offsite for 14 people for 3 days (28th-30th March) in London \"\n        \"within 10k dollars each. Please suggest options for places to stay, activities, \"\n        \"and co-working spaces with a detailed itinerary including transportation.\",\n        stream=True,\n    )",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage-with-different-types-of-travel-queries",
+  "links": []
+}

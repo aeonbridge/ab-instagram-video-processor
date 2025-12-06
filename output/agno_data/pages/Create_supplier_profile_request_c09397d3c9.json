@@ -1,0 +1,8 @@
+{
+  "title": "Create supplier profile request",
+  "content": "supplier_request = SupplierProfile(\n    supplier_name=\"Your Company Name\",\n    supplier_homepage_url=\"https://yourcompany.com\",\n    user_email=\"your.email@company.com\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-supplier-profile-request",
+  "links": []
+}

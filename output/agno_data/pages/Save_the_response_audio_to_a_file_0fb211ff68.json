@@ -1,0 +1,31 @@
+{
+  "title": "Save the response audio to a file",
+  "content": "if run_output.response_audio:\n    write_audio_to_file(\n        audio=run_output.response_audio.content,\n        filename=\"tmp/scary_story_sequal.wav\",\n    )\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U openai agno\n    bash Mac theme={null}\n      python cookbook/models/openai/chat/audio_output_agent.py\n      bash Windows theme={null}\n      python cookbook/models/openai/chat/audio_output_agent.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#save-the-response-audio-to-a-file",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "3. Create knowledge base",
+  "content": "knowledge = Knowledge(\n    name=\"Company Documentation\",\n    vector_db=vector_db,\n    max_results=10,\n    contents_db=contents_db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#3.-create-knowledge-base",
+  "links": []
+}

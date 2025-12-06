@@ -1,0 +1,32 @@
+{
+  "title": "File Upload",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/file-upload\n\nLearn how to use Anthropic's Files API with Agno.\n\nWith Anthropic's [Files API](https://docs.anthropic.com/en/docs/build-with-claude/files), you can upload files and later reference them in other API calls.\nThis is handy when a file is referenced multiple times in the same flow.\n\n<Steps>\n  <Step title=\"Upload a file\">\n    Initialize the Anthropic client and use `client.beta.files.upload`:\n\n<Step title=\"Initialize the Claude model\">\n    When initializing the `Claude` model, pass the necessary beta header:\n\n<Step title=\"Reference the file\">\n    You can now reference the uploaded file when interacting with your Agno agent:\n\nNotice there are some storage limits attached to this feature. You can read more about that on Anthropic's [docs](https://docs.anthropic.com/en/docs/build-with-claude/files#file-storage-and-limits).\n\n```python cookbook/models/anthropic/pdf_input_file_upload.py theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import File\nfrom agno.models.anthropic import Claude\nfrom agno.utils.media import download_file\nfrom anthropic import Anthropic\n\npdf_path = Path(__file__).parent.joinpath(\"ThaiRecipes.pdf\")",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Initialize the Claude model\">\n    When initializing the `Claude` model, pass the necessary beta header:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Reference the file\">\n    You can now reference the uploaded file when interacting with your Agno agent:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n</Steps>\n\nNotice there are some storage limits attached to this feature. You can read more about that on Anthropic's [docs](https://docs.anthropic.com/en/docs/build-with-claude/files#file-storage-and-limits).\n\n## Working example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Working example",
+      "id": "working-example"
+    }
+  ],
+  "url": "llms-txt#file-upload",
+  "links": []
+}

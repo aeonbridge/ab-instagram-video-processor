@@ -1,0 +1,8 @@
+{
+  "title": "Use on_route_conflict=\"preserve_base_app\" to preserve your custom routes over AgentOS routes",
+  "content": "agent_os = AgentOS(\n    description=\"Example app with route replacement\",\n    agents=[web_research_agent],\n    base_app=app,\n    on_route_conflict=\"preserve_base_app\",  # Skip conflicting AgentOS routes, keep your custom routes\n)\n\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    \"\"\"Run the AgentOS application.\n\nWith on_route_conflict=\"preserve_base_app\":\n    - Your custom routes are preserved: http://localhost:7777/ and http://localhost:7777/health\n    - AgentOS routes are available at other paths: http://localhost:7777/sessions, etc.\n    - Conflicting AgentOS routes (GET / and GET /health) are skipped\n    - API docs: http://localhost:7777/docs\n\nTry changing on_route_conflict to \"preserve_agentos\" to see AgentOS routes override your custom ones.\n    \"\"\"\n    agent_os.serve(app=\"override_routes:app\", reload=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#use-on_route_conflict=\"preserve_base_app\"-to-preserve-your-custom-routes-over-agentos-routes",
+  "links": []
+}

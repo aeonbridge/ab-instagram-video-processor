@@ -1,0 +1,57 @@
+{
+  "title": "Model as String",
+  "content": "Source: https://docs.agno.com/basics/models/model-as-string\n\nUse the convenient provider:model_id string format to specify models without importing model classes.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.2.6\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.2.6\">v2.2.6</Tooltip>\n</Badge>\n\nAgno provides a convenient string syntax for specifying models using the `provider:model_id` format. This approach reduces code verbosity by eliminating the need to import model classes while maintaining full functionality.\n\nBoth the traditional object syntax and the string syntax are equally valid and work identically. Choose the approach that best fits your coding style and requirements.\n\nThe string format follows this pattern:\n\n* **provider**: The model provider name (case-insensitive)\n* **model\\_id**: The specific model identifier\n\n* `\"openai:gpt-4o\"`\n* `\"anthropic:claude-sonnet-4-20250514\"`\n* `\"google:gemini-2.0-flash-exp\"`\n* `\"groq:llama-3.3-70b-versatile\"`\n\n### Agent with String Syntax\n\n### Teams with String Syntax\n\nUse model strings with Teams for coordinated multi-agent workflows:\n\n### Multiple Model Types\n\nAgents support different models for various purposes:\n\n| Provider         | String Format               | Example                                     |\n| ---------------- | --------------------------- | ------------------------------------------- |\n| OpenAI           | `openai:model_id`           | `\"openai:gpt-4o\"`                           |\n| Anthropic        | `anthropic:model_id`        | `\"anthropic:claude-sonnet-4-20250514\"`      |\n| Google           | `google:model_id`           | `\"google:gemini-2.0-flash-exp\"`             |\n| Groq             | `groq:model_id`             | `\"groq:llama-3.3-70b-versatile\"`            |\n| Ollama           | `ollama:model_id`           | `\"ollama:llama3.2\"`                         |\n| Azure AI Foundry | `azure-ai-foundry:model_id` | `\"azure-ai-foundry:gpt-4o\"`                 |\n| Mistral          | `mistral:model_id`          | `\"mistral:mistral-large-latest\"`            |\n| LiteLLM          | `litellm:model_id`          | `\"litellm:gpt-4o\"`                          |\n| OpenRouter       | `openrouter:model_id`       | `\"openrouter:anthropic/claude-3.5-sonnet\"`  |\n| Together         | `together:model_id`         | `\"together:meta-llama/Llama-3-70b-chat-hf\"` |\n\nFor the complete list and provider-specific documentation, see the [Models Overview](/basics/models/overview).\n\n## Developer Resources\n\n* View [All Model Providers](/integrations/models/model-index)",
+  "code_samples": [
+    {
+      "code": "\"provider:model_id\"",
+      "language": "unknown"
+    },
+    {
+      "code": "### Teams with String Syntax\n\nUse model strings with Teams for coordinated multi-agent workflows:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Multiple Model Types\n\nAgents support different models for various purposes:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Format",
+      "id": "format"
+    },
+    {
+      "level": "h2",
+      "text": "Basic Usage",
+      "id": "basic-usage"
+    },
+    {
+      "level": "h3",
+      "text": "Agent with String Syntax",
+      "id": "agent-with-string-syntax"
+    },
+    {
+      "level": "h3",
+      "text": "Teams with String Syntax",
+      "id": "teams-with-string-syntax"
+    },
+    {
+      "level": "h3",
+      "text": "Multiple Model Types",
+      "id": "multiple-model-types"
+    },
+    {
+      "level": "h2",
+      "text": "Common Providers",
+      "id": "common-providers"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#model-as-string",
+  "links": []
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Nexus",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/nexus/overview\n\nLearn how to use Nexus models in Agno.\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.0.6\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.0.6\">v2.0.6</Tooltip>\n</Badge>\n\nNexus is a routing platform that provides endpoints for various Large Language Models through a unified API interface.\n\nExplore Nexus's capabilities and documentation [here](https://nexusrouter.com/).\n\nNexus requires API keys for the underlying model providers. Set the appropriate environment variables for the models you plan to use:\n\nUse `Nexus` with your `Agent`:\n\n<CodeGroup>\n  \n</CodeGroup>\n\n<Note> View more examples [here](/integrations/models/gateways/nexus/usage/basic-stream). </Note>\n\n| Parameter  | Type            | Default                         | Description                                                 |\n| ---------- | --------------- | ------------------------------- | ----------------------------------------------------------- |\n| `id`       | `str`           | `\"gpt-4o-mini\"`                 | The id of the model to use through Nexus                    |\n| `name`     | `str`           | `\"Nexus\"`                       | The name of the model                                       |\n| `provider` | `str`           | `\"Nexus\"`                       | The provider of the model                                   |\n| `api_key`  | `Optional[str]` | `None`                          | The API key for Nexus (defaults to NEXUS\\_API\\_KEY env var) |\n| `base_url` | `str`           | `\"https://api.nexusflow.ai/v1\"` | The base URL for the Nexus API                              |\n\n`Nexus` also supports the params of [OpenAI](/reference/models/openai).",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Example\n\nUse `Nexus` with your `Agent`:\n\n<CodeGroup>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication",
+      "id": "authentication"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#nexus",
+  "links": []
+}

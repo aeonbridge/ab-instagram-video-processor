@@ -1,0 +1,27 @@
+{
+  "title": "Add from local file to the knowledge base, but don't skip if it already exists",
+  "content": "asyncio.run(\n    knowledge.add_content_async(\n        name=\"CV\",\n        path=\"cookbook/knowledge/testing_resources/cv_1.pdf\",\n        metadata={\"user_tag\": \"Engineering Candidates\"},\n        skip_if_exists=False,\n    )\n)\nbash  theme={null}\n    pip install -U agno sqlalchemy psycopg pgvector\n    bash Mac theme={null}\n      python cookbook/knowledge/basic_operations/11_skip_if_exists.py\n      bash Windows theme={null}\n      python cookbook/knowledge/basic_operations/11_skip_if_exists.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Run the example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#add-from-local-file-to-the-knowledge-base,-but-don't-skip-if-it-already-exists",
+  "links": []
+}

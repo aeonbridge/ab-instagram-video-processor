@@ -1,0 +1,14 @@
+{
+  "title": "Print the response",
+  "content": "print(response.content)\n```\n\n* **Environment Variables**: Ensure your environment variable is correctly set for the AgentOps API key.\n* **Initialization**: Call `agentops.init()` to initialize AgentOps.\n* **AgentOps Docs**: [AgentOps Docs](https://docs.agentops.ai/v2/integrations/agno)\n\nFollowing these steps will integrate Agno with AgentOps, providing comprehensive logging and visualization for your AI agents’ model calls.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Notes",
+      "id": "notes"
+    }
+  ],
+  "url": "llms-txt#print-the-response",
+  "links": []
+}

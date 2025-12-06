@@ -1,0 +1,76 @@
+{
+  "title": "macOS with Homebrew",
+  "content": "brew install llama.cpp\nbash start server theme={null}\nllama-server -hf ggml-org/gpt-oss-20b-GGUF --ctx-size 0 --jinja -ub 2048 -b 2048\npython agent.py theme={null}\n  from agno.agent import Agent\n  from agno.models.llama_cpp import LlamaCpp\n\nagent = Agent(\n      model=LlamaCpp(id=\"ggml-org/gpt-oss-20b-GGUF\"),\n      markdown=True\n  )\n\n# Print the response in the terminal\n  agent.print_response(\"Share a 2 sentence horror story.\")\n  python custom_config.py theme={null}\n  from agno.agent import Agent\n  from agno.models.llama_cpp import LlamaCpp\n\n# Custom server configuration\n  agent = Agent(\n      model=LlamaCpp(\n          id=\"your-custom-model\",\n          base_url=\"http://localhost:8080/v1\",  # Custom server URL\n      ),\n      markdown=True\n  )\n  bash gpu acceleration theme={null}",
+  "code_samples": [
+    {
+      "code": "### Download a Model\n\nDownload a model in GGUF format following the [llama.cpp model download guide](https://github.com/ggerganov/llama.cpp#obtaining-and-using-the-facebook-llama-2-model). For the examples below, we use `ggml-org/gpt-oss-20b-GGUF`.\n\n### Start the Server\n\nStart the LlamaCpp server with your model:",
+      "language": "unknown"
+    },
+    {
+      "code": "This starts the server at `http://127.0.0.1:8080` with an OpenAI Chat compatible endpoints\n\n## Example\n\nAfter starting the LlamaCpp server, use the `LlamaCpp` model class to access it:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Configuration\n\nThe `LlamaCpp` model supports customizing the server URL and model ID:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n<Note> View more examples [here](/integrations/models/local/llama-cpp/usage/basic). </Note>\n\n## Params\n\n| Parameter     | Type              | Default                   | Description                                                  |\n| ------------- | ----------------- | ------------------------- | ------------------------------------------------------------ |\n| `id`          | `str`             | `\"llama-cpp\"`             | The identifier for the Llama.cpp model                       |\n| `name`        | `str`             | `\"LlamaCpp\"`              | The name of the model                                        |\n| `provider`    | `str`             | `\"LlamaCpp\"`              | The provider of the model                                    |\n| `base_url`    | `str`             | `\"http://localhost:8080\"` | The base URL for the Llama.cpp server                        |\n| `api_key`     | `Optional[str]`   | `None`                    | The API key (usually not needed for local Llama.cpp)         |\n| `chat_format` | `Optional[str]`   | `None`                    | The chat format to use (e.g., \"chatml\", \"llama-2\", \"alpaca\") |\n| `n_ctx`       | `Optional[int]`   | `None`                    | The context window size                                      |\n| `temperature` | `Optional[float]` | `None`                    | Sampling temperature (0.0 to 2.0)                            |\n| `top_p`       | `Optional[float]` | `None`                    | Top-p sampling parameter                                     |\n| `top_k`       | `Optional[int]`   | `None`                    | Top-k sampling parameter                                     |\n\n`LlamaCpp` is a subclass of the [OpenAILike](/integrations/models/openai-like) class and has access to the same params.\n\n## Server Configuration\n\nThe LlamaCpp server supports many configuration options:\n\n### Common Server Options\n\n* `--ctx-size`: Context size (0 for unlimited)\n* `--batch-size`, `-b`: Batch size for prompt processing\n* `--ubatch-size`, `-ub`: Physical batch size for prompt processing\n* `--threads`, `-t`: Number of threads to use\n* `--host`: IP address to listen on (default: 127.0.0.1)\n* `--port`: Port to listen on (default: 8080)\n\n### Model Options\n\n* `--model`, `-m`: Model file path\n* `--hf-repo`: HuggingFace model repository\n* `--jinja`: Use Jinja templating for chat formatting\n\nFor a complete list of server options, run `llama-server --help`.\n\n## Performance Optimization\n\n### Hardware Acceleration\n\nLlamaCpp supports various acceleration backends:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Download a Model",
+      "id": "download-a-model"
+    },
+    {
+      "level": "h3",
+      "text": "Start the Server",
+      "id": "start-the-server"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Configuration",
+      "id": "configuration"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Server Configuration",
+      "id": "server-configuration"
+    },
+    {
+      "level": "h3",
+      "text": "Common Server Options",
+      "id": "common-server-options"
+    },
+    {
+      "level": "h3",
+      "text": "Model Options",
+      "id": "model-options"
+    },
+    {
+      "level": "h2",
+      "text": "Performance Optimization",
+      "id": "performance-optimization"
+    },
+    {
+      "level": "h3",
+      "text": "Hardware Acceleration",
+      "id": "hardware-acceleration"
+    }
+  ],
+  "url": "llms-txt#macos-with-homebrew",
+  "links": []
+}

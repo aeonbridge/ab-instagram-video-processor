@@ -1,0 +1,8 @@
+{
+  "title": "Define steps using different executor types",
+  "content": "research_step = Step(\n    name=\"Research Step\",\n    team=research_team,\n)\n\ncontent_planning_step = Step(\n    name=\"Content Planning Step\",\n    executor=custom_content_planning_function,\n)\n\nstreaming_content_workflow = Workflow(\n    name=\"Streaming Content Creation Workflow\",\n    description=\"Automated content creation with streaming custom execution functions\",\n    db=SqliteDb(\n        session_table=\"workflow_session\",\n        db_file=\"tmp/workflow.db\",\n    ),\n    steps=[\n        research_step,\n        content_planning_step,\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-steps-using-different-executor-types",
+  "links": []
+}

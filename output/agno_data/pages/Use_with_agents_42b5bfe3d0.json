@@ -1,0 +1,13 @@
+{
+  "title": "Use with agents",
+  "content": "agent.print_response(\n    \"What's our deployment process?\",\n    knowledge_filters=[{\"department\": \"engineering\", \"type\": \"documentation\"}]\n)\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "#### Working with Metadata\n\nGood filtering starts with thoughtful metadata design:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#use-with-agents",
+  "links": []
+}

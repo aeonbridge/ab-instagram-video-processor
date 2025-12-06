@@ -1,0 +1,14 @@
+{
+  "title": "AgentOS with MCPTools",
+  "content": "Source: https://docs.agno.com/agent-os/usage/mcp/mcp-tools-example\n\nComplete AgentOS setup with MCPTools enabled on agents\n\n```python cookbook/agent_os/mcp/mcp_tools_example.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.anthropic import Claude\nfrom agno.os import AgentOS\nfrom agno.tools.mcp import MCPTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agentos-with-mcptools",
+  "links": []
+}

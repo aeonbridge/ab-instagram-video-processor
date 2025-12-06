@@ -1,0 +1,41 @@
+{
+  "title": "WhatsApp Image Generation Agent (Model-based)",
+  "content": "Source: https://docs.agno.com/agent-os/usage/interfaces/whatsapp/image-generation-model\n\nWhatsApp agent that generates images using Gemini's built-in capabilities\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set Environment Variables\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Example\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* **Direct Image Generation**: Gemini 2.0 Flash experimental image generation\n* **Text-to-Image**: Converts descriptions into visual content\n* **Multimodal Responses**: Generates both text and images\n* **WhatsApp Integration**: Sends images directly through WhatsApp\n* **Debug Mode**: Enhanced logging for troubleshooting",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    }
+  ],
+  "url": "llms-txt#whatsapp-image-generation-agent-(model-based)",
+  "links": []
+}

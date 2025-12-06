@@ -1,0 +1,8 @@
+{
+  "title": "Generate a unique bucket name using a base name and a UUID4 suffix.",
+  "content": "base_bucket_name = \"example-gcs-bucket\"\nunique_bucket_name = f\"{base_bucket_name}-{uuid.uuid4().hex[:12]}\"\nprint(f\"Using bucket: {unique_bucket_name}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#generate-a-unique-bucket-name-using-a-base-name-and-a-uuid4-suffix.",
+  "links": []
+}

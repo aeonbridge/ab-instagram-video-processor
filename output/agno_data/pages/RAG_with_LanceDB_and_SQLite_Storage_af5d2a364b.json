@@ -1,0 +1,14 @@
+{
+  "title": "RAG with LanceDB and SQLite Storage",
+  "content": "Source: https://docs.agno.com/basics/knowledge/agents/usage/rag-with-lance-db-and-sqlite\n\nThis example demonstrates how to implement RAG using LanceDB vector database with Ollama embeddings and SQLite for agent data storage, providing a complete local setup for document retrieval.\n\n```python rag_with_lance_db_and_sqlite.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite.sqlite import SqliteDb\nfrom agno.knowledge.embedder.ollama import OllamaEmbedder\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.models.ollama import Ollama\nfrom agno.vectordb.lancedb import LanceDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#rag-with-lancedb-and-sqlite-storage",
+  "links": []
+}

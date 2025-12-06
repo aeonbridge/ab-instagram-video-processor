@@ -1,0 +1,24 @@
+{
+  "title": "Agent Infra Railway",
+  "content": "Source: https://docs.agno.com/templates/agent-infra-railway/introduction\n\nThe Agent Infra Railway template provides a simple Railway project for running AgentOS.\n\n### Local environment\n\nRuns both AgentOS and PostgreSQL using Docker Desktop.\n\nIdeal for development, testing, and verifying your setup before deploying to the cloud.\n\n### Production environment\n\nAgentOS is deployed on Railway using the Dockerfile and a PgVector template is used as the database\n\nThe template automates infrastructure creation and deployment steps using a single script.\n\n### How to get started\n\n* Clone the template repository and install the dependencies\n* Start with the local setup to ensure everything works end-to-end.\n* Move to Railway deployment using the provided guides once your local environment is ready.\n\n<Snippet file=\"setup.mdx\" />\n\n<Snippet file=\"create-agent-infra-railway-codebase.mdx\" />\n\nYou can also clone the template directory and follow the instructions in the template documentation.\n\n<CodeGroup>\n  \n</CodeGroup>\n\nAfter creating your codebase, the next step is to get it up and running locally using docker",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Local environment",
+      "id": "local-environment"
+    },
+    {
+      "level": "h3",
+      "text": "Production environment",
+      "id": "production-environment"
+    },
+    {
+      "level": "h3",
+      "text": "How to get started",
+      "id": "how-to-get-started"
+    }
+  ],
+  "url": "llms-txt#agent-infra-railway",
+  "links": []
+}

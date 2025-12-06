@@ -1,0 +1,8 @@
+{
+  "title": "Only analysis, no thinking",
+  "content": "ReasoningTools(enable_think=False, enable_analyze=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#only-analysis,-no-thinking",
+  "links": []
+}

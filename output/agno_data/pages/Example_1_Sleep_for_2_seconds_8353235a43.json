@@ -1,0 +1,8 @@
+{
+  "title": "Example 1: Sleep for 2 seconds",
+  "content": "agent.print_response(\"Sleep for 2 seconds\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-1:-sleep-for-2-seconds",
+  "links": []
+}

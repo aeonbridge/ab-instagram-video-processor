@@ -1,0 +1,43 @@
+{
+  "title": "Zendesk",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/zendesk\n\n**ZendeskTools** enable an Agent to access Zendesk API to search for articles.\n\nThe following example requires the `requests` library and auth credentials.\n\nThe following agent will run seach Zendesk for \"How do I login?\" and print the response.\n\n| Parameter               | Type   | Default | Description                                                             |\n| ----------------------- | ------ | ------- | ----------------------------------------------------------------------- |\n| `username`              | `str`  | -       | The username used for authentication or identification purposes.        |\n| `password`              | `str`  | -       | The password associated with the username for authentication purposes.  |\n| `company_name`          | `str`  | -       | The name of the company related to the user or the data being accessed. |\n| `enable_search_zendesk` | `bool` | `True`  | Enable the search Zendesk functionality.                                |\n| `all`                   | `bool` | `False` | Enable all functionality.                                               |\n\n| Function         | Description                                                                                    |\n| ---------------- | ---------------------------------------------------------------------------------------------- |\n| `search_zendesk` | This function searches for articles in Zendesk Help Center that match the given search string. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/zendesk.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/zendesk_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will run seach Zendesk for \"How do I login?\" and print the response.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#zendesk",
+  "links": []
+}

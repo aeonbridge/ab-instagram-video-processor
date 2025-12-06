@@ -1,0 +1,8 @@
+{
+  "title": "Reddit search agent with tool hooks",
+  "content": "reddit_agent = Agent(\n    name=\"Reddit Agent\",\n    id=\"reddit-agent\",\n    role=\"Search reddit for information\",\n    tools=[RedditTools(cache_results=True)],\n    instructions=[\n        \"Find information about the company on Reddit\",\n    ],\n    tool_hooks=[logger_hook],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#reddit-search-agent-with-tool-hooks",
+  "links": []
+}

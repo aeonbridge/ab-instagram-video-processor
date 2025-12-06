@@ -1,0 +1,75 @@
+{
+  "title": "Development Application",
+  "content": "Source: https://docs.agno.com/templates/infra-management/development-app\n\nYour development application runs locally on docker and its resources are defined in the `infra/dev_resources.py` file. This guide shows how to:\n\n1. [Build a development image](#build-your-development-image)\n2. [Restart all docker containers](#restart-all-containers)\n3. [Recreate development resources](#recreate-development-resources)\n\nThe `InfraSettings` object in the `infra/settings.py` file defines common settings used by your Agno Infra apps and resources.\n\n## Build your development image\n\nYour application uses the `agno` docker images by default. To use your own image:\n\n* Open `infra/settings.py` file\n* Update the `image_repo` to your image repository\n* Set `build_images=True`\n\n### Build a new image\n\nBuild the development image using:\n\nTo `force` rebuild images, use the `--force` or `-f` flag\n\n## Restart all containers\n\nRestart all docker containers using:\n\n## Recreate development resources\n\nTo recreate all dev resources, use the `--force` flag:",
+  "code_samples": [
+    {
+      "code": "### Build a new image\n\nBuild the development image using:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\nTo `force` rebuild images, use the `--force` or `-f` flag\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n***\n\n## Restart all containers\n\nRestart all docker containers using:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n***\n\n## Recreate development resources\n\nTo recreate all dev resources, use the `--force` flag:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Infra Settings",
+      "id": "infra-settings"
+    },
+    {
+      "level": "h2",
+      "text": "Build your development image",
+      "id": "build-your-development-image"
+    },
+    {
+      "level": "h3",
+      "text": "Build a new image",
+      "id": "build-a-new-image"
+    },
+    {
+      "level": "h2",
+      "text": "Restart all containers",
+      "id": "restart-all-containers"
+    },
+    {
+      "level": "h2",
+      "text": "Recreate development resources",
+      "id": "recreate-development-resources"
+    }
+  ],
+  "url": "llms-txt#development-application",
+  "links": []
+}

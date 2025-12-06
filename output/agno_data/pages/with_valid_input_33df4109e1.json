@@ -1,0 +1,8 @@
+{
+  "title": "with valid input",
+  "content": "print(\"=== Testing TypedDict Input Schema ===\")\nhackernews_agent.print_response(\n    input={\n        \"topic\": \"AI\",\n        \"focus_areas\": [\"Machine Learning\", \"LLMs\", \"Neural Networks\"],\n        \"target_audience\": \"Developers\",\n        \"sources_required\": 5,\n    }\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#with-valid-input",
+  "links": []
+}

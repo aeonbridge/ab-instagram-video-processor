@@ -1,0 +1,8 @@
+{
+  "title": "Engineering standards",
+  "content": "code_review = CulturalKnowledge(\n    name=\"Code Review Standards\",\n    summary=\"Focus on maintainability, security, and performance\",\n    categories=[\"engineering\", \"code-review\"],\n    content=(\n        \"- Check for security vulnerabilities first\\n\"\n        \"- Verify error handling is comprehensive\\n\"\n        \"- Ensure code is self-documenting\\n\"\n        \"- Suggest performance optimizations where relevant\"\n    ),\n)\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#engineering-standards",
+  "links": []
+}

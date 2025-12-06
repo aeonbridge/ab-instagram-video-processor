@@ -1,0 +1,14 @@
+{
+  "title": "AgentOSConfig",
+  "content": "Source: https://docs.agno.com/reference/agent-os/configuration\n\n<Snippet file=\"agent-os-configuration-reference.mdx\" />\n\n## Using a YAML Configuration File\n\nYou can also provide your AgentOS configuration via a YAML file.\n\nYou can define all the previously mentioned configuration options in the file:\n\n```yaml  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using a YAML Configuration File",
+      "id": "using-a-yaml-configuration-file"
+    }
+  ],
+  "url": "llms-txt#agentosconfig",
+  "links": []
+}

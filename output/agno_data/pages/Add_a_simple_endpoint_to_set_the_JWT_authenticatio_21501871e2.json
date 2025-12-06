@@ -1,0 +1,8 @@
+{
+  "title": "Add a simple endpoint to set the JWT authentication cookie",
+  "content": "@app.get(\"/set-auth-cookie\")\nasync def set_auth_cookie(response: Response):\n    \"\"\"\n    Endpoint to set the JWT authentication cookie.\n    In a real application, this would be done after successful login.\n    \"\"\"\n    # Create a test JWT token\n    payload = {\n        \"sub\": \"cookie_user_789\",\n        \"session_id\": \"cookie_session_123\",\n        \"name\": \"Jane Smith\",\n        \"email\": \"jane.smith@example.com\",\n        \"roles\": [\"user\", \"premium\"],\n        \"org\": \"Example Corp\",\n        \"exp\": datetime.now(UTC) + timedelta(hours=24),\n        \"iat\": datetime.now(UTC),\n    }\n\ntoken = jwt.encode(payload, JWT_SECRET, algorithm=\"HS256\")\n\n# Set HTTP-only cookie (more secure than localStorage for JWT storage)\n    response.set_cookie(\n        key=\"auth_token\",\n        value=token,\n        httponly=True,  # Prevents access from JavaScript (XSS protection)\n        secure=True,  # Only send over HTTPS in production\n        samesite=\"strict\",  # CSRF protection\n        max_age=24 * 60 * 60,  # 24 hours\n    )\n\nreturn {\n        \"message\": \"Authentication cookie set successfully\",\n        \"cookie_name\": \"auth_token\",\n        \"expires_in\": \"24 hours\",\n        \"security_features\": [\"httponly\", \"secure\", \"samesite=strict\"],\n        \"instructions\": \"Now you can make authenticated requests without Authorization headers\",\n    }",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-a-simple-endpoint-to-set-the-jwt-authentication-cookie",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Access Multiple Previous Steps Output",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/access-multiple-previous-steps-output\n\nThis example demonstrates **Workflows 2.0** advanced data flow capabilities\n\nThis example demonstrates **Workflows 2.0** shows how to:\n\n1. Access outputs from **specific named steps** (`get_step_content()`)\n2. Aggregate **all previous outputs** (`get_all_previous_content()`)\n3. Create comprehensive reports by combining multiple research sources\n\n* **Step Output Access**: Retrieve data from any previous step by name or collectively.\n* **Custom Reporting**: Combine and analyze outputs from parallel or sequential steps.\n* **Streaming Support**: Real-time updates during execution.\n\n```python access_multiple_previous_steps_output.py theme={null}\nfrom agno.agent.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.types import StepInput, StepOutput\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Key Features:",
+      "id": "key-features:"
+    }
+  ],
+  "url": "llms-txt#access-multiple-previous-steps-output",
+  "links": []
+}

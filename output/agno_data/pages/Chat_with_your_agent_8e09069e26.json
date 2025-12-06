@@ -1,0 +1,29 @@
+{
+  "title": "Chat with your agent",
+  "content": "if __name__ == \"__main__\":\n    agent.print_response(\"What is Agno Knowledge?\", stream=True)\nbash  theme={null}\npython knowledge_agent.py\n```\n\n## What Just Happened?\n\nWhen you ran the code, here's what occurred behind the scenes:\n\n1. **Content Processing**: Your text was chunked into smaller pieces and converted to vector embeddings\n2. **Intelligent Search**: The agent analyzed your question and searched for relevant information\n3. **Contextual Response**: The agent combined the retrieved knowledge with your question to provide an accurate answer\n4. **Source Attribution**: The response is based on your specific content, not generic training data\n\n## Next Steps: Explore Advanced Features\n\n<CardGroup cols={3}>\n  <Card title=\"Content Types\" icon=\"file-lines\" href=\"/basics/knowledge/content-types\">\n    Learn about different ways to add content: files, URLs, databases, and more.\n  </Card>\n\n<Card title=\"Chunking Strategies\" icon=\"scissors\" href=\"/basics/knowledge/chunking/overview\">\n    Optimize how your content is broken down for better search results.\n  </Card>\n\n<Card title=\"Vector Databases\" icon=\"database\" href=\"/basics/vectordb/overview\">\n    Choose the right storage solution for your needs and scale.\n  </Card>\n\n<Card title=\"Search Types\" icon=\"magnifying-glass\" href=\"/basics/knowledge/search-and-retrieval/overview\">\n    Explore different search strategies: vector, keyword, and hybrid search.\n  </Card>\n</CardGroup>\n\n<AccordionGroup>\n  <Accordion title=\"Agent isn't using knowledge in responses\">\n    Make sure you set `search_knowledge=True` when creating your agent and consider adding explicit instructions to search the knowledge base.\n  </Accordion>\n\n<Accordion title=\"Vector database connection errors\">\n    For local development, try LanceDB instead of PostgreSQL. For production, ensure your database connection string is correct.\n  </Accordion>\n\n<Accordion title=\"Content not being found in searches\">\n    Your content might need better chunking. Try different chunking strategies or smaller chunk sizes for more precise retrieval.\n  </Accordion>\n</AccordionGroup>\n\n<Card title=\"Ready for Core Concepts?\" icon=\"graduation-cap\" href=\"/basics/knowledge/knowledge-bases\">\n  Dive deeper into understanding knowledge bases and how they power intelligent agents\n</Card>",
+  "code_samples": [
+    {
+      "code": "Run it:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What Just Happened?",
+      "id": "what-just-happened?"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps: Explore Advanced Features",
+      "id": "next-steps:-explore-advanced-features"
+    },
+    {
+      "level": "h2",
+      "text": "Troubleshooting",
+      "id": "troubleshooting"
+    }
+  ],
+  "url": "llms-txt#chat-with-your-agent",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with HITL tools",
+  "content": "agent = Agent(\n    name=\"Data Manager\",\n    id=\"data_manager\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    tools=[delete_records, send_notification],\n    instructions=[\"You help users manage data operations\"],\n    db=db,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-hitl-tools",
+  "links": []
+}

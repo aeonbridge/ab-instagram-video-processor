@@ -1,0 +1,8 @@
+{
+  "title": "Example usage with different types of videos",
+  "content": "youtube_agent.print_response(\n    \"Analyze this video: https://www.youtube.com/watch?v=zjkBMFhNj_g\",\n    stream=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage-with-different-types-of-videos",
+  "links": []
+}

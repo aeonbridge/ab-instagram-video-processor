@@ -1,0 +1,14 @@
+{
+  "title": "Hybrid Search",
+  "content": "Source: https://docs.agno.com/basics/knowledge/search-and-retrieval/usage/hybrid-search\n\n```python hybrid_search.py theme={null}\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector, SearchType\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#hybrid-search",
+  "links": []
+}

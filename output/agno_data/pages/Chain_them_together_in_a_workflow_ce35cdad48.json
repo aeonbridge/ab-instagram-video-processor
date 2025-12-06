@@ -1,0 +1,8 @@
+{
+  "title": "Chain them together in a workflow",
+  "content": "content_workflow = Workflow(\n    name=\"Content Creation\",\n    steps=[researcher, writer]\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#chain-them-together-in-a-workflow",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Create a new agent and make sure it pursues the conversation",
+  "content": "agent2 = Agent(\n    db=db,\n    session_id=agent1.session_id,\n    tools=[DuckDuckGoTools()],\n    add_history_to_context=True,\n    debug_mode=False,\n)\n\nagent2.print_response(\"What's the name of the country we discussed?\")\nagent2.print_response(\"What is that country's national sport?\")\n```\n\n<Snippet file=\"gcs-auth-storage.mdx\" />\n\n<Snippet file=\"db-gcs-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/gcs/gcs_json_for_agent.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#create-a-new-agent-and-make-sure-it-pursues-the-conversation",
+  "links": []
+}

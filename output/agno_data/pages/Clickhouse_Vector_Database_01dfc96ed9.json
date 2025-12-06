@@ -1,0 +1,24 @@
+{
+  "title": "Clickhouse Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/clickhouse/overview\n\nLearn how to use Clickhouse as a vector database for your Knowledge Base\n\n```python agent_with_knowledge.py theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.db.sqlite import SqliteDb\nfrom agno.vectordb.clickhouse import Clickhouse\n\nknowledge=Knowledge(\n    vector_db=Clickhouse(\n        table_name=\"recipe_documents\",\n        host=\"localhost\",\n        port=8123,\n        username=\"ai\",\n        password=\"ai\",\n    ),\n)\n\nknowledge.add_content(\n  url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n)\n\nagent = Agent(\n    db=SqliteDb(db_file=\"agno.db\"),\n    knowledge=knowledge,\n    # Enable the agent to search the knowledge base\n    search_knowledge=True,\n    # Enable the agent to read the chat history\n    read_chat_history=True,\n)",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#clickhouse-vector-database",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Dedicated database for traces (separate from agent databases)",
+  "content": "tracing_db = SqliteDb(db_file=\"tmp/traces.db\", id=\"traces_db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#dedicated-database-for-traces-(separate-from-agent-databases)",
+  "links": []
+}

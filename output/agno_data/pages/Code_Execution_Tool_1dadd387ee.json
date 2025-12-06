@@ -1,0 +1,14 @@
+{
+  "title": "Code Execution Tool",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/code-execution\n\nLearn how to use Anthropic's code execution tool with Agno.\n\nWith Anthropic's [code execution tool](https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/code-execution-tool), your model can execute Python code in a secure, sandboxed environment.\nThis is useful for your model to perform tasks as analyzing data, creating visualizations, or performing complex calculations.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Working example",
+      "id": "working-example"
+    }
+  ],
+  "url": "llms-txt#code-execution-tool",
+  "links": []
+}

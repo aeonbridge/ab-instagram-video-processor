@@ -1,0 +1,14 @@
+{
+  "title": "Video Generation",
+  "content": "Source: https://docs.agno.com/examples/getting-started/15-video-generation\n\nThis example shows how to create an AI agent that generates videos using ModelsLabs.\nYou can use this agent to create various types of short videos, from animated scenes\nto creative visual stories.\n\nExample prompts to try:\n\n* \"Create a serene video of waves crashing on a beach at sunset\"\n* \"Generate a magical video of butterflies flying in a enchanted forest\"\n* \"Create a timelapse of a blooming flower in a garden\"\n* \"Generate a video of northern lights dancing in the night sky\"\n\n```python video_generation.py theme={null}\nfrom textwrap import dedent\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.models_labs import ModelsLabTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#video-generation",
+  "links": []
+}

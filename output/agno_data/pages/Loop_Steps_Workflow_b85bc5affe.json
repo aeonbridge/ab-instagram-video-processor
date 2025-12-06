@@ -1,0 +1,8 @@
+{
+  "title": "Loop Steps Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/loop-steps-workflow\n\nThis example demonstrates **Workflows 2.0** loop execution for quality-driven iterative processes.\n\nThis example demonstrates **Workflows 2.0** to repeatedly execute steps until specific conditions are met,\nensuring adequate research depth before proceeding to content creation.\n\n**When to use**: When you need iterative refinement, quality assurance, or when the\nrequired output quality can't be guaranteed in a single execution. Ideal for research\ngathering, data collection, or any process where \"good enough\" is determined by content\nanalysis rather than a fixed number of iterations.\n\n```python loop_steps_workflow.py theme={null}\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow import Loop, Step, Workflow\nfrom agno.workflow.types import StepOutput",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#loop-steps-workflow",
+  "links": []
+}

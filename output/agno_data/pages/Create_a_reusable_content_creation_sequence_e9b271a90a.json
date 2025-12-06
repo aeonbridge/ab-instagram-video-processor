@@ -1,0 +1,8 @@
+{
+  "title": "Create a reusable content creation sequence",
+  "content": "article_creation_sequence = Steps(\n    name=\"ArticleCreation\",\n    description=\"Complete article creation workflow from research to final edit\",\n    steps=[\n        Step(name=\"research\", agent=researcher),\n        Step(name=\"writing\", agent=writer),\n        Step(name=\"editing\", agent=editor),\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-reusable-content-creation-sequence",
+  "links": []
+}

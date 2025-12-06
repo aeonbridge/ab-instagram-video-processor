@@ -1,0 +1,41 @@
+{
+  "title": "Advanced research topics to explore:",
+  "content": "\"\"\"\nTechnology & Innovation:\n1. \"Investigate the development and impact of large language models in 2024\"\n2. \"Research the current state of quantum computing and its practical applications\"\n3. \"Analyze the evolution and future of edge computing technologies\"\n4. \"Explore the latest advances in brain-computer interface technology\"\n\nEnvironmental & Sustainability:\n1. \"Report on innovative carbon capture technologies and their effectiveness\"\n2. \"Investigate the global progress in renewable energy adoption\"\n3. \"Analyze the impact of circular economy practices on global sustainability\"\n4. \"Research the development of sustainable aviation technologies\"\n\nHealthcare & Biotechnology:\n1. \"Explore the latest developments in CRISPR gene editing technology\"\n2. \"Analyze the impact of AI on drug discovery and development\"\n3. \"Investigate the evolution of personalized medicine approaches\"\n4. \"Research the current state of longevity science and anti-aging research\"\n\nSocietal Impact:\n1. \"Examine the effects of social media on democratic processes\"\n2. \"Analyze the impact of remote work on urban development\"\n3. \"Investigate the role of blockchain in transforming financial systems\"\n4. \"Research the evolution of digital privacy and data protection measures\"\n\"\"\"\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai ddgs newspaper4k lxml_html_clean\n    bash Mac theme={null}\n      python research_agent.py\n      bash Windows theme={null}\n      python research_agent.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n* Modify the research topic to explore different subjects\n* Adjust the number of sources searched for more comprehensive coverage\n* Customize the `expected_output` template to match your preferred article style\n* Explore [DuckDuckGo Tools](/integrations/toolkits/search/duckduckgo) for advanced search options",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe agent will conduct comprehensive research on your query using DuckDuckGo to find multiple authoritative sources. It extracts content from relevant articles using Newspaper4k, cross-references information, and synthesizes findings into a professional NYT-style article.\n\nThe output includes an executive summary, background context, key findings with expert quotes and statistics, impact analysis, future outlook, and a complete list of sources. All content follows journalistic standards with balanced perspectives and verified facts.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#advanced-research-topics-to-explore:",
+  "links": []
+}

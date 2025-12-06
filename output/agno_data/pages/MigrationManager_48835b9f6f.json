@@ -1,0 +1,71 @@
+{
+  "title": "MigrationManager",
+  "content": "Source: https://docs.agno.com/reference/storage/migrations\n\nAPI reference for the MigrationManager class used to handle database migrations.\n\nThe `MigrationManager` class provides a programmatic way to manage database schema migrations for Agno database tables.\n\n<ResponseField name=\"db\" type=\"Union[AsyncBaseDb, BaseDb]\" required>\n  The database instance to run migrations on. Supports both synchronous and asynchronous database classes.\n</ResponseField>\n\n<ResponseField name=\"latest_schema_version\" type=\"Version\">\n  Returns the latest available schema version from the migration versions list.\n</ResponseField>\n\n<ResponseField name=\"available_versions\" type=\"list[tuple[str, Version]]\">\n  A list of available migration versions as tuples of (version\\_string, parsed\\_version).\n\nCurrently available versions:\n\n* `v2_0_0` (2.0.0)\n  * `v2_3_0` (2.3.0)\n</ResponseField>\n\nExecutes upgrade migrations to bring database tables to a target schema version.\n\n<ResponseField name=\"target_version\" type=\"str\" optional>\n  The version to migrate to (e.g., \"2.3.0\"). If not provided, migrates to the latest available version.\n</ResponseField>\n\n<ResponseField name=\"table_type\" type=\"str\" optional>\n  The specific table type to migrate. If not provided, all tables will be migrated.\n\nValid values: `\"memory\"`, `\"session\"`, `\"metrics\"`, `\"eval\"`, `\"knowledge\"`, `\"culture\"`\n</ResponseField>\n\n<ResponseField name=\"force\" type=\"bool\" default=\"False\">\n  Force the migration even if the current version is equal to or greater than the target version.\n</ResponseField>\n\nExecutes downgrade migrations to revert database tables to a target schema version.\n\n<ResponseField name=\"target_version\" type=\"str\" required>\n  The version to migrate down to (e.g., \"2.0.0\"). This parameter is required for down migrations.\n</ResponseField>\n\n<ResponseField name=\"table_type\" type=\"str\" optional>\n  The specific table type to migrate. If not provided, all tables will be migrated.\n\nValid values: `\"memory\"`, `\"session\"`, `\"metrics\"`, `\"eval\"`, `\"knowledge\"`, `\"culture\"`\n</ResponseField>\n\n<ResponseField name=\"force\" type=\"bool\" default=\"False\">\n  Force the migration even if the current version is equal to or less than the target version.\n</ResponseField>\n\n## Supported Databases\n\nThe `MigrationManager` supports the following database types:\n\n* PostgreSQL (via `PostgresDb` or `AsyncPostgresDb`)\n* SQLite (via `SqliteDb` or `AsyncSqliteDb`)\n* MySQL (via `MySQLDb`)\n* SingleStore (via `SingleStoreDb`)\n\nThe following table types can be migrated:\n\n| Table Type  | Description                   |\n| ----------- | ----------------------------- |\n| `memory`    | Agent memory storage          |\n| `session`   | Agent session data            |\n| `metrics`   | Performance and usage metrics |\n| `eval`      | Evaluation results            |\n| `knowledge` | Knowledge base entries        |\n| `culture`   | Culture and behavior data     |\n\n* [Database Migrations Guide](/basics/database/migrations)\n* [Migration Scripts](https://github.com/agno-agi/agno/tree/main/libs/agno/migrations)",
+  "code_samples": [
+    {
+      "code": "### Parameters\n\n<ResponseField name=\"db\" type=\"Union[AsyncBaseDb, BaseDb]\" required>\n  The database instance to run migrations on. Supports both synchronous and asynchronous database classes.\n</ResponseField>\n\n## Properties\n\n<ResponseField name=\"latest_schema_version\" type=\"Version\">\n  Returns the latest available schema version from the migration versions list.\n</ResponseField>\n\n<ResponseField name=\"available_versions\" type=\"list[tuple[str, Version]]\">\n  A list of available migration versions as tuples of (version\\_string, parsed\\_version).\n\n  Currently available versions:\n\n  * `v2_0_0` (2.0.0)\n  * `v2_3_0` (2.3.0)\n</ResponseField>\n\n## Methods\n\n### up()\n\nExecutes upgrade migrations to bring database tables to a target schema version.",
+      "language": "unknown"
+    },
+    {
+      "code": "#### Parameters\n\n<ResponseField name=\"target_version\" type=\"str\" optional>\n  The version to migrate to (e.g., \"2.3.0\"). If not provided, migrates to the latest available version.\n</ResponseField>\n\n<ResponseField name=\"table_type\" type=\"str\" optional>\n  The specific table type to migrate. If not provided, all tables will be migrated.\n\n  Valid values: `\"memory\"`, `\"session\"`, `\"metrics\"`, `\"eval\"`, `\"knowledge\"`, `\"culture\"`\n</ResponseField>\n\n<ResponseField name=\"force\" type=\"bool\" default=\"False\">\n  Force the migration even if the current version is equal to or greater than the target version.\n</ResponseField>\n\n#### Example",
+      "language": "unknown"
+    },
+    {
+      "code": "### down()\n\nExecutes downgrade migrations to revert database tables to a target schema version.",
+      "language": "unknown"
+    },
+    {
+      "code": "#### Parameters\n\n<ResponseField name=\"target_version\" type=\"str\" required>\n  The version to migrate down to (e.g., \"2.0.0\"). This parameter is required for down migrations.\n</ResponseField>\n\n<ResponseField name=\"table_type\" type=\"str\" optional>\n  The specific table type to migrate. If not provided, all tables will be migrated.\n\n  Valid values: `\"memory\"`, `\"session\"`, `\"metrics\"`, `\"eval\"`, `\"knowledge\"`, `\"culture\"`\n</ResponseField>\n\n<ResponseField name=\"force\" type=\"bool\" default=\"False\">\n  Force the migration even if the current version is equal to or less than the target version.\n</ResponseField>\n\n#### Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Constructor",
+      "id": "constructor"
+    },
+    {
+      "level": "h3",
+      "text": "Parameters",
+      "id": "parameters"
+    },
+    {
+      "level": "h2",
+      "text": "Properties",
+      "id": "properties"
+    },
+    {
+      "level": "h2",
+      "text": "Methods",
+      "id": "methods"
+    },
+    {
+      "level": "h3",
+      "text": "up()",
+      "id": "up()"
+    },
+    {
+      "level": "h3",
+      "text": "down()",
+      "id": "down()"
+    },
+    {
+      "level": "h2",
+      "text": "Supported Databases",
+      "id": "supported-databases"
+    },
+    {
+      "level": "h2",
+      "text": "Table Types",
+      "id": "table-types"
+    },
+    {
+      "level": "h2",
+      "text": "See Also",
+      "id": "see-also"
+    }
+  ],
+  "url": "llms-txt#migrationmanager",
+  "links": []
+}

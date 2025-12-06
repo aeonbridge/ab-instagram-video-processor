@@ -1,0 +1,19 @@
+{
+  "title": "Search for information and process the results",
+  "content": "agent.print_response(\"What are the latest developments in large language models?\", markdown=True)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.apify import ApifyTools\n\nagent = Agent(\n    tools=[\n        ApifyTools(actors=[\"apify/website-content-crawler\"])\n    ],\n    markdown=True\n)",
+  "code_samples": [
+    {
+      "code": "### 2. Website Content Crawler\n\nThis tool uses Apify's [Website Content Crawler](https://apify.com/apify/website-content-crawler) Actor to extract text content from websites, making it perfect for RAG applications.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "2. Website Content Crawler",
+      "id": "2.-website-content-crawler"
+    }
+  ],
+  "url": "llms-txt#search-for-information-and-process-the-results",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Process the audio and get a response",
+  "content": "run_response = agent.run(\n    \"What's in this recording? Please analyze the content and tone.\",\n    audio=[Audio(content=response.content, format=\"wav\")],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#process-the-audio-and-get-a-response",
+  "links": []
+}

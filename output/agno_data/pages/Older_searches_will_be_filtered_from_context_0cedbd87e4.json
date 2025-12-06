@@ -1,0 +1,19 @@
+{
+  "title": "Older searches will be filtered from context",
+  "content": "team.print_response(\"Search for startups\")\nteam.print_response(\"Search for weather in Mumbai\")\nteam.print_response(\"Search for latest startup fundraises\")\nteam.print_response(\"What topics did I search for recently?\")\npython  theme={null}\nfrom agno.team import Team\nfrom agno.models.message import Message\nfrom agno.models.openai.chat import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "In this example:\n\n* **Run 1-3:** Team sees tool calls \\[1], \\[1,2], \\[1,2,3,4,5]\n* **Run 4:** Team sees tool calls from runs that fit within the last 5 tool calls (older tool calls filtered out)\n* **Run 5:** Team sees tool calls from runs that fit within the last 5 tool calls (earlier tool calls filtered out)\n\n<Note>\n  **Important:** `max_tool_calls_from_history` filters tool calls from the runs loaded by `num_history_runs`. Your database always contains the complete history.\n</Note>\n\nSee the [full example](/basics/context/team/usage/filter-tool-calls-from-history) for a complete demonstration.\n\n## Additional input\n\nYou can add entire additional messages to your team's context using the `additional_input` parameter.\nThese messages are added to the context as if they were part of the conversation history.\n\nYou can give your team examples of how it should respond (also called \"few-shot prompting\"):",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Additional input",
+      "id": "additional-input"
+    }
+  ],
+  "url": "llms-txt#older-searches-will-be-filtered-from-context",
+  "links": []
+}

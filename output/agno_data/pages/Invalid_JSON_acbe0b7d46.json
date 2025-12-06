@@ -1,0 +1,8 @@
+{
+  "title": "Invalid JSON",
+  "content": "curl ... -F 'knowledge_filters={invalid json}'",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#invalid-json",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Example usage with different types of recipe queries",
+  "content": "recipe_agent.print_response(\n    \"I have chicken breast, broccoli, garlic, and rice. Need a healthy dinner recipe that takes less than 45 minutes.\",\n    stream=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-usage-with-different-types-of-recipe-queries",
+  "links": []
+}

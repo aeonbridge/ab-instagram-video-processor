@@ -1,0 +1,24 @@
+{
+  "title": "Setup your Agent with Culture",
+  "content": "agent = Agent(\n    db=db,\n    add_culture_to_context=True,  # Agent reads cultural knowledge\n    update_cultural_knowledge=True,  # Agent updates culture after runs\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\n\ndb = SqliteDb(db_file=\"agno.db\")\n\nagent = Agent(\n    db=db,\n    add_culture_to_context=True,  # Read culture\n    update_cultural_knowledge=True,  # Update culture automatically\n)",
+  "code_samples": [
+    {
+      "code": "With these flags enabled, your agent automatically:\n\n1. Loads relevant cultural knowledge when starting a task\n2. Applies that knowledge during reasoning and response generation\n3. Reflects on the interaction afterward\n4. Updates or adds cultural knowledge based on what it learned\n\n## Three Approaches to Culture Management\n\nAgno gives you three ways to manage cultural knowledge, depending on your needs:\n\n### 1. Automatic Culture (`update_cultural_knowledge=True`)\n\nAfter each agent run, the system automatically reflects on the interaction and updates cultural knowledge. This is the recommended approach for most production use cases.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Three Approaches to Culture Management",
+      "id": "three-approaches-to-culture-management"
+    },
+    {
+      "level": "h3",
+      "text": "1. Automatic Culture (`update_cultural_knowledge=True`)",
+      "id": "1.-automatic-culture-(`update_cultural_knowledge=true`)"
+    }
+  ],
+  "url": "llms-txt#setup-your-agent-with-culture",
+  "links": []
+}

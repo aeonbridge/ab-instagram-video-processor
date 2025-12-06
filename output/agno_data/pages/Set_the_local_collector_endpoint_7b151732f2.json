@@ -1,0 +1,8 @@
+{
+  "title": "Set the local collector endpoint",
+  "content": "os.environ[\"PHOENIX_COLLECTOR_ENDPOINT\"] = \"http://localhost:6006\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-the-local-collector-endpoint",
+  "links": []
+}

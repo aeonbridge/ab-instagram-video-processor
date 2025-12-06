@@ -1,0 +1,14 @@
+{
+  "title": "Image Model Output",
+  "content": "Source: https://docs.agno.com/basics/multimodal/images/image-output\n\nLearn how to use images from models as output with Agno agents.\n\nSimilar to providing image inputs, you can also get image outputs from an agent. Take a look at the [compatibility matrix](/basics/models/compatibility#multimodal-support) to see which models support image as output.\n\n## Image Output Modality\n\nThe following example demonstrates how some models can directly generate images as part of their response.\n\n```python image_agent.py theme={null}\nfrom io import BytesIO\n\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.google import Gemini\nfrom PIL import Image\n\nagent = Agent(\n    model=Gemini(\n        id=\"gemini-2.0-flash-exp-image-generation\",\n        response_modalities=[\"Text\", \"Image\"], # Generate both images and text in the response\n    )\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Image Output Modality",
+      "id": "image-output-modality"
+    }
+  ],
+  "url": "llms-txt#image-model-output",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Initialize the AgentOS with the workflows",
+  "content": "agent_os = AgentOS(\n    description=\"Example OS setup\",\n    workflows=[streaming_content_workflow],\n)\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    agent_os.serve(app=\"workflow_with_custom_function_stream:app\", reload=True)\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-the-agentos-with-the-workflows",
+  "links": []
+}

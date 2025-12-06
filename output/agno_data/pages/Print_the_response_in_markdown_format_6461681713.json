@@ -1,0 +1,24 @@
+{
+  "title": "Print the response in markdown format",
+  "content": "pprint_run_response(response, markdown=True)\npython  theme={null}\nfrom typing import Iterator\nfrom agno.team import Team\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\nnews_agent = Agent(name=\"News Agent\", role=\"Get the latest news\")\nweather_agent = Agent(name=\"Weather Agent\", role=\"Get the weather for the next 7 days\")\n\nteam = Team(\n    name=\"News and Weather Team\",\n    members=[news_agent, weather_agent],\n    model=OpenAIChat(id=\"gpt-4o\")\n)",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  You can also run the team asynchronously using `Team.arun()`. This means members will run concurrently if the team leader delegates to multiple members in one request.\n</Tip>\n\n<Tip>\n  See the [Input & Output](/basics/input-output/overview) docs for more information, and to see how to use structured input and output with teams.\n</Tip>\n\n## Run Output\n\nThe `Team.run()` function returns a `TeamRunOutput` object when not streaming. This object contains the output content, the list of messages sent to the model, the metrics of the run, the model used for the run, and an optional list of member responses.\n\nSee the detailed schema in the [TeamRunOutput](/reference/teams/team-response) documentation.\n\n## Streaming\n\nTo enable streaming, set `stream=True` when calling `run()`. This will return an iterator of `TeamRunOutputEvent` objects instead of a single `TeamRunOutput` object.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Run Output",
+      "id": "run-output"
+    },
+    {
+      "level": "h2",
+      "text": "Streaming",
+      "id": "streaming"
+    }
+  ],
+  "url": "llms-txt#print-the-response-in-markdown-format",
+  "links": []
+}

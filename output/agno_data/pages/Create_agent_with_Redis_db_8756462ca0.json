@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with Redis db",
+  "content": "agent = Agent(\n    db=db,\n    tools=[DuckDuckGoTools()],\n    add_history_to_context=True,\n)\n\nagent.print_response(\"How many people live in Canada?\")\nagent.print_response(\"What is their national anthem called?\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-redis-db",
+  "links": []
+}

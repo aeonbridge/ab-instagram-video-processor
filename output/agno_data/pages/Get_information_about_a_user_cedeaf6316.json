@@ -1,0 +1,8 @@
+{
+  "title": "Get information about a user",
+  "content": "agent.print_response(\"Can you retrieve information about this user https://x.com/AgnoAgi \", markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-information-about-a-user",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Add your own routes",
+  "content": "@app.post(\"/customers\")\nasync def get_customers():\n    return [\n        {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"john.doe@example.com\",\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Jane Doe\",\n            \"email\": \"jane.doe@example.com\",\n        },\n    ]",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-your-own-routes",
+  "links": []
+}

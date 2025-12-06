@@ -1,0 +1,65 @@
+{
+  "title": "Add custom middleware",
+  "content": "app.add_middleware(\n    RateLimitMiddleware,\n    requests_per_minute=10,\n    window_size=60,\n)\n\napp.add_middleware(\n    RequestLoggingMiddleware,\n    log_body=False,\n    log_headers=False,\n)\n\nif __name__ == \"__main__\":\n    \"\"\"\n    Run the essential middleware demo using AgentOS serve method.\n    \n    Features:\n    1. Rate Limiting (10 requests/minute)\n    2. Request/Response Logging\n    \"\"\"\n\nagent_os.serve(\n        app=\"custom_middleware:app\",\n        reload=True,\n    )\nbash  theme={null}\n    export OPENAI_API_KEY=your_openai_api_key\n    bash  theme={null}\n    pip install -U agno openai ddgs \"fastapi[standard]\" uvicorn sqlalchemy pgvector psycopg\n    bash  theme={null}\n    # Using Docker\n    docker run -d \\\n      --name agno-postgres \\\n      -e POSTGRES_DB=ai \\\n      -e POSTGRES_USER=ai \\\n      -e POSTGRES_PASSWORD=ai \\\n      -p 5532:5432 \\\n      pgvector/pgvector:pg17\n    bash  theme={null}\n    python custom_middleware.py\n    bash  theme={null}\n    curl http://localhost:7777/config\n    bash  theme={null}\n    for i in {1..15}; do curl http://localhost:7777/config; done\n    bash  theme={null}\n    curl -v http://localhost:7777/config\n    python  theme={null}\n    app.add_middleware(\n        RateLimitMiddleware,\n        requests_per_minute=100,  # Allow 100 requests per minute\n        window_size=60,           # 60-second sliding window\n    )\n    \n    🔍 Request #1: GET /config from 127.0.0.1\n    ✅ Response: 200 in 45.2ms\n    🔍 Request #2: POST /agents/demo-agent/runs from 127.0.0.1  \n    ✅ Response: 200 in 1240.8ms\n    python  theme={null}\n    app.add_middleware(\n        RequestLoggingMiddleware,\n        log_body=True,     # Log request bodies\n        log_headers=True,  # Log request headers\n    )\n    ```\n  </Tab>\n</Tabs>\n\n## Developer Resources\n\n* [Custom Middleware Documentation](/agent-os/middleware/custom)\n* [FastAPI Middleware Documentation](https://fastapi.tiangolo.com/tutorial/middleware/)",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Setup PostgreSQL Database\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Test the Middleware\">\n    **Basic Request (observe console logging):**",
+      "language": "unknown"
+    },
+    {
+      "code": "**Test Rate Limiting (trigger 429 errors after 10 requests):**",
+      "language": "unknown"
+    },
+    {
+      "code": "**Check Rate Limit Headers:**",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n</Steps>\n\n## Middleware Features\n\n<Tabs>\n  <Tab title=\"Rate Limiting\">\n    **Prevents API abuse by limiting requests per IP:**\n\n    * **Configurable Limits**: Set requests per minute and time window\n    * **Per-IP Tracking**: Different limits for different IP addresses\n    * **Sliding Window**: Uses a sliding time window for accurate limiting\n    * **Rate Limit Headers**: Provides client information about limits\n\n    **Headers Added:**\n\n    * `X-RateLimit-Limit`: Maximum requests allowed\n    * `X-RateLimit-Remaining`: Requests remaining in current window\n    * `X-RateLimit-Reset`: Timestamp when the window resets\n\n    **Customization:**",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Request Logging\">\n    **Comprehensive request and response logging:**\n\n    * **Request Details**: Method, path, client IP, timing\n    * **Response Tracking**: Status codes, response time\n    * **Optional Body Logging**: Log request bodies for debugging\n    * **Optional Header Logging**: Log request headers\n    * **Request Counter**: Track total requests processed\n\n    **Console Output Example:**",
+      "language": "unknown"
+    },
+    {
+      "code": "**Customization:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Middleware Features",
+      "id": "middleware-features"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#add-custom-middleware",
+  "links": []
+}

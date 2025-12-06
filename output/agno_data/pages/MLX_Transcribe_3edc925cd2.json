@@ -1,0 +1,24 @@
+{
+  "title": "MLX Transcribe",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/mlx-transcribe\n\n**MLX Transcribe** is a tool for transcribing audio files using MLX Whisper.\n\n1. **Install ffmpeg**\n\n* macOS: `brew install ffmpeg`\n   * Ubuntu: `sudo apt-get install ffmpeg`\n   * Windows: Download from [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)\n\n2. **Install mlx-whisper library**\n\n3. **Prepare audio files**\n\n* Create a 'storage/audio' directory\n   * Place your audio files in this directory\n   * Supported formats: mp3, mp4, wav, etc.\n\n4. **Download sample audio** (optional)\n   * Visit the [audio-samples](https://audio-samples.github.io/) (as an example) and save the audio file to the `storage/audio` directory.\n\nThe following agent will use MLX Transcribe to transcribe audio files.\n\n```python cookbook/tools/mlx_transcribe_tools.py theme={null}\n\nfrom pathlib import Path\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.mlx_transcribe import MLXTranscribeTools",
+  "code_samples": [
+    {
+      "code": "3. **Prepare audio files**\n\n   * Create a 'storage/audio' directory\n   * Place your audio files in this directory\n   * Supported formats: mp3, mp4, wav, etc.\n\n4. **Download sample audio** (optional)\n   * Visit the [audio-samples](https://audio-samples.github.io/) (as an example) and save the audio file to the `storage/audio` directory.\n\n## Example\n\nThe following agent will use MLX Transcribe to transcribe audio files.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#mlx-transcribe",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Run the agent and print the response",
+  "content": "agent.print_response(\"Trending startups and products.\")\n\n################ STREAM RESPONSE #################\nstream: Iterator[RunOutputEvent] = agent.run(\"Trending products\", stream=True)\nfor chunk in stream:\n    if chunk.event == RunEvent.run_content:\n        print(chunk.content)\n\n################ STREAM AND PRETTY PRINT #################\nstream: Iterator[RunOutputEvent] = agent.run(\"Trending products\", stream=True)\npprint_run_response(stream, markdown=True)\n```\n\nAfter getting familiarized with the basics, continue building your agent by adding functionality as needed.\n\nCommon questions to consider:\n\n* **How do I run my agent?** -> See the [running agents](/basics/agents/running-agents) documentation.\n* **How do I debug my agent?** -> See the [debugging agents](/basics/agents/debugging-agents) documentation.\n* **How do I manage sessions?** -> See the [agent sessions](/basics/sessions/overview) documentation.\n* **How do I manage input and capture output?** -> See the [input and output](/basics/input-output/overview) documentation.\n* **How do I add tools?** -> See the [tools](/basics/tools/overview) documentation.\n* **How do I give the agent context?** -> See the [context engineering](/basics/context/overview) documentation.\n* **How do I add knowledge?** -> See the [knowledge](/basics/knowledge/overview) documentation.\n* **How do I handle images, audio, video, and files?** -> See the [multimodal](/basics/multimodal/overview) documentation.\n* **How do I add guardrails?** -> See the [guardrails](/basics/guardrails/overview) documentation.\n* **How do I cache model responses during development?** -> See the [response caching](/basics/models/cache-response) documentation.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#run-the-agent-and-print-the-response",
+  "links": []
+}

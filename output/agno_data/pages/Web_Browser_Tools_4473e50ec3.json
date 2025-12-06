@@ -1,0 +1,24 @@
+{
+  "title": "Web Browser Tools",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/web-browser\n\nWebBrowser Tools enable an Agent to open a URL in a web browser.\n\n| Parameter          | Type   | Default | Description                                   |\n| ------------------ | ------ | ------- | --------------------------------------------- |\n| `enable_open_page` | `bool` | `True`  | Enables functionality to open URLs in browser |\n| `all`              | `bool` | `False` | Enables all functionality when set to True    |\n\n| Function    | Description                  |\n| ----------- | ---------------------------- |\n| `open_page` | Opens a URL in a web browser |",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    }
+  ],
+  "url": "llms-txt#web-browser-tools",
+  "links": []
+}

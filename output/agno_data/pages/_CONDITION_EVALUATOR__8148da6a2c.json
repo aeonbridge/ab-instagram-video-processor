@@ -1,0 +1,8 @@
+{
+  "title": "=== CONDITION EVALUATOR ===",
+  "content": "def needs_editing(step_input: StepInput) -> bool:\n    \"\"\"Determine if the story needs editing based on length and complexity\"\"\"\n    story = step_input.previous_step_content or \"\"\n\n# Check if story is long enough to benefit from editing\n    word_count = len(story.split())\n\n# Edit if story is more than 50 words or contains complex punctuation\n    return word_count > 50 or any(punct in story for punct in [\"!\", \"?\", \";\", \":\"])\n\ndef add_references(step_input: StepInput):\n    \"\"\"Add references to the story\"\"\"\n    previous_output = step_input.previous_step_content\n\nif isinstance(previous_output, str):\n        return previous_output + \"\\n\\nReferences: https://www.agno.com\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#===-condition-evaluator-===",
+  "links": []
+}

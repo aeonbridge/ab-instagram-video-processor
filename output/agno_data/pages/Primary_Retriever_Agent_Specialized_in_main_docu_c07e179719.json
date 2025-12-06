@@ -1,0 +1,8 @@
+{
+  "title": "Primary Retriever Agent - Specialized in main document retrieval",
+  "content": "primary_retriever = Agent(\n    name=\"Primary Retriever\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Retrieve primary documents and core information from knowledge base\",\n    knowledge=primary_knowledge,\n    search_knowledge=True,\n    instructions=[\n        \"Search the knowledge base for directly relevant information to the user's query.\",\n        \"Focus on retrieving the most relevant and specific documents first.\",\n        \"Provide detailed information with proper context.\",\n        \"Ensure accuracy and completeness of retrieved information.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#primary-retriever-agent---specialized-in-main-document-retrieval",
+  "links": []
+}

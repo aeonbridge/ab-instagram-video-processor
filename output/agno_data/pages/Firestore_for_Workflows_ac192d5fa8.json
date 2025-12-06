@@ -1,0 +1,14 @@
+{
+  "title": "Firestore for Workflows",
+  "content": "Source: https://docs.agno.com/integrations/database/firestore/usage/firestore-for-workflow\n\nAgno supports using Firestore as a storage backend for Workflows using the `FirestoreDb` class.\n\nYou need to provide a `project_id` parameter to the `FirestoreDb` class. Firestore will connect automatically using your Google Cloud credentials.\n\n```python firestore_for_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.firestore import FirestoreDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\n\nPROJECT_ID = \"agno-os-test\"  # Use your project ID here",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#firestore-for-workflows",
+  "links": []
+}

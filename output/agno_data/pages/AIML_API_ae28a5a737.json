@@ -1,0 +1,14 @@
+{
+  "title": "AI/ML API",
+  "content": "Source: https://docs.agno.com/reference/models/aimlapi\n\nThe **AI/ML API** provider gives unified access to over **300+ AI models**, including **Deepseek**, **Gemini**, **ChatGPT**, and others, via a single standardized interface.\n\nThe models run with **enterprise-grade rate limits and uptime**, and are ideal for production use.\n\nYou can sign up at [aimlapi.com](https://aimlapi.com/?utm_source=agno\\&utm_medium=integration\\&utm_campaign=aimlapi) and view full provider documentation at [docs.aimlapi.com](https://docs.aimlapi.com/?utm_source=agno\\&utm_medium=github\\&utm_campaign=integration).\n\n| Parameter               | Type            | Default                        | Description                                                       |\n| ----------------------- | --------------- | ------------------------------ | ----------------------------------------------------------------- |\n| `id`                    | `str`           | `\"gpt-4o-mini\"`                | The id of the model to use                                        |\n| `name`                  | `str`           | `\"AIMLAPI\"`                    | The name of the model                                             |\n| `provider`              | `str`           | `\"AIMLAPI\"`                    | The provider of the model                                         |\n| `api_key`               | `Optional[str]` | `None`                         | The API key for AI/ML API (defaults to AIMLAPI\\_API\\_KEY env var) |\n| `base_url`              | `str`           | `\"https://api.aimlapi.com/v1\"` | The base URL for the AI/ML API                                    |\n| `max_tokens`            | `int`           | `4096`                         | Maximum number of tokens to generate                              |\n| `retries`               | `int`           | `0`                            | Number of retries to attempt before raising a ModelProviderError  |\n| `delay_between_retries` | `int`           | `1`                            | Delay between retries, in seconds                                 |\n| `exponential_backoff`   | `bool`          | `False`                        | If True, the delay between retries is doubled each time           |\n\nAIMLAPI extends the OpenAI-compatible interface and supports most parameters from OpenAI.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#ai/ml-api",
+  "links": []
+}

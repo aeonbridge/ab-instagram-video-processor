@@ -1,0 +1,8 @@
+{
+  "title": "Create your agent",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    knowledge=knowledge,\n    search_knowledge=True,\n    instructions=[\"Always search knowledge before answering\"]\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-your-agent",
+  "links": []
+}

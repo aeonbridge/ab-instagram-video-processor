@@ -1,0 +1,8 @@
+{
+  "title": "Initialize ChromaDB",
+  "content": "vector_db = ChromaDb(collection=\"recipes\", path=\"tmp/chromadb\", persistent_client=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-chromadb",
+  "links": []
+}

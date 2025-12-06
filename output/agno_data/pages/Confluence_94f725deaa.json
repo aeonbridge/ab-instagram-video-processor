@@ -1,0 +1,19 @@
+{
+  "title": "Confluence",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/confluence\n\n**ConfluenceTools** enable an Agent to retrieve, create, and update pages in Confluence. They also allow you to explore spaces and page details.\n\nThe following example requires the `atlassian-python-api` library and Confluence credentials. You can obtain an API token by going [here](https://id.atlassian.com/manage-profile/security).\n\n```shell  theme={null}\nexport CONFLUENCE_URL=\"https://your-confluence-instance\"\nexport CONFLUENCE_USERNAME=\"your-username\"\nexport CONFLUENCE_PASSWORD=\"your-password\"",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    }
+  ],
+  "url": "llms-txt#confluence",
+  "links": []
+}

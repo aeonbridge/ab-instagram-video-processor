@@ -1,0 +1,43 @@
+{
+  "title": "Cal.com",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/calcom\n\nThe following example requires the `pytz` and `requests` libraries.\n\nThe following agent will use Cal.com to list all events in your Cal.com account for tomorrow.\n\n| Parameter                      | Type   | Default | Description                                |\n| ------------------------------ | ------ | ------- | ------------------------------------------ |\n| `api_key`                      | `str`  | `None`  | Cal.com API key                            |\n| `event_type_id`                | `int`  | `None`  | Event type ID for scheduling               |\n| `user_timezone`                | `str`  | `None`  | User's timezone (e.g. \"America/New\\_York\") |\n| `enable_get_available_slots`   | `bool` | `True`  | Enable getting available time slots        |\n| `enable_create_booking`        | `bool` | `True`  | Enable creating new bookings               |\n| `enable_get_upcoming_bookings` | `bool` | `True`  | Enable getting upcoming bookings           |\n| `enable_reschedule_booking`    | `bool` | `True`  | Enable rescheduling bookings               |\n| `enable_cancel_booking`        | `bool` | `True`  | Enable canceling bookings                  |\n\n| Function                | Description                                      |\n| ----------------------- | ------------------------------------------------ |\n| `get_available_slots`   | Gets available time slots for a given date range |\n| `create_booking`        | Creates a new booking with provided details      |\n| `get_upcoming_bookings` | Gets list of upcoming bookings                   |\n| `get_booking_details`   | Gets details for a specific booking              |\n| `reschedule_booking`    | Reschedules an existing booking                  |\n| `cancel_booking`        | Cancels an existing booking                      |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/calcom.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/calcom_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use Cal.com to list all events in your Cal.com account for tomorrow.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#cal.com",
+  "links": []
+}

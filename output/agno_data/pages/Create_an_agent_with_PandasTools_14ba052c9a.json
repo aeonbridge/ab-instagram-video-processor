@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent with PandasTools",
+  "content": "agent = Agent(tools=[PandasTools()])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-pandastools",
+  "links": []
+}

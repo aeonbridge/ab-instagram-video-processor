@@ -1,0 +1,29 @@
+{
+  "title": "Valyu",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/valyu\n\nValyuTools provides academic and web search capabilities with advanced filtering and relevance scoring.\n\nThe following agent can perform academic and web searches:\n\n| Parameter                | Type                  | Default | Description                                     |\n| ------------------------ | --------------------- | ------- | ----------------------------------------------- |\n| `api_key`                | `Optional[str]`       | `None`  | Valyu API key. Uses VALYU\\_API\\_KEY if not set. |\n| `enable_academic_search` | `bool`                | `True`  | Enable academic sources search functionality.   |\n| `enable_web_search`      | `bool`                | `True`  | Enable web search functionality.                |\n| `enable_paper_search`    | `bool`                | `True`  | Enable search within paper functionality.       |\n| `text_length`            | `int`                 | `1000`  | Maximum length of text content per result.      |\n| `max_results`            | `int`                 | `10`    | Maximum number of results to return.            |\n| `relevance_threshold`    | `float`               | `0.5`   | Minimum relevance score for results.            |\n| `content_category`       | `Optional[str]`       | `None`  | Content category for filtering.                 |\n| `search_start_date`      | `Optional[str]`       | `None`  | Start date for search filtering (YYYY-MM-DD).   |\n| `search_end_date`        | `Optional[str]`       | `None`  | End date for search filtering (YYYY-MM-DD).     |\n| `search_domains`         | `Optional[List[str]]` | `None`  | List of domains to search within.               |\n| `sources`                | `Optional[List[str]]` | `None`  | List of specific sources to search.             |\n| `max_price`              | `float`               | `30.0`  | Maximum price for API calls.                    |\n\n| Function          | Description                                                   |\n| ----------------- | ------------------------------------------------------------- |\n| `academic_search` | Search academic sources for research papers and publications. |\n| `web_search`      | Search web sources for general information and content.       |\n| `paper_search`    | Search within specific papers for detailed information.       |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/valyu.py)\n* [Valyu API Documentation](https://valyu.ai/docs)\n* [Academic Search Best Practices](https://valyu.ai/academic-search)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#valyu",
+  "links": []
+}

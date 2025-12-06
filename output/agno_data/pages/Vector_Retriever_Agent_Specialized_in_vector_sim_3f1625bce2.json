@@ -1,0 +1,8 @@
+{
+  "title": "Vector Retriever Agent - Specialized in vector similarity search",
+  "content": "vector_retriever = Agent(\n    name=\"Vector Retriever\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Retrieve information using vector similarity search in PostgreSQL\",\n    knowledge=vector_knowledge,\n    search_knowledge=True,\n    instructions=[\n        \"Use vector similarity search to find semantically related content.\",\n        \"Focus on finding information that matches the semantic meaning of queries.\",\n        \"Leverage pgvector's efficient similarity search capabilities.\",\n        \"Retrieve content that has high semantic relevance to the user's query.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#vector-retriever-agent---specialized-in-vector-similarity-search",
+  "links": []
+}

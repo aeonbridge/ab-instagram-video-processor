@@ -1,0 +1,28 @@
+{
+  "title": "Video Generation Tools",
+  "content": "Source: https://docs.agno.com/basics/multimodal/video/video_generation\n\nLearn how to use video generation tools with Agno agents.\n\nThe following example demonstrates how to generate a video using `FalTools` with an agent. See [FAL](https://fal.ai/video) for more details.\n\nThe following example requires the `fal_client` library and an API key which can be obtained from [Fal](https://fal.ai/).\n\n## Developer Resources\n\n* View a [Replicate](/basics/multimodal/video/usage/generate-video-replicate) example.\n* View a [Fal](/examples/basics/tools/others/fal) example.\n* View a [ModelsLabs](/basics/multimodal/video/usage/generate-video-models-lab) example.",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#video-generation-tools",
+  "links": []
+}

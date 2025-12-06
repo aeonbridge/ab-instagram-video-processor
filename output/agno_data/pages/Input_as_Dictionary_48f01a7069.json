@@ -1,0 +1,14 @@
+{
+  "title": "Input as Dictionary",
+  "content": "Source: https://docs.agno.com/basics/input-output/team/usage/input-as-dict\n\nThis example shows how to pass input to a team as a dictionary format, useful for multimodal inputs or structured data.\n\n```python cookbook/examples/teams/basic/input_as_dict.py theme={null}\nfrom agno.agent import Agent\nfrom agno.team import Team",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#input-as-dictionary",
+  "links": []
+}

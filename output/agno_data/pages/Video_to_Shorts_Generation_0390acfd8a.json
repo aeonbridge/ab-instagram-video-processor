@@ -1,0 +1,14 @@
+{
+  "title": "Video to Shorts Generation",
+  "content": "Source: https://docs.agno.com/basics/multimodal/agent/usage/video-to-shorts\n\nThis example demonstrates how to analyze a video and automatically generate short-form content segments optimized for platforms like YouTube Shorts and Instagram Reels.\n\n```python video_to_shorts.py theme={null}\n\"\"\"\n1. Install dependencies using: `pip install opencv-python google-geneai sqlalchemy`\n2. Install ffmpeg `brew install ffmpeg`\n2. Run the script using: `python cookbook/agent_basics/video_to_shorts.py`\n\"\"\"\n\nimport subprocess\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import Video\nfrom agno.models.google import Gemini\nfrom agno.utils.log import logger\n\nvideo_path = Path(__file__).parent.joinpath(\"sample_video.mp4\")\noutput_dir = Path(\"tmp/shorts\")\n\nagent = Agent(\n    name=\"Video2Shorts\",\n    description=\"Process videos and generate engaging shorts.\",\n    model=Gemini(id=\"gemini-2.0-flash-exp\"),\n    markdown=True,\n    instructions=[\n        \"Analyze the provided video directly—do NOT reference or analyze any external sources or YouTube videos.\",\n        \"Identify engaging moments that meet the specified criteria for short-form content.\",\n        \"\"\"Provide your analysis in a **table format** with these columns:\n   - Start Time | End Time | Description | Importance Score\"\"\",\n        \"Ensure all timestamps use MM:SS format and importance scores range from 1-10. \",\n        \"Focus only on segments between 15 and 60 seconds long.\",\n        \"Base your analysis solely on the provided video content.\",\n        \"Deliver actionable insights to improve the identified segments for short-form optimization.\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#video-to-shorts-generation",
+  "links": []
+}

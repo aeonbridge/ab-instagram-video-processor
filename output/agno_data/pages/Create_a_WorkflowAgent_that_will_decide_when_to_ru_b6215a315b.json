@@ -1,0 +1,8 @@
+{
+  "title": "Create a WorkflowAgent that will decide when to run the workflow",
+  "content": "workflow_agent = WorkflowAgent(model=OpenAIChat(id=\"gpt-4o-mini\"), num_history_runs=4)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-workflowagent-that-will-decide-when-to-run-the-workflow",
+  "links": []
+}

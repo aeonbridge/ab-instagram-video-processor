@@ -1,0 +1,89 @@
+{
+  "title": "Discord Bot",
+  "content": "Source: https://docs.agno.com/integrations/discord/overview\n\nHost agents as Discord Bots.\n\nThe Discord Bot integration allows you to serve Agents or Teams via Discord, using the discord.py library to handle Discord events and send messages.\n\n<Snippet file=\"setup-discord-app.mdx\" />\n\nCreate an agent, wrap it with `DiscordClient`, and run it:\n\n* `DiscordClient`: Wraps Agno agents/teams for Discord integration using discord.py.\n* `DiscordClient.serve`: Starts the Discord bot client with the provided token.\n\n## `DiscordClient` Class\n\nMain entry point for Agno Discord bot applications.\n\n### Initialization Parameters\n\n| Parameter | Type              | Default | Description            |\n| --------- | ----------------- | ------- | ---------------------- |\n| `agent`   | `Optional[Agent]` | `None`  | Agno `Agent` instance. |\n| `team`    | `Optional[Team]`  | `None`  | Agno `Team` instance.  |\n\n*Provide `agent` or `team`, not both.*\n\nThe Discord bot automatically handles various Discord events:\n\n* **Description**: Processes all incoming messages from users\n* **Media Support**: Handles images, videos, audio files, and documents\n* **Threading**: Automatically creates threads for conversations\n* **Features**:\n  * Automatic thread creation for each conversation\n  * Media processing and forwarding to agents\n  * Message splitting for responses longer than 1500 characters\n  * Support for reasoning content display\n  * Context enrichment with username and message URL\n\n### Supported Media Types\n\n* **Images**: Direct URL processing for image analysis\n* **Videos**: Downloads and processes video content\n* **Audio**: URL-based audio processing\n* **Files**: Downloads and processes document attachments\n\n## Environment Variables\n\nEnsure the following environment variable is set:\n\n## Message Processing\n\nThe bot processes messages with the following workflow:\n\n1. **Message Reception**: Receives messages from Discord channels\n2. **Media Processing**: Downloads and processes any attached media\n3. **Thread Management**: Creates or uses existing threads for conversations\n4. **Agent/Team Execution**: Forwards the message and media to the configured agent or team\n5. **Response Handling**: Sends the response back to Discord, splitting long messages if necessary\n6. **Reasoning Display**: Shows reasoning content in italics if available\n\n### Automatic Thread Creation\n\n* Creates a new thread for each user's first message\n* Maintains conversation context within threads\n* Uses the format: `{username}'s thread`\n\n* **Images**: Passed as `Image` objects with URLs\n* **Videos**: Downloaded and passed as `Video` objects with content\n* **Audio**: Passed as `Audio` objects with URLs\n* **Files**: Downloaded and passed as `File` objects with content\n\n### Message Formatting\n\n* Long messages (>1500 characters) are automatically split\n* Reasoning content is displayed in italics\n* Batch numbering for split messages: `[1/3] message content`\n\n## Testing the Integration\n\n1. Set up your Discord bot token: `export DISCORD_BOT_TOKEN=\"your-token\"`\n2. Run your application: `python your_discord_bot.py`\n3. Invite the bot to your Discord server\n4. Send a message in any channel where the bot has access\n5. The bot will automatically create a thread and respond",
+  "code_samples": [
+    {
+      "code": "## Core Components\n\n* `DiscordClient`: Wraps Agno agents/teams for Discord integration using discord.py.\n* `DiscordClient.serve`: Starts the Discord bot client with the provided token.\n\n## `DiscordClient` Class\n\nMain entry point for Agno Discord bot applications.\n\n### Initialization Parameters\n\n| Parameter | Type              | Default | Description            |\n| --------- | ----------------- | ------- | ---------------------- |\n| `agent`   | `Optional[Agent]` | `None`  | Agno `Agent` instance. |\n| `team`    | `Optional[Team]`  | `None`  | Agno `Team` instance.  |\n\n*Provide `agent` or `team`, not both.*\n\n## Event Handling\n\nThe Discord bot automatically handles various Discord events:\n\n### Message Events\n\n* **Description**: Processes all incoming messages from users\n* **Media Support**: Handles images, videos, audio files, and documents\n* **Threading**: Automatically creates threads for conversations\n* **Features**:\n  * Automatic thread creation for each conversation\n  * Media processing and forwarding to agents\n  * Message splitting for responses longer than 1500 characters\n  * Support for reasoning content display\n  * Context enrichment with username and message URL\n\n### Supported Media Types\n\n* **Images**: Direct URL processing for image analysis\n* **Videos**: Downloads and processes video content\n* **Audio**: URL-based audio processing\n* **Files**: Downloads and processes document attachments\n\n## Environment Variables\n\nEnsure the following environment variable is set:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup Steps",
+      "id": "setup-steps"
+    },
+    {
+      "level": "h3",
+      "text": "Example Usage",
+      "id": "example-usage"
+    },
+    {
+      "level": "h2",
+      "text": "Core Components",
+      "id": "core-components"
+    },
+    {
+      "level": "h2",
+      "text": "`DiscordClient` Class",
+      "id": "`discordclient`-class"
+    },
+    {
+      "level": "h3",
+      "text": "Initialization Parameters",
+      "id": "initialization-parameters"
+    },
+    {
+      "level": "h2",
+      "text": "Event Handling",
+      "id": "event-handling"
+    },
+    {
+      "level": "h3",
+      "text": "Message Events",
+      "id": "message-events"
+    },
+    {
+      "level": "h3",
+      "text": "Supported Media Types",
+      "id": "supported-media-types"
+    },
+    {
+      "level": "h2",
+      "text": "Environment Variables",
+      "id": "environment-variables"
+    },
+    {
+      "level": "h2",
+      "text": "Message Processing",
+      "id": "message-processing"
+    },
+    {
+      "level": "h2",
+      "text": "Features",
+      "id": "features"
+    },
+    {
+      "level": "h3",
+      "text": "Automatic Thread Creation",
+      "id": "automatic-thread-creation"
+    },
+    {
+      "level": "h3",
+      "text": "Media Support",
+      "id": "media-support"
+    },
+    {
+      "level": "h3",
+      "text": "Message Formatting",
+      "id": "message-formatting"
+    },
+    {
+      "level": "h2",
+      "text": "Testing the Integration",
+      "id": "testing-the-integration"
+    }
+  ],
+  "url": "llms-txt#discord-bot",
+  "links": []
+}

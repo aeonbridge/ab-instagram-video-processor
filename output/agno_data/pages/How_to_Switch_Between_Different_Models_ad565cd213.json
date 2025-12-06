@@ -1,0 +1,19 @@
+{
+  "title": "How to Switch Between Different Models",
+  "content": "Source: https://docs.agno.com/faq/switching-models\n\nWhen working with Agno, you may need to switch between different models. While Agno supports 20+ model providers, switching between different providers can cause compatibility issues. Switching models within the same provider is generally safer and more reliable.\n\n## Recommended Approach\n\n**Safe:** Switch models within the same provider (OpenAI → OpenAI, Google → Google)\\\n**Risky:** Switch between different providers (OpenAI ↔ Google ↔ Anthropic)\n\nCross-provider switching is risky because message history between model providers are often not interchangeable, as some require messages that others don't. However, we are actively working to improve interoperability.\n\n## Safe Model Switching\n\nThe safest way to switch models is to change the model ID while keeping the same provider:\n\n```python  theme={null}\nfrom uuid import uuid4\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.openai.chat import OpenAIChat\n\ndb = SqliteDb(db_file=\"tmp/agent_sessions.db\")\n\nsession_id = str(uuid4())\nuser_id = \"user@example.com\"",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Recommended Approach",
+      "id": "recommended-approach"
+    },
+    {
+      "level": "h2",
+      "text": "Safe Model Switching",
+      "id": "safe-model-switching"
+    }
+  ],
+  "url": "llms-txt#how-to-switch-between-different-models",
+  "links": []
+}

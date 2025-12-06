@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with knowledge",
+  "content": "sales_agent = Agent(\n    knowledge=knowledge,\n    search_knowledge=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-knowledge",
+  "links": []
+}

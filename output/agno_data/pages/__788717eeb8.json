@@ -1,0 +1,8 @@
+{
+  "title": "-----------------------------------------------------------------------------",
+  "content": "knowledge = Knowledge(\n    name=\"CSV Knowledge Base\",\n    description=\"A knowledge base for CSV files\",\n    vector_db=vector_db,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#-----------------------------------------------------------------------------",
+  "links": []
+}

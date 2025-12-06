@@ -1,0 +1,19 @@
+{
+  "title": "Run the Agent. This will store a session in our \"my_memory_table\"",
+  "content": "agent.print_response(\"Hi! My name is John Doe and I like to play basketball on the weekends.\")\n\nagent.print_response(\"What are my hobbies?\")\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb",
+  "code_samples": [
+    {
+      "code": "### Manual Memory Retrieval\n\nWhile memories are automatically recalled during conversations, you can also manually retrieve them using the `get_user_memories` method. This is useful for debugging, displaying user profiles, or building custom memory interfaces:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Manual Memory Retrieval",
+      "id": "manual-memory-retrieval"
+    }
+  ],
+  "url": "llms-txt#run-the-agent.-this-will-store-a-session-in-our-\"my_memory_table\"",
+  "links": []
+}

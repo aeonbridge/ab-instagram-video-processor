@@ -1,0 +1,8 @@
+{
+  "title": "Configure chunking strategy with a reader",
+  "content": "reader = PDFReader(\n    chunking_strategy=SemanticChunking(similarity_threshold=0.7)\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-chunking-strategy-with-a-reader",
+  "links": []
+}

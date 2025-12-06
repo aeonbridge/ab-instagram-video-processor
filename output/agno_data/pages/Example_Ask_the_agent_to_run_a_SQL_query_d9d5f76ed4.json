@@ -1,0 +1,24 @@
+{
+  "title": "Example: Ask the agent to run a SQL query",
+  "content": "agent.print_response(\"\"\"\nPlease run a SQL query to get all users from the users table\nwho signed up in the last 30 days\n\"\"\")\n```\n\n| Name           | Type                              | Default  | Description                                    |\n| -------------- | --------------------------------- | -------- | ---------------------------------------------- |\n| `connection`   | `Optional[PgConnection[DictRow]]` | `None`   | Optional existing psycopg connection object.   |\n| `db_name`      | `Optional[str]`                   | `None`   | Optional name of the database to connect to.   |\n| `user`         | `Optional[str]`                   | `None`   | Optional username for database authentication. |\n| `password`     | `Optional[str]`                   | `None`   | Optional password for database authentication. |\n| `host`         | `Optional[str]`                   | `None`   | Optional host for the database connection.     |\n| `port`         | `Optional[int]`                   | `None`   | Optional port for the database connection.     |\n| `table_schema` | `str`                             | `public` | Schema name to search for tables.              |\n\n| Function               | Description                                                                                                                                                                                                                                                                            |\n| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `show_tables`          | Retrieves and displays a list of tables in the database. Returns the list of tables.                                                                                                                                                                                                   |\n| `describe_table`       | Describes the structure of a specified table by returning its columns, data types, and nullability. Parameters include `table` (str) to specify the table name. Returns the table description.                                                                                         |\n| `summarize_table`      | Summarizes a table by computing aggregates such as min, max, average, standard deviation, and non-null counts for numeric columns, or unique values and average length for text columns. Parameters include `table` (str) to specify the table name. Returns the summary of the table. |\n| `inspect_query`        | Inspects an SQL query by returning the query plan using EXPLAIN. Parameters include `query` (str) to specify the SQL query. Returns the query plan.                                                                                                                                    |\n| `export_table_to_path` | Exports a specified table in CSV format to a given path. Parameters include `table` (str) to specify the table name and `path` (str) to specify where to save the file. Returns the result of the export operation.                                                                    |\n| `run_query`            | Executes a read-only SQL query and returns the result. Parameters include `query` (str) to specify the SQL query. Returns the result of the query execution.                                                                                                                           |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/postgres.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/postgres_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example:-ask-the-agent-to-run-a-sql-query",
+  "links": []
+}

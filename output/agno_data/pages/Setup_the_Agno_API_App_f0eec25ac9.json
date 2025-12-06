@@ -1,0 +1,13 @@
+{
+  "title": "Setup the Agno API App",
+  "content": "agent_os = AgentOS(\n    description=\"Example app for basic agent with eval capabilities\",\n    id=\"eval-demo\",\n    agents=[basic_agent],\n)\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    \"\"\" Run your AgentOS:\n    Now you can interact with your eval runs using the API. Examples:\n    - http://localhost:8001/eval-runs\n    - http://localhost:8001/eval-runs/123\n    - http://localhost:8001/eval-runs?agent_id=123\n    - http://localhost:8001/eval-runs?limit=10&page=0&sort_by=created_at&sort_order=desc\n    - http://localhost:8001/eval-runs/accuracy\n    - http://localhost:8001/eval-runs/performance\n    - http://localhost:8001/eval-runs/reliability\n    \"\"\"\n    agent_os.serve(app=\"evals_demo:app\", reload=True)\n\nbash Mac theme={null}\n      python evals_demo.py\n      ```\n    </CodeGroup>\n  </Step>\n\n<Step title=\"View the Evals Demo\">\n    Head over to <a href=\"https://os.agno.com/evaluation\">[https://os.agno.com/evaluation](https://os.agno.com/evaluation)</a> to view the evals.\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "<Note>\n  For more details, see the [Evaluation API Reference](/reference-api/schema/evals/list-evaluation-runs).\n</Note>\n\n<Steps>\n  <Step title=\"Run the Evals Demo\">\n    <CodeGroup>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#setup-the-agno-api-app",
+  "links": []
+}

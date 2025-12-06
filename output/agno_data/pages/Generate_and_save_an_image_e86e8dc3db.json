@@ -1,0 +1,8 @@
+{
+  "title": "Generate and save an image",
+  "content": "response = widescreen_agent.run(\n    \"Create a panoramic nature scene with mountains and a lake at sunset\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#generate-and-save-an-image",
+  "links": []
+}

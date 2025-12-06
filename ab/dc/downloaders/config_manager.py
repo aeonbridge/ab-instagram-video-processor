@@ -15,8 +15,9 @@ class Config:
     def __init__(self):
         """Load configuration from environment variables"""
         # Load .env file from project root
+        # Use override=True to ensure .env values take precedence over environment variables
         env_path = Path(__file__).parent.parent.parent.parent / '.env'
-        load_dotenv(dotenv_path=env_path)
+        load_dotenv(dotenv_path=env_path, override=True)
 
         # Paths
         self.downloads_path = Path(os.getenv('DOWNLOADS_PATH', 'downloads/'))

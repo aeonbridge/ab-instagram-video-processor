@@ -1,0 +1,24 @@
+{
+  "title": "Configure email settings",
+  "content": "sender_email = \"verified-sender@example.com\"  # Your verified SES email\nsender_name = \"Sender Name\"\nregion_name = \"us-east-1\"\n\nagent = Agent(\n    name=\"Research Newsletter Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[\n        AWSSESTool(\n            sender_email=sender_email,\n            sender_name=sender_name,\n            region_name=region_name\n        ),\n        DuckDuckGoTools(),\n    ],\n    markdown=True,\n        instructions=[\n        \"When given a prompt:\",\n        \"1. Extract the recipient's complete email address (e.g. user@domain.com)\",\n        \"2. Research the latest AI developments using DuckDuckGo\",\n        \"3. Compose a concise, engaging email summarising 3 – 4 key developments\",\n        \"4. Send the email using AWS SES via the send_email tool\",\n    ],\n)\n\nagent.print_response(\n    \"Research recent AI developments in healthcare and email the summary to johndoe@example.com\"\n)\n```\n\n| Parameter           | Type   | Default       | Description                              |\n| ------------------- | ------ | ------------- | ---------------------------------------- |\n| `sender_email`      | `str`  | `None`        | Verified SES sender address.             |\n| `sender_name`       | `str`  | `None`        | Display name that appears to recipients. |\n| `region_name`       | `str`  | `\"us-east-1\"` | AWS region where SES is provisioned.     |\n| `enable_send_email` | `bool` | `True`        | Enable the send\\_email functionality.    |\n| `all`               | `bool` | `False`       | Enable all functionality.                |\n\n| Function     | Description                                                                          |\n| ------------ | ------------------------------------------------------------------------------------ |\n| `send_email` | Send a plain-text email. Accepts the arguments: `subject`, `body`, `receiver_email`. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/aws_ses.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/aws_ses_tools.py)\n* [Amazon SES Documentation](https://docs.aws.amazon.com/ses/latest/dg/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#configure-email-settings",
+  "links": []
+}

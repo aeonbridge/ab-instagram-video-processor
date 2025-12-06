@@ -1,0 +1,8 @@
+{
+  "title": "Setup your Agent with Automatic User Memory",
+  "content": "agent = Agent(\n    db=db,\n    enable_user_memories=True, # Automatic memory management\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-your-agent-with-automatic-user-memory",
+  "links": []
+}

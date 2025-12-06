@@ -1,0 +1,27 @@
+{
+  "title": "Create the company information gathering team",
+  "content": "company_info_team = Team(\n    name=\"Company Info Team\",\n    id=id,\n    model=Claude(id=\"claude-3-7-sonnet-latest\"),\n    tools=[AgentQLTools(agentql_query=custom_query)],\n    members=[\n        wikipedia_agent,\n        website_agent,\n    ],\n    markdown=True,\n    instructions=[\n        \"You are a team that finds information about a company.\",\n        \"First search the web and wikipedia for information about the company.\",\n        \"If you can find the company's website URL, then scrape the homepage and the about page.\",\n    ],\n    show_members_responses=True,\n)\n\nif __name__ == \"__main__\":\n    asyncio.run(\n        company_info_team.aprint_response(\n            \"Write me a full report on everything you can find about Agno, the company building AI agent infrastructure.\",\n            stream=True,\n        )\n    )\nbash  theme={null}\n    pip install agno wikipedia ddgs agentql\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    export ANTHROPIC_API_KEY=****\n    export MISTRAL_API_KEY=****\n    export AGENTQL_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/tools/03_async_team_with_tools.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-the-company-information-gathering-team",
+  "links": []
+}

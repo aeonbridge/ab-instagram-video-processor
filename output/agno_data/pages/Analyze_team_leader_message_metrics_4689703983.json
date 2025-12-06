@@ -1,0 +1,8 @@
+{
+  "title": "Analyze team leader message metrics",
+  "content": "print(\"=\" * 50)\nprint(\"TEAM LEADER MESSAGE METRICS\")\nprint(\"=\" * 50)\n\nif run_output.messages:\n    for message in run_output.messages:\n        if message.role == \"assistant\":\n            if message.content:\n                print(f\"📝 Message: {message.content[:100]}...\")\n            elif message.tool_calls:\n                print(f\"🔧 Tool calls: {message.tool_calls}\")\n\nprint(\"-\" * 30, \"Metrics\", \"-\" * 30)\n            pprint(message.metrics)\n            print(\"-\" * 70)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#analyze-team-leader-message-metrics",
+  "links": []
+}

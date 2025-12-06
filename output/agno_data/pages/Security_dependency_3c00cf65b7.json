@@ -1,0 +1,8 @@
+{
+  "title": "Security dependency",
+  "content": "security = HTTPBearer()\n\nasync def verify_token(token: str = Depends(security)):\n    if token.credentials != \"your-secret-token\":\n        raise HTTPException(status_code=401, detail=\"Invalid token\")\n    return token",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#security-dependency",
+  "links": []
+}

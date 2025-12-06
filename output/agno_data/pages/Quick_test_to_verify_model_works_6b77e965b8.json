@@ -1,0 +1,24 @@
+{
+  "title": "Quick test to verify model works",
+  "content": "if __name__ == \"__main__\":\n    test_response = model.invoke(\"Explain social media sentiment analysis in one sentence.\")\n    print(f\"Model test: {test_response}\")\npython  theme={null}\nfrom agno.tools.x import XTools",
+  "code_samples": [
+    {
+      "code": "This confirms your model is working, before we add more complexity.\n\n## Step 2: Add Social Media Tools\n\n**Which tools should I use?** We are adding XTools because we need direct Twitter/X data with engagement metrics, and ExaTools because we need broader web context that social media alone can't provide.\n\n### 2a. Add XTools for Twitter/X Data\n\n**Why XTools?** Direct access to Twitter/X with engagement metrics is crucial for understanding influence patterns and viral content.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Step 2: Add Social Media Tools",
+      "id": "step-2:-add-social-media-tools"
+    },
+    {
+      "level": "h3",
+      "text": "2a. Add XTools for Twitter/X Data",
+      "id": "2a.-add-xtools-for-twitter/x-data"
+    }
+  ],
+  "url": "llms-txt#quick-test-to-verify-model-works",
+  "links": []
+}

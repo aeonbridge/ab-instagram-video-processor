@@ -1,0 +1,14 @@
+{
+  "title": "Chat History",
+  "content": "Source: https://docs.agno.com/basics/chat-history/overview\n\nLearn about how to manage history in Agno.\n\nChat History enables your agents, teams, and workflows to remember and reference previous conversations, creating intelligent and context-aware interactions.\n\nInstead of starting fresh with each interaction, Chat History allows you to:\n\n* **Maintain conversation continuity** - Build on previous exchanges within a session\n* **Provide personalized responses** - Reference past interactions to tailor outputs\n* **Avoid repetitive questions** - Access previously provided information\n* **Enable long-running conversations** - Support multi-turn dialogues with persistent memory\n\n<Note>\n  All history features require a database configured on your agent, team, or workflow. See [Database](/basics/database/overview) for setup details.\n</Note>\n\n<CardGroup cols={3}>\n  <Card title=\"Chat History in Agents\" icon=\"robot\" iconType=\"duotone\" href=\"/basics/chat-history/agent\">\n    Learn about managing chat history in agents.\n  </Card>\n\n<Card title=\"Chat History in Teams\" icon=\"users\" iconType=\"duotone\" href=\"/basics/chat-history/team\">\n    Learn about managing chat history in teams.\n  </Card>\n\n<Card title=\"Chat History in Workflows\" icon=\"diagram-project\" iconType=\"duotone\" href=\"/basics/chat-history/workflow\">\n    Learn about managing chat history in workflows.\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#chat-history",
+  "links": []
+}

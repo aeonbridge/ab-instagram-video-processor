@@ -1,0 +1,14 @@
+{
+  "title": "Disable telemetry for a specific agent",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    telemetry=False\n)\n```\n\n* **Agents**: `Agent(telemetry=False)`\n* **Teams**: `Team(telemetry=False)`\n* **Workflows**: `Workflow(telemetry=False)`\n* **AgentOS**: `AgentOS(telemetry=False)`\n\n## Developer Resources\n\n* View the [Agent schema](/reference/agents/agent)\n* View the [Team schema](/reference/teams/team)\n* View the [Workflow schema](/reference/workflows/workflow)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#disable-telemetry-for-a-specific-agent",
+  "links": []
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Find either engineering or product documents",
+  "content": "OR(\n    EQ(\"department\", \"engineering\"),\n    EQ(\"department\", \"product\")\n)\npython  theme={null}\nfrom agno.filters import NOT, EQ",
+  "code_samples": [
+    {
+      "code": "#### NOT\n\nExclude content that matches the condition.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#find-either-engineering-or-product-documents",
+  "links": []
+}

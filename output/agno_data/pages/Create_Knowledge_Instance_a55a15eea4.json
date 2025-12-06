@@ -1,0 +1,8 @@
+{
+  "title": "Create Knowledge Instance",
+  "content": "knowledge = Knowledge(\n    name=\"YouTube Knowledge Base\",\n    description=\"Knowledge base from YouTube video transcripts\",\n    vector_db=PgVector(\n        table_name=\"youtube_vectors\", \n        db_url=db_url\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-knowledge-instance",
+  "links": []
+}

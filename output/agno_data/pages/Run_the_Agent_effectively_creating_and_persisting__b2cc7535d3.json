@@ -1,0 +1,8 @@
+{
+  "title": "Run the Agent, effectively creating and persisting a session",
+  "content": "agent.print_response(\"What is the capital of France?\", session_id=\"123\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-the-agent,-effectively-creating-and-persisting-a-session",
+  "links": []
+}

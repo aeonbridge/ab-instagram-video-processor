@@ -1,0 +1,13 @@
+{
+  "title": "Initialize and connect to the Streamable HTTP MCP server",
+  "content": "mcp_tools = MCPTools(url=\"https://docs.agno.com/mcp\", transport=\"streamable-http\")\nawait mcp_tools.connect()\n\ntry:\n    agent = Agent(model=OpenAIChat(id=\"gpt-5-mini\"), tools=[mcp_tools])\n    await agent.aprint_response(\"What can you tell me about MCP support in Agno?\", stream=True)\nfinally:\n    # Always close the connection when done\n    await mcp_tools.close()\npython  theme={null}\nfrom agno.tools.mcp import MCPTools, StreamableHTTPClientParams\n\nserver_params = StreamableHTTPClientParams(\n    url=...,\n    headers=...,\n    timeout=...,\n    sse_read_timeout=...,\n    terminate_on_close=...,\n)",
+  "code_samples": [
+    {
+      "code": "You can also use the `server_params` argument to define the MCP connection. This way you can specify the headers to send to the MCP server with every request, and the timeout values:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#initialize-and-connect-to-the-streamable-http-mcp-server",
+  "links": []
+}

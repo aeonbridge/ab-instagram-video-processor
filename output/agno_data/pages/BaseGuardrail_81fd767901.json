@@ -1,0 +1,24 @@
+{
+  "title": "BaseGuardrail",
+  "content": "Source: https://docs.agno.com/reference/hooks/base-guardrail\n\nPerform the guardrail checks synchronously.\n\n* `run_input` (RunInput | TeamRunInput): The input provided to the Agent or Team when invoking the run.\n\nPerform the guardrail checks asynchronously.\n\n* `run_input` (RunInput | TeamRunInput): The input provided to the Agent or Team when invoking the run.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Methods",
+      "id": "methods"
+    },
+    {
+      "level": "h3",
+      "text": "`check`",
+      "id": "`check`"
+    },
+    {
+      "level": "h3",
+      "text": "`async_check`",
+      "id": "`async_check`"
+    }
+  ],
+  "url": "llms-txt#baseguardrail",
+  "links": []
+}

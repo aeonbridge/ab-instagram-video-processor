@@ -1,0 +1,14 @@
+{
+  "title": "Custom FastAPI App with JWT Middleware",
+  "content": "Source: https://docs.agno.com/agent-os/usage/middleware/custom-fastapi-jwt\n\nCustom FastAPI application with JWT middleware for authentication and AgentOS integration\n\nThis example demonstrates how to integrate JWT middleware with your custom FastAPI application and then add AgentOS functionality on top.\n\n```python custom_fastapi_jwt.py theme={null}\nfrom datetime import datetime, timedelta, UTC\n\nimport jwt\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.os.middleware import JWTMiddleware\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom fastapi import FastAPI, Form, HTTPException",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#custom-fastapi-app-with-jwt-middleware",
+  "links": []
+}

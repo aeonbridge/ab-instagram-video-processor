@@ -1,0 +1,8 @@
+{
+  "title": "Skip files that were already processed",
+  "content": "knowledge.add_content(\n    path=\"large_document.pdf\",\n    skip_if_exists=True,  # Don't reprocess existing files\n    upsert=False          # Don't update existing\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#skip-files-that-were-already-processed",
+  "links": []
+}

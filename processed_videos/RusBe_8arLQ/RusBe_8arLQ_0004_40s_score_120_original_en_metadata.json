@@ -1,0 +1,47 @@
+{
+  "title": "Magic Behind My Perfect Lighting Setup!",
+  "description": "Discover how I achieve the perfect video lighting with no screws or drills! Using a GVM panel light and a very pole, I've created a setup that's both functional and visually appealing. Perfect for vloggers, YouTubers, and photography enthusiasts looking to elevate their lighting game. #LightingSetup #VideoLighting #GVMPanel #VloggingTips \n\nTimestamps:\n0:00 - Introduction to My Lighting Setup\n0:10 - Behind the Scenes: Hair Light Explained\n0:20 - The Magic of the Very Pole\n0:30 - How to Achieve Warm Lighting Tones\n0:40 - Wrap Up and Lighting Tips\n\nDon't forget to LIKE, SUBSCRIBE, and SHARE for more lighting tips and tricks!",
+  "tags": [
+    "LightingSetup",
+    "VloggingTips",
+    "GVMPanelLight",
+    "PhotographyLighting",
+    "DIYLighting"
+  ],
+  "category": "Howto & Style",
+  "thumbnail_ideas": [
+    {
+      "concept": "A silhouette highlighting the hair light effect with a glowing outline",
+      "text_overlay": "Illuminate Like a Pro!",
+      "color_scheme": "Dark background with neon accents"
+    },
+    {
+      "concept": "Close-up of the very pole holding the light, with light rays coming through",
+      "text_overlay": "No Screws Needed!",
+      "color_scheme": "Warm tones to match the lighting setup"
+    },
+    {
+      "concept": "Split-screen showing the setup vs. the effect on camera",
+      "text_overlay": "Before & After: Lighting Magic",
+      "color_scheme": "Half cool, half warm tones"
+    }
+  ],
+  "target_audience": "Vloggers, YouTubers, photography enthusiasts, and DIY content creators",
+  "video_hook": "Ever wondered how to get that perfect lighting without drilling holes? Let me show you how.",
+  "call_to_action": "Hit that subscribe button for more lighting secrets!",
+  "_generated_at": "2025-12-05T22:58:58.295699",
+  "_model": "gpt-4-turbo-preview",
+  "_source_file": "processed_videos/RusBe_8arLQ/RusBe_8arLQ_0004_40s_score_120_original_en.md",
+  "_platform": "youtube",
+  "_usage": {
+    "input_tokens": 668,
+    "output_tokens": 438,
+    "total_tokens": 1106,
+    "cost_usd": 0.01982,
+    "cost_breakdown": {
+      "input_cost_usd": 0.00668,
+      "output_cost_usd": 0.01314
+    },
+    "duration_seconds": 11.69
+  }
+}

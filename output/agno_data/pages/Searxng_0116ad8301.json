@@ -1,0 +1,14 @@
+{
+  "title": "Searxng",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/searxng\n\n**Searxng** enables an Agent to search the web for a query, scrape a website, or crawl a website.\n\n```python cookbook/tools/searxng_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.searxng import SearxngTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#searxng",
+  "links": []
+}

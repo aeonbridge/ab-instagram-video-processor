@@ -1,0 +1,8 @@
+{
+  "title": "Setup the agent",
+  "content": "basic_agent = Agent(\n    id=\"basic-agent\",\n    name=\"Calculator Agent\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    db=db,\n    markdown=True,\n    instructions=\"You are an assistant that can answer arithmetic questions. Always use the Calculator tools you have.\",\n    tools=[CalculatorTools()],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-the-agent",
+  "links": []
+}

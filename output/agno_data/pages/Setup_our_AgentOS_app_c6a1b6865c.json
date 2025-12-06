@@ -1,0 +1,41 @@
+{
+  "title": "Setup our AgentOS app",
+  "content": "agent_os = AgentOS(\n    teams=[research_team],\n    interfaces=[AGUI(team=research_team)],\n)\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    \"\"\"Run our AgentOS.\n\nYou can see the configuration and available apps at:\n    http://localhost:7777/config\n\n\"\"\"\n    agent_os.serve(app=\"research_team:app\", reload=True)\nbash  theme={null}\n    export OPENAI_API_KEY=your_openai_api_key\n    bash  theme={null}\n    pip install -U agno\n    bash Mac theme={null}\n      python cookbook/os/interfaces/agui/research_team.py\n      bash Windows theme={null}\n      python cookbook/os/interfaces/agui/research_team.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n* **Multi-Agent Collaboration**: Researcher and writer working together\n* **Specialized Roles**: Distinct expertise and responsibilities\n* **Transparent Process**: See individual agent contributions\n* **Coordinated Workflow**: Structured research-to-content pipeline\n* **Web Interface**: Professional team interaction through AG-UI\n\n* **Researcher**: Information gathering and analysis specialist\n* **Writer**: Content creation and structuring expert\n* **Workflow**: Sequential collaboration from research to final content",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    },
+    {
+      "level": "h2",
+      "text": "Team Members",
+      "id": "team-members"
+    }
+  ],
+  "url": "llms-txt#setup-our-agentos-app",
+  "links": []
+}

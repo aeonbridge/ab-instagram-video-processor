@@ -1,0 +1,28 @@
+{
+  "title": "Introduction",
+  "content": "Source: https://docs.agno.com/examples/getting-started/introduction\n\nThis guide walks through the basics of building Agents with Agno.\n\nThe examples build on each other, introducing new concepts and capabilities progressively. Each example contains detailed comments, example prompts, and required dependencies.\n\nCreate a virtual environment:\n\nInstall the required dependencies:\n\nExport your OpenAI API key:\n\n<CardGroup cols={3}>\n  <Card title=\"Basic Agent\" icon=\"robot\" iconType=\"duotone\" href=\"./01-basic-agent\">\n    Build a news reporter with a vibrant personality. This Agent only shows basic LLM inference.\n  </Card>\n\n<Card title=\"Agent with Tools\" icon=\"toolbox\" iconType=\"duotone\" href=\"./02-agent-with-tools\">\n    Add web search capabilities using DuckDuckGo for real-time information gathering.\n  </Card>\n\n<Card title=\"Agent with Knowledge\" icon=\"brain\" iconType=\"duotone\" href=\"./03-agent-with-knowledge\">\n    Add a vector database to your agent to store and search knowledge.\n  </Card>\n\n<Card title=\"Agent with Storage\" icon=\"database\" iconType=\"duotone\" href=\"./06-agent-with-storage\">\n    Add persistence to your agents with session management and history capabilities.\n  </Card>\n\n<Card title=\"Agent Team\" icon=\"users\" iconType=\"duotone\" href=\"./17-agent-team\">\n    Create an agent team specializing in market research and financial analysis.\n  </Card>\n\n<Card title=\"Structured Output\" icon=\"code\" iconType=\"duotone\" href=\"./05-structured-output\">\n    Generate a structured output using a Pydantic model.\n  </Card>\n\n<Card title=\"Custom Tools\" icon=\"wrench\" iconType=\"duotone\" href=\"./04-write-your-own-tool\">\n    Create and integrate custom tools with your agent.\n  </Card>\n\n<Card title=\"Research Agent\" icon=\"magnifying-glass\" iconType=\"duotone\" href=\"./18-research-agent-exa\">\n    Build an AI research agent using Exa with controlled output steering.\n  </Card>\n\n<Card title=\"Research Workflow\" icon=\"diagram-project\" iconType=\"duotone\" href=\"./19-blog-generator-workflow\">\n    Create a research workflow combining web searches and content scraping.\n  </Card>\n\n<Card title=\"Image Agent\" icon=\"image\" iconType=\"duotone\" href=\"./13-image-agent\">\n    Create an agent that can understand images.\n  </Card>\n\n<Card title=\"Image Generation\" icon=\"paintbrush\" iconType=\"duotone\" href=\"./14-image-generation\">\n    Create an Agent that can generate images using DALL-E.\n  </Card>\n\n<Card title=\"Video Generation\" icon=\"video\" iconType=\"duotone\" href=\"./15-video-generation\">\n    Create an Agent that can generate videos using ModelsLabs.\n  </Card>\n\n<Card title=\"Audio Agent\" icon=\"microphone\" iconType=\"duotone\" href=\"./16-audio-agent\">\n    Create an Agent that can process audio input and generate responses.\n  </Card>\n\n<Card title=\"Agent with State\" icon=\"database\" iconType=\"duotone\" href=\"./07-agent-state\">\n    Create an Agent with session state management.\n  </Card>\n\n<Card title=\"Agent Context\" icon=\"sitemap\" iconType=\"duotone\" href=\"./08-agent-context\">\n    Evaluate dependencies at agent.run and inject them into the instructions.\n  </Card>\n\n<Card title=\"Agent Session\" icon=\"clock-rotate-left\" iconType=\"duotone\" href=\"./09-agent-session\">\n    Create an Agent with persistent session memory across conversations.\n  </Card>\n\n<Card title=\"User Memories\" icon=\"memory\" iconType=\"duotone\" href=\"./10-user-memories-and-summaries\">\n    Create an Agent that stores user memories and summaries.\n  </Card>\n\n<Card title=\"Function Retries\" icon=\"rotate\" iconType=\"duotone\" href=\"./11-retry-function-call\">\n    Handle function retries for failed or unsatisfactory outputs.\n  </Card>\n\n<Card title=\"Human in the Loop\" icon=\"user-check\" iconType=\"duotone\" href=\"./12-human-in-the-loop\">\n    Add user confirmation and safety checks for interactive agent control.\n  </Card>\n</CardGroup>\n\nEach example includes runnable code and detailed explanations. We recommend following them in order, as concepts build upon previous examples.",
+  "code_samples": [
+    {
+      "code": "Install the required dependencies:",
+      "language": "unknown"
+    },
+    {
+      "code": "Export your OpenAI API key:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Examples",
+      "id": "examples"
+    }
+  ],
+  "url": "llms-txt#introduction",
+  "links": []
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Example prompts to try:",
+  "content": "\"\"\"\nExplore Agno's capabilities with these queries:\n1. \"What are the different types of agents in Agno?\"\n2. \"How does Agno handle knowledge base management?\"\n3. \"What embedding models does Agno support?\"\n4. \"How can I implement custom tools in Agno?\"\n5. \"What storage options are available for workflow caching?\"\n6. \"How does Agno handle streaming responses?\"\n7. \"What types of LLM providers does Agno support?\"\n8. \"How can I implement custom knowledge sources?\"\n\"\"\"\n\nbash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    pip install -U agno openai lancedb tantivy inquirer\n    bash Mac theme={null}\n      python cookbook/examples/agents/deep_knowledge.py\n      bash Windows theme={null}\n      python cookbook/examples/agents/deep_knowledge.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#example-prompts-to-try:",
+  "links": []
+}

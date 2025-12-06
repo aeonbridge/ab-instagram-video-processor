@@ -1,0 +1,24 @@
+{
+  "title": "Filter to specific candidates",
+  "content": "hiring_team.print_response(\n    \"Compare the experience of our top candidates\",\n    knowledge_filters=[  # ← List wrapper required\n        AND(\n            EQ(\"document_type\", \"cv\"),\n            IN(\"user_id\", [\"jordan_mitchell\", \"taylor_brooks\"]),\n            NOT(EQ(\"status\", \"rejected\"))\n        )\n    ]\n)\npython  theme={null}\nfrom agno.filters import OR, EQ\n\ndef get_user_filter(user_id: str, user_department: str):\n    \"\"\"Create filters based on user context.\"\"\"\n    return OR(\n        EQ(\"visibility\", \"public\"),\n        EQ(\"owner\", user_id),\n        EQ(\"department\", user_department)\n    )",
+  "code_samples": [
+    {
+      "code": "## Advanced Filtering Patterns\n\n### User-Specific Content\n\nFilter content based on user access or preferences:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Advanced Filtering Patterns",
+      "id": "advanced-filtering-patterns"
+    },
+    {
+      "level": "h3",
+      "text": "User-Specific Content",
+      "id": "user-specific-content"
+    }
+  ],
+  "url": "llms-txt#filter-to-specific-candidates",
+  "links": []
+}

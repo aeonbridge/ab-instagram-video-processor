@@ -1,0 +1,14 @@
+{
+  "title": "Get all routes",
+  "content": "routes = agent_os.get_routes()\n\nfor route in routes:\n    print(f\"Route: {route.path}\")\n    if hasattr(route, 'methods'):\n        print(f\"Methods: {route.methods}\")\n```\n\n## Developer Resources\n\n* [AgentOS Reference](/reference/agent-os/agent-os)\n* [Full Example](/agent-os/usage/custom-fastapi)\n* [FastAPI Documentation](https://fastapi.tiangolo.com/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#get-all-routes",
+  "links": []
+}

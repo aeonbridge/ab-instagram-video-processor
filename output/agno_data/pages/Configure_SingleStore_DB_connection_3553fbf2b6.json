@@ -1,0 +1,8 @@
+{
+  "title": "Configure SingleStore DB connection",
+  "content": "USERNAME = getenv(\"SINGLESTORE_USERNAME\")\nPASSWORD = getenv(\"SINGLESTORE_PASSWORD\")\nHOST = getenv(\"SINGLESTORE_HOST\")\nPORT = getenv(\"SINGLESTORE_PORT\")\nDATABASE = getenv(\"SINGLESTORE_DATABASE\")\nSSL_CERT = getenv(\"SINGLESTORE_SSL_CERT\", None)\n\ndb_url = (\n    f\"mysql+pymysql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}?charset=utf8mb4\"\n)\ndb = SingleStoreDb(db_url=db_url)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-singlestore-db-connection",
+  "links": []
+}

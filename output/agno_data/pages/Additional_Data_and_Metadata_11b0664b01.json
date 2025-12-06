@@ -1,0 +1,14 @@
+{
+  "title": "Additional Data and Metadata",
+  "content": "Source: https://docs.agno.com/basics/workflows/additional-data\n\nHow to pass additional data to workflows\n\n**When to Use**\nPass metadata, configuration, or contextual information to specific steps without cluttering the main workflow message flow.\n\n* **Separation of Concerns**: Keep workflow logic separate from metadata\n* **Step-Specific Context**: Access additional information in custom functions\n* **Clean Message Flow**: Main message stays focused on content\n* **Flexible Configuration**: Pass user info, priorities, settings, and more\n\n**Access Pattern**\nUse `step_input.additional_data` for dictionary access to all additional data passed to the workflow.\n\n```python  theme={null}\nfrom agno.workflow import Step, Workflow, StepInput, StepOutput\n\ndef custom_content_planning_function(step_input: StepInput) -> StepOutput:\n    \"\"\"Custom function that uses additional_data for enhanced context\"\"\"\n    \n    # Access the main workflow message\n    message = step_input.input\n    previous_content = step_input.previous_step_content\n    \n    # Access additional_data that was passed with the workflow\n    additional_data = step_input.additional_data or {}\n    user_email = additional_data.get(\"user_email\", \"No email provided\")\n    priority = additional_data.get(\"priority\", \"normal\")\n    client_type = additional_data.get(\"client_type\", \"standard\")\n    \n    # Create enhanced planning prompt with context\n    planning_prompt = f\"\"\"\n        STRATEGIC CONTENT PLANNING REQUEST:\n        \n        Core Topic: {message}\n        Research Results: {previous_content[:500] if previous_content else \"No research results\"}\n        \n        Additional Context:\n        - Client Type: {client_type}\n        - Priority Level: {priority}\n        - Contact Email: {user_email}\n        \n        {\"🚨 HIGH PRIORITY - Expedited delivery required\" if priority == \"high\" else \"📝 Standard delivery timeline\"}\n        \n        Please create a detailed, actionable content plan.\n    \"\"\"\n    \n    response = content_planner.run(planning_prompt)\n    \n    enhanced_content = f\"\"\"\n        ## Strategic Content Plan\n        \n        **Planning Topic:** {message}\n        **Client Details:** {client_type} | {priority.upper()} priority | {user_email}\n        \n        **Content Strategy:**\n        {response.content}\n    \"\"\"\n    \n    return StepOutput(content=enhanced_content)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#additional-data-and-metadata",
+  "links": []
+}

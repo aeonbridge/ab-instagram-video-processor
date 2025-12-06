@@ -1,0 +1,8 @@
+{
+  "title": "Docx Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/docx\n\nDocxReader is a reader class that allows you to read data from Docx files.\n\n<Snippet file=\"docx-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#docx-reader",
+  "links": []
+}

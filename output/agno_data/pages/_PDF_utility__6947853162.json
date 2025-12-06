@@ -1,0 +1,8 @@
+{
+  "title": "--- PDF utility ---",
+  "content": "def extract_text_from_pdf(url: str) -> str:\n    try:\n        resp = requests.get(url)\n        resp.raise_for_status()\n        reader = PdfReader(io.BytesIO(resp.content))\n        return \"\\n\".join(page.extract_text() or \"\" for page in reader.pages)\n    except Exception as e:\n        print(f\"Error extracting PDF from {url}: {e}\")\n        return \"\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#----pdf-utility----",
+  "links": []
+}

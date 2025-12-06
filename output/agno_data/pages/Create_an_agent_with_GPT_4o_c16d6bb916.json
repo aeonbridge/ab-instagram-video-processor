@@ -1,0 +1,8 @@
+{
+  "title": "Create an agent with GPT-4o",
+  "content": "agent = Agent(\n    model=LiteLLM(\n        id=\"gpt-5-mini\",  # Model ID to use\n        name=\"LiteLLM\",  # Optional display name\n    ),\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-an-agent-with-gpt-4o",
+  "links": []
+}

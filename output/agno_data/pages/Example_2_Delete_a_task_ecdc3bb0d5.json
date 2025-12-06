@@ -1,0 +1,8 @@
+{
+  "title": "Example 2: Delete a task",
+  "content": "print(\"\\n=== Delete a task ===\")\ntodoist_agent.print_response(\n    \"Delete the todoist task to buy groceries tomorrow at 10am\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-2:-delete-a-task",
+  "links": []
+}

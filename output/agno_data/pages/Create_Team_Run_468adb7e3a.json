@@ -1,0 +1,8 @@
+{
+  "title": "Create Team Run",
+  "content": "Source: https://docs.agno.com/reference-api/schema/teams/create-team-run\n\npost /teams/{team_id}/runs\nExecute a team collaboration with multiple agents working together on a task.\n\n**Features:**\n- Text message input with optional session management\n- Multi-media support: images (PNG, JPEG, WebP), audio (WAV, MP3), video (MP4, WebM, etc.)\n- Document processing: PDF, CSV, DOCX, TXT, JSON\n- Real-time streaming responses with Server-Sent Events (SSE)\n- User and session context preservation\n\n**Streaming Response:**\nWhen `stream=true`, returns SSE events with `event` and `data` fields.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-team-run",
+  "links": []
+}

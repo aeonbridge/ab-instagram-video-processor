@@ -1,0 +1,32 @@
+{
+  "title": "Add from S3 bucket",
+  "content": "asyncio.run(\n    knowledge.add_content_async(\n        name=\"S3 PDF\",\n        remote_content=S3Content(\n            bucket_name=\"agno-public\", key=\"recipes/ThaiRecipes.pdf\"\n        ),\n        metadata={\"remote_content\": \"S3\"},\n    )\n)\n\nagent = Agent(\n    name=\"My Agent\",\n    description=\"Agno 2.0 Agent Implementation\",\n    knowledge=knowledge,\n    search_knowledge=True,\n    debug_mode=True,\n)\n\nagent.print_response(\n    \"What is the best way to make a Thai curry?\",\n    markdown=True,\n)\nbash  theme={null}\n    pip install -U agno sqlalchemy psycopg pgvector boto3\n    bash Mac theme={null}\n      python cookbook/knowledge/basic_operations/06_from_s3.py\n      bash Windows theme={null}\n      python cookbook/knowledge/basic_operations/06_from_s3.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n<Snippet file=\"s3-remote-content-params.mdx\" />",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Configure AWS credentials\">\n    Set up your AWS credentials using one of these methods:\n\n    * AWS CLI: `aws configure`\n    * Environment variables: `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`\n    * IAM roles (if running on AWS infrastructure)\n  </Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Run the example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#add-from-s3-bucket",
+  "links": []
+}

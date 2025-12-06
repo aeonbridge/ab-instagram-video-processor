@@ -1,0 +1,8 @@
+{
+  "title": "Text Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/text\n\nTextReader is a reader class that allows you to read data from text files.\n\n<Snippet file=\"text-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#text-reader",
+  "links": []
+}

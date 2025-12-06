@@ -1,0 +1,8 @@
+{
+  "title": "with optional fields",
+  "content": "optional_agent = Agent(\n    name=\"Hackernews Agent with Optional Fields\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[HackerNewsTools()],\n    input_schema=ResearchTopicWithOptionals,\n)\n\nprint(\"\\n=== Testing TypedDict with Optional Fields ===\")\noptional_agent.print_response(\n    input={\n        \"topic\": \"Blockchain\",\n        \"focus_areas\": [\"DeFi\", \"NFTs\"],\n        \"target_audience\": \"Investors\",\n        # sources_required is optional, omitting it\n        \"priority\": \"high\",\n    }\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#with-optional-fields",
+  "links": []
+}

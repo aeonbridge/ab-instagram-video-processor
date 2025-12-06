@@ -1,0 +1,66 @@
+{
+  "title": "Claude Agent Skills",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/skills\n\nCreate PowerPoint presentations, Excel spreadsheets, Word documents, and analyze PDFs with Claude Agent Skills\n\n[Claude Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) provide capabilities beyond what can get done with prompts alone.\n\nWith **Skills**, Claude will gain access to filesystem-based resources. These will be loaded on demand, removing the need to provide the same guidance multiple times as it happens with prompts.\n\nYou can read more about how **Skills** work on [Anthropic docs](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#how-skills-work).\n\n* **PowerPoint (pptx)**: Create professional presentations with slides, layouts, and formatting\n* **Excel (xlsx)**: Generate spreadsheets with formulas, charts, and data analysis\n* **Word (docx)**: Create and edit documents with rich formatting\n* **PDF (pdf)**: Analyze and extract information from PDF documents\n\nYou can also create custom skills for Claude to use. You can read more about that on [Anthropic docs](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview#custom-skills-examples).\n\nBefore using Claude Agent Skills, ensure you have:\n\n1. **Python 3.8 or higher**\n2. **Anthropic API key** with access to Claude models\n3. **Beta access** to Claude Agent Skills\n\n## File Download Helper Setup\n\n<Warning>\n  **Important:** Files created by Agent Skills are NOT automatically saved to your local filesystem. They are created in a sandboxed execution environment and must be downloaded using the Anthropic Files API.\n\nBefore running any of the examples below, you must create the `file_download_helper.py` file in the same directory as your script.\n</Warning>\n\n### How File Download Works\n\n1. Claude creates the file in the sandbox\n2. Returns a **file ID** in the tool result\n3. You download the file using the helper function below\n\n### Create `file_download_helper.py`\n\nSave the following code as `file_download_helper.py` in your project directory:\n\nOnce you've created this file, you can import it in your scripts:\n\nEnable skills by passing them to the Claude model configuration:\n\nThe framework automatically:\n\n* Configures the required betas (`code-execution-2025-08-25`, `skills-2025-10-02`)\n* Adds the code execution tool\n* Uses the beta API client\n* Sets up the container with skill configurations\n\nYou can enable multiple skills at once:\n\nCreate professional presentations with slides, layouts, and formatting.\n\n### Example: Q4 Business Review Presentation\n\n```python  theme={null}\nimport os\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom anthropic import Anthropic\nfrom file_download_helper import download_skill_files",
+  "code_samples": [
+    {
+      "code": "Once you've created this file, you can import it in your scripts:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Basic Usage\n\nEnable skills by passing them to the Claude model configuration:",
+      "language": "unknown"
+    },
+    {
+      "code": "The framework automatically:\n\n* Configures the required betas (`code-execution-2025-08-25`, `skills-2025-10-02`)\n* Adds the code execution tool\n* Uses the beta API client\n* Sets up the container with skill configurations\n\nYou can enable multiple skills at once:",
+      "language": "unknown"
+    },
+    {
+      "code": "## PowerPoint Skills\n\nCreate professional presentations with slides, layouts, and formatting.\n\n### Example: Q4 Business Review Presentation",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Available Skills",
+      "id": "available-skills"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "File Download Helper Setup",
+      "id": "file-download-helper-setup"
+    },
+    {
+      "level": "h3",
+      "text": "How File Download Works",
+      "id": "how-file-download-works"
+    },
+    {
+      "level": "h3",
+      "text": "Create `file_download_helper.py`",
+      "id": "create-`file_download_helper.py`"
+    },
+    {
+      "level": "h2",
+      "text": "Basic Usage",
+      "id": "basic-usage"
+    },
+    {
+      "level": "h2",
+      "text": "PowerPoint Skills",
+      "id": "powerpoint-skills"
+    },
+    {
+      "level": "h3",
+      "text": "Example: Q4 Business Review Presentation",
+      "id": "example:-q4-business-review-presentation"
+    }
+  ],
+  "url": "llms-txt#claude-agent-skills",
+  "links": []
+}

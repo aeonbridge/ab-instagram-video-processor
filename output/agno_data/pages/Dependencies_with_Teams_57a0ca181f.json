@@ -1,0 +1,14 @@
+{
+  "title": "Dependencies with Teams",
+  "content": "Source: https://docs.agno.com/basics/dependencies/team/overview\n\nLearn how to use dependencies in your teams.\n\n**Dependencies** are a way to inject variables into your Team context. The `dependencies` parameter accepts a dictionary containing functions or static variables that are automatically resolved before the team runs.\n\n<Note>\n  You can use dependencies to inject memories, dynamic few-shot examples, \"retrieved\" documents, etc.\n</Note>\n\n<Check>\n  Dependencies are automatically resolved when the team is run.\n</Check>\n\n<Tip>\n  You can set `dependencies` on `Team` initialization, or pass it to the `run()`, `arun()`, `print_response()` and `aprint_response()` methods. Use `add_dependencies_to_context=True` to automatically add all dependencies to the user message instead of referencing them in instructions.\n</Tip>\n\n<CardGroup cols={2}>\n  <Card title=\"Dependencies Overview\" icon=\"book\" href=\"/basics/dependencies/overview\">\n    Learn the fundamentals of dependency injection\n  </Card>\n\n<Card title=\"Reference Dependencies\" icon=\"link\" href=\"/basics/dependencies/team/usage/reference-dependencies\">\n    Reference dependencies in instructions\n  </Card>\n\n<Card title=\"Access Dependencies in Tool\" icon=\"wrench\" href=\"/basics/dependencies/team/usage/access-dependencies-in-tool\">\n    Use RunContext to access dependencies in tools\n  </Card>\n\n<Card title=\"Team Schema\" icon=\"file-code\" href=\"/reference/teams/team\">\n    View the complete Team API reference\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Learn more",
+      "id": "learn-more"
+    }
+  ],
+  "url": "llms-txt#dependencies-with-teams",
+  "links": []
+}

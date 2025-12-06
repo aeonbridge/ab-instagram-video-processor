@@ -1,0 +1,8 @@
+{
+  "title": "Get embedding with usage information",
+  "content": "embedding, usage = custom_embedder.get_embedding_and_usage(\n    \"Advanced text processing with Jina embeddings and late chunking.\"\n)\nprint(f\"Embedding dimensions: {len(embedding)}\")\nif usage:\n    print(f\"Usage info: {usage}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-embedding-with-usage-information",
+  "links": []
+}

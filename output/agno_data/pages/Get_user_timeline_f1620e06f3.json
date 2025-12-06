@@ -1,0 +1,8 @@
+{
+  "title": "Get user timeline",
+  "content": "agent.print_response(\"Get my timeline\", markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-user-timeline",
+  "links": []
+}

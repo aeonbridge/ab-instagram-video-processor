@@ -1,0 +1,39 @@
+{
+  "title": "pprint(response)",
+  "content": "bash  theme={null}\n    pip install -U agno openai ddgs rich\n    bash Mac/Linux theme={null}\n        export OPENAI_API_KEY=\"your_openai_api_key_here\"\n      bash Windows theme={null}\n        $Env:OPENAI_API_KEY=\"your_openai_api_key_here\"\n      bash  theme={null}\n    touch response_as_variable.py\n    bash Mac theme={null}\n      python response_as_variable.py\n      bash Windows theme={null}\n      python response_as_variable.py\n      ```\n    </CodeGroup>\n  </Step>\n\n<Step title=\"Find All Cookbooks\">\n    Explore all the available cookbooks in the Agno repository. Click the link below to view the code on GitHub:\n\n<Link href=\"https://github.com/agno-agi/agno/tree/main/cookbook/agents/input_and_output\" target=\"_blank\">\n      Agno Cookbooks on GitHub\n    </Link>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Create a Python file\">\n    Create a Python file and add the above code.",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#pprint(response)",
+  "links": []
+}

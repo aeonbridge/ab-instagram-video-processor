@@ -1,0 +1,8 @@
+{
+  "title": "Reply to a post",
+  "content": "agent.print_response(\n    \"Can you reply to this [post ID] post as a general message as to how great this project is: https://x.com/AgnoAgi\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#reply-to-a-post",
+  "links": []
+}

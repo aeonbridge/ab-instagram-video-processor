@@ -1,0 +1,31 @@
+{
+  "title": "Create AgentOS with Slack interface for the workflow",
+  "content": "agent_os = AgentOS(\n    workflows=[content_workflow],\n    interfaces=[Slack(workflow=content_workflow)],\n)\n\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    agent_os.serve(app=\"research_workflow:app\", reload=True)\nbash  theme={null}\n    export SLACK_TOKEN=xoxb-your-bot-user-token\n    export SLACK_SIGNING_SECRET=your-signing-secret\n    export OPENAI_API_KEY=your_openai_api_key\n    bash  theme={null}\n    pip install -U agno ddgs psycopg\n    bash Mac theme={null}\n      python research_workflow.py\n      bash Windows theme={null}\n      python research_workflow.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-agentos-with-slack-interface-for-the-workflow",
+  "links": []
+}

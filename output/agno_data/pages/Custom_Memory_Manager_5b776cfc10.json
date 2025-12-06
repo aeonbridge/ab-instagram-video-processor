@@ -1,0 +1,14 @@
+{
+  "title": "Custom Memory Manager",
+  "content": "Source: https://docs.agno.com/basics/memory/agent/usage/custom-memory-manager\n\nThis example shows how you can configure the Memory Manager.\n\nWe also set custom system prompts for the memory manager. You can either override the entire system prompt or add additional instructions which is added to the end of the system prompt.\n\n```python custom_memory_manager.py theme={null}\nfrom agno.agent.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.memory import MemoryManager\nfrom agno.models.openai import OpenAIChat\nfrom rich.pretty import pprint\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\ndb = PostgresDb(db_url=db_url)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#custom-memory-manager",
+  "links": []
+}

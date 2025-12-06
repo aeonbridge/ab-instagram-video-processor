@@ -1,0 +1,14 @@
+{
+  "title": "Set Client",
+  "content": "Source: https://docs.agno.com/integrations/models/local/ollama/usage/set-client\n\n```python cookbook/models/ollama/set_client.py theme={null}\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.ollama import Ollama\nfrom ollama import Client as OllamaClient\n\nagent = Agent(\n    model=Ollama(id=\"llama3.1:8b\", client=OllamaClient()),\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#set-client",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Initialize AsyncSqliteDb",
+  "content": "db = AsyncSqliteDb(db_file=\"agent_storage.db\")\n\nagent = Agent(\n    db=db,\n    tools=[DuckDuckGoTools()],\n    add_history_to_context=True,\n    add_datetime_to_context=True,\n)\n\nasyncio.run(agent.aprint_response(\"How many people live in Canada?\"))\nasyncio.run(agent.aprint_response(\"What is their national anthem called?\"))\n\n<Snippet file=\"db-async-sqlite-params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/db/sqlite/async_sqlite/async_sqlite_for_agent.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#initialize-asyncsqlitedb",
+  "links": []
+}

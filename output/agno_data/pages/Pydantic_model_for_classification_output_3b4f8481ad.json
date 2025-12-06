@@ -1,0 +1,8 @@
+{
+  "title": "Pydantic model for classification output",
+  "content": "class ClassificationResult(BaseModel):\n    query: str\n    tag: str\n    message: str",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#pydantic-model-for-classification-output",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Redis Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/redis/overview\n\nLearn how to use Redis as a vector database for your Knowledge Base\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.2.7\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.2.7\">v2.2.7</Tooltip>\n</Badge>\n\nYou can use Redis as a vector database with Agno.\n\nFor connecting to a remote Redis instance, pass your Redis connection string to the `redis_url` parameter and the index name to the `index_name` parameter of the `RedisDB` constructor.\n\nFor a local docker setup, you can use the following command:\n\n```python agent_with_knowledge.py theme={null}\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.redis import RedisDB\nfrom agno.vectordb.search import SearchType",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#redis-vector-database",
+  "links": []
+}

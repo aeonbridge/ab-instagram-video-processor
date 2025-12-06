@@ -1,0 +1,8 @@
+{
+  "title": "Create Knowledge Instance with Weaviate",
+  "content": "knowledge = Knowledge(\n    name=\"Basic SDK Knowledge Base\",\n    description=\"Agno 2.0 Knowledge Implementation with Weaviate\",\n    vector_db=vector_db,\n)\n\nknowledge.add_content(\n    name=\"Recipes\",\n    url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\",\n    metadata={\"doc_type\": \"recipe_book\"},\n    skip_if_exists=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-knowledge-instance-with-weaviate",
+  "links": []
+}

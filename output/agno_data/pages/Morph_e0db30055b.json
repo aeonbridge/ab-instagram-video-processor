@@ -1,0 +1,29 @@
+{
+  "title": "Morph",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/models/morph\n\nMorphTools provides advanced code editing capabilities using Morph's Fast Apply API for intelligent code modifications.\n\nThe following agent can perform intelligent code editing using Morph:\n\n| Parameter          | Type            | Default                         | Description                                     |\n| ------------------ | --------------- | ------------------------------- | ----------------------------------------------- |\n| `api_key`          | `Optional[str]` | `None`                          | Morph API key. Uses MORPH\\_API\\_KEY if not set. |\n| `base_url`         | `str`           | `\"https://api.morphllm.com/v1\"` | Morph API base URL.                             |\n| `model`            | `str`           | `\"morph-v3-large\"`              | Morph model to use for code editing.            |\n| `instructions`     | `Optional[str]` | `None`                          | Custom instructions for code editing behavior.  |\n| `add_instructions` | `bool`          | `True`                          | Whether to add instructions to the agent.       |\n\n| Function    | Description                                                        |\n| ----------- | ------------------------------------------------------------------ |\n| `edit_file` | Apply intelligent code modifications using Morph's Fast Apply API. |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/models/morph.py)\n* [Morph API Documentation](https://docs.morphllm.com/)\n* [Fast Apply API Reference](https://api.morphllm.com/docs)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#morph",
+  "links": []
+}

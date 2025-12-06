@@ -1,0 +1,8 @@
+{
+  "title": "Should raise an error - missing required field",
+  "content": "try:\n    hackernews_agent.print_response(\n        input={\n            \"topic\": \"AI\",\n            # Missing required fields: focus_areas, target_audience, sources_required\n        }\n    )\nexcept ValueError as e:\n    print(\"\\n=== Expected Error for Missing Fields ===\")\n    print(f\"Error: {e}\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#should-raise-an-error---missing-required-field",
+  "links": []
+}

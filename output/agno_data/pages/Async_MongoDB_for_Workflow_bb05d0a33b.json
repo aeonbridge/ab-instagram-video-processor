@@ -1,0 +1,24 @@
+{
+  "title": "Async MongoDB for Workflow",
+  "content": "Source: https://docs.agno.com/integrations/database/async-mongo/usage/async-mongodb-for-workflow\n\nAgno supports using MongoDB asynchronously as a storage backend for Workflows, with the `AsyncMongoDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **MongoDB** on port **27017** using:\n\n```python async_mongodb_for_workflow.py theme={null}\n\"\"\"\nRun `pip install agno openai motor pymongo` to install dependencies.\n\"\"\"\nfrom agno.agent import Agent\nfrom agno.db.mongo import AsyncMongoDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow\n\ndb_url = \"mongodb://localhost:27017\"\n\ndb = AsyncMongoDb(db_url=db_url)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run MongoDB",
+      "id": "run-mongodb"
+    }
+  ],
+  "url": "llms-txt#async-mongodb-for-workflow",
+  "links": []
+}

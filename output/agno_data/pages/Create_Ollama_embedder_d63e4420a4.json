@@ -1,0 +1,8 @@
+{
+  "title": "Create Ollama embedder",
+  "content": "embedder = OllamaEmbedder(id=\"nomic-embed-text\", dimensions=768)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-ollama-embedder",
+  "links": []
+}

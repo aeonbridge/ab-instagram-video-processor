@@ -1,0 +1,34 @@
+{
+  "title": "Spotify",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/spotify\n\n**SpotifyTools** enable an Agent to access Spotify API to search for songs.\n\nThe following example requires the `spotify` library and an API key from [Spotify](https://developer.spotify.com/).\n\nThe only external library needed for spotify is the `httpx`. Which is already a dependency of Agno.\n\nThe following agent will search for songs using Spotify API.\n\n| Parameter        | Type  | Default | Description                               |\n| ---------------- | ----- | ------- | ----------------------------------------- |\n| `access_token`   | `str` | -       | Access token for authentication purposes. |\n| `default_market` | `str` | `\"US\"`  | Default market for the search.            |\n| `timeout`        | `int` | `30`    | Timeout for the search.                   |\n\n| Function                      | Description                                         |\n| ----------------------------- | --------------------------------------------------- |\n| `search_tracks`               | Search for tracks on Spotify                        |\n| `search_playlists`            | Search for playlists on Spotify                     |\n| `search_artists`              | Search for artists on Spotify                       |\n| `search_albums`               | Search for albums on Spotify                        |\n| `get_user_playlists`          | Get playlists for a specific user                   |\n| `get_track_recommendations`   | Get track recommendations based on seed data        |\n| `get_artist_top_tracks`       | Get top tracks for a specific artist                |\n| `get_album_tracks`            | Get tracks from a specific album                    |\n| `get_my_top_tracks`           | Get current user's top tracks                       |\n| `get_my_top_artists`          | Get current user's top artists                      |\n| `create_playlist`             | Create a new playlist for the user                  |\n| `add_tracks_to_playlist`      | Add tracks to an existing playlist                  |\n| `get_playlist`                | Get details of a specific playlist                  |\n| `update_playlist_details`     | Update playlist name, description, or other details |\n| `remove_tracks_from_playlist` | Remove tracks from an existing playlist             |\n| `get_current_user`            | Get current user's profile information              |\n| `play_track`                  | Play a specific track (requires Spotify Premium)    |\n| `get_currently_playing`       | Get information about currently playing track       |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/spotify.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/spotify_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#spotify",
+  "links": []
+}

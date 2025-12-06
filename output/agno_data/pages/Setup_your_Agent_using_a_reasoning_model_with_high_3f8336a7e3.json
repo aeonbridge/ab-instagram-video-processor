@@ -1,0 +1,8 @@
+{
+  "title": "Setup your Agent using a reasoning model with high reasoning effort",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\", reasoning_effort=\"high\"),\n    tools=[DuckDuckGoTools()],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-your-agent-using-a-reasoning-model-with-high-reasoning-effort",
+  "links": []
+}

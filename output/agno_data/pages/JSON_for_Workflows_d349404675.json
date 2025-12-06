@@ -1,0 +1,14 @@
+{
+  "title": "JSON for Workflows",
+  "content": "Source: https://docs.agno.com/integrations/database/json/usage/json-for-workflow\n\nAgno supports using local JSON files as a storage backend for Workflows using the `JsonDb` class.\n\n```python json_for_workflows.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.json import JsonDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#json-for-workflows",
+  "links": []
+}

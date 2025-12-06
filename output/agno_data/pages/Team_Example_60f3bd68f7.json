@@ -1,0 +1,14 @@
+{
+  "title": "Team Example",
+  "content": "Create a list of tools, and assign them to your Team with `set_tools`\n\n<Tip>\n  * The `add_tool` method allows you to dynamically extend an Agent's or a Team's capabilities. This is particularly useful when you want to add tools based on user input or other runtime conditions.\n  * The `set_tool` method allows you to override an Agent's or a Team's capabilities. Note that this will remove any existing tools previously assigned to your Agent or Team.\n</Tip>\n\n## Developer Resources\n\n* [Creating your own tools](/basics/tools/creating-tools/overview) - Learn how to create custom tools\n* [Available Toolkits](/integrations/toolkits/overview) - Explore pre-built toolkits\n* [Selecting Tools](/basics/tools/selecting-tools) - Learn how to filter tools in toolkits",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#team-example",
+  "links": []
+}

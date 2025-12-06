@@ -1,0 +1,14 @@
+{
+  "title": "Async SQLite for Workflow",
+  "content": "Source: https://docs.agno.com/integrations/database/async-sqlite/usage/async-sqlite-for-workflow\n\nAgno supports using SQLite asynchronously as a storage backend for Workflows, with the `AsyncSqliteDb` class.\n\n```python async_sqlite_for_workflow.py theme={null}\n\"\"\"\nRun: `pip install openai ddgs sqlalchemy aiosqlite` to install dependencies\n\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.sqlite import AsyncSqliteDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#async-sqlite-for-workflow",
+  "links": []
+}

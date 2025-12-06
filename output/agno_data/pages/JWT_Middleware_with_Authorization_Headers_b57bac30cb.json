@@ -1,0 +1,14 @@
+{
+  "title": "JWT Middleware with Authorization Headers",
+  "content": "Source: https://docs.agno.com/agent-os/usage/middleware/jwt-middleware\n\nComplete AgentOS setup with JWT middleware for authentication and parameter injection using Authorization headers\n\nThis example demonstrates how to use JWT middleware with AgentOS for authentication and automatic parameter injection using Authorization headers.\n\n```python jwt_middleware.py theme={null}\nfrom datetime import UTC, datetime, timedelta\n\nimport jwt\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.os.middleware import JWTMiddleware",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#jwt-middleware-with-authorization-headers",
+  "links": []
+}

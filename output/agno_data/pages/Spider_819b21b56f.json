@@ -1,0 +1,39 @@
+{
+  "title": "Spider",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/spider\n\n**SpiderTools** is an open source web Scraper & Crawler that returns LLM-ready data. To start using Spider, you need an API key from the [Spider dashboard](https://spider.cloud).\n\nThe following example requires the `spider-client` library.\n\nThe following agent will run a search query to get the latest news in USA and scrape the first search result. The agent will return the scraped data in markdown format.\n\n| Parameter         | Type             | Default | Description                                             |\n| ----------------- | ---------------- | ------- | ------------------------------------------------------- |\n| `max_results`     | `Optional[int]`  | `None`  | Default maximum number of results.                      |\n| `url`             | `Optional[str]`  | `None`  | Default URL for operations.                             |\n| `optional_params` | `Optional[dict]` | `None`  | Additional parameters for operations.                   |\n| `enable_search`   | `bool`           | `True`  | Enable web search functionality.                        |\n| `enable_scrape`   | `bool`           | `True`  | Enable web scraping functionality.                      |\n| `enable_crawl`    | `bool`           | `True`  | Enable web crawling functionality.                      |\n| `all`             | `bool`           | `False` | Enable all tools. Overrides individual flags when True. |\n\n| Function | Description                                                                                                                                                                                        |\n| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `search` | Searches the web for the given query. Parameters include `query` (str) for the search query and `max_results` (int, default=5) for maximum results. Returns search results in JSON format.         |\n| `scrape` | Scrapes the content of a webpage. Parameters include `url` (str) for the URL of the webpage to scrape. Returns markdown of the webpage.                                                            |\n| `crawl`  | Crawls the web starting from a URL. Parameters include `url` (str) for the URL to crawl and `limit` (Optional\\[int], default=10) for maximum pages to crawl. Returns crawl results in JSON format. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/spider.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/spider_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will run a search query to get the latest news in USA and scrape the first search result. The agent will return the scraped data in markdown format.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#spider",
+  "links": []
+}

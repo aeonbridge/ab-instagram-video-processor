@@ -1,0 +1,14 @@
+{
+  "title": "Firestore for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/firestore/usage/firestore-for-agent\n\nAgno supports using Firestore as a storage backend for Agents using the `FirestoreDb` class.\n\nYou need to provide a `project_id` parameter to the `FirestoreDb` class. Firestore will connect automatically using your Google Cloud credentials.\n\n```python firestore_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.firestore import FirestoreDb\nfrom agno.tools.duckduckgo import DuckDuckGoTools\n\nPROJECT_ID = \"agno-os-test\"  # Use your project ID here",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#firestore-for-agent",
+  "links": []
+}

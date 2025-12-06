@@ -1,0 +1,33 @@
+{
+  "title": "Arize",
+  "content": "Source: https://docs.agno.com/integrations/observability/arize\n\nIntegrate Agno with Arize Phoenix to send traces and gain insights into your agent's performance.\n\n## Integrating Agno with Arize Phoenix\n\n[Arize Phoenix](https://phoenix.arize.com/) is a powerful platform for monitoring and analyzing AI models. By integrating Agno with Arize Phoenix, you can leverage OpenInference to send traces and gain insights into your agent's performance.\n\n1. **Install Dependencies**\n\nEnsure you have the necessary packages installed:\n\n2. **Setup Arize Phoenix Account**\n\n* Create an account at [Arize Phoenix](https://phoenix.arize.com/).\n   * Obtain your API key from the Arize Phoenix dashboard.\n\n3. **Set Environment Variables**\n\nConfigure your environment with the Arize Phoenix API key:\n\n## Sending Traces to Arize Phoenix\n\n* ### Example: Using Arize Phoenix with OpenInference\n\nThis example demonstrates how to instrument your Agno agent with OpenInference and send traces to Arize Phoenix.\n\n```python  theme={null}\nimport asyncio\nimport os\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.yfinance import YFinanceTools\nfrom phoenix.otel import register",
+  "code_samples": [
+    {
+      "code": "2. **Setup Arize Phoenix Account**\n\n   * Create an account at [Arize Phoenix](https://phoenix.arize.com/).\n   * Obtain your API key from the Arize Phoenix dashboard.\n\n3. **Set Environment Variables**\n\n   Configure your environment with the Arize Phoenix API key:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Sending Traces to Arize Phoenix\n\n* ### Example: Using Arize Phoenix with OpenInference\n\nThis example demonstrates how to instrument your Agno agent with OpenInference and send traces to Arize Phoenix.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Integrating Agno with Arize Phoenix",
+      "id": "integrating-agno-with-arize-phoenix"
+    },
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Sending Traces to Arize Phoenix",
+      "id": "sending-traces-to-arize-phoenix"
+    }
+  ],
+  "url": "llms-txt#arize",
+  "links": []
+}

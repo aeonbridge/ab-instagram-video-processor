@@ -1,0 +1,14 @@
+{
+  "title": "ag infra config",
+  "content": "Source: https://docs.agno.com/reference/agno-infra/cli/ws/config\n\nPrints active infra config\n\n<ResponseField name=\"print_debug_log\" type=\"bool\">\n  Print debug logs. `--debug` `-d`\n</ResponseField>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#ag-infra-config",
+  "links": []
+}

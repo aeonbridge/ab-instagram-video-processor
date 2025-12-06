@@ -1,0 +1,19 @@
+{
+  "title": "Production Best Practices",
+  "content": "Source: https://docs.agno.com/basics/memory/best-practices\n\nAvoid common pitfalls, optimize costs, and ensure reliable memory behavior in production.\n\nMemory is powerful, but without careful configuration, it can lead to unexpected token consumption, behavioral issues, and high costs. This guide shows you what to watch out for and how to optimize your memory usage for production.\n\n* **Default to automatic memory** (`enable_user_memories=True`) unless you have a specific reason for agentic control\n* **Always provide user\\_id**, don't rely on the default \"default\" user\n* **Use cheaper models** for memory operations when using agentic memory\n* **Implement pruning** for long-running applications\n* **Monitor token usage** in production to catch memory-related cost spikes\n* **Test with realistic data**: 100+ memories behave very differently than 5 memories\n\n## The Agentic Memory Token Trap\n\n**The Problem:** When you use `enable_agentic_memory=True`, every memory operation triggers a **separate, nested LLM call**. This architecture can cause token usage to explode, especially as memories accumulate.\n\nHere's what happens under the hood:\n\n1. User sends a message → Main LLM call processes it\n2. Agent decides to update memory → Calls `update_user_memory` tool\n3. **Nested LLM call fires** with:\n   * Detailed system prompt (\\~50 lines)\n   * ALL existing user memories loaded into context\n   * Memory management instructions and tools\n4. Memory LLM makes tool calls (add, update, delete)\n5. Control returns to main conversation\n\n**Real-world impact:**\n\n```python  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Quick Reference",
+      "id": "quick-reference"
+    },
+    {
+      "level": "h2",
+      "text": "The Agentic Memory Token Trap",
+      "id": "the-agentic-memory-token-trap"
+    }
+  ],
+  "url": "llms-txt#production-best-practices",
+  "links": []
+}

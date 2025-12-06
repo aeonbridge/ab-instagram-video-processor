@@ -1,0 +1,29 @@
+{
+  "title": "Desi Vocal",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/desi-vocal\n\nDesiVocalTools provides text-to-speech capabilities using Indian voices through the Desi Vocal API.\n\nThe following agent can convert text to speech using Indian voices:\n\n| Parameter               | Type            | Default                                  | Description                                                |\n| ----------------------- | --------------- | ---------------------------------------- | ---------------------------------------------------------- |\n| `api_key`               | `Optional[str]` | `None`                                   | Desi Vocal API key. Uses DESI\\_VOCAL\\_API\\_KEY if not set. |\n| `voice_id`              | `Optional[str]` | `\"f27d74e5-ea71-4697-be3e-f04bbd80c1a8\"` | Default voice ID to use for text-to-speech.                |\n| `enable_get_voices`     | `bool`          | `True`                                   | Enable voice listing functionality.                        |\n| `enable_text_to_speech` | `bool`          | `True`                                   | Enable text-to-speech conversion functionality.            |\n\n| Function         | Description                                                   |\n| ---------------- | ------------------------------------------------------------- |\n| `get_voices`     | Retrieve list of available voices with their IDs and details. |\n| `text_to_speech` | Convert text to speech using specified or default voice.      |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/desi_vocal.py)\n* [Desi Vocal API Documentation](https://desivocal.com/docs)\n* [Indian TTS Best Practices](https://desivocal.com/best-practices)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#desi-vocal",
+  "links": []
+}

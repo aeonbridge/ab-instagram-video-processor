@@ -1,0 +1,19 @@
+{
+  "title": "A2A",
+  "content": "Source: https://docs.agno.com/agent-os/interfaces/a2a/introduction\n\nExpose Agno agents via the A2A protocol\n\n<Badge icon=\"code-branch\" color=\"orange\">\n  <Tooltip tip=\"Introduced in v2.1.2\" cta=\"View release notes\" href=\"https://github.com/agno-agi/agno/releases/tag/v2.1.2\">v2.1.2</Tooltip>\n</Badge>\n\nGoogle's [Agent-to-Agent Protocol (A2A)](https://a2a-protocol.org/latest/topics/what-is-a2a/) provides a standard way for agents to communicate with each other.\n\nAgno integrates with A2A, enabling Agno agents and teams to be exposed in an A2A-compatible format.\n\nThe `A2A` interface works with the [AgentOS](/agent-os/introduction) runtime to provide this functionality.\n\nSet `a2a_interface=True` when creating an `AgentOS` instance:\n\nBy default, all agents, teams, and workflows in the AgentOS are exposed via A2A.\n\nSpecific agents, teams, and workflows can be exposed by initializing the interface explicitly:\n\n```python a2a-interface-initialization.py theme={null}\nfrom agno.agent import Agent\nfrom agno.os import AgentOS\nfrom agno.os.interfaces.a2a import A2A\n\nagent = Agent(name=\"My Agno Agent\")",
+  "code_samples": [
+    {
+      "code": "By default, all agents, teams, and workflows in the AgentOS are exposed via A2A.\n\nSpecific agents, teams, and workflows can be exposed by initializing the interface explicitly:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    }
+  ],
+  "url": "llms-txt#a2a",
+  "links": []
+}

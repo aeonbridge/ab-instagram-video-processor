@@ -1,0 +1,19 @@
+{
+  "title": "Human-in-the-Loop in Agents",
+  "content": "Source: https://docs.agno.com/basics/hitl/overview\n\nLearn how to control the flow of an agent's execution in Agno with human oversight and input.\n\nHuman-in-the-Loop (HITL) in Agno enables you to implement patterns where human oversight and input are required during agent execution. This is crucial for:\n\n* Validating sensitive operations\n* Reviewing tool calls before execution\n* Gathering user input for decision-making\n* Managing external tool execution\n\n## Types of Human-in-the-Loop Flows\n\nAgno supports four main types of human-in-the-loop flows:\n\n1. **[User Confirmation](/basics/hitl/user-confirmation)**: Require explicit user approval before executing a tool\n2. **[User Input](/basics/hitl/user-input)**: Gather specific information from users during execution\n3. **[Dynamic User Input](/basics/hitl/dynamic-user-input)**: Have the agent collect user input as it needs it\n4. **[External Tool Execution](/basics/hitl/external-execution)**: Execute tools outside of the agent's control\n\n<Note>\n  Currently Agno only supports Human-in flows for `Agent`. `Team` and `Workflow` will be supported in the near future!\n</Note>\n\n## Resolving Human-in-the-Loop Requirements\n\nDuring Human-in-the-Loop flows, the agent run will pause to wait for the user to resolve whatever requirement is needed.\n\nThis is how you can interact with the requirements in your code:\n\n```python  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Types of Human-in-the-Loop Flows",
+      "id": "types-of-human-in-the-loop-flows"
+    },
+    {
+      "level": "h2",
+      "text": "Resolving Human-in-the-Loop Requirements",
+      "id": "resolving-human-in-the-loop-requirements"
+    }
+  ],
+  "url": "llms-txt#human-in-the-loop-in-agents",
+  "links": []
+}

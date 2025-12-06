@@ -1,0 +1,14 @@
+{
+  "title": "Scenario Testing",
+  "content": "Source: https://docs.agno.com/integrations/testing/usage/basic\n\nThis example demonstrates how to use the [Scenario](https://github.com/langwatch/scenario) framework for agentic simulation-based testing. Scenario enables you to simulate conversations between agents, user simulators, and judges, making it easy to test and evaluate agent behaviors in a controlled environment.\n\n> **Tip:** Want to see a more advanced scenario? Check out the [Customer support scenario example](https://github.com/langwatch/create-agent-app/tree/main/agno_example) for a more complex agent, including tool calls and advanced scenario features.\n\n```python cookbook/agent_basics/other/scenario_testing.py theme={null}\nimport pytest\nimport scenario\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#scenario-testing",
+  "links": []
+}

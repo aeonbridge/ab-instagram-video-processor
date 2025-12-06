@@ -1,0 +1,19 @@
+{
+  "title": "Using Podman",
+  "content": "podman exec db psql -U toolbox_user -d toolbox_db -c \"SELECT COUNT(*) FROM hotels;\"\npython  theme={null}\nimport asyncio\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.mcp_toolbox import MCPToolbox\n\nasync def main():\n    # Connect to the running MCP Toolbox server and filter to hotel tools only\n    async with MCPToolbox(\n        url=\"http://127.0.0.1:5001\",\n        toolsets=[\"hotel-management\"]  # Only load hotel search tools\n    ) as toolbox:\n        agent = Agent(\n            model=OpenAIChat(),\n            tools=[toolbox],\n            instructions=\"You help users find hotels. Always mention hotel ID, name, location, and price tier.\"\n        )\n        \n        # Ask the agent to find hotels\n        await agent.aprint_response(\"Find luxury hotels in Zurich\")",
+  "code_samples": [
+    {
+      "code": "## Basic Example\n\nHere's the simplest way to use MCPToolbox (after running the Quick Start setup):",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Basic Example",
+      "id": "basic-example"
+    }
+  ],
+  "url": "llms-txt#using-podman",
+  "links": []
+}

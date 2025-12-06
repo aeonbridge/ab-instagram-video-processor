@@ -1,0 +1,19 @@
+{
+  "title": "Named steps for better tracking",
+  "content": "workflow = Workflow(\n    name=\"Content Creation Pipeline\",\n    steps=[\n        Step(name=\"Research Phase\", team=researcher),\n        Step(name=\"Analysis Phase\", executor=custom_function),\n        Step(name=\"Writing Phase\", agent=writer),\n    ]\n)\n\nworkflow.print_response(\n    \"AI trends in 2024\",\n    markdown=True,\n)\n```\n\n## Developer Resources\n\n* [Sequence of Steps](/basics/workflows/usage/sequence-of-steps)\n* [Step with a Custom Function](/basics/workflows/usage/step-with-function)\n\nFor complete API documentation, see [Step Reference](/reference/workflows/step).",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    },
+    {
+      "level": "h2",
+      "text": "Reference",
+      "id": "reference"
+    }
+  ],
+  "url": "llms-txt#named-steps-for-better-tracking",
+  "links": []
+}

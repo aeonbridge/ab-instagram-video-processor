@@ -1,0 +1,28 @@
+{
+  "title": "Eleven Labs",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/eleven-labs\n\n**ElevenLabsTools** enable an Agent to perform audio generation tasks using [ElevenLabs](https://elevenlabs.io/docs/product/introduction)\n\nYou need to install the `elevenlabs` library and an API key which can be obtained from [Eleven Labs](https://elevenlabs.io/)\n\nSet the `ELEVEN_LABS_API_KEY` environment variable.\n\nThe following agent will use Eleven Labs to generate audio based on a user prompt.\n\n```python cookbook/tools/eleven_labs_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.eleven_labs import ElevenLabsTools",
+  "code_samples": [
+    {
+      "code": "Set the `ELEVEN_LABS_API_KEY` environment variable.",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will use Eleven Labs to generate audio based on a user prompt.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#eleven-labs",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Final Synthesizer Agent - Specialized in optimal synthesis",
+  "content": "final_synthesizer = Agent(\n    name=\"Final Synthesizer\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Synthesize reranked results into optimal comprehensive responses\",\n    instructions=[\n        \"Synthesize information from all team members into optimal responses.\",\n        \"Leverage the reranked and analyzed results for maximum quality.\",\n        \"Create responses that demonstrate the benefits of advanced reranking.\",\n        \"Ensure optimal information organization and presentation.\",\n        \"Include confidence levels and source quality indicators.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#final-synthesizer-agent---specialized-in-optimal-synthesis",
+  "links": []
+}

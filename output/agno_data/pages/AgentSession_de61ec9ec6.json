@@ -1,0 +1,44 @@
+{
+  "title": "AgentSession",
+  "content": "Source: https://docs.agno.com/reference/agents/session\n\n## AgentSession Attributes\n\n| Parameter      | Type                        | Default  | Description                                                        |\n| -------------- | --------------------------- | -------- | ------------------------------------------------------------------ |\n| `session_id`   | `str`                       | Required | Session UUID                                                       |\n| `agent_id`     | `Optional[str]`             | `None`   | ID of the agent that this session is associated with               |\n| `team_id`      | `Optional[str]`             | `None`   | ID of the team that this session is associated with                |\n| `user_id`      | `Optional[str]`             | `None`   | ID of the user interacting with this agent                         |\n| `workflow_id`  | `Optional[str]`             | `None`   | ID of the workflow that this session is associated with            |\n| `session_data` | `Optional[Dict[str, Any]]`  | `None`   | Session Data: session\\_name, session\\_state, images, videos, audio |\n| `metadata`     | `Optional[Dict[str, Any]]`  | `None`   | Metadata stored with this agent                                    |\n| `agent_data`   | `Optional[Dict[str, Any]]`  | `None`   | Agent Data: agent\\_id, name and model                              |\n| `runs`         | `Optional[List[RunOutput]]` | `None`   | List of all runs in the session                                    |\n| `summary`      | `Optional[SessionSummary]`  | `None`   | Summary of the session                                             |\n| `created_at`   | `Optional[int]`             | `None`   | The unix timestamp when this session was created                   |\n| `updated_at`   | `Optional[int]`             | `None`   | The unix timestamp when this session was last updated              |\n\n## AgentSession Methods\n\n### `upsert_run(run: RunOutput)`\n\nAdds a RunOutput to the runs list. If a run with the same `run_id` already exists, it updates the existing run.\n\n### `get_run(run_id: str) -> Optional[RunOutput]`\n\nRetrieves a specific run by its `run_id`.\n\n### `get_messages(...) -> List[Message]`\n\nReturns the messages belonging to the session that fit the given criteria.\n\n* `agent_id` (Optional\\[str]): The id of the agent to get the messages from\n* `team_id` (Optional\\[str]): The id of the team to get the messages from\n* `last_n_runs` (Optional\\[int]): The number of runs to return messages from, counting from the latest. Defaults to all runs\n* `limit` (Optional\\[int]): The number of messages to return, counting from the latest. Defaults to all messages\n* `skip_roles` (Optional\\[List\\[str]]): Skip messages with these roles\n* `skip_statuses` (Optional\\[List\\[RunStatus]]): Skip messages with these statuses\n* `skip_history_messages` (bool): Skip messages that were tagged as history in previous runs. Defaults to True\n\n* `List[Message]`: The messages for the session\n\n### `get_session_summary() -> Optional[SessionSummary]`\n\nGet the session summary for the session\n\n### `get_chat_history(...) -> List[Message]`\n\nGet the chat history (user and assistant messages) for the session. Use `get_messages()` for more filtering options.\n\n* `last_n_runs` (Optional\\[int]): Number of recent runs to include. If None, all runs will be considered\n\n* `List[Message]`: The chat history for the session",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "AgentSession Attributes",
+      "id": "agentsession-attributes"
+    },
+    {
+      "level": "h2",
+      "text": "AgentSession Methods",
+      "id": "agentsession-methods"
+    },
+    {
+      "level": "h3",
+      "text": "`upsert_run(run: RunOutput)`",
+      "id": "`upsert_run(run:-runoutput)`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_run(run_id: str) -> Optional[RunOutput]`",
+      "id": "`get_run(run_id:-str)-->-optional[runoutput]`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_messages(...) -> List[Message]`",
+      "id": "`get_messages(...)-->-list[message]`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_session_summary() -> Optional[SessionSummary]`",
+      "id": "`get_session_summary()-->-optional[sessionsummary]`"
+    },
+    {
+      "level": "h3",
+      "text": "`get_chat_history(...) -> List[Message]`",
+      "id": "`get_chat_history(...)-->-list[message]`"
+    }
+  ],
+  "url": "llms-txt#agentsession",
+  "links": []
+}

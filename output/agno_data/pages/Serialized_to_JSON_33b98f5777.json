@@ -1,0 +1,32 @@
+{
+  "title": "Serialized to JSON",
+  "content": "{\n  \"op\": \"AND\",\n  \"conditions\": [\n    {\"op\": \"EQ\", \"key\": \"status\", \"value\": \"published\"},\n    {\"op\": \"GT\", \"key\": \"views\", \"value\": 1000}\n  ]\n}\npython Python Client theme={null}\n  import requests\n  import json\n\n# Simple dict filter\n  filter_dict = {\"docs\": \"agno\", \"status\": \"published\"}\n\n# Serialize to JSON\n  filter_json = json.dumps(filter_dict)\n\n# Send request\n  response = requests.post(\n      \"http://localhost:7777/agents/agno-knowledge-agent/runs\",\n      data={\n          \"message\": \"What are agno's key features?\",\n          \"stream\": \"false\",\n          \"knowledge_filters\": filter_json,\n      }\n  )\n\nresult = response.json()\n  bash cURL theme={null}\n  curl -X 'POST' \\\n    'http://localhost:7777/agents/agno-knowledge-agent/runs' \\\n    -H 'accept: application/json' \\\n    -H 'Content-Type: multipart/form-data' \\\n    -F 'message=What are agno'\\''s key features?' \\\n    -F 'stream=false' \\\n    -F 'session_id=' \\\n    -F 'user_id=' \\\n    -F 'knowledge_filters={\"docs\": \"agno\"}'\n  python  theme={null}",
+  "code_samples": [
+    {
+      "code": "<Note>\n  The presence of the `\"op\"` key tells the API to deserialize the filter as a filter expression. Regular dict filters (without `\"op\"`) continue to work for backward compatibility.\n</Note>\n\n## Using Filters Through the API\n\nIn all examples below, you pass the serialized JSON string via the `knowledge_filters` field when creating a run.\n\n### Dictionary Filters (Simple Approach)\n\nFor basic filtering, send a JSON object with key-value pairs. All conditions are combined with AND logic:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n**More Dict Filter Examples:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using Filters Through the API",
+      "id": "using-filters-through-the-api"
+    },
+    {
+      "level": "h3",
+      "text": "Dictionary Filters (Simple Approach)",
+      "id": "dictionary-filters-(simple-approach)"
+    }
+  ],
+  "url": "llms-txt#serialized-to-json",
+  "links": []
+}

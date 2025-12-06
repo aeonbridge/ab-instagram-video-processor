@@ -1,0 +1,14 @@
+{
+  "title": "LiteLLM",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/litellm/overview\n\nIntegrate LiteLLM with Agno for a unified LLM experience.\n\n[LiteLLM](https://docs.litellm.ai/docs/) provides a unified interface for various LLM providers, allowing you to use different models with the same code.\n\nAgno integrates with LiteLLM in two ways:\n\n1. **Direct SDK integration** - Using the LiteLLM Python SDK\n2. **Proxy Server integration** - Using LiteLLM as an OpenAI-compatible proxy\n\nFor both integration methods, you'll need:\n\n```shell  theme={null}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    }
+  ],
+  "url": "llms-txt#litellm",
+  "links": []
+}

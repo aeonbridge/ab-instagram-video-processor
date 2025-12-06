@@ -1,0 +1,19 @@
+{
+  "title": "After a few conversations, optimize memories for a user",
+  "content": "optimized = memory_manager.optimize_memories(\n    user_id=\"user_123\",\n    strategy=MemoryOptimizationStrategyType.SUMMARIZE,\n    apply=True,  # Set to False to preview without saving\n)\n\nprint(f\"Optimized {len(optimized)} memories\")\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "### Preview Optimization Results\n\nBefore applying optimization, you can preview the results:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Preview Optimization Results",
+      "id": "preview-optimization-results"
+    }
+  ],
+  "url": "llms-txt#after-a-few-conversations,-optimize-memories-for-a-user",
+  "links": []
+}

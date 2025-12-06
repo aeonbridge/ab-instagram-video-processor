@@ -1,0 +1,14 @@
+{
+  "title": "Agent with Storage",
+  "content": "Source: https://docs.agno.com/integrations/models/native/openai/completion/usage/storage\n\n```python cookbook/models/openai/chat/db.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.duckduckgo import DuckDuckGoTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#agent-with-storage",
+  "links": []
+}

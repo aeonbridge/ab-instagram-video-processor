@@ -1,0 +1,24 @@
+{
+  "title": "How Knowledge Works",
+  "content": "Source: https://docs.agno.com/basics/knowledge/how-it-works\n\nLearn the Knowledge pipeline and technical architecture that powers intelligent knowledge retrieval in Agno agents.\n\nAt its core, Agno's Knowledge system is **Retrieval Augmented Generation (RAG)** made simple. Instead of cramming everything into a prompt, you store information in a searchable knowledge base and let agents pull exactly what they need, when they need it.\n\n## The Knowledge Pipeline: Three Simple Steps\n\n<Steps>\n  <Step title=\"Store: Break Down and Index Information\">\n    Your documents, files, and data are processed by specialized readers, broken into chunks using configurable strategies, and stored in a vector database with their meanings captured as embeddings.\n\n**Example:** A 50-page employee handbook is processed by Agno's PDFReader, chunked using SemanticChunking strategy, and becomes 200 searchable chunks with topics like \"vacation policy,\" \"remote work guidelines,\" or \"expense procedures.\"\n  </Step>\n\n<Step title=\"Search: Find Relevant Information\">\n    When a user asks a question, the agent automatically searches the knowledge base using Agno's search methods to find the most relevant information chunks.\n\n**Example:** User asks \"How many vacation days do I get?\" → Agent calls `knowledge.search()` and finds chunks about vacation policies, PTO accrual, and holiday schedules.\n  </Step>\n\n<Step title=\"Generate: Create Contextual Responses\">\n    The agent combines the retrieved information with the user's question to generate an accurate, contextual response, with sources tracked through Agno's content management system.\n\n**Example:** \"Based on your employee handbook, full-time employees receive 15 vacation days per year, accrued monthly at 1.25 days per month...\"\n  </Step>\n</Steps>\n\n## Vector Embeddings and Search\n\nThink of embeddings as a way to capture meaning in numbers. When you ask \"What's our refund policy?\", the system doesn't just match the word \"refund\"—it understands you're asking about returns, money back, and customer satisfaction.\n\nThat's because text gets converted into **vectors** (lists of numbers) where similar meanings cluster together. \"Refund policy\" and \"return procedures\" end up close in vector space, even though they don't share exact words. This is what enables semantic search beyond simple keyword matching.\n\n## Setting Up Knowledge in Code\n\nHere's how you connect the pieces to build a knowledge-powered agent:\n\n```python  theme={null}\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder\nfrom agno.knowledge.chunking.semantic import SemanticChunking\nfrom agno.knowledge.reader.pdf_reader import PDFReader\nfrom agno.agent import Agent",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "The Knowledge Pipeline: Three Simple Steps",
+      "id": "the-knowledge-pipeline:-three-simple-steps"
+    },
+    {
+      "level": "h2",
+      "text": "Vector Embeddings and Search",
+      "id": "vector-embeddings-and-search"
+    },
+    {
+      "level": "h2",
+      "text": "Setting Up Knowledge in Code",
+      "id": "setting-up-knowledge-in-code"
+    }
+  ],
+  "url": "llms-txt#how-knowledge-works",
+  "links": []
+}

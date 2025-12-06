@@ -1,0 +1,14 @@
+{
+  "title": "Filter Expressions",
+  "content": "Source: https://docs.agno.com/basics/knowledge/filters/usage/filter-expressions\n\n```python filter_expressions.py theme={null}\nfrom agno.agent import Agent\nfrom agno.filters import AND, EQ, IN, NOT\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.utils.media import (\n    SampleDataFileExtension,\n    download_knowledge_filters_sample_data,\n)\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#filter-expressions",
+  "links": []
+}

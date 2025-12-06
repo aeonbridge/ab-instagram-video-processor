@@ -90,3 +90,4 @@ Supported output formats: MP3, M4A, WAV, FLAC, OGG
 - `batch_audio/` - Batch extraction output
 - `transcriptions/` - Audio transcriptions in Markdown format
 - `trend_data/` - Trend monitoring datasets (CSV files)
+- agno tasks related ceck @output/agno and @output/agno_data/

@@ -1,0 +1,14 @@
+{
+  "title": "Neon",
+  "content": "Source: https://docs.agno.com/integrations/database/neon/overview\n\nLearn to use Neon as a database provider for your Agents\n\nAgno supports using [Neon](https://neon.com/) with the `PostgresDb` class.\n\nYou can get started with Neon following their [Get Started guide](https://neon.com/docs/get-started/signing-up).\n\nYou can also read more about the [`PostgresDb` class](/integrations/database/postgres/overview) in its section.\n\n```python neon_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom os import getenv",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#neon",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create stock research agent",
+  "content": "stock_searcher = Agent(\n    name=\"Stock Searcher\",\n    model=OpenAIChat(\"gpt-5-mini\"),\n    role=\"Searches the web for information on a stock.\",\n    tools=[\n        ExaTools(\n            include_domains=[\"cnbc.com\", \"reuters.com\", \"bloomberg.com\", \"wsj.com\"],\n            text=False,\n            show_results=True,\n            highlights=False,\n        )\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-stock-research-agent",
+  "links": []
+}

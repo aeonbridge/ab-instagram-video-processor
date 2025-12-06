@@ -1,0 +1,8 @@
+{
+  "title": "Each agent has its own database",
+  "content": "agent1_db = SqliteDb(db_file=\"tmp/agent1.db\", id=\"agent1_db\")\nagent2_db = SqliteDb(db_file=\"tmp/agent2.db\", id=\"agent2_db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#each-agent-has-its-own-database",
+  "links": []
+}

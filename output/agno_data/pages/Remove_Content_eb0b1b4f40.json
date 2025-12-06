@@ -1,0 +1,14 @@
+{
+  "title": "Remove Content",
+  "content": "Source: https://docs.agno.com/basics/knowledge/getting-started/usage/remove-content\n\n```python 09_remove_content.py theme={null}\nimport asyncio\nfrom agno.db.postgres import PostgresDb\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#remove-content",
+  "links": []
+}

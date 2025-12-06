@@ -1,0 +1,14 @@
+{
+  "title": "Audio Input (Upload the file)",
+  "content": "Source: https://docs.agno.com/integrations/models/native/google/usage/audio-input-file-upload\n\n```python cookbook/models/google/gemini/audio_input_file_upload.py theme={null}\nfrom pathlib import Path\n\nfrom agno.agent import Agent\nfrom agno.media import Audio\nfrom agno.models.google import Gemini\n\nmodel = Gemini(id=\"gemini-2.0-flash-exp\")\nagent = Agent(\n    model=model,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#audio-input-(upload-the-file)",
+  "links": []
+}

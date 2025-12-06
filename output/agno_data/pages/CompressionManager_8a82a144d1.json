@@ -1,0 +1,34 @@
+{
+  "title": "CompressionManager",
+  "content": "Source: https://docs.agno.com/reference/compression/compression-manager\n\nThe `CompressionManager` is responsible for compressing tool call results to save context space while preserving critical information.\n\n## CompressionManager Attributes\n\n| Parameter                         | Type              | Default | Description                                                                               |\n| --------------------------------- | ----------------- | ------- | ----------------------------------------------------------------------------------------- |\n| `model`                           | `Optional[Model]` | `None`  | Model used for compression                                                                |\n| `compress_tool_results`           | `bool`            | `True`  | Flag to enable tool result compression                                                    |\n| `compress_tool_results_limit`     | `int`             | `3`     | Number of uncompressed tool results before compression triggers                           |\n| `compress_tool_call_instructions` | `Optional[str]`   | `None`  | Custom prompt for compression. If not provided, uses the default compression prompt       |\n| `stats`                           | `Dict[str, Any]`  | `{}`    | Tracks compression statistics (`messages_compressed`, `original_size`, `compressed_size`) |\n\n## CompressionManager Methods\n\n### `should_compress(messages: List[Message]) -> bool`\n\nChecks whether compression should be triggered based on the number of uncompressed tool results.\n\n* `messages`: List of messages to check\n\n* `bool`: True if the number of uncompressed tool results meets or exceeds `compress_tool_results_limit`\n\n### `compress(messages: List[Message]) -> None`\n\nCompresses all uncompressed tool results.\n\n* `messages`: List of messages containing tool results to compress\n\n* `None`: Modifies messages in place, setting `compressed_content` on each tool message\n\n### `acompress(messages: List[Message]) -> None`\n\nCompresses all uncompressed tool results asynchronously.\n\n* `messages`: List of messages containing tool results to compress\n\n* `None`: Modifies messages in place, setting `compressed_content` on each tool message",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "CompressionManager Attributes",
+      "id": "compressionmanager-attributes"
+    },
+    {
+      "level": "h2",
+      "text": "CompressionManager Methods",
+      "id": "compressionmanager-methods"
+    },
+    {
+      "level": "h3",
+      "text": "`should_compress(messages: List[Message]) -> bool`",
+      "id": "`should_compress(messages:-list[message])-->-bool`"
+    },
+    {
+      "level": "h3",
+      "text": "`compress(messages: List[Message]) -> None`",
+      "id": "`compress(messages:-list[message])-->-none`"
+    },
+    {
+      "level": "h3",
+      "text": "`acompress(messages: List[Message]) -> None`",
+      "id": "`acompress(messages:-list[message])-->-none`"
+    }
+  ],
+  "url": "llms-txt#compressionmanager",
+  "links": []
+}

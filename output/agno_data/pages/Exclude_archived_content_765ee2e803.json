@@ -1,0 +1,8 @@
+{
+  "title": "Exclude archived content",
+  "content": "active_filter = NOT(EQ(\"status\", \"archived\"))",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#exclude-archived-content",
+  "links": []
+}

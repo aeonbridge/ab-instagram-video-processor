@@ -1,0 +1,8 @@
+{
+  "title": "Arxiv Reader",
+  "content": "Source: https://docs.agno.com/reference/knowledge/reader/arxiv\n\nArxivReader is a reader class that allows you to read papers from the Arxiv API.\n\n<Snippet file=\"arxiv-reader-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#arxiv-reader",
+  "links": []
+}

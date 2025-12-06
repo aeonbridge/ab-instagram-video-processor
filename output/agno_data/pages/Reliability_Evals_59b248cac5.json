@@ -1,0 +1,59 @@
+{
+  "title": "Reliability Evals",
+  "content": "Source: https://docs.agno.com/basics/evals/reliability/overview\n\nReliability evals measure how well your Agents and Teams handle tool calls and error scenarios.\n\nWhat makes an Agent or Team reliable?\n\n* Does it make the expected tool calls?\n* Does it handle errors gracefully?\n* Does it respect the rate limits of the model API?\n\n## Basic Tool Call Reliability\n\nThe first check is to ensure the Agent makes the expected tool calls. Here's an example:\n\n<Frame>\n  <img height=\"200\" src=\"https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=816d4832aa2d3d19ae007f85e9573c13\" data-og-width=\"1148\" data-og-height=\"488\" data-path=\"images/evals/reliability_basic.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=280&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=2cc17d3702c17b96b1a4828793dcad08 280w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=560&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=6cb3b00f1c366ee9ae87db978ba96c14 560w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=840&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=445cd7213631a55a500414dc1fe20152 840w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=1100&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=c8a131d365b92fd94d67b6cd67b8eea5 1100w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=1650&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=83f280c6bd6929bfe56870283599826a 1650w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=2500&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=d47181b3504263137665022f59073978 2500w\" />\n</Frame>\n\n## Multiple Tool Calls Reliability\n\nTest that agents make multiple tool calls:\n\nTest how teams handle various error conditions:\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Reliability Eval Test\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n## Track Evals in AgnoOS platform\n\n<video autoPlay muted controls className=\"w-full aspect-video\" src=\"https://mintcdn.com/agno-v2/hzelS2cST9lEqMuM/videos/eval_platform.mp4?fit=max&auto=format&n=hzelS2cST9lEqMuM&q=85&s=9329eaac5cd0f551081e51656cc0227c\" data-path=\"videos/eval_platform.mp4\" />\n\n```python evals_demo.py theme={null}\n\n\"\"\"Simple example creating a evals and using the AgentOS.\"\"\"\n\nfrom agno.agent import Agent\nfrom agno.db.postgres.postgres import PostgresDb\nfrom agno.eval.accuracy import AccuracyEval\nfrom agno.models.openai import OpenAIChat\nfrom agno.os import AgentOS\nfrom agno.tools.calculator import CalculatorTools",
+  "code_samples": [
+    {
+      "code": "<Frame>\n  <img height=\"200\" src=\"https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=816d4832aa2d3d19ae007f85e9573c13\" data-og-width=\"1148\" data-og-height=\"488\" data-path=\"images/evals/reliability_basic.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=280&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=2cc17d3702c17b96b1a4828793dcad08 280w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=560&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=6cb3b00f1c366ee9ae87db978ba96c14 560w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=840&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=445cd7213631a55a500414dc1fe20152 840w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=1100&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=c8a131d365b92fd94d67b6cd67b8eea5 1100w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=1650&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=83f280c6bd6929bfe56870283599826a 1650w, https://mintcdn.com/agno-v2/3rn2Dg1ZNvoQRtu4/images/evals/reliability_basic.png?w=2500&fit=max&auto=format&n=3rn2Dg1ZNvoQRtu4&q=85&s=d47181b3504263137665022f59073978 2500w\" />\n</Frame>\n\n## Multiple Tool Calls Reliability\n\nTest that agents make multiple tool calls:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Team Reliability\n\nTest how teams handle various error conditions:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Reliability Eval Test\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n</Steps>\n\n## Track Evals in AgnoOS platform\n\n<video autoPlay muted controls className=\"w-full aspect-video\" src=\"https://mintcdn.com/agno-v2/hzelS2cST9lEqMuM/videos/eval_platform.mp4?fit=max&auto=format&n=hzelS2cST9lEqMuM&q=85&s=9329eaac5cd0f551081e51656cc0227c\" data-path=\"videos/eval_platform.mp4\" />",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Basic Tool Call Reliability",
+      "id": "basic-tool-call-reliability"
+    },
+    {
+      "level": "h2",
+      "text": "Multiple Tool Calls Reliability",
+      "id": "multiple-tool-calls-reliability"
+    },
+    {
+      "level": "h2",
+      "text": "Team Reliability",
+      "id": "team-reliability"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Track Evals in AgnoOS platform",
+      "id": "track-evals-in-agnoos-platform"
+    }
+  ],
+  "url": "llms-txt#reliability-evals",
+  "links": []
+}

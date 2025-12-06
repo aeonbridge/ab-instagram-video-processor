@@ -1,0 +1,41 @@
+{
+  "title": "WhatsApp Image Generation Agent (Tool-based)",
+  "content": "Source: https://docs.agno.com/agent-os/usage/interfaces/whatsapp/image-generation-tools\n\nWhatsApp agent that generates images using OpenAI's image generation tools\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set Environment Variables\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Example\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* **Tool-based Generation**: OpenAI's GPT Image-1 model via external tools\n* **High-Quality Images**: Professional-grade image generation\n* **Conversational Interface**: Natural language interaction for image requests\n* **History Context**: Remembers previous images and conversations\n* **GPT-4o Orchestration**: Intelligent conversation and tool management",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    }
+  ],
+  "url": "llms-txt#whatsapp-image-generation-agent-(tool-based)",
+  "links": []
+}

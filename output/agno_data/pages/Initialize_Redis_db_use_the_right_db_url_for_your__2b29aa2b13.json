@@ -1,0 +1,8 @@
+{
+  "title": "Initialize Redis db (use the right db_url for your setup)",
+  "content": "db = RedisDb(db_url=\"redis://localhost:6379\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-redis-db-(use-the-right-db_url-for-your-setup)",
+  "links": []
+}

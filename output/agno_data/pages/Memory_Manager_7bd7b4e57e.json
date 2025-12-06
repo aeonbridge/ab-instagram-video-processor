@@ -1,0 +1,8 @@
+{
+  "title": "Memory Manager",
+  "content": "Source: https://docs.agno.com/reference/memory/memory\n\nMemory is a class that manages conversation history, session summaries, and long-term user memories for AI agents. It provides comprehensive memory management capabilities including adding new memories, searching memories, and deleting memories.\n\n<Snippet file=\"memory-manager-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#memory-manager",
+  "links": []
+}

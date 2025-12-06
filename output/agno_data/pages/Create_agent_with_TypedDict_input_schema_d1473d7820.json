@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with TypedDict input schema",
+  "content": "hackernews_agent = Agent(\n    name=\"Hackernews Agent with TypedDict\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[HackerNewsTools()],\n    role=\"Extract key insights and content from Hackernews posts\",\n    input_schema=ResearchTopicDict,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-typeddict-input-schema",
+  "links": []
+}

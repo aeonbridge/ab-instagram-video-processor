@@ -1,0 +1,14 @@
+{
+  "title": "Basic",
+  "content": "Source: https://docs.agno.com/integrations/models/native/xai/usage/basic\n\n```python cookbook/models/xai/basic.py theme={null}\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.xai import xAI\n\nagent = Agent(model=xAI(id=\"grok-2\"), markdown=True)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#basic",
+  "links": []
+}

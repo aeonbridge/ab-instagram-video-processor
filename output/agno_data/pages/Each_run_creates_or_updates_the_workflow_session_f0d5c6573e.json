@@ -1,0 +1,38 @@
+{
+  "title": "Each run creates or updates the workflow session",
+  "content": "result = workflow.run(input=\"AI trends\", session_id=\"session_123\")\npython  theme={null}\n@dataclass\nclass WorkflowSession:\n    session_id: str           # Unique session identifier\n    user_id: str | None       # User who owns this session\n    workflow_id: str | None   # Which workflow this belongs to\n    workflow_name: str | None # Name of the workflow\n    \n    # List of all workflow runs (executions)\n    runs: List[WorkflowRunOutput] | None\n    \n    # Session-specific data\n    session_data: Dict | None    # Includes session_name, session_state\n    workflow_data: Dict | None   # Workflow configuration\n    metadata: Dict | None        # Custom metadata\n    \n    created_at: int | None    # Unix timestamp\n    updated_at: int | None    # Unix timestamp\npython  theme={null}\nfrom agno.db.sqlite import SqliteDb",
+  "code_samples": [
+    {
+      "code": "Each time you run the workflow, Agno:\n\n1. Creates a unique `run_id` for this execution\n2. Stores the input, output, and all step results\n3. Updates the session with the new run\n4. Makes the history available for future runs\n\n### Workflow Session Structure\n\nA workflow session stores:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Note>\n  Unlike agent sessions, workflow sessions don't have a `summary` field. Workflows store complete run results instead of creating summaries.\n</Note>\n\n### What Gets Stored\n\nEach workflow run stores:\n\n* **Input:** The data passed to `workflow.run()`\n* **Output:** The final result from the workflow\n* **Step results:** Output from each step in the pipeline\n* **Session Data:** Execution time, status, metrics\n* **Session state:** Shared data between steps (if used)\n\n### Key Differences from Agent/Team Sessions\n\nIf you're familiar with agent or team sessions, here are the main differences:\n\n| Feature            | Agent/Team Sessions                       | Workflow Sessions                             |\n| ------------------ | ----------------------------------------- | --------------------------------------------- |\n| **What's stored**  | Messages and conversation turns           | Complete workflow runs with step results      |\n| **History type**   | Message-based (chat history)              | Run-based (execution history)                 |\n| **Summaries**      | Supported with `enable_session_summaries` | Not supported (stores complete runs)          |\n| **History format** | Messages in LLM context                   | Previous run results prepended to step inputs |\n\n### Database Options\n\nWorkflow sessions require a database to persist execution history. Agno supports multiple database types:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Workflow Session Structure",
+      "id": "workflow-session-structure"
+    },
+    {
+      "level": "h3",
+      "text": "What Gets Stored",
+      "id": "what-gets-stored"
+    },
+    {
+      "level": "h3",
+      "text": "Key Differences from Agent/Team Sessions",
+      "id": "key-differences-from-agent/team-sessions"
+    },
+    {
+      "level": "h3",
+      "text": "Database Options",
+      "id": "database-options"
+    }
+  ],
+  "url": "llms-txt#each-run-creates-or-updates-the-workflow-session",
+  "links": []
+}

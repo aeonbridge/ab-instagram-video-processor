@@ -1,0 +1,41 @@
+{
+  "title": "Slack Agent with User Memory",
+  "content": "Source: https://docs.agno.com/agent-os/usage/interfaces/slack/agent-with-user-memory\n\nPersonalized Slack agent that remembers user information and preferences\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set Environment Variables\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Example\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* **Memory Management**: Remembers user names, hobbies, preferences, and activities\n* **DuckDuckGo Search Integration**: Access to current information during conversations\n* **Personalized Responses**: Uses stored memories for contextualized replies\n* **Slack Integration**: Works with direct messages and group conversations\n* **Claude Powered**: Advanced reasoning and conversation capabilities",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set Environment Variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Key Features",
+      "id": "key-features"
+    }
+  ],
+  "url": "llms-txt#slack-agent-with-user-memory",
+  "links": []
+}

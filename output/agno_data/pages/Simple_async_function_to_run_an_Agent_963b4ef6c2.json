@@ -1,0 +1,8 @@
+{
+  "title": "Simple async function to run an Agent.",
+  "content": "async def arun_agent():\n    agent = Agent(\n        model=OpenAIChat(id=\"gpt-5-mini\"),\n        system_message=\"Be concise, reply with one sentence.\",\n    )\n    response = await agent.arun(\"What is the capital of France?\")\n    return response\n\nperformance_eval = PerformanceEval(func=arun_agent, num_iterations=10)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#simple-async-function-to-run-an-agent.",
+  "links": []
+}

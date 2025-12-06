@@ -1,0 +1,14 @@
+{
+  "title": "Team Input Schema Validation",
+  "content": "Source: https://docs.agno.com/basics/input-output/team/usage/input-schema-on-team\n\nThis example demonstrates how to use input\\_schema with teams for automatic input validation and structured data handling, allowing automatic validation and conversion of dictionary inputs into Pydantic models.\n\n```python cookbook/examples/teams/structured_input_output/06_input_schema_on_team.py theme={null}\n\"\"\"\nThis example demonstrates how to use input_schema with teams for automatic\ninput validation and structured data handling.\n\nThe input_schema feature allows teams to automatically validate and convert\ndictionary inputs into Pydantic models, ensuring type safety and data validation.\n\"\"\"\n\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom pydantic import BaseModel, Field\n\nclass ResearchProject(BaseModel):\n    \"\"\"Structured research project with validation requirements.\"\"\"\n\nproject_name: str = Field(description=\"Name of the research project\")\n    research_topics: List[str] = Field(\n        description=\"List of topics to research\", min_items=1\n    )\n    target_audience: str = Field(description=\"Intended audience for the research\")\n    depth_level: str = Field(\n        description=\"Research depth level\", pattern=\"^(basic|intermediate|advanced)$\"\n    )\n    max_sources: int = Field(\n        description=\"Maximum number of sources to use\", ge=3, le=20, default=10\n    )\n    include_recent_only: bool = Field(\n        description=\"Whether to focus only on recent sources\", default=True\n    )",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-input-schema-validation",
+  "links": []
+}

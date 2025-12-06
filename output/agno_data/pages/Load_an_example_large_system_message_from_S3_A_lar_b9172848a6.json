@@ -1,0 +1,8 @@
+{
+  "title": "Load an example large system message from S3. A large prompt like this would benefit from caching.",
+  "content": "txt_path = Path(__file__).parent.joinpath(\"system_prompt.txt\")\ndownload_file(\n    \"https://agno-public.s3.amazonaws.com/prompts/system_promt.txt\",\n    str(txt_path),\n)\nsystem_message = txt_path.read_text()\n\nagent = Agent(\n    model=Claude(\n        id=\"claude-sonnet-4-20250514\",\n        cache_system_prompt=True,  # Activate prompt caching for Anthropic to cache the system prompt\n    ),\n    system_message=system_message,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#load-an-example-large-system-message-from-s3.-a-large-prompt-like-this-would-benefit-from-caching.",
+  "links": []
+}

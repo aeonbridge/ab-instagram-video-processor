@@ -1,0 +1,36 @@
+{
+  "title": "Tweet Analysis Agent",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/tweet-analysis-agent\n\nAn agent that analyzes tweets and provides comprehensive brand monitoring and sentiment analysis.\n\n* Real-time tweet analysis and sentiment classification\n* Engagement metrics analysis (likes, retweets, replies)\n* Brand health monitoring and competitive intelligence\n* Strategic recommendations and response strategies\n\n<Note> Check out the detailed [Social Media Agent](https://github.com/agno-agi/agno/tree/main/cookbook/examples/agents/social_media_agent.py). </Note>\n\n* \"Analyze sentiment around our brand on X for the past 10 tweets\"\n* \"Monitor competitor mentions and compare sentiment vs our brand\"\n* \"Generate a brand health report from recent social media activity\"\n* \"Identify trending topics and user sentiment about our product\"\n* \"Create a social media intelligence report for executive review\"\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API key\">\n    \n  </Step>\n\n<Step title=\"Set your X credentials\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run the agent\">\n    \n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "<Note> Check out the detailed [Social Media Agent](https://github.com/agno-agi/agno/tree/main/cookbook/examples/agents/social_media_agent.py). </Note>\n\nMore prompts to try:\n\n* \"Analyze sentiment around our brand on X for the past 10 tweets\"\n* \"Monitor competitor mentions and compare sentiment vs our brand\"\n* \"Generate a brand health report from recent social media activity\"\n* \"Identify trending topics and user sentiment about our product\"\n* \"Create a social media intelligence report for executive review\"\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set your X credentials\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#tweet-analysis-agent",
+  "links": []
+}

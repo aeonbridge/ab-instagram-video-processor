@@ -1,0 +1,31 @@
+{
+  "title": "Setup MongoDb",
+  "content": "db_url = \"mongodb://localhost:27017\"\n\ndb = MongoDb(db_url=db_url)\n\nagent = Agent(\n    db=db,\n    enable_user_memories=True,\n)\n\nagent.print_response(\"My name is John Doe and I like to play basketball on the weekends.\")\nagent.print_response(\"What's do I do in weekends?\")\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai pymongo\n    bash Mac/Linux theme={null}\n      python mem-mongodb-memory.py\n      bash Windows theme={null}\n      python mem-mongodb-memory.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#setup-mongodb",
+  "links": []
+}

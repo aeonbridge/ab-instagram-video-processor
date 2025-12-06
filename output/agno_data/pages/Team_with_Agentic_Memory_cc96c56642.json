@@ -1,0 +1,14 @@
+{
+  "title": "Team with Agentic Memory",
+  "content": "Source: https://docs.agno.com/basics/memory/team/usage/team-with-agentic-memory\n\nThis example demonstrates how to use agentic memory with a team. Unlike simple memory storage, agentic memory allows the AI to actively create, update, and delete user memories during each run based on the conversation context, providing intelligent memory management.\n\n```python cookbook/examples/teams/memory/02_team_with_agentic_memory.py theme={null}\n\"\"\"\nThis example shows you how to use persistent memory with an Agent.\n\nDuring each run the Agent can create/update/delete user memories.\n\nTo enable this, set `enable_agentic_memory=True` in the Agent config.\n\"\"\"\n\nfrom agno.agent.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.memory import MemoryManager  # noqa: F401\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\ndb = PostgresDb(db_url=db_url)\n\njohn_doe_id = \"john_doe@example.com\"\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n)\n\nteam = Team(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[agent],\n    db=db,\n    enable_agentic_memory=True,\n)\n\nteam.print_response(\n    \"My name is John Doe and I like to hike in the mountains on weekends.\",\n    stream=True,\n    user_id=john_doe_id,\n)\n\nteam.print_response(\"What are my hobbies?\", stream=True, user_id=john_doe_id)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-with-agentic-memory",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with Excel skills",
+  "content": "excel_agent = Agent(\n    name=\"Excel Creator\",\n    model=Claude(\n        id=\"claude-sonnet-4-5-20250929\",\n        skills=[\n            {\"type\": \"anthropic\", \"skill_id\": \"xlsx\", \"version\": \"latest\"}\n        ],\n    ),\n    instructions=[\n        \"You are a data analysis specialist with access to Excel skills.\",\n        \"Create professional spreadsheets with well-formatted tables and accurate formulas.\",\n        \"Use charts and visualizations to make data insights clear.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-excel-skills",
+  "links": []
+}

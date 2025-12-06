@@ -1,0 +1,8 @@
+{
+  "title": "Database connection",
+  "content": "db_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\ndb = PostgresDb(db_url=db_url)\n\n@tool(requires_confirmation=True)\ndef delete_records(table_name: str, count: int) -> str:\n    \"\"\"Delete records from a database table.\n\nArgs:\n        table_name: Name of the table\n        count: Number of records to delete\n\nReturns:\n        str: Confirmation message\n    \"\"\"\n    return f\"Deleted {count} records from {table_name}\"\n\n@tool(requires_confirmation=True)\ndef send_notification(recipient: str, message: str) -> str:\n    \"\"\"Send a notification to a user.\n\nArgs:\n        recipient: Email or username of the recipient\n        message: Notification message\n\nReturns:\n        str: Confirmation message\n    \"\"\"\n    return f\"Sent notification to {recipient}: {message}\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#database-connection",
+  "links": []
+}

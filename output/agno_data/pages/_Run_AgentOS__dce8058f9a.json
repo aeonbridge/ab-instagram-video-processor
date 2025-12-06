@@ -1,0 +1,24 @@
+{
+  "title": "************* Run AgentOS *************",
+  "content": "if __name__ == \"__main__\":\n    agent_os.serve(app=\"agno_agent:app\", reload=True)\n```\n\n## AgentOS - Production Runtime for Multi-Agent Systems\n\nBuilding Agents is easy, running them as a secure, scalable service is hard. AgentOS solves this by providing a high performance runtime for serving multi-agent systems in production. Key features include:\n\n1. **Pre-built FastAPI app**: AgentOS includes a ready-to-use FastAPI app for running your agents, teams and workflows. This gives you a significant head start when building an AI product.\n\n2. **Integrated Control Plane**: The [AgentOS UI](https://os.agno.com) connects directly to your runtime, so you can test, monitor and manage your system in real time with full operational visibility.\n\n3. **Private by Design**: AgentOS runs entirely in your cloud, ensuring complete data privacy. No data leaves your environment, making it ideal for security conscious enterprises..\n\nWhen you run the `agno_agent.py` script shared above, you get a FastAPI app that you can connect to the [AgentOS UI](https://os.agno.com). Here's what it looks like in action:\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/aEfJPs-hg36UsUPO/videos/agno-agent-chat.mp4?fit=max&auto=format&n=aEfJPs-hg36UsUPO&q=85&s=b8ac56bfb2e9436799299fcafa746d4a\" type=\"video/mp4\" data-path=\"videos/agno-agent-chat.mp4\" />\n  </video>\n</Frame>\n\n## The Complete Agentic Solution\n\nAgno provides the complete solution for companies building agentic systems:\n\n* The fastest framework for building agents, multi-agent teams and agentic workflows.\n* A ready-to-use FastAPI app that gets you building AI products on day one.\n* A control plane for testing, monitoring and managing your system.\n\nWe bring a novel architecture that no other framework provides, your AgentOS runs securely in your cloud, and the control plane connects directly to it from your browser. You don't need to send data to any external services or pay retention costs, you get complete privacy and control.\n\nIf you're new to Agno, follow the [quickstart](/get-started/quickstart) to build your first Agent and run it using the AgentOS.\n\nAfter that, checkout the [examples gallery](/examples/use-cases/agents/overview) and build real-world applications with Agno.\n\n<Tip>\n  If you're looking for Agno 1.0 docs, please visit [docs-v1.agno.com](https://docs-v1.agno.com).\n\nWe also have a [migration guide](/how-to/v2-migration) for those coming from Agno 1.0.\n</Tip>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "AgentOS - Production Runtime for Multi-Agent Systems",
+      "id": "agentos---production-runtime-for-multi-agent-systems"
+    },
+    {
+      "level": "h2",
+      "text": "The Complete Agentic Solution",
+      "id": "the-complete-agentic-solution"
+    },
+    {
+      "level": "h2",
+      "text": "Get started",
+      "id": "get-started"
+    }
+  ],
+  "url": "llms-txt#*************-run-agentos-*************",
+  "links": []
+}

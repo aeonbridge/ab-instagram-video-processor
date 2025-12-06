@@ -1,0 +1,8 @@
+{
+  "title": "InMemoryDb",
+  "content": "Source: https://docs.agno.com/reference/storage/in_memory\n\n`InMemoryDb` is a class that implements the Db interface using an in-memory database. It provides lightweight, in-memory storage for agent/team sessions.\n\n<Snippet file=\"db-in-memory-params.mdx\" />\n\n<Snippet file=\"db-new-bulk-methods.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#inmemorydb",
+  "links": []
+}

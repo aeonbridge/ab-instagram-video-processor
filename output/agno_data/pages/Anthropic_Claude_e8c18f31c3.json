@@ -1,0 +1,60 @@
+{
+  "title": "Anthropic Claude",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/overview\n\nLearn how to use Anthropic Claude models in Agno.\n\nClaude is a family of foundational AI models by Anthropic that can be used in a variety of applications.\nSee their model comparisons [here](https://docs.anthropic.com/en/docs/about-claude/models#model-comparison-table).\n\nWe recommend experimenting to find the best-suited model for your use-case. Here are some general recommendations:\n\n* `claude-sonnet-4-20250514` model is good for most use-cases and supports image input.\n* `claude-opus-4-1-20250805` model is their best model.\n* `claude-3-5-haiku-20241022` model is their fastest model.\n\nAnthropic has rate limits on their APIs. See the [docs](https://docs.anthropic.com/en/api/rate-limits#response-headers) for more information.\n\n<Note>\n  Claude API expects a `max_tokens` param to be sent with each request. Unless\n  set as a param, Agno will default to 8192. See the\n  [docs](https://docs.claude.com/en/api/messages) for more information.\n</Note>\n\nSet your `ANTHROPIC_API_KEY` environment. You can get one [from Anthropic here](https://console.anthropic.com/settings/keys).\n\nUse `Claude` with your `Agent`:\n\n<CodeGroup>\n  \n</CodeGroup>\n\nYou can use Anthropic's beta features with Agno by setting the `betas` parameter:\n\nRead more about beta features with Agno `Claude` model [here](/integrations/models/native/anthropic/usage/betas).\n\nYou can enable system prompt caching by setting `cache_system_prompt` to `True`:\n\nRead more about prompt caching with Agno's `Claude` model [here](/integrations/models/native/anthropic/usage/prompt-caching).\n\n## Structured Outputs\n\nStructured outputs are used to ensure that the model's response matches a defined schema.\n\nThis is useful to eliminate issues like missing fields or invalid values. Use it for production systems that need reliable, consistent responses in a specific format.\n\nAgno uses Claude's native support for structured outputs. This feature is available for `claude-sonnet-4-5-20250929` and all newer models. See Anthropic's [structured outputs documentation](https://docs.anthropic.com/en/build-with-claude/structured-outputs) for more details.\n\nRead more about structured outputs with Agno's `Claude` model:\n\n* [Basic structured outputs](/integrations/models/native/anthropic/usage/structured-output)\n* [Streaming structured outputs](/integrations/models/native/anthropic/usage/structured-output-stream)\n* [Structured outputs with strict tools](/integrations/models/native/anthropic/usage/structured-output-strict-tools)\n\n| Parameter             | Type                                     | Default                        | Description                                                                                                                      |\n| --------------------- | ---------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |\n| `id`                  | `str`                                    | `\"claude-3-5-sonnet-20241022\"` | The id of the Anthropic Claude model to use                                                                                      |\n| `name`                | `str`                                    | `\"Claude\"`                     | The name of the model                                                                                                            |\n| `provider`            | `str`                                    | `\"Anthropic\"`                  | The provider of the model                                                                                                        |\n| `max_tokens`          | `Optional[int]`                          | `4096`                         | Maximum number of tokens to generate in the chat completion                                                                      |\n| `thinking`            | `Optional[Dict[str, Any]]`               | `None`                         | Configuration for the thinking (reasoning) process (See [their docs](https://www.anthropic.com/news/visible-extended-thinking))) |\n| `temperature`         | `Optional[float]`                        | `None`                         | Controls randomness in the model's output                                                                                        |\n| `stop_sequences`      | `Optional[List[str]]`                    | `None`                         | A list of strings that the model should stop generating text at                                                                  |\n| `top_p`               | `Optional[float]`                        | `None`                         | Controls diversity via nucleus sampling                                                                                          |\n| `top_k`               | `Optional[int]`                          | `None`                         | Controls diversity via top-k sampling                                                                                            |\n| `cache_system_prompt` | `Optional[bool]`                         | `False`                        | Whether to cache the system prompt for improved performance                                                                      |\n| `extended_cache_time` | `Optional[bool]`                         | `False`                        | Whether to use extended cache time (1 hour instead of default)                                                                   |\n| `request_params`      | `Optional[Dict[str, Any]]`               | `None`                         | Additional parameters to include in the request                                                                                  |\n| `mcp_servers`         | `Optional[List[MCPServerConfiguration]]` | `None`                         | List of MCP (Model Context Protocol) server configurations                                                                       |\n| `api_key`             | `Optional[str]`                          | `None`                         | The API key for authenticating with Anthropic                                                                                    |\n| `default_headers`     | `Optional[Dict[str, Any]]`               | `None`                         | Default headers to include in all requests                                                                                       |\n| `client_params`       | `Optional[Dict[str, Any]]`               | `None`                         | Additional parameters for client configuration                                                                                   |\n| `client`              | `Optional[AnthropicClient]`              | `None`                         | A pre-configured instance of the Anthropic client                                                                                |\n| `async_client`        | `Optional[AsyncAnthropicClient]`         | `None`                         | A pre-configured instance of the async Anthropic client                                                                          |\n\n`Claude` is a subclass of the [Model](/reference/models/model) class and has access to the same params.",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Example\n\nUse `Claude` with your `Agent`:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Beta Features\n\nYou can use Anthropic's beta features with Agno by setting the `betas` parameter:",
+      "language": "unknown"
+    },
+    {
+      "code": "Read more about beta features with Agno `Claude` model [here](/integrations/models/native/anthropic/usage/betas).\n\n## Prompt caching\n\nYou can enable system prompt caching by setting `cache_system_prompt` to `True`:",
+      "language": "unknown"
+    },
+    {
+      "code": "Read more about prompt caching with Agno's `Claude` model [here](/integrations/models/native/anthropic/usage/prompt-caching).\n\n## Structured Outputs\n\nStructured outputs are used to ensure that the model's response matches a defined schema.\n\nThis is useful to eliminate issues like missing fields or invalid values. Use it for production systems that need reliable, consistent responses in a specific format.\n\nAgno uses Claude's native support for structured outputs. This feature is available for `claude-sonnet-4-5-20250929` and all newer models. See Anthropic's [structured outputs documentation](https://docs.anthropic.com/en/build-with-claude/structured-outputs) for more details.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication",
+      "id": "authentication"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Beta Features",
+      "id": "beta-features"
+    },
+    {
+      "level": "h2",
+      "text": "Prompt caching",
+      "id": "prompt-caching"
+    },
+    {
+      "level": "h2",
+      "text": "Structured Outputs",
+      "id": "structured-outputs"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#anthropic-claude",
+  "links": []
+}

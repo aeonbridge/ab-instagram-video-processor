@@ -1,0 +1,8 @@
+{
+  "title": "Install dependencies",
+  "content": "pip install \"agno[infra]\" openai exa_py python-dotenv\n\n4. Create a new project with [AgentOS](/agent-os/introduction):\n\n```bash\nag infra create              # Choose: [1] agent-infra-docker (default)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#install-dependencies",
+  "links": []
+}

@@ -1,0 +1,24 @@
+{
+  "title": "What are Embedders?",
+  "content": "Source: https://docs.agno.com/basics/knowledge/embedder/overview\n\nLearn how to use embedders with Agno to convert complex information into vector representations.\n\nEmbedders turn text, images, and other data into vectors (lists of numbers) that capture meaning. Those vectors make it easy to store and search information semantically—so you find content by intent and context, not just exact keywords.\n\nIf you're building features like retrieval-augmented generation (RAG), semantic search, question answering over docs, or long-term memory for agents, embedders are the foundation that makes it all work.\n\n### Why use embedders?\n\n* **Better recall than keywords**: They understand meaning, so \"How do I reset my passcode?\" finds docs mentioning \"change PIN\".\n* **Ground LLMs in your data**: Provide the model with trusted, domain-specific context at answer time.\n* **Scale to large knowledge bases**: Vectors enable fast similarity search across thousands or millions of chunks.\n* **Multilingual retrieval**: Many embedders map different languages to the same semantic space.\n\n### When to use embedders\n\nUse embedders when you need any of the following:\n\n* **RAG and context injection**: Supply relevant snippets to your agent before responding.\n* **Semantic search**: Let users query by meaning across product docs, wikis, tickets, or chats.\n* **Deduplication and clustering**: Group similar content or avoid repeating the same info.\n* **Personal and team memory**: Store summaries and facts for later recall by agents.\n\nYou probably don’t need embedders when your dataset is tiny (a handful of pages) and simple keyword search already works well.\n\n### How it works in Agno\n\nAgno uses `OpenAIEmbedder` as the default, but you can swap in any supported embedder. When you add content to a knowledge base, the embedder converts each chunk into a vector and stores it in your vector database. Later, when an agent searches, it embeds the query and finds the most similar vectors.\n\nHere's a basic setup:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.pgvector import PgVector\nfrom agno.knowledge.embedder.openai import OpenAIEmbedder",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Why use embedders?",
+      "id": "why-use-embedders?"
+    },
+    {
+      "level": "h3",
+      "text": "When to use embedders",
+      "id": "when-to-use-embedders"
+    },
+    {
+      "level": "h3",
+      "text": "How it works in Agno",
+      "id": "how-it-works-in-agno"
+    }
+  ],
+  "url": "llms-txt#what-are-embedders?",
+  "links": []
+}

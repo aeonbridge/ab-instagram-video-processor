@@ -1,0 +1,8 @@
+{
+  "title": "Set up ContentsDB - tracks content metadata",
+  "content": "contents_db = PostgresDb(\n    db_url=\"postgresql+psycopg://user:pass@localhost:5432/db\",\n    knowledge_table=\"knowledge_contents\"  # Optional: custom table name\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#set-up-contentsdb---tracks-content-metadata",
+  "links": []
+}

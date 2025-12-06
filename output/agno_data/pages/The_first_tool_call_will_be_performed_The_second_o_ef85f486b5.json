@@ -1,0 +1,8 @@
+{
+  "title": "The first tool call will be performed. The second one will fail gracefully.",
+  "content": "agent.print_response(\n    \"Find me the current price of TSLA, then after that find me the latest news about Tesla.\",\n    stream=True,\n)\n\n<Tip>\n  Important to consider:\n\n* If the Agent tries to run a number of tool calls that exceeds the limit **all at once**, the limit will remain effective. Only as many tool calls as allowed will be performed.\n  * The limit is enforced **across a full run**, and not per individual requests triggered by the Agent.\n</Tip>",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#the-first-tool-call-will-be-performed.-the-second-one-will-fail-gracefully.",
+  "links": []
+}

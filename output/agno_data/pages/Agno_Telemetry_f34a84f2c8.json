@@ -1,0 +1,43 @@
+{
+  "title": "Agno Telemetry",
+  "content": "Source: https://docs.agno.com/basics/telemetry\n\nControl what usage data Agno collects\n\nAgno collects anonymous usage data about agents, teams, workflows, and AgentOS configurations to help improve the platform and provide better support.\n\n<Note>\n  **Privacy First:** No sensitive data (prompts, responses, user data, or API keys) is ever collected. All telemetry is anonymous and aggregated.\n</Note>\n\n## What Data is Collected?\n\nAgno collects basic usage metrics for:\n\n* **Agent runs** - Model providers, database types, feature usage\n* **Team runs** - Multi-agent coordination patterns\n* **Workflow runs** - Orchestration and execution patterns\n* **AgentOS launches** - Platform usage and configurations\n\n### Example Telemetry Payload\n\nHere's what an agent run telemetry payload looks like:\n\n## How to Disable Telemetry\n\nYou can disable telemetry in two ways:\n\n### Environment Variable\n\nSet the `AGNO_TELEMETRY` environment variable to `false`:\n\n### Per-Instance Configuration\n\nDisable telemetry for specific agents, teams, workflows, or AgentOS instances:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat",
+  "code_samples": [
+    {
+      "code": "## How to Disable Telemetry\n\nYou can disable telemetry in two ways:\n\n### Environment Variable\n\nSet the `AGNO_TELEMETRY` environment variable to `false`:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Per-Instance Configuration\n\nDisable telemetry for specific agents, teams, workflows, or AgentOS instances:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What Data is Collected?",
+      "id": "what-data-is-collected?"
+    },
+    {
+      "level": "h3",
+      "text": "Example Telemetry Payload",
+      "id": "example-telemetry-payload"
+    },
+    {
+      "level": "h2",
+      "text": "How to Disable Telemetry",
+      "id": "how-to-disable-telemetry"
+    },
+    {
+      "level": "h3",
+      "text": "Environment Variable",
+      "id": "environment-variable"
+    },
+    {
+      "level": "h3",
+      "text": "Per-Instance Configuration",
+      "id": "per-instance-configuration"
+    }
+  ],
+  "url": "llms-txt#agno-telemetry",
+  "links": []
+}

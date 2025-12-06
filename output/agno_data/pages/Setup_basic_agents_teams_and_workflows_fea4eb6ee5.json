@@ -1,0 +1,8 @@
+{
+  "title": "Setup basic agents, teams and workflows",
+  "content": "basic_agent = Agent(\n    name=\"Basic Agent\",\n    db=db,\n    enable_session_summaries=True,\n    enable_user_memories=True,\n    add_history_to_context=True,\n    num_history_runs=3,\n    add_datetime_to_context=True,\n    markdown=True,\n)\nbasic_team = Team(\n    id=\"basic-team\",\n    name=\"Basic Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    db=db,\n    members=[basic_agent],\n    enable_user_memories=True,\n)\nbasic_workflow = Workflow(\n    id=\"basic-workflow\",\n    name=\"Basic Workflow\",\n    description=\"Just a simple workflow\",\n    db=db,\n    steps=[\n        Step(\n            name=\"step1\",\n            description=\"Just a simple step\",\n            agent=basic_agent,\n        )\n    ],\n)\nbasic_knowledge = Knowledge(\n    name=\"Basic Knowledge\",\n    description=\"A basic knowledge base\",\n    contents_db=db,\n    vector_db=PgVector(db_url=\"postgresql+psycopg://ai:ai@localhost:5532/ai\", table_name=\"vectors\"),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#setup-basic-agents,-teams-and-workflows",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Configure the Phoenix tracer",
+  "content": "tracer_provider = register(\n    project_name=\"agno-stock-price-agent\",  # Default is 'default'\n    auto_instrument=True,  # Automatically use the installed OpenInference instrumentation\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-the-phoenix-tracer",
+  "links": []
+}

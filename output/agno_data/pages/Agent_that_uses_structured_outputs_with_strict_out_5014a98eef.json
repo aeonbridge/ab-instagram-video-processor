@@ -1,0 +1,8 @@
+{
+  "title": "Agent that uses structured outputs with strict_output=True (default)",
+  "content": "structured_output_agent = Agent(\n    model=OpenAIResponses(id=\"gpt-5-mini\"),\n    description=\"You write movie scripts.\",\n    output_schema=MovieScript,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agent-that-uses-structured-outputs-with-strict_output=true-(default)",
+  "links": []
+}

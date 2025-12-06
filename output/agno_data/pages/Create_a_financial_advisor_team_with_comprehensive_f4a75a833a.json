@@ -1,0 +1,27 @@
+{
+  "title": "Create a financial advisor team with comprehensive hooks",
+  "content": "team = Team(\n    name=\"Financial Advisor\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    pre_hooks=[transform_input],\n    description=\"A professional financial advisor providing investment guidance and financial planning advice.\",\n    instructions=[\n        \"You are a knowledgeable financial advisor with expertise in:\",\n        \"• Investment strategies and portfolio management\",\n        \"• Retirement planning and savings strategies\",\n        \"• Risk assessment and diversification\",\n        \"• Tax-efficient investing\",\n        \"\",\n        \"Provide clear, actionable advice while being mindful of individual circumstances.\",\n        \"Always remind users to consult with a licensed financial advisor for personalized advice.\",\n    ],\n    debug_mode=True,\n)\n\nteam.print_response(\n    input=\"I'm 35 years old and want to start investing for retirement. moderate risk tolerance. retirement savings in IRAs/401(k)s= $100,000. total savings is $200,000. my net worth is $300,000\",\n    session_id=\"test_session\",\n    user_id=\"test_user\",\n    stream=True,\n)\nbash  theme={null}\n    pip install -U agno openai\n    bash Mac theme={null}\n      python cookbook/teams/hooks/input_transformation_pre_hook.py\n      bash Windows theme={null}\n      python cookbook/teams/hooks/input_transformation_pre_hook.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run example\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-a-financial-advisor-team-with-comprehensive-hooks",
+  "links": []
+}

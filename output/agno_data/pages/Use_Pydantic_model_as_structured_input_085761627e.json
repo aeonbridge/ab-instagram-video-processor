@@ -1,0 +1,8 @@
+{
+  "title": "Use Pydantic model as structured input",
+  "content": "research_request = ResearchTopic(\n    topic=\"AI Agent Frameworks\",\n    focus_areas=[\"AI Agents\", \"Framework Design\", \"Developer Tools\", \"Open Source\"],\n    target_audience=\"Software Developers and AI Engineers\",\n    sources_required=7,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#use-pydantic-model-as-structured-input",
+  "links": []
+}

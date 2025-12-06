@@ -1,0 +1,19 @@
+{
+  "title": "Get child spans of a specific parent",
+  "content": "children = db.get_spans(parent_span_id=root_span.span_id)\npython  theme={null}\nfrom agno.db.sqlite import SqliteDb\n\ndb = SqliteDb(db_file=\"tmp/traces.db\")",
+  "code_samples": [
+    {
+      "code": "**Parameters:**\n\n| Parameter        | Type            | Description              |\n| ---------------- | --------------- | ------------------------ |\n| `trace_id`       | `Optional[str]` | Filter by trace ID       |\n| `parent_span_id` | `Optional[str]` | Filter by parent span ID |\n\n**Returns:** `List[Span]`\n\n<Note>\n  Unlike `get_traces()`, `get_spans()` returns a list without a count.\n</Note>\n\n## Example: Analyzing a Run",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example: Analyzing a Run",
+      "id": "example:-analyzing-a-run"
+    }
+  ],
+  "url": "llms-txt#get-child-spans-of-a-specific-parent",
+  "links": []
+}

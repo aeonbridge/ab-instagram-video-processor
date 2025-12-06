@@ -1,0 +1,8 @@
+{
+  "title": "Wikipedia search agent",
+  "content": "wikipedia_agent = Agent(\n    name=\"Wikipedia Agent\",\n    role=\"Search wikipedia for information\",\n    model=MistralChat(id=\"mistral-large-latest\"),\n    tools=[WikipediaTools()],\n    instructions=[\n        \"Find information about the company in the wikipedia\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#wikipedia-search-agent",
+  "links": []
+}

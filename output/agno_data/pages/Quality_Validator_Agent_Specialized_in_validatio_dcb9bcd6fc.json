@@ -1,0 +1,8 @@
+{
+  "title": "Quality Validator Agent - Specialized in validation",
+  "content": "quality_validator = Agent(\n    name=\"Quality Validator\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Validate answer quality and suggest improvements\",\n    instructions=[\n        \"Review the synthesized answer for accuracy and completeness.\",\n        \"Check if the answer fully addresses the user's query.\",\n        \"Identify any gaps or areas that need clarification.\",\n        \"Suggest improvements or additional information if needed.\",\n        \"Ensure the response meets high quality standards.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#quality-validator-agent---specialized-in-validation",
+  "links": []
+}

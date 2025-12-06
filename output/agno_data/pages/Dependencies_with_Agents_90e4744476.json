@@ -1,0 +1,24 @@
+{
+  "title": "Dependencies with Agents",
+  "content": "Source: https://docs.agno.com/basics/dependencies/agent/overview\n\nLearn how to use dependencies to add context to your agents.\n\n**Dependencies** are a way to inject variables into your Agent context. The `dependencies` parameter accepts a dictionary containing functions or static variables that are automatically resolved before the agent runs.\n\n<Note>\n  You can use dependencies to inject memories, dynamic few-shot examples, \"retrieved\" documents, etc.\n</Note>\n\nYou can reference the dependencies in your agent instructions or user message.\n\n<Note>\n  Dependencies can be static values or callable functions. When using functions, they are automatically executed at runtime before the agent runs, and their return values are used as the dependency values.\n</Note>\n\n<Tip>\n  You can set `dependencies` and `add_dependencies_to_context` on `Agent` initialization, or pass them dynamically to the `run()`, `arun()`, `print_response()` and `aprint_response()` methods.\n</Tip>\n\n## Adding dependencies to context\n\nSet `add_dependencies_to_context=True` to add the entire list of dependencies to the user message. This way you don't have to manually add the dependencies to the instructions.\n\n```python dependencies_instructions.py theme={null}\nimport json\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\ndef get_user_profile() -> str:\n    \"\"\"Fetch and return the user profile.\n\nReturns:\n        JSON string containing user profile information\n    \"\"\"\n    # Get the user profile from the database (this is a placeholder)\n    user_profile = {\n        \"name\": \"John Doe\",\n        \"experience_level\": \"senior\",\n    }\n\nreturn json.dumps(user_profile, indent=4)\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    dependencies={\"user_profile\": get_user_profile},\n    # We can add the entire dependencies dictionary to the user message\n    add_dependencies_to_context=True,\n    markdown=True,\n)\n\nagent.print_response(\n    \"Get the user profile and tell me about their experience level.\",\n    stream=True,\n)",
+  "code_samples": [
+    {
+      "code": "<Note>\n  Dependencies can be static values or callable functions. When using functions, they are automatically executed at runtime before the agent runs, and their return values are used as the dependency values.\n</Note>\n\n<Tip>\n  You can set `dependencies` and `add_dependencies_to_context` on `Agent` initialization, or pass them dynamically to the `run()`, `arun()`, `print_response()` and `aprint_response()` methods.\n</Tip>\n\n## Adding dependencies to context\n\nSet `add_dependencies_to_context=True` to add the entire list of dependencies to the user message. This way you don't have to manually add the dependencies to the instructions.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Basic usage",
+      "id": "basic-usage"
+    },
+    {
+      "level": "h2",
+      "text": "Adding dependencies to context",
+      "id": "adding-dependencies-to-context"
+    }
+  ],
+  "url": "llms-txt#dependencies-with-agents",
+  "links": []
+}

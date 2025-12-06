@@ -1,0 +1,56 @@
+{
+  "title": "Shorthand for both",
+  "content": "ReasoningTools()\npython  theme={null}\nReasoningTools(add_instructions=True)\npython  theme={null}\nReasoningTools(add_instructions=True, add_few_shot=True)\npython  theme={null}\ncustom_instructions = \"\"\"\nUse the think and analyze tools for rigorous scientific reasoning:\n- Always think before making claims\n- Cite evidence in your analysis\n- Acknowledge uncertainty\n- Consider alternative hypotheses\n\"\"\"\n\nReasoningTools(\n    instructions=custom_instructions,\n    add_instructions=False  # Don't include default instructions\n)\npython  theme={null}\nmedical_examples = \"\"\"\nExample: Medical Diagnosis\n\nUser: Patient has fever and cough for 3 days.\n\nAgent thinks:\nthink(\n    title=\"Gather Symptoms\",\n    thought=\"Need to collect all symptoms and their duration. Fever and cough suggest respiratory infection. Should check for other symptoms.\",\n    action=\"Ask about additional symptoms\",\n    confidence=0.9\n)\n\"\"\"\n\nReasoningTools(\n    add_instructions=True,\n    add_few_shot=True,\n    few_shot_examples=medical_examples  # Your custom examples\n)\n```\n\n## Monitoring Your Agent's Thinking\n\nUse `show_full_reasoning=True` and `stream_intermediate_steps=True` to display reasoning steps in real-time. See [Display Options in Reasoning Agents](/basics/reasoning/reasoning-agents#display-options) for details and [Reasoning Reference](/reference/reasoning/reasoning#display-parameters) for programmatic access to reasoning steps.\n\n## Reasoning Tools vs. Reasoning Agents\n\nBoth approaches add reasoning to any model, but they differ in control and automation:\n\n| Aspect           | Reasoning Tools                          | Reasoning Agents                                   |\n| ---------------- | ---------------------------------------- | -------------------------------------------------- |\n| **Activation**   | Agent decides when to use `think()`      | Automatic on every request                         |\n| **Control**      | Explicit tool calls                      | Automated loop                                     |\n| **Transparency** | See every `think()` and `analyze()` call | See structured reasoning steps                     |\n| **Workflow**     | Agent-driven (flexible)                  | Framework-driven (structured)                      |\n| **Best for**     | Research, analysis, exploratory tasks    | Complex multi-step problems with defined structure |\n\n* Use **Reasoning Tools** when you want the agent to control its own reasoning process\n* Use **Reasoning Agents** when you want guaranteed systematic thinking for every request",
+  "code_samples": [
+    {
+      "code": "### Add Instructions Automatically\n\nMany toolkits ship with pre-written guidance that explains how to use their tools. Setting `add_instructions=True` injects those instructions into the agent prompt (when the toolkit actually has any):",
+      "language": "unknown"
+    },
+    {
+      "code": "* `ReasoningTools`, `KnowledgeTools`, `MemoryTools`, and `WorkflowTools` all include Agno-authored instructions (and optional few-shot examples) describing their Think → Act → Analyze workflow.\n* Other toolkits may not define default instructions; in that case `add_instructions=True` is a no-op unless you supply your own `instructions=...`.\n\nThe built-in instructions cover when to use `think()` vs `analyze()`, how to iterate, and best practices for each domain. Turn them on unless you plan to provide custom guidance.\n\n### Add Few-Shot Examples\n\nWant to show your agent some examples of good reasoning? Some toolkits come with pre-written few-shot examples that demonstrate the workflow in action. Turn them on with `add_few_shot=True`:",
+      "language": "unknown"
+    },
+    {
+      "code": "Right now, `ReasoningTools`, `KnowledgeTools`, and `MemoryTools` have built-in examples. Other toolkits won't use `add_few_shot=True` unless you provide your own examples.\n\nThese examples show the agent how to iterate through problems, decide on next actions, and mix thinking with actual tool calls.\n\n**When should you use them?**\n\n* You're using a smaller or cheaper model that needs extra guidance\n* Your reasoning workflow has multiple stages or is complex\n* You want more consistent behavior across different runs\n\n### Custom Instructions\n\nProvide your own custom instructions for specialized reasoning:",
+      "language": "unknown"
+    },
+    {
+      "code": "### Custom Few-Shot Examples\n\nYou can also write your own examples tailored to your domain:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Add Instructions Automatically",
+      "id": "add-instructions-automatically"
+    },
+    {
+      "level": "h3",
+      "text": "Add Few-Shot Examples",
+      "id": "add-few-shot-examples"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Instructions",
+      "id": "custom-instructions"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Few-Shot Examples",
+      "id": "custom-few-shot-examples"
+    },
+    {
+      "level": "h2",
+      "text": "Monitoring Your Agent's Thinking",
+      "id": "monitoring-your-agent's-thinking"
+    },
+    {
+      "level": "h2",
+      "text": "Reasoning Tools vs. Reasoning Agents",
+      "id": "reasoning-tools-vs.-reasoning-agents"
+    }
+  ],
+  "url": "llms-txt#shorthand-for-both",
+  "links": []
+}

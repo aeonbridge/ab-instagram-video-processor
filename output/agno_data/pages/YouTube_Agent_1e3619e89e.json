@@ -1,0 +1,29 @@
+{
+  "title": "YouTube Agent",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/youtube-agent\n\nBuild an AI agent that analyzes YouTube videos and creates structured summaries with accurate timestamps. This agent extracts key insights from video content, making it easy to navigate educational videos, tutorials, and presentations without watching them in full.\n\nBy building this agent, you'll understand:\n\n* How to integrate YouTube transcript extraction into agents\n* How to structure prompts for consistent timestamp generation\n* How to organize video content into logical sections\n* How to create agents that transform unstructured media into searchable content\n\nCreate study guides from lectures, extract insights from conference talks, build searchable video indexes, or generate documentation from tutorial videos.\n\nThe agent uses YouTubeTools to fetch video transcripts and metadata, then analyzes the content to:\n\n1. **Extract**: Gets video metadata (title, duration) and full transcript\n2. **Analyze**: Identifies video type and content structure\n3. **Organize**: Creates timestamps for major topic transitions\n4. **Summarize**: Generates section-based summaries with key points\n\nThe structured output makes long-form video content quickly scannable and searchable.\n\n```python youtube_agent.py theme={null}\nfrom textwrap import dedent\n\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.youtube import YouTubeTools\n\nyoutube_agent = Agent(\n    name=\"YouTube Agent\",\n    model=OpenAIChat(id=\"gpt-4o\"),\n    tools=[YouTubeTools()],\n    instructions=dedent(\"\"\"\\\n        You are an expert YouTube content analyst with a keen eye for detail! 🎓\n        Follow these steps for comprehensive video analysis:\n        1. Video Overview\n           - Check video length and basic metadata\n           - Identify video type (tutorial, review, lecture, etc.)\n           - Note the content structure\n        2. Timestamp Creation\n           - Create precise, meaningful timestamps\n           - Focus on major topic transitions\n           - Highlight key moments and demonstrations\n           - Format: [start_time, end_time, detailed_summary]\n        3. Content Organization\n           - Group related segments\n           - Identify main themes\n           - Track topic progression\n\nYour analysis style:\n        - Begin with a video overview\n        - Use clear, descriptive segment titles\n        - Include relevant emojis for content types:\n          📚 Educational\n          💻 Technical\n          🎮 Gaming\n          📱 Tech Review\n          🎨 Creative\n        - Highlight key learning points\n        - Note practical demonstrations\n        - Mark important references\n\nQuality Guidelines:\n        - Verify timestamp accuracy\n        - Avoid timestamp hallucination\n        - Ensure comprehensive coverage\n        - Maintain consistent detail level\n        - Focus on valuable content markers\n    \"\"\"),\n    add_datetime_to_context=True,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#youtube-agent",
+  "links": []
+}

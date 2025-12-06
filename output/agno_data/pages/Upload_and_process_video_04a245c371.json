@@ -1,0 +1,8 @@
+{
+  "title": "Upload and process video",
+  "content": "video_file = upload_file(video_path)\nwhile video_file.state.name == \"PROCESSING\":\n    time.sleep(2)\n    video_file = get_file(video_file.name)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#upload-and-process-video",
+  "links": []
+}

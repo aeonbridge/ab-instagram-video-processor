@@ -1,0 +1,8 @@
+{
+  "title": "-*- Share personal information",
+  "content": "agent.print_response(\"I'm going to a concert tomorrow?\", stream=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#-*--share-personal-information",
+  "links": []
+}

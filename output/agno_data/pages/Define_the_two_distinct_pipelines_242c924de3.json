@@ -1,0 +1,8 @@
+{
+  "title": "Define the two distinct pipelines",
+  "content": "image_sequence = Steps(\n    name=\"image_generation\",\n    description=\"Complete image generation and analysis workflow\",\n    steps=[generate_image_step, describe_image_step],\n)\n\nvideo_sequence = Steps(\n    name=\"video_generation\",\n    description=\"Complete video production and analysis workflow\",\n    steps=[generate_video_step, describe_video_step],\n)\n\ndef media_sequence_selector(step_input: StepInput) -> List[Step]:\n    \"\"\"\n    Simple pipeline selector based on keywords in the message.\n\nArgs:\n        step_input: StepInput containing message\n\nReturns:\n        List of Steps to execute\n    \"\"\"\n\n# Check if message exists and is a string\n    if not step_input.input or not isinstance(step_input.input, str):\n        return [image_sequence]  # Default to image sequence\n\n# Convert message to lowercase for case-insensitive matching\n    message_lower = step_input.input.lower()\n\n# Check for video keywords\n    if \"video\" in message_lower:\n        return [video_sequence]\n    # Check for image keywords\n    elif \"image\" in message_lower:\n        return [image_sequence]\n    else:\n        # Default to image for any other case\n        return [image_sequence]",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-the-two-distinct-pipelines",
+  "links": []
+}

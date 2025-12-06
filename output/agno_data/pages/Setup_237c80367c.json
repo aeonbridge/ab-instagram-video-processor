@@ -1,0 +1,24 @@
+{
+  "title": "Setup",
+  "content": "## Set your AWS credentials\n\n<Note>\n  By default, this embedder uses the `cohere.embed-multilingual-v3` model. You must enable access to this model from the AWS Bedrock model catalog before using this embedder.\n</Note>",
+  "code_samples": [
+    {
+      "code": "<Note>\n  By default, this embedder uses the `cohere.embed-multilingual-v3` model. You must enable access to this model from the AWS Bedrock model catalog before using this embedder.\n</Note>\n\n## Run PgVector",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Set your AWS credentials",
+      "id": "set-your-aws-credentials"
+    },
+    {
+      "level": "h2",
+      "text": "Run PgVector",
+      "id": "run-pgvector"
+    }
+  ],
+  "url": "llms-txt#setup",
+  "links": []
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Execute team workflow",
+  "content": "reasoning_team.print_response(\"Analyze Apple (AAPL) investment potential\")\n```\n\nView a complete example trace in the LangDB dashboard: [Finance Reasoning Team Trace](https://app.langdb.ai/sharing/threads/73c91c58-eab7-4c6b-afe1-5ab6324f1ada)\n\n<Frame caption=\"LangDB Finance Team Thread\">\n  <img src=\"https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-thread.png?fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=177481792ff1b6fcdc03d464b62f7711\" style={{ borderRadius: '10px', width: '100%', maxWidth: '800px' }} alt=\"langdb-agno finance team observability\" data-og-width=\"1241\" width=\"1241\" data-og-height=\"916\" height=\"916\" data-path=\"images/langdb-finance-thread.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-thread.png?w=280&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=13536f1cb8949e0e540505a137e8c978 280w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-thread.png?w=560&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=2783572ef55c1d8645c2f9dc34c31809 560w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-thread.png?w=840&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=d08349da04673fd7f1f358f0201cfd55 840w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-thread.png?w=1100&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=b13d7216f599fef647e6f1f705198368 1100w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-thread.png?w=1650&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=0124f22d2915636b0086f19f628515f3 1650w, https://mintcdn.com/agno-v2/Y7twezR0wF2re1xh/images/langdb-finance-thread.png?w=2500&fit=max&auto=format&n=Y7twezR0wF2re1xh&q=85&s=0470d1883900d3fc2e0e4d2515417291 2500w\" />\n</Frame>\n\n### LangDB Capabilities\n\n* **Virtual Models**: Save, share, and reuse model configurations—combining prompts, parameters, tools, and routing logic into a single named unit for consistent behavior across apps\n* **MCP Support**: Enhanced tool capabilities through Model Context Protocol servers\n* **Multi-Provider**: Support for OpenAI, Anthropic, Google, xAI, and other providers\n\n* **Initialization Order**: Always call `init()` before creating any Agno agents or teams\n* **Environment Variables**: With `LANGDB_API_KEY` and `LANGDB_PROJECT_ID` set, you can create models with just `LangDB(id=\"model_name\")`\n\n* [LangDB Documentation](https://docs.langdb.ai/)\n* [Building a Reasoning Finance Team Guide](https://docs.langdb.ai/guides/building-agents/building-a-reasoning-finance-team-with-agno)\n* [LangDB GitHub Samples](https://github.com/langdb/langdb-samples/tree/main/examples/agno)\n* [LangDB Dashboard](https://app.langdb.ai/)\n\nBy following these steps, you can effectively integrate Agno with LangDB, enabling comprehensive observability and monitoring of your AI agents.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Sample Trace",
+      "id": "sample-trace"
+    },
+    {
+      "level": "h2",
+      "text": "Advanced Features",
+      "id": "advanced-features"
+    },
+    {
+      "level": "h3",
+      "text": "LangDB Capabilities",
+      "id": "langdb-capabilities"
+    },
+    {
+      "level": "h2",
+      "text": "Notes",
+      "id": "notes"
+    },
+    {
+      "level": "h2",
+      "text": "Resources",
+      "id": "resources"
+    }
+  ],
+  "url": "llms-txt#execute-team-workflow",
+  "links": []
+}

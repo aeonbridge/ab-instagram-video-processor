@@ -1,0 +1,8 @@
+{
+  "title": "Run team and return the response as a variable",
+  "content": "response = team.run(input=\"What is the weather in Tokyo?\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run-team-and-return-the-response-as-a-variable",
+  "links": []
+}

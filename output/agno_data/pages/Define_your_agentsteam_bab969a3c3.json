@@ -1,0 +1,8 @@
+{
+  "title": "Define your agents/team",
+  "content": "content_creation_workflow = Workflow(\n    name=\"Content Creation Workflow\",\n    description=\"Automated content creation from blog posts to social media\",\n    db=SqliteDb(db_file=\"tmp/workflow.db\"),\n    steps=[research_team, content_planner],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-your-agents/team",
+  "links": []
+}

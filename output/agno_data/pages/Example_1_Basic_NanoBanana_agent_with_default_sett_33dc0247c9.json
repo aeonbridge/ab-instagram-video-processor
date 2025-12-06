@@ -1,0 +1,8 @@
+{
+  "title": "Example 1: Basic NanoBanana agent with default settings",
+  "content": "agent = Agent(tools=[NanoBananaTools()], name=\"NanoBanana Image Generator\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-1:-basic-nanobanana-agent-with-default-settings",
+  "links": []
+}

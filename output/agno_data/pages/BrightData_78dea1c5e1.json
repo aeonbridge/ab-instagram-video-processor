@@ -1,0 +1,32 @@
+{
+  "title": "BrightData",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/brightdata\n\n**BrightDataTools** provide comprehensive web scraping capabilities including markdown conversion, screenshots, search engine results, and structured data feeds from various platforms like LinkedIn, Amazon, Instagram, and more.\n\nThe following examples require the `requests` library:\n\nYou'll also need a BrightData API key. Set the `BRIGHT_DATA_API_KEY` environment variable:\n\nOptionally, you can configure zone settings:\n\nExtract structured data from platforms like LinkedIn, Amazon, etc.:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.brightdata import BrightDataTools\nfrom agno.utils.media import save_base64_data\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[\n        BrightDataTools(\n            get_screenshot=True,\n        )\n    ],\n    markdown=True,\n    )",
+  "code_samples": [
+    {
+      "code": "You'll also need a BrightData API key. Set the `BRIGHT_DATA_API_KEY` environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "Optionally, you can configure zone settings:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nExtract structured data from platforms like LinkedIn, Amazon, etc.:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#brightdata",
+  "links": []
+}

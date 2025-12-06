@@ -1,0 +1,8 @@
+{
+  "title": "Create agent with cached responses",
+  "content": "agent = Agent(\n    model=Claude(\n        id=\"claude-sonnet-4-20250514\",\n        cache_response=True,\n        cache_ttl=3600\n    ),\n    tools=[...],  # Your tools\n    instructions=\"Your instructions here\"\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-agent-with-cached-responses",
+  "links": []
+}

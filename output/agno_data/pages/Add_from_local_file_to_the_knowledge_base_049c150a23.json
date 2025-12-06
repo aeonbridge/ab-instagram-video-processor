@@ -1,0 +1,8 @@
+{
+  "title": "Add from local file to the knowledge base",
+  "content": "asyncio.run(\n    knowledge.add_content_async(\n        name=\"CV\",\n        path=\"cookbook/knowledge/testing_resources/cv_1.pdf\",\n        metadata={\"user_tag\": \"Engineering Candidates\"},\n        skip_if_exists=True,  # True by default\n    )\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#add-from-local-file-to-the-knowledge-base",
+  "links": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "User Control Flow",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/user-control-flow\n\nUserControlFlowTools enable agents to pause execution and request input from users during conversations.\n\nThe following agent can request user input during conversations:\n\n| Parameter               | Type            | Default | Description                                        |\n| ----------------------- | --------------- | ------- | -------------------------------------------------- |\n| `instructions`          | `Optional[str]` | `None`  | Custom instructions for user interaction behavior. |\n| `add_instructions`      | `bool`          | `True`  | Whether to add instructions to the agent.          |\n| `enable_get_user_input` | `bool`          | `True`  | Enable user input request functionality.           |\n\n| Function         | Description                                            |\n| ---------------- | ------------------------------------------------------ |\n| `get_user_input` | Pause agent execution and request input from the user. |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/user_control_flow.py)\n* [Agno Interactive Agents](https://docs.agno.com/interactive-agents)\n* [User Input Patterns](https://docs.agno.com/user-input)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#user-control-flow",
+  "links": []
+}

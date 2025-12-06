@@ -1,0 +1,8 @@
+{
+  "title": "************* Create Agent *************",
+  "content": "agno_agent = Agent(\n    name=\"Agno Agent\",\n    model=Claude(id=\"claude-sonnet-4-5\"),\n    db=SqliteDb(db_file=\"agno.db\"),\n    tools=[MCPTools(transport=\"streamable-http\", url=\"https://docs.agno.com/mcp\")],\n    add_history_to_context=True,\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#*************-create-agent-*************",
+  "links": []
+}

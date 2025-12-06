@@ -1,0 +1,24 @@
+{
+  "title": "MySQL for Team",
+  "content": "Source: https://docs.agno.com/integrations/database/mysql/usage/mysql-for-team\n\nAgno supports using MySQL as a storage backend for Teams using the `MySQLDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **MySQL** on port **3306** using:\n\n```python mysql_for_team.py theme={null}\nfrom typing import List\n\nfrom agno.agent import Agent\nfrom agno.db.mysql import MySQLDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom pydantic import BaseModel",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run MySQL",
+      "id": "run-mysql"
+    }
+  ],
+  "url": "llms-txt#mysql-for-team",
+  "links": []
+}

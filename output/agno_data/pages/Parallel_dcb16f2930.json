@@ -1,0 +1,28 @@
+{
+  "title": "Parallel",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/parallel\n\nUse Parallel with Agno for AI-optimized web search and content extraction.\n\n**ParallelTools** enable an Agent to perform AI-optimized web search and content extraction using [Parallel's APIs](https://docs.parallel.ai/home).\n\nThe following example requires the `parallel-web` library and an API key which can be obtained from [Parallel](https://platform.parallel.ai).\n\nThe following agent will search for information on AI agents and autonomous systems, then extract content from specific URLs:\n\n```python cookbook/tools/parallel_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.parallel import ParallelTools\n\nagent = Agent(\n    tools=[\n        ParallelTools(\n            enable_search=True,\n            enable_extract=True,\n            max_results=5,\n            max_chars_per_result=8000,\n        )\n    ],\n    markdown=True,\n)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will search for information on AI agents and autonomous systems, then extract content from specific URLs:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#parallel",
+  "links": []
+}

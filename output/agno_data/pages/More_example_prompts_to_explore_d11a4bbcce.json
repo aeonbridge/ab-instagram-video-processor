@@ -1,0 +1,41 @@
+{
+  "title": "More example prompts to explore:",
+  "content": "\"\"\"\nTutorial Analysis:\n1. \"Break down this Python tutorial with focus on code examples\"\n2. \"Create a learning path from this web development course\"\n3. \"Extract all practical exercises from this programming guide\"\n4. \"Identify key concepts and implementation examples\"\n\nEducational Content:\n1. \"Create a study guide with timestamps for this math lecture\"\n2. \"Extract main theories and examples from this science video\"\n3. \"Break down this historical documentary into key events\"\n4. \"Summarize the main arguments in this academic presentation\"\n\nTech Reviews:\n1. \"List all product features mentioned with timestamps\"\n2. \"Compare pros and cons discussed in this review\"\n3. \"Extract technical specifications and benchmarks\"\n4. \"Identify key comparison points and conclusions\"\n\nCreative Content:\n1. \"Break down the techniques shown in this art tutorial\"\n2. \"Create a timeline of project steps in this DIY video\"\n3. \"List all tools and materials mentioned with timestamps\"\n4. \"Extract tips and tricks with their demonstrations\"\n\"\"\"\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U agno openai youtube_transcript_api\n    bash Mac theme={null}\n      python youtube_agent.py\n      bash Windows theme={null}\n      python youtube_agent.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n* Try analyzing different video types (tutorials, lectures, reviews)\n* Modify `instructions` to focus on specific content types\n* Combine with other tools for enhanced analysis\n* Explore [Tools](/basics/tools/overview) for additional capabilities",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe agent analyzes YouTube videos by fetching transcripts and generating comprehensive breakdowns. For a typical video, you'll receive:\n\n* Video metadata (title, duration, type, and audience)\n* High-level structure overview\n* Timestamped breakdown of major topics with key examples\n* Content organization showing recurring themes\n* Practical highlights and actionable takeaways\n\nAnalysis typically takes 30-60 seconds depending on video length and complexity.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#more-example-prompts-to-explore:",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "End condition function for the loop",
+  "content": "def research_quality_check(outputs: List[StepOutput]) -> bool:\n    \"\"\"\n    Evaluate if research results are sufficient\n    Returns True to break the loop, False to continue\n    \"\"\"\n    if not outputs:\n        return False\n\n# Check if any output contains substantial content\n    for output in outputs:\n        if output.content and len(output.content) > 300:\n            print(\n                f\"✅ Research quality check passed - found substantial content ({len(output.content)} chars)\"\n            )\n            return True\n\nprint(\"❌ Research quality check failed - need more substantial research\")\n    return False",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#end-condition-function-for-the-loop",
+  "links": []
+}

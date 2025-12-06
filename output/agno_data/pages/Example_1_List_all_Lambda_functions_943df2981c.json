@@ -1,0 +1,8 @@
+{
+  "title": "Example 1: List all Lambda functions",
+  "content": "agent.print_response(\"List all Lambda functions in our AWS account\", markdown=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-1:-list-all-lambda-functions",
+  "links": []
+}

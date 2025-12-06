@@ -1,0 +1,27 @@
+{
+  "title": "Create the vector database",
+  "content": "vector_db = LanceDb(\n    table_name=\"recipes\",  # Table name in the vector database\n    uri=db_url,  # Location to initiate/create the vector database\n    embedder=embedder,  # Without using this, it will use OpenAIChat embeddings by default\n)\n\nknowledge = Knowledge(\n    vector_db=vector_db,\n)\n\nknowledge.add_content(\n    name=\"Recipes\", url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n)\n\ndb = SqliteDb(db_file=\"data.db\")\n\nagent = Agent(\n    session_id=\"session_id\", \n    user_id=\"user\",  \n    model=model,\n    knowledge=knowledge,\n    db=db,\n)\n\nagent.print_response(\n    \"What is the first step of making Gluai Buat Chi from the knowledge base?\",\n    markdown=True,\n)\nbash  theme={null}\n    pip install -U lancedb sqlalchemy agno\n    bash Mac theme={null}\n      python cookbook/agents/rag/rag_with_lance_db_and_sqlite.py\n      bash Windows theme={null}\n      python cookbook/agents/rag/rag_with_lance_db_and_sqlite.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install Ollama\">\n    Follow the installation instructions at [Ollama's website](https://ollama.ai)\n  </Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-the-vector-database",
+  "links": []
+}

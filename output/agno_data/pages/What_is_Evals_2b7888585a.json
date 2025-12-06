@@ -1,0 +1,19 @@
+{
+  "title": "What is Evals",
+  "content": "Source: https://docs.agno.com/basics/evals/overview\n\nEvals is a way to measure the quality of your Agents and Teams.<br/> Agno provides 3 dimensions for evaluating Agents.\n\nLearn how to evaluate your Agno Agents and Teams across three key dimensions - **accuracy** (using LLM-as-a-judge), **performance** (runtime and memory), and **reliability** (tool calls).\n\n## Evaluation Dimensions\n\n<CardGroup cols={3}>\n  <Card title=\"Accuracy\" icon=\"bullseye\" href=\"/basics/evals/accuracy\">\n    The accuracy of the Agent's response using LLM-as-a-judge methodology.\n  </Card>\n\n<Card title=\"Performance\" icon=\"stopwatch\" href=\"/basics/evals/performance\">\n    The performance of the Agent's response, including latency and memory footprint.\n  </Card>\n\n<Card title=\"Reliability\" icon=\"shield-check\" href=\"/basics/evals/reliability\">\n    The reliability of the Agent's response, including tool calls and error handling.\n  </Card>\n</CardGroup>\n\nHere's a simple example of running an accuracy evaluation:\n\n```python quick_eval.py theme={null}\nfrom typing import Optional\nfrom agno.agent import Agent\nfrom agno.eval.accuracy import AccuracyEval, AccuracyResult\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.calculator import CalculatorTools",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Evaluation Dimensions",
+      "id": "evaluation-dimensions"
+    },
+    {
+      "level": "h2",
+      "text": "Quick Start",
+      "id": "quick-start"
+    }
+  ],
+  "url": "llms-txt#what-is-evals",
+  "links": []
+}

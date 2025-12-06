@@ -1,0 +1,8 @@
+{
+  "title": "Pass a dictionary - it will be automatically validated against ResearchProject schema",
+  "content": "research_team.print_response(\n    input={\n        \"project_name\": \"AI Framework Comparison 2024\",\n        \"research_topics\": [\"LangChain\", \"CrewAI\", \"AutoGen\", \"Agno\"],\n        \"target_audience\": \"AI Engineers and Developers\",\n        \"depth_level\": \"intermediate\",\n        \"max_sources\": 15,\n        \"include_recent_only\": True,\n    }\n)\n\nprint(\"\\n=== Example 2: Pydantic Model Input (direct pass-through) ===\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#pass-a-dictionary---it-will-be-automatically-validated-against-researchproject-schema",
+  "links": []
+}

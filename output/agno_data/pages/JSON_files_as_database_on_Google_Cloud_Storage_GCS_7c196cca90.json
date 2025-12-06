@@ -1,0 +1,14 @@
+{
+  "title": "JSON files as database, on Google Cloud Storage (GCS)",
+  "content": "Source: https://docs.agno.com/integrations/database/gcs/overview\n\nLearn to use Google Cloud Storage (GCS) as a database for your Agents\n\nAgno supports using [Google Cloud Storage (GCS)](https://cloud.google.com/storage) as a database with the `GcsJsonDb` class.\nSession data will be stored as JSON blobs in a GCS bucket.\n\nYou can get started with GCS following their [Get Started guide](https://cloud.google.com/docs/get-started).\n\n```python gcs_for_agent.py theme={null}\nimport uuid\nimport google.auth\nfrom agno.agent import Agent\nfrom agno.db.gcs_json import GcsJsonDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#json-files-as-database,-on-google-cloud-storage-(gcs)",
+  "links": []
+}

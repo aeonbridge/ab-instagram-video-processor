@@ -1,0 +1,34 @@
+{
+  "title": "Qdrant Vector Database",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/qdrant/overview\n\nLearn how to use Qdrant as a vector database for your Knowledge Base\n\nFollow the instructions in the [Qdrant Setup Guide](https://qdrant.tech/documentation/guides/installation/) to install Qdrant locally. Here is a guide to get API keys: [Qdrant API Keys](https://qdrant.tech/documentation/cloud/authentication/).\n\n<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      Qdrant also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>\n\n<Tip className=\"mt-4\">\n      Using <code>aload()</code> and <code>aprint\\_response()</code> with asyncio provides non-blocking operations, making your application more responsive under load.\n    </Tip>\n  </div>\n</Card>\n\n<Snippet file=\"vectordb_qdrant_params.mdx\" />\n\n## Developer Resources\n\n* View [Cookbook (Sync)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/qdrant_db/qdrant_db.py)\n* View [Cookbook (Async)](https://github.com/agno-agi/agno/blob/main/cookbook/knowledge/vector_db/qdrant_db/async_qdrant_db.py)",
+  "code_samples": [
+    {
+      "code": "<Card title=\"Async Support ⚡\">\n  <div className=\"mt-2\">\n    <p>\n      Qdrant also supports asynchronous operations, enabling concurrency and leading to better performance.\n    </p>",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Setup",
+      "id": "setup"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Qdrant Params",
+      "id": "qdrant-params"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#qdrant-vector-database",
+  "links": []
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Initialize the A2A interface specifying the agents to expose",
+  "content": "a2a = A2A(agents=[agent])\n\nagent_os = AgentOS(\n    agents=[agent],\n    interfaces=[a2a], # Pass the A2A interface to the AgentOS using the `interfaces` parameter\n)\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    agent_os.serve(app=\"a2a-interface-initialization:app\", reload=True)\n```\n\nThe A2A interface accepts A2A-compatible requests to run agents, teams, and workflows. Responses are returned in A2A-compatible format.\n\nSee the [A2A API reference](/reference-api/schema/a2a/stream-message) for more details.\n\n## Developer Resources\n\n* View [AgentOS Reference](/reference/agent-os/agent-os)\n* View [A2A Documentation](https://a2a-protocol.org/latest/)\n* View [Examples](/agent-os/usage/interfaces/a2a/basic)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/agent_os/interfaces/a2a)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "A2A API",
+      "id": "a2a-api"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#initialize-the-a2a-interface-specifying-the-agents-to-expose",
+  "links": []
+}

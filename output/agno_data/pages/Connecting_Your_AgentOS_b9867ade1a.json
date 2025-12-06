@@ -1,0 +1,69 @@
+{
+  "title": "Connecting Your AgentOS",
+  "content": "Source: https://docs.agno.com/agent-os/connecting-your-os\n\nStep-by-step guide to connect your local AgentOS to the AgentOS Control Plane\n\nConnecting your AgentOS is the critical first step to using the AgentOS Control Plane. This process establishes a connection between your running AgentOS instance and the Control Plane, allowing you to manage, monitor, and interact with your agents through the browser.\n\n<Note>\n  **Prerequisites**: You need a running AgentOS instance before you can connect\n  it to the Control Plane. If you haven't created one yet, check out our [Creating\n  Your First OS](/agent-os/creating-your-first-os) guide.\n</Note>\n\nSee the [AgentOS Control Plane](/agent-os/control-plane) documentation for more information about the Control Plane.\n\n## Step-by-Step Connection Process\n\n### 1. Access the Connection Dialog\n\nIn the Agno platform:\n\n1. Click on the team/organization dropdown in the top navigation bar\n2. Click the **\"+\"** (plus) button next to \"Add new OS\"\n3. The \"Connect your AgentOS\" dialog will open\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/MMgohmDbM-qeNPya/videos/agent-os-connect-os.mp4?fit=max&auto=format&n=MMgohmDbM-qeNPya&q=85&s=c427bf5bbd76c0495540b49aa64f5604\" type=\"video/mp4\" data-path=\"videos/agent-os-connect-os.mp4\" />\n  </video>\n</Frame>\n\n### 2. Choose Your Environment\n\nSelect **\"Local\"** for development or **\"Live\"** for production:\n\n* **Local**: Connects to an AgentOS running on your local machine\n* **Live**: Connects to a production AgentOS running on your infrastructure\n\n<Note>Live AgentOS connections require a PRO subscription.</Note>\n\n### 3. Configure Connection Settings\n\n* **Default Local**: `http://localhost:7777`\n* **Custom Local**: You can change the port if your AgentOS runs on a different port\n* **Live**: Enter your production HTTPS URL\n\n<Warning>\n  Make sure your AgentOS is actually running on the specified endpoint before\n  attempting to connect.\n</Warning>\n\nGive your AgentOS a descriptive name:\n\n* Use clear, descriptive names like \"Development OS\" or \"Production Chat Bot\"\n* This name will appear in your OS list and help you identify different instances\n\nAdd tags to organize your AgentOS instances:\n\n* Examples: `development`, `production`, `chatbot`, `research`\n* Tags help filter and organize multiple OS instances\n* Click the **\"+\"** button to add multiple tags\n\n### 4. Test and Connect\n\n1. Click the **\"CONNECT\"** button\n2. The platform will attempt to establish a connection to your AgentOS\n3. If successful, you'll see your new OS in the organization dashboard\n\n## Verifying Your Connection\n\nOnce connected, you should see:\n\n1. **OS Status**: \"Running\" indicator in the platform\n2. **Available Features**: Chat, Knowledge, Memory, Sessions, etc. should be accessible\n3. **Agent List**: Your configured agents should appear in the chat interface\n\n## Securing Your Connection\n\nProtect your AgentOS APIs and Control Plane access with bearer-token authentication. Security keys provide essential protection for both development and production environments.\n\n* Generate unique security keys per AgentOS instance\n* Rotate keys easily through the organization settings\n* Configure bearer-token authentication on your server\n\n<Frame>\n  <video autoPlay muted loop playsInline style={{ borderRadius: \"0.5rem\", width: \"100%\", height: \"auto\" }}>\n    <source src=\"https://mintcdn.com/agno-v2/xm93WWN8gg4nzCGE/videos/agentos-security-key.mp4?fit=max&auto=format&n=xm93WWN8gg4nzCGE&q=85&s=0a87c2a894982a3eb075fe282a21c491\" type=\"video/mp4\" data-path=\"videos/agentos-security-key.mp4\" />\n  </video>\n</Frame>\n\n<Note>\n  For complete security setup instructions, including environment configuration\n  and best practices, see the [Security Key](/agent-os/security) documentation.\n</Note>\n\n## Managing Connected OS Instances\n\n### Switching Between OS Instances\n\n1. Use the dropdown in the top navigation bar\n2. Select the OS instance you want to work with\n3. All platform features will now connect to the selected OS\n\n### Disconnecting an OS\n\n1. Go to the organization settings\n2. Find the OS in your list\n3. Click the delete option\n\n<Warning>\n  Disconnecting an OS doesn't stop the AgentOS instance - it only removes it\n  from the platform interface.\n</Warning>\n\nOnce your AgentOS is successfully connected:\n\n<CardGroup cols={3}>\n  <Card title=\"Explore the Chat Interface\" icon=\"comment\" href=\"/agent-os/features/chat-interface\">\n    Start having conversations with your connected agents\n  </Card>\n\n<Card title=\"Manage Knowledge\" icon=\"brain\" href=\"/agent-os/features/knowledge-management\">\n    Upload and organize your knowledge bases\n  </Card>\n\n<Card title=\"Monitor Sessions\" icon=\"chart-line\" href=\"/agent-os/features/session-tracking\">\n    Track and analyze your agent interactions\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Overview",
+      "id": "overview"
+    },
+    {
+      "level": "h2",
+      "text": "Step-by-Step Connection Process",
+      "id": "step-by-step-connection-process"
+    },
+    {
+      "level": "h3",
+      "text": "1. Access the Connection Dialog",
+      "id": "1.-access-the-connection-dialog"
+    },
+    {
+      "level": "h3",
+      "text": "2. Choose Your Environment",
+      "id": "2.-choose-your-environment"
+    },
+    {
+      "level": "h3",
+      "text": "3. Configure Connection Settings",
+      "id": "3.-configure-connection-settings"
+    },
+    {
+      "level": "h3",
+      "text": "4. Test and Connect",
+      "id": "4.-test-and-connect"
+    },
+    {
+      "level": "h2",
+      "text": "Verifying Your Connection",
+      "id": "verifying-your-connection"
+    },
+    {
+      "level": "h2",
+      "text": "Securing Your Connection",
+      "id": "securing-your-connection"
+    },
+    {
+      "level": "h2",
+      "text": "Managing Connected OS Instances",
+      "id": "managing-connected-os-instances"
+    },
+    {
+      "level": "h3",
+      "text": "Switching Between OS Instances",
+      "id": "switching-between-os-instances"
+    },
+    {
+      "level": "h3",
+      "text": "Disconnecting an OS",
+      "id": "disconnecting-an-os"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#connecting-your-agentos",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Basic Conversational Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/usage/basic-workflow-agent\n\nThis example demonstrates a basic conversational workflow with a WorkflowAgent.\n\nThis example shows how to use the `WorkflowAgent` to create a conversational workflow.\n\n```python basic_conversational_workflow.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.workflow import WorkflowAgent\nfrom agno.workflow.types import StepInput\nfrom agno.workflow.workflow import Workflow\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\nstory_writer = Agent(\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    instructions=\"You are tasked with writing a 100 word story based on a given topic\",\n)\n\nstory_formatter = Agent(\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    instructions=\"You are tasked with breaking down a short story in prelogues, body and epilogue\",\n)\n\ndef add_references(step_input: StepInput):\n    \"\"\"Add references to the story\"\"\"\n\nprevious_output = step_input.previous_step_content\n\nif isinstance(previous_output, str):\n        return previous_output + \"\\n\\nReferences: https://www.agno.com\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#basic-conversational-workflow",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Agno will automatically detect and use these loggers",
+  "content": "agent = Agent()\nagent.print_response(\"Hello from agent!\")  # Agent logs will go to agent.log\n\nteam = Team(members=[agent])\nteam.print_response(\"Hello from team!\")  # Team logs will go to team.log",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#agno-will-automatically-detect-and-use-these-loggers",
+  "links": []
+}

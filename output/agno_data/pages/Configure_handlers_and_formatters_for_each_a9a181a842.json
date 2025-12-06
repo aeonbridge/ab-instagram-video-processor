@@ -1,0 +1,8 @@
+{
+  "title": "Configure handlers and formatters for each",
+  "content": "for logger in [custom_agent_logger, custom_team_logger, custom_workflow_logger]:\n    handler = logging.StreamHandler()\n    handler.setFormatter(logging.Formatter(\"[%(name)s] %(levelname)s: %(message)s\"))\n    logger.addHandler(handler)\n    logger.setLevel(logging.INFO)\n    logger.propagate = False",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#configure-handlers-and-formatters-for-each",
+  "links": []
+}

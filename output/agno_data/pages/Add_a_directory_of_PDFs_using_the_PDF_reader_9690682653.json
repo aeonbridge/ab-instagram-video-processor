@@ -1,0 +1,34 @@
+{
+  "title": "Add a directory of PDFs using the PDF reader",
+  "content": "knowledge.add_content(path=\"presentations/\", reader=PdfReader())\n```\n\n## Best Practices for Search & Retrieval\n\n* Organize logically; group related content\n* Use consistent terminology\n* Include context and cross-references\n* Keep content current; retire outdated docs\n\n### Technical Optimization\n\n* Choose appropriate chunk sizes and strategies\n* Select a quality embedder for your domain\n* Configure VectorDB search type (vector/keyword/hybrid)\n* Add a reranker for better ordering\n\n### Monitoring and Improvement\n\n* Test with real user queries regularly\n* Observe what agents retrieve\n* Gather feedback when answers lack context\n* Iterate on chunking, metadata, and search configuration\n\n<CardGroup cols={3}>\n  <Card title=\"Advanced Filtering\" icon=\"filter\" href=\"/basics/knowledge/filters/advanced-filtering\">\n    Use filter expressions for complex logical conditions\n  </Card>\n\n<Card title=\"Content Database\" icon=\"database\" href=\"/basics/knowledge/content-db\">\n    Learn how content metadata is tracked and managed\n  </Card>\n\n<Card title=\"Vector Databases\" icon=\"vector-square\" href=\"/basics/vectordb/overview\">\n    Explore storage options for your knowledge base\n  </Card>\n\n<Card title=\"Hybrid Search\" icon=\"magnifying-glass\" href=\"/basics/knowledge/search-and-retrieval/hybrid-search\">\n    Deep dive into advanced search strategies\n  </Card>\n\n<Card title=\"Performance Tips\" icon=\"gauge\" href=\"/basics/knowledge/performance-tips\">\n    Optimize your knowledge base for speed and accuracy\n  </Card>\n</CardGroup>",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Best Practices for Search & Retrieval",
+      "id": "best-practices-for-search-&-retrieval"
+    },
+    {
+      "level": "h3",
+      "text": "Content Strategy",
+      "id": "content-strategy"
+    },
+    {
+      "level": "h3",
+      "text": "Technical Optimization",
+      "id": "technical-optimization"
+    },
+    {
+      "level": "h3",
+      "text": "Monitoring and Improvement",
+      "id": "monitoring-and-improvement"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#add-a-directory-of-pdfs-using-the-pdf-reader",
+  "links": []
+}

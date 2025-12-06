@@ -1,0 +1,8 @@
+{
+  "title": "Create a Shopping List Manager Agent that maintains state",
+  "content": "agent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    # Initialize the session state with an empty shopping list (default session state for all sessions)\n    session_state={\"shopping_list\": []},\n    db=SqliteDb(db_file=\"tmp/example.db\"),\n    tools=[add_item, remove_item, list_items],\n    # You can use variables from the session state in the instructions\n    instructions=dedent(\"\"\"\\\n        Your job is to manage a shopping list.\n\nThe shopping list starts empty. You can add items, remove items by name, and list all items.\n\nCurrent shopping list: {shopping_list}\n    \"\"\"),\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-a-shopping-list-manager-agent-that-maintains-state",
+  "links": []
+}

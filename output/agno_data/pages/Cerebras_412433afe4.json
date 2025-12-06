@@ -1,0 +1,28 @@
+{
+  "title": "Cerebras",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/cerebras/overview\n\nLearn how to use Cerebras models in Agno.\n\n[Cerebras Inference](https://inference-docs.cerebras.ai/introduction) provides high-speed, low-latency AI model inference powered by Cerebras Wafer-Scale Engines and CS-3 systems. Agno integrates directly with the Cerebras Python SDK, allowing you to use state-of-the-art Llama models with a simple interface.\n\nTo use Cerebras with Agno, you need to:\n\n1. **Install the required packages:**\n\n2. **Set your API key:**\n   The Cerebras SDK expects your API key to be available as an environment variable:\n\nHere's how to use a Cerebras model with Agno:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.cerebras import Cerebras\n\nagent = Agent(\n    model=Cerebras(id=\"llama-4-scout-17b-16e-instruct\"),\n    markdown=True,\n)",
+  "code_samples": [
+    {
+      "code": "2. **Set your API key:**\n   The Cerebras SDK expects your API key to be available as an environment variable:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Basic Usage\n\nHere's how to use a Cerebras model with Agno:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Basic Usage",
+      "id": "basic-usage"
+    }
+  ],
+  "url": "llms-txt#cerebras",
+  "links": []
+}

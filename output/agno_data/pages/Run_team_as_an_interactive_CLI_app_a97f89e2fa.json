@@ -1,0 +1,14 @@
+{
+  "title": "Run team as an interactive CLI app",
+  "content": "team.cli_app(stream=True)\n```\n\n<Note>\n  Use `await team.acli_app()` to run the team asynchronously in an interactive CLI app.\n</Note>\n\n## Developer Resources\n\n* View the [Team reference](/reference/teams/team)\n* View [Team Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/teams/README.md)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#run-team-as-an-interactive-cli-app",
+  "links": []
+}

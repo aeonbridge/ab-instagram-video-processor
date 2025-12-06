@@ -1,0 +1,14 @@
+{
+  "title": "Knowledge Tools",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/knowledge\n\nKnowledgeTools provide intelligent search and analysis capabilities over knowledge bases with reasoning integration.\n\nThe following agent can search and analyze knowledge bases:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.knowledge import KnowledgeTools\nfrom agno.knowledge import Knowledge",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#knowledge-tools",
+  "links": []
+}

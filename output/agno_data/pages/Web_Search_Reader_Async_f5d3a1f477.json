@@ -1,0 +1,14 @@
+{
+  "title": "Web Search Reader Async",
+  "content": "Source: https://docs.agno.com/basics/knowledge/readers/usage/web-search-reader-async\n\nThe **Web Search Reader** searches and reads web search results, converting them into vector embeddings for your knowledge base.\n\n```python examples/basics/knowledge/readers/web_search_reader_async.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.db.postgres.postgres import PostgresDb\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.knowledge.reader.web_search_reader import WebSearchReader\nfrom agno.vectordb.pgvector import PgVector\n\ndb_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\ndb = PostgresDb(id=\"web-search-db\", db_url=db_url)\n\nvector_db = PgVector(\n    db_url=db_url,\n    table_name=\"web_search_documents\",\n)\nknowledge = Knowledge(\n    name=\"Web Search Documents\",\n    contents_db=db,\n    vector_db=vector_db,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#web-search-reader-async",
+  "links": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Brandfetch",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/brandfetch\n\nBrandfetchTools provides access to brand data and logo information through the Brandfetch API.\n\nThe following agent can search for brand information and retrieve brand data:\n\n| Parameter                     | Type              | Default                          | Description                                                   |\n| ----------------------------- | ----------------- | -------------------------------- | ------------------------------------------------------------- |\n| `api_key`                     | `Optional[str]`   | `None`                           | Brandfetch API key. Uses BRANDFETCH\\_API\\_KEY if not set.     |\n| `client_id`                   | `Optional[str]`   | `None`                           | Brandfetch Client ID for search. Uses BRANDFETCH\\_CLIENT\\_ID. |\n| `base_url`                    | `str`             | `\"https://api.brandfetch.io/v2\"` | Brandfetch API base URL.                                      |\n| `timeout`                     | `Optional[float]` | `20.0`                           | Request timeout in seconds.                                   |\n| `enable_search_by_identifier` | `bool`            | `True`                           | Enable searching brands by domain/identifier.                 |\n| `enable_search_by_brand`      | `bool`            | `False`                          | Enable searching brands by name.                              |\n| `async_tools`                 | `bool`            | `False`                          | Enable async versions of tools.                               |\n\n| Function                | Description                                               |\n| ----------------------- | --------------------------------------------------------- |\n| `search_by_identifier`  | Search for brand data using domain or company identifier. |\n| `search_by_brand`       | Search for brands by name (requires client\\_id).          |\n| `asearch_by_identifier` | Async version of search by identifier.                    |\n| `asearch_by_brand`      | Async version of search by brand name.                    |\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/brandfetch.py)\n* [Brandfetch API Documentation](https://docs.brandfetch.com/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#brandfetch",
+  "links": []
+}

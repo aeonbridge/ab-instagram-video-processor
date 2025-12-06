@@ -1,0 +1,8 @@
+{
+  "title": "Example 2: Parallel Primitive with Event Storage",
+  "content": "print(\"=== 2. Parallel Example ===\")\nparallel_workflow = Workflow(\n    name=\"Parallel Research Workflow\",\n    steps=[\n        Parallel(\n            Step(name=\"News Research\", agent=news_agent),\n            Step(name=\"Web Search\", agent=search_agent),\n            name=\"Parallel Research\",\n        ),\n        Step(name=\"Combine Results\", agent=analysis_agent),\n    ],\n    db=SqliteDb(\n        session_table=\"workflow_parallel\",\n        db_file=\"tmp/workflow_parallel.db\",\n    ),\n    store_events=True,\n    events_to_skip=[\n        WorkflowRunEvent.parallel_execution_started,\n        WorkflowRunEvent.parallel_execution_completed,\n    ],\n)\n\nprint(\"Running Parallel workflow...\")\nfor event in parallel_workflow.run(\n    input=\"Research machine learning developments\",\n    stream=True,\n    stream_events=True,\n):\n    # Filter out RunContentEvent from printing\n    if not isinstance(event, RunContentEvent):\n        print(\n            f\"Event: {event.event if hasattr(event, 'event') else type(event).__name__}\"\n        )\n\nrun_response = parallel_workflow.get_last_run_output()\nprint(f\"Parallel workflow stored {len(run_response.events)} events\")\nprint_stored_events(run_response, \"Parallel Workflow\")\nprint()\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#example-2:-parallel-primitive-with-event-storage",
+  "links": []
+}

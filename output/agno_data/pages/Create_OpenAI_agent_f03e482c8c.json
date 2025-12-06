@@ -1,0 +1,8 @@
+{
+  "title": "Create OpenAI agent",
+  "content": "openai_agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=\"You are a helpful assistant.\",\n    db=db,\n    add_history_to_context=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-openai-agent",
+  "links": []
+}

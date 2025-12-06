@@ -1,0 +1,24 @@
+{
+  "title": "Redshift",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/database/redshift\n\nThe RedshiftTools toolkit enables an Agent to interact with Amazon Redshift data warehouses.\n\n**RedshiftTools** enable an Agent to interact with Amazon Redshift data warehouses.\n\nThe following example requires the `redshift_connector` library.\n\nYou will also need an Amazon Redshift cluster or Redshift Serverless endpoint. For IAM authentication, ensure your AWS credentials are configured.\n\nThe following agent will list all tables in the database.\n\n```python redshift_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.redshift import RedshiftTools",
+  "code_samples": [
+    {
+      "code": "You will also need an Amazon Redshift cluster or Redshift Serverless endpoint. For IAM authentication, ensure your AWS credentials are configured.\n\n## Example\n\nThe following agent will list all tables in the database.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#redshift",
+  "links": []
+}

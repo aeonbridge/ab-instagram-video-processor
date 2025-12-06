@@ -1,0 +1,8 @@
+{
+  "title": "run_response: Iterator[RunOutputEvent] = agent.run(\"Share a 2 sentence horror story\", stream=True)",
+  "content": "",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run_response:-iterator[runoutputevent]-=-agent.run(\"share-a-2-sentence-horror-story\",-stream=true)",
+  "links": []
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Agent gets ALL database tools - overwhelming!",
+  "content": "tools = MCPTools(url=\"http://127.0.0.1:5001\")  # 50+ tools\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "**With MCPToolbox (3 relevant tools):**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#agent-gets-all-database-tools---overwhelming!",
+  "links": []
+}

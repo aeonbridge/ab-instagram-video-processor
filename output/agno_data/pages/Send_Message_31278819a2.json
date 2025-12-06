@@ -1,0 +1,8 @@
+{
+  "title": "Send Message",
+  "content": "Source: https://docs.agno.com/reference-api/schema/a2a/send-message\n\npost /a2a/message/send\nSend a message to an Agno Agent, Team, or Workflow. The Agent, Team or Workflow is identified via the 'agentId' field in params.message or X-Agent-ID header. Optional: Pass user ID via X-User-ID header (recommended) or 'userId' in params.message.metadata.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#send-message",
+  "links": []
+}

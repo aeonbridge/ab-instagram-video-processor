@@ -1,0 +1,24 @@
+{
+  "title": "Send a message to a Space in Webex",
+  "content": "agent.print_response(\n    \"Send a funny ice-breaking message to the webex Welcome space\", markdown=True\n)\n```\n\n| Parameter             | Type   | Default | Description                                                                                             |\n| --------------------- | ------ | ------- | ------------------------------------------------------------------------------------------------------- |\n| `access_token`        | `str`  | `None`  | Webex access token for authentication. If not provided, uses WEBEX\\_ACCESS\\_TOKEN environment variable. |\n| `enable_send_message` | `bool` | `True`  | Enable sending messages to Webex spaces.                                                                |\n| `enable_list_rooms`   | `bool` | `True`  | Enable listing Webex spaces/rooms.                                                                      |\n| `all`                 | `bool` | `False` | Enable all functionality.                                                                               |\n\n| Function       | Description                                                                                                     |\n| -------------- | --------------------------------------------------------------------------------------------------------------- |\n| `send_message` | Sends a message to a Webex room. Parameters: `room_id` (str) for the target room, `text` (str) for the message. |\n| `list_rooms`   | Lists all available Webex rooms/spaces with their details including ID, title, type, and visibility settings.   |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/webex.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/webex_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#send-a-message-to-a-space-in-webex",
+  "links": []
+}

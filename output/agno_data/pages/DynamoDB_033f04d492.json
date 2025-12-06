@@ -1,0 +1,8 @@
+{
+  "title": "DynamoDB",
+  "content": "Source: https://docs.agno.com/reference/storage/dynamodb\n\nDynamoDB is a class that implements the Db interface using Amazon DynamoDB as the backend storage system. It provides scalable, managed storage for agent sessions with support for indexing and efficient querying.\n\n<Snippet file=\"db-dynamodb-params.mdx\" />\n\n<Snippet file=\"db-new-bulk-methods.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#dynamodb",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Audio Configuration",
+  "content": "SAMPLE_RATE = 24000  # Hz (24kHz)\nCHANNELS = 1  # Mono (Change to 2 if Stereo)\nSAMPLE_WIDTH = 2  # Bytes (16 bits)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#audio-configuration",
+  "links": []
+}

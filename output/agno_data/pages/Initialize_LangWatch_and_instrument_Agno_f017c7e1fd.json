@@ -1,0 +1,8 @@
+{
+  "title": "Initialize LangWatch and instrument Agno",
+  "content": "langwatch.setup(instrumentors=[AgnoInstrumentor()])",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-langwatch-and-instrument-agno",
+  "links": []
+}

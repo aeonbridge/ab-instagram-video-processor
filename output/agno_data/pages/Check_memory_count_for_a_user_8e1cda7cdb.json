@@ -1,0 +1,8 @@
+{
+  "title": "Check memory count for a user",
+  "content": "memories = agent.get_user_memories(user_id=\"user_123\")\nprint(f\"User has {len(memories)} memories\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#check-memory-count-for-a-user",
+  "links": []
+}

@@ -1,0 +1,58 @@
+{
+  "title": "-*- Build container environment",
+  "content": "container_env = {\n    ...\n    # Migrate database on startup using alembic\n    \"MIGRATE_DB\": ws_settings.prd_db_enabled,\n}\n...\nbash terminal theme={null}\n  ag infra patch --env prd --infra aws --name td\n  bash shorthand theme={null}\n  ag infra patch -e prd -i aws -n td\n  bash terminal theme={null}\n  ag infra patch --env prd --infra aws --name service\n  bash shorthand theme={null}\n  ag infra patch -e prd -i aws -n service\n  bash  theme={null}\nECS_CLUSTER=ai-app-prd-cluster\nTASK_ARN=$(aws ecs list-tasks --cluster ai-app-prd-cluster --query \"taskArns[0]\" --output text)\nCONTAINER_NAME=ai-api-prd\n\naws ecs execute-command --cluster $ECS_CLUSTER \\\n    --task $TASK_ARN \\\n    --container $CONTAINER_NAME \\\n    --interactive \\\n    --command \"alembic -c db/alembic.ini upgrade head\"\nbash  theme={null}\ndocker exec -it ai-api cd db && alembic init migrations\npython db/migrations/env.py theme={null}",
+  "code_samples": [
+    {
+      "code": "### Update the ECS Task Definition\n\nBecause we updated the Environment Variables, we need to update the Task Definition:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Update the ECS Service\n\nAfter updating the task definition, redeploy the production application:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Manually migrate prodution database\n\nAnother approach is to SSH into the production container to run the migration manually. Your ECS tasks are already enabled with SSH access. Run the alembic command to migrate the production database:",
+      "language": "unknown"
+    },
+    {
+      "code": "***\n\n## How the migrations directory was created\n\n<Note>\n  These commands have been run and are described for completeness\n</Note>\n\nThe migrations directory was created using:",
+      "language": "unknown"
+    },
+    {
+      "code": "* After running the above command, the `db/migrations` directory should be created.\n* Update `alembic.ini`\n  * set `script_location = db/migrations`\n  * uncomment `black` hook in `[post_write_hooks]`\n* Update `db/migrations/env.py` file following [this link](https://alembic.sqlalchemy.org/en/latest/autogenerate.html)\n* Add the following function to `configure` to only include tables in the target\\_metadata",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Update the ECS Task Definition",
+      "id": "update-the-ecs-task-definition"
+    },
+    {
+      "level": "h3",
+      "text": "Update the ECS Service",
+      "id": "update-the-ecs-service"
+    },
+    {
+      "level": "h2",
+      "text": "Manually migrate prodution database",
+      "id": "manually-migrate-prodution-database"
+    },
+    {
+      "level": "h2",
+      "text": "How the migrations directory was created",
+      "id": "how-the-migrations-directory-was-created"
+    }
+  ],
+  "url": "llms-txt#-*--build-container-environment",
+  "links": []
+}

@@ -1,0 +1,61 @@
+{
+  "title": "HackerNews Team",
+  "content": "Source: https://docs.agno.com/examples/use-cases/teams/hackernews_team\n\nBuild a team that aggregates, curates, and analyzes trending HackerNews stories. This example combines multiple specialized agents to research topics, read articles, and generate comprehensive summaries with structured output.\n\nBy building this team, you'll understand:\n\n* How to integrate multiple data sources (HackerNews API, web search, article readers)\n* How to define structured output schemas using Pydantic models\n* How to coordinate agents with specific instructions for complex workflows\n* How to combine real-time data with web research for comprehensive analysis\n\nBuild news aggregation platforms, trend analysis systems, content curation tools, or automated newsletter generators.\n\nThe team coordinates three specialized agents to create detailed articles:\n\n1. **Discover**: HackerNews researcher finds trending stories from HackerNews\n2. **Read**: Article reader extracts full content from story URLs\n3. **Research**: Web searcher finds additional context and related information\n4. **Synthesize**: Team combines all findings into structured articles with summaries and references\n\nThe team outputs structured data following a defined schema with title, summary, and reference links.\n\nThe team will research HackerNews stories, read the full articles, and search for additional context. Each agent contributes their specialized capability: finding stories, extracting article content, and web research.\n\nThe output is a structured Article object with a title, comprehensive summary, and reference links. You'll see responses from all team members showing how they collaborate to gather and synthesize information.\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API key\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Team\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>\n\n* Modify the query to track specific topics or keywords on HackerNews\n* Adjust the `Article` schema to include additional fields like categories or sentiment\n* Change the number of stories analyzed in the prompt\n* Explore [Input & Output](/basics/input-output/overview) for custom data schemas",
+  "code_samples": [
+    {
+      "code": "## What to Expect\n\nThe team will research HackerNews stories, read the full articles, and search for additional context. Each agent contributes their specialized capability: finding stories, extracting article content, and web research.\n\nThe output is a structured Article object with a title, comprehensive summary, and reference links. You'll see responses from all team members showing how they collaborate to gather and synthesize information.\n\n## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Team\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What You'll Learn",
+      "id": "what-you'll-learn"
+    },
+    {
+      "level": "h2",
+      "text": "Use Cases",
+      "id": "use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "How It Works",
+      "id": "how-it-works"
+    },
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "What to Expect",
+      "id": "what-to-expect"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#hackernews-team",
+  "links": []
+}

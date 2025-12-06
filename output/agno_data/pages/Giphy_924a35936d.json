@@ -1,0 +1,39 @@
+{
+  "title": "Giphy",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/giphy\n\n**GiphyTools** enables an Agent to search for GIFs on GIPHY.\n\nThe following agent will search GIPHY for a GIF appropriate for a birthday message.\n\n| Parameter            | Type   | Default | Description                                       |\n| -------------------- | ------ | ------- | ------------------------------------------------- |\n| `api_key`            | `str`  | `None`  | If you want to manually supply the GIPHY API key. |\n| `limit`              | `int`  | `1`     | The number of GIFs to return in a search.         |\n| `enable_search_gifs` | `bool` | `True`  | Enable the search\\_gifs functionality.            |\n| `all`                | `bool` | `False` | Enable all functionality.                         |\n\n| Function      | Description                                         |\n| ------------- | --------------------------------------------------- |\n| `search_gifs` | Searches GIPHY for a GIF based on the query string. |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/giphy.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/giphy_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will search GIPHY for a GIF appropriate for a birthday message.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#giphy",
+  "links": []
+}

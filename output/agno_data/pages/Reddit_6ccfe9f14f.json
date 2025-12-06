@@ -1,0 +1,29 @@
+{
+  "title": "Reddit",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/reddit\n\nRedditTools enables agents to interact with Reddit for browsing posts, comments, and subreddit information.\n\nThe following agent can browse and analyze Reddit content:\n\n| Parameter         | Type                    | Default              | Description                                                   |\n| ----------------- | ----------------------- | -------------------- | ------------------------------------------------------------- |\n| `reddit_instance` | `Optional[praw.Reddit]` | `None`               | Existing Reddit instance to use.                              |\n| `client_id`       | `Optional[str]`         | `None`               | Reddit client ID. Uses REDDIT\\_CLIENT\\_ID if not set.         |\n| `client_secret`   | `Optional[str]`         | `None`               | Reddit client secret. Uses REDDIT\\_CLIENT\\_SECRET if not set. |\n| `user_agent`      | `Optional[str]`         | `\"RedditTools v1.0\"` | User agent string for API requests.                           |\n| `username`        | `Optional[str]`         | `None`               | Reddit username for authenticated access.                     |\n| `password`        | `Optional[str]`         | `None`               | Reddit password for authenticated access.                     |\n\n| Function              | Description                                              |\n| --------------------- | -------------------------------------------------------- |\n| `get_subreddit_info`  | Get information about a specific subreddit.              |\n| `get_subreddit_posts` | Get posts from a subreddit with various sorting options. |\n| `search_subreddits`   | Search for subreddits by name or topic.                  |\n| `get_post_details`    | Get detailed information about a specific post.          |\n| `get_post_comments`   | Get comments from a specific post.                       |\n| `search_posts`        | Search for posts across Reddit or within subreddits.     |\n| `get_user_info`       | Get information about a Reddit user.                     |\n| `get_user_posts`      | Get posts submitted by a specific user.                  |\n| `get_user_comments`   | Get comments made by a specific user.                    |\n| `create_post`         | Create a new post (requires authentication).             |\n| `create_comment`      | Create a comment on a post (requires authentication).    |\n| `vote_on_post`        | Vote on a post (requires authentication).                |\n| `vote_on_comment`     | Vote on a comment (requires authentication).             |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools Source](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/reddit.py)\n* [Reddit API Documentation](https://www.reddit.com/dev/api/)\n* [PRAW Documentation](https://praw.readthedocs.io/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#reddit",
+  "links": []
+}

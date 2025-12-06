@@ -1,0 +1,8 @@
+{
+  "title": "Secondary knowledge base for cross-validation",
+  "content": "validation_knowledge = Knowledge(\n    vector_db=LanceDb(\n        table_name=\"recipes_validation\",\n        uri=\"tmp/lancedb\",\n        search_type=SearchType.vector,\n        embedder=OpenAIEmbedder(id=\"text-embedding-3-small\"),\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#secondary-knowledge-base-for-cross-validation",
+  "links": []
+}

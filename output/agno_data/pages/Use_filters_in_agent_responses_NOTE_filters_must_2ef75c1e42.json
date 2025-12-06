@@ -1,0 +1,19 @@
+{
+  "title": "Use filters in agent responses - NOTE: filters must be in a list!",
+  "content": "sales_agent.print_response(\n    \"What were our Q1 sales results?\",\n    knowledge_filters=[  # ← Must be a list!\n        AND(EQ(\"data_type\", \"sales\"), EQ(\"quarter\", \"Q1\"))\n    ]\n)\npython  theme={null}\nfrom agno.filters import AND, OR, NOT, EQ, IN, GT",
+  "code_samples": [
+    {
+      "code": "### Complex Filter Examples",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Complex Filter Examples",
+      "id": "complex-filter-examples"
+    }
+  ],
+  "url": "llms-txt#use-filters-in-agent-responses---note:-filters-must-be-in-a-list!",
+  "links": []
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Create and run agents - they're automatically traced!",
+  "content": "agent = Agent(\n    name=\"Research Agent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    instructions=\"You are a research assistant\",\n)\n\nresponse = agent.run(\"What is quantum computing?\")\npython  theme={null}\nfrom agno.os import AgentOS\n\nagent_os = AgentOS(\n    agents=[my_agent],\n    tracing=True,  # Enable tracing\n    db=tracing_db,\n)\npython  theme={null}\n  from agno.agent import Agent\n  from agno.db.sqlite import SqliteDb\n  from agno.models.openai import OpenAIChat\n  from agno.tracing import setup_tracing\n  from agno.tools.duckduckgo import DuckDuckGoTools\n  from agno.tools.hackernews import HackerNewsTools\n\n# Each agent has its own database for sessions/memory\n  agent1_db = SqliteDb(db_file=\"tmp/agent1.db\", id=\"agent1_db\")\n  agent2_db = SqliteDb(db_file=\"tmp/agent2.db\", id=\"agent2_db\")\n\n# Dedicated database for ALL traces (separate from agent databases)\n  tracing_db = SqliteDb(db_file=\"tmp/traces.db\", id=\"traces_db\")\n\n# Enable tracing to the dedicated database\n  setup_tracing(\n      db=tracing_db,\n      batch_processing=True,\n      max_queue_size=1024,\n      max_export_batch_size=256,\n  )\n\n# Agent 1: HackerNews specialist with its own database\n  hackernews_agent = Agent(\n      name=\"HackerNews Agent\",\n      model=OpenAIChat(id=\"gpt-4o-mini\"),\n      tools=[HackerNewsTools()],\n      instructions=\"You are a hacker news agent. Answer questions concisely.\",\n      markdown=True,\n      db=agent1_db,  # Agent's own database\n  )\n\n# Agent 2: Web search specialist with its own database\n  search_agent = Agent(\n      name=\"Web Search Agent\",\n      model=OpenAIChat(id=\"gpt-4o-mini\"),\n      tools=[DuckDuckGoTools()],\n      instructions=\"You are a web search agent. Answer questions concisely.\",\n      markdown=True,\n      db=agent2_db,  # Agent's own database\n  )\n\n# Both agents are traced to the same tracing_db\n  hackernews_agent.run(\"What's trending on HackerNews?\")\n  search_agent.run(\"Latest AI news\")\n\n# Query traces for both agents from one place\n  traces, count = tracing_db.get_traces(limit=20)\n  print(f\"Found {count} traces across all agents\")\n  python  theme={null}\nsetup_tracing(\n    db=tracing_db,\n    batch_processing=True,\n    max_queue_size=2048,           # Max traces in memory\n    max_export_batch_size=512,     # Traces per batch write\n    schedule_delay_millis=5000,    # Export every 5 seconds\n)\npython  theme={null}\nsetup_tracing(\n    db=tracing_db,\n    batch_processing=False\n)\n```\n\n* Traces appear immediately\n* No memory buffering\n\n* More database writes\n* Slight performance overhead\n\n<Tip>\n  Use **batch processing** in production and **simple processing** for development/debugging when you need immediate trace visibility.\n</Tip>\n\n<CardGroup cols={2}>\n  <Card title=\"DB Functions\" icon=\"database\" href=\"/basics/tracing/db-functions\">\n    Query traces and spans from your database\n  </Card>\n\n<Card title=\"Cookbook\" icon=\"book\" href=\"https://github.com/agno-agi/agno/tree/main/cookbook/integrations/observability/trace_to_database.py\">\n    Full example code\n  </Card>\n</CardGroup>",
+  "code_samples": [
+    {
+      "code": "<Warning>\n  Call `setup_tracing()` **before** creating your agents. This ensures the instrumentation is active when agents are initialized.\n</Warning>\n\n### Option 2: Using AgentOS\n\nWhen deploying agents with AgentOS, you can enable tracing with a simple parameter:",
+      "language": "unknown"
+    },
+    {
+      "code": "<Info>\n  For detailed AgentOS tracing configuration including multi-database setups, see [Tracing in AgentOS](/agent-os/tracing/overview).\n</Info>\n\n## Dedicated Traces Database\n\n<Warning>\n  **Recommended**: Use a separate database for storing traces, especially when you have multiple agents or teams with their own databases.\n</Warning>\n\nWhen agents and teams each have their own databases for sessions and memory, traces should go to a **dedicated central database**. This ensures:\n\n* **Unified observability**: All traces in one place for cross-agent analysis\n* **Simpler querying**: No need to search multiple databases\n* **Independent scaling**: Traces can grow independently from agent data\n* **Cleaner separation**: Agent data and observability data don't mix\n\n<Accordion title=\"Example: Multiple Agents with Shared Tracing\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Accordion>\n\nOnce configured, traces and spans are automatically stored in your database. The tracing system creates two tables: `agno_traces` for high-level trace information and `agno_spans` for individual span details.\n\n<Frame caption=\"Traces stored in SQLite database viewed with TablePlus\">\n  <img src=\"https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-db.png?fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=00d7b09c58d61392fc2bf09b217fb08c\" alt=\"Database view showing agno_spans table with trace data including span_id, trace_id, parent_span_id, and operation names\" data-og-width=\"2038\" width=\"2038\" data-og-height=\"480\" height=\"480\" data-path=\"images/traces-in-db.png\" data-optimize=\"true\" data-opv=\"3\" srcset=\"https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-db.png?w=280&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=0c62525a7983eab01053b339864e0ded 280w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-db.png?w=560&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=c38d5d4e0d13ef88ddee29c0dba9f9d7 560w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-db.png?w=840&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=5190bf50a2f5fdaa924ac651c0865faf 840w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-db.png?w=1100&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=bc687fbcdbfabb6cf559f91675ae756c 1100w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-db.png?w=1650&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=fd048ddb6ee2a5c5931946cac4f5099a 1650w, https://mintcdn.com/agno-v2/gChHNQRMu2Gpq6Xe/images/traces-in-db.png?w=2500&fit=max&auto=format&n=gChHNQRMu2Gpq6Xe&q=85&s=f14f9ad2dd68b64c7b8440365ed28337 2500w\" />\n</Frame>\n\nEach span record includes the `trace_id` to group related operations, `parent_span_id` for hierarchy, and the operation `name` (e.g., `Stock_Price_Agent.run`, `OpenAIChat.invoke`, `get_current_stock_price`).\n\n## Processing Modes\n\nAgno supports two trace processing modes:\n\n### Batch Processing\n\nBatch processing collects traces in memory and writes them in batches. This is more efficient and recommended for production:",
+      "language": "unknown"
+    },
+    {
+      "code": "**Pros:**\n\n* Lower database load\n* Better performance\n* Minimal impact on agent execution\n\n**Cons:**\n\n* Slight delay before traces appear (default 5 seconds)\n* Traces in memory if application crashes before export\n\n### Simple Processing (Default)\n\nSimple processing writes each trace immediately:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Option 2: Using AgentOS",
+      "id": "option-2:-using-agentos"
+    },
+    {
+      "level": "h2",
+      "text": "Dedicated Traces Database",
+      "id": "dedicated-traces-database"
+    },
+    {
+      "level": "h2",
+      "text": "Processing Modes",
+      "id": "processing-modes"
+    },
+    {
+      "level": "h3",
+      "text": "Batch Processing",
+      "id": "batch-processing"
+    },
+    {
+      "level": "h3",
+      "text": "Simple Processing (Default)",
+      "id": "simple-processing-(default)"
+    },
+    {
+      "level": "h2",
+      "text": "Next Steps",
+      "id": "next-steps"
+    }
+  ],
+  "url": "llms-txt#create-and-run-agents---they're-automatically-traced!",
+  "links": []
+}

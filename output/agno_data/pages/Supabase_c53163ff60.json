@@ -1,0 +1,14 @@
+{
+  "title": "Supabase",
+  "content": "Source: https://docs.agno.com/integrations/database/supabase/overview\n\nLearn to use Supabase as a database provider for your Agents\n\nAgno supports using [Supabase](https://supabase.com/) with the `PostgresDb` class.\n\nYou can get started with Supabase following their [Get Started guide](https://supabase.com/docs/guides/getting-started).\n\nYou can read more about the [`PostgresDb` class](/integrations/database/postgres/overview) in its section.\n\n```python supabase_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.postgres import PostgresDb\nfrom os import getenv",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#supabase",
+  "links": []
+}

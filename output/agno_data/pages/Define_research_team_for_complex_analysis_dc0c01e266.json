@@ -1,0 +1,8 @@
+{
+  "title": "Define research team for complex analysis",
+  "content": "research_team = Team(\n    name=\"Research Team\",\n    model=Claude(id=\"claude-sonnet-4-5-20250929\"),\n    members=[hackernews_agent, web_agent],\n    instructions=\"Research tech topics from Hackernews and the web\",\n)\n\ncontent_planner = Agent(\n    name=\"Content Planner\",\n    model=Claude(id=\"claude-sonnet-4-5-20250929\"),\n    instructions=[\n        \"Plan a content schedule over 4 weeks for the provided topic and research content\",\n        \"Ensure that I have posts for 3 posts per week\",\n    ],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-research-team-for-complex-analysis",
+  "links": []
+}

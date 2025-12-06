@@ -1,0 +1,14 @@
+{
+  "title": "Multiple MCP Servers",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/multiple-servers\n\nUnderstanding how to connect to multiple MCP servers with Agno\n\nAgno's MCP integration also supports handling connections to multiple servers, specifying server parameters and using your own MCP servers\n\nThere are two approaches to this:\n\n1. Using multiple `MCPTools` instances\n2. Using a single `MultiMCPTools` instance\n\n## Using multiple `MCPTools` instances\n\n```python multiple_mcp_servers.py theme={null}\nimport asyncio\nimport os\n\nfrom agno.agent import Agent\nfrom agno.tools.mcp import MCPTools\n\nasync def run_agent(message: str) -> None:\n    \"\"\"Run the Airbnb and Google Maps agent with the given message.\"\"\"\n\nenv = {\n        **os.environ,\n        \"GOOGLE_MAPS_API_KEY\": os.getenv(\"GOOGLE_MAPS_API_KEY\"),\n    }\n\n# Initialize and connect to multiple MCP servers\n    airbnb_tools = MCPTools(command=\"npx -y @openbnb/mcp-server-airbnb --ignore-robots-txt\")\n    google_maps_tools = MCPTools(command=\"npx -y @modelcontextprotocol/server-google-maps\", env=env)\n    await airbnb_tools.connect()\n    await google_maps_tools.connect()\n\ntry:\n        agent = Agent(\n            tools=[airbnb_tools, google_maps_tools],\n            markdown=True,\n        )\n\nawait agent.aprint_response(message, stream=True)\n    finally:\n        await airbnb_tools.close()\n        await google_maps_tools.close()",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Using multiple `MCPTools` instances",
+      "id": "using-multiple-`mcptools`-instances"
+    }
+  ],
+  "url": "llms-txt#multiple-mcp-servers",
+  "links": []
+}

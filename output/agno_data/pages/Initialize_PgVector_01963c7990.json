@@ -1,0 +1,8 @@
+{
+  "title": "Initialize PgVector",
+  "content": "db_url = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\nvector_db = PgVector(table_name=\"recipes\", db_url=db_url)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#initialize-pgvector",
+  "links": []
+}

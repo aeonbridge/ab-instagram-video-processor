@@ -1,0 +1,8 @@
+{
+  "title": "List Evaluation Runs",
+  "content": "Source: https://docs.agno.com/reference-api/schema/evals/list-evaluation-runs\n\nget /eval-runs\nRetrieve paginated evaluation runs with filtering and sorting options. Filter by agent, team, workflow, model, or evaluation type.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#list-evaluation-runs",
+  "links": []
+}

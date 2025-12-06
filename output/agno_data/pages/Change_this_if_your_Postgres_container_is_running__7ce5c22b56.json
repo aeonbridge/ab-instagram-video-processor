@@ -1,0 +1,8 @@
+{
+  "title": "Change this if your Postgres container is running elsewhere",
+  "content": "DB_URL = \"postgresql+psycopg://ai:ai@localhost:5532/ai\"\n\nagent = Agent(\n    model=VLLM(id=\"microsoft/Phi-3-mini-128k-instruct\"),\n    db=PostgresDb(db_url=DB_URL),\n    enable_user_memories=True,\n    enable_session_summaries=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#change-this-if-your-postgres-container-is-running-elsewhere",
+  "links": []
+}

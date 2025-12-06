@@ -1,0 +1,31 @@
+{
+  "title": "Open the file once in append-binary mode",
+  "content": "with wave.open(str(filename), \"wb\") as wav_file:\n    wav_file.setnchannels(CHANNELS)\n    wav_file.setsampwidth(SAMPLE_WIDTH)\n    wav_file.setframerate(SAMPLE_RATE)\n\n# Iterate over generated audio\n    for response in output_stream:\n        response_audio = response.response_audio  # type: ignore\n        if response_audio:\n            if response_audio.transcript:\n                print(response_audio.transcript, end=\"\", flush=True)\n            if response_audio.content:\n                try:\n                    pcm_bytes = base64.b64decode(response_audio.content)\n                    wav_file.writeframes(pcm_bytes)\n                except Exception as e:\n                    print(f\"Error decoding audio: {e}\")\nprint()\nbash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash  theme={null}\n    pip install -U openai agno\n    bash Mac theme={null}\n      python cookbook/agent_basics/multimodal/audio_streaming.py\n      bash Windows theme={null}\n      python cookbook/agent_basics/multimodal/audio_streaming.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#open-the-file-once-in-append-binary-mode",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Create workflow with loop",
+  "content": "workflow = Workflow(\n    name=\"Research and Content Workflow\",\n    description=\"Research topics in a loop until conditions are met, then create content\",\n    steps=[\n        Loop(\n            name=\"Research Loop\",\n            steps=[research_hackernews_step, research_web_step],\n            end_condition=research_evaluator,\n            max_iterations=3,  # Maximum 3 iterations\n        ),\n        content_step,\n    ],\n)\n\nif __name__ == \"__main__\":\n    # Test the workflow\n    workflow.print_response(\n        input=\"Research the latest trends in AI and machine learning, then create a summary\",\n    )\n```\n\nThis was a synchronous non-streaming example of this pattern. To checkout async and streaming versions, see the cookbooks-\n\n* [Loop Steps Workflow (sync streaming)](https://github.com/agno-agi/agno/tree/main/cookbook/workflows/_03_workflows_loop_execution/sync/loop_steps_workflow_stream.py)\n* [Loop Steps Workflow (async non-streaming)](https://github.com/agno-agi/agno/tree/main/cookbook/workflows/_03_workflows_loop_execution/async/loop_steps_workflow.py)\n* [Loop Steps Workflow (async streaming)](https://github.com/agno-agi/agno/tree/main/cookbook/workflows/_03_workflows_loop_execution/async/loop_steps_workflow_stream.py)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-workflow-with-loop",
+  "links": []
+}

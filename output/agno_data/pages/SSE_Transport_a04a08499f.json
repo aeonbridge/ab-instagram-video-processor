@@ -1,0 +1,8 @@
+{
+  "title": "SSE Transport",
+  "content": "Source: https://docs.agno.com/basics/tools/mcp/transports/sse\n\nAgno's MCP integration supports the [SSE transport](https://modelcontextprotocol.io/docs/basics/transports#server-sent-events-sse). This transport enables server-to-client streaming, and can prove more useful than [stdio](https://modelcontextprotocol.io/docs/basics/transports#standard-input%2Foutput-stdio) when working with restricted networks.\n\n<Note>\n  This transport is not recommended anymore by the MCP protocol. Use the [Streamable HTTP transport](/basics/tools/mcp/transports/streamable_http) instead.\n</Note>\n\nTo use it, initialize the `MCPTools` passing the URL of the MCP server and setting the transport to `sse`:\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.tools.mcp import MCPTools\n\nserver_url = \"http://localhost:8000/sse\"",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#sse-transport",
+  "links": []
+}

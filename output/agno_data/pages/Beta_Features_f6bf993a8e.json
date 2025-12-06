@@ -1,0 +1,19 @@
+{
+  "title": "Beta Features",
+  "content": "Source: https://docs.agno.com/integrations/models/native/anthropic/usage/betas\n\nLearn how to use Anthropic's beta features with Agno.\n\nAnthropic's `betas` are experimental features extending the capabilities of Claude models.\n\nThey are supported via the `betas` parameter when initializing the `Claude` model:\n\n```python  theme={null}\nimport anthropic\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude",
+  "code_samples": [
+    {
+      "code": "## Example",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#beta-features",
+  "links": []
+}

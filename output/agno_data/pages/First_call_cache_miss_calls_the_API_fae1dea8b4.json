@@ -1,0 +1,8 @@
+{
+  "title": "First call - cache miss, calls the API",
+  "content": "response = agent.run(\"What is the capital of France?\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#first-call---cache-miss,-calls-the-api",
+  "links": []
+}

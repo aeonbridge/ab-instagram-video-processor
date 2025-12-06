@@ -1,0 +1,8 @@
+{
+  "title": "Answer Synthesizer Agent - Specialized in synthesis",
+  "content": "answer_synthesizer = Agent(\n    name=\"Answer Synthesizer\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    role=\"Synthesize retrieved information into comprehensive answers\",\n    instructions=[\n        \"Combine information from the Primary Retriever and Context Expander.\",\n        \"Create a comprehensive, well-structured response.\",\n        \"Ensure logical flow and coherence in the final answer.\",\n        \"Include relevant details while maintaining clarity.\",\n        \"Organize information in a user-friendly format.\",\n    ],\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#answer-synthesizer-agent---specialized-in-synthesis",
+  "links": []
+}

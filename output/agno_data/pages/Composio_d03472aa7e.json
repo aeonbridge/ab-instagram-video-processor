@@ -1,0 +1,34 @@
+{
+  "title": "Composio",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/composio\n\n[**ComposioTools**](https://docs.composio.dev/framework/phidata) enable an Agent to work with tools like Gmail, Salesforce, Github, etc.\n\nThe following example requires the `composio-agno` library.\n\nThe following agent will use Github Tool from Composio Toolkit to star a repo.\n\nThe following parameters are used when calling the GitHub star repository action:\n\n| Parameter | Type  | Default | Description                          |\n| --------- | ----- | ------- | ------------------------------------ |\n| `owner`   | `str` | -       | The owner of the repository to star. |\n| `repo`    | `str` | -       | The name of the repository to star.  |\n\nComposio Toolkit provides 1000+ functions to connect to different software tools.\nOpen this [link](https://composio.dev/tools) to view the complete list of functions.",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will use Github Tool from Composio Toolkit to star a repo.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    }
+  ],
+  "url": "llms-txt#composio",
+  "links": []
+}

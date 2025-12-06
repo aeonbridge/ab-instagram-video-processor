@@ -1,0 +1,31 @@
+{
+  "title": "Create a knowledge retriever from the vector store",
+  "content": "knowledge_retriever = db.as_retriever()\n\nknowledge = Knowledge(\n    vector_db=LangChainVectorDb(knowledge_retriever=knowledge_retriever)\n)\n\nagent = Agent(knowledge=knowledge)\n\nagent.print_response(\"What did the president say?\", markdown=True)\nbash  theme={null}\n    pip install -U langchain langchain-community langchain-openai langchain-chroma pypdf openai agno\n    bash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash Mac theme={null}\n      python cookbook/knowledge/vector_db/langchain/langchain_db.py\n      bash Windows theme={null}\n      python cookbook/knowledge/vector_db/langchain/langchain_db.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-a-knowledge-retriever-from-the-vector-store",
+  "links": []
+}

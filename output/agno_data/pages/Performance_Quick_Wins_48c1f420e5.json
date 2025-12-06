@@ -1,0 +1,24 @@
+{
+  "title": "Performance Quick Wins",
+  "content": "Source: https://docs.agno.com/basics/knowledge/performance-tips\n\nPractical tips to optimize Agno knowledge base performance, improve search quality, and speed up content loading.\n\nMost knowledge bases work great with Agno's defaults. But if you're seeing slow searches, memory issues, or poor results, a few strategic changes can make a big difference.\n\nAvoid premature optimization. Focus on performance when the system shows:\n\n* **Slow search** - Queries taking more than 2-3 seconds\n* **Memory issues** - Out of memory errors during content loading\n* **Poor results** - Search returning irrelevant chunks or missing obvious matches\n* **Slow loading** - Content processing taking unusually long\n\nIf things are working fine, stick with the defaults and focus on building your application.\n\n## The 80/20 of Performance\n\nThese five changes give you the biggest performance boost for the least effort:\n\n### 1. Pick the Right Vector Database\n\nDatabase choice has the biggest impact on performance at scale:\n\n```python  theme={null}\nfrom agno.vectordb.lancedb import LanceDb\nfrom agno.vectordb.pgvector import PgVector",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "When to Optimize",
+      "id": "when-to-optimize"
+    },
+    {
+      "level": "h2",
+      "text": "The 80/20 of Performance",
+      "id": "the-80/20-of-performance"
+    },
+    {
+      "level": "h3",
+      "text": "1. Pick the Right Vector Database",
+      "id": "1.-pick-the-right-vector-database"
+    }
+  ],
+  "url": "llms-txt#performance-quick-wins",
+  "links": []
+}

@@ -1,0 +1,29 @@
+{
+  "title": "Get the most recent income statement for Apple",
+  "content": "agent.print_response(\"Get the most recent income statement for AAPL and highlight key metrics\")\n```\n\nFor more examples, see the [Financial Datasets Examples](/examples/basics/tools/others/financial_datasets).\n\n\\| Parameter | Type            | Default | Description                                                                             |\n\\| --------- | --------------- | ------- | --------------------------------------------------------------------------------------- | --- |\n\\| `api_key` | `Optional[str]` | `None`  | Optional API key. If not provided, uses FINANCIAL\\_DATASETS\\_API\\_KEY environment variable |     |\n\n| Function                      | Description                                                                                                     |\n| ----------------------------- | --------------------------------------------------------------------------------------------------------------- |\n| `get_income_statements`       | Get income statements for a company with options for annual, quarterly, or trailing twelve months (ttm) periods |\n| `get_balance_sheets`          | Get balance sheets for a company with period options                                                            |\n| `get_cash_flow_statements`    | Get cash flow statements for a company                                                                          |\n| `get_company_info`            | Get company information including business description, sector, and industry                                    |\n| `get_crypto_prices`           | Get cryptocurrency prices with configurable time intervals                                                      |\n| `get_earnings`                | Get earnings reports with EPS estimates, actuals, and revenue data                                              |\n| `get_financial_metrics`       | Get key financial metrics and ratios for a company                                                              |\n| `get_insider_trades`          | Get data on insider buying and selling activity                                                                 |\n| `get_institutional_ownership` | Get information about institutional investors and their positions                                               |\n| `get_news`                    | Get market news, optionally filtered by company                                                                 |\n| `get_stock_prices`            | Get historical stock prices with configurable time intervals                                                    |\n| `search_tickers`              | Search for stock tickers based on a query string                                                                |\n| `get_sec_filings`             | Get SEC filings with optional filtering by form type (10-K, 10-Q, etc.)                                         |\n| `get_segmented_financials`    | Get segmented financial data by product category and geographic region                                          |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Rate Limits and Usage\n\nThe Financial Datasets API may have usage limits based on your subscription tier. Please refer to their documentation for specific rate limit information.\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/financial_datasets.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/financial_datasets_tools.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Rate Limits and Usage",
+      "id": "rate-limits-and-usage"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#get-the-most-recent-income-statement-for-apple",
+  "links": []
+}

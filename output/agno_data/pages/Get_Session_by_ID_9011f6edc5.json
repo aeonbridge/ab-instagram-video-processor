@@ -1,0 +1,8 @@
+{
+  "title": "Get Session by ID",
+  "content": "Source: https://docs.agno.com/reference-api/schema/sessions/get-session-by-id\n\nget /sessions/{session_id}\nRetrieve detailed information about a specific session including metadata, configuration, and run history. Response schema varies based on session type (agent, team, or workflow).",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-session-by-id",
+  "links": []
+}

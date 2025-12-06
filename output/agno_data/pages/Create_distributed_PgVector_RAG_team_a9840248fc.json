@@ -1,0 +1,31 @@
+{
+  "title": "Create distributed PgVector RAG team",
+  "content": "distributed_pgvector_team = Team(\n    name=\"Distributed PgVector RAG Team\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    members=[vector_retriever, hybrid_searcher, data_validator, response_composer],\n    instructions=[\n        \"Work together to provide comprehensive RAG responses using PostgreSQL pgvector.\",\n        \"Vector Retriever: First perform vector similarity search.\",\n        \"Hybrid Searcher: Then perform hybrid search for comprehensive coverage.\",\n        \"Data Validator: Validate and filter the retrieved information quality.\",\n        \"Response Composer: Compose the final response with proper attribution.\",\n        \"Leverage PostgreSQL's scalability and pgvector's performance.\",\n        \"Ensure enterprise-grade reliability and accuracy.\",\n    ],\n    show_members_responses=True,\n    markdown=True,\n)\n\nasync def async_pgvector_rag_demo():\n    \"\"\"Demonstrate async distributed PgVector RAG processing.\"\"\"\n    print(\"🐘 Async Distributed PgVector RAG Demo\")\n    print(\"=\" * 40)\n\nquery = \"How do I make chicken and galangal in coconut milk soup? What are the key ingredients and techniques?\"\n\ntry:\n        # Add content to knowledge bases\n        await vector_knowledge.add_contents_async(\n            url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n        )\n        await hybrid_knowledge.add_contents_async(\n            url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n        )\n        # Run async distributed PgVector RAG\n        await distributed_pgvector_team.aprint_response(input=query)\n    except Exception as e:\n        print(f\"❌ Error: {e}\")\n        print(\"💡 Make sure PostgreSQL with pgvector is running!\")\n        print(\"   Run: ./cookbook/run_pgvector.sh\")\n\ndef sync_pgvector_rag_demo():\n    \"\"\"Demonstrate sync distributed PgVector RAG processing.\"\"\"\n    print(\"🐘 Distributed PgVector RAG Demo\")\n    print(\"=\" * 35)\n\nquery = \"How do I make chicken and galangal in coconut milk soup? What are the key ingredients and techniques?\"\n\ntry:\n        # Add content to knowledge bases\n        vector_knowledge.add_contents(\n            url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n        )\n        hybrid_knowledge.add_contents(\n            url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n        )\n        # Run distributed PgVector RAG\n        distributed_pgvector_team.print_response(input=query)\n    except Exception as e:\n        print(f\"❌ Error: {e}\")\n        print(\"💡 Make sure PostgreSQL with pgvector is running!\")\n        print(\"   Run: ./cookbook/run_pgvector.sh\")\n\ndef complex_query_demo():\n    \"\"\"Demonstrate distributed RAG for complex culinary queries.\"\"\"\n    print(\"👨‍🍳 Complex Culinary Query with Distributed PgVector RAG\")\n    print(\"=\" * 60)\n\nquery = \"\"\"I'm planning a Thai dinner party for 8 people. Can you help me plan a complete menu?\n    I need appetizers, main courses, and desserts. Please include:\n    - Preparation timeline\n    - Shopping list\n    - Cooking techniques for each dish\n    - Any dietary considerations or alternatives\"\"\"\n\ntry:\n        # Add content to knowledge bases\n        vector_knowledge.add_contents(\n            url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n        )\n        hybrid_knowledge.add_contents(\n            url=\"https://agno-public.s3.amazonaws.com/recipes/ThaiRecipes.pdf\"\n        )\n\ndistributed_pgvector_team.print_response(input=query)\n    except Exception as e:\n        print(f\"❌ Error: {e}\")\n        print(\"💡 Make sure PostgreSQL with pgvector is running!\")\n        print(\"   Run: ./cookbook/run_pgvector.sh\")\n\nif __name__ == \"__main__\":\n    # Choose which demo to run\n\n# asyncio.run(async_pgvector_rag_demo())\n\n# complex_query_demo()\n\nsync_pgvector_rag_demo()\nbash  theme={null}\n    ./cookbook/run_pgvector.sh\n    bash  theme={null}\n    pip install agno openai sqlalchemy 'psycopg[binary]' pgvector\n    bash  theme={null}\n    export OPENAI_API_KEY=****\n    bash  theme={null}\n    python cookbook/examples/teams/distributed_rag/01_distributed_rag_pgvector.py\n    ```\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set up PostgreSQL with pgvector\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install required libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run the agent\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#create-distributed-pgvector-rag-team",
+  "links": []
+}

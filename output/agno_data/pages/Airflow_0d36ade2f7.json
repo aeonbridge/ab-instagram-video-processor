@@ -1,0 +1,14 @@
+{
+  "title": "Airflow",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/others/airflow\n\nThe following agent will use Airflow to save and read a DAG file.\n\n```python cookbook/tools/airflow_tools.py theme={null}\nfrom agno.agent import Agent\nfrom agno.tools.airflow import AirflowTools\n\nagent = Agent(\n    tools=[AirflowTools(dags_dir=\"dags\", save_dag=True, read_dag=True)], markdown=True\n)\n\ndag_content = \"\"\"\nfrom airflow import DAG\nfrom airflow.operators.python import PythonOperator\nfrom datetime import datetime, timedelta\ndefault_args = {\n    'owner': 'airflow',\n    'depends_on_past': False,\n    'start_date': datetime(2024, 1, 1),\n    'email_on_failure': False,\n    'email_on_retry': False,\n    'retries': 1,\n    'retry_delay': timedelta(minutes=5),\n}",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    }
+  ],
+  "url": "llms-txt#airflow",
+  "links": []
+}

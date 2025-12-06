@@ -1,0 +1,14 @@
+{
+  "title": "DeepSeek",
+  "content": "Source: https://docs.agno.com/reference/models/deepseek\n\nThe DeepSeek model provides access to DeepSeek's language models.\n\n| Parameter               | Type            | Default                      | Description                                                       |\n| ----------------------- | --------------- | ---------------------------- | ----------------------------------------------------------------- |\n| `id`                    | `str`           | `\"deepseek-chat\"`            | The id of the DeepSeek model to use                               |\n| `name`                  | `str`           | `\"DeepSeek\"`                 | The name of the model                                             |\n| `provider`              | `str`           | `\"DeepSeek\"`                 | The provider of the model                                         |\n| `api_key`               | `Optional[str]` | `None`                       | The API key for DeepSeek (defaults to DEEPSEEK\\_API\\_KEY env var) |\n| `base_url`              | `str`           | `\"https://api.deepseek.com\"` | The base URL for the DeepSeek API                                 |\n| `retries`               | `int`           | `0`                          | Number of retries to attempt before raising a ModelProviderError  |\n| `delay_between_retries` | `int`           | `1`                          | Delay between retries, in seconds                                 |\n| `exponential_backoff`   | `bool`          | `False`                      | If True, the delay between retries is doubled each time           |\n\nDeepSeek extends the OpenAI-compatible interface and supports most parameters from OpenAI.",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Parameters",
+      "id": "parameters"
+    }
+  ],
+  "url": "llms-txt#deepseek",
+  "links": []
+}

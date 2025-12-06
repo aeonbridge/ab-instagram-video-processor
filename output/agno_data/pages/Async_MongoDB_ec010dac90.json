@@ -1,0 +1,14 @@
+{
+  "title": "Async MongoDB",
+  "content": "Source: https://docs.agno.com/integrations/database/async-mongo/overview\n\nLearn to use MongoDB asynchronously as a database for your Agents\n\nAgno supports using [MongoDB](https://www.mongodb.com/) asynchronously, with the `AsyncMongoDb` class.\n\n<Tip>\n  **v2 Migration Support**: If you're upgrading from Agno v1, MongoDB is fully supported in the v2 migration script. See the [migration guide](/how-to/v2-migration) for details.\n</Tip>\n\n```python async_mongodb_for_agent.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.mongo import AsyncMongoDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#async-mongodb",
+  "links": []
+}

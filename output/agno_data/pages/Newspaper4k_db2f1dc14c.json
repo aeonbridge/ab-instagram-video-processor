@@ -1,0 +1,39 @@
+{
+  "title": "Newspaper4k",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/web-scrape/newspaper4k\n\n**Newspaper4k** enables an Agent to read news articles using the Newspaper4k library.\n\nThe following example requires the `newspaper4k` and `lxml_html_clean` libraries.\n\nThe following agent will summarize the article: [https://www.rockymountaineer.com/blog/experience-icefields-parkway-scenic-drive-lifetime](https://www.rockymountaineer.com/blog/experience-icefields-parkway-scenic-drive-lifetime).\n\n| Parameter             | Type   | Default | Description                                                                        |\n| --------------------- | ------ | ------- | ---------------------------------------------------------------------------------- |\n| `enable_read_article` | `bool` | `True`  | Enables the functionality to read the full content of an article.                  |\n| `include_summary`     | `bool` | `False` | Specifies whether to include a summary of the article along with the full content. |\n| `article_length`      | `int`  | -       | The maximum length of the article or its summary to be processed or returned.      |\n\n| Function           | Description                                                  |\n| ------------------ | ------------------------------------------------------------ |\n| `get_article_data` | This function reads the full content and data of an article. |\n| `read_article`     | This function reads the full content of an article.          |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/newspaper4k.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/newspaper4k_tools.py)",
+  "code_samples": [
+    {
+      "code": "## Example\n\nThe following agent will summarize the article: [https://www.rockymountaineer.com/blog/experience-icefields-parkway-scenic-drive-lifetime](https://www.rockymountaineer.com/blog/experience-icefields-parkway-scenic-drive-lifetime).",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#newspaper4k",
+  "links": []
+}

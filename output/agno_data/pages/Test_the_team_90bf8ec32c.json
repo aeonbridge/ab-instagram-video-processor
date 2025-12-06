@@ -1,0 +1,8 @@
+{
+  "title": "Test the team",
+  "content": "team.print_response(\"What is the capital of France?\", stream=True)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#test-the-team",
+  "links": []
+}

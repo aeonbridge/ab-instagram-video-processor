@@ -1,0 +1,48 @@
+{
+  "title": "Background Hooks (Per-Hook)",
+  "content": "Source: https://docs.agno.com/agent-os/usage/background-hooks-decorator\n\nRun specific hooks as background tasks using the @hook decorator\n\nThis example demonstrates how to run **specific** hooks as background tasks using the `@hook` decorator, while other hooks run synchronously.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    \n  </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Export your OpenAI API key\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Run the server\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Test the endpoint\">\n\nThe response will be returned after `log_analytics` completes. Check the server logs to see `log_request` and `send_notification` executing in the background.\n  </Step>\n</Steps>\n\n1. The agent processes the request\n2. `log_analytics` runs synchronously (blocks the response)\n3. The response is sent to the user\n4. `log_request` and `send_notification` run in the background\n5. The user only waits for `log_analytics` to complete\n\n## Comparison: Global vs Per-Hook\n\n| Approach                                | Use Case                                                   |\n| --------------------------------------- | ---------------------------------------------------------- |\n| `AgentOS(run_hooks_in_background=True)` | All hooks are non-critical, maximize response speed        |\n| `@hook(run_in_background=True)`         | Mix of critical (sync) and non-critical (background) hooks |\n\n<Tip>\n  Use the `@hook` decorator when you have hooks that must complete before the response (e.g., output validation) alongside hooks that can run later (e.g., notifications).\n</Tip>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your OpenAI API key\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Run the server\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Test the endpoint\">",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "What Happens",
+      "id": "what-happens"
+    },
+    {
+      "level": "h2",
+      "text": "Comparison: Global vs Per-Hook",
+      "id": "comparison:-global-vs-per-hook"
+    }
+  ],
+  "url": "llms-txt#background-hooks-(per-hook)",
+  "links": []
+}

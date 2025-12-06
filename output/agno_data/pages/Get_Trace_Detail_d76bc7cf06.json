@@ -1,0 +1,8 @@
+{
+  "title": "Get Trace Detail",
+  "content": "Source: https://docs.agno.com/reference-api/schema/tracing/get-trace-detail\n\nget /traces/{trace_id}\nRetrieve detailed trace information with hierarchical span tree, or a specific span within the trace.\n\n**Without span_id parameter:**\nReturns the full trace with hierarchical span tree:\n- Trace metadata (ID, status, duration, context)\n- Hierarchical tree of all spans\n- Each span includes timing, status, and type-specific metadata\n\n**With span_id parameter:**\nReturns details for a specific span within the trace:\n- Span metadata (ID, name, type, timing)\n- Status and error information\n- Type-specific attributes (model, tokens, tool params, etc.)\n\n**Span Hierarchy:**\nThe `tree` field contains root spans, each with potential `children`.\nThis recursive structure represents the execution flow.\n\n**Span Types:**\n- `AGENT`: Agent execution with input/output\n- `LLM`: Model invocations with tokens and prompts\n- `TOOL`: Tool calls with parameters and results",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-trace-detail",
+  "links": []
+}

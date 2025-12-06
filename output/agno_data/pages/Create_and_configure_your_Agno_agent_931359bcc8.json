@@ -1,0 +1,8 @@
+{
+  "title": "Create and configure your Agno agent",
+  "content": "agent = Agent(\n    name=\"A helpful AI Assistant\",\n    model=OpenAIChat(id=\"gpt-5\"),\n    tools=[],\n    instructions=\"You are a helpful AI Assistant.\",\n    debug_mode=True,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-and-configure-your-agno-agent",
+  "links": []
+}

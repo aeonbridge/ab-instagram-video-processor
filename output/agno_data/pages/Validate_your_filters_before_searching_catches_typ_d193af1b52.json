@@ -1,0 +1,19 @@
+{
+  "title": "Validate your filters before searching (catches typos!)",
+  "content": "valid_filters, invalid_keys = knowledge.validate_filters({\n    \"department\": \"hr\",\n    \"invalid_key\": \"value\"  # This will be flagged as invalid\n})\npython  theme={null}",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  Use `knowledge.get_content_status()` to debug when content doesn't appear in search results. It'll tell you if processing failed or is still in progress.\n</Tip>\n\n## Automatic vs Manual Search\n\nAgno gives you two ways to use knowledge with agents:\n\n**Agentic Search** (`search_knowledge=True`):\nThe agent automatically decides when to search and what to look for. This is the recommended approach for most use cases - it's smarter and more dynamic.\n\n**Traditional RAG** (`add_knowledge_to_context=True`):\nRelevant knowledge is always added to the agent's context. Simpler but less flexible. Use this when you want predictable, consistent behavior.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Automatic vs Manual Search",
+      "id": "automatic-vs-manual-search"
+    }
+  ],
+  "url": "llms-txt#validate-your-filters-before-searching-(catches-typos!)",
+  "links": []
+}

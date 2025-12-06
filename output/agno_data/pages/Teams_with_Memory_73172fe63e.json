@@ -1,0 +1,14 @@
+{
+  "title": "Teams with Memory",
+  "content": "Source: https://docs.agno.com/basics/memory/team/overview\n\nLearn how to use teams with memory.\n\nThe team can also manage user memories, just like agents:\n\nSee more in the [Memory](/basics/memory/overview) section.\n\n## Developer Resources\n\n* View the [Team schema](/reference/teams/team)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/teams/memory/)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#teams-with-memory",
+  "links": []
+}

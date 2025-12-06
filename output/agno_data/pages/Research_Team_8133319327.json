@@ -1,0 +1,14 @@
+{
+  "title": "Research Team",
+  "content": "Source: https://docs.agno.com/agent-os/usage/interfaces/ag-ui/team\n\nMulti-agent research team with specialized roles and web interface\n\n```python cookbook/os/interfaces/agui/research_team.py theme={null}\nfrom agno.agent.agent import Agent\nfrom agno.models.openai import OpenAIChat\nfrom agno.os.app import AgentOS\nfrom agno.os.interfaces.agui.agui import AGUI\nfrom agno.team import Team\n\nresearcher = Agent(\n    name=\"researcher\",\n    role=\"Research Assistant\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=\"You are a research assistant. Find information and provide detailed analysis.\",\n    markdown=True,\n)\n\nwriter = Agent(\n    name=\"writer\",\n    role=\"Content Writer\", \n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    instructions=\"You are a content writer. Create well-structured content based on research.\",\n    markdown=True,\n)\n\nresearch_team = Team(\n    members=[researcher, writer],\n    name=\"research_team\",\n    instructions=\"\"\"\n    You are a research team that helps users with research and content creation.\n    First, use the researcher to gather information, then use the writer to create content.\n    \"\"\",\n    show_members_responses=True,\n    get_member_information_tool=True,\n    add_member_tools_to_context=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#research-team",
+  "links": []
+}

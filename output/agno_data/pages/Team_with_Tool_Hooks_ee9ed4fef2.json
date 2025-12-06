@@ -1,0 +1,14 @@
+{
+  "title": "Team with Tool Hooks",
+  "content": "Source: https://docs.agno.com/basics/tools/usage/team-with-tool-hooks\n\nThis example demonstrates how to use tool hooks with teams and agents for intercepting and monitoring tool function calls, providing logging, timing, and other observability features.\n\n```python cookbook/examples/teams/tools/02_team_with_tool_hooks.py theme={null}\n\"\"\"\nThis example demonstrates how to use tool hooks with teams and agents.\n\nTool hooks allow you to intercept and monitor tool function calls, providing\nlogging, timing, and other observability features.\n\"\"\"\n\nimport time\nfrom typing import Any, Callable, Dict\nfrom uuid import uuid4\n\nfrom agno.agent.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.reddit import RedditTools\nfrom agno.utils.log import logger\n\ndef logger_hook(function_name: str, function_call: Callable, arguments: Dict[str, Any]):\n    \"\"\"\n    Tool hook that logs function calls and measures execution time.\n\nArgs:\n        function_name: Name of the function being called\n        function_call: The actual function to call\n        arguments: Arguments passed to the function\n\nReturns:\n        The result of the function call\n    \"\"\"\n    if function_name == \"delegate_task_to_member\":\n        member_id = arguments.get(\"member_id\")\n        logger.info(f\"Delegating task to member {member_id}\")\n\n# Start timer\n    start_time = time.time()\n    result = function_call(**arguments)\n    # End timer\n    end_time = time.time()\n    duration = end_time - start_time\n    logger.info(f\"Function {function_name} took {duration:.2f} seconds to execute\")\n    return result",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#team-with-tool-hooks",
+  "links": []
+}

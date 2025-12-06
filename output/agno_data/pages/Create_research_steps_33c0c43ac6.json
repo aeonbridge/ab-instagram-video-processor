@@ -1,0 +1,8 @@
+{
+  "title": "Create research steps",
+  "content": "research_hackernews_step = Step(\n    name=\"Research HackerNews\",\n    agent=research_agent,\n    description=\"Research trending topics on HackerNews\",\n)\n\nresearch_web_step = Step(\n    name=\"Research Web\",\n    agent=research_agent,\n    description=\"Research additional information from web sources\",\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-research-steps",
+  "links": []
+}

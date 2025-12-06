@@ -1,0 +1,14 @@
+{
+  "title": "Audio Input-Output Agent",
+  "content": "Source: https://docs.agno.com/examples/getting-started/16-audio-agent\n\nThis example shows how to create an AI agent that can process audio input and generate audio responses. You can use this agent for various voice-based interactions, from analyzing speech content to generating natural-sounding responses.\n\nExample audio interactions to try:\n\n* Upload a recording of a conversation for analysis\n* Have the agent respond to questions with voice output\n* Process different languages and accents\n* Analyze tone and emotion in speech\n\n```python audio_input_output.py theme={null}\nfrom textwrap import dedent\n\nimport requests\nfrom agno.agent import Agent\nfrom agno.media import Audio\nfrom agno.models.openai import OpenAIChat\nfrom agno.utils.audio import write_audio_to_file",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#audio-input-output-agent",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Tool Call Limit",
+  "content": "Source: https://docs.agno.com/basics/tools/tool-call-limit\n\nLearn to limit the number of tool calls an agent can make.\n\nLimiting the number of tool calls an Agent can make is useful to prevent loops and have better control over costs and performance.\n\nDoing this is very simple with Agno. You just need to pass the `tool_call_limit` parameter when initializing your Agent or Team.\n\n```python  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.openai.chat import OpenAIChat\nfrom agno.tools.yfinance import YFinanceTools\n\nagent = Agent(\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[YFinanceTools(company_news=True, cache_results=True)],\n    tool_call_limit=1, # The Agent will not perform more than one tool call.\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#tool-call-limit",
+  "links": []
+}

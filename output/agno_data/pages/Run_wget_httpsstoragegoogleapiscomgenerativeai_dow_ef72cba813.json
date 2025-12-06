@@ -1,0 +1,8 @@
+{
+  "title": "Run: `wget https://storage.googleapis.com/generativeai-downloads/images/GreatRedSpot.mp4` to download a sample video",
+  "content": "video_path = Path(__file__).parent.joinpath(\"samplevideo.mp4\")\nvideo_file = None\nremote_file_name = f\"files/{video_path.stem.lower().replace('_', '')}\"\ntry:\n    video_file = model.get_client().files.get(name=remote_file_name)\nexcept Exception as e:\n    logger.info(f\"Error getting file {video_path.stem}: {e}\")\n    pass",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#run:-`wget-https://storage.googleapis.com/generativeai-downloads/images/greatredspot.mp4`-to-download-a-sample-video",
+  "links": []
+}

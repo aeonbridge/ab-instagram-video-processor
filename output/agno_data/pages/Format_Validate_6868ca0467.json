@@ -1,0 +1,36 @@
+{
+  "title": "Format & Validate",
+  "content": "Source: https://docs.agno.com/templates/infra-management/format-and-validate\n\nFormatting the codebase using a set standard saves us time and mental energy. Agno templates are pre-configured with [ruff](https://docs.astral.sh/ruff/) that you can run using a helper script or directly.\n\nLinting and Type Checking add an extra layer of protection to the codebase. We highly recommending running the validate script before pushing any changes.\n\nAgno templates are pre-configured with [ruff](https://docs.astral.sh/ruff/) and [mypy](https://mypy.readthedocs.io/en/stable/) that you can run using a helper script or directly. Checkout the `pyproject.toml` file for the configuration.",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Validate\n\nLinting and Type Checking add an extra layer of protection to the codebase. We highly recommending running the validate script before pushing any changes.\n\nAgno templates are pre-configured with [ruff](https://docs.astral.sh/ruff/) and [mypy](https://mypy.readthedocs.io/en/stable/) that you can run using a helper script or directly. Checkout the `pyproject.toml` file for the configuration.\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Format",
+      "id": "format"
+    },
+    {
+      "level": "h2",
+      "text": "Validate",
+      "id": "validate"
+    }
+  ],
+  "url": "llms-txt#format-&-validate",
+  "links": []
+}

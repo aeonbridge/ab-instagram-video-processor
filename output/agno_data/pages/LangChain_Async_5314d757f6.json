@@ -1,0 +1,14 @@
+{
+  "title": "LangChain Async",
+  "content": "Source: https://docs.agno.com/integrations/vectordb/langchain/usage/async-langchain-db\n\n```python cookbook/knowledge/vector_db/langchain/langchain_db.py theme={null}\nimport asyncio\nimport pathlib\n\nfrom agno.agent import Agent\nfrom agno.knowledge.knowledge import Knowledge\nfrom agno.vectordb.langchaindb import LangChainVectorDb\nfrom langchain.text_splitter import CharacterTextSplitter\nfrom langchain_chroma import Chroma\nfrom langchain_community.document_loaders import TextLoader\nfrom langchain_openai import OpenAIEmbeddings",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#langchain-async",
+  "links": []
+}

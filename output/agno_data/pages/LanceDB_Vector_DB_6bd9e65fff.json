@@ -1,0 +1,8 @@
+{
+  "title": "LanceDB Vector DB",
+  "content": "vector_db = LanceDb(\n    table_name=\"recipes\",\n    uri=\"/tmp/lancedb\",\n    search_type=SearchType.keyword,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#lancedb-vector-db",
+  "links": []
+}

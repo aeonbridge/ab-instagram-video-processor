@@ -1,0 +1,8 @@
+{
+  "title": "Split the document into chunks",
+  "content": "text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)\ndocuments = text_splitter.split_documents(raw_documents)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#split-the-document-into-chunks",
+  "links": []
+}

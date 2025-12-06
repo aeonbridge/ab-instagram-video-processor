@@ -1,0 +1,8 @@
+{
+  "title": "Knowledge base with advanced reranking",
+  "content": "reranked_knowledge = Knowledge(\n    vector_db=LanceDb(\n        table_name=\"recipes_reranked\",\n        uri=\"tmp/lancedb\",\n        search_type=SearchType.hybrid,\n        embedder=OpenAIEmbedder(id=\"text-embedding-3-small\"),\n        reranker=CohereReranker(model=\"rerank-v3.5\"),\n    ),\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#knowledge-base-with-advanced-reranking",
+  "links": []
+}

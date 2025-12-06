@@ -1,0 +1,43 @@
+{
+  "title": "Twilio",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/social/twilio\n\n**TwilioTools** enables an Agent to interact with [Twilio](https://www.twilio.com/docs) services, such as sending SMS, retrieving call details, and listing messages.\n\nThe following examples require the `twilio` library and appropriate Twilio credentials, which can be obtained from [here](https://www.twilio.com/console).\n\nSet the following environment variables:\n\nThe following agent will send an SMS message using Twilio:\n\n| Name                      | Type            | Default | Description                                       |\n| ------------------------- | --------------- | ------- | ------------------------------------------------- |\n| `account_sid`             | `Optional[str]` | `None`  | Twilio Account SID for authentication.            |\n| `auth_token`              | `Optional[str]` | `None`  | Twilio Auth Token for authentication.             |\n| `api_key`                 | `Optional[str]` | `None`  | Twilio API Key for alternative authentication.    |\n| `api_secret`              | `Optional[str]` | `None`  | Twilio API Secret for alternative authentication. |\n| `region`                  | `Optional[str]` | `None`  | Optional Twilio region (e.g., `au1`).             |\n| `edge`                    | `Optional[str]` | `None`  | Optional Twilio edge location (e.g., `sydney`).   |\n| `debug`                   | `bool`          | `False` | Enable debug logging for troubleshooting.         |\n| `enable_send_sms`         | `bool`          | `True`  | Enable the send\\_sms functionality.               |\n| `enable_get_call_details` | `bool`          | `True`  | Enable the get\\_call\\_details functionality.      |\n| `enable_list_messages`    | `bool`          | `True`  | Enable the list\\_messages functionality.          |\n| `all`                     | `bool`          | `False` | Enable all functionality.                         |\n\n| Function           | Description                                                                                                                                                                 |\n| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `send_sms`         | Sends an SMS to a recipient. Takes recipient phone number, sender number (Twilio), and message body. Returns message SID if successful or error message if failed.          |\n| `get_call_details` | Retrieves details of a call using its SID. Takes the call SID and returns a dictionary with call details (e.g., status, duration).                                          |\n| `list_messages`    | Lists recent SMS messages. Takes a limit for the number of messages to return (default 20). Returns a list of message details (e.g., SID, sender, recipient, body, status). |\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/twilio.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/twilio_tools.py)",
+  "code_samples": [
+    {
+      "code": "Set the following environment variables:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will send an SMS message using Twilio:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#twilio",
+  "links": []
+}

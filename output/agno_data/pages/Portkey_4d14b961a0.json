@@ -1,0 +1,42 @@
+{
+  "title": "Portkey",
+  "content": "Source: https://docs.agno.com/integrations/models/gateways/portkey/overview\n\nLearn how to use models through the Portkey AI Gateway in Agno.\n\nPortkey is an AI Gateway that provides a unified interface to access multiple AI providers with advanced features like routing, load balancing, retries, and observability. Use Portkey to build production-ready AI applications with better reliability and cost optimization.\n\nWith Portkey, you can:\n\n* Route requests across multiple AI providers\n* Implement fallback mechanisms for better reliability\n* Monitor and analyze your AI usage\n* Cache responses for cost optimization\n* Apply rate limiting and usage controls\n\nYou need both a Portkey API key and a virtual key for model routing. Get them [from Portkey here](https://app.portkey.ai/).\n\nUse `Portkey` with your `Agent`:\n\n<CodeGroup>\n  \n</CodeGroup>\n\n## Advanced Configuration\n\nYou can configure Portkey with custom routing and retry policies:\n\n<Note> View more examples [here](/integrations/models/gateways/portkey/usage/basic-stream). </Note>\n\n| Parameter     | Type            | Default                       | Description                                                     |\n| ------------- | --------------- | ----------------------------- | --------------------------------------------------------------- |\n| `id`          | `str`           | `\"gpt-4o-mini\"`               | The id of the model to use through Portkey                      |\n| `name`        | `str`           | `\"Portkey\"`                   | The name of the model                                           |\n| `provider`    | `str`           | `\"Portkey\"`                   | The provider of the model                                       |\n| `api_key`     | `Optional[str]` | `None`                        | The API key for Portkey (defaults to PORTKEY\\_API\\_KEY env var) |\n| `base_url`    | `str`           | `\"https://api.portkey.ai/v1\"` | The base URL for the Portkey API                                |\n| `virtual_key` | `Optional[str]` | `None`                        | The virtual key for the underlying provider                     |\n| `trace_id`    | `Optional[str]` | `None`                        | Custom trace ID for request tracking                            |\n| `config_id`   | `Optional[str]` | `None`                        | Configuration ID for Portkey routing                            |\n\n`Portkey` also supports the params of [OpenAI](/reference/models/openai).",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Example\n\nUse `Portkey` with your `Agent`:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Advanced Configuration\n\nYou can configure Portkey with custom routing and retry policies:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Authentication",
+      "id": "authentication"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Advanced Configuration",
+      "id": "advanced-configuration"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#portkey",
+  "links": []
+}

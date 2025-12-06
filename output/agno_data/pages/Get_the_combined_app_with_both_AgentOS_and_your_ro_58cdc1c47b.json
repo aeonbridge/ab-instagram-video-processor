@@ -1,0 +1,62 @@
+{
+  "title": "Get the combined app with both AgentOS and your routes",
+  "content": "app = agent_os.get_app()\nbash Install FastAPI CLI theme={null}\npip install \"fastapi[standard]\"\nbash Run with FastAPI CLI theme={null}\n  fastapi run your_app.py\n  bash Run with auto-reload theme={null}\n  fastapi run your_app.py --reload\n  bash Custom host and port theme={null}\n  fastapi run your_app.py --host 0.0.0.0 --port 8000\n  bash Uvicorn theme={null}\n  uvicorn main:app --host 0.0.0.0 --port 8000 --workers 4\n  bash Gunicorn with Uvicorn workers theme={null}\n  gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000\n  bash FastAPI CLI (Production) theme={null}\n  fastapi run main.py --host 0.0.0.0 --port 8000\n  python custom_fastapi_app.py theme={null}\nfrom agno.agent import Agent\nfrom agno.db.sqlite import SqliteDb\nfrom agno.models.anthropic import Claude\nfrom agno.os import AgentOS\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom fastapi import FastAPI",
+  "code_samples": [
+    {
+      "code": "<Tip>\n  Your custom FastAPI app can have its own middleware and dependencies.\n\n  If you have your own CORS middleware, it will be updated to include the AgentOS allowed origins, to make the AgentOS instance compatible with the Control Plane.\n  Otherwise, the appropriate CORS middleware will be added to the app.\n</Tip>\n\n### Adding Middleware\n\nYou can add any FastAPI middleware to your custom FastAPI app and it will be respected by AgentOS.\n\nAgno also provides some built-in middleware for common use cases, including authentication.\n\nSee the [Middleware](/agent-os/middleware/overview) page for more details.\n\n### Running with FastAPI CLI\n\nAgentOS applications are compatible with the [FastAPI CLI](https://fastapi.tiangolo.com/deployment/manually/) for development.\n\nFirst, install the FastAPI CLI:",
+      "language": "unknown"
+    },
+    {
+      "code": "Then run the app:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n### Running in Production\n\nFor production deployments, you can use any ASGI server:\n\n<CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n\n## Adding Custom Routers\n\nFor better organization, use FastAPI routers to group related endpoints:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h3",
+      "text": "Adding Middleware",
+      "id": "adding-middleware"
+    },
+    {
+      "level": "h3",
+      "text": "Running with FastAPI CLI",
+      "id": "running-with-fastapi-cli"
+    },
+    {
+      "level": "h3",
+      "text": "Running in Production",
+      "id": "running-in-production"
+    },
+    {
+      "level": "h2",
+      "text": "Adding Custom Routers",
+      "id": "adding-custom-routers"
+    }
+  ],
+  "url": "llms-txt#get-the-combined-app-with-both-agentos-and-your-routes",
+  "links": []
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Second identical call - cache hit, returns cached response instantly",
+  "content": "response = agent.run(\"What is the capital of France?\")\npython  theme={null}\nagent = Agent(\n    model=OpenAIChat(\n        id=\"gpt-4o\",\n        cache_response=True,\n        cache_ttl=3600  # Cache expires after 1 hour\n    )\n)\npython  theme={null}\nagent = Agent(\n    model=OpenAIChat(\n        id=\"gpt-4o\",\n        cache_response=True,\n        cache_dir=\"./path/to/custom/cache\"\n    )\n)\npython  theme={null}\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude",
+  "code_samples": [
+    {
+      "code": "## Configuration Options\n\n### Cache Time-to-Live (TTL)\n\nControl how long responses remain cached using `cache_ttl` (in seconds):",
+      "language": "unknown"
+    },
+    {
+      "code": "If `cache_ttl` is not specified (or set to `None`), cached responses never expire.\n\n### Custom Cache Directory\n\nStore cached responses in a specific location using `cache_dir`:",
+      "language": "unknown"
+    },
+    {
+      "code": "If not specified, Agno uses a default cache location of `~/.agno/cache/model_responses` in your home directory.\n\n## Usage with Agents\n\nResponse caching is configured at the model level and works automatically with agents:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Configuration Options",
+      "id": "configuration-options"
+    },
+    {
+      "level": "h3",
+      "text": "Cache Time-to-Live (TTL)",
+      "id": "cache-time-to-live-(ttl)"
+    },
+    {
+      "level": "h3",
+      "text": "Custom Cache Directory",
+      "id": "custom-cache-directory"
+    },
+    {
+      "level": "h2",
+      "text": "Usage with Agents",
+      "id": "usage-with-agents"
+    }
+  ],
+  "url": "llms-txt#second-identical-call---cache-hit,-returns-cached-response-instantly",
+  "links": []
+}

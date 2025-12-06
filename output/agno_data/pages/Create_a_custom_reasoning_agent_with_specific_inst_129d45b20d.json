@@ -1,0 +1,45 @@
+{
+  "title": "Create a custom reasoning agent with specific instructions",
+  "content": "custom_reasoning_agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    instructions=[\n        \"Focus heavily on mathematical rigor\",\n        \"Always provide step-by-step proofs\",\n    ],\n)\n\nmain_agent = Agent(\n    model=OpenAIChat(id=\"gpt-4o\"),\n    reasoning=True,\n    reasoning_agent=custom_reasoning_agent,  # Use your custom agent\n)\npython logical_puzzle.py theme={null}\n    from agno.agent import Agent\n    from agno.models.openai import OpenAIChat\n\ntask = (\n        \"Three missionaries and three cannibals need to cross a river. \"\n        \"They have a boat that can carry up to two people at a time. \"\n        \"If, at any time, the cannibals outnumber the missionaries on either side of the river, the cannibals will eat the missionaries. \"\n        \"How can all six people get across the river safely? Provide a step-by-step solution and show the solution as an ASCII diagram.\"\n    )\n\nreasoning_agent = Agent(\n        model=OpenAIChat(id=\"gpt-4o\"),\n        reasoning=True,\n        markdown=True,\n    )\n\nreasoning_agent.print_response(task, stream=True, show_full_reasoning=True)\n    python mathematical_proof.py theme={null}\n    from agno.agent import Agent\n    from agno.models.openai import OpenAIChat\n\ntask = \"Prove that for any positive integer n, the sum of the first n odd numbers is equal to n squared. Provide a detailed proof.\"\n\nreasoning_agent = Agent(\n        model=OpenAIChat(id=\"gpt-4o\"),\n        reasoning=True,\n        markdown=True,\n    )\n\nreasoning_agent.print_response(task, stream=True, show_full_reasoning=True)\n    python scientific_research.py theme={null}\n    from agno.agent import Agent\n    from agno.models.openai import OpenAIChat\n\ntask = (\n        \"Read the following abstract of a scientific paper and provide a critical evaluation of its methodology, \"\n        \"results, conclusions, and any potential biases or flaws:\\n\\n\"\n        \"Abstract: This study examines the effect of a new teaching method on student performance in mathematics. \"\n        \"A sample of 30 students was selected from a single school and taught using the new method over one semester. \"\n        \"The results showed a 15% increase in test scores compared to the previous semester. \"\n        \"The study concludes that the new teaching method is effective in improving mathematical performance among high school students.\"\n    )\n\nreasoning_agent = Agent(\n        model=OpenAIChat(id=\"gpt-4o\"),\n        reasoning=True,\n        markdown=True,\n    )\n\nreasoning_agent.print_response(task, stream=True, show_full_reasoning=True)\n    python planning_itinerary.py theme={null}\n    from agno.agent import Agent\n    from agno.models.openai import OpenAIChat\n\ntask = \"Plan a 3-day itinerary from Los Angeles to Las Vegas, including must-see attractions, dining recommendations, and optimal travel times.\"\n\nreasoning_agent = Agent(\n        model=OpenAIChat(id=\"gpt-4o\"),\n        reasoning=True,\n        markdown=True,\n    )\n\nreasoning_agent.print_response(task, stream=True, show_full_reasoning=True)\n    python creative_writing.py theme={null}\n    from agno.agent import Agent\n    from agno.models.openai import OpenAIChat\n\ntask = \"Write a short story about life in 500,000 years. Consider technological, biological, and societal evolution.\"\n\nreasoning_agent = Agent(\n        model=OpenAIChat(id=\"gpt-4o\"),\n        reasoning=True,\n        markdown=True,\n    )\n\nreasoning_agent.print_response(task, stream=True, show_full_reasoning=True)\n    ```\n  </Tab>\n</Tabs>\n\n## When to Use Reasoning Agents\n\n**Use reasoning agents when:**\n\n* Your task requires multiple sequential steps\n* You need the agent to call tools iteratively and build on results\n* You want automated chain-of-thought without manually calling reasoning tools\n* You need self-validation and error correction\n* The problem benefits from exploring multiple approaches before settling on a solution\n\n**Consider alternatives when:**\n\n* You're using a native reasoning model (gpt-5-mini, DeepSeek-R1) for simple tasks: just use the model directly\n* You want explicit control over when the agent thinks vs. acts: use [Reasoning Tools](/basics/reasoning/reasoning-tools) instead\n* The task is straightforward and doesn't require multi-step thinking\n\n<Tip>\n  **Pro tip:** Start with `reasoning_max_steps=5` for simpler problems to avoid\n  unnecessary overhead. Increase to 10-15 for complex multi-step tasks. Monitor\n  with `show_full_reasoning=True` to see how many steps your agent actually\n  needs.\n</Tip>\n\n## Developer Resources\n\n* View [Reasoning Agent Examples](/basics/reasoning/usage/agents/basic-cot)\n* View [Reasoning Agent Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/reasoning/agents)\n* View [Reasoning Team Examples](/basics/reasoning/usage/agents/team-cot)\n* View [Reasoning Team Cookbook](https://github.com/agno-agi/agno/blob/main/cookbook/reasoning/teams)",
+  "code_samples": [
+    {
+      "code": "## Example Use Cases\n\n<Tabs>\n  <Tab title=\"Logical Puzzles\">\n    **Breaking down complex logic problems:**",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Mathematical Proofs\">\n    **Problems requiring rigorous validation:**",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Scientific Research\">\n    **Critical evaluation and multi-faceted analysis:**",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Planning & Itineraries\">\n    **Sequential planning and optimization:**",
+      "language": "unknown"
+    },
+    {
+      "code": "</Tab>\n\n  <Tab title=\"Creative Writing\">\n    **Structured and coherent creative content:**",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Example Use Cases",
+      "id": "example-use-cases"
+    },
+    {
+      "level": "h2",
+      "text": "When to Use Reasoning Agents",
+      "id": "when-to-use-reasoning-agents"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#create-a-custom-reasoning-agent-with-specific-instructions",
+  "links": []
+}

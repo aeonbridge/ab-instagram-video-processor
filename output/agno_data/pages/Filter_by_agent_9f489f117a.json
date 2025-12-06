@@ -1,0 +1,8 @@
+{
+  "title": "Filter by agent",
+  "content": "traces, count = db.get_traces(agent_id=agent.id)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#filter-by-agent",
+  "links": []
+}

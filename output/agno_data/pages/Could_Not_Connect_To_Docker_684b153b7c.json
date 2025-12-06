@@ -1,0 +1,45 @@
+{
+  "title": "Could Not Connect To Docker",
+  "content": "Source: https://docs.agno.com/faq/could-not-connect-to-docker\n\nIf you have Docker up and running and get the following error, please read on:\n\nCreate the `/var/run/docker.sock` symlink using:\n\nIn 99% of the cases, this should work. If it doesnt, try:\n\nAgno uses [docker-py](https://github.com/docker/docker-py) to run containers, and if the `/var/run/docker.sock` is missing or has incorrect permissions, it cannot connect to docker.\n\n**To fix, please create the `/var/run/docker.sock` file using:**\n\nIf that does not work, check the permissions using `ls -l /var/run/docker.sock`.\n\nIf the `/var/run/docker.sock` does not exist, check if the `$HOME/.docker/run/docker.sock` file is missing. If its missing, please reinstall Docker.\n\n**If none of this works and the `/var/run/docker.sock` exists:**\n\n* Give your user permissions to the `/var/run/docker.sock` file:\n\n* Give your user permissions to the docker group:\n\n* [Docker-py Issue](https://github.com/docker/docker-py/issues/3059#issuecomment-1294369344)\n* [Stackoverflow answer](https://stackoverflow.com/questions/48568172/docker-sock-permission-denied/56592277#56592277)",
+  "code_samples": [
+    {
+      "code": "## Quick fix\n\nCreate the `/var/run/docker.sock` symlink using:",
+      "language": "unknown"
+    },
+    {
+      "code": "In 99% of the cases, this should work. If it doesnt, try:",
+      "language": "unknown"
+    },
+    {
+      "code": "## Full details\n\nAgno uses [docker-py](https://github.com/docker/docker-py) to run containers, and if the `/var/run/docker.sock` is missing or has incorrect permissions, it cannot connect to docker.\n\n**To fix, please create the `/var/run/docker.sock` file using:**",
+      "language": "unknown"
+    },
+    {
+      "code": "If that does not work, check the permissions using `ls -l /var/run/docker.sock`.\n\nIf the `/var/run/docker.sock` does not exist, check if the `$HOME/.docker/run/docker.sock` file is missing. If its missing, please reinstall Docker.\n\n**If none of this works and the `/var/run/docker.sock` exists:**\n\n* Give your user permissions to the `/var/run/docker.sock` file:",
+      "language": "unknown"
+    },
+    {
+      "code": "* Give your user permissions to the docker group:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Quick fix",
+      "id": "quick-fix"
+    },
+    {
+      "level": "h2",
+      "text": "Full details",
+      "id": "full-details"
+    },
+    {
+      "level": "h2",
+      "text": "More info",
+      "id": "more-info"
+    }
+  ],
+  "url": "llms-txt#could-not-connect-to-docker",
+  "links": []
+}

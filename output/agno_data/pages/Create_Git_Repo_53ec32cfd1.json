@@ -1,0 +1,8 @@
+{
+  "title": "Create Git Repo",
+  "content": "Source: https://docs.agno.com/templates/infra-management/git-repo\n\nCreate a git repository to share your application with your team.\n\n<Steps>\n  <Step title=\"Create a git repository\">\n    Create a new [git repository](https://github.com/new).\n  </Step>\n\n<Step title=\"Push your code\">\n    Push your code to the git repository.\n\n<Step title=\"Ask your team to join\">\n    Ask your team to follow the [setup steps for new users](/templates/infra-management/new-users) to use this workspace.\n  </Step>\n</Steps>",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-git-repo",
+  "links": []
+}

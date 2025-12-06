@@ -1,0 +1,19 @@
+{
+  "title": "Setup our AgentOS with MCP enabled",
+  "content": "agent_os = AgentOS(\n    description=\"Example app with MCP enabled\",\n    agents=[web_research_agent],\n    enable_mcp_server=True,  # This enables a LLM-friendly MCP server at /mcp\n)\n\napp = agent_os.get_app()\n\nif __name__ == \"__main__\":\n    \"\"\"Run your AgentOS.\n\nYou can see view your LLM-friendly MCP server at:\n    http://localhost:7777/mcp\n\n\"\"\"\n    agent_os.serve(app=\"enable_mcp_example:app\")\npython test_client.py theme={null}\nimport asyncio\n\nfrom agno.agent import Agent\nfrom agno.models.anthropic import Claude\nfrom agno.tools.mcp import MCPTools",
+  "code_samples": [
+    {
+      "code": "## Define a local test client",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Define a local test client",
+      "id": "define-a-local-test-client"
+    }
+  ],
+  "url": "llms-txt#setup-our-agentos-with-mcp-enabled",
+  "links": []
+}

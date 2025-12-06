@@ -1,0 +1,14 @@
+{
+  "title": "Running Agents",
+  "content": "Source: https://docs.agno.com/basics/agents/running-agents\n\nLearn how to run your Agents and process their output.\n\nRun your Agent by calling `Agent.run()` or `Agent.arun()`. Here's how they work:\n\n1. The agent builds the context to send to the model (system message, user message, chat history, user memories, session state and other relevant inputs).\n2. The agent sends this context to the model.\n3. The model processes the input and responds with either a message or a tool call.\n4. If the model makes a tool call, the agent executes it and returns the results to the model.\n5. The model processes the updated context, repeating this loop until it produces a final message without any tool calls.\n6. The agent returns this final response to the caller.\n\nThe `Agent.run()` function runs the agent and returns the output — either as a `RunOutput` object or as a stream of `RunOutputEvent` objects (when `stream=True`). For example:\n\n```python  theme={null}\nfrom agno.agent import Agent, RunOutput\nfrom agno.models.anthropic import Claude\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.utils.pprint import pprint_run_response\n\nagent = Agent(\n    model=Claude(id=\"claude-sonnet-4-5\"),\n    tools=[HackerNewsTools()],\n    instructions=\"Write a report on the topic. Output only the report.\",\n    markdown=True,\n)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Basic Execution",
+      "id": "basic-execution"
+    }
+  ],
+  "url": "llms-txt#running-agents",
+  "links": []
+}

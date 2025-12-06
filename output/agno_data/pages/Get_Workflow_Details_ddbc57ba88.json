@@ -1,0 +1,8 @@
+{
+  "title": "Get Workflow Details",
+  "content": "Source: https://docs.agno.com/reference-api/schema/workflows/get-workflow-details\n\nget /workflows/{workflow_id}\nRetrieve detailed configuration and step information for a specific workflow.",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#get-workflow-details",
+  "links": []
+}

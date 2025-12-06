@@ -1,0 +1,13 @@
+{
+  "title": "Team execution creates parent span with child spans for each agent",
+  "content": "result = team.run(\"Write a brief overview of OpenTelemetry observability\")\nprint(result.content)\npython  theme={null}\nfrom traceloop.sdk import Traceloop\nfrom traceloop.sdk.decorators import workflow\nfrom agno.agent import Agent\nfrom agno.models.openai import OpenAIChat\n\nTraceloop.init(app_name=\"agno_workflows\")\n\nagent = Agent(\n    name=\"AnalysisAgent\",\n    model=OpenAIChat(id=\"gpt-4o-mini\"),\n    debug_mode=True,\n)\n\n@workflow(name=\"data_analysis_pipeline\")\ndef analyze_data(query: str) -> str:\n    \"\"\"Custom workflow that wraps agent execution.\"\"\"\n    response = agent.run(query)\n    return response.content",
+  "code_samples": [
+    {
+      "code": "* ### Example: Using Workflow Decorators\n\nUse the `@workflow` decorator to create custom spans for organizing your traces:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#team-execution-creates-parent-span-with-child-spans-for-each-agent",
+  "links": []
+}

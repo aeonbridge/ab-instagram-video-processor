@@ -1,0 +1,41 @@
+{
+  "title": "Agent with Knowledge Tracing",
+  "content": "Source: https://docs.agno.com/agent-os/tracing/usage/agent-with-knowledge-tracing\n\nLearn how to trace your agents with knowledge with Agno in AgentOS\n\nThis example shows how to trace an agent with a knowledge base in AgentOS. The traces capture knowledge searches, model calls, and all agent operations.\n\n<Steps>\n  <Step title=\"Create a Python file\">\n    \n  </Step>\n\n<Step title=\"Add the following code to your Python file\">\n    python\n            from agno.agent import Agent\n            from agno.tools.duckduckgo import DuckDuckGoTools\n\nagent = Agent(tools=[DuckDuckGoTools()])\n\n# Perform a web search and capture the response\n            response = agent.run(\"What's happening in France?\")\n    `\n    </Step>\n\n<Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Install libraries\">\n    `\n  </Step>\n\n<Step title=\"Export your API keys\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n\n<Step title=\"Start PostgreSQL with pgvector\">\n    Make sure you have PostgreSQL running with pgvector extension. You can use Docker:\n\n<Step title=\"Run AgentOS\">\n    <CodeGroup>\n\nYour AgentOS will be available at `http://localhost:7777`. View traces in the AgentOS dashboard.\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "</Step>\n\n  <Step title=\"Add the following code to your Python file\">",
+      "language": "unknown"
+    },
+    {
+      "code": "from agno.agent import Agent\n            from agno.tools.duckduckgo import DuckDuckGoTools\n\n            agent = Agent(tools=[DuckDuckGoTools()])\n\n            # Perform a web search and capture the response\n            response = agent.run(\"What's happening in France?\")",
+      "language": "python"
+    },
+    {
+      "code": "</Step>\n\n    <Snippet file=\"create-venv-step.mdx\" />\n\n    <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Export your API keys\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "</CodeGroup>\n  </Step>\n\n  <Step title=\"Start PostgreSQL with pgvector\">\n    Make sure you have PostgreSQL running with pgvector extension. You can use Docker:",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run AgentOS\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [],
+  "url": "llms-txt#agent-with-knowledge-tracing",
+  "links": []
+}

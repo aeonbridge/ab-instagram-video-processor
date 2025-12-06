@@ -1,0 +1,8 @@
+{
+  "title": "Hugging Face",
+  "content": "Source: https://docs.agno.com/reference/knowledge/embedder/huggingface\n\nHugging Face Embedder is a class that allows you to embed documents using any embedding model hosted on HuggingFace's Inference API.\n\n<Snippet file=\"embedder-huggingface-reference.mdx\" />",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#hugging-face",
+  "links": []
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Filter by single field",
+  "content": "results = knowledge.search(\n    \"deployment process\",\n    filters={\"department\": \"engineering\"}\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#filter-by-single-field",
+  "links": []
+}

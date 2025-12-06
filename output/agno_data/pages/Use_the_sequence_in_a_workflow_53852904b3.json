@@ -1,0 +1,19 @@
+{
+  "title": "Use the sequence in a workflow",
+  "content": "workflow = Workflow(\n    name=\"Article Creation Workflow\",\n    steps=[article_creation_sequence]  # Single sequence\n)\n\nworkflow.print_response(\"Write an article about renewable energy\", markdown=True)\npython  theme={null}\nfrom agno.workflow import Steps, Router, Step, Workflow",
+  "code_samples": [
+    {
+      "code": "## Steps with Router\n\nThis is where `Steps` really shines - creating distinct sequences for different content types or workflows:",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Steps with Router",
+      "id": "steps-with-router"
+    }
+  ],
+  "url": "llms-txt#use-the-sequence-in-a-workflow",
+  "links": []
+}

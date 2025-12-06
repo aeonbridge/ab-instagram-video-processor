@@ -1,0 +1,8 @@
+{
+  "title": "Preview optimization without saving",
+  "content": "preview = memory_manager.optimize_memories(\n    user_id=\"user_123\",\n    strategy=MemoryOptimizationStrategyType.SUMMARIZE,\n    apply=False,  # Don't save changes\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#preview-optimization-without-saving",
+  "links": []
+}

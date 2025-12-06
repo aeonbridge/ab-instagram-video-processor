@@ -1,0 +1,8 @@
+{
+  "title": "Create web search agent for supplementary information",
+  "content": "web_agent = Agent(\n    name=\"Web Search Agent\",\n    role=\"Handle web search requests\",\n    model=OpenAIChat(id=\"gpt-5-mini\"),\n    tools=[DuckDuckGoTools()],\n    instructions=[\"Always include sources\"],\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#create-web-search-agent-for-supplementary-information",
+  "links": []
+}

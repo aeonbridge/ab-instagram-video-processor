@@ -1,0 +1,8 @@
+{
+  "title": "Entertainment trends",
+  "content": "entertainment_prompt = \"\"\"\\\nAnalyze media trends for:\nKeywords: streaming, gaming, social media\nSources: variety.com, polygon.com, theverge.com\n\"\"\"\n```",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#entertainment-trends",
+  "links": []
+}

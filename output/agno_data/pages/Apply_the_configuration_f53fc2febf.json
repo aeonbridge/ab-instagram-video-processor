@@ -1,0 +1,8 @@
+{
+  "title": "Apply the configuration",
+  "content": "configure_agno_logging(\n    custom_default_logger=custom_agent_logger,\n    custom_agent_logger=custom_agent_logger,\n    custom_team_logger=custom_team_logger,\n    custom_workflow_logger=custom_workflow_logger,\n)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#apply-the-configuration",
+  "links": []
+}

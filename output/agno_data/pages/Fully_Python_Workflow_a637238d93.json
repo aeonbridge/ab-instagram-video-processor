@@ -1,0 +1,8 @@
+{
+  "title": "Fully Python Workflow",
+  "content": "Source: https://docs.agno.com/basics/workflows/workflow-patterns/fully-python-workflow\n\nKeep it Simple with Pure Python, in v1 workflows style\n\n**Keep it Simple with Pure Python**: If you prefer the Workflows 1.0 approach or need maximum flexibility, you can still use a single Python function to handle everything.\nThis approach gives you complete control over the execution flow while still benefiting from workflow features like storage, streaming, and session management.\n\nReplace all the steps in the workflow with a single executable function where you can control everything.\n\n* [Function-Based Workflow](/basics/workflows/usage/function-instead-of-steps) - Complete function-based workflow\n\nFor migration from 1.0 style workflows, refer to the page for [Migrating to Workflows 2.0](/how-to/v2-migration)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#fully-python-workflow",
+  "links": []
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Legal Consultant",
+  "content": "Source: https://docs.agno.com/examples/use-cases/agents/legal_consultant\n\nThis example demonstrates how to create a specialized AI agent that provides legal information and guidance based on a knowledge base of legal documents. The Legal Consultant agent is designed to help users understand legal concepts, consequences, and procedures by leveraging a vector database of legal content.\n\n* **Legal Knowledge Base**: Integrates with a PostgreSQL vector database containing legal documents and resources\n* **Document Processing**: Automatically ingests and indexes legal PDFs from authoritative sources (e.g., Department of Justice manuals)\n* **Contextual Responses**: Provides relevant legal information with proper citations and sources\n* **Professional Disclaimers**: Always clarifies that responses are for informational purposes only, not professional legal advice\n* **Attorney Referrals**: Recommends consulting licensed attorneys for specific legal situations\n\n* Legal research and education\n* Understanding criminal penalties and consequences\n* Learning about legal procedures and requirements\n* Getting preliminary legal information before consulting professionals\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n<Step title=\"Set your API key\">\n    \n  </Step>\n\n<Step title=\"Install libraries\">\n    \n  </Step>\n\n<Step title=\"Run Agent\">\n    <CodeGroup>\n\n</CodeGroup>\n  </Step>\n</Steps>",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Set your API key\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    },
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#legal-consultant",
+  "links": []
+}

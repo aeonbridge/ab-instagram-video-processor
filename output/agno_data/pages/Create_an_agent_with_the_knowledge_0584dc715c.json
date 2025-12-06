@@ -1,0 +1,36 @@
+{
+  "title": "Create an agent with the knowledge",
+  "content": "agent = Agent(\n    knowledge=knowledge,\n    search_knowledge=True,\n)\n\nasync def main():\n    # Add YouTube video content\n    await knowledge.add_content_async(\n        metadata={\"source\": \"youtube\", \"type\": \"educational\"},\n        urls=[\n            \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\",  # Replace with actual educational video\n            \"https://www.youtube.com/watch?v=example123\"   # Replace with actual video URL\n        ],\n        reader=YouTubeReader(),\n    )\n\n# Query the knowledge base\n    await agent.aprint_response(\n        \"What are the main topics discussed in the videos?\",\n        markdown=True\n    )\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\nbash  theme={null}\n    pip install -U youtube-transcript-api pytube sqlalchemy psycopg pgvector agno openai\n    bash  theme={null}\n    export OPENAI_API_KEY=xxx\n    bash Mac theme={null}\n      python examples/basics/knowledge/readers/youtube_reader.py\n      bash Windows theme={null}\n      python examples/basics/knowledge/readers/youtube_reader.py\n      ```\n    </CodeGroup>\n  </Step>\n</Steps>\n\n<Snippet file=\"youtube-reader-reference.mdx\" />",
+  "code_samples": [
+    {
+      "code": "## Usage\n\n<Steps>\n  <Snippet file=\"create-venv-step.mdx\" />\n\n  <Step title=\"Install libraries\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Step title=\"Set environment variables\">",
+      "language": "unknown"
+    },
+    {
+      "code": "</Step>\n\n  <Snippet file=\"run-pgvector-step.mdx\" />\n\n  <Step title=\"Run Agent\">\n    <CodeGroup>",
+      "language": "unknown"
+    },
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h2",
+      "text": "Params",
+      "id": "params"
+    }
+  ],
+  "url": "llms-txt#create-an-agent-with-the-knowledge",
+  "links": []
+}

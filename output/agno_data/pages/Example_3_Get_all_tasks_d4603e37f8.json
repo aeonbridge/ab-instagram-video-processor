@@ -1,0 +1,24 @@
+{
+  "title": "Example 3: Get all tasks",
+  "content": "print(\"\\n=== Get all tasks ===\")\ntodoist_agent.print_response(\"Get all the todoist tasks\")\n```\n\n| Parameter   | Type  | Default | Description                                             |\n| ----------- | ----- | ------- | ------------------------------------------------------- |\n| `api_token` | `str` | `None`  | If you want to manually supply the TODOIST\\_API\\_TOKEN. |\n\n| Function           | Description                                                                                     |\n| ------------------ | ----------------------------------------------------------------------------------------------- |\n| `create_task`      | Creates a new task in Todoist with optional project assignment, due date, priority, and labels. |\n| `get_task`         | Fetches a specific task.                                                                        |\n| `update_task`      | Updates an existing task with new properties such as content, due date, priority, etc.          |\n| `close_task`       | Marks a task as completed.                                                                      |\n| `delete_task`      | Deletes a specific task from Todoist.                                                           |\n| `get_active_tasks` | Retrieves all active (non-completed) tasks.                                                     |\n| `get_projects`     | Retrieves all projects in Todoist.                                                              |\n\nYou can use `include_tools` or `exclude_tools` to modify the list of tools the agent has access to. Learn more about [selecting tools](/basics/tools/selecting-tools).\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/todoist.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/todoist_tool.py)",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#example-3:-get-all-tasks",
+  "links": []
+}

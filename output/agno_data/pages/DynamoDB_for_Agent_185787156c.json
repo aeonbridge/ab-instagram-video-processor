@@ -1,0 +1,14 @@
+{
+  "title": "DynamoDB for Agent",
+  "content": "Source: https://docs.agno.com/integrations/database/dynamodb/usage/dynamodb-for-agent\n\nAgno supports using DynamoDB as a storage backend for Agents using the `DynamoDb` class.\n\nYou need to provide `aws_access_key_id` and `aws_secret_access_key` parameters to the `DynamoDb` class.\n\n```python dynamo_for_agent.py theme={null}\nfrom agno.db.dynamo import DynamoDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    }
+  ],
+  "url": "llms-txt#dynamodb-for-agent",
+  "links": []
+}

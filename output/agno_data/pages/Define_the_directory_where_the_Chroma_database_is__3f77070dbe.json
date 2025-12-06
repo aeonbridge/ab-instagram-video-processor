@@ -1,0 +1,8 @@
+{
+  "title": "Define the directory where the Chroma database is located",
+  "content": "chroma_db_dir = pathlib.Path(\"./chroma_db\")",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#define-the-directory-where-the-chroma-database-is-located",
+  "links": []
+}

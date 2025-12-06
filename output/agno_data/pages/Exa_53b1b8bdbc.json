@@ -1,0 +1,48 @@
+{
+  "title": "Exa",
+  "content": "Source: https://docs.agno.com/integrations/toolkits/search/exa\n\n**ExaTools** enable an Agent to search the web using Exa, retrieve content from URLs, find similar content, and get AI-powered answers.\n\nThe following examples require the `exa-py` library and an API key which can be obtained from [Exa](https://exa.ai).\n\nThe following agent will search Exa for AAPL news and print the response.\n\n| Function       | Description                                                      |\n| -------------- | ---------------------------------------------------------------- |\n| `search_exa`   | Searches Exa for a query with optional category filtering        |\n| `get_contents` | Retrieves detailed content from specific URLs                    |\n| `find_similar` | Finds similar content to a given URL                             |\n| `exa_answer`   | Gets an AI-powered answer to a question using Exa search results |\n\n| Parameter              | Type                  | Default    | Description                                        |\n| ---------------------- | --------------------- | ---------- | -------------------------------------------------- |\n| `enable_search`        | `bool`                | `True`     | Enable search functionality                        |\n| `enable_get_contents`  | `bool`                | `True`     | Enable content retrieval                           |\n| `enable_find_similar`  | `bool`                | `True`     | Enable finding similar content                     |\n| `enable_answer`        | `bool`                | `True`     | Enable AI-powered answers                          |\n| `enable_research`      | `bool`                | `True`     | Enable research functionality                      |\n| `all`                  | `bool`                | `False`    | Enable all functionality                           |\n| `text`                 | `bool`                | `True`     | Include text content in results                    |\n| `text_length_limit`    | `int`                 | `1000`     | Maximum length of text content per result          |\n| `highlights`           | `bool`                | `True`     | Include highlighted snippets                       |\n| `summary`              | `bool`                | `False`    | Include result summaries                           |\n| `num_results`          | `Optional[int]`       | `None`     | Default number of results                          |\n| `livecrawl`            | `str`                 | `\"always\"` | Livecrawl behavior                                 |\n| `start_crawl_date`     | `Optional[str]`       | `None`     | Include results crawled after date (YYYY-MM-DD)    |\n| `end_crawl_date`       | `Optional[str]`       | `None`     | Include results crawled before date (YYYY-MM-DD)   |\n| `start_published_date` | `Optional[str]`       | `None`     | Include results published after date (YYYY-MM-DD)  |\n| `end_published_date`   | `Optional[str]`       | `None`     | Include results published before date (YYYY-MM-DD) |\n| `use_autoprompt`       | `Optional[bool]`      | `None`     | Enable autoprompt features                         |\n| `type`                 | `Optional[str]`       | `None`     | Content type filter (e.g., article, blog, video)   |\n| `category`             | `Optional[str]`       | `None`     | Category filter (e.g., news, research paper)       |\n| `include_domains`      | `Optional[List[str]]` | `None`     | Restrict results to these domains                  |\n| `exclude_domains`      | `Optional[List[str]]` | `None`     | Exclude results from these domains                 |\n| `show_results`         | `bool`                | `False`    | Log search results for debugging                   |\n| `model`                | `Optional[str]`       | `None`     | Search model to use ('exa' or 'exa-pro')           |\n\nAvailable categories for filtering:\n\n* company\n* research paper\n* news\n* pdf\n* github\n* tweet\n* personal site\n* linkedin profile\n* financial report\n\n## Developer Resources\n\n* View [Tools](https://github.com/agno-agi/agno/blob/main/libs/agno/agno/tools/exa.py)\n* View [Cookbook](https://github.com/agno-agi/agno/tree/main/cookbook/tools/exa_tools.py)",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    },
+    {
+      "code": "## Example\n\nThe following agent will search Exa for AAPL news and print the response.",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Prerequisites",
+      "id": "prerequisites"
+    },
+    {
+      "level": "h2",
+      "text": "Example",
+      "id": "example"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Functions",
+      "id": "toolkit-functions"
+    },
+    {
+      "level": "h2",
+      "text": "Toolkit Params",
+      "id": "toolkit-params"
+    },
+    {
+      "level": "h3",
+      "text": "Categories",
+      "id": "categories"
+    },
+    {
+      "level": "h2",
+      "text": "Developer Resources",
+      "id": "developer-resources"
+    }
+  ],
+  "url": "llms-txt#exa",
+  "links": []
+}

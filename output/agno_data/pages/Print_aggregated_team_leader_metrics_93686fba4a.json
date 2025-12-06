@@ -1,0 +1,8 @@
+{
+  "title": "Print aggregated team leader metrics",
+  "content": "print(\"---\" * 5, \"Aggregated Metrics of Team\", \"---\" * 5)\npprint(run_response.metrics)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#print-aggregated-team-leader-metrics",
+  "links": []
+}

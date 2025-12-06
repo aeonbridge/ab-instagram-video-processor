@@ -1,0 +1,24 @@
+{
+  "title": "Redis for Workflows",
+  "content": "Source: https://docs.agno.com/integrations/database/redis/usage/redis-for-workflow\n\nAgno supports using Redis as a storage backend for Workflows using the `RedisDb` class.\n\nInstall [docker desktop](https://docs.docker.com/desktop/install/mac-install/) and run **Redis** on port **6379** using:\n\n```python redis_for_workflow.py theme={null}\n\"\"\"\nRun: `pip install openai httpx newspaper4k redis agno` to install the dependencies\n\"\"\"\nfrom agno.agent import Agent\nfrom agno.db.redis import RedisDb\nfrom agno.models.openai import OpenAIChat\nfrom agno.team import Team\nfrom agno.tools.duckduckgo import DuckDuckGoTools\nfrom agno.tools.hackernews import HackerNewsTools\nfrom agno.workflow.step import Step\nfrom agno.workflow.workflow import Workflow",
+  "code_samples": [
+    {
+      "code": "",
+      "language": "unknown"
+    }
+  ],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Usage",
+      "id": "usage"
+    },
+    {
+      "level": "h3",
+      "text": "Run Redis",
+      "id": "run-redis"
+    }
+  ],
+  "url": "llms-txt#redis-for-workflows",
+  "links": []
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Audio Output Agent",
+  "content": "Source: https://docs.agno.com/integrations/models/native/openai/completion/usage/audio-output-agent\n\n```python cookbook/models/openai/chat/audio_output_agent.py theme={null}\nfrom agno.agent import Agent, RunOutput  # noqa\nfrom agno.models.openai import OpenAIChat\nfrom agno.utils.audio import write_audio_to_file\nfrom agno.db.in_memory import InMemoryDb",
+  "code_samples": [],
+  "headings": [
+    {
+      "level": "h2",
+      "text": "Code",
+      "id": "code"
+    }
+  ],
+  "url": "llms-txt#audio-output-agent",
+  "links": []
+}

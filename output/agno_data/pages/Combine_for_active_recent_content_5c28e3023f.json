@@ -1,0 +1,8 @@
+{
+  "title": "Combine for active, recent content",
+  "content": "current_content = AND(recent_filter, active_filter)",
+  "code_samples": [],
+  "headings": [],
+  "url": "llms-txt#combine-for-active,-recent-content",
+  "links": []
+}
