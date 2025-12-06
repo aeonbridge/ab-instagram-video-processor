@@ -9,7 +9,10 @@ import sys
 import logging
 from pathlib import Path
 
-from video_pipeline_orchestrator import VideoPipelineOrchestrator
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from ab.dc.video_pipeline_orchestrator import VideoPipelineOrchestrator
 
 # Setup logging
 logging.basicConfig(

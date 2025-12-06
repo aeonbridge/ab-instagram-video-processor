@@ -21,10 +21,20 @@ except ImportError:
     pass
 
 # Import existing services
-from ab.dc.analysers.replay_heatmap import get_moments_with_metadata, extract_video_id
-from ab.dc.publishers.agents.metadata_generator_agent import MetadataGeneratorAgent
-from ab.dc.publishers.agents.thumbnail_generator_agent import ThumbnailGeneratorAgent
-from ab.dc.publishers.auto_publisher import AutoPublisher
+try:
+    # Try relative imports first (when run as module)
+    from analysers.replay_heatmap import get_moments_with_metadata, extract_video_id
+    from publishers.agents.metadata_generator_agent import MetadataGeneratorAgent
+    from publishers.agents.thumbnail_generator_agent import ThumbnailGeneratorAgent
+    from publishers.auto_publisher import AutoPublisher
+except ImportError:
+    # Fall back to absolute imports (when run from project root)
+    import sys
+    sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+    from ab.dc.analysers.replay_heatmap import get_moments_with_metadata, extract_video_id
+    from ab.dc.publishers.agents.metadata_generator_agent import MetadataGeneratorAgent
+    from ab.dc.publishers.agents.thumbnail_generator_agent import ThumbnailGeneratorAgent
+    from ab.dc.publishers.auto_publisher import AutoPublisher
 
 logger = logging.getLogger(__name__)
 
